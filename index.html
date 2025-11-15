@@ -48,8 +48,7 @@
       </svg>
     );
 
-    const { useState } = React;
-
+    const { useState, useEffect } = React;
 
 const CraftsmanApp = () => {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -63,94 +62,22 @@ const CraftsmanApp = () => {
   const [selectedWeaponType, setSelectedWeaponType] = useState('武器全部');
   const [craftQuantity, setCraftQuantity] = useState({});
   
-  // サンプルデータ
-  const allItems = [
-    {
-      name: 'メテオシールド',
-      category: '防具鍛冶',
-      gridType: 'ABCD',
-      targetValues: {
-        A: { min: 355, max: 363 },
-        B: { min: 273, max: 280 },
-        C: { min: 273, max: 280 },
-        D: { min: 372, max: 380 }
-      },
-      materials: [
-        { name: 'ゼーラズマ鉱石', quantity: 30 },
-        { name: 'おぼろ水晶', quantity: 3 },
-        { name: 'ほしのカケラ', quantity: 30 },
-        { name: '黄金の飾り盾', quantity: 1 },
-        { name: '超ようせいのひだね', quantity: 8 }
-      ]
-    },
-    {
-      name: 'きようさにくまん',
-      category: '料理',
-      gridType: '3x3',
-      targetValues: {
-        H: { min: 90, max: 120 },
-        I: { min: 90, max: 120 }
-      },
-      materials: [
-        { name: 'やわらかい肉', quantity: 3 },
-        { name: 'ジャンボ玉ネギ', quantity: 2 },
-        { name: 'デリシャスオイル', quantity: 3 }
-      ]
-    },
-    {
-      name: 'アクロバーガー',
-      category: '料理',
-      gridType: '3x3',
-      targetValues: {
-        C: { min: 113, max: 143 },
-        E: { min: 155, max: 185 },
-        F: { min: 155, max: 185 },
-        H: { min: 135, max: 165 },
-        I: { min: 135, max: 165 }
-      },
-      materials: [
-        { name: 'しもふりミート', quantity: 2 },
-        { name: 'しゃっきりレタス', quantity: 6 },
-        { name: 'びっくりトマト', quantity: 3 },
-        { name: 'ピリからペッパー', quantity: 3 },
-        { name: 'デリシャスオイル', quantity: 12 }
-      ]
-    },
-    {
-      name: 'アクロバーガー・小',
-      category: '料理',
-      gridType: '3x3',
-      targetValues: {},
-      materials: [
-        { name: 'しもふりミート', quantity: 1 },
-        { name: 'しゃっきりレタス', quantity: 3 },
-        { name: 'びっくりトマト', quantity: 2 },
-        { name: 'ピリからペッパー', quantity: 2 },
-        { name: 'デリシャスオイル', quantity: 6 }
-      ]
-    },
-    {
-      name: 'スマッシュポテト',
-      category: '料理',
-      gridType: '3x3',
-      targetValues: {
-        A: { min: 130, max: 160 },
-        B: { min: 130, max: 160 },
-        C: { min: 130, max: 160 },
-        G: { min: 195, max: 225 },
-        H: { min: 195, max: 225 },
-        I: { min: 195, max: 225 }
-      },
-      materials: [
-        { name: 'おおとろの切り身', quantity: 3 },
-        { name: 'まんまるポテト', quantity: 6 },
-        { name: 'びっくりトマト', quantity: 4 },
-        { name: 'ごくじょうソルト', quantity: 4 },
-        { name: 'デリシャスオイル', quantity: 16 }
-      ]
-    }
-  ];
-
+  // JSONファイルからデータを読み込む
+  const [allItems, setAllItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    fetch('data/items.json')
+      .then(res => res.json())
+      .then(data => {
+        setAllItems(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('データの読み込みに失敗しました:', error);
+        setLoading(false);
+      });
+  }, []);
   const handleReset = () => {
     setSearchQuery('');
     setSearchActive('');
@@ -347,6 +274,18 @@ const CraftsmanApp = () => {
             opacity: 0;
           }
         `}</style>
+      </div>
+    );
+  }
+
+  // ローディング中の表示
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-violet-100 via-fuchsia-100 to-cyan-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-purple-600 mx-auto mb-4"></div>
+          <p className="text-lg font-bold text-gray-700">データ読み込み中...</p>
+        </div>
       </div>
     );
   }
