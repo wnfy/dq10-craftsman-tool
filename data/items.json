@@ -1,0 +1,907 @@
+[
+  {
+    "name": "メテオシールド",
+    "category": "防具鍛冶",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 355, "max": 363 },
+      "B": { "min": 273, "max": 280 },
+      "C": { "min": 273, "max": 280 },
+      "D": { "min": 372, "max": 380 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "おぼろ水晶", "quantity": 3 },
+      { "name": "ほしのカケラ", "quantity": 30 },
+      { "name": "黄金の飾り盾", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "きようさにくまん",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "H": { "min": 90, "max": 120 },
+      "I": { "min": 90, "max": 120 }
+    },
+    "materials": [
+      { "name": "やわらかい肉", "quantity": 3 },
+      { "name": "ジャンボ玉ネギ", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 3 }
+    ]
+  },
+  {
+    "name": "パワフルステーキ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "B": { "min": 70, "max": 100 },
+      "G": { "min": 110, "max": 140 },
+      "H": { "min": 110, "max": 140 }
+    },
+    "materials": [
+      { "name": "やわらかい肉", "quantity": 4 },
+      { "name": "まんまるポテト", "quantity": 3 },
+      { "name": "こくうまソース", "quantity": 5 },
+      { "name": "デリシャスオイル", "quantity": 5 }
+    ]
+  },
+  {
+    "name": "かいしんバーガー",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 100, "max": 130 },
+      "B": { "min": 100, "max": 130 },
+      "G": { "min": 130, "max": 160 }
+    },
+    "materials": [
+      { "name": "やわらかい肉", "quantity": 4 },
+      { "name": "ふわふわ小麦", "quantity": 3 },
+      { "name": "こくうまソース", "quantity": 5 },
+      { "name": "デリシャスオイル", "quantity": 6 }
+    ]
+  },
+  {
+    "name": "みかわしオムレツ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "B": { "min": 125, "max": 155 },
+      "C": { "min": 125, "max": 155 },
+      "F": { "min": 85, "max": 115 },
+      "I": { "min": 85, "max": 115 }
+    },
+    "materials": [
+      { "name": "やわらかい肉", "quantity": 4 },
+      { "name": "しんせんたまご", "quantity": 3 },
+      { "name": "みかわしそう", "quantity": 10 },
+      { "name": "デリシャスオイル", "quantity": 6 }
+    ]
+  },
+  {
+    "name": "アクロバーガー",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "C": { "min": 113, "max": 143 },
+      "E": { "min": 155, "max": 185 },
+      "F": { "min": 155, "max": 185 },
+      "H": { "min": 135, "max": 165 },
+      "I": { "min": 135, "max": 165 }
+    },
+    "materials": [
+      { "name": "しもふりミート", "quantity": 2 },
+      { "name": "しゃっきりレタス", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 3 },
+      { "name": "ピリからペッパー", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 12 }
+    ]
+  },
+  {
+    "name": "アクロバーガー・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 1 },
+      { "name": "しゃっきりレタス", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "ピリからペッパー", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 6 }
+    ]
+  },
+  {
+    "name": "あいじょうオムレツ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 140, "max": 170 },
+      "D": { "min": 130, "max": 160 },
+      "G": { "min": 130, "max": 160 },
+      "H": { "min": 160, "max": 190 },
+      "I": { "min": 160, "max": 190 }
+    },
+    "materials": [
+      { "name": "しもふりミート", "quantity": 2 },
+      { "name": "しんせんたまご", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 3 },
+      { "name": "こくうまソース", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 12 }
+    ]
+  },
+  {
+    "name": "あいじょうオムレツ・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 1 },
+      { "name": "しんせんたまご", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "こくうまソース", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 6 }
+    ]
+  },
+  {
+    "name": "バトルステーキ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "B": { "min": 135, "max": 165 },
+      "C": { "min": 135, "max": 165 },
+      "F": { "min": 160, "max": 190 },
+      "G": { "min": 135, "max": 165 },
+      "H": { "min": 135, "max": 165 },
+      "I": { "min": 160, "max": 190 }
+    },
+    "materials": [
+      { "name": "しもふりミート", "quantity": 3 },
+      { "name": "ジャンボ玉ネギ", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 4 },
+      { "name": "ピリからペッパー", "quantity": 4 },
+      { "name": "デリシャスオイル", "quantity": 16 }
+    ]
+  },
+  {
+    "name": "バトルステーキ・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 2 },
+      { "name": "ジャンボ玉ネギ", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "ピリからペッパー", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "タンクハンバーグ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 3 },
+      { "name": "ジャンボ玉ネギ", "quantity": 2 },
+      { "name": "びっくりトマト", "quantity": 4 },
+      { "name": "ピリからペッパー", "quantity": 6 },
+      { "name": "デリシャスオイル", "quantity": 16 }
+    ]
+  },
+  {
+    "name": "タンクハンバーグ・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 2 },
+      { "name": "ジャンボ玉ネギ", "quantity": 1 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "ピリからペッパー", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "ほくほく肉じゃが",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 4 },
+      { "name": "まんまるポテト", "quantity": 8 },
+      { "name": "びっくりトマト", "quantity": 5 },
+      { "name": "こくうまソース", "quantity": 6 },
+      { "name": "デリシャスオイル", "quantity": 18 }
+    ]
+  },
+  {
+    "name": "ほくほく肉じゃが・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 3 },
+      { "name": "まんまるポテト", "quantity": 4 },
+      { "name": "びっくりトマト", "quantity": 3 },
+      { "name": "こくうまソース", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 9 }
+    ]
+  },
+  {
+    "name": "いやしのスープ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 100, "max": 130 },
+      "D": { "min": 100, "max": 130 }
+    },
+    "materials": [
+      { "name": "魚の切り身", "quantity": 3 },
+      { "name": "まんまるポテト", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 3 }
+    ]
+  },
+  {
+    "name": "ガーディアンサラダ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "F": { "min": 85, "max": 115 },
+      "H": { "min": 85, "max": 115 },
+      "I": { "min": 85, "max": 115 }
+    },
+    "materials": [
+      { "name": "魚の切り身", "quantity": 4 },
+      { "name": "しゃっきりレタス", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 4 }
+    ]
+  },
+  {
+    "name": "マジカルサンド",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "D": { "min": 110, "max": 140 },
+      "G": { "min": 110, "max": 140 },
+      "H": { "min": 90, "max": 120 }
+    },
+    "materials": [
+      { "name": "魚の切り身", "quantity": 4 },
+      { "name": "しゃっきりレタス", "quantity": 3 },
+      { "name": "ふわふわ小麦", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 5 }
+    ]
+  },
+  {
+    "name": "いやしのムニエル",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 145, "max": 175 },
+      "C": { "min": 145, "max": 175 },
+      "D": { "min": 145, "max": 175 },
+      "F": { "min": 145, "max": 175 },
+      "I": { "min": 110, "max": 140 }
+    },
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 2 },
+      { "name": "ふわふわ小麦", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 3 },
+      { "name": "ごくじょうソルト", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 12 }
+    ]
+  },
+  {
+    "name": "いやしのムニエル・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 1 },
+      { "name": "ふわふわ小麦", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "ごくじょうソルト", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 6 }
+    ]
+  },
+  {
+    "name": "マジックスープ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 110, "max": 140 },
+      "C": { "min": 110, "max": 140 },
+      "D": { "min": 160, "max": 190 },
+      "F": { "min": 130, "max": 160 },
+      "G": { "min": 160, "max": 190 },
+      "I": { "min": 130, "max": 160 }
+    },
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 3 },
+      { "name": "しゃっきりレタス", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 4 },
+      { "name": "ピリからペッパー", "quantity": 4 },
+      { "name": "デリシャスオイル", "quantity": 16 }
+    ]
+  },
+  {
+    "name": "マジックスープ・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 2 },
+      { "name": "しゃっきりレタス", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "ピリからペッパー", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "ミラクルサンド",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 140, "max": 170 },
+      "C": { "min": 170, "max": 200 },
+      "D": { "min": 140, "max": 170 },
+      "F": { "min": 140, "max": 170 },
+      "G": { "min": 150, "max": 180 },
+      "I": { "min": 140, "max": 170 }
+    },
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 3 },
+      { "name": "ジャンボ玉ネギ", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 4 },
+      { "name": "こくうまソース", "quantity": 4 },
+      { "name": "デリシャスオイル", "quantity": 16 }
+    ]
+  },
+  {
+    "name": "ミラクルサンド・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 2 },
+      { "name": "ジャンボ玉ネギ", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "こくうまソース", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "キレキレキッシュ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 2 },
+      { "name": "みかわしそう", "quantity": 8 },
+      { "name": "びっくりトマト", "quantity": 4 },
+      { "name": "ごくじょうソルト", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 16 }
+    ]
+  },
+  {
+    "name": "キレキレキッシュ・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 1 },
+      { "name": "みかわしそう", "quantity": 4 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "ごくじょうソルト", "quantity": 1 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "バトルパッツァ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 10 },
+      { "name": "ジャンボ玉ネギ", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 1 },
+      { "name": "ピリからペッパー", "quantity": 4 },
+      { "name": "デリシャスオイル", "quantity": 16 }
+    ]
+  },
+  {
+    "name": "バトルパッツァ・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 5 },
+      { "name": "ジャンボ玉ネギ", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 1 },
+      { "name": "ピリからペッパー", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "スマッシュポテト",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 130, "max": 160 },
+      "B": { "min": 130, "max": 160 },
+      "C": { "min": 130, "max": 160 },
+      "G": { "min": 195, "max": 225 },
+      "H": { "min": 195, "max": 225 },
+      "I": { "min": 195, "max": 225 }
+    },
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 3 },
+      { "name": "まんまるポテト", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 4 },
+      { "name": "ごくじょうソルト", "quantity": 4 },
+      { "name": "デリシャスオイル", "quantity": 16 }
+    ]
+  },
+  {
+    "name": "スマッシュポテト・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 2 },
+      { "name": "まんまるポテト", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "ごくじょうソルト", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "グレイトグラタン",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "B": { "min": 180, "max": 210 },
+      "C": { "min": 140, "max": 170 },
+      "D": { "min": 140, "max": 170 },
+      "F": { "min": 140, "max": 170 },
+      "G": { "min": 140, "max": 170 },
+      "H": { "min": 180, "max": 210 }
+    },
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 3 },
+      { "name": "しんせんたまご", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 4 },
+      { "name": "ごくじょうソルト", "quantity": 4 },
+      { "name": "デリシャスオイル", "quantity": 16 }
+    ]
+  },
+  {
+    "name": "グレイトグラタン・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 2 },
+      { "name": "しんせんたまご", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "ごくじょうソルト", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "スタミナライス",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 60, "max": 90 },
+      "B": { "min": 80, "max": 110 }
+    },
+    "materials": [
+      { "name": "やわらかい肉", "quantity": 3 },
+      { "name": "ライスフラワー", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "マナパスタ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "F": { "min": 90, "max": 120 },
+      "G": { "min": 70, "max": 100 }
+    },
+    "materials": [
+      { "name": "魚の切り身", "quantity": 3 },
+      { "name": "ふわふわ小麦", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "メガもり丼",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 90, "max": 120 },
+      "B": { "min": 135, "max": 165 },
+      "C": { "min": 135, "max": 165 },
+      "D": { "min": 90, "max": 120 }
+    },
+    "materials": [
+      { "name": "やわらかい肉", "quantity": 4 },
+      { "name": "まんまるポテト", "quantity": 3 },
+      { "name": "ライスフラワー", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 6 }
+    ]
+  },
+  {
+    "name": "バランスパスタ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "C": { "min": 120, "max": 150 },
+      "F": { "min": 145, "max": 175 },
+      "G": { "min": 171, "max": 201 },
+      "H": { "min": 145, "max": 175 },
+      "I": { "min": 145, "max": 175 }
+    },
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 2 },
+      { "name": "ふわふわ小麦", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 3 },
+      { "name": "こくうまソース", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 12 }
+    ]
+  },
+  {
+    "name": "バランスパスタ・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 1 },
+      { "name": "ふわふわ小麦", "quantity": 2 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "こくうまソース", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 6 }
+    ]
+  },
+  {
+    "name": "スパイスカレー",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 165, "max": 195 },
+      "B": { "min": 165, "max": 195 },
+      "C": { "min": 140, "max": 170 },
+      "G": { "min": 120, "max": 150 },
+      "H": { "min": 120, "max": 150 },
+      "I": { "min": 120, "max": 150 }
+    },
+    "materials": [
+      { "name": "しもふりミート", "quantity": 3 },
+      { "name": "ライスフラワー", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 4 },
+      { "name": "ピリからペッパー", "quantity": 4 },
+      { "name": "デリシャスオイル", "quantity": 16 }
+    ]
+  },
+  {
+    "name": "スパイスカレー・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 2 },
+      { "name": "ライスフラワー", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "ピリからペッパー", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "匠のチャーハン",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 2 },
+      { "name": "ライスフラワー", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 4 },
+      { "name": "こくうまソース", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 16 }
+    ]
+  },
+  {
+    "name": "匠のチャーハン・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 1 },
+      { "name": "ライスフラワー", "quantity": 2 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "こくうまソース", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "ズッシリゾット",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 130, "max": 160 },
+      "B": { "min": 130, "max": 160 },
+      "C": { "min": 165, "max": 195 },
+      "G": { "min": 165, "max": 195 },
+      "H": { "min": 180, "max": 210 },
+      "I": { "min": 180, "max": 210 }
+    },
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 3 },
+      { "name": "ライスフラワー", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 4 },
+      { "name": "こくうまソース", "quantity": 4 },
+      { "name": "デリシャスオイル", "quantity": 16 }
+    ]
+  },
+  {
+    "name": "ズッシリゾット・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 2 },
+      { "name": "ライスフラワー", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "こくうまソース", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "ヒールカルボナーラ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 4 },
+      { "name": "しんせんたまご", "quantity": 8 },
+      { "name": "びっくりトマト", "quantity": 5 },
+      { "name": "ピリからペッパー", "quantity": 6 },
+      { "name": "デリシャスオイル", "quantity": 18 }
+    ]
+  },
+  {
+    "name": "ヒールカルボナーラ・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しもふりミート", "quantity": 3 },
+      { "name": "しんせんたまご", "quantity": 4 },
+      { "name": "びっくりトマト", "quantity": 3 },
+      { "name": "ピリからペッパー", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 9 }
+    ]
+  },
+  {
+    "name": "クイックケーキ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "B": { "min": 60, "max": 90 }
+    },
+    "materials": [
+      { "name": "しんせんたまご", "quantity": 3 },
+      { "name": "おいしいミルク", "quantity": 1 },
+      { "name": "デリシャスオイル", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "ゴージャスクッキー",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "B": { "min": 50, "max": 80 },
+      "D": { "min": 70, "max": 100 }
+    },
+    "materials": [
+      { "name": "しんせんたまご", "quantity": 3 },
+      { "name": "花のみつ", "quantity": 1 },
+      { "name": "デリシャスオイル", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "ファイアタルト",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 145, "max": 175 },
+      "B": { "min": 145, "max": 175 },
+      "H": { "min": 128, "max": 158 },
+      "I": { "min": 110, "max": 140 }
+    },
+    "materials": [
+      { "name": "しんせんたまご", "quantity": 10 },
+      { "name": "レッドベリー", "quantity": 10 },
+      { "name": "ごくじょうソルト", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "ファイアタルト・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しんせんたまご", "quantity": 5 },
+      { "name": "レッドベリー", "quantity": 5 },
+      { "name": "ごくじょうソルト", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 4 }
+    ]
+  },
+  {
+    "name": "アイスタルト",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 120, "max": 150 },
+      "D": { "min": 120, "max": 150 },
+      "H": { "min": 100, "max": 130 },
+      "I": { "min": 140, "max": 170 }
+    },
+    "materials": [
+      { "name": "しんせんたまご", "quantity": 10 },
+      { "name": "氷のけっしょう", "quantity": 10 },
+      { "name": "ごくじょうソルト", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "アイスタルト・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "しんせんたまご", "quantity": 5 },
+      { "name": "氷のけっしょう", "quantity": 5 },
+      { "name": "ごくじょうソルト", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 4 }
+    ]
+  },
+  {
+    "name": "ライトタルト",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "B": { "min": 110, "max": 140 },
+      "G": { "min": 145, "max": 175 },
+      "H": { "min": 145, "max": 175 },
+      "I": { "min": 130, "max": 160 }
+    },
+    "materials": [
+      { "name": "おいしいミルク", "quantity": 10 },
+      { "name": "天使のソーマ", "quantity": 1 },
+      { "name": "ごくじょうソルト", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "ライトタルト・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おいしいミルク", "quantity": 5 },
+      { "name": "きよめの水", "quantity": 5 },
+      { "name": "ごくじょうソルト", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 4 }
+    ]
+  },
+  {
+    "name": "ダークタルト",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "B": { "min": 120, "max": 150 },
+      "C": { "min": 120, "max": 150 },
+      "F": { "min": 150, "max": 180 },
+      "G": { "min": 160, "max": 190 }
+    },
+    "materials": [
+      { "name": "おいしいミルク", "quantity": 10 },
+      { "name": "カチコチくるみ", "quantity": 10 },
+      { "name": "ごくじょうソルト", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "ダークタルト・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おいしいミルク", "quantity": 5 },
+      { "name": "カチコチくるみ", "quantity": 5 },
+      { "name": "ごくじょうソルト", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 4 }
+    ]
+  },
+  {
+    "name": "ストームタルト",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "C": { "min": 120, "max": 150 },
+      "F": { "min": 130, "max": 160 },
+      "H": { "min": 150, "max": 180 },
+      "I": { "min": 150, "max": 180 }
+    },
+    "materials": [
+      { "name": "おいしいミルク", "quantity": 10 },
+      { "name": "みかわしそう", "quantity": 10 },
+      { "name": "ごくじょうソルト", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "ストームタルト・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おいしいミルク", "quantity": 5 },
+      { "name": "みかわしそう", "quantity": 5 },
+      { "name": "ごくじょうソルト", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 4 }
+    ]
+  },
+  {
+    "name": "スタースイーツ",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 130, "max": 160 },
+      "B": { "min": 105, "max": 135 },
+      "C": { "min": 105, "max": 135 },
+      "G": { "min": 130, "max": 160 },
+      "H": { "min": 130, "max": 160 }
+    },
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 2 },
+      { "name": "おいしいミルク", "quantity": 6 },
+      { "name": "びっくりトマト", "quantity": 3 },
+      { "name": "ごくじょうソルト", "quantity": 3 },
+      { "name": "デリシャスオイル", "quantity": 12 }
+    ]
+  },
+  {
+    "name": "スタースイーツ・小",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "おおとろの切り身", "quantity": 1 },
+      { "name": "おいしいミルク", "quantity": 3 },
+      { "name": "びっくりトマト", "quantity": 2 },
+      { "name": "ごくじょうソルト", "quantity": 2 },
+      { "name": "デリシャスオイル", "quantity": 6 }
+    ]
+  },
+  {
+    "name": "お詫びの笹だんご",
+    "category": "料理",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 90, "max": 120 },
+      "B": { "min": 90, "max": 120 },
+      "D": { "min": 75, "max": 105 }
+    },
+    "materials": [
+      { "name": "ライスフラワー", "quantity": 4 },
+      { "name": "星々のナミダ", "quantity": 4 },
+      { "name": "デリシャスオイル", "quantity": 1 }
+    ]
+  }
+]
