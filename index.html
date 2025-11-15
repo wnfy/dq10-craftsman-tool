@@ -102,7 +102,19 @@ const CraftsmanApp = () => {
   const filteredItems = allItems.filter(item => {
     const categoryMatch = item.category === activeCategory;
     const searchMatch = searchActive === '' || item.name.toLowerCase().includes(searchActive.toLowerCase());
-    return categoryMatch && searchMatch;
+    
+    // 武器鍛冶のサブカテゴリフィルタリング
+    let subCategoryMatch = true;
+    if (activeCategory === '武器鍛冶' && selectedWeaponType !== '武器全部') {
+      subCategoryMatch = item.subCategory === selectedWeaponType;
+    }
+    
+    // 防具鍛冶のサブカテゴリフィルタリング
+    if (activeCategory === '防具鍛冶' && selectedArmorType !== '防具全部') {
+      subCategoryMatch = item.subCategory === selectedArmorType;
+    }
+    
+    return categoryMatch && searchMatch && subCategoryMatch;
   });
 
   const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理'];
@@ -485,7 +497,14 @@ const CraftsmanApp = () => {
                     <div className="relative flex items-center justify-between">
                       <div>
                         <span className="text-xs font-bold bg-white/30 px-3 py-0.5 rounded-full">{item.category}</span>
-                        <h2 className="text-2xl font-black mt-2 drop-shadow-lg">{item.name}</h2>
+                        <div className="flex items-center gap-2 mt-2">
+                          <h2 className="text-2xl font-black drop-shadow-lg">{item.name}</h2>
+                          {item.specialTrait && (
+                            <span className="px-3 py-1 bg-yellow-400 text-yellow-900 rounded-full text-xs font-bold shadow-md">
+                              {item.specialTrait}
+                            </span>
+                          )}
+                        </div>
                       </div>
                       {item.category === '料理' ? (
                         <UtensilsCrossed size={32} className="opacity-90 drop-shadow-lg" />
