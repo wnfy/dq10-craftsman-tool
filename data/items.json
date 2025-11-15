@@ -3625,5 +3625,2297 @@
       }
     ],
     "specialTrait": "倍半"
+  },
+  {
+    "name": "どうの大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 9,
+        "max": 22
+      },
+      "B": {
+        "min": 9,
+        "max": 22
+      },
+      "C": {
+        "min": 12,
+        "max": 24
+      },
+      "D": {
+        "min": 12,
+        "max": 24
+      },
+      "E": {
+        "min": 9,
+        "max": 22
+      },
+      "F": {
+        "min": 9,
+        "max": 22
+      },
+      "G": {
+        "min": 9,
+        "max": 22
+      },
+      "H": {
+        "min": 9,
+        "max": 22
+      }
+    },
+    "materials": [
+      {
+        "name": "どうのこうせき",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ビッグブレード",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 16,
+        "max": 34
+      },
+      "B": {
+        "min": 16,
+        "max": 34
+      },
+      "C": {
+        "min": 12,
+        "max": 24
+      },
+      "D": {
+        "min": 12,
+        "max": 24
+      },
+      "E": {
+        "min": 12,
+        "max": 24
+      },
+      "F": {
+        "min": 12,
+        "max": 24
+      },
+      "G": {
+        "min": 20,
+        "max": 30
+      },
+      "H": {
+        "min": 20,
+        "max": 30
+      }
+    },
+    "materials": [
+      {
+        "name": "どうのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "小さなこうら",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "せいどうの大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 12,
+        "max": 24
+      },
+      "B": {
+        "min": 12,
+        "max": 24
+      },
+      "C": {
+        "min": 9,
+        "max": 22
+      },
+      "D": {
+        "min": 9,
+        "max": 22
+      },
+      "E": {
+        "min": 18,
+        "max": 36
+      },
+      "F": {
+        "min": 18,
+        "max": 36
+      },
+      "G": {
+        "min": 12,
+        "max": 24
+      },
+      "H": {
+        "min": 12,
+        "max": 24
+      }
+    },
+    "materials": [
+      {
+        "name": "どうのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ビッグブレードⅡ",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 28,
+        "max": 40
+      },
+      "B": {
+        "min": 28,
+        "max": 40
+      },
+      "C": {
+        "min": 24,
+        "max": 36
+      },
+      "D": {
+        "min": 24,
+        "max": 36
+      },
+      "E": {
+        "min": 12,
+        "max": 24
+      },
+      "F": {
+        "min": 12,
+        "max": 24
+      },
+      "G": {
+        "min": 16,
+        "max": 26
+      },
+      "H": {
+        "min": 16,
+        "max": 26
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "ブラックパール",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "てつの大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 16,
+        "max": 28
+      },
+      "B": {
+        "min": 16,
+        "max": 28
+      },
+      "C": {
+        "min": 12,
+        "max": 26
+      },
+      "D": {
+        "min": 12,
+        "max": 26
+      },
+      "E": {
+        "min": 16,
+        "max": 28
+      },
+      "F": {
+        "min": 16,
+        "max": 28
+      },
+      "G": {
+        "min": 26,
+        "max": 36
+      },
+      "H": {
+        "min": 26,
+        "max": 36
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 3
+      },
+      {
+        "name": "どうのこうせき",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "おおばさみ",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 46,
+        "max": 52
+      },
+      "B": {
+        "min": 16,
+        "max": 28
+      },
+      "C": {
+        "min": 30,
+        "max": 40
+      },
+      "D": {
+        "min": 16,
+        "max": 28
+      },
+      "E": {
+        "min": 26,
+        "max": 36
+      },
+      "F": {
+        "min": 24,
+        "max": 36
+      },
+      "G": {
+        "min": 26,
+        "max": 38
+      },
+      "H": {
+        "min": 32,
+        "max": 38
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "するどい爪",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "シャドウエッジ",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 30,
+        "max": 38
+      },
+      "B": {
+        "min": 30,
+        "max": 38
+      },
+      "C": {
+        "min": 26,
+        "max": 36
+      },
+      "D": {
+        "min": 26,
+        "max": 36
+      },
+      "E": {
+        "min": 30,
+        "max": 40
+      },
+      "F": {
+        "min": 30,
+        "max": 40
+      },
+      "G": {
+        "min": 24,
+        "max": 38
+      },
+      "H": {
+        "min": 24,
+        "max": 38
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "みがきずな",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "退魔の太刀",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 48,
+        "max": 54
+      },
+      "B": {
+        "min": 26,
+        "max": 38
+      },
+      "C": {
+        "min": 30,
+        "max": 38
+      },
+      "D": {
+        "min": 32,
+        "max": 46
+      },
+      "E": {
+        "min": 32,
+        "max": 46
+      },
+      "F": {
+        "min": 30,
+        "max": 38
+      },
+      "G": {
+        "min": 26,
+        "max": 38
+      },
+      "H": {
+        "min": 48,
+        "max": 54
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "小さなホネ",
+        "quantity": 1
+      },
+      {
+        "name": "さくらの花びら",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "はがねの大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 32,
+        "max": 40
+      },
+      "B": {
+        "min": 32,
+        "max": 40
+      },
+      "C": {
+        "min": 24,
+        "max": 36
+      },
+      "D": {
+        "min": 24,
+        "max": 36
+      },
+      "E": {
+        "min": 40,
+        "max": 46
+      },
+      "F": {
+        "min": 40,
+        "max": 46
+      },
+      "G": {
+        "min": 26,
+        "max": 40
+      },
+      "H": {
+        "min": 26,
+        "max": 40
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "どうのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "ブルーアイ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "斬夜の太刀",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 70,
+        "max": 80
+      },
+      "B": {
+        "min": 60,
+        "max": 72
+      },
+      "C": {
+        "min": 48,
+        "max": 56
+      },
+      "D": {
+        "min": 40,
+        "max": 48
+      },
+      "E": {
+        "min": 40,
+        "max": 50
+      },
+      "F": {
+        "min": 30,
+        "max": 40
+      },
+      "G": {
+        "min": 36,
+        "max": 46
+      },
+      "H": {
+        "min": 36,
+        "max": 46
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "こうもりのはね",
+        "quantity": 1
+      },
+      {
+        "name": "さくらの花びら",
+        "quantity": 1
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "クレセントエッジ",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 64,
+        "max": 70
+      },
+      "B": {
+        "min": 26,
+        "max": 40
+      },
+      "C": {
+        "min": 48,
+        "max": 58
+      },
+      "D": {
+        "min": 30,
+        "max": 40
+      },
+      "E": {
+        "min": 30,
+        "max": 40
+      },
+      "F": {
+        "min": 48,
+        "max": 58
+      },
+      "G": {
+        "min": 26,
+        "max": 40
+      },
+      "H": {
+        "min": 64,
+        "max": 70
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "どうのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "イエローアイ",
+        "quantity": 1
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ブラッドエッジ",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 32,
+        "max": 40
+      },
+      "B": {
+        "min": 32,
+        "max": 46
+      },
+      "C": {
+        "min": 48,
+        "max": 54
+      },
+      "D": {
+        "min": 40,
+        "max": 52
+      },
+      "E": {
+        "min": 36,
+        "max": 48
+      },
+      "F": {
+        "min": 26,
+        "max": 38
+      },
+      "G": {
+        "min": 40,
+        "max": 52
+      },
+      "H": {
+        "min": 48,
+        "max": 54
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "まりょくの土",
+        "quantity": 1
+      },
+      {
+        "name": "レッドベリー",
+        "quantity": 1
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ドラゴンバスター",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 40,
+        "max": 46
+      },
+      "B": {
+        "min": 40,
+        "max": 46
+      },
+      "C": {
+        "min": 48,
+        "max": 58
+      },
+      "D": {
+        "min": 48,
+        "max": 58
+      },
+      "E": {
+        "min": 72,
+        "max": 80
+      },
+      "F": {
+        "min": 72,
+        "max": 80
+      },
+      "G": {
+        "min": 60,
+        "max": 70
+      },
+      "H": {
+        "min": 60,
+        "max": 70
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 6
+      },
+      {
+        "name": "ドラゴンのツノ",
+        "quantity": 1
+      },
+      {
+        "name": "グリーンアイ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "デーモンバスター",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 50,
+        "max": 56
+      },
+      "B": {
+        "min": 50,
+        "max": 56
+      },
+      "C": {
+        "min": 40,
+        "max": 50
+      },
+      "D": {
+        "min": 40,
+        "max": 50
+      },
+      "E": {
+        "min": 80,
+        "max": 88
+      },
+      "F": {
+        "min": 80,
+        "max": 88
+      },
+      "G": {
+        "min": 36,
+        "max": 46
+      },
+      "H": {
+        "min": 36,
+        "max": 46
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 6
+      },
+      {
+        "name": "せいじゃのはい",
+        "quantity": 1
+      },
+      {
+        "name": "レッドアイ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 6
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "プラチナブレード",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 35,
+        "max": 45
+      },
+      "B": {
+        "min": 35,
+        "max": 45
+      },
+      "C": {
+        "min": 50,
+        "max": 58
+      },
+      "D": {
+        "min": 50,
+        "max": 58
+      },
+      "E": {
+        "min": 70,
+        "max": 76
+      },
+      "F": {
+        "min": 70,
+        "max": 76
+      },
+      "G": {
+        "min": 40,
+        "max": 51
+      },
+      "H": {
+        "min": 40,
+        "max": 51
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 4
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 5
+      },
+      {
+        "name": "かがみ石",
+        "quantity": 2
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "大獄剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 70,
+        "max": 78
+      },
+      "B": {
+        "min": 70,
+        "max": 78
+      },
+      "C": {
+        "min": 60,
+        "max": 66
+      },
+      "D": {
+        "min": 60,
+        "max": 66
+      },
+      "E": {
+        "min": 100,
+        "max": 110
+      },
+      "F": {
+        "min": 100,
+        "max": 110
+      },
+      "G": {
+        "min": 50,
+        "max": 60
+      },
+      "H": {
+        "min": 50,
+        "max": 60
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 12
+      },
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 30
+      },
+      {
+        "name": "グリーンオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "キングブレード",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 46,
+        "max": 52
+      },
+      "B": {
+        "min": 48,
+        "max": 60
+      },
+      "C": {
+        "min": 48,
+        "max": 60
+      },
+      "D": {
+        "min": 54,
+        "max": 62
+      },
+      "E": {
+        "min": 62,
+        "max": 80
+      },
+      "F": {
+        "min": 62,
+        "max": 68
+      },
+      "G": {
+        "min": 54,
+        "max": 62
+      },
+      "H": {
+        "min": 72,
+        "max": 80
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "ヘビーメタル",
+        "quantity": 3
+      },
+      {
+        "name": "イエローオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "天馬の大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 70,
+        "max": 78
+      },
+      "B": {
+        "min": 132,
+        "max": 138
+      },
+      "C": {
+        "min": 100,
+        "max": 107
+      },
+      "D": {
+        "min": 70,
+        "max": 80
+      },
+      "E": {
+        "min": 70,
+        "max": 80
+      },
+      "F": {
+        "min": 60,
+        "max": 69
+      },
+      "G": {
+        "min": 85,
+        "max": 93
+      },
+      "H": {
+        "min": 85,
+        "max": 93
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 15
+      },
+      {
+        "name": "天使のソーマ",
+        "quantity": 2
+      },
+      {
+        "name": "グリーンオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 12
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "メタスラの大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 86
+      },
+      "B": {
+        "min": 80,
+        "max": 86
+      },
+      "C": {
+        "min": 110,
+        "max": 120
+      },
+      "D": {
+        "min": 110,
+        "max": 120
+      },
+      "E": {
+        "min": 65,
+        "max": 75
+      },
+      "F": {
+        "min": 65,
+        "max": 75
+      },
+      "G": {
+        "min": 60,
+        "max": 68
+      },
+      "H": {
+        "min": 60,
+        "max": 68
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 15
+      },
+      {
+        "name": "大きな貝がら",
+        "quantity": 30
+      },
+      {
+        "name": "メタルのカケラ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 12
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "フォースブレード",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 104,
+        "max": 112
+      },
+      "B": {
+        "min": 130,
+        "max": 136
+      },
+      "C": {
+        "min": 60,
+        "max": 68
+      },
+      "D": {
+        "min": 80,
+        "max": 90
+      },
+      "E": {
+        "min": 80,
+        "max": 90
+      },
+      "F": {
+        "min": 60,
+        "max": 68
+      },
+      "G": {
+        "min": 130,
+        "max": 136
+      },
+      "H": {
+        "min": 104,
+        "max": 112
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 40
+      },
+      {
+        "name": "ぶどうエキス",
+        "quantity": 4
+      },
+      {
+        "name": "いかずちのたま",
+        "quantity": 1
+      },
+      {
+        "name": "イエローオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "聖王の大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 100,
+        "max": 106
+      },
+      "B": {
+        "min": 100,
+        "max": 106
+      },
+      "C": {
+        "min": 80,
+        "max": 88
+      },
+      "D": {
+        "min": 80,
+        "max": 88
+      },
+      "E": {
+        "min": 135,
+        "max": 147
+      },
+      "F": {
+        "min": 130,
+        "max": 132
+      },
+      "G": {
+        "min": 60,
+        "max": 66
+      },
+      "H": {
+        "min": 60,
+        "max": 66
+      }
+    },
+    "materials": [
+      {
+        "name": "マデュライト",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾り両手剣",
+        "quantity": 1
+      },
+      {
+        "name": "ドラゴンのホネ",
+        "quantity": 1
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "エンパイアブレード",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 120,
+        "max": 126
+      },
+      "B": {
+        "min": 120,
+        "max": 126
+      },
+      "C": {
+        "min": 60,
+        "max": 68
+      },
+      "D": {
+        "min": 60,
+        "max": 68
+      },
+      "E": {
+        "min": 80,
+        "max": 86
+      },
+      "F": {
+        "min": 80,
+        "max": 86
+      },
+      "G": {
+        "min": 108,
+        "max": 120
+      },
+      "H": {
+        "min": 108,
+        "max": 120
+      }
+    },
+    "materials": [
+      {
+        "name": "マデュライト",
+        "quantity": 10
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 1
+      },
+      {
+        "name": "メタルのカケラ",
+        "quantity": 1
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "翠石の大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 107,
+        "max": 113
+      },
+      "B": {
+        "min": 107,
+        "max": 113
+      },
+      "C": {
+        "min": 125,
+        "max": 137
+      },
+      "D": {
+        "min": 125,
+        "max": 137
+      },
+      "E": {
+        "min": 95,
+        "max": 103
+      },
+      "F": {
+        "min": 95,
+        "max": 103
+      },
+      "G": {
+        "min": 80,
+        "max": 86
+      },
+      "H": {
+        "min": 80,
+        "max": 86
+      }
+    },
+    "materials": [
+      {
+        "name": "マデュライト",
+        "quantity": 15
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 1
+      },
+      {
+        "name": "緑の宝石",
+        "quantity": 5
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ケイオスブレード",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 70,
+        "max": 78
+      },
+      "B": {
+        "min": 70,
+        "max": 78
+      },
+      "C": {
+        "min": 90,
+        "max": 100
+      },
+      "D": {
+        "min": 120,
+        "max": 126
+      },
+      "E": {
+        "min": 100,
+        "max": 106
+      },
+      "F": {
+        "min": 146,
+        "max": 156
+      },
+      "G": {
+        "min": 80,
+        "max": 88
+      },
+      "H": {
+        "min": 80,
+        "max": 88
+      }
+    },
+    "materials": [
+      {
+        "name": "マデュライト",
+        "quantity": 15
+      },
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 30
+      },
+      {
+        "name": "赤いサンゴ",
+        "quantity": 20
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "スレイプニール",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 98
+      },
+      "B": {
+        "min": 90,
+        "max": 98
+      },
+      "C": {
+        "min": 141,
+        "max": 153
+      },
+      "D": {
+        "min": 141,
+        "max": 153
+      },
+      "E": {
+        "min": 112,
+        "max": 118
+      },
+      "F": {
+        "min": 112,
+        "max": 118
+      },
+      "G": {
+        "min": 75,
+        "max": 81
+      },
+      "H": {
+        "min": 75,
+        "max": 81
+      }
+    },
+    "materials": [
+      {
+        "name": "ナドラダイト鉱石",
+        "quantity": 3
+      },
+      {
+        "name": "幻獣の皮",
+        "quantity": 1
+      },
+      {
+        "name": "大きなホネ",
+        "quantity": 5
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "フューリーブレード",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 142,
+        "max": 148
+      },
+      "B": {
+        "min": 142,
+        "max": 148
+      },
+      "C": {
+        "min": 110,
+        "max": 122
+      },
+      "D": {
+        "min": 110,
+        "max": 122
+      },
+      "E": {
+        "min": 96,
+        "max": 102
+      },
+      "F": {
+        "min": 96,
+        "max": 102
+      },
+      "G": {
+        "min": 72,
+        "max": 80
+      },
+      "H": {
+        "min": 72,
+        "max": 80
+      }
+    },
+    "materials": [
+      {
+        "name": "ナドラダイト鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "ホカホカストーン",
+        "quantity": 30
+      },
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 30
+      },
+      {
+        "name": "プラチナこうせき",
+        "quantity": 30
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "聖大剣アスカロン",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 130,
+        "max": 142
+      },
+      "B": {
+        "min": 150,
+        "max": 156
+      },
+      "C": {
+        "min": 130,
+        "max": 142
+      },
+      "D": {
+        "min": 150,
+        "max": 156
+      },
+      "E": {
+        "min": 102,
+        "max": 108
+      },
+      "F": {
+        "min": 80,
+        "max": 88
+      },
+      "G": {
+        "min": 102,
+        "max": 108
+      },
+      "H": {
+        "min": 80,
+        "max": 88
+      }
+    },
+    "materials": [
+      {
+        "name": "ナドラダイト鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "せいじゃのはい",
+        "quantity": 5
+      },
+      {
+        "name": "ドラゴンのホネ",
+        "quantity": 5
+      },
+      {
+        "name": "ゴールドストーン",
+        "quantity": 5
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "オートクレール",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 88
+      },
+      "B": {
+        "min": 80,
+        "max": 88
+      },
+      "C": {
+        "min": 200,
+        "max": 210
+      },
+      "D": {
+        "min": 150,
+        "max": 156
+      },
+      "E": {
+        "min": 150,
+        "max": 156
+      },
+      "F": {
+        "min": 104,
+        "max": 114
+      },
+      "G": {
+        "min": 80,
+        "max": 88
+      },
+      "H": {
+        "min": 80,
+        "max": 88
+      }
+    },
+    "materials": [
+      {
+        "name": "アステライト鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 1
+      },
+      {
+        "name": "プラチナこうせき",
+        "quantity": 30
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 30
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "神域の大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 200,
+        "max": 210
+      },
+      "B": {
+        "min": 150,
+        "max": 156
+      },
+      "C": {
+        "min": 100,
+        "max": 110
+      },
+      "D": {
+        "min": 100,
+        "max": 108
+      },
+      "E": {
+        "min": 170,
+        "max": 176
+      },
+      "F": {
+        "min": 124,
+        "max": 134
+      },
+      "G": {
+        "min": 84,
+        "max": 92
+      },
+      "H": {
+        "min": 84,
+        "max": 92
+      }
+    },
+    "materials": [
+      {
+        "name": "アステライト鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "激震のキバ",
+        "quantity": 1
+      },
+      {
+        "name": "プラチナこうせき",
+        "quantity": 20
+      },
+      {
+        "name": "青い宝石",
+        "quantity": 15
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "覇王の大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 158
+      },
+      "B": {
+        "min": 130,
+        "max": 138
+      },
+      "C": {
+        "min": 122,
+        "max": 130
+      },
+      "D": {
+        "min": 120,
+        "max": 128
+      },
+      "E": {
+        "min": 160,
+        "max": 168
+      },
+      "F": {
+        "min": 134,
+        "max": 142
+      },
+      "G": {
+        "min": 114,
+        "max": 122
+      },
+      "H": {
+        "min": 104,
+        "max": 112
+      }
+    },
+    "materials": [
+      {
+        "name": "アステライト鉱石",
+        "quantity": 10
+      },
+      {
+        "name": "げんませき",
+        "quantity": 1
+      },
+      {
+        "name": "黄金の飾り両手剣",
+        "quantity": 1
+      },
+      {
+        "name": "マデュライト",
+        "quantity": 10
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "業炎の大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 145,
+        "max": 153
+      },
+      "B": {
+        "min": 145,
+        "max": 153
+      },
+      "C": {
+        "min": 115,
+        "max": 123
+      },
+      "D": {
+        "min": 115,
+        "max": 123
+      },
+      "E": {
+        "min": 145,
+        "max": 153
+      },
+      "F": {
+        "min": 145,
+        "max": 153
+      },
+      "G": {
+        "min": 127,
+        "max": 135
+      },
+      "H": {
+        "min": 127,
+        "max": 135
+      }
+    },
+    "materials": [
+      {
+        "name": "デモニウム鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "炎魔の焼け石",
+        "quantity": 2
+      },
+      {
+        "name": "まじゅうのホネ",
+        "quantity": 20
+      },
+      {
+        "name": "ホカホカストーン",
+        "quantity": 20
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ベルセルクブレード",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 120,
+        "max": 128
+      },
+      "B": {
+        "min": 150,
+        "max": 158
+      },
+      "C": {
+        "min": 150,
+        "max": 158
+      },
+      "D": {
+        "min": 120,
+        "max": 128
+      },
+      "E": {
+        "min": 90,
+        "max": 98
+      },
+      "F": {
+        "min": 90,
+        "max": 98
+      },
+      "G": {
+        "min": 110,
+        "max": 118
+      },
+      "H": {
+        "min": 110,
+        "max": 118
+      }
+    },
+    "materials": [
+      {
+        "name": "デモニウム鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "激震のキバ",
+        "quantity": 1
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 2
+      },
+      {
+        "name": "プラチナこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ダインスレイフ",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 100,
+        "max": 108
+      },
+      "B": {
+        "min": 100,
+        "max": 108
+      },
+      "C": {
+        "min": 100,
+        "max": 108
+      },
+      "D": {
+        "min": 100,
+        "max": 108
+      },
+      "E": {
+        "min": 150,
+        "max": 158
+      },
+      "F": {
+        "min": 150,
+        "max": 158
+      },
+      "G": {
+        "min": 80,
+        "max": 87
+      },
+      "H": {
+        "min": 80,
+        "max": 87
+      }
+    },
+    "materials": [
+      {
+        "name": "デモニウム鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "ナドラダイト鉱石",
+        "quantity": 1
+      },
+      {
+        "name": "よごれたほうたい",
+        "quantity": 1
+      },
+      {
+        "name": "小さなホネ",
+        "quantity": 5
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "輝天の大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 100,
+        "max": 107
+      },
+      "B": {
+        "min": 130,
+        "max": 137
+      },
+      "C": {
+        "min": 130,
+        "max": 137
+      },
+      "D": {
+        "min": 100,
+        "max": 107
+      },
+      "E": {
+        "min": 155,
+        "max": 165
+      },
+      "F": {
+        "min": 155,
+        "max": 165
+      },
+      "G": {
+        "min": 90,
+        "max": 97
+      },
+      "H": {
+        "min": 90,
+        "max": 97
+      }
+    },
+    "materials": [
+      {
+        "name": "フォレース鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "激震のキバ",
+        "quantity": 3
+      },
+      {
+        "name": "ときのすいしょう",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾り両手剣",
+        "quantity": 1
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 6
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "斬魔の緋大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 120,
+        "max": 128
+      },
+      "B": {
+        "min": 145,
+        "max": 152
+      },
+      "C": {
+        "min": 145,
+        "max": 152
+      },
+      "D": {
+        "min": 120,
+        "max": 128
+      },
+      "E": {
+        "min": 160,
+        "max": 169
+      },
+      "F": {
+        "min": 160,
+        "max": 169
+      },
+      "G": {
+        "min": 110,
+        "max": 117
+      },
+      "H": {
+        "min": 110,
+        "max": 117
+      }
+    },
+    "materials": [
+      {
+        "name": "フォレース鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "火竜のキバ",
+        "quantity": 3
+      },
+      {
+        "name": "赤い宝石",
+        "quantity": 20
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 10
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "セーラスブレード",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 165,
+        "max": 172
+      },
+      "B": {
+        "min": 140,
+        "max": 148
+      },
+      "C": {
+        "min": 140,
+        "max": 147
+      },
+      "D": {
+        "min": 125,
+        "max": 133
+      },
+      "E": {
+        "min": 169,
+        "max": 176
+      },
+      "F": {
+        "min": 169,
+        "max": 177
+      },
+      "G": {
+        "min": 105,
+        "max": 112
+      },
+      "H": {
+        "min": 105,
+        "max": 113
+      }
+    },
+    "materials": [
+      {
+        "name": "フォレース鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 5
+      },
+      {
+        "name": "デモニウム鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾り両手剣",
+        "quantity": 1
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "紫電の轟剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 145,
+        "max": 152
+      },
+      "B": {
+        "min": 132,
+        "max": 139
+      },
+      "C": {
+        "min": 172,
+        "max": 179
+      },
+      "D": {
+        "min": 148,
+        "max": 155
+      },
+      "E": {
+        "min": 188,
+        "max": 195
+      },
+      "F": {
+        "min": 181,
+        "max": 188
+      },
+      "G": {
+        "min": 128,
+        "max": 135
+      },
+      "H": {
+        "min": 112,
+        "max": 119
+      }
+    },
+    "materials": [
+      {
+        "name": "ゼーラズマ鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "人魚の涙",
+        "quantity": 3
+      },
+      {
+        "name": "ウェナールシェル",
+        "quantity": 30
+      },
+      {
+        "name": "大きな化石",
+        "quantity": 5
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "クラウドブレイカー",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 140,
+        "max": 148
+      },
+      "B": {
+        "min": 160,
+        "max": 168
+      },
+      "C": {
+        "min": 110,
+        "max": 117
+      },
+      "D": {
+        "min": 120,
+        "max": 127
+      },
+      "E": {
+        "min": 110,
+        "max": 117
+      },
+      "F": {
+        "min": 100,
+        "max": 107
+      },
+      "G": {
+        "min": 160,
+        "max": 168
+      },
+      "H": {
+        "min": 130,
+        "max": 138
+      }
+    },
+    "materials": [
+      {
+        "name": "ゼーラズマ鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "竜の涙",
+        "quantity": 4
+      },
+      {
+        "name": "おぼろ水晶",
+        "quantity": 4
+      },
+      {
+        "name": "黄金の飾り両手剣",
+        "quantity": 1
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "獅子の大剣",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": {
+        "min": 115,
+        "max": 123
+      },
+      "B": {
+        "min": 160,
+        "max": 167
+      },
+      "C": {
+        "min": 150,
+        "max": 157
+      },
+      "D": {
+        "min": 100,
+        "max": 107
+      },
+      "E": {
+        "min": 100,
+        "max": 107
+      },
+      "F": {
+        "min": 115,
+        "max": 122
+      },
+      "G": {
+        "min": 170,
+        "max": 179
+      },
+      "H": {
+        "min": 165,
+        "max": 171
+      }
+    },
+    "materials": [
+      {
+        "name": "ゼーラズマ鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "激震のキバ",
+        "quantity": 3
+      },
+      {
+        "name": "まじゅうのツノ",
+        "quantity": 6
+      },
+      {
+        "name": "げんませき",
+        "quantity": 6
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "光"
   }
 ]
