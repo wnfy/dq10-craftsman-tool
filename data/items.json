@@ -5917,5 +5917,648 @@
       }
     ],
     "specialTrait": "光"
+  },
+  {
+    "name": "ブロンズナイフ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 40, "max": 56 },
+      "B": { "min": 40, "max": 56 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "どくがのナイフ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 50, "max": 54 },
+      "B": { "min": 70, "max": 88 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "どくどくヘドロ", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "聖なるナイフ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 60, "max": 72 },
+      "B": { "min": 40, "max": 56 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "きよめの水", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "アサシンダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 60, "max": 65 },
+      "B": { "min": 100, "max": 110 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "するどいキバ", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "シーブスナイフ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 90, "max": 100 },
+      "B": { "min": 50, "max": 58 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 3 },
+      { "name": "どうのこうせき", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "どくばり",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 80, "max": 82 },
+      "B": { "min": 150, "max": 162 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どくどくヘドロ", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "ぎんの短剣",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 90, "max": 94 },
+      "B": { "min": 110, "max": 118 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "てっこうせき", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "イーグルダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 170, "max": 180 },
+      "B": { "min": 120, "max": 123 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "するどい爪", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "こあくまのナイフ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 150, "max": 156 },
+      "B": { "min": 110, "max": 116 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "こうもりのはね", "quantity": 1 },
+      { "name": "あやかしそう", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "キラーピアス",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 160, "max": 163 },
+      "B": { "min": 180, "max": 187 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "ひかりの石", "quantity": 1 },
+      { "name": "てっこうせき", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ソードブレイカー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 190, "max": 200 },
+      "B": { "min": 140, "max": 145 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "するどい爪", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "よるのパピヨン",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 140, "max": 146 },
+      "B": { "min": 180, "max": 186 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "ちょうのはね", "quantity": 1 },
+      { "name": "こうもりのはね", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ブラッドピック",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 160, "max": 162 },
+      "B": { "min": 300, "max": 316 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 6 },
+      { "name": "ドラゴンのツノ", "quantity": 1 },
+      { "name": "レッドアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "グラディウス",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 180, "max": 184 },
+      "B": { "min": 250, "max": 258 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 6 },
+      { "name": "赤いサンゴ", "quantity": 3 },
+      { "name": "イエローアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "こおりのやいば",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 160, "max": 164 },
+      "B": { "min": 240, "max": 246 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 4 },
+      { "name": "氷のけっしょう", "quantity": 3 },
+      { "name": "青い宝石", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 4 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "サラマンダー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 200, "max": 205 },
+      "B": { "min": 360, "max": 368 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 12 },
+      { "name": "ホカホカストーン", "quantity": 30 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "王家のナイフ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 220, "max": 225 },
+      "B": { "min": 270, "max": 278 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "うるわしキノコ", "quantity": 30 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "こがらしのダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 294, "max": 300 },
+      "B": { "min": 410, "max": 424 }
+    },
+    "materials": [
+      { "name": "氷のけっしょう", "quantity": 15 },
+      { "name": "するどい爪", "quantity": 25 },
+      { "name": "イエローオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ファルコンダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 335, "max": 343 },
+      "B": { "min": 265, "max": 270 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 15 },
+      { "name": "かぜきりのはね", "quantity": 3 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "サウザンドダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 348, "max": 354 },
+      "B": { "min": 400, "max": 414 }
+    },
+    "materials": [
+      { "name": "かがみ石", "quantity": 20 },
+      { "name": "かぜきりのはね", "quantity": 1 },
+      { "name": "するどい爪", "quantity": 20 },
+      { "name": "グリーンオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "聖王のナイフ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 450, "max": 456 },
+      "B": { "min": 320, "max": 334 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 5 },
+      { "name": "黄金の飾り短剣", "quantity": 1 },
+      { "name": "かぜきりのはね", "quantity": 1 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ライトニングダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 295, "max": 309 },
+      "B": { "min": 475, "max": 481 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 10 },
+      { "name": "大きな貝がら", "quantity": 10 },
+      { "name": "いかずちのたま", "quantity": 1 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "クリスタルエッジ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 430, "max": 444 },
+      "B": { "min": 384, "max": 390 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "みがきずな", "quantity": 30 },
+      { "name": "ときのすいしょう", "quantity": 3 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ポイズンスケイル",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 280, "max": 294 },
+      "B": { "min": 440, "max": 446 }
+    },
+    "materials": [
+      { "name": "幻獣のホネ", "quantity": 3 },
+      { "name": "どくどくヘドロ", "quantity": 30 },
+      { "name": "大きなうろこ", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "エンシェントククリ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 502, "max": 516 },
+      "B": { "min": 334, "max": 340 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 3 },
+      { "name": "するどい爪", "quantity": 30 },
+      { "name": "いかずちのたま", "quantity": 5 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "天河のジャンビーヤ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 400, "max": 406 },
+      "B": { "min": 480, "max": 494 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "ひかりの石", "quantity": 30 },
+      { "name": "どくどくヘドロ", "quantity": 30 },
+      { "name": "どくがのこな", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "トールナイフ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 490, "max": 504 },
+      "B": { "min": 350, "max": 356 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "いかずちのたま", "quantity": 10 },
+      { "name": "せいれいせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ガテリアの宝剣",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 528, "max": 542 },
+      "B": { "min": 440, "max": 446 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "ドワチャカオイル", "quantity": 1 },
+      { "name": "スライムおしゃれ花", "quantity": 20 },
+      { "name": "黄金の飾り短剣", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "神域の短剣",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 472, "max": 478 },
+      "B": { "min": 448, "max": 458 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "幻獣のホネ", "quantity": 2 },
+      { "name": "プラチナこうせき", "quantity": 15 },
+      { "name": "ぎんのこうせき", "quantity": 25 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "グラフィアス",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 570, "max": 580 },
+      "B": { "min": 464, "max": 474 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 10 },
+      { "name": "プクランサフラン", "quantity": 1 },
+      { "name": "黄金の飾り短剣", "quantity": 1 },
+      { "name": "パープルアイ", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "クレセントダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {},
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "宵闇のジェル", "quantity": 1 },
+      { "name": "げんませき", "quantity": 10 },
+      { "name": "するどいキバ", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ]
+  },
+  {
+    "name": "ワイルドファング",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {},
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "激震のキバ", "quantity": 1 },
+      { "name": "幻獣のホネ", "quantity": 2 },
+      { "name": "するどいキバ", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ]
+  },
+  {
+    "name": "ファントムダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 590, "max": 598 },
+      "B": { "min": 400, "max": 410 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "宵闇のジェル", "quantity": 1 },
+      { "name": "どくがのこな", "quantity": 1 },
+      { "name": "つけもの石", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "輝天のナイフ",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 670, "max": 678 },
+      "B": { "min": 370, "max": 378 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "純白の結晶", "quantity": 3 },
+      { "name": "幻獣のホネ", "quantity": 5 },
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "エレガントポイズン",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 350, "max": 358 },
+      "B": { "min": 650, "max": 658 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "宵闇のジェル", "quantity": 3 },
+      { "name": "どくがのこな", "quantity": 10 },
+      { "name": "黄金の飾り短剣", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 7 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "セーラスダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {},
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "暗夜の魔石", "quantity": 5 },
+      { "name": "つきのめぐみ", "quantity": 10 },
+      { "name": "黄金の飾り短剣", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ]
+  },
+  {
+    "name": "ヴェーレダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 775, "max": 783 },
+      "B": { "min": 603, "max": 611 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "人魚の涙", "quantity": 3 },
+      { "name": "かがみ石", "quantity": 20 },
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ジェミニダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 742, "max": 750 },
+      "B": { "min": 415, "max": 423 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "純白の結晶", "quantity": 4 },
+      { "name": "幻獣のホネ", "quantity": 6 },
+      { "name": "黄金の飾り短剣", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "晴蒼の短剣",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 485, "max": 493 },
+      "B": { "min": 700, "max": 708 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "トガリアのしずく", "quantity": 3 },
+      { "name": "幻獣のホネ", "quantity": 6 },
+      { "name": "大きなうろこ", "quantity": 20 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "集中力変化"
   }
 ]
