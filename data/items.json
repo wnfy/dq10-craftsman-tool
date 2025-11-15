@@ -8057,5 +8057,728 @@
       { "name": "超ようせいのひだね", "quantity": 8 }
     ],
     "specialTrait": "倍半"
+  },
+  {
+    "name": "どうのツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 24, "max": 40 },
+      "B": { "min": 24, "max": 40 },
+      "C": { "min": 16, "max": 36 },
+      "D": { "min": 16, "max": 36 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "キャットクロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 35, "max": 52 },
+      "B": { "min": 35, "max": 52 },
+      "C": { "min": 25, "max": 40 },
+      "D": { "min": 25, "max": 40 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "ネコずな", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "せいどうのツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 30, "max": 46 },
+      "B": { "min": 30, "max": 46 },
+      "C": { "min": 20, "max": 36 },
+      "D": { "min": 20, "max": 36 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "てっこうせき", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "まよけのツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 45, "max": 55 },
+      "B": { "min": 45, "max": 55 },
+      "C": { "min": 35, "max": 48 },
+      "D": { "min": 35, "max": 48 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "ひかりの石", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "てつのツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 25, "max": 40 },
+      "B": { "min": 25, "max": 40 },
+      "C": { "min": 45, "max": 55 },
+      "D": { "min": 45, "max": 55 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 3 },
+      { "name": "どうのこうせき", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "こあくまネイル",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 45, "max": 55 },
+      "B": { "min": 60, "max": 70 },
+      "C": { "min": 60, "max": 70 },
+      "D": { "min": 45, "max": 55 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "ちょうのはね", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "シルバークロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 36, "max": 43 },
+      "B": { "min": 36, "max": 43 },
+      "C": { "min": 55, "max": 70 },
+      "D": { "min": 55, "max": 70 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "てっこうせき", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "黒ヒョウのツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 48, "max": 53 },
+      "B": { "min": 48, "max": 53 },
+      "C": { "min": 90, "max": 105 },
+      "D": { "min": 90, "max": 105 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "するどい爪", "quantity": 1 },
+      { "name": "ネコずな", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "はがねのツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 76, "max": 88 },
+      "B": { "min": 76, "max": 88 },
+      "C": { "min": 45, "max": 53 },
+      "D": { "min": 45, "max": 53 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "けものの皮", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "こおりのツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 65, "max": 71 },
+      "B": { "min": 65, "max": 71 },
+      "C": { "min": 115, "max": 128 },
+      "D": { "min": 115, "max": 128 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "氷のけっしょう", "quantity": 1 },
+      { "name": "氷の樹木", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ほのおのツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 55, "max": 68 },
+      "B": { "min": 55, "max": 68 },
+      "C": { "min": 110, "max": 116 },
+      "D": { "min": 110, "max": 116 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "ようがんのカケラ", "quantity": 1 },
+      { "name": "ホカホカストーン", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "はやぶさのツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 86, "max": 94 },
+      "B": { "min": 86, "max": 94 },
+      "C": { "min": 64, "max": 76 },
+      "D": { "min": 64, "max": 76 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "しおかぜ草", "quantity": 1 },
+      { "name": "するどい爪", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ドラゴンクロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 90, "max": 100 },
+      "B": { "min": 90, "max": 100 },
+      "C": { "min": 130, "max": 137 },
+      "D": { "min": 130, "max": 137 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 6 },
+      { "name": "ドラゴンのツノ", "quantity": 1 },
+      { "name": "ブルーアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "あくまのツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 66, "max": 74 },
+      "B": { "min": 140, "max": 150 },
+      "C": { "min": 140, "max": 150 },
+      "D": { "min": 66, "max": 74 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 6 },
+      { "name": "どくどくヘドロ", "quantity": 4 },
+      { "name": "パープルアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "プラチナクロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 85, "max": 90 },
+      "B": { "min": 85, "max": 90 },
+      "C": { "min": 110, "max": 124 },
+      "D": { "min": 110, "max": 124 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 4 },
+      { "name": "黄色の宝石", "quantity": 1 },
+      { "name": "ヘビーメタル", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 4 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "まじゅうのツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 120, "max": 127 },
+      "B": { "min": 120, "max": 127 },
+      "C": { "min": 190, "max": 200 },
+      "D": { "min": 190, "max": 200 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 12 },
+      { "name": "まじゅうのホネ", "quantity": 6 },
+      { "name": "イエローオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "古武道のツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 85, "max": 90 },
+      "B": { "min": 150, "max": 158 },
+      "C": { "min": 100, "max": 112 },
+      "D": { "min": 135, "max": 144 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "ぶどうエキス", "quantity": 6 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "冥獣のツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 130, "max": 136 },
+      "B": { "min": 190, "max": 201 },
+      "C": { "min": 190, "max": 201 },
+      "D": { "min": 130, "max": 136 }
+    },
+    "materials": [
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "まじゅうのホネ", "quantity": 6 },
+      { "name": "グリーンオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ファルコンクロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 141, "max": 151 },
+      "B": { "min": 185, "max": 191 },
+      "C": { "min": 200, "max": 212 },
+      "D": { "min": 120, "max": 132 }
+    },
+    "materials": [
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "かぜきりのはね", "quantity": 1 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "竜王のツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 140, "max": 146 },
+      "B": { "min": 234, "max": 245 },
+      "C": { "min": 234, "max": 245 },
+      "D": { "min": 140, "max": 146 }
+    },
+    "materials": [
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "ドラゴンのツノ", "quantity": 2 },
+      { "name": "ドラゴンのホネ", "quantity": 2 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "聖王のツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 150, "max": 161 },
+      "B": { "min": 150, "max": 161 },
+      "C": { "min": 270, "max": 276 },
+      "D": { "min": 200, "max": 206 }
+    },
+    "materials": [
+      { "name": "幻獣のホネ", "quantity": 1 },
+      { "name": "黄金の飾りツメ", "quantity": 1 },
+      { "name": "するどい爪", "quantity": 20 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "クリスタルクロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 135, "max": 146 },
+      "B": { "min": 135, "max": 146 },
+      "C": { "min": 215, "max": 221 },
+      "D": { "min": 215, "max": 221 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 10 },
+      { "name": "ひかりの石", "quantity": 20 },
+      { "name": "ときのすいしょう", "quantity": 1 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "蒼炎のツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 193, "max": 199 },
+      "B": { "min": 220, "max": 231 },
+      "C": { "min": 256, "max": 267 },
+      "D": { "min": 145, "max": 151 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "せいれいせき", "quantity": 1 },
+      { "name": "ようがんのカケラ", "quantity": 20 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "キャプテンクロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 145, "max": 156 },
+      "B": { "min": 261, "max": 267 },
+      "C": { "min": 205, "max": 211 },
+      "D": { "min": 145, "max": 156 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "赤いサンゴ", "quantity": 20 },
+      { "name": "シルク草", "quantity": 30 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "エンシェントクロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 245, "max": 256 },
+      "B": { "min": 245, "max": 256 },
+      "C": { "min": 173, "max": 179 },
+      "D": { "min": 173, "max": 179 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 3 },
+      { "name": "小さな化石", "quantity": 20 },
+      { "name": "大きな化石", "quantity": 20 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "マガツ鳥のツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 227, "max": 238 },
+      "B": { "min": 173, "max": 179 },
+      "C": { "min": 227, "max": 238 },
+      "D": { "min": 173, "max": 179 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "するどいキバ", "quantity": 30 },
+      { "name": "まじゅうのホネ", "quantity": 5 },
+      { "name": "やわらかウール", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ケイオスネイル",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 218, "max": 224 },
+      "B": { "min": 250, "max": 261 },
+      "C": { "min": 281, "max": 292 },
+      "D": { "min": 175, "max": 181 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "するどい爪", "quantity": 30 },
+      { "name": "どくどくヘドロ", "quantity": 30 },
+      { "name": "黄金の飾りツメ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ドラゴンクロ―改",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 270, "max": 276 },
+      "B": { "min": 214, "max": 225 },
+      "C": { "min": 214, "max": 225 },
+      "D": { "min": 270, "max": 276 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "ドラゴンのツノ", "quantity": 1 },
+      { "name": "ヘビーメタル", "quantity": 10 },
+      { "name": "ドラゴンのホネ", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "疾風のジャマダハル",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 301, "max": 307 },
+      "B": { "min": 210, "max": 220 },
+      "C": { "min": 195, "max": 205 },
+      "D": { "min": 260, "max": 268 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "オグリドホーン", "quantity": 1 },
+      { "name": "プラチナこうせき", "quantity": 30 },
+      { "name": "こうもりのはね", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "断罪のジャマダハル",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 244, "max": 252 },
+      "B": { "min": 270, "max": 278 },
+      "C": { "min": 310, "max": 318 },
+      "D": { "min": 210, "max": 220 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 10 },
+      { "name": "宵闇のジェル", "quantity": 1 },
+      { "name": "黄金の飾りツメ", "quantity": 1 },
+      { "name": "とげウニ", "quantity": 15 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ルーンクラブクロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 212, "max": 222 },
+      "B": { "min": 320, "max": 328 },
+      "C": { "min": 192, "max": 200 },
+      "D": { "min": 320, "max": 328 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "激震のキバ", "quantity": 1 },
+      { "name": "ウェナールシェル", "quantity": 10 },
+      { "name": "さざなみのしずく", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "呪眼のツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {},
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "げんませき", "quantity": 2 },
+      { "name": "よごれたほうたい", "quantity": 5 },
+      { "name": "グリーンアイ", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ドラゴンクロー絶",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 300, "max": 308 },
+      "B": { "min": 190, "max": 198 },
+      "C": { "min": 190, "max": 198 },
+      "D": { "min": 300, "max": 308 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "幻獣のホネ", "quantity": 1 },
+      { "name": "まじゅうのホネ", "quantity": 1 },
+      { "name": "するどい爪", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "輝天のツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 350, "max": 358 },
+      "B": { "min": 350, "max": 358 },
+      "C": { "min": 230, "max": 237 },
+      "D": { "min": 230, "max": 237 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "おぼろ水晶", "quantity": 3 },
+      { "name": "ブルーアイ", "quantity": 30 },
+      { "name": "まじゅうのホネ", "quantity": 10 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ゴッドクロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 190, "max": 197 },
+      "B": { "min": 190, "max": 197 },
+      "C": { "min": 400, "max": 408 },
+      "D": { "min": 400, "max": 408 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "激震のキバ", "quantity": 3 },
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "黄金の飾りツメ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 7 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "セーラスクロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 190, "max": 198 },
+      "B": { "min": 180, "max": 188 },
+      "C": { "min": 360, "max": 367 },
+      "D": { "min": 360, "max": 367 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "おぼろ水晶", "quantity": 5 },
+      { "name": "火竜のキバ", "quantity": 5 },
+      { "name": "黄金の飾りツメ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "オフビートクロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 193, "max": 201 },
+      "B": { "min": 179, "max": 187 },
+      "C": { "min": 342, "max": 350 },
+      "D": { "min": 352, "max": 360 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "地竜のツメ", "quantity": 3 },
+      { "name": "プラチナこうせき", "quantity": 30 },
+      { "name": "黄金の飾りツメ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "機殴竜殺",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {},
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "おぼろ水晶", "quantity": 6 },
+      { "name": "まじゅうの皮", "quantity": 12 },
+      { "name": "黄金の飾りツメ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "キャンサークロー",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 415, "max": 423 },
+      "B": { "min": 140, "max": 148 },
+      "C": { "min": 235, "max": 243 },
+      "D": { "min": 405, "max": 413 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "水竜のうろこ", "quantity": 6 },
+      { "name": "さざなみのしずく", "quantity": 20 },
+      { "name": "ブルーオーブ", "quantity": 10 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "光"
   }
 ]
