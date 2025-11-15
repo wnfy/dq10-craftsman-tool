@@ -2,19 +2,47 @@
   {
     "name": "メテオシールド",
     "category": "防具鍛冶",
+    "subCategory": "盾",
     "gridType": "ABCD",
     "targetValues": {
-      "A": { "min": 355, "max": 363 },
-      "B": { "min": 273, "max": 280 },
-      "C": { "min": 273, "max": 280 },
-      "D": { "min": 372, "max": 380 }
+      "A": {
+        "min": 355,
+        "max": 363
+      },
+      "B": {
+        "min": 273,
+        "max": 280
+      },
+      "C": {
+        "min": 273,
+        "max": 280
+      },
+      "D": {
+        "min": 372,
+        "max": 380
+      }
     },
     "materials": [
-      { "name": "ゼーラズマ鉱石", "quantity": 30 },
-      { "name": "おぼろ水晶", "quantity": 3 },
-      { "name": "ほしのカケラ", "quantity": 30 },
-      { "name": "黄金の飾り盾", "quantity": 1 },
-      { "name": "超ようせいのひだね", "quantity": 8 }
+      {
+        "name": "ゼーラズマ鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "おぼろ水晶",
+        "quantity": 3
+      },
+      {
+        "name": "ほしのカケラ",
+        "quantity": 30
+      },
+      {
+        "name": "黄金の飾り盾",
+        "quantity": 1
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -22,13 +50,28 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "H": { "min": 90, "max": 120 },
-      "I": { "min": 90, "max": 120 }
+      "H": {
+        "min": 90,
+        "max": 120
+      },
+      "I": {
+        "min": 90,
+        "max": 120
+      }
     },
     "materials": [
-      { "name": "やわらかい肉", "quantity": 3 },
-      { "name": "ジャンボ玉ネギ", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 3 }
+      {
+        "name": "やわらかい肉",
+        "quantity": 3
+      },
+      {
+        "name": "ジャンボ玉ネギ",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -36,15 +79,36 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "B": { "min": 70, "max": 100 },
-      "G": { "min": 110, "max": 140 },
-      "H": { "min": 110, "max": 140 }
+      "B": {
+        "min": 70,
+        "max": 100
+      },
+      "G": {
+        "min": 110,
+        "max": 140
+      },
+      "H": {
+        "min": 110,
+        "max": 140
+      }
     },
     "materials": [
-      { "name": "やわらかい肉", "quantity": 4 },
-      { "name": "まんまるポテト", "quantity": 3 },
-      { "name": "こくうまソース", "quantity": 5 },
-      { "name": "デリシャスオイル", "quantity": 5 }
+      {
+        "name": "やわらかい肉",
+        "quantity": 4
+      },
+      {
+        "name": "まんまるポテト",
+        "quantity": 3
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 5
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 5
+      }
     ]
   },
   {
@@ -52,15 +116,36 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 100, "max": 130 },
-      "B": { "min": 100, "max": 130 },
-      "G": { "min": 130, "max": 160 }
+      "A": {
+        "min": 100,
+        "max": 130
+      },
+      "B": {
+        "min": 100,
+        "max": 130
+      },
+      "G": {
+        "min": 130,
+        "max": 160
+      }
     },
     "materials": [
-      { "name": "やわらかい肉", "quantity": 4 },
-      { "name": "ふわふわ小麦", "quantity": 3 },
-      { "name": "こくうまソース", "quantity": 5 },
-      { "name": "デリシャスオイル", "quantity": 6 }
+      {
+        "name": "やわらかい肉",
+        "quantity": 4
+      },
+      {
+        "name": "ふわふわ小麦",
+        "quantity": 3
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 5
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 6
+      }
     ]
   },
   {
@@ -68,16 +153,40 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "B": { "min": 125, "max": 155 },
-      "C": { "min": 125, "max": 155 },
-      "F": { "min": 85, "max": 115 },
-      "I": { "min": 85, "max": 115 }
+      "B": {
+        "min": 125,
+        "max": 155
+      },
+      "C": {
+        "min": 125,
+        "max": 155
+      },
+      "F": {
+        "min": 85,
+        "max": 115
+      },
+      "I": {
+        "min": 85,
+        "max": 115
+      }
     },
     "materials": [
-      { "name": "やわらかい肉", "quantity": 4 },
-      { "name": "しんせんたまご", "quantity": 3 },
-      { "name": "みかわしそう", "quantity": 10 },
-      { "name": "デリシャスオイル", "quantity": 6 }
+      {
+        "name": "やわらかい肉",
+        "quantity": 4
+      },
+      {
+        "name": "しんせんたまご",
+        "quantity": 3
+      },
+      {
+        "name": "みかわしそう",
+        "quantity": 10
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 6
+      }
     ]
   },
   {
@@ -85,18 +194,48 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "C": { "min": 113, "max": 143 },
-      "E": { "min": 155, "max": 185 },
-      "F": { "min": 155, "max": 185 },
-      "H": { "min": 135, "max": 165 },
-      "I": { "min": 135, "max": 165 }
+      "C": {
+        "min": 113,
+        "max": 143
+      },
+      "E": {
+        "min": 155,
+        "max": 185
+      },
+      "F": {
+        "min": 155,
+        "max": 185
+      },
+      "H": {
+        "min": 135,
+        "max": 165
+      },
+      "I": {
+        "min": 135,
+        "max": 165
+      }
     },
     "materials": [
-      { "name": "しもふりミート", "quantity": 2 },
-      { "name": "しゃっきりレタス", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 3 },
-      { "name": "ピリからペッパー", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 12 }
+      {
+        "name": "しもふりミート",
+        "quantity": 2
+      },
+      {
+        "name": "しゃっきりレタス",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 3
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 12
+      }
     ]
   },
   {
@@ -105,11 +244,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 1 },
-      { "name": "しゃっきりレタス", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "ピリからペッパー", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 6 }
+      {
+        "name": "しもふりミート",
+        "quantity": 1
+      },
+      {
+        "name": "しゃっきりレタス",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 6
+      }
     ]
   },
   {
@@ -117,18 +271,48 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 140, "max": 170 },
-      "D": { "min": 130, "max": 160 },
-      "G": { "min": 130, "max": 160 },
-      "H": { "min": 160, "max": 190 },
-      "I": { "min": 160, "max": 190 }
+      "A": {
+        "min": 140,
+        "max": 170
+      },
+      "D": {
+        "min": 130,
+        "max": 160
+      },
+      "G": {
+        "min": 130,
+        "max": 160
+      },
+      "H": {
+        "min": 160,
+        "max": 190
+      },
+      "I": {
+        "min": 160,
+        "max": 190
+      }
     },
     "materials": [
-      { "name": "しもふりミート", "quantity": 2 },
-      { "name": "しんせんたまご", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 3 },
-      { "name": "こくうまソース", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 12 }
+      {
+        "name": "しもふりミート",
+        "quantity": 2
+      },
+      {
+        "name": "しんせんたまご",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 3
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 12
+      }
     ]
   },
   {
@@ -137,11 +321,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 1 },
-      { "name": "しんせんたまご", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "こくうまソース", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 6 }
+      {
+        "name": "しもふりミート",
+        "quantity": 1
+      },
+      {
+        "name": "しんせんたまご",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 6
+      }
     ]
   },
   {
@@ -149,19 +348,52 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "B": { "min": 135, "max": 165 },
-      "C": { "min": 135, "max": 165 },
-      "F": { "min": 160, "max": 190 },
-      "G": { "min": 135, "max": 165 },
-      "H": { "min": 135, "max": 165 },
-      "I": { "min": 160, "max": 190 }
+      "B": {
+        "min": 135,
+        "max": 165
+      },
+      "C": {
+        "min": 135,
+        "max": 165
+      },
+      "F": {
+        "min": 160,
+        "max": 190
+      },
+      "G": {
+        "min": 135,
+        "max": 165
+      },
+      "H": {
+        "min": 135,
+        "max": 165
+      },
+      "I": {
+        "min": 160,
+        "max": 190
+      }
     },
     "materials": [
-      { "name": "しもふりミート", "quantity": 3 },
-      { "name": "ジャンボ玉ネギ", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 4 },
-      { "name": "ピリからペッパー", "quantity": 4 },
-      { "name": "デリシャスオイル", "quantity": 16 }
+      {
+        "name": "しもふりミート",
+        "quantity": 3
+      },
+      {
+        "name": "ジャンボ玉ネギ",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 4
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 4
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 16
+      }
     ]
   },
   {
@@ -170,11 +402,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 2 },
-      { "name": "ジャンボ玉ネギ", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "ピリからペッパー", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "しもふりミート",
+        "quantity": 2
+      },
+      {
+        "name": "ジャンボ玉ネギ",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -183,11 +430,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 3 },
-      { "name": "ジャンボ玉ネギ", "quantity": 2 },
-      { "name": "びっくりトマト", "quantity": 4 },
-      { "name": "ピリからペッパー", "quantity": 6 },
-      { "name": "デリシャスオイル", "quantity": 16 }
+      {
+        "name": "しもふりミート",
+        "quantity": 3
+      },
+      {
+        "name": "ジャンボ玉ネギ",
+        "quantity": 2
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 4
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 6
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 16
+      }
     ]
   },
   {
@@ -196,11 +458,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 2 },
-      { "name": "ジャンボ玉ネギ", "quantity": 1 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "ピリからペッパー", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "しもふりミート",
+        "quantity": 2
+      },
+      {
+        "name": "ジャンボ玉ネギ",
+        "quantity": 1
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -209,11 +486,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 4 },
-      { "name": "まんまるポテト", "quantity": 8 },
-      { "name": "びっくりトマト", "quantity": 5 },
-      { "name": "こくうまソース", "quantity": 6 },
-      { "name": "デリシャスオイル", "quantity": 18 }
+      {
+        "name": "しもふりミート",
+        "quantity": 4
+      },
+      {
+        "name": "まんまるポテト",
+        "quantity": 8
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 5
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 6
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 18
+      }
     ]
   },
   {
@@ -222,11 +514,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 3 },
-      { "name": "まんまるポテト", "quantity": 4 },
-      { "name": "びっくりトマト", "quantity": 3 },
-      { "name": "こくうまソース", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 9 }
+      {
+        "name": "しもふりミート",
+        "quantity": 3
+      },
+      {
+        "name": "まんまるポテト",
+        "quantity": 4
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 3
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 9
+      }
     ]
   },
   {
@@ -234,13 +541,28 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 100, "max": 130 },
-      "D": { "min": 100, "max": 130 }
+      "A": {
+        "min": 100,
+        "max": 130
+      },
+      "D": {
+        "min": 100,
+        "max": 130
+      }
     },
     "materials": [
-      { "name": "魚の切り身", "quantity": 3 },
-      { "name": "まんまるポテト", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 3 }
+      {
+        "name": "魚の切り身",
+        "quantity": 3
+      },
+      {
+        "name": "まんまるポテト",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -248,14 +570,32 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "F": { "min": 85, "max": 115 },
-      "H": { "min": 85, "max": 115 },
-      "I": { "min": 85, "max": 115 }
+      "F": {
+        "min": 85,
+        "max": 115
+      },
+      "H": {
+        "min": 85,
+        "max": 115
+      },
+      "I": {
+        "min": 85,
+        "max": 115
+      }
     },
     "materials": [
-      { "name": "魚の切り身", "quantity": 4 },
-      { "name": "しゃっきりレタス", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 4 }
+      {
+        "name": "魚の切り身",
+        "quantity": 4
+      },
+      {
+        "name": "しゃっきりレタス",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 4
+      }
     ]
   },
   {
@@ -263,15 +603,36 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "D": { "min": 110, "max": 140 },
-      "G": { "min": 110, "max": 140 },
-      "H": { "min": 90, "max": 120 }
+      "D": {
+        "min": 110,
+        "max": 140
+      },
+      "G": {
+        "min": 110,
+        "max": 140
+      },
+      "H": {
+        "min": 90,
+        "max": 120
+      }
     },
     "materials": [
-      { "name": "魚の切り身", "quantity": 4 },
-      { "name": "しゃっきりレタス", "quantity": 3 },
-      { "name": "ふわふわ小麦", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 5 }
+      {
+        "name": "魚の切り身",
+        "quantity": 4
+      },
+      {
+        "name": "しゃっきりレタス",
+        "quantity": 3
+      },
+      {
+        "name": "ふわふわ小麦",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 5
+      }
     ]
   },
   {
@@ -279,18 +640,48 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 145, "max": 175 },
-      "C": { "min": 145, "max": 175 },
-      "D": { "min": 145, "max": 175 },
-      "F": { "min": 145, "max": 175 },
-      "I": { "min": 110, "max": 140 }
+      "A": {
+        "min": 145,
+        "max": 175
+      },
+      "C": {
+        "min": 145,
+        "max": 175
+      },
+      "D": {
+        "min": 145,
+        "max": 175
+      },
+      "F": {
+        "min": 145,
+        "max": 175
+      },
+      "I": {
+        "min": 110,
+        "max": 140
+      }
     },
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 2 },
-      { "name": "ふわふわ小麦", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 3 },
-      { "name": "ごくじょうソルト", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 12 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 2
+      },
+      {
+        "name": "ふわふわ小麦",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 3
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 12
+      }
     ]
   },
   {
@@ -299,11 +690,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 1 },
-      { "name": "ふわふわ小麦", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "ごくじょうソルト", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 6 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 1
+      },
+      {
+        "name": "ふわふわ小麦",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 6
+      }
     ]
   },
   {
@@ -311,19 +717,52 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 110, "max": 140 },
-      "C": { "min": 110, "max": 140 },
-      "D": { "min": 160, "max": 190 },
-      "F": { "min": 130, "max": 160 },
-      "G": { "min": 160, "max": 190 },
-      "I": { "min": 130, "max": 160 }
+      "A": {
+        "min": 110,
+        "max": 140
+      },
+      "C": {
+        "min": 110,
+        "max": 140
+      },
+      "D": {
+        "min": 160,
+        "max": 190
+      },
+      "F": {
+        "min": 130,
+        "max": 160
+      },
+      "G": {
+        "min": 160,
+        "max": 190
+      },
+      "I": {
+        "min": 130,
+        "max": 160
+      }
     },
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 3 },
-      { "name": "しゃっきりレタス", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 4 },
-      { "name": "ピリからペッパー", "quantity": 4 },
-      { "name": "デリシャスオイル", "quantity": 16 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 3
+      },
+      {
+        "name": "しゃっきりレタス",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 4
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 4
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 16
+      }
     ]
   },
   {
@@ -332,11 +771,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 2 },
-      { "name": "しゃっきりレタス", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "ピリからペッパー", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 2
+      },
+      {
+        "name": "しゃっきりレタス",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -344,19 +798,52 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 140, "max": 170 },
-      "C": { "min": 170, "max": 200 },
-      "D": { "min": 140, "max": 170 },
-      "F": { "min": 140, "max": 170 },
-      "G": { "min": 150, "max": 180 },
-      "I": { "min": 140, "max": 170 }
+      "A": {
+        "min": 140,
+        "max": 170
+      },
+      "C": {
+        "min": 170,
+        "max": 200
+      },
+      "D": {
+        "min": 140,
+        "max": 170
+      },
+      "F": {
+        "min": 140,
+        "max": 170
+      },
+      "G": {
+        "min": 150,
+        "max": 180
+      },
+      "I": {
+        "min": 140,
+        "max": 170
+      }
     },
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 3 },
-      { "name": "ジャンボ玉ネギ", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 4 },
-      { "name": "こくうまソース", "quantity": 4 },
-      { "name": "デリシャスオイル", "quantity": 16 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 3
+      },
+      {
+        "name": "ジャンボ玉ネギ",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 4
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 4
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 16
+      }
     ]
   },
   {
@@ -365,11 +852,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 2 },
-      { "name": "ジャンボ玉ネギ", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "こくうまソース", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 2
+      },
+      {
+        "name": "ジャンボ玉ネギ",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -378,11 +880,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 2 },
-      { "name": "みかわしそう", "quantity": 8 },
-      { "name": "びっくりトマト", "quantity": 4 },
-      { "name": "ごくじょうソルト", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 16 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 2
+      },
+      {
+        "name": "みかわしそう",
+        "quantity": 8
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 4
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 16
+      }
     ]
   },
   {
@@ -391,11 +908,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 1 },
-      { "name": "みかわしそう", "quantity": 4 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "ごくじょうソルト", "quantity": 1 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 1
+      },
+      {
+        "name": "みかわしそう",
+        "quantity": 4
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 1
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -404,11 +936,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 10 },
-      { "name": "ジャンボ玉ネギ", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 1 },
-      { "name": "ピリからペッパー", "quantity": 4 },
-      { "name": "デリシャスオイル", "quantity": 16 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 10
+      },
+      {
+        "name": "ジャンボ玉ネギ",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 1
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 4
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 16
+      }
     ]
   },
   {
@@ -417,11 +964,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 5 },
-      { "name": "ジャンボ玉ネギ", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 1 },
-      { "name": "ピリからペッパー", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 5
+      },
+      {
+        "name": "ジャンボ玉ネギ",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 1
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -429,19 +991,52 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 130, "max": 160 },
-      "B": { "min": 130, "max": 160 },
-      "C": { "min": 130, "max": 160 },
-      "G": { "min": 195, "max": 225 },
-      "H": { "min": 195, "max": 225 },
-      "I": { "min": 195, "max": 225 }
+      "A": {
+        "min": 130,
+        "max": 160
+      },
+      "B": {
+        "min": 130,
+        "max": 160
+      },
+      "C": {
+        "min": 130,
+        "max": 160
+      },
+      "G": {
+        "min": 195,
+        "max": 225
+      },
+      "H": {
+        "min": 195,
+        "max": 225
+      },
+      "I": {
+        "min": 195,
+        "max": 225
+      }
     },
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 3 },
-      { "name": "まんまるポテト", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 4 },
-      { "name": "ごくじょうソルト", "quantity": 4 },
-      { "name": "デリシャスオイル", "quantity": 16 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 3
+      },
+      {
+        "name": "まんまるポテト",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 4
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 4
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 16
+      }
     ]
   },
   {
@@ -450,11 +1045,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 2 },
-      { "name": "まんまるポテト", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "ごくじょうソルト", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 2
+      },
+      {
+        "name": "まんまるポテト",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -462,19 +1072,52 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "B": { "min": 180, "max": 210 },
-      "C": { "min": 140, "max": 170 },
-      "D": { "min": 140, "max": 170 },
-      "F": { "min": 140, "max": 170 },
-      "G": { "min": 140, "max": 170 },
-      "H": { "min": 180, "max": 210 }
+      "B": {
+        "min": 180,
+        "max": 210
+      },
+      "C": {
+        "min": 140,
+        "max": 170
+      },
+      "D": {
+        "min": 140,
+        "max": 170
+      },
+      "F": {
+        "min": 140,
+        "max": 170
+      },
+      "G": {
+        "min": 140,
+        "max": 170
+      },
+      "H": {
+        "min": 180,
+        "max": 210
+      }
     },
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 3 },
-      { "name": "しんせんたまご", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 4 },
-      { "name": "ごくじょうソルト", "quantity": 4 },
-      { "name": "デリシャスオイル", "quantity": 16 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 3
+      },
+      {
+        "name": "しんせんたまご",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 4
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 4
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 16
+      }
     ]
   },
   {
@@ -483,11 +1126,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 2 },
-      { "name": "しんせんたまご", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "ごくじょうソルト", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 2
+      },
+      {
+        "name": "しんせんたまご",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -495,13 +1153,28 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 60, "max": 90 },
-      "B": { "min": 80, "max": 110 }
+      "A": {
+        "min": 60,
+        "max": 90
+      },
+      "B": {
+        "min": 80,
+        "max": 110
+      }
     },
     "materials": [
-      { "name": "やわらかい肉", "quantity": 3 },
-      { "name": "ライスフラワー", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 2 }
+      {
+        "name": "やわらかい肉",
+        "quantity": 3
+      },
+      {
+        "name": "ライスフラワー",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -509,13 +1182,28 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "F": { "min": 90, "max": 120 },
-      "G": { "min": 70, "max": 100 }
+      "F": {
+        "min": 90,
+        "max": 120
+      },
+      "G": {
+        "min": 70,
+        "max": 100
+      }
     },
     "materials": [
-      { "name": "魚の切り身", "quantity": 3 },
-      { "name": "ふわふわ小麦", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 2 }
+      {
+        "name": "魚の切り身",
+        "quantity": 3
+      },
+      {
+        "name": "ふわふわ小麦",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -523,16 +1211,40 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 90, "max": 120 },
-      "B": { "min": 135, "max": 165 },
-      "C": { "min": 135, "max": 165 },
-      "D": { "min": 90, "max": 120 }
+      "A": {
+        "min": 90,
+        "max": 120
+      },
+      "B": {
+        "min": 135,
+        "max": 165
+      },
+      "C": {
+        "min": 135,
+        "max": 165
+      },
+      "D": {
+        "min": 90,
+        "max": 120
+      }
     },
     "materials": [
-      { "name": "やわらかい肉", "quantity": 4 },
-      { "name": "まんまるポテト", "quantity": 3 },
-      { "name": "ライスフラワー", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 6 }
+      {
+        "name": "やわらかい肉",
+        "quantity": 4
+      },
+      {
+        "name": "まんまるポテト",
+        "quantity": 3
+      },
+      {
+        "name": "ライスフラワー",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 6
+      }
     ]
   },
   {
@@ -540,18 +1252,48 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "C": { "min": 120, "max": 150 },
-      "F": { "min": 145, "max": 175 },
-      "G": { "min": 171, "max": 201 },
-      "H": { "min": 145, "max": 175 },
-      "I": { "min": 145, "max": 175 }
+      "C": {
+        "min": 120,
+        "max": 150
+      },
+      "F": {
+        "min": 145,
+        "max": 175
+      },
+      "G": {
+        "min": 171,
+        "max": 201
+      },
+      "H": {
+        "min": 145,
+        "max": 175
+      },
+      "I": {
+        "min": 145,
+        "max": 175
+      }
     },
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 2 },
-      { "name": "ふわふわ小麦", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 3 },
-      { "name": "こくうまソース", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 12 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 2
+      },
+      {
+        "name": "ふわふわ小麦",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 3
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 12
+      }
     ]
   },
   {
@@ -560,11 +1302,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 1 },
-      { "name": "ふわふわ小麦", "quantity": 2 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "こくうまソース", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 6 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 1
+      },
+      {
+        "name": "ふわふわ小麦",
+        "quantity": 2
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 6
+      }
     ]
   },
   {
@@ -572,19 +1329,52 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 165, "max": 195 },
-      "B": { "min": 165, "max": 195 },
-      "C": { "min": 140, "max": 170 },
-      "G": { "min": 120, "max": 150 },
-      "H": { "min": 120, "max": 150 },
-      "I": { "min": 120, "max": 150 }
+      "A": {
+        "min": 165,
+        "max": 195
+      },
+      "B": {
+        "min": 165,
+        "max": 195
+      },
+      "C": {
+        "min": 140,
+        "max": 170
+      },
+      "G": {
+        "min": 120,
+        "max": 150
+      },
+      "H": {
+        "min": 120,
+        "max": 150
+      },
+      "I": {
+        "min": 120,
+        "max": 150
+      }
     },
     "materials": [
-      { "name": "しもふりミート", "quantity": 3 },
-      { "name": "ライスフラワー", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 4 },
-      { "name": "ピリからペッパー", "quantity": 4 },
-      { "name": "デリシャスオイル", "quantity": 16 }
+      {
+        "name": "しもふりミート",
+        "quantity": 3
+      },
+      {
+        "name": "ライスフラワー",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 4
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 4
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 16
+      }
     ]
   },
   {
@@ -593,11 +1383,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 2 },
-      { "name": "ライスフラワー", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "ピリからペッパー", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "しもふりミート",
+        "quantity": 2
+      },
+      {
+        "name": "ライスフラワー",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -606,11 +1411,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 2 },
-      { "name": "ライスフラワー", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 4 },
-      { "name": "こくうまソース", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 16 }
+      {
+        "name": "しもふりミート",
+        "quantity": 2
+      },
+      {
+        "name": "ライスフラワー",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 4
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 16
+      }
     ]
   },
   {
@@ -619,11 +1439,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 1 },
-      { "name": "ライスフラワー", "quantity": 2 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "こくうまソース", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "しもふりミート",
+        "quantity": 1
+      },
+      {
+        "name": "ライスフラワー",
+        "quantity": 2
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -631,19 +1466,52 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 130, "max": 160 },
-      "B": { "min": 130, "max": 160 },
-      "C": { "min": 165, "max": 195 },
-      "G": { "min": 165, "max": 195 },
-      "H": { "min": 180, "max": 210 },
-      "I": { "min": 180, "max": 210 }
+      "A": {
+        "min": 130,
+        "max": 160
+      },
+      "B": {
+        "min": 130,
+        "max": 160
+      },
+      "C": {
+        "min": 165,
+        "max": 195
+      },
+      "G": {
+        "min": 165,
+        "max": 195
+      },
+      "H": {
+        "min": 180,
+        "max": 210
+      },
+      "I": {
+        "min": 180,
+        "max": 210
+      }
     },
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 3 },
-      { "name": "ライスフラワー", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 4 },
-      { "name": "こくうまソース", "quantity": 4 },
-      { "name": "デリシャスオイル", "quantity": 16 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 3
+      },
+      {
+        "name": "ライスフラワー",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 4
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 4
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 16
+      }
     ]
   },
   {
@@ -652,11 +1520,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 2 },
-      { "name": "ライスフラワー", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "こくうまソース", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 2
+      },
+      {
+        "name": "ライスフラワー",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "こくうまソース",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -665,11 +1548,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 4 },
-      { "name": "しんせんたまご", "quantity": 8 },
-      { "name": "びっくりトマト", "quantity": 5 },
-      { "name": "ピリからペッパー", "quantity": 6 },
-      { "name": "デリシャスオイル", "quantity": 18 }
+      {
+        "name": "しもふりミート",
+        "quantity": 4
+      },
+      {
+        "name": "しんせんたまご",
+        "quantity": 8
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 5
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 6
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 18
+      }
     ]
   },
   {
@@ -678,11 +1576,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しもふりミート", "quantity": 3 },
-      { "name": "しんせんたまご", "quantity": 4 },
-      { "name": "びっくりトマト", "quantity": 3 },
-      { "name": "ピリからペッパー", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 9 }
+      {
+        "name": "しもふりミート",
+        "quantity": 3
+      },
+      {
+        "name": "しんせんたまご",
+        "quantity": 4
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 3
+      },
+      {
+        "name": "ピリからペッパー",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 9
+      }
     ]
   },
   {
@@ -690,12 +1603,24 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "B": { "min": 60, "max": 90 }
+      "B": {
+        "min": 60,
+        "max": 90
+      }
     },
     "materials": [
-      { "name": "しんせんたまご", "quantity": 3 },
-      { "name": "おいしいミルク", "quantity": 1 },
-      { "name": "デリシャスオイル", "quantity": 1 }
+      {
+        "name": "しんせんたまご",
+        "quantity": 3
+      },
+      {
+        "name": "おいしいミルク",
+        "quantity": 1
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 1
+      }
     ]
   },
   {
@@ -703,13 +1628,28 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "B": { "min": 50, "max": 80 },
-      "D": { "min": 70, "max": 100 }
+      "B": {
+        "min": 50,
+        "max": 80
+      },
+      "D": {
+        "min": 70,
+        "max": 100
+      }
     },
     "materials": [
-      { "name": "しんせんたまご", "quantity": 3 },
-      { "name": "花のみつ", "quantity": 1 },
-      { "name": "デリシャスオイル", "quantity": 1 }
+      {
+        "name": "しんせんたまご",
+        "quantity": 3
+      },
+      {
+        "name": "花のみつ",
+        "quantity": 1
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 1
+      }
     ]
   },
   {
@@ -717,16 +1657,40 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 145, "max": 175 },
-      "B": { "min": 145, "max": 175 },
-      "H": { "min": 128, "max": 158 },
-      "I": { "min": 110, "max": 140 }
+      "A": {
+        "min": 145,
+        "max": 175
+      },
+      "B": {
+        "min": 145,
+        "max": 175
+      },
+      "H": {
+        "min": 128,
+        "max": 158
+      },
+      "I": {
+        "min": 110,
+        "max": 140
+      }
     },
     "materials": [
-      { "name": "しんせんたまご", "quantity": 10 },
-      { "name": "レッドベリー", "quantity": 10 },
-      { "name": "ごくじょうソルト", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "しんせんたまご",
+        "quantity": 10
+      },
+      {
+        "name": "レッドベリー",
+        "quantity": 10
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -735,10 +1699,22 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しんせんたまご", "quantity": 5 },
-      { "name": "レッドベリー", "quantity": 5 },
-      { "name": "ごくじょうソルト", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 4 }
+      {
+        "name": "しんせんたまご",
+        "quantity": 5
+      },
+      {
+        "name": "レッドベリー",
+        "quantity": 5
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 4
+      }
     ]
   },
   {
@@ -746,16 +1722,40 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 120, "max": 150 },
-      "D": { "min": 120, "max": 150 },
-      "H": { "min": 100, "max": 130 },
-      "I": { "min": 140, "max": 170 }
+      "A": {
+        "min": 120,
+        "max": 150
+      },
+      "D": {
+        "min": 120,
+        "max": 150
+      },
+      "H": {
+        "min": 100,
+        "max": 130
+      },
+      "I": {
+        "min": 140,
+        "max": 170
+      }
     },
     "materials": [
-      { "name": "しんせんたまご", "quantity": 10 },
-      { "name": "氷のけっしょう", "quantity": 10 },
-      { "name": "ごくじょうソルト", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "しんせんたまご",
+        "quantity": 10
+      },
+      {
+        "name": "氷のけっしょう",
+        "quantity": 10
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -764,10 +1764,22 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "しんせんたまご", "quantity": 5 },
-      { "name": "氷のけっしょう", "quantity": 5 },
-      { "name": "ごくじょうソルト", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 4 }
+      {
+        "name": "しんせんたまご",
+        "quantity": 5
+      },
+      {
+        "name": "氷のけっしょう",
+        "quantity": 5
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 4
+      }
     ]
   },
   {
@@ -775,16 +1787,40 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "B": { "min": 110, "max": 140 },
-      "G": { "min": 145, "max": 175 },
-      "H": { "min": 145, "max": 175 },
-      "I": { "min": 130, "max": 160 }
+      "B": {
+        "min": 110,
+        "max": 140
+      },
+      "G": {
+        "min": 145,
+        "max": 175
+      },
+      "H": {
+        "min": 145,
+        "max": 175
+      },
+      "I": {
+        "min": 130,
+        "max": 160
+      }
     },
     "materials": [
-      { "name": "おいしいミルク", "quantity": 10 },
-      { "name": "天使のソーマ", "quantity": 1 },
-      { "name": "ごくじょうソルト", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "おいしいミルク",
+        "quantity": 10
+      },
+      {
+        "name": "天使のソーマ",
+        "quantity": 1
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -793,10 +1829,22 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おいしいミルク", "quantity": 5 },
-      { "name": "きよめの水", "quantity": 5 },
-      { "name": "ごくじょうソルト", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 4 }
+      {
+        "name": "おいしいミルク",
+        "quantity": 5
+      },
+      {
+        "name": "きよめの水",
+        "quantity": 5
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 4
+      }
     ]
   },
   {
@@ -804,16 +1852,40 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "B": { "min": 120, "max": 150 },
-      "C": { "min": 120, "max": 150 },
-      "F": { "min": 150, "max": 180 },
-      "G": { "min": 160, "max": 190 }
+      "B": {
+        "min": 120,
+        "max": 150
+      },
+      "C": {
+        "min": 120,
+        "max": 150
+      },
+      "F": {
+        "min": 150,
+        "max": 180
+      },
+      "G": {
+        "min": 160,
+        "max": 190
+      }
     },
     "materials": [
-      { "name": "おいしいミルク", "quantity": 10 },
-      { "name": "カチコチくるみ", "quantity": 10 },
-      { "name": "ごくじょうソルト", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "おいしいミルク",
+        "quantity": 10
+      },
+      {
+        "name": "カチコチくるみ",
+        "quantity": 10
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -822,10 +1894,22 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おいしいミルク", "quantity": 5 },
-      { "name": "カチコチくるみ", "quantity": 5 },
-      { "name": "ごくじょうソルト", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 4 }
+      {
+        "name": "おいしいミルク",
+        "quantity": 5
+      },
+      {
+        "name": "カチコチくるみ",
+        "quantity": 5
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 4
+      }
     ]
   },
   {
@@ -833,16 +1917,40 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "C": { "min": 120, "max": 150 },
-      "F": { "min": 130, "max": 160 },
-      "H": { "min": 150, "max": 180 },
-      "I": { "min": 150, "max": 180 }
+      "C": {
+        "min": 120,
+        "max": 150
+      },
+      "F": {
+        "min": 130,
+        "max": 160
+      },
+      "H": {
+        "min": 150,
+        "max": 180
+      },
+      "I": {
+        "min": 150,
+        "max": 180
+      }
     },
     "materials": [
-      { "name": "おいしいミルク", "quantity": 10 },
-      { "name": "みかわしそう", "quantity": 10 },
-      { "name": "ごくじょうソルト", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 8 }
+      {
+        "name": "おいしいミルク",
+        "quantity": 10
+      },
+      {
+        "name": "みかわしそう",
+        "quantity": 10
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 8
+      }
     ]
   },
   {
@@ -851,10 +1959,22 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おいしいミルク", "quantity": 5 },
-      { "name": "みかわしそう", "quantity": 5 },
-      { "name": "ごくじょうソルト", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 4 }
+      {
+        "name": "おいしいミルク",
+        "quantity": 5
+      },
+      {
+        "name": "みかわしそう",
+        "quantity": 5
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 4
+      }
     ]
   },
   {
@@ -862,18 +1982,48 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 130, "max": 160 },
-      "B": { "min": 105, "max": 135 },
-      "C": { "min": 105, "max": 135 },
-      "G": { "min": 130, "max": 160 },
-      "H": { "min": 130, "max": 160 }
+      "A": {
+        "min": 130,
+        "max": 160
+      },
+      "B": {
+        "min": 105,
+        "max": 135
+      },
+      "C": {
+        "min": 105,
+        "max": 135
+      },
+      "G": {
+        "min": 130,
+        "max": 160
+      },
+      "H": {
+        "min": 130,
+        "max": 160
+      }
     },
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 2 },
-      { "name": "おいしいミルク", "quantity": 6 },
-      { "name": "びっくりトマト", "quantity": 3 },
-      { "name": "ごくじょうソルト", "quantity": 3 },
-      { "name": "デリシャスオイル", "quantity": 12 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 2
+      },
+      {
+        "name": "おいしいミルク",
+        "quantity": 6
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 3
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 3
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 12
+      }
     ]
   },
   {
@@ -882,11 +2032,26 @@
     "gridType": "3x3",
     "targetValues": {},
     "materials": [
-      { "name": "おおとろの切り身", "quantity": 1 },
-      { "name": "おいしいミルク", "quantity": 3 },
-      { "name": "びっくりトマト", "quantity": 2 },
-      { "name": "ごくじょうソルト", "quantity": 2 },
-      { "name": "デリシャスオイル", "quantity": 6 }
+      {
+        "name": "おおとろの切り身",
+        "quantity": 1
+      },
+      {
+        "name": "おいしいミルク",
+        "quantity": 3
+      },
+      {
+        "name": "びっくりトマト",
+        "quantity": 2
+      },
+      {
+        "name": "ごくじょうソルト",
+        "quantity": 2
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 6
+      }
     ]
   },
   {
@@ -894,14 +2059,1571 @@
     "category": "料理",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 90, "max": 120 },
-      "B": { "min": 90, "max": 120 },
-      "D": { "min": 75, "max": 105 }
+      "A": {
+        "min": 90,
+        "max": 120
+      },
+      "B": {
+        "min": 90,
+        "max": 120
+      },
+      "D": {
+        "min": 75,
+        "max": 105
+      }
     },
     "materials": [
-      { "name": "ライスフラワー", "quantity": 4 },
-      { "name": "星々のナミダ", "quantity": 4 },
-      { "name": "デリシャスオイル", "quantity": 1 }
+      {
+        "name": "ライスフラワー",
+        "quantity": 4
+      },
+      {
+        "name": "星々のナミダ",
+        "quantity": 4
+      },
+      {
+        "name": "デリシャスオイル",
+        "quantity": 1
+      }
     ]
+  },
+  {
+    "name": "どうのつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 24,
+        "max": 36
+      },
+      "B": {
+        "min": 28,
+        "max": 40
+      },
+      "C": {
+        "min": 24,
+        "max": 36
+      }
+    },
+    "materials": [
+      {
+        "name": "どうのこうせき",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "レイピア",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 30,
+        "max": 35
+      },
+      "B": {
+        "min": 40,
+        "max": 50
+      },
+      "C": {
+        "min": 50,
+        "max": 65
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "どうのこうせき",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "せいどうのつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 28,
+        "max": 40
+      },
+      "B": {
+        "min": 32,
+        "max": 44
+      },
+      "C": {
+        "min": 40,
+        "max": 50
+      }
+    },
+    "materials": [
+      {
+        "name": "どうのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "さんぞくのサーベル",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 45,
+        "max": 52
+      },
+      "B": {
+        "min": 65,
+        "max": 78
+      },
+      "C": {
+        "min": 50,
+        "max": 60
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "けものの皮",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "てつのつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 45,
+        "max": 55
+      },
+      "B": {
+        "min": 50,
+        "max": 62
+      },
+      "C": {
+        "min": 40,
+        "max": 48
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 3
+      },
+      {
+        "name": "どうのこうせき",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "バスタードソード",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 95
+      },
+      "B": {
+        "min": 70,
+        "max": 78
+      },
+      "C": {
+        "min": 50,
+        "max": 67
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "レッドアイ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ぎんのレイピア",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 50,
+        "max": 55
+      },
+      "B": {
+        "min": 50,
+        "max": 60
+      },
+      "C": {
+        "min": 80,
+        "max": 95
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ウェスタンレイピア",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 84
+      },
+      "B": {
+        "min": 80,
+        "max": 92
+      },
+      "C": {
+        "min": 110,
+        "max": 125
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "みがきずな",
+        "quantity": 1
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "はがねのつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 74,
+        "max": 90
+      },
+      "B": {
+        "min": 80,
+        "max": 85
+      },
+      "C": {
+        "min": 85,
+        "max": 94
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "どうのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "ブルーアイ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "はやぶさの剣",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 84
+      },
+      "B": {
+        "min": 160,
+        "max": 168
+      },
+      "C": {
+        "min": 120,
+        "max": 130
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 1
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "はじゃのつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 90
+      },
+      "B": {
+        "min": 116,
+        "max": 122
+      },
+      "C": {
+        "min": 134,
+        "max": 150
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "ホカホカストーン",
+        "quantity": 1
+      },
+      {
+        "name": "レッドアイ",
+        "quantity": 1
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "戦士の剣",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 100,
+        "max": 108
+      },
+      "B": {
+        "min": 130,
+        "max": 134
+      },
+      "C": {
+        "min": 74,
+        "max": 90
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 2
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "するどいキバ",
+        "quantity": 1
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ドラゴンキラー",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 200,
+        "max": 206
+      },
+      "B": {
+        "min": 120,
+        "max": 130
+      },
+      "C": {
+        "min": 160,
+        "max": 164
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 6
+      },
+      {
+        "name": "ドラゴンのツノ",
+        "quantity": 1
+      },
+      {
+        "name": "レッドアイ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ゾンビキラー",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 154
+      },
+      "B": {
+        "min": 190,
+        "max": 210
+      },
+      "C": {
+        "min": 110,
+        "max": 116
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 6
+      },
+      {
+        "name": "せいじゃのはい",
+        "quantity": 1
+      },
+      {
+        "name": "イエローアイ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 6
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "まけんしのレイピア",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 126,
+        "max": 137
+      },
+      "B": {
+        "min": 134,
+        "max": 140
+      },
+      "C": {
+        "min": 160,
+        "max": 174
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 5
+      },
+      {
+        "name": "あやかしそう",
+        "quantity": 2
+      },
+      {
+        "name": "暗黒の樹木",
+        "quantity": 2
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "プラチナソード",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 120,
+        "max": 128
+      },
+      "B": {
+        "min": 170,
+        "max": 184
+      },
+      "C": {
+        "min": 100,
+        "max": 104
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 4
+      },
+      {
+        "name": "まじゅうのホネ",
+        "quantity": 1
+      },
+      {
+        "name": "レッドベリー",
+        "quantity": 3
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "きせきのつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 235,
+        "max": 243
+      },
+      "B": {
+        "min": 145,
+        "max": 153
+      },
+      "C": {
+        "min": 180,
+        "max": 184
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 12
+      },
+      {
+        "name": "きよめの水",
+        "quantity": 30
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ほのおのつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 130,
+        "max": 135
+      },
+      "B": {
+        "min": 160,
+        "max": 168
+      },
+      "C": {
+        "min": 220,
+        "max": 230
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 30
+      },
+      {
+        "name": "レッドオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "オニキスの魔剣",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 154,
+        "max": 164
+      },
+      "B": {
+        "min": 240,
+        "max": 250
+      },
+      "C": {
+        "min": 310,
+        "max": 316
+      }
+    },
+    "materials": [
+      {
+        "name": "げんませき",
+        "quantity": 1
+      },
+      {
+        "name": "よごれたほうたい",
+        "quantity": 10
+      },
+      {
+        "name": "パープルオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 12
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "メタスラの剣",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 140,
+        "max": 144
+      },
+      "B": {
+        "min": 280,
+        "max": 291
+      },
+      "C": {
+        "min": 180,
+        "max": 190
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 15
+      },
+      {
+        "name": "ドラゴンのツノ",
+        "quantity": 3
+      },
+      {
+        "name": "メタルのカケラ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 12
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ほしくずのつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 180,
+        "max": 188
+      },
+      "B": {
+        "min": 270,
+        "max": 282
+      },
+      "C": {
+        "min": 230,
+        "max": 236
+      }
+    },
+    "materials": [
+      {
+        "name": "ほしのカケラ",
+        "quantity": 30
+      },
+      {
+        "name": "氷のけっしょう",
+        "quantity": 30
+      },
+      {
+        "name": "かがみ石",
+        "quantity": 5
+      },
+      {
+        "name": "グリーンオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "聖王のつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 270,
+        "max": 280
+      },
+      "B": {
+        "min": 200,
+        "max": 206
+      },
+      "C": {
+        "min": 300,
+        "max": 310
+      }
+    },
+    "materials": [
+      {
+        "name": "幻獣のホネ",
+        "quantity": 1
+      },
+      {
+        "name": "黄金の飾り片手剣",
+        "quantity": 1
+      },
+      {
+        "name": "ドラゴンのツノ",
+        "quantity": 1
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ライトニングソード",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 170,
+        "max": 180
+      },
+      "B": {
+        "min": 250,
+        "max": 260
+      },
+      "C": {
+        "min": 350,
+        "max": 356
+      }
+    },
+    "materials": [
+      {
+        "name": "マデュライト",
+        "quantity": 10
+      },
+      {
+        "name": "メタルのカケラ",
+        "quantity": 1
+      },
+      {
+        "name": "いかずちのたま",
+        "quantity": 1
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "天命のつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 220,
+        "max": 230
+      },
+      "B": {
+        "min": 300,
+        "max": 306
+      },
+      "C": {
+        "min": 220,
+        "max": 230
+      }
+    },
+    "materials": [
+      {
+        "name": "マデュライト",
+        "quantity": 15
+      },
+      {
+        "name": "せいじゃのはい",
+        "quantity": 5
+      },
+      {
+        "name": "天使のソーマ",
+        "quantity": 3
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "名刀 斬鉄丸",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 335,
+        "max": 341
+      },
+      "B": {
+        "min": 265,
+        "max": 275
+      },
+      "C": {
+        "min": 192,
+        "max": 202
+      }
+    },
+    "materials": [
+      {
+        "name": "かがみ石",
+        "quantity": 30
+      },
+      {
+        "name": "ヘビーメタル",
+        "quantity": 5
+      },
+      {
+        "name": "シャークスキン",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 10
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "戦姫のレイピア",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 220,
+        "max": 226
+      },
+      "B": {
+        "min": 252,
+        "max": 262
+      },
+      "C": {
+        "min": 288,
+        "max": 298
+      }
+    },
+    "materials": [
+      {
+        "name": "ナドラダイト鉱石",
+        "quantity": 3
+      },
+      {
+        "name": "ちょうのはね",
+        "quantity": 20
+      },
+      {
+        "name": "大きな化石",
+        "quantity": 20
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "はやぶさの剣改",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 341,
+        "max": 347
+      },
+      "B": {
+        "min": 294,
+        "max": 304
+      },
+      "C": {
+        "min": 245,
+        "max": 255
+      }
+    },
+    "materials": [
+      {
+        "name": "ナドラダイト鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "メタルのカケラ",
+        "quantity": 1
+      },
+      {
+        "name": "かぜきりのはね",
+        "quantity": 1
+      },
+      {
+        "name": "黄金の飾り片手剣",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "セイクリッドソード",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 260,
+        "max": 270
+      },
+      "B": {
+        "min": 260,
+        "max": 270
+      },
+      "C": {
+        "min": 320,
+        "max": 326
+      }
+    },
+    "materials": [
+      {
+        "name": "ナドラダイト鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "人魚の涙",
+        "quantity": 1
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 1
+      },
+      {
+        "name": "きよめの水",
+        "quantity": 30
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "天恵石のつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 300,
+        "max": 310
+      },
+      "B": {
+        "min": 368,
+        "max": 374
+      },
+      "C": {
+        "min": 300,
+        "max": 310
+      }
+    },
+    "materials": [
+      {
+        "name": "アステライト鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 1
+      },
+      {
+        "name": "かがみ石",
+        "quantity": 20
+      },
+      {
+        "name": "緑の宝石",
+        "quantity": 10
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "アカシックソード",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 284,
+        "max": 294
+      },
+      "B": {
+        "min": 320,
+        "max": 326
+      },
+      "C": {
+        "min": 316,
+        "max": 326
+      }
+    },
+    "materials": [
+      {
+        "name": "アステライト鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "炎魔の焼け石",
+        "quantity": 1
+      },
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 30
+      },
+      {
+        "name": "赤いサンゴ",
+        "quantity": 30
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "邪紋のつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 294,
+        "max": 304
+      },
+      "B": {
+        "min": 318,
+        "max": 326
+      },
+      "C": {
+        "min": 328,
+        "max": 336
+      }
+    },
+    "materials": [
+      {
+        "name": "アステライト鉱石",
+        "quantity": 10
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 1
+      },
+      {
+        "name": "ナドラダイト鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "緑の宝石",
+        "quantity": 30
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "呪印のつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 300,
+        "max": 310
+      },
+      "B": {
+        "min": 300,
+        "max": 310
+      },
+      "C": {
+        "min": 350,
+        "max": 356
+      }
+    },
+    "materials": [
+      {
+        "name": "デモニウム鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "暗夜の魔石",
+        "quantity": 1
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 5
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 20
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "デッドリーソード",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {},
+    "materials": [
+      {
+        "name": "デモニウム鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "おぼろ水晶",
+        "quantity": 1
+      },
+      {
+        "name": "ドラゴンのツノ",
+        "quantity": 3
+      },
+      {
+        "name": "小さな化石",
+        "quantity": 5
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "鳴神のつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 370,
+        "max": 380
+      },
+      "B": {
+        "min": 315,
+        "max": 321
+      },
+      "C": {
+        "min": 300,
+        "max": 309
+      }
+    },
+    "materials": [
+      {
+        "name": "デモニウム鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "たそがれゴケ",
+        "quantity": 1
+      },
+      {
+        "name": "いかずちのたま",
+        "quantity": 1
+      },
+      {
+        "name": "おうごんのかけら",
+        "quantity": 5
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "輝天のつるぎ",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 300,
+        "max": 306
+      },
+      "B": {
+        "min": 320,
+        "max": 328
+      },
+      "C": {
+        "min": 375,
+        "max": 385
+      }
+    },
+    "materials": [
+      {
+        "name": "フォレース鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "おぼろ水晶",
+        "quantity": 3
+      },
+      {
+        "name": "青い宝石",
+        "quantity": 20
+      },
+      {
+        "name": "ホワイトパール",
+        "quantity": 30
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 6
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "妖精の剣",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 320,
+        "max": 327
+      },
+      "B": {
+        "min": 320,
+        "max": 327
+      },
+      "C": {
+        "min": 400,
+        "max": 410
+      }
+    },
+    "materials": [
+      {
+        "name": "フォレース鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "彼岸の砂",
+        "quantity": 3
+      },
+      {
+        "name": "黄色の宝石",
+        "quantity": 20
+      },
+      {
+        "name": "アステライト鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "セーラスソード",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 340,
+        "max": 348
+      },
+      "B": {
+        "min": 400,
+        "max": 409
+      },
+      "C": {
+        "min": 318,
+        "max": 326
+      }
+    },
+    "materials": [
+      {
+        "name": "フォレース鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "純白の結晶",
+        "quantity": 5
+      },
+      {
+        "name": "ブルーアイ",
+        "quantity": 30
+      },
+      {
+        "name": "黄金の飾り片手剣",
+        "quantity": 1
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "コメットソード",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 380,
+        "max": 388
+      },
+      "B": {
+        "min": 488,
+        "max": 497
+      },
+      "C": {
+        "min": 346,
+        "max": 354
+      }
+    },
+    "materials": [
+      {
+        "name": "ゼーラズマ鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "烈風石",
+        "quantity": 3
+      },
+      {
+        "name": "純白の結晶",
+        "quantity": 20
+      },
+      {
+        "name": "黄金の飾り片手剣",
+        "quantity": 1
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "不浄の滅剣",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 480,
+        "max": 488
+      },
+      "B": {
+        "min": 380,
+        "max": 388
+      },
+      "C": {
+        "min": 532,
+        "max": 540
+      }
+    },
+    "materials": [
+      {
+        "name": "ゼーラズマ鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "げんませき",
+        "quantity": 4
+      },
+      {
+        "name": "まじゅうのツノ",
+        "quantity": 8
+      },
+      {
+        "name": "レッドオーブ",
+        "quantity": 10
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "レオンソード",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": {
+        "min": 470,
+        "max": 480
+      },
+      "B": {
+        "min": 290,
+        "max": 297
+      },
+      "C": {
+        "min": 350,
+        "max": 357
+      }
+    },
+    "materials": [
+      {
+        "name": "ゼーラズマ鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "純白の結晶",
+        "quantity": 3
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 3
+      },
+      {
+        "name": "せいじゃのはい",
+        "quantity": 10
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "倍半"
   }
 ]
