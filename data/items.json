@@ -6560,5 +6560,713 @@
       { "name": "超ようせいのひだね", "quantity": 8 }
     ],
     "specialTrait": "集中力変化"
+  },
+  {
+    "name": "せいどうのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 28, "max": 44 },
+      "B": { "min": 24, "max": 44 },
+      "C": { "min": 30, "max": 44 },
+      "D": { "min": 30, "max": 46 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "てっこうせき", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "ロングスピア",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 40, "max": 52 },
+      "B": { "min": 30, "max": 40 },
+      "C": { "min": 30, "max": 40 },
+      "D": { "min": 20, "max": 36 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "するどいキバ", "quantity": 3 }
+    ]
+  },
+  {
+    "name": "近衛兵のやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 50, "max": 58 },
+      "B": { "min": 60, "max": 72 },
+      "C": { "min": 25, "max": 35 },
+      "D": { "min": 25, "max": 35 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "じょうぶな枝", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "てつのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 50, "max": 64 },
+      "B": { "min": 40, "max": 54 },
+      "C": { "min": 30, "max": 40 },
+      "D": { "min": 20, "max": 32 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 3 },
+      { "name": "どうのこうせき", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "バトルフォーク",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 70, "max": 75 },
+      "B": { "min": 60, "max": 68 },
+      "C": { "min": 50, "max": 56 },
+      "D": { "min": 30, "max": 40 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "サバンナウッド", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "ホーリーランス",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 60, "max": 70 },
+      "B": { "min": 40, "max": 48 },
+      "C": { "min": 30, "max": 40 },
+      "D": { "min": 50, "max": 68 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 3 },
+      { "name": "きよめの水", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "いなずまのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 100, "max": 108 },
+      "B": { "min": 40, "max": 50 },
+      "C": { "min": 50, "max": 64 },
+      "D": { "min": 80, "max": 88 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "するどいキバ", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "はがねのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 40, "max": 48 },
+      "B": { "min": 80, "max": 90 },
+      "C": { "min": 70, "max": 86 },
+      "D": { "min": 50, "max": 55 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "ブルーアイ", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "グラコスのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 130, "max": 136 },
+      "B": { "min": 70, "max": 85 },
+      "C": { "min": 100, "max": 108 },
+      "D": { "min": 60, "max": 70 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "さざなみのしずく", "quantity": 1 },
+      { "name": "小さな貝がら", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "さじんのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 60, "max": 66 },
+      "B": { "min": 100, "max": 108 },
+      "C": { "min": 100, "max": 114 },
+      "D": { "min": 70, "max": 78 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "みがきずな", "quantity": 1 },
+      { "name": "ネコずな", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "パルチザン",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 70, "max": 78 },
+      "B": { "min": 80, "max": 92 },
+      "C": { "min": 100, "max": 106 },
+      "D": { "min": 50, "max": 64 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "しなやかな枝", "quantity": 1 },
+      { "name": "するどいキバ", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "デーモンスピア",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 100, "max": 108 },
+      "B": { "min": 140, "max": 148 },
+      "C": { "min": 75, "max": 92 },
+      "D": { "min": 125, "max": 132 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 8 },
+      { "name": "暗黒の樹木", "quantity": 1 },
+      { "name": "ブルーアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "らいじんのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 110, "max": 118 },
+      "B": { "min": 170, "max": 180 },
+      "C": { "min": 50, "max": 58 },
+      "D": { "min": 80, "max": 94 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 6 },
+      { "name": "いかずちのたま", "quantity": 1 },
+      { "name": "パープルアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "プラチナのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 130, "max": 136 },
+      "B": { "min": 110, "max": 120 },
+      "C": { "min": 60, "max": 74 },
+      "D": { "min": 90, "max": 98 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 4 },
+      { "name": "ぎんのこうせき", "quantity": 5 },
+      { "name": "青い宝石", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 4 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "えいゆうのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 120, "max": 126 },
+      "B": { "min": 160, "max": 170 },
+      "C": { "min": 180, "max": 194 },
+      "D": { "min": 100, "max": 108 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 12 },
+      { "name": "せいじゃのはい", "quantity": 2 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "オセアノススピア",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 160, "max": 170 },
+      "B": { "min": 140, "max": 150 },
+      "C": { "min": 100, "max": 108 },
+      "D": { "min": 70, "max": 82 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "赤いサンゴ", "quantity": 30 },
+      { "name": "パープルオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "聖騎士のやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 220, "max": 230 },
+      "B": { "min": 160, "max": 166 },
+      "C": { "min": 144, "max": 156 },
+      "D": { "min": 180, "max": 190 }
+    },
+    "materials": [
+      { "name": "せいれいせき", "quantity": 3 },
+      { "name": "せいじゃのはい", "quantity": 2 },
+      { "name": "グリーンオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "メタスラのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 120, "max": 130 },
+      "B": { "min": 170, "max": 185 },
+      "C": { "min": 190, "max": 198 },
+      "D": { "min": 150, "max": 155 }
+    },
+    "materials": [
+      { "name": "ひかりの石", "quantity": 15 },
+      { "name": "みがきずな", "quantity": 30 },
+      { "name": "メタルのカケラ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "きしんのまそう",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 240, "max": 252 },
+      "B": { "min": 190, "max": 198 },
+      "C": { "min": 150, "max": 156 },
+      "D": { "min": 100, "max": 112 }
+    },
+    "materials": [
+      { "name": "大きな貝がら", "quantity": 10 },
+      { "name": "ドラゴンのツノ", "quantity": 1 },
+      { "name": "ビッグサボテン", "quantity": 5 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "聖王のやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 190, "max": 202 },
+      "B": { "min": 220, "max": 232 },
+      "C": { "min": 130, "max": 138 },
+      "D": { "min": 160, "max": 166 }
+    },
+    "materials": [
+      { "name": "幻獣のホネ", "quantity": 1 },
+      { "name": "黄金の飾りヤリ", "quantity": 1 },
+      { "name": "まじゅうのホネ", "quantity": 3 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "セラフィムのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 240, "max": 252 },
+      "B": { "min": 160, "max": 172 },
+      "C": { "min": 125, "max": 133 },
+      "D": { "min": 175, "max": 181 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 10 },
+      { "name": "天使のソーマ", "quantity": 3 },
+      { "name": "せいじゃのはい", "quantity": 3 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "アテナの聖槍",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 160, "max": 172 },
+      "B": { "min": 190, "max": 202 },
+      "C": { "min": 209, "max": 217 },
+      "D": { "min": 181, "max": 187 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "ひかりの石", "quantity": 20 },
+      { "name": "せいじゃのはい", "quantity": 5 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ブラッドスピアー",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 207, "max": 215 },
+      "B": { "min": 240, "max": 252 },
+      "C": { "min": 160, "max": 172 },
+      "D": { "min": 185, "max": 191 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "よごれたほうたい", "quantity": 5 },
+      { "name": "赤い宝石", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "大鳳のやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 173, "max": 179 },
+      "B": { "min": 193, "max": 201 },
+      "C": { "min": 220, "max": 232 },
+      "D": { "min": 250, "max": 262 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 3 },
+      { "name": "さえずりのみつ", "quantity": 30 },
+      { "name": "かぜきりのはね", "quantity": 1 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "タワーランス",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 170, "max": 176 },
+      "B": { "min": 235, "max": 247 },
+      "C": { "min": 235, "max": 247 },
+      "D": { "min": 200, "max": 208 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "ほしのカケラ", "quantity": 30 },
+      { "name": "まりょくの土", "quantity": 30 },
+      { "name": "マデュライト", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ガブリエルのやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 244, "max": 252 },
+      "B": { "min": 320, "max": 332 },
+      "C": { "min": 200, "max": 206 },
+      "D": { "min": 160, "max": 172 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "天使のソーマ", "quantity": 5 },
+      { "name": "ひかりの石", "quantity": 10 },
+      { "name": "黄金の飾りヤリ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "轟雷のやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 260, "max": 272 },
+      "B": { "min": 318, "max": 330 },
+      "C": { "min": 229, "max": 237 },
+      "D": { "min": 161, "max": 167 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "いかずちのたま", "quantity": 10 },
+      { "name": "赤いサンゴ", "quantity": 30 },
+      { "name": "どうのこうせき", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "神域のやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 260, "max": 272 },
+      "B": { "min": 316, "max": 328 },
+      "C": { "min": 229, "max": 237 },
+      "D": { "min": 161, "max": 167 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "せいれいせき", "quantity": 1 },
+      { "name": "プラチナこうせき", "quantity": 30 },
+      { "name": "青い宝石", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "星石のハルバード",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 280, "max": 288 },
+      "B": { "min": 280, "max": 290 },
+      "C": { "min": 214, "max": 224 },
+      "D": { "min": 260, "max": 270 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 10 },
+      { "name": "大地の羽毛", "quantity": 2 },
+      { "name": "黄金の飾りヤリ", "quantity": 1 },
+      { "name": "ほしのカケラ", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "デンジャーランス",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 374, "max": 384 },
+      "B": { "min": 180, "max": 190 },
+      "C": { "min": 180, "max": 190 },
+      "D": { "min": 310, "max": 318 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "激震のキバ", "quantity": 1 },
+      { "name": "幻獣のホネ", "quantity": 5 },
+      { "name": "大きな化石", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "オウマガトキ",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {},
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "宵闇のジェル", "quantity": 1 },
+      { "name": "ドラゴンのホネ", "quantity": 5 },
+      { "name": "小さな化石", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "クアドラピアー",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 444, "max": 454 },
+      "B": { "min": 210, "max": 220 },
+      "C": { "min": 210, "max": 220 },
+      "D": { "min": 240, "max": 248 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "ナドラダイト鉱石", "quantity": 1 },
+      { "name": "マデュライト", "quantity": 1 },
+      { "name": "レッドベリー", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "輝天のやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 230, "max": 240 },
+      "B": { "min": 400, "max": 410 },
+      "C": { "min": 190, "max": 199 },
+      "D": { "min": 200, "max": 208 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "神秘の鋼線", "quantity": 3 },
+      { "name": "いかずちのたま", "quantity": 10 },
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "不死鳥のやり",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 300, "max": 310 },
+      "B": { "min": 170, "max": 178 },
+      "C": { "min": 170, "max": 178 },
+      "D": { "min": 250, "max": 260 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "火竜のキバ", "quantity": 3 },
+      { "name": "炎魔の焼け石", "quantity": 3 },
+      { "name": "せいじゃのはい", "quantity": 30 },
+      { "name": "超ようせいのひだね", "quantity": 7 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "セーラスランス",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 405, "max": 415 },
+      "B": { "min": 200, "max": 208 },
+      "C": { "min": 170, "max": 178 },
+      "D": { "min": 285, "max": 295 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "純白の結晶", "quantity": 5 },
+      { "name": "とこしえの虹", "quantity": 5 },
+      { "name": "黄金の飾りヤリ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "カプリコルランス",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 446, "max": 455 },
+      "B": { "min": 258, "max": 266 },
+      "C": { "min": 208, "max": 216 },
+      "D": { "min": 312, "max": 321 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "地竜のツメ", "quantity": 3 },
+      { "name": "彼岸の砂", "quantity": 20 },
+      { "name": "黄金の飾りヤリ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ボーライドスピアー",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {},
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "ドラゴンのホネ", "quantity": 10 },
+      { "name": "まじゅうのツノ", "quantity": 10 },
+      { "name": "まじゅうのホネ", "quantity": 16 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "クロワランス",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "targetValues": {
+      "A": { "min": 290, "max": 300 },
+      "B": { "min": 140, "max": 148 },
+      "C": { "min": 370, "max": 380 },
+      "D": { "min": 180, "max": 188 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "暗夜の魔石", "quantity": 3 },
+      { "name": "つきのめぐみ", "quantity": 10 },
+      { "name": "ヘビーメタル", "quantity": 30 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "回復"
   }
 ]
