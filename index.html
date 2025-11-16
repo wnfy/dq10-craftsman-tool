@@ -60,6 +60,10 @@ const CraftsmanApp = () => {
   const [toolPrices, setToolPrices] = useState({});
   const [selectedArmorType, setSelectedArmorType] = useState('防具全部');
   const [selectedWeaponType, setSelectedWeaponType] = useState('武器全部');
+  const [selectedToolType, setSelectedToolType] = useState('道具全部');
+  const [selectedSewingType, setSelectedSewingType] = useState('裁縫全部');
+  const [selectedWoodworkType, setSelectedWoodworkType] = useState('木工全部');
+  const [selectedCookingType, setSelectedCookingType] = useState('料理全部');
   const [craftQuantity, setCraftQuantity] = useState({});
   
   // JSONファイルからデータを読み込む
@@ -78,6 +82,7 @@ const CraftsmanApp = () => {
         setLoading(false);
       });
   }, []);
+  
   const handleReset = () => {
     setSearchQuery('');
     setSearchActive('');
@@ -103,23 +108,53 @@ const CraftsmanApp = () => {
     const categoryMatch = item.category === activeCategory;
     const searchMatch = searchActive === '' || item.name.toLowerCase().includes(searchActive.toLowerCase());
     
-    // 武器鍛冶のサブカテゴリフィルタリング
     let subCategoryMatch = true;
+    
     if (activeCategory === '武器鍛冶' && selectedWeaponType !== '武器全部') {
       subCategoryMatch = item.subCategory === selectedWeaponType;
     }
     
-    // 防具鍛冶のサブカテゴリフィルタリング
     if (activeCategory === '防具鍛冶' && selectedArmorType !== '防具全部') {
       subCategoryMatch = item.subCategory === selectedArmorType;
+    }
+    
+    if (activeCategory === '道具鍛冶' && selectedToolType !== '道具全部') {
+      subCategoryMatch = item.subCategory === selectedToolType;
+    }
+    
+    if (activeCategory === '裁縫' && selectedSewingType !== '裁縫全部') {
+      subCategoryMatch = item.subCategory === selectedSewingType;
+    }
+    
+    if (activeCategory === '木工' && selectedWoodworkType !== '木工全部') {
+      subCategoryMatch = item.subCategory === selectedWoodworkType;
+    }
+    
+    if (activeCategory === '料理' && selectedCookingType !== '料理全部') {
+      subCategoryMatch = item.subCategory === selectedCookingType;
     }
     
     return categoryMatch && searchMatch && subCategoryMatch;
   });
 
   const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理'];
-  const weaponTypes = ['武器全部', '片手剣', '両手剣', '短剣', 'ヤリ', 'オノ', 'ツメ', 'ムチ', 'ハンマー', 'ブーメラン', '鎌'];
+  
+  // 修正1: 武器の種類に「家具」「庭具」を追加
+  const weaponTypes = ['武器全部', '片手剣', '両手剣', '短剣', 'ヤリ', 'オノ', 'ツメ', 'ムチ', 'ハンマー', 'ブーメラン', '鎌', '家具', '庭具'];
+  
   const armorTypes = ['防具全部', '盾', 'アタマ', 'からだ上', 'からだ下', 'ウデ', '足'];
+  
+  // 修正2: 道具の種類を追加
+  const toolTypes = ['道具全部', '道具', '素材', '家具', '庭具'];
+  
+  // 修正3: 裁縫の種類を追加
+  const sewingTypes = ['裁縫全部', 'アタマ', 'からだ上', 'からだ下', 'ウデ', '足', '家具'];
+  
+  // 修正4: 木工の種類を追加
+  const woodworkTypes = ['木工全部', 'スティック', '両手杖', '棍', '扇', '弓', '家具', '庭具', '釣りざお'];
+  
+  // 修正5: 料理の種類を追加
+  const cookingTypes = ['料理全部', '肉料理', '魚料理', 'パスタ&ライス', 'スイーツ'];
   
   const paramColors = {
     A: 'from-pink-500 via-rose-500 to-red-500',
@@ -140,6 +175,7 @@ const CraftsmanApp = () => {
     I: 'from-violet-500 via-purple-500 to-indigo-500'
   };
 
+  // 修正6: パラメータのホバーエフェクトを削除（transform hover:scale-105 transition-transform を削除）
   const renderGrid = (targetValues) => {
     const gridPositions = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
     
@@ -152,7 +188,7 @@ const CraftsmanApp = () => {
           return (
             <div
               key={pos}
-              className={`p-3 rounded-xl text-white shadow-md transform hover:scale-105 transition-transform flex flex-col items-center justify-center ${
+              className={`p-3 rounded-xl text-white shadow-md flex flex-col items-center justify-center ${
                 isEmpty ? 'bg-gray-200' : `bg-gradient-to-br ${gridColors[pos]}`
               }`}
             >
@@ -173,13 +209,14 @@ const CraftsmanApp = () => {
     );
   };
 
+  // 修正6: ABCDのホバーエフェクトも削除
   const renderABCD = (targetValues) => {
     return (
       <div className="grid grid-cols-2 gap-2.5">
         {Object.entries(targetValues).map(([param, values]) => (
           <div
             key={param}
-            className={`bg-gradient-to-br ${paramColors[param]} p-3 rounded-xl text-white shadow-md transform hover:scale-105 transition-transform`}
+            className={`bg-gradient-to-br ${paramColors[param]} p-3 rounded-xl text-white shadow-md`}
           >
             <div className="text-xs font-bold opacity-90 tracking-wider text-center">{param}</div>
             <div className="text-2xl font-black mt-1 drop-shadow text-center">
@@ -379,6 +416,10 @@ const CraftsmanApp = () => {
                 setToolPrices({});
                 setSelectedArmorType('防具全部');
                 setSelectedWeaponType('武器全部');
+                setSelectedToolType('道具全部');
+                setSelectedSewingType('裁縫全部');
+                setSelectedWoodworkType('木工全部');
+                setSelectedCookingType('料理全部');
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
@@ -401,6 +442,7 @@ const CraftsmanApp = () => {
           ))}
         </div>
         
+        {/* 武器鍛冶のサブカテゴリ */}
         {activeCategory === '武器鍛冶' && (
           <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
             {weaponTypes.map((type) => (
@@ -429,6 +471,7 @@ const CraftsmanApp = () => {
           </div>
         )}
         
+        {/* 防具鍛冶のサブカテゴリ */}
         {activeCategory === '防具鍛冶' && (
           <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
             {armorTypes.map((type) => (
@@ -448,6 +491,122 @@ const CraftsmanApp = () => {
                 className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${
                   selectedArmorType === type
                     ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md'
+                    : 'bg-gray-100 text-gray-600'
+                }`}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+        )}
+        
+        {/* 道具鍛冶のサブカテゴリ */}
+        {activeCategory === '道具鍛冶' && (
+          <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
+            {toolTypes.map((type) => (
+              <button
+                key={type}
+                onClick={() => setSelectedToolType(type)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                  e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '';
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.outline = 'none';
+                }}
+                className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${
+                  selectedToolType === type
+                    ? 'bg-gradient-to-r from-yellow-500 to-amber-500 text-white shadow-md'
+                    : 'bg-gray-100 text-gray-600'
+                }`}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+        )}
+        
+        {/* 裁縫のサブカテゴリ */}
+        {activeCategory === '裁縫' && (
+          <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
+            {sewingTypes.map((type) => (
+              <button
+                key={type}
+                onClick={() => setSelectedSewingType(type)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                  e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '';
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.outline = 'none';
+                }}
+                className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${
+                  selectedSewingType === type
+                    ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-md'
+                    : 'bg-gray-100 text-gray-600'
+                }`}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+        )}
+        
+        {/* 木工のサブカテゴリ */}
+        {activeCategory === '木工' && (
+          <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
+            {woodworkTypes.map((type) => (
+              <button
+                key={type}
+                onClick={() => setSelectedWoodworkType(type)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                  e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '';
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.outline = 'none';
+                }}
+                className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${
+                  selectedWoodworkType === type
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-md'
+                    : 'bg-gray-100 text-gray-600'
+                }`}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+        )}
+        
+        {/* 料理のサブカテゴリ */}
+        {activeCategory === '料理' && (
+          <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
+            {cookingTypes.map((type) => (
+              <button
+                key={type}
+                onClick={() => setSelectedCookingType(type)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                  e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '';
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.outline = 'none';
+                }}
+                className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${
+                  selectedCookingType === type
+                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-md'
                     : 'bg-gray-100 text-gray-600'
                 }`}
               >
@@ -715,8 +874,6 @@ const CraftsmanApp = () => {
     </div>
   );
 };
-
-
 
     // ReactDOM でレンダリング
     const root = ReactDOM.createRoot(document.getElementById('root'));
