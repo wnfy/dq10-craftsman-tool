@@ -468,6 +468,60 @@ const CraftsmanApp = () => {
     );
   };
 
+  // ブーメラン（コの字型）: A,B / D / E,F（Cが欠損）
+  const renderBoomerang = (targetValues) => {
+    return (
+      <div className="space-y-2.5">
+        <div className="grid grid-cols-2 gap-2.5">
+          {['A', 'B'].map((pos) => {
+            const value = targetValues[pos];
+            if (!value) return null;
+            return (
+              <div
+                key={pos}
+                className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+              >
+                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+                <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                  {value.min} - {value.max}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="grid grid-cols-2 gap-2.5">
+          <div className="col-start-2">
+            {targetValues['D'] && (
+              <div className={`bg-gradient-to-br ${paramColors['D']} p-3 rounded-xl text-white shadow-md`}>
+                <div className="text-xs font-bold opacity-90 tracking-wider text-center">D</div>
+                <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                  {targetValues['D'].min} - {targetValues['D'].max}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2.5">
+          {['E', 'F'].map((pos) => {
+            const value = targetValues[pos];
+            if (!value) return null;
+            return (
+              <div
+                key={pos}
+                className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+              >
+                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+                <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                  {value.min} - {value.max}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
   // ABCD 4パラメータ表示
   const renderABCD = (targetValues) => {
     return (
@@ -512,6 +566,8 @@ const CraftsmanApp = () => {
       return renderWhip(item.targetValues);
     } else if (item.subCategory === 'ハンマー') {
       return renderHammer(item.targetValues);
+    } else if (item.subCategory === 'ブーメラン') {
+      return renderBoomerang(item.targetValues);
     } else if (item.gridType === '3x3') {
       return renderGrid(item.targetValues);
     } else if (item.gridType === '3x2') {
