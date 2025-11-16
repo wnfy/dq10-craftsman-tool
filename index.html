@@ -345,21 +345,20 @@ const CraftsmanApp = () => {
           })}
         </div>
         <div className="grid grid-cols-2 gap-2.5">
-          {['E', 'G'].map((pos) => {
-            const value = targetValues[pos];
-            if (!value) return null;
-            return (
-              <div
-                key={pos}
-                className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
-              >
-                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-                <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                  {value.min} - {value.max}
-                </div>
-              </div>
-            );
-          })}
+          <div className={`bg-gradient-to-br ${paramColors['E']} p-3 rounded-xl text-white shadow-md`}>
+            <div className="text-xs font-bold opacity-90 tracking-wider text-center">E</div>
+            <div className="text-2xl font-black mt-1 drop-shadow text-center">
+              {targetValues['E'].min} - {targetValues['E'].max}
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2.5">
+          <div className={`bg-gradient-to-br ${paramColors['G']} p-3 rounded-xl text-white shadow-md`}>
+            <div className="text-xs font-bold opacity-90 tracking-wider text-center">G</div>
+            <div className="text-2xl font-black mt-1 drop-shadow text-center">
+              {targetValues['G'].min} - {targetValues['G'].max}
+            </div>
+          </div>
         </div>
       </div>
     );
