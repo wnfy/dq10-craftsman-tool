@@ -52,17 +52,17 @@
 
 const CraftsmanApp = () => {
   const [showWelcome, setShowWelcome] = useState(true);
-  const [activeCategory, setActiveCategory] = useState('防具鍛冶');
+  const [activeCategory, setActiveCategory] = useState('武器鍛冶');
   const [searchQuery, setSearchQuery] = useState('');
   const [searchActive, setSearchActive] = useState('');
   const [selectedItem, setSelectedItem] = useState(null);
   const [materialPrices, setMaterialPrices] = useState({});
   const [toolPrices, setToolPrices] = useState({});
-  const [selectedArmorType, setSelectedArmorType] = useState('防具全部');
-  const [selectedWeaponType, setSelectedWeaponType] = useState('武器全部');
-  const [selectedToolType, setSelectedToolType] = useState('道具全部');
-  const [selectedSewingType, setSelectedSewingType] = useState('裁縫全部');
-  const [selectedWoodworkType, setSelectedWoodworkType] = useState('木工全部');
+  const [selectedArmorType, setSelectedArmorType] = useState('盾');
+  const [selectedWeaponType, setSelectedWeaponType] = useState('片手剣');
+  const [selectedToolType, setSelectedToolType] = useState('道具');
+  const [selectedSewingType, setSelectedSewingType] = useState('アタマ');
+  const [selectedWoodworkType, setSelectedWoodworkType] = useState('スティック');
   const [selectedCookingType, setSelectedCookingType] = useState('料理全部');
   const [craftQuantity, setCraftQuantity] = useState({});
   
@@ -110,23 +110,23 @@ const CraftsmanApp = () => {
     
     let subCategoryMatch = true;
     
-    if (activeCategory === '武器鍛冶' && selectedWeaponType !== '武器全部') {
+    if (activeCategory === '武器鍛冶') {
       subCategoryMatch = item.subCategory === selectedWeaponType;
     }
     
-    if (activeCategory === '防具鍛冶' && selectedArmorType !== '防具全部') {
+    if (activeCategory === '防具鍛冶') {
       subCategoryMatch = item.subCategory === selectedArmorType;
     }
     
-    if (activeCategory === '道具鍛冶' && selectedToolType !== '道具全部') {
+    if (activeCategory === '道具鍛冶') {
       subCategoryMatch = item.subCategory === selectedToolType;
     }
     
-    if (activeCategory === '裁縫' && selectedSewingType !== '裁縫全部') {
+    if (activeCategory === '裁縫') {
       subCategoryMatch = item.subCategory === selectedSewingType;
     }
     
-    if (activeCategory === '木工' && selectedWoodworkType !== '木工全部') {
+    if (activeCategory === '木工') {
       subCategoryMatch = item.subCategory === selectedWoodworkType;
     }
     
@@ -139,28 +139,27 @@ const CraftsmanApp = () => {
 
   const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理'];
   
-  // 修正1: 武器の種類に「家具」「庭具」を追加
-  const weaponTypes = ['武器全部', '片手剣', '両手剣', '短剣', 'ヤリ', 'オノ', 'ツメ', 'ムチ', 'ハンマー', 'ブーメラン', '鎌', '家具', '庭具'];
+  const weaponTypes = ['片手剣', '両手剣', '短剣', 'ヤリ', 'オノ', 'ツメ', 'ムチ', 'ハンマー', 'ブーメラン', '鎌', '家具', '庭具'];
   
-  const armorTypes = ['防具全部', '盾', 'アタマ', 'からだ上', 'からだ下', 'ウデ', '足'];
+  const armorTypes = ['盾', 'アタマ', 'からだ上', 'からだ下', 'ウデ', '足'];
   
-  // 修正2: 道具の種類を追加
-  const toolTypes = ['道具全部', '道具', '素材', '家具', '庭具'];
+  const toolTypes = ['道具', '素材', '家具', '庭具'];
   
-  // 修正3: 裁縫の種類を追加
-  const sewingTypes = ['裁縫全部', 'アタマ', 'からだ上', 'からだ下', 'ウデ', '足', '家具'];
+  const sewingTypes = ['アタマ', 'からだ上', 'からだ下', 'ウデ', '足', '家具'];
   
-  // 修正4: 木工の種類を追加
-  const woodworkTypes = ['木工全部', 'スティック', '両手杖', '棍', '扇', '弓', '家具', '庭具', '釣りざお'];
+  const woodworkTypes = ['スティック', '両手杖', '棍', '扇', '弓', '家具', '庭具', '釣りざお'];
   
-  // 修正5: 料理の種類を追加
   const cookingTypes = ['料理全部', '肉料理', '魚料理', 'パスタ&ライス', 'スイーツ'];
   
   const paramColors = {
     A: 'from-pink-500 via-rose-500 to-red-500',
     B: 'from-cyan-500 via-blue-500 to-indigo-500',
     C: 'from-green-500 via-emerald-500 to-teal-500',
-    D: 'from-purple-500 via-violet-500 to-fuchsia-500'
+    D: 'from-purple-500 via-violet-500 to-fuchsia-500',
+    E: 'from-orange-500 via-amber-500 to-yellow-500',
+    F: 'from-lime-500 via-green-400 to-emerald-400',
+    G: 'from-sky-500 via-cyan-400 to-blue-400',
+    H: 'from-rose-500 via-pink-500 to-fuchsia-500'
   };
 
   const gridColors = {
@@ -175,7 +174,7 @@ const CraftsmanApp = () => {
     I: 'from-violet-500 via-purple-500 to-indigo-500'
   };
 
-  // 修正6: パラメータのホバーエフェクトを削除（transform hover:scale-105 transition-transform を削除）
+  // 3x3グリッド表示
   const renderGrid = (targetValues) => {
     const gridPositions = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
     
@@ -209,7 +208,268 @@ const CraftsmanApp = () => {
     );
   };
 
-  // 修正6: ABCDのホバーエフェクトも削除
+  // 片手剣（縦3）: A, B, C
+  const renderOnHandSword = (targetValues) => {
+    const positions = ['A', 'B', 'C'];
+    return (
+      <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
+        {positions.map((pos) => {
+          const value = targetValues[pos];
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+              <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                {value.min} - {value.max}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  // 両手剣（縦4×横2）: A,B / C,D / E,F / G,H
+  const renderTwoHandSword = (targetValues) => {
+    const rows = [
+      ['A', 'B'],
+      ['C', 'D'],
+      ['E', 'F'],
+      ['G', 'H']
+    ];
+    return (
+      <div className="grid grid-cols-2 gap-2.5">
+        {rows.flat().map((pos) => {
+          const value = targetValues[pos];
+          if (!value) return null;
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+              <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                {value.min} - {value.max}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  // 短剣（縦2）: A, B
+  const renderDagger = (targetValues) => {
+    const positions = ['A', 'B'];
+    return (
+      <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
+        {positions.map((pos) => {
+          const value = targetValues[pos];
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+              <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                {value.min} - {value.max}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  // ヤリ（縦4）: A, B, C, D
+  const renderSpear = (targetValues) => {
+    const positions = ['A', 'B', 'C', 'D'];
+    return (
+      <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
+        {positions.map((pos) => {
+          const value = targetValues[pos];
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+              <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                {value.min} - {value.max}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  // オノ: A,B / C,D / E / G（FとH欠損）
+  const renderAxe = (targetValues) => {
+    return (
+      <div className="space-y-2.5">
+        <div className="grid grid-cols-2 gap-2.5">
+          {['A', 'B'].map((pos) => {
+            const value = targetValues[pos];
+            if (!value) return null;
+            return (
+              <div
+                key={pos}
+                className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+              >
+                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+                <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                  {value.min} - {value.max}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="grid grid-cols-2 gap-2.5">
+          {['C', 'D'].map((pos) => {
+            const value = targetValues[pos];
+            if (!value) return null;
+            return (
+              <div
+                key={pos}
+                className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+              >
+                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+                <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                  {value.min} - {value.max}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
+          {['E', 'G'].map((pos) => {
+            const value = targetValues[pos];
+            if (!value) return null;
+            return (
+              <div
+                key={pos}
+                className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+              >
+                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+                <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                  {value.min} - {value.max}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
+  // ムチ: A,B / C,D / E,F / G（H欠損）
+  const renderWhip = (targetValues) => {
+    return (
+      <div className="space-y-2.5">
+        <div className="grid grid-cols-2 gap-2.5">
+          {['A', 'B'].map((pos) => {
+            const value = targetValues[pos];
+            if (!value) return null;
+            return (
+              <div
+                key={pos}
+                className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+              >
+                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+                <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                  {value.min} - {value.max}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="grid grid-cols-2 gap-2.5">
+          {['C', 'D'].map((pos) => {
+            const value = targetValues[pos];
+            if (!value) return null;
+            return (
+              <div
+                key={pos}
+                className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+              >
+                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+                <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                  {value.min} - {value.max}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="grid grid-cols-2 gap-2.5">
+          {['E', 'F'].map((pos) => {
+            const value = targetValues[pos];
+            if (!value) return null;
+            return (
+              <div
+                key={pos}
+                className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+              >
+                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+                <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                  {value.min} - {value.max}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
+          {['G'].map((pos) => {
+            const value = targetValues[pos];
+            if (!value) return null;
+            return (
+              <div
+                key={pos}
+                className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+              >
+                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+                <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                  {value.min} - {value.max}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
+  // ハンマー（3x2）: A,B / C,D / E,F
+  const renderHammer = (targetValues) => {
+    const rows = [
+      ['A', 'B'],
+      ['C', 'D'],
+      ['E', 'F']
+    ];
+    return (
+      <div className="grid grid-cols-2 gap-2.5">
+        {rows.flat().map((pos) => {
+          const value = targetValues[pos];
+          if (!value) return null;
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+              <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                {value.min} - {value.max}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  // ABCD 4パラメータ表示
   const renderABCD = (targetValues) => {
     return (
       <div className="grid grid-cols-2 gap-2.5">
@@ -226,6 +486,40 @@ const CraftsmanApp = () => {
         ))}
       </div>
     );
+  };
+
+  // グリッドタイプに応じた表示の振り分け
+  const renderTargetValues = (item) => {
+    if (Object.keys(item.targetValues).length === 0) {
+      return (
+        <div className="text-center py-4 bg-gray-50 rounded-xl">
+          <p className="text-gray-500 font-bold text-sm">データ収集中...</p>
+        </div>
+      );
+    }
+
+    // サブカテゴリに応じて表示を切り替え
+    if (item.subCategory === '片手剣') {
+      return renderOnHandSword(item.targetValues);
+    } else if (item.subCategory === '両手剣') {
+      return renderTwoHandSword(item.targetValues);
+    } else if (item.subCategory === '短剣') {
+      return renderDagger(item.targetValues);
+    } else if (item.subCategory === 'ヤリ') {
+      return renderSpear(item.targetValues);
+    } else if (item.subCategory === 'オノ') {
+      return renderAxe(item.targetValues);
+    } else if (item.subCategory === 'ムチ') {
+      return renderWhip(item.targetValues);
+    } else if (item.subCategory === 'ハンマー') {
+      return renderHammer(item.targetValues);
+    } else if (item.gridType === '3x3') {
+      return renderGrid(item.targetValues);
+    } else if (item.gridType === '3x2') {
+      return renderHammer(item.targetValues);
+    } else {
+      return renderABCD(item.targetValues);
+    }
   };
 
   const updatePrice = (itemName, materialName, price) => {
@@ -414,12 +708,12 @@ const CraftsmanApp = () => {
                 setSelectedItem(null);
                 setMaterialPrices({});
                 setToolPrices({});
-                setSelectedArmorType('防具全部');
-                setSelectedWeaponType('武器全部');
-                setSelectedToolType('道具全部');
-                setSelectedSewingType('裁縫全部');
-                setSelectedWoodworkType('木工全部');
-                setSelectedCookingType('料理全部');
+                if (cat === '武器鍛冶') setSelectedWeaponType('片手剣');
+                if (cat === '防具鍛冶') setSelectedArmorType('盾');
+                if (cat === '道具鍛冶') setSelectedToolType('道具');
+                if (cat === '裁縫') setSelectedSewingType('アタマ');
+                if (cat === '木工') setSelectedWoodworkType('スティック');
+                if (cat === '料理') setSelectedCookingType('料理全部');
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
@@ -676,17 +970,9 @@ const CraftsmanApp = () => {
                   <div className="p-4">
                     <h3 className="text-sm font-black text-gray-800 mb-3 flex items-center gap-2">
                       <span className="w-2 h-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full animate-pulse"></span>
-                      目標数値 {item.gridType === '3x3' && '（3×3グリッド）'}
+                      目標数値
                     </h3>
-                    {Object.keys(item.targetValues).length === 0 ? (
-                      <div className="text-center py-4 bg-gray-50 rounded-xl">
-                        <p className="text-gray-500 font-bold text-sm">データ収集中...</p>
-                      </div>
-                    ) : item.gridType === '3x3' ? (
-                      renderGrid(item.targetValues)
-                    ) : (
-                      renderABCD(item.targetValues)
-                    )}
+                    {renderTargetValues(item)}
                   </div>
 
                   <div className="px-4 pb-4">
