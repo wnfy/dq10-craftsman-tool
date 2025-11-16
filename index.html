@@ -65,7 +65,287 @@ const CraftsmanApp = () => {
   const [selectedWoodworkType, setSelectedWoodworkType] = useState('スティック');
   const [selectedCookingType, setSelectedCookingType] = useState('料理全部');
   const [craftQuantity, setCraftQuantity] = useState({});
-  const [popupRecipe, setPopupRecipe] = useState(null);
+  
+  // 別ウィンドウでレシピを開く関数
+  const openRecipeWindow = (item) => {
+    const width = 420;
+    const height = 650;
+    const left = window.screen.width - width - 50;
+    const top = 100;
+    
+    const recipeWindow = window.open(
+      '',
+      `recipe_${item.name}`,
+      `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
+    );
+    
+    if (!recipeWindow) {
+      alert('ポップアップがブロックされました。ブラウザの設定でポップアップを許可してください。');
+      return;
+    }
+    
+    // パラメータの色定義
+    const paramColorsCSS = {
+      A: 'background: linear-gradient(to bottom right, rgb(236, 72, 153), rgb(244, 63, 94), rgb(239, 68, 68));',
+      B: 'background: linear-gradient(to bottom right, rgb(6, 182, 212), rgb(59, 130, 246), rgb(99, 102, 241));',
+      C: 'background: linear-gradient(to bottom right, rgb(34, 197, 94), rgb(16, 185, 129), rgb(20, 184, 166));',
+      D: 'background: linear-gradient(to bottom right, rgb(168, 85, 247), rgb(139, 92, 246), rgb(217, 70, 239));',
+      E: 'background: linear-gradient(to bottom right, rgb(249, 115, 22), rgb(251, 146, 60), rgb(234, 179, 8));',
+      F: 'background: linear-gradient(to bottom right, rgb(132, 204, 22), rgb(74, 222, 128), rgb(52, 211, 153));',
+      G: 'background: linear-gradient(to bottom right, rgb(14, 165, 233), rgb(34, 211, 238), rgb(96, 165, 250));',
+      H: 'background: linear-gradient(to bottom right, rgb(244, 63, 94), rgb(236, 72, 153), rgb(232, 121, 249));',
+      I: 'background: linear-gradient(to bottom right, rgb(139, 92, 246), rgb(168, 85, 247), rgb(99, 102, 241));'
+    };
+    
+    // レンダリング関数のHTML生成版
+    const renderTargetValuesHTML = () => {
+      if (Object.keys(item.targetValues).length === 0) {
+        return '<div style="text-align: center; padding: 1rem; background: rgb(249, 250, 251); border-radius: 0.75rem;"><p style="color: rgb(107, 114, 128); font-weight: bold; font-size: 0.875rem;">データ収集中...</p></div>';
+      }
+      
+      // 片手剣: A, B, C 縦
+      if (item.subCategory === '片手剣') {
+        return ['A', 'B', 'C'].map(pos => {
+          const value = item.targetValues[pos];
+          return `
+            <div style="${paramColorsCSS[pos]} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); margin-bottom: 0.625rem;">
+              <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">${pos}</div>
+              <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${value.min} - ${value.max}</div>
+            </div>
+          `;
+        }).join('');
+      }
+      
+      // 両手剣: A,B / C,D / E,F / G,H
+      if (item.subCategory === '両手剣') {
+        const rows = [['A', 'B'], ['C', 'D'], ['E', 'F'], ['G', 'H']];
+        return rows.map(row => {
+          return `<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.625rem; margin-bottom: 0.625rem;">
+            ${row.map(pos => {
+              const value = item.targetValues[pos];
+              if (!value) return '';
+              return `
+                <div style="${paramColorsCSS[pos]} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
+                  <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">${pos}</div>
+                  <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${value.min} - ${value.max}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>`;
+        }).join('');
+      }
+      
+      // 短剣: A, B 縦
+      if (item.subCategory === '短剣') {
+        return ['A', 'B'].map(pos => {
+          const value = item.targetValues[pos];
+          return `
+            <div style="${paramColorsCSS[pos]} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); margin-bottom: 0.625rem;">
+              <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">${pos}</div>
+              <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${value.min} - ${value.max}</div>
+            </div>
+          `;
+        }).join('');
+      }
+      
+      // ヤリ: A, B, C, D 縦
+      if (item.subCategory === 'ヤリ') {
+        return ['A', 'B', 'C', 'D'].map(pos => {
+          const value = item.targetValues[pos];
+          return `
+            <div style="${paramColorsCSS[pos]} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); margin-bottom: 0.625rem;">
+              <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">${pos}</div>
+              <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${value.min} - ${value.max}</div>
+            </div>
+          `;
+        }).join('');
+      }
+      
+      // オノ: A,B / C,D / E / G
+      if (item.subCategory === 'オノ') {
+        let html = '';
+        [['A', 'B'], ['C', 'D']].forEach(row => {
+          html += `<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.625rem; margin-bottom: 0.625rem;">
+            ${row.map(pos => {
+              const value = item.targetValues[pos];
+              return `
+                <div style="${paramColorsCSS[pos]} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
+                  <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">${pos}</div>
+                  <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${value.min} - ${value.max}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>`;
+        });
+        ['E', 'G'].forEach(pos => {
+          const value = item.targetValues[pos];
+          html += `
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.625rem; margin-bottom: 0.625rem;">
+              <div style="${paramColorsCSS[pos]} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
+                <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">${pos}</div>
+                <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${value.min} - ${value.max}</div>
+              </div>
+            </div>
+          `;
+        });
+        return html;
+      }
+      
+      // ムチ: A,B / C,D / E,F / G
+      if (item.subCategory === 'ムチ') {
+        let html = '';
+        [['A', 'B'], ['C', 'D'], ['E', 'F']].forEach(row => {
+          html += `<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.625rem; margin-bottom: 0.625rem;">
+            ${row.map(pos => {
+              const value = item.targetValues[pos];
+              return `
+                <div style="${paramColorsCSS[pos]} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
+                  <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">${pos}</div>
+                  <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${value.min} - ${value.max}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>`;
+        });
+        html += `
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.625rem; margin-bottom: 0.625rem;">
+            <div style="${paramColorsCSS['G']} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
+              <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">G</div>
+              <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${item.targetValues['G'].min} - ${item.targetValues['G'].max}</div>
+            </div>
+          </div>
+        `;
+        return html;
+      }
+      
+      // ハンマー: A,B / C,D / E,F
+      if (item.subCategory === 'ハンマー') {
+        const rows = [['A', 'B'], ['C', 'D'], ['E', 'F']];
+        return rows.map(row => {
+          return `<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.625rem; margin-bottom: 0.625rem;">
+            ${row.map(pos => {
+              const value = item.targetValues[pos];
+              if (!value) return '';
+              return `
+                <div style="${paramColorsCSS[pos]} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
+                  <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">${pos}</div>
+                  <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${value.min} - ${value.max}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>`;
+        }).join('');
+      }
+      
+      // ブーメラン: A,B / D / E,F
+      if (item.subCategory === 'ブーメラン') {
+        let html = `
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.625rem; margin-bottom: 0.625rem;">
+            ${['A', 'B'].map(pos => {
+              const value = item.targetValues[pos];
+              return `
+                <div style="${paramColorsCSS[pos]} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
+                  <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">${pos}</div>
+                  <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${value.min} - ${value.max}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.625rem; margin-bottom: 0.625rem;">
+            <div style="grid-column-start: 2;">
+              <div style="${paramColorsCSS['D']} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
+                <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">D</div>
+                <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${item.targetValues['D'].min} - ${item.targetValues['D'].max}</div>
+              </div>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.625rem;">
+            ${['E', 'F'].map(pos => {
+              const value = item.targetValues[pos];
+              return `
+                <div style="${paramColorsCSS[pos]} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
+                  <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">${pos}</div>
+                  <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${value.min} - ${value.max}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+        return html;
+      }
+      
+      // デフォルト: ABCD
+      return `
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.625rem;">
+          ${Object.entries(item.targetValues).map(([param, values]) => `
+            <div style="${paramColorsCSS[param]} padding: 0.75rem; border-radius: 0.75rem; color: white; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
+              <div style="font-size: 0.75rem; font-weight: bold; opacity: 0.9; letter-spacing: 0.05em; text-align: center;">${param}</div>
+              <div style="font-size: 1.5rem; font-weight: 900; margin-top: 0.25rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1); text-align: center;">${values.min} - ${values.max}</div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    };
+    
+    // HTMLドキュメント生成
+    const htmlContent = `
+      <!DOCTYPE html>
+      <html lang="ja">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>${item.name} - レシピ</title>
+        <style>
+          * { margin: 0; padding: 0; box-sizing: border-box; }
+          body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(to bottom right, rgb(237, 233, 254), rgb(253, 242, 248), rgb(207, 250, 254));
+            min-height: 100vh;
+          }
+        </style>
+      </head>
+      <body>
+        <div style="background: linear-gradient(to right, rgb(236, 72, 153), rgb(168, 85, 247), rgb(6, 182, 212)); padding: 1rem; color: white; position: sticky; top: 0; z-index: 10;">
+          <div style="font-size: 0.75rem; font-weight: bold; background: rgba(255,255,255,0.3); padding: 0.25rem 0.75rem; border-radius: 9999px; display: inline-block;">${item.category}</div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem;">
+            <h2 style="font-size: 1.25rem; font-weight: 900; text-shadow: 0 1px 2px rgba(0,0,0,0.1);">${item.name}</h2>
+            ${item.specialTrait ? `<span style="padding: 0.25rem 0.5rem; background: rgb(250, 204, 21); color: rgb(113, 63, 18); border-radius: 9999px; font-size: 0.75rem; font-weight: bold;">${item.specialTrait}</span>` : ''}
+          </div>
+        </div>
+        
+        <div style="padding: 1rem;">
+          <h3 style="font-size: 0.875rem; font-weight: 900; color: rgb(31, 41, 55); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span style="width: 0.5rem; height: 0.5rem; background: linear-gradient(to right, rgb(236, 72, 153), rgb(168, 85, 247)); border-radius: 9999px;"></span>
+            目標数値
+          </h3>
+          ${renderTargetValuesHTML()}
+        </div>
+        
+        <div style="padding: 0 1rem 1rem 1rem;">
+          <h3 style="font-size: 0.875rem; font-weight: 900; color: rgb(31, 41, 55); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span style="width: 0.5rem; height: 0.5rem; background: linear-gradient(to right, rgb(6, 182, 212), rgb(59, 130, 246)); border-radius: 9999px;"></span>
+            必要素材
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            ${item.materials.map(material => `
+              <div style="padding: 0.75rem; background: linear-gradient(to right, rgb(250, 245, 255), rgb(252, 231, 243), rgb(236, 254, 255)); border-radius: 0.75rem; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="font-weight: bold; color: rgb(31, 41, 55); font-size: 0.875rem;">${material.name}</span>
+                  <span style="padding: 0.125rem 0.625rem; background: linear-gradient(to right, rgb(236, 72, 153), rgb(168, 85, 247)); color: white; border-radius: 9999px; font-weight: 900; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); font-size: 0.75rem;">×${material.quantity}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+    
+    recipeWindow.document.open();
+    recipeWindow.document.write(htmlContent);
+    recipeWindow.document.close();
+    recipeWindow.focus();
+  };
   
   // JSONファイルからデータを読み込む
   const [allItems, setAllItems] = useState([]);
@@ -1016,7 +1296,7 @@ const CraftsmanApp = () => {
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-                              setPopupRecipe(item);
+                              openRecipeWindow(item);
                             }}
                             className="ml-2 px-3 py-1 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-xs transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105"
                           >
@@ -1222,74 +1502,6 @@ const CraftsmanApp = () => {
           <p className="mt-0.5 text-xs">プロトタイプ版</p>
         </div>
       </footer>
-
-      {/* レシピポップアップモーダル */}
-      {popupRecipe && (
-        <div 
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"
-          onClick={() => setPopupRecipe(null)}
-        >
-          <div 
-            className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* ヘッダー */}
-            <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 p-4 text-white sticky top-0 z-10 rounded-t-2xl">
-              <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <span className="text-xs font-bold bg-white/30 px-3 py-0.5 rounded-full">{popupRecipe.category}</span>
-                  <div className="flex items-center gap-2 mt-2">
-                    <h2 className="text-xl font-black drop-shadow-lg">{popupRecipe.name}</h2>
-                    {popupRecipe.specialTrait && (
-                      <span className="px-2 py-0.5 bg-yellow-400 text-yellow-900 rounded-full text-xs font-bold shadow-md">
-                        {popupRecipe.specialTrait}
-                      </span>
-                    )}
-                  </div>
-                </div>
-                <button
-                  onClick={() => setPopupRecipe(null)}
-                  className="ml-2 w-8 h-8 flex items-center justify-center bg-white/20 hover:bg-white/30 rounded-lg font-bold transition-all backdrop-blur-sm border border-white/30"
-                >
-                  ✕
-                </button>
-              </div>
-            </div>
-
-            {/* 目標数値 */}
-            <div className="p-4">
-              <h3 className="text-sm font-black text-gray-800 mb-3 flex items-center gap-2">
-                <span className="w-2 h-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full animate-pulse"></span>
-                目標数値
-              </h3>
-              {renderTargetValues(popupRecipe)}
-            </div>
-
-            {/* 必要素材 */}
-            <div className="px-4 pb-4">
-              <h3 className="text-sm font-black text-gray-800 mb-3 flex items-center gap-2">
-                <span className="w-2 h-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-pulse"></span>
-                必要素材
-              </h3>
-              <div className="space-y-2">
-                {popupRecipe.materials.map((material, idx) => (
-                  <div
-                    key={idx}
-                    className="p-3 bg-gradient-to-r from-purple-50 via-pink-50 to-cyan-50 rounded-xl shadow-sm"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold text-gray-800 text-sm">{material.name}</span>
-                      <span className="px-2.5 py-0.5 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full font-black shadow-md text-xs">
-                        ×{material.quantity}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
