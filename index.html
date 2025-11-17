@@ -82,9 +82,9 @@ const CraftsmanApp = () => {
     };
   }, []);
   
-  // 別ウィンドウでレシピを開く関数（一時的に無効化）
+  // 別ウィンドウでレシピを開く関数（シンプル版）
   const openRecipeWindow = (item) => {
-    alert('ポップアップ機能は現在調整中です。メインサイトで全ての機能をご利用いただけます。');
+    alert('📋 レシピ情報\n\n' + item.name + '\n\n必要素材:\n' + item.materials.map(m => `・${m.name} ×${m.quantity}`).join('\n'));
   };
   
   // JSONファイルからデータを読み込む
