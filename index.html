@@ -329,104 +329,78 @@ const CraftsmanApp = () => {
             <div id="profit-display"></div>
           </div>
         </div>
-        
-        <script>
-          const itemName = "${item.name.replace(/"/g, '\\"')}";
-          const totalCost = ${totalCost};
-          const quantity = ${quantity};
-          const prices = {
-            star3: ${prices.star3 || 0},
-            star2: ${prices.star2 || 0},
-            star1: ${prices.star1 || 0},
-            star0: ${prices.star0 || 0}
-          };
-          
-          function toggleSection(section) {
-            const content = document.getElementById(section + '-content');
-            const arrow = document.getElementById(section + '-arrow');
-            content.classList.toggle('open');
-            arrow.textContent = content.classList.contains('open') ? '▲' : '▼';
-          }
-          
-          function updateResults() {
-            const results = {
-              star3: parseInt(document.getElementById('result-star3').value) || 0,
-              star2: parseInt(document.getElementById('result-star2').value) || 0,
-              star1: parseInt(document.getElementById('result-star1').value) || 0,
-              star0: parseInt(document.getElementById('result-star0').value) || 0,
-              fail: parseInt(document.getElementById('result-fail').value) || 0
-            };
-            
-            const total = results.star3 + results.star2 + results.star1 + results.star0 + results.fail;
-            
-            // 合計表示
-            const summaryEl = document.getElementById('summary');
-            if (total > 0) {
-              const isCorrect = total === quantity;
-              summaryEl.innerHTML = \`合計: \${total} 個 \${isCorrect ? '✓' : '(予定: ' + quantity + '個)'}\`;
-              summaryEl.style.color = isCorrect ? 'rgb(22, 163, 74)' : 'rgb(234, 88, 12)';
-            } else {
-              summaryEl.innerHTML = '';
-            }
-            
-            // 利益計算
-            const profitEl = document.getElementById('profit-display');
-            if (total > 0 && (prices.star3 || prices.star2 || prices.star1 || prices.star0)) {
-              const totalIncome = 
-                Math.floor(results.star3 * (prices.star3 || 0) * 0.95) +
-                Math.floor(results.star2 * (prices.star2 || 0) * 0.95) +
-                Math.floor(results.star1 * (prices.star1 || 0) * 0.95) +
-                Math.floor(results.star0 * (prices.star0 || 0) * 0.95);
-              
-              const profit = totalIncome - totalCost;
-              const profitRate = totalCost > 0 ? ((profit / totalCost) * 100).toFixed(1) : 0;
-              const isProfit = profit >= 0;
-              
-              profitEl.innerHTML = \`
-                <div style="padding: 0.75rem; background: white; border-radius: 0.5rem; border: 2px solid rgb(167, 243, 208);">
-                  <div style="font-size: 0.75rem; font-weight: bold; color: rgb(75, 85, 99); margin-bottom: 0.5rem;">💵 収支計算</div>
-                  <div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 0.25rem;">
-                    <span style="color: rgb(107, 114, 128);">総売上</span>
-                    <span style="font-weight: bold; color: rgb(37, 99, 235);">\${totalIncome.toLocaleString()} G</span>
-                  </div>
-                  <div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 0.25rem;">
-                    <span style="color: rgb(107, 114, 128);">総コスト</span>
-                    <span style="font-weight: bold; color: rgb(220, 38, 38);">\${totalCost.toLocaleString()} G</span>
-                  </div>
-                  <div style="border-top: 1px solid rgb(209, 213, 219); margin: 0.5rem 0;"></div>
-                  <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span style="font-size: 1.125rem; font-weight: 900; color: rgb(31, 41, 55);">純利益:</span>
-                    <div style="text-align: right;">
-                      <div style="font-size: 1.5rem; font-weight: 900; color: \${isProfit ? 'rgb(22, 163, 74)' : 'rgb(220, 38, 38)'};">
-                        \${isProfit ? '+' : ''}\${profit.toLocaleString()} G
-                      </div>
-                      <div style="font-size: 0.75rem; font-weight: bold; color: \${isProfit ? 'rgb(22, 163, 74)' : 'rgb(220, 38, 38)'};">
-                        \${isProfit ? '📈' : '📉'} \${profitRate}%
-                      </div>
-                    </div>
-                  </div>
-                  \${results.fail > 0 ? \`<div style="font-size: 0.75rem; color: rgb(107, 114, 128); margin-top: 0.5rem;">※ 失敗品\${results.fail}個は売却不可のため収益に含みません</div>\` : ''}
-                </div>
-              \`;
-            } else {
-              profitEl.innerHTML = '';
-            }
-            
-            // 親ウィンドウに結果を送信
-            if (window.opener && window.opener.updateCraftResults) {
-              window.opener.updateCraftResults(itemName, results);
-            }
-          }
-          
-          // 初期表示
-          updateResults();
-        </script>
       </body>
       </html>
     `;
     
+    // scriptタグを別途追加（テンプレートリテラルの外で）
+    const scriptContent = `
+      <script>
+        const itemName = "${item.name.replace(/"/g, '\\"')}";
+        const totalCost = ${totalCost};
+        const quantity = ${quantity};
+        const prices = {
+          star3: ${prices.star3 || 0},
+          star2: ${prices.star2 || 0},
+          star1: ${prices.star1 || 0},
+          star0: ${prices.star0 || 0}
+        };
+        
+        function toggleSection(section) {
+          const content = document.getElementById(section + '-content');
+          const arrow = document.getElementById(section + '-arrow');
+          content.classList.toggle('open');
+          arrow.textContent = content.classList.contains('open') ? '▲' : '▼';
+        }
+        
+        function updateResults() {
+          const results = {
+            star3: parseInt(document.getElementById('result-star3').value) || 0,
+            star2: parseInt(document.getElementById('result-star2').value) || 0,
+            star1: parseInt(document.getElementById('result-star1').value) || 0,
+            star0: parseInt(document.getElementById('result-star0').value) || 0,
+            fail: parseInt(document.getElementById('result-fail').value) || 0
+          };
+          
+          const total = results.star3 + results.star2 + results.star1 + results.star0 + results.fail;
+          
+          const summaryEl = document.getElementById('summary');
+          if (total > 0) {
+            const isCorrect = total === quantity;
+            summaryEl.innerHTML = '合計: ' + total + ' 個 ' + (isCorrect ? '✓' : '(予定: ' + quantity + '個)');
+            summaryEl.style.color = isCorrect ? 'rgb(22, 163, 74)' : 'rgb(234, 88, 12)';
+          } else {
+            summaryEl.innerHTML = '';
+          }
+          
+          const profitEl = document.getElementById('profit-display');
+          if (total > 0 && (prices.star3 || prices.star2 || prices.star1 || prices.star0)) {
+            const totalIncome = 
+              Math.floor(results.star3 * (prices.star3 || 0) * 0.95) +
+              Math.floor(results.star2 * (prices.star2 || 0) * 0.95) +
+              Math.floor(results.star1 * (prices.star1 || 0) * 0.95) +
+              Math.floor(results.star0 * (prices.star0 || 0) * 0.95);
+            
+            const profit = totalIncome - totalCost;
+            const profitRate = totalCost > 0 ? ((profit / totalCost) * 100).toFixed(1) : 0;
+            const isProfit = profit >= 0;
+            
+            profitEl.innerHTML = '<div style="padding: 0.75rem; background: white; border-radius: 0.5rem; border: 2px solid rgb(167, 243, 208);"><div style="font-size: 0.75rem; font-weight: bold; color: rgb(75, 85, 99); margin-bottom: 0.5rem;">💵 収支計算</div><div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 0.25rem;"><span style="color: rgb(107, 114, 128);">総売上</span><span style="font-weight: bold; color: rgb(37, 99, 235);">' + totalIncome.toLocaleString() + ' G</span></div><div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 0.25rem;"><span style="color: rgb(107, 114, 128);">総コスト</span><span style="font-weight: bold; color: rgb(220, 38, 38);">' + totalCost.toLocaleString() + ' G</span></div><div style="border-top: 1px solid rgb(209, 213, 219); margin: 0.5rem 0;"></div><div style="display: flex; justify-content: space-between; align-items: center;"><span style="font-size: 1.125rem; font-weight: 900; color: rgb(31, 41, 55);">純利益:</span><div style="text-align: right;"><div style="font-size: 1.5rem; font-weight: 900; color: ' + (isProfit ? 'rgb(22, 163, 74)' : 'rgb(220, 38, 38)') + ';">' + (isProfit ? '+' : '') + profit.toLocaleString() + ' G</div><div style="font-size: 0.75rem; font-weight: bold; color: ' + (isProfit ? 'rgb(22, 163, 74)' : 'rgb(220, 38, 38)') + ';">' + (isProfit ? '📈' : '📉') + ' ' + profitRate + '%</div></div></div>' + (results.fail > 0 ? '<div style="font-size: 0.75rem; color: rgb(107, 114, 128); margin-top: 0.5rem;">※ 失敗品' + results.fail + '個は売却不可のため収益に含みません</div>' : '') + '</div>';
+          } else {
+            profitEl.innerHTML = '';
+          }
+          
+          if (window.opener && window.opener.updateCraftResults) {
+            window.opener.updateCraftResults(itemName, results);
+          }
+        }
+        
+        updateResults();
+      </script>
+    `;
+    
     recipeWindow.document.open();
-    recipeWindow.document.write(htmlContent);
+    recipeWindow.document.write(htmlContent.replace('</body>', scriptContent + '</body>'));
     recipeWindow.document.close();
     recipeWindow.focus();
   };
