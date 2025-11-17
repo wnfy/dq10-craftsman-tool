@@ -68,6 +68,20 @@ const CraftsmanApp = () => {
   const [sellPrices, setSellPrices] = useState({}); // {itemName: {star3: 0, star2: 0, star1: 0, star0: 0, fail: 0}}
   const [craftResults, setCraftResults] = useState({}); // {itemName: {star3: 0, star2: 0, star1: 0, star0: 0, fail: 0}}
   
+  // ポップアップウィンドウから成果記録を更新する関数（グローバルに公開）
+  useEffect(() => {
+    window.updateCraftResults = (itemName, results) => {
+      setCraftResults(prev => ({
+        ...prev,
+        [itemName]: results
+      }));
+    };
+    
+    return () => {
+      delete window.updateCraftResults;
+    };
+  }, []);
+  
   // 別ウィンドウでレシピを開く関数
   const openRecipeWindow = (item) => {
     const width = 420;
@@ -1531,9 +1545,9 @@ const CraftsmanApp = () => {
                                       }
                                     }));
                                   }}
-                                  className="flex-1 px-2 py-1.5 rounded-lg border-2 border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 font-bold text-right text-sm"
+                                  className="flex-1 px-3 py-2 rounded-lg border-2 border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 font-bold text-right text-base"
                                 />
-                                <span className="text-gray-600 font-bold text-xs">G</span>
+                                <span className="text-gray-600 font-bold text-sm">G</span>
                               </div>
                               {sellPrices[item.name]?.[key] > 0 && (
                                 <span className="text-xs text-gray-600 mt-0.5 text-right">
@@ -1693,9 +1707,9 @@ const CraftsmanApp = () => {
                                   </div>
                                   <div className="border-t border-gray-300 my-1"></div>
                                   <div className="flex justify-between items-center">
-                                    <span className="font-black text-gray-800">純利益</span>
+                                    <span className="text-lg font-black text-gray-800">純利益:</span>
                                     <div className="text-right">
-                                      <div className={`font-black text-lg ${profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                                      <div className={`font-black text-2xl ${profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                                         {profit >= 0 ? '+' : ''}{profit.toLocaleString()} G
                                       </div>
                                       <div className={`text-xs font-bold ${profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
