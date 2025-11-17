@@ -46,6 +46,26 @@
     ]
   },
   {
+    "name": "超ようせいのひだね",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "光",
+    "targetValues": {
+      "A": { "min": 180, "max": 190 },
+      "B": { "min": 250, "max": 258 },
+      "C": { "min": 210, "max": 216 },
+      "D": { "min": 250, "max": 258 },
+      "E": { "min": 210, "max": 216 },
+      "F": { "min": 145, "max": 155 }
+    },
+    "materials": [
+      { "name": "汗と涙の結晶", "quantity": 99 },
+      { "name": "虹色のオーブ", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 50 }
+    ]
+  },
+  {
     "name": "きようさにくまん",
     "category": "料理",
     "gridType": "3x3",
