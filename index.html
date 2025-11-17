@@ -334,7 +334,7 @@ const CraftsmanApp = () => {
           const itemName = ${JSON.stringify(item.name)};
           const totalCost = ${totalCost};
           const quantity = ${quantity};
-          const prices = ${JSON.stringify(prices)};
+          const prices = JSON.parse('${JSON.stringify(prices).replace(/'/g, "\\'")}');
           
           function toggleSection(section) {
             const content = document.getElementById(section + '-content');
