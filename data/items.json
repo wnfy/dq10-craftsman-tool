@@ -6518,7 +6518,10 @@
     "category": "武器鍛冶",
     "subCategory": "短剣",
     "gridType": "ABCD",
-    "targetValues": {},
+    "targetValues": {
+      "A": { "min": 670, "max": 678 },
+      "B": { "min": 500, "max": 508 }
+    },
     "materials": [
       { "name": "フォレース鉱石", "quantity": 30 },
       { "name": "暗夜の魔石", "quantity": 5 },
@@ -8010,7 +8013,14 @@
     "category": "武器鍛冶",
     "subCategory": "オノ",
     "gridType": "3x3",
-    "targetValues": {},
+    "targetValues": {
+      "A": { "min": 300, "max": 308 },
+      "B": { "min": 185, "max": 193 },
+      "C": { "min": 185, "max": 193 },
+      "D": { "min": 300, "max": 308 },
+      "E": { "min": 95, "max": 103 },
+      "G": { "min": 90, "max": 98 }
+    },
     "materials": [
       { "name": "フォレース鉱石", "quantity": 30 },
       { "name": "げんませき", "quantity": 5 },
@@ -10420,7 +10430,13 @@
     "category": "武器鍛冶",
     "subCategory": "ブーメラン",
     "gridType": "boomerang",
-    "targetValues": {},
+    "targetValues": {
+      "A": { "min": 290, "max": 299 },
+      "B": { "min": 230, "max": 237 },
+      "D": { "min": 330, "max": 338 },
+      "E": { "min": 290, "max": 299 },
+      "F": { "min": 230, "max": 237 }
+    },
     "materials": [
       { "name": "フォレース鉱石", "quantity": 30 },
       { "name": "風竜の羽毛", "quantity": 5 },
