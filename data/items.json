@@ -7147,7 +7147,12 @@
     "category": "武器鍛冶",
     "subCategory": "ヤリ",
     "gridType": "ABCD",
-    "targetValues": {},
+    "targetValues": {
+      "A": { "min": 350, "max": 358 },
+      "B": { "min": 170, "max": 180 },
+      "C": { "min": 170, "max": 180 },
+      "D": { "min": 290, "max": 300 }
+    },
     "materials": [
       { "name": "デモニウム鉱石", "quantity": 5 },
       { "name": "宵闇のジェル", "quantity": 1 },
@@ -8666,7 +8671,12 @@
     "category": "武器鍛冶",
     "subCategory": "ツメ",
     "gridType": "ABCD",
-    "targetValues": {},
+    "targetValues": {
+      "A": { "min": 190, "max": 200 },
+      "B": { "min": 190, "max": 200 },
+      "C": { "min": 295, "max": 302 },
+      "D": { "min": 295, "max": 302 }
+    },
     "materials": [
       { "name": "デモニウム鉱石", "quantity": 5 },
       { "name": "げんませき", "quantity": 2 },
@@ -9445,7 +9455,15 @@
     "category": "武器鍛冶",
     "subCategory": "ムチ",
     "gridType": "3x3",
-    "targetValues": {},
+    "targetValues": {
+      "A": { "min": 90, "max": 98 },
+      "B": { "min": 90, "max": 98 },
+      "C": { "min": 150, "max": 160 },
+      "D": { "min": 180, "max": 190 },
+      "E": { "min": 140, "max": 150 },
+      "F": { "min": 170, "max": 180 },
+      "G": { "min": 100, "max": 108 }
+    },
     "materials": [
       { "name": "デモニウム鉱石", "quantity": 5 },
       { "name": "激震のキバ", "quantity": 1 },
