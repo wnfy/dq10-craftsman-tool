@@ -732,7 +732,58 @@ body {
       return renderBoomerang(item.targetValues);
     } else if (item.subCategory === '鎌') {
       return renderScythe(item.targetValues);
-    } else if (item.gridType === '3x3') {
+    }
+      // 防具鍛冶 - ウデ（縦3マス: A, B, C）
+  else if (item.subCategory === 'ウデ') {
+    return renderOnHandSword(item.targetValues); // 片手剣と同じレイアウト
+  }
+  
+  // 防具鍛冶 - 足（L字型: B, D, E, F）
+  else if (item.subCategory === '足') {
+    return (
+      <div className="space-y-2.5">
+        <div className="grid grid-cols-2 gap-2.5">
+          <div className="bg-gray-200 p-3 rounded-xl opacity-30"></div>
+          {item.targetValues['B'] && (
+            <div className={`bg-gradient-to-br ${paramColors['B']} p-3 rounded-xl text-white shadow-md`}>
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center">B</div>
+              <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                {item.targetValues['B'].min} - {item.targetValues['B'].max}
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="grid grid-cols-2 gap-2.5">
+          <div className="bg-gray-200 p-3 rounded-xl opacity-30"></div>
+          {item.targetValues['D'] && (
+            <div className={`bg-gradient-to-br ${paramColors['D']} p-3 rounded-xl text-white shadow-md`}>
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center">D</div>
+              <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                {item.targetValues['D'].min} - {item.targetValues['D'].max}
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="grid grid-cols-2 gap-2.5">
+          {['E', 'F'].map((pos) => {
+            const value = item.targetValues[pos];
+            if (!value) return null;
+            return (
+              <div
+                key={pos}
+                className={`bg-gradient-to-br ${paramColors[pos]} p-3 rounded-xl text-white shadow-md`}
+              >
+                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
+                <div className="text-2xl font-black mt-1 drop-shadow text-center">
+                  {value.min} - {value.max}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }else if (item.gridType === '3x3') {
       return renderGrid(item.targetValues);
     } else if (item.gridType === '3x2') {
       return renderHammer(item.targetValues);
