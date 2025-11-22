@@ -11128,5 +11128,282 @@
       { "name": "どうのこうせき", "quantity": 1 },
       { "name": "てっこうせき", "quantity": 1 }
     ]
+  },
+  {
+    "name": "蛮災の鎌",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {
+      "A": { "min": 370, "max": 379 },
+      "B": { "min": 190, "max": 198 },
+      "C": { "min": 110, "max": 118 },
+      "E": { "min": 290, "max": 298 },
+      "G": { "min": 140, "max": 148 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "まじゅうのツノ", "quantity": 5 },
+      { "name": "はがねの尾羽", "quantity": 6 },
+      { "name": "ヘビーメタル", "quantity": 30 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "スコーピオサイス",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {},
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "ドラゴンのホネ", "quantity": 12 },
+      { "name": "地竜のツメ", "quantity": 10 },
+      { "name": "パープルオーブ", "quantity": 12 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ウィズダムサイス",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {
+      "A": { "min": 343, "max": 352 },
+      "B": { "min": 385, "max": 393 },
+      "C": { "min": 162, "max": 170 },
+      "E": { "min": 162, "max": 170 },
+      "G": { "min": 305, "max": 313 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "おぼろ水晶", "quantity": 3 },
+      { "name": "ウェナールシェル", "quantity": 20 },
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "セーラスサイズ",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {
+      "A": { "min": 290, "max": 298 },
+      "B": { "min": 325, "max": 332 },
+      "C": { "min": 130, "max": 138 },
+      "E": { "min": 130, "max": 138 },
+      "G": { "min": 230, "max": 239 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "風竜の羽毛", "quantity": 5 },
+      { "name": "おぼろ水晶", "quantity": 5 },
+      { "name": "ゴールドストーン", "quantity": 20 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "神緋の鎌",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {
+      "A": { "min": 250, "max": 259 },
+      "B": { "min": 300, "max": 309 },
+      "C": { "min": 120, "max": 127 },
+      "E": { "min": 120, "max": 127 },
+      "G": { "min": 200, "max": 208 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "悲願の血涙", "quantity": 3 },
+      { "name": "赤い宝石", "quantity": 20 },
+      { "name": "幻獣のホネ", "quantity": 10 },
+      { "name": "超ようせいのひだね", "quantity": 7 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "輝天の鎌",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {
+      "A": { "min": 265, "max": 275 },
+      "B": { "min": 265, "max": 275 },
+      "C": { "min": 170, "max": 178 },
+      "E": { "min": 100, "max": 107 },
+      "G": { "min": 100, "max": 107 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "人魚の涙", "quantity": 3 },
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "幻獣のホネ", "quantity": 5 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ビターローズ",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {},
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "天竜草", "quantity": 1 },
+      { "name": "スライムおしゃれ花", "quantity": 1 },
+      { "name": "暗黒の樹木", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "サイレントアンガー",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {},
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "炎魔の焼け石", "quantity": 2 },
+      { "name": "ドラゴンのツノ", "quantity": 3 },
+      { "name": "暗黒の樹木", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ワルキューレ",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {
+      "A": { "min": 210, "max": 220 },
+      "B": { "min": 210, "max": 218 },
+      "C": { "min": 150, "max": 159 },
+      "E": { "min": 160, "max": 168 },
+      "G": { "min": 160, "max": 168 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "暗夜の魔石", "quantity": 1 },
+      { "name": "幻獣のホネ", "quantity": 5 },
+      { "name": "みがきずな", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "サリエルの大鎌",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {},
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 10 },
+      { "name": "天使のソーマ", "quantity": 5 },
+      { "name": "プラチナこうせき", "quantity": 20 },
+      { "name": "ぶどうエキス", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "デーモンサイズ",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {},
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "烈風石", "quantity": 1 },
+      { "name": "まじゅうのツノ", "quantity": 1 },
+      { "name": "緑のコケ", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "魔導の鎌",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {
+      "A": { "min": 110, "max": 118 },
+      "B": { "min": 110, "max": 118 },
+      "C": { "min": 150, "max": 158 },
+      "E": { "min": 150, "max": 158 },
+      "G": { "min": 200, "max": 208 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "大きな化石", "quantity": 20 },
+      { "name": "パープルアイ", "quantity": 20 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "さばきの鎌",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {},
+    "materials": [
+      { "name": "かがみの石", "quantity": 20 },
+      { "name": "緑のコケ", "quantity": 30 },
+      { "name": "いかずちのたま", "quantity": 5 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "ダークサイズ",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {
+      "A": { "min": 120, "max": 129 },
+      "B": { "min": 160, "max": 170 },
+      "C": { "min": 120, "max": 128 },
+      "E": { "min": 120, "max": 128 },
+      "G": { "min": 120, "max": 128 }
+    },
+    "materials": [
+      { "name": "小さな化石", "quantity": 30 },
+      { "name": "よるのとばり", "quantity": 5 },
+      { "name": "パープルオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "魔除けの鎌",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "scythe",
+    "targetValues": {
+      "A": { "min": 105, "max": 115 },
+      "B": { "min": 103, "max": 112 },
+      "C": { "min": 97, "max": 105 },
+      "E": { "min": 80, "max": 88 },
+      "G": { "min": 80, "max": 88 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "小さなホネ", "quantity": 15 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
   }
 ]
