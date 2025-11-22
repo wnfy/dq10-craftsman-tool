@@ -11993,5 +11993,533 @@
       { "name": "どうのこうせき", "quantity": 1 }
     ],
     "specialTrait": ""
+  },
+  {
+    "name": "古代鏡の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 295, "max": 303 },
+      "B": { "min": 240, "max": 248 },
+      "C": { "min": 200, "max": 208 },
+      "D": { "min": 315, "max": 323 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "トガリアのしずく", "quantity": 3 },
+      { "name": "せいれいせき", "quantity": 4 },
+      { "name": "黄金の飾り盾", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "みずがめの大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 468, "max": 476 },
+      "B": { "min": 282, "max": 290 },
+      "C": { "min": 502, "max": 510 },
+      "D": { "min": 232, "max": 240 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "水竜のうろこ", "quantity": 4 },
+      { "name": "せいれいせき", "quantity": 3 },
+      { "name": "黄金の飾り盾", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "天球の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 302, "max": 310 },
+      "B": { "min": 302, "max": 310 },
+      "C": { "min": 279, "max": 286 },
+      "D": { "min": 279, "max": 286 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "とこしえの虹", "quantity": 5 },
+      { "name": "ホワイトパール", "quantity": 30 },
+      { "name": "ときのすいしょう", "quantity": 5 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "フォースシールド",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 265, "max": 273 },
+      "B": { "min": 265, "max": 273 },
+      "C": { "min": 205, "max": 213 },
+      "D": { "min": 240, "max": 248 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "水竜のうろこ", "quantity": 5 },
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "黄金の飾り盾", "quantity": 2 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "守護神の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 255, "max": 263 },
+      "B": { "min": 255, "max": 263 },
+      "C": { "min": 255, "max": 263 },
+      "D": { "min": 255, "max": 263 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "火竜のキバ", "quantity": 3 },
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "カチコチくるみ", "quantity": 30 },
+      { "name": "超ようせいのひだね", "quantity": 7 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "輝天の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 300, "max": 309 },
+      "B": { "min": 200, "max": 207 },
+      "C": { "min": 200, "max": 207 },
+      "D": { "min": 300, "max": 309 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "宵闇のジェル", "quantity": 3 },
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "大きなうろこ", "quantity": 20 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "不落の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 150, "max": 159 },
+      "B": { "min": 250, "max": 258 },
+      "C": { "min": 250, "max": 258 },
+      "D": { "min": 320, "max": 329 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "マデュライト", "quantity": 1 },
+      { "name": "てっこうせき", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "獅子王の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 440, "max": 450 },
+      "B": { "min": 200, "max": 208 },
+      "C": { "min": 200, "max": 208 },
+      "D": { "min": 440, "max": 450 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "激震のキバ", "quantity": 1 },
+      { "name": "幻獣の皮", "quantity": 1 },
+      { "name": "ふさふさの毛皮", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "魔界の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 265, "max": 275 },
+      "B": { "min": 220, "max": 228 },
+      "C": { "min": 220, "max": 228 },
+      "D": { "min": 265, "max": 275 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "まじゅうのツノ", "quantity": 2 },
+      { "name": "げんませき", "quantity": 10 },
+      { "name": "小さなうろこ", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "重装兵の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 275, "max": 285 },
+      "B": { "min": 220, "max": 228 },
+      "C": { "min": 220, "max": 230 },
+      "D": { "min": 272, "max": 280 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 10 },
+      { "name": "宵闇のジェル", "quantity": 1 },
+      { "name": "黄金の飾り盾", "quantity": 1 },
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "鉄壁の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 245, "max": 255 },
+      "B": { "min": 245, "max": 255 },
+      "C": { "min": 211, "max": 221 },
+      "D": { "min": 219, "max": 225 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 40 },
+      { "name": "かがみ石", "quantity": 60 },
+      { "name": "汗と涙の結晶", "quantity": 80 },
+      { "name": "虹色のオーブ", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 40 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "雷竜の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 269, "max": 275 },
+      "B": { "min": 215, "max": 227 },
+      "C": { "min": 269, "max": 275 },
+      "D": { "min": 215, "max": 227 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "大地の羽毛", "quantity": 1 },
+      { "name": "いかずちのたま", "quantity": 5 },
+      { "name": "ドラゴンのホネ", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "風雲の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 186, "max": 192 },
+      "B": { "min": 255, "max": 267 },
+      "C": { "min": 255, "max": 267 },
+      "D": { "min": 186, "max": 192 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "烈風石", "quantity": 1 },
+      { "name": "緑の宝石", "quantity": 10 },
+      { "name": "しおかぜ草", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "シャーマンシールド",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 180, "max": 186 },
+      "B": { "min": 220, "max": 232 },
+      "C": { "min": 180, "max": 186 },
+      "D": { "min": 220, "max": 232 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "ナイトメアリーフ", "quantity": 1 },
+      { "name": "サバンナウッド", "quantity": 10 },
+      { "name": "せいれいせき", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "炎帝の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 180, "max": 186 },
+      "B": { "min": 238, "max": 250 },
+      "C": { "min": 180, "max": 186 },
+      "D": { "min": 238, "max": 250 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 3 },
+      { "name": "ホカホカストーン", "quantity": 30 },
+      { "name": "ようがんのカケラ", "quantity": 30 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ウルベアの大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 176, "max": 182 },
+      "B": { "min": 176, "max": 182 },
+      "C": { "min": 202, "max": 214 },
+      "D": { "min": 202, "max": 214 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "せいれいせき", "quantity": 1 },
+      { "name": "大きな化石", "quantity": 20 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ゼレスタイトの大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 150, "max": 162 },
+      "B": { "min": 205, "max": 211 },
+      "C": { "min": 205, "max": 211 },
+      "D": { "min": 254, "max": 266 }
+    },
+    "materials": [
+      { "name": "せいれいせき", "quantity": 2 },
+      { "name": "まんねん雪", "quantity": 30 },
+      { "name": "青い宝石", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "聖王の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 180, "max": 192 },
+      "B": { "min": 210, "max": 222 },
+      "C": { "min": 155, "max": 161 },
+      "D": { "min": 155, "max": 161 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 5 },
+      { "name": "黄金の飾り盾", "quantity": 1 },
+      { "name": "ほしのカケラ", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "邪眼の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 120, "max": 126 },
+      "B": { "min": 204, "max": 216 },
+      "C": { "min": 254, "max": 266 },
+      "D": { "min": 170, "max": 176 }
+    },
+    "materials": [
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "メタルのカケラ", "quantity": 1 },
+      { "name": "ゆめみの花", "quantity": 10 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "聖騎士の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 135, "max": 143 },
+      "B": { "min": 180, "max": 190 },
+      "C": { "min": 180, "max": 190 },
+      "D": { "min": 135, "max": 143 }
+    },
+    "materials": [
+      { "name": "せいれいせき", "quantity": 3 },
+      { "name": "みがきずな", "quantity": 30 },
+      { "name": "イエローオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "オーガシールド",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 132, "max": 138 },
+      "B": { "min": 220, "max": 232 },
+      "C": { "min": 220, "max": 232 },
+      "D": { "min": 132, "max": 138 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 15 },
+      { "name": "まじゅうの皮", "quantity": 2 },
+      { "name": "グリーンオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "おやぶんの大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 120, "max": 130 },
+      "B": { "min": 200, "max": 212 },
+      "C": { "min": 130, "max": 138 },
+      "D": { "min": 160, "max": 168 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 12 },
+      { "name": "さえずりのみつ", "quantity": 30 },
+      { "name": "イエローオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "プラチナシールド",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 125, "max": 132 },
+      "B": { "min": 125, "max": 132 },
+      "C": { "min": 100, "max": 113 },
+      "D": { "min": 100, "max": 113 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 6 },
+      { "name": "まんねん雪", "quantity": 4 },
+      { "name": "グリーンアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ドラゴンシールド",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 80, "max": 92 },
+      "B": { "min": 110, "max": 120 },
+      "C": { "min": 160, "max": 168 },
+      "D": { "min": 130, "max": 140 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 4 },
+      { "name": "ドラゴンのツノ", "quantity": 1 },
+      { "name": "イエローアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "戦士の大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 110, "max": 122 },
+      "B": { "min": 110, "max": 122 },
+      "C": { "min": 70, "max": 78 },
+      "D": { "min": 70, "max": 78 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "ホワイトウッド", "quantity": 1 },
+      { "name": "レッドベリー", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "はがねの大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 50, "max": 60 },
+      "B": { "min": 50, "max": 60 },
+      "C": { "min": 85, "max": 98 },
+      "D": { "min": 85, "max": 98 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "みがきずな", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "てつの大盾",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "targetValues": {
+      "A": { "min": 30, "max": 40 },
+      "B": { "min": 30, "max": 40 },
+      "C": { "min": 40, "max": 52 },
+      "D": { "min": 40, "max": 52 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 3 },
+      { "name": "どうのこうせき", "quantity": 2 }
+    ],
+    "specialTrait": ""
   }
 ]
