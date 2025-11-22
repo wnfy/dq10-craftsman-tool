@@ -10,27 +10,42 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* bodyとhtmlのスタイル */
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    
     /* ローディング中はコンテンツを非表示 */
-    #root:empty::before {
-      content: "";
+    #root:empty {
       display: block;
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       background: linear-gradient(to bottom right, rgb(237, 233, 254), rgb(253, 242, 248), rgb(207, 250, 254));
       z-index: 9999;
     }
     
-    /* Babelスクリプトを非表示 */
+    /* Babelスクリプトを完全に非表示 */
     script[type="text/babel"] {
       display: none !important;
+      visibility: hidden !important;
+      position: absolute !important;
+      width: 0 !important;
+      height: 0 !important;
+      overflow: hidden !important;
+    }
+    
+    /* rootの初期状態 */
+    #root {
+      min-height: 100vh;
     }
   </style>
 </head>
 <body>
-  <div id="root"></div>
   <script type="text/babel">
     // SVGアイコンコンポーネント
     const Search = ({size = 24, className = ""}) => (
@@ -1997,5 +2012,6 @@ body {
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<CraftsmanApp />);
   </script>
+  <div id="root"></div>
 </body>
 </html>
