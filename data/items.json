@@ -16576,5 +16576,1243 @@
       { "name": "小さなうろこ", "quantity": 1 }
     ],
     "specialTrait": ""
+  },
+  {
+    "name": "トライドグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 470, "max": 479 },
+      "B": { "min": 260, "max": 269 },
+      "C": { "min": 495, "max": 504 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 16 },
+      { "name": "地竜のツメ", "quantity": 6 },
+      { "name": "アステライト鉱石", "quantity": 6 },
+      { "name": "大きなうろこ", "quantity": 30 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "コスモスのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 405, "max": 414 },
+      "B": { "min": 270, "max": 279 },
+      "C": { "min": 360, "max": 369 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 16 },
+      { "name": "ドラゴンの皮", "quantity": 4 },
+      { "name": "水竜のうろこ", "quantity": 6 },
+      { "name": "マデュライト", "quantity": 20 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "迅雷の手甲",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 460, "max": 469 },
+      "B": { "min": 240, "max": 249 },
+      "C": { "min": 415, "max": 424 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 16 },
+      { "name": "宵闇のジェル", "quantity": 6 },
+      { "name": "ナドラダイト鉱石", "quantity": 10 },
+      { "name": "大きなうろこ", "quantity": 24 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "常勝のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 380, "max": 389 },
+      "B": { "min": 250, "max": 259 },
+      "C": { "min": 425, "max": 434 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 16 },
+      { "name": "火竜のキバ", "quantity": 4 },
+      { "name": "まじゅうの皮", "quantity": 8 },
+      { "name": "レッドオーブ", "quantity": 8 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "一角鬼の手甲",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 340, "max": 349 },
+      "B": { "min": 290, "max": 299 },
+      "C": { "min": 410, "max": 419 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 16 },
+      { "name": "ドラゴンの皮", "quantity": 6 },
+      { "name": "メタルのカケラ", "quantity": 16 },
+      { "name": "黄金の飾りこて", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "黒夜叉のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 360, "max": 369 },
+      "B": { "min": 415, "max": 425 },
+      "C": { "min": 310, "max": 318 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 16 },
+      { "name": "カオスベリー", "quantity": 6 },
+      { "name": "炎魔の焼け石", "quantity": 10 },
+      { "name": "よるのとばり", "quantity": 20 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "イグナイトグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 330, "max": 339 },
+      "B": { "min": 380, "max": 390 },
+      "C": { "min": 280, "max": 288 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 16 },
+      { "name": "地竜のツメ", "quantity": 5 },
+      { "name": "まじゅうの皮", "quantity": 5 },
+      { "name": "炎の樹木", "quantity": 30 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "魔衛隊士のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 460, "max": 470 },
+      "B": { "min": 370, "max": 378 },
+      "C": { "min": 320, "max": 328 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 16 },
+      { "name": "水竜のうろこ", "quantity": 5 },
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "黄金の飾りこて", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "天の冒険者のグラブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 330, "max": 339 },
+      "B": { "min": 310, "max": 319 },
+      "C": { "min": 290, "max": 298 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 16 },
+      { "name": "激震のキバ", "quantity": 5 },
+      { "name": "まじゅうの皮", "quantity": 5 },
+      { "name": "まじゅうのホネ", "quantity": 10 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ほのおのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 450, "max": 460 },
+      "B": { "min": 330, "max": 339 },
+      "C": { "min": 330, "max": 339 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 16 },
+      { "name": "火竜のキバ", "quantity": 5 },
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "黄金の飾りこて", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "聖域のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 350, "max": 359 },
+      "B": { "min": 350, "max": 359 },
+      "C": { "min": 400, "max": 410 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 16 },
+      { "name": "激震のキバ", "quantity": 3 },
+      { "name": "ドラゴンの皮", "quantity": 5 },
+      { "name": "黄金の飾りこて", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "蒼穹兵団のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 370, "max": 378 },
+      "B": { "min": 370, "max": 378 },
+      "C": { "min": 260, "max": 267 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 16 },
+      { "name": "烈風石", "quantity": 3 },
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "黄金の飾りこて", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ファフニルアーム",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 320, "max": 329 },
+      "B": { "min": 320, "max": 329 },
+      "C": { "min": 280, "max": 288 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "ささやく枯れ葉", "quantity": 1 },
+      { "name": "大きなホネ", "quantity": 1 },
+      { "name": "小さなうろこ", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "魔侯爵のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 340, "max": 349 },
+      "B": { "min": 300, "max": 308 },
+      "C": { "min": 300, "max": 308 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "宵闇のジェル", "quantity": 1 },
+      { "name": "せいじゃのはい", "quantity": 1 },
+      { "name": "ブラックパール", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ドラゴングローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 305, "max": 314 },
+      "B": { "min": 305, "max": 314 },
+      "C": { "min": 305, "max": 314 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "天竜草", "quantity": 1 },
+      { "name": "かぜきりのはね", "quantity": 1 },
+      { "name": "どくどくヘドロ", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ミラーガントレット",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 300, "max": 309 },
+      "B": { "min": 300, "max": 309 },
+      "C": { "min": 250, "max": 258 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "激震のキバ", "quantity": 1 },
+      { "name": "メタルのカケラ", "quantity": 3 },
+      { "name": "ブルーアイ", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ガナドールグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 338, "max": 345 },
+      "B": { "min": 280, "max": 288 },
+      "C": { "min": 360, "max": 370 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "たそがれゴケ", "quantity": 1 },
+      { "name": "げんませき", "quantity": 10 },
+      { "name": "こうもりのはね", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ネヴァングラブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 350, "max": 357 },
+      "B": { "min": 295, "max": 305 },
+      "C": { "min": 265, "max": 271 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "大地の羽毛", "quantity": 2 },
+      { "name": "宵闇のジェル", "quantity": 5 },
+      { "name": "暗黒の樹木", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "レギオングローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 330, "max": 340 },
+      "B": { "min": 360, "max": 370 },
+      "C": { "min": 250, "max": 260 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 10 },
+      { "name": "宵闇のジェル", "quantity": 1 },
+      { "name": "黄金の飾りこて", "quantity": 1 },
+      { "name": "よごれたほうたい", "quantity": 15 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ヴァルハラグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 320, "max": 330 },
+      "B": { "min": 255, "max": 265 },
+      "C": { "min": 275, "max": 285 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 10 },
+      { "name": "いかずちのたま", "quantity": 1 },
+      { "name": "ヘビーメタル", "quantity": 5 },
+      { "name": "大きなうろこ", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "機工博士のグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 174, "max": 282 },
+      "B": { "min": 316, "max": 326 },
+      "C": { "min": 356, "max": 366 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "ドワチャカオイル", "quantity": 1 },
+      { "name": "ゴールドストーン", "quantity": 20 },
+      { "name": "シルク草", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "シュバリエグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 280, "max": 290 },
+      "B": { "min": 371, "max": 379 },
+      "C": { "min": 295, "max": 305 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "ドラゴンのホネ", "quantity": 10 },
+      { "name": "プラチナこうせき", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "砂海のグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 250, "max": 256 },
+      "B": { "min": 296, "max": 306 },
+      "C": { "min": 336, "max": 347 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "ネコずな", "quantity": 30 },
+      { "name": "よるのとばり", "quantity": 20 },
+      { "name": "麻の糸", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "鉄壁のグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 210, "max": 222 },
+      "B": { "min": 355, "max": 364 },
+      "C": { "min": 275, "max": 281 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "みがきずな", "quantity": 30 },
+      { "name": "シャークスキン", "quantity": 30 },
+      { "name": "どうのこうせき", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "スターダムブレス",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {},
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "かがみ石", "quantity": 20 },
+      { "name": "ゴールドストーン", "quantity": 10 },
+      { "name": "どうのこうせき", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "降魔のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {},
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "よるのとばり", "quantity": 10 },
+      { "name": "グリーンアイ", "quantity": 10 },
+      { "name": "ゴールドストーン", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "クイックグラブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {},
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "ちょうのはね", "quantity": 30 },
+      { "name": "さとりそう", "quantity": 30 },
+      { "name": "しおかぜ草", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "大戦鬼のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 240, "max": 246 },
+      "B": { "min": 350, "max": 361 },
+      "C": { "min": 290, "max": 300 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "人魚の涙", "quantity": 1 },
+      { "name": "レッドアイ", "quantity": 20 },
+      { "name": "ぎんのこうせき", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "クロッシュグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 308, "max": 318 },
+      "B": { "min": 250, "max": 256 },
+      "C": { "min": 222, "max": 233 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 3 },
+      { "name": "ホカホカストーン", "quantity": 30 },
+      { "name": "まじゅうの皮", "quantity": 1 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "天宮騎士のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 280, "max": 291 },
+      "B": { "min": 245, "max": 255 },
+      "C": { "min": 333, "max": 339 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 3 },
+      { "name": "スライムゼリー", "quantity": 20 },
+      { "name": "けものの皮", "quantity": 30 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "魔技師グローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 258, "max": 264 },
+      "B": { "min": 314, "max": 324 },
+      "C": { "min": 226, "max": 237 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "あやかしそう", "quantity": 30 },
+      { "name": "けものの皮", "quantity": 30 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ヴァイパーグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 246, "max": 252 },
+      "B": { "min": 294, "max": 304 },
+      "C": { "min": 216, "max": 227 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "よるのとばり", "quantity": 10 },
+      { "name": "けものの皮", "quantity": 30 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "騎神のガントレット",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 285, "max": 296 },
+      "B": { "min": 252, "max": 262 },
+      "C": { "min": 223, "max": 229 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "ヘビーメタル", "quantity": 5 },
+      { "name": "てっこうせき", "quantity": 30 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "凱歌のガントレット",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 340, "max": 350 },
+      "B": { "min": 256, "max": 267 },
+      "C": { "min": 196, "max": 202 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "みがきずな", "quantity": 30 },
+      { "name": "プラチナこうせき", "quantity": 20 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "メカニックハンド",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 300, "max": 306 },
+      "B": { "min": 180, "max": 192 },
+      "C": { "min": 255, "max": 264 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 10 },
+      { "name": "ふさふさの毛皮", "quantity": 30 },
+      { "name": "けものの皮", "quantity": 30 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "王軍師のグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 240, "max": 249 },
+      "B": { "min": 200, "max": 206 },
+      "C": { "min": 260, "max": 272 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 10 },
+      { "name": "まじゅうのホネ", "quantity": 3 },
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "クリムゾングローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 180, "max": 186 },
+      "B": { "min": 260, "max": 269 },
+      "C": { "min": 330, "max": 342 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 10 },
+      { "name": "あやかしそう", "quantity": 20 },
+      { "name": "炎の樹木", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "さすらいのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 258, "max": 268 },
+      "B": { "min": 196, "max": 202 },
+      "C": { "min": 316, "max": 327 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 5 },
+      { "name": "黄金の飾りこて", "quantity": 1 },
+      { "name": "へびのぬけがら", "quantity": 1 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "神兵のガントレット",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 233, "max": 243 },
+      "B": { "min": 306, "max": 317 },
+      "C": { "min": 196, "max": 202 }
+    },
+    "materials": [
+      { "name": "メタルのカケラ", "quantity": 1 },
+      { "name": "黄金の飾りこて", "quantity": 1 },
+      { "name": "せいれいせき", "quantity": 1 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "グレートグラブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 228, "max": 238 },
+      "B": { "min": 266, "max": 272 },
+      "C": { "min": 206, "max": 217 }
+    },
+    "materials": [
+      { "name": "幻獣の皮", "quantity": 1 },
+      { "name": "黄金の飾りこて", "quantity": 1 },
+      { "name": "小さなこうら", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "飛竜のグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 180, "max": 186 },
+      "B": { "min": 228, "max": 238 },
+      "C": { "min": 340, "max": 351 }
+    },
+    "materials": [
+      { "name": "大きな化石", "quantity": 20 },
+      { "name": "ドラゴンの皮", "quantity": 1 },
+      { "name": "ドラゴンのホネ", "quantity": 1 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "聖騎士のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 300, "max": 315 },
+      "B": { "min": 158, "max": 164 },
+      "C": { "min": 222, "max": 228 }
+    },
+    "materials": [
+      { "name": "ひかりの石", "quantity": 30 },
+      { "name": "天使のソーマ", "quantity": 2 },
+      { "name": "大きなホネ", "quantity": 10 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "マスカレイドグラブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 237, "max": 243 },
+      "B": { "min": 277, "max": 290 },
+      "C": { "min": 200, "max": 208 }
+    },
+    "materials": [
+      { "name": "ひかりの石", "quantity": 20 },
+      { "name": "しおかぜ草", "quantity": 20 },
+      { "name": "シルク草", "quantity": 20 },
+      { "name": "イエローオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ゴシックアーム",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 180, "max": 191 },
+      "B": { "min": 225, "max": 231 },
+      "C": { "min": 225, "max": 235 }
+    },
+    "materials": [
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "よごれたほうたい", "quantity": 10 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ゴシックグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 210, "max": 216 },
+      "B": { "min": 210, "max": 219 },
+      "C": { "min": 210, "max": 222 }
+    },
+    "materials": [
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "よごれたほうたい", "quantity": 10 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ノーブルグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 217, "max": 223 },
+      "B": { "min": 150, "max": 156 },
+      "C": { "min": 305, "max": 320 }
+    },
+    "materials": [
+      { "name": "レッドアイ", "quantity": 6 },
+      { "name": "まじゅうの皮", "quantity": 2 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ワイルドバングル",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 240, "max": 251 },
+      "B": { "min": 159, "max": 165 },
+      "C": { "min": 305, "max": 315 }
+    },
+    "materials": [
+      { "name": "グリーンアイ", "quantity": 6 },
+      { "name": "小さなうろこ", "quantity": 30 },
+      { "name": "グリーンオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "僧兵のグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 200, "max": 210 },
+      "B": { "min": 290, "max": 301 },
+      "C": { "min": 150, "max": 156 }
+    },
+    "materials": [
+      { "name": "せいれいせき", "quantity": 3 },
+      { "name": "せいじゃのはい", "quantity": 3 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "スパイクグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 215, "max": 226 },
+      "B": { "min": 150, "max": 156 },
+      "C": { "min": 275, "max": 285 }
+    },
+    "materials": [
+      { "name": "ほしのカケラ", "quantity": 12 },
+      { "name": "するどいキバ", "quantity": 30 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "師団長のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 220, "max": 230 },
+      "B": { "min": 190, "max": 196 },
+      "C": { "min": 190, "max": 201 }
+    },
+    "materials": [
+      { "name": "せいれいせき", "quantity": 3 },
+      { "name": "小さな貝がら", "quantity": 25 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ファントムアーム",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 210, "max": 220 },
+      "B": { "min": 160, "max": 168 },
+      "C": { "min": 190, "max": 200 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "よるのとばり", "quantity": 6 },
+      { "name": "パープルオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "バトルガントレット",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 160, "max": 174 },
+      "B": { "min": 220, "max": 228 },
+      "C": { "min": 180, "max": 186 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "みかわしそう", "quantity": 12 },
+      { "name": "グリーンオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ヘヴィーグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 210, "max": 216 },
+      "B": { "min": 140, "max": 155 },
+      "C": { "min": 210, "max": 216 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "みがきずな", "quantity": 18 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "古強者のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 141, "max": 155 },
+      "B": { "min": 182, "max": 190 },
+      "C": { "min": 237, "max": 242 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "カチコチくるみ", "quantity": 12 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "やいばのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 121, "max": 127 },
+      "B": { "min": 203, "max": 217 },
+      "C": { "min": 181, "max": 188 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 8 },
+      { "name": "するどい爪", "quantity": 15 },
+      { "name": "イエローオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "げんぶの腕帯",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 165, "max": 174 },
+      "B": { "min": 120, "max": 132 },
+      "C": { "min": 165, "max": 174 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 4 },
+      { "name": "へびのぬけがら", "quantity": 2 },
+      { "name": "さくらの花びら", "quantity": 3 },
+      { "name": "ようせいのひだね", "quantity": 2 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "プラチナのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 120, "max": 130 },
+      "B": { "min": 150, "max": 158 },
+      "C": { "min": 120, "max": 130 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 4 },
+      { "name": "けものの皮", "quantity": 20 },
+      { "name": "ウェナールシェル", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 2 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "くろがねのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 140, "max": 150 },
+      "B": { "min": 140, "max": 145 },
+      "C": { "min": 110, "max": 120 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 4 },
+      { "name": "けものの皮", "quantity": 6 },
+      { "name": "大きな貝がら", "quantity": 2 },
+      { "name": "ようせいのひだね", "quantity": 2 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "まほうのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 100, "max": 108 },
+      "B": { "min": 80, "max": 85 },
+      "C": { "min": 120, "max": 132 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "まりょくの土", "quantity": 1 },
+      { "name": "ふしぎな海草", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "バンデッドグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 64, "max": 74 },
+      "B": { "min": 162, "max": 170 },
+      "C": { "min": 120, "max": 128 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "けものの皮", "quantity": 1 },
+      { "name": "小さなホネ", "quantity": 1 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "はがねのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 80, "max": 96 },
+      "B": { "min": 60, "max": 66 },
+      "C": { "min": 100, "max": 108 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "ふさふさの毛皮", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "新兵支給てぶくろ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 90, "max": 95 },
+      "B": { "min": 58, "max": 70 },
+      "C": { "min": 62, "max": 75 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "けものの皮", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "ぎんのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 60, "max": 70 },
+      "B": { "min": 100, "max": 112 },
+      "C": { "min": 50, "max": 56 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "小さなこうら", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "てつのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 75, "max": 83 },
+      "B": { "min": 42, "max": 56 },
+      "C": { "min": 60, "max": 72 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "カチコチくるみ", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "てつのうであて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 45, "max": 55 },
+      "B": { "min": 65, "max": 72 },
+      "C": { "min": 30, "max": 45 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "麻の糸", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "くさりのあみごて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 32, "max": 45 },
+      "B": { "min": 56, "max": 66 },
+      "C": { "min": 72, "max": 78 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "ホワイトウッド", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "せいどうのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 40, "max": 54 },
+      "B": { "min": 16, "max": 36 },
+      "C": { "min": 24, "max": 36 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "コットン草", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "うろこのこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "3x1",
+    "targetValues": {
+      "A": { "min": 40, "max": 54 },
+      "B": { "min": 28, "max": 40 },
+      "C": { "min": 32, "max": 46 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "小さなうろこ", "quantity": 1 }
+    ],
+    "specialTrait": ""
   }
 ]
