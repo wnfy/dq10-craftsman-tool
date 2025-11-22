@@ -15228,5 +15228,1353 @@
       { "name": "小さなうろこ", "quantity": 1 }
     ],
     "specialTrait": ""
+  },
+  {
+    "name": "トライドズボン",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 170, "max": 179 },
+      "B": { "min": 95, "max": 103 },
+      "C": { "min": 200, "max": 209 },
+      "D": { "min": 130, "max": 138 },
+      "E": { "min": 100, "max": 108 },
+      "F": { "min": 230, "max": 239 },
+      "G": { "min": 120, "max": 128 },
+      "H": { "min": 140, "max": 148 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 22 },
+      { "name": "スーパーホネホネ", "quantity": 3 },
+      { "name": "フォレース鉱石", "quantity": 5 },
+      { "name": "大きな化石", "quantity": 20 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "コスモスアーマー下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 110, "max": 118 },
+      "B": { "min": 170, "max": 179 },
+      "C": { "min": 220, "max": 229 },
+      "D": { "min": 110, "max": 118 },
+      "E": { "min": 120, "max": 128 },
+      "F": { "min": 140, "max": 149 },
+      "G": { "min": 140, "max": 149 },
+      "H": { "min": 105, "max": 113 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 22 },
+      { "name": "竜の涙", "quantity": 4 },
+      { "name": "おぼろ水晶", "quantity": 6 },
+      { "name": "黄金の飾りよろい下", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "迅雷のスーツ下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 90, "max": 98 },
+      "B": { "min": 100, "max": 108 },
+      "C": { "min": 135, "max": 144 },
+      "D": { "min": 205, "max": 215 },
+      "E": { "min": 160, "max": 169 },
+      "F": { "min": 125, "max": 133 },
+      "G": { "min": 110, "max": 118 },
+      "H": { "min": 90, "max": 98 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 22 },
+      { "name": "水竜のうろこ", "quantity": 6 },
+      { "name": "地竜のツメ", "quantity": 8 },
+      { "name": "ブルーオーブ", "quantity": 8 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "常勝のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 120, "max": 128 },
+      "B": { "min": 240, "max": 249 },
+      "C": { "min": 100, "max": 108 },
+      "D": { "min": 95, "max": 103 },
+      "E": { "min": 230, "max": 239 },
+      "F": { "min": 150, "max": 159 },
+      "G": { "min": 140, "max": 148 },
+      "H": { "min": 115, "max": 124 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 22 },
+      { "name": "悲願の血涙", "quantity": 6 },
+      { "name": "まじゅうの皮", "quantity": 6 },
+      { "name": "へびのぬけがら", "quantity": 24 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "一角鬼の闘着下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 110, "max": 118 },
+      "B": { "min": 120, "max": 128 },
+      "C": { "min": 200, "max": 210 },
+      "D": { "min": 220, "max": 230 },
+      "E": { "min": 170, "max": 178 },
+      "F": { "min": 140, "max": 148 },
+      "G": { "min": 120, "max": 128 },
+      "H": { "min": 100, "max": 108 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 22 },
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "幻獣の皮", "quantity": 12 },
+      { "name": "黄金の飾りよろい下", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "黒夜叉のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 130, "max": 138 },
+      "B": { "min": 135, "max": 144 },
+      "C": { "min": 100, "max": 108 },
+      "D": { "min": 95, "max": 103 },
+      "E": { "min": 210, "max": 219 },
+      "F": { "min": 150, "max": 159 },
+      "G": { "min": 140, "max": 148 },
+      "H": { "min": 115, "max": 124 }
+    },
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 22 },
+      { "name": "呪力のモト", "quantity": 5 },
+      { "name": "炎魔の焼け石", "quantity": 5 },
+      { "name": "赤い宝石", "quantity": 30 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "イグナイトメイル下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 220, "max": 228 },
+      "B": { "min": 220, "max": 228 },
+      "C": { "min": 110, "max": 118 },
+      "D": { "min": 110, "max": 118 },
+      "E": { "min": 160, "max": 169 },
+      "F": { "min": 160, "max": 169 },
+      "G": { "min": 110, "max": 119 },
+      "H": { "min": 110, "max": 119 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 22 },
+      { "name": "炎魔の焼け石", "quantity": 5 },
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "レッドベリー", "quantity": 30 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "魔衛隊士のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 180, "max": 188 },
+      "B": { "min": 140, "max": 148 },
+      "C": { "min": 140, "max": 148 },
+      "D": { "min": 180, "max": 188 },
+      "E": { "min": 90, "max": 100 },
+      "F": { "min": 90, "max": 100 },
+      "G": { "min": 120, "max": 128 },
+      "H": { "min": 120, "max": 128 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 22 },
+      { "name": "純白の結晶", "quantity": 5 },
+      { "name": "大きなうろこ", "quantity": 20 },
+      { "name": "黄金の飾りよろい下", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "天の冒険者のズボン",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 160, "max": 168 },
+      "B": { "min": 130, "max": 138 },
+      "C": { "min": 130, "max": 138 },
+      "D": { "min": 160, "max": 168 },
+      "E": { "min": 100, "max": 109 },
+      "F": { "min": 100, "max": 109 },
+      "G": { "min": 100, "max": 109 },
+      "H": { "min": 100, "max": 109 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "水竜のうろこ", "quantity": 5 },
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "レッドベリー", "quantity": 30 },
+      { "name": "超ようせいのひだね", "quantity": 7 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ほのおのよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 140, "max": 150 },
+      "B": { "min": 140, "max": 150 },
+      "C": { "min": 200, "max": 208 },
+      "D": { "min": 200, "max": 208 },
+      "E": { "min": 120, "max": 128 },
+      "F": { "min": 100, "max": 109 },
+      "G": { "min": 100, "max": 109 },
+      "H": { "min": 120, "max": 128 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 22 },
+      { "name": "炎魔の焼け石", "quantity": 5 },
+      { "name": "赤い宝石", "quantity": 30 },
+      { "name": "黄金の飾りよろい下", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "聖域の闘衣下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 200, "max": 208 },
+      "B": { "min": 120, "max": 128 },
+      "C": { "min": 170, "max": 179 },
+      "D": { "min": 120, "max": 128 },
+      "E": { "min": 170, "max": 179 },
+      "F": { "min": 120, "max": 128 },
+      "G": { "min": 100, "max": 110 },
+      "H": { "min": 100, "max": 110 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 22 },
+      { "name": "神秘の鋼線", "quantity": 3 },
+      { "name": "幻獣の皮", "quantity": 5 },
+      { "name": "黄金の飾りよろい下", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "蒼穹兵団のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 180, "max": 189 },
+      "B": { "min": 180, "max": 189 },
+      "C": { "min": 150, "max": 157 },
+      "D": { "min": 150, "max": 157 },
+      "E": { "min": 90, "max": 98 },
+      "F": { "min": 90, "max": 98 },
+      "G": { "min": 90, "max": 98 },
+      "H": { "min": 90, "max": 98 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 22 },
+      { "name": "純白の結晶", "quantity": 3 },
+      { "name": "シルク草", "quantity": 30 },
+      { "name": "黄金の飾りよろい下", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ファフニルメイル下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 145, "max": 154 },
+      "B": { "min": 145, "max": 154 },
+      "C": { "min": 120, "max": 128 },
+      "D": { "min": 100, "max": 108 },
+      "E": { "min": 100, "max": 108 },
+      "F": { "min": 120, "max": 128 },
+      "G": { "min": 115, "max": 123 },
+      "H": { "min": 115, "max": 123 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "宵闇のジェル", "quantity": 1 },
+      { "name": "まじゅうの皮", "quantity": 1 },
+      { "name": "けものの皮", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ドラゴンベスト下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 150, "max": 160 },
+      "B": { "min": 150, "max": 160 },
+      "C": { "min": 130, "max": 138 },
+      "D": { "min": 130, "max": 138 },
+      "E": { "min": 100, "max": 108 },
+      "F": { "min": 100, "max": 108 },
+      "G": { "min": 100, "max": 108 },
+      "H": { "min": 100, "max": 108 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "幻獣の皮", "quantity": 2 },
+      { "name": "しおかぜ草", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ミラーアーマー下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 100, "max": 108 },
+      "B": { "min": 140, "max": 148 },
+      "C": { "min": 100, "max": 108 },
+      "D": { "min": 140, "max": 148 },
+      "E": { "min": 140, "max": 148 },
+      "F": { "min": 100, "max": 108 },
+      "G": { "min": 140, "max": 148 },
+      "H": { "min": 100, "max": 108 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "宵闇のジェル", "quantity": 1 },
+      { "name": "マデュライト", "quantity": 5 },
+      { "name": "みがきずな", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ガナドールスーツ下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 150, "max": 160 },
+      "B": { "min": 150, "max": 160 },
+      "C": { "min": 120, "max": 128 },
+      "D": { "min": 160, "max": 170 },
+      "E": { "min": 105, "max": 115 },
+      "F": { "min": 105, "max": 115 },
+      "G": { "min": 90, "max": 100 },
+      "H": { "min": 90, "max": 100 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "暗夜の魔石", "quantity": 1 },
+      { "name": "大地の羽毛", "quantity": 10 },
+      { "name": "小さなホネ", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ネヴァンメイル下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 125, "max": 133 },
+      "B": { "min": 95, "max": 103 },
+      "C": { "min": 95, "max": 103 },
+      "D": { "min": 125, "max": 133 },
+      "E": { "min": 115, "max": 125 },
+      "F": { "min": 115, "max": 125 },
+      "G": { "min": 125, "max": 133 },
+      "H": { "min": 125, "max": 133 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "烈風石", "quantity": 2 },
+      { "name": "大地の羽毛", "quantity": 5 },
+      { "name": "サバンナの水", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "レギオンメイル下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 120, "max": 130 },
+      "B": { "min": 140, "max": 150 },
+      "C": { "min": 120, "max": 130 },
+      "D": { "min": 150, "max": 160 },
+      "E": { "min": 110, "max": 120 },
+      "F": { "min": 130, "max": 140 },
+      "G": { "min": 90, "max": 100 },
+      "H": { "min": 100, "max": 110 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 10 },
+      { "name": "激震のキバ", "quantity": 1 },
+      { "name": "幻獣の皮", "quantity": 3 },
+      { "name": "おうごんのかけら", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ヴァルハラメイル下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 140, "max": 150 },
+      "B": { "min": 140, "max": 150 },
+      "C": { "min": 115, "max": 125 },
+      "D": { "min": 115, "max": 125 },
+      "E": { "min": 110, "max": 120 },
+      "F": { "min": 110, "max": 120 },
+      "G": { "min": 100, "max": 110 },
+      "H": { "min": 100, "max": 110 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 10 },
+      { "name": "とこしえの虹", "quantity": 1 },
+      { "name": "大きなホネ", "quantity": 10 },
+      { "name": "大きな化石", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "機工博士のコート下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 100, "max": 108 },
+      "B": { "min": 115, "max": 123 },
+      "C": { "min": 100, "max": 108 },
+      "D": { "min": 158, "max": 168 },
+      "E": { "min": 158, "max": 168 },
+      "F": { "min": 100, "max": 108 },
+      "G": { "min": 115, "max": 123 },
+      "H": { "min": 100, "max": 108 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "ビッグサボテン", "quantity": 1 },
+      { "name": "よるのとばり", "quantity": 15 },
+      { "name": "きれいな枝", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "シュバリエメイル下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 90, "max": 100 },
+      "B": { "min": 90, "max": 100 },
+      "C": { "min": 130, "max": 140 },
+      "D": { "min": 130, "max": 140 },
+      "E": { "min": 100, "max": 110 },
+      "F": { "min": 100, "max": 110 },
+      "G": { "min": 153, "max": 163 },
+      "H": { "min": 153, "max": 163 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "炎魔の焼け石", "quantity": 1 },
+      { "name": "プラチナこうせき", "quantity": 20 },
+      { "name": "炎の樹木", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "砂海のころも下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 98, "max": 108 },
+      "B": { "min": 115, "max": 123 },
+      "C": { "min": 80, "max": 88 },
+      "D": { "min": 148, "max": 154 },
+      "E": { "min": 148, "max": 154 },
+      "F": { "min": 80, "max": 88 },
+      "G": { "min": 115, "max": 123 },
+      "H": { "min": 98, "max": 108 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "サンドフルーツ", "quantity": 10 },
+      { "name": "ネコずな", "quantity": 30 },
+      { "name": "かがやきそう", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "鉄壁のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 70, "max": 76 },
+      "B": { "min": 70, "max": 76 },
+      "C": { "min": 120, "max": 126 },
+      "D": { "min": 120, "max": 126 },
+      "E": { "min": 90, "max": 100 },
+      "F": { "min": 90, "max": 100 },
+      "G": { "min": 140, "max": 150 },
+      "H": { "min": 140, "max": 150 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "カチコチくるみ", "quantity": 30 },
+      { "name": "メタルのカケラ", "quantity": 1 },
+      { "name": "プラチナこうせき", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "降魔のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {},
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "幻獣のホネ", "quantity": 1 },
+      { "name": "緑の宝石", "quantity": 20 },
+      { "name": "てっこうせき", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "クイックパンツ",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {},
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "よるのとばり", "quantity": 10 },
+      { "name": "ドラゴンの皮", "quantity": 1 },
+      { "name": "あやかしそう", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "クロッシュウェア下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 75, "max": 85 },
+      "B": { "min": 75, "max": 85 },
+      "C": { "min": 110, "max": 116 },
+      "D": { "min": 110, "max": 116 },
+      "E": { "min": 145, "max": 153 },
+      "F": { "min": 145, "max": 153 },
+      "G": { "min": 60, "max": 68 },
+      "H": { "min": 60, "max": 68 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 3 },
+      { "name": "小さな貝がら", "quantity": 30 },
+      { "name": "よるのとばり", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "天宮騎士のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 111, "max": 117 },
+      "B": { "min": 152, "max": 160 },
+      "C": { "min": 152, "max": 160 },
+      "D": { "min": 111, "max": 117 },
+      "E": { "min": 90, "max": 98 },
+      "F": { "min": 90, "max": 98 },
+      "G": { "min": 75, "max": 85 },
+      "H": { "min": 75, "max": 85 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 3 },
+      { "name": "大きなうろこ", "quantity": 5 },
+      { "name": "シルク草", "quantity": 30 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "魔技師ズボン",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 75, "max": 85 },
+      "B": { "min": 60, "max": 68 },
+      "C": { "min": 60, "max": 68 },
+      "D": { "min": 110, "max": 116 },
+      "E": { "min": 110, "max": 116 },
+      "F": { "min": 154, "max": 162 },
+      "G": { "min": 154, "max": 162 },
+      "H": { "min": 75, "max": 85 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "幻獣の皮", "quantity": 1 },
+      { "name": "サンドフルーツ", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "凱歌のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 60, "max": 68 },
+      "B": { "min": 72, "max": 82 },
+      "C": { "min": 72, "max": 82 },
+      "D": { "min": 60, "max": 68 },
+      "E": { "min": 119, "max": 125 },
+      "F": { "min": 145, "max": 153 },
+      "G": { "min": 145, "max": 153 },
+      "H": { "min": 119, "max": 125 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "シャークスキン", "quantity": 20 },
+      { "name": "てっこうせき", "quantity": 30 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "メカニックスーツ下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 60, "max": 68 },
+      "B": { "min": 100, "max": 106 },
+      "C": { "min": 100, "max": 106 },
+      "D": { "min": 128, "max": 136 },
+      "E": { "min": 128, "max": 136 },
+      "F": { "min": 80, "max": 90 },
+      "G": { "min": 80, "max": 90 },
+      "H": { "min": 60, "max": 68 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 10 },
+      { "name": "まじゅうの皮", "quantity": 1 },
+      { "name": "やわらかウール", "quantity": 1 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "クリムゾンメイル下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 110, "max": 116 },
+      "B": { "min": 110, "max": 116 },
+      "C": { "min": 135, "max": 143 },
+      "D": { "min": 135, "max": 143 },
+      "E": { "min": 80, "max": 90 },
+      "F": { "min": 80, "max": 90 },
+      "G": { "min": 60, "max": 68 },
+      "H": { "min": 60, "max": 68 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 10 },
+      { "name": "まじゅうの皮", "quantity": 1 },
+      { "name": "レッドベリー", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "さすらいのコート下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 98, "max": 106 },
+      "B": { "min": 155, "max": 161 },
+      "C": { "min": 155, "max": 161 },
+      "D": { "min": 72, "max": 82 },
+      "E": { "min": 60, "max": 68 },
+      "F": { "min": 98, "max": 106 },
+      "G": { "min": 72, "max": 82 },
+      "H": { "min": 60, "max": 68 }
+    },
+    "materials": [
+      { "name": "幻獣の皮", "quantity": 1 },
+      { "name": "黄金の飾りよろい下", "quantity": 1 },
+      { "name": "どくどくヘドロ", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "神兵のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 130, "max": 136 },
+      "B": { "min": 130, "max": 136 },
+      "C": { "min": 72, "max": 82 },
+      "D": { "min": 72, "max": 82 },
+      "E": { "min": 60, "max": 68 },
+      "F": { "min": 111, "max": 119 },
+      "G": { "min": 80, "max": 88 },
+      "H": { "min": 80, "max": 88 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 5 },
+      { "name": "黄金の飾りよろい下", "quantity": 1 },
+      { "name": "けものの皮", "quantity": 20 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "飛竜のズボン",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 138, "max": 146 },
+      "B": { "min": 138, "max": 146 },
+      "C": { "min": 100, "max": 106 },
+      "D": { "min": 100, "max": 106 },
+      "E": { "min": 64, "max": 74 },
+      "F": { "min": 64, "max": 74 },
+      "G": { "min": 72, "max": 80 },
+      "H": { "min": 72, "max": 80 }
+    },
+    "materials": [
+      { "name": "大きな化石", "quantity": 20 },
+      { "name": "大きなうろこ", "quantity": 3 },
+      { "name": "まじゅうのホネ", "quantity": 3 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "聖騎士のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 72, "max": 80 },
+      "B": { "min": 72, "max": 80 },
+      "C": { "min": 132, "max": 138 },
+      "D": { "min": 132, "max": 138 },
+      "E": { "min": 64, "max": 74 },
+      "F": { "min": 64, "max": 74 },
+      "G": { "min": 72, "max": 80 },
+      "H": { "min": 72, "max": 80 }
+    },
+    "materials": [
+      { "name": "ひかりの石", "quantity": 30 },
+      { "name": "せいじゃのはい", "quantity": 1 },
+      { "name": "ドラゴンの皮", "quantity": 1 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ゴシックフリル",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 56, "max": 62 },
+      "B": { "min": 56, "max": 62 },
+      "C": { "min": 72, "max": 80 },
+      "D": { "min": 72, "max": 80 },
+      "E": { "min": 80, "max": 92 },
+      "F": { "min": 80, "max": 92 },
+      "G": { "min": 107, "max": 115 },
+      "H": { "min": 107, "max": 115 }
+    },
+    "materials": [
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "へびのぬけがら", "quantity": 3 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ゴシックコート下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 74, "max": 82 },
+      "B": { "min": 74, "max": 82 },
+      "C": { "min": 87, "max": 94 },
+      "D": { "min": 87, "max": 94 },
+      "E": { "min": 80, "max": 93 },
+      "F": { "min": 80, "max": 93 },
+      "G": { "min": 74, "max": 80 },
+      "H": { "min": 74, "max": 80 }
+    },
+    "materials": [
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "へびのぬけがら", "quantity": 3 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ノーブルコート下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 64, "max": 74 },
+      "B": { "min": 72, "max": 80 },
+      "C": { "min": 116, "max": 122 },
+      "D": { "min": 84, "max": 92 },
+      "E": { "min": 116, "max": 122 },
+      "F": { "min": 84, "max": 92 },
+      "G": { "min": 64, "max": 74 },
+      "H": { "min": 72, "max": 80 }
+    },
+    "materials": [
+      { "name": "レッドアイ", "quantity": 6 },
+      { "name": "さざなみのしずく", "quantity": 35 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ワイルドボトム",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {},
+    "materials": [
+      { "name": "グリーンアイ", "quantity": 6 },
+      { "name": "けものの皮", "quantity": 35 },
+      { "name": "グリーンオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "僧兵のころも下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 64, "max": 74 },
+      "B": { "min": 72, "max": 80 },
+      "C": { "min": 84, "max": 92 },
+      "D": { "min": 100, "max": 106 },
+      "E": { "min": 100, "max": 106 },
+      "F": { "min": 84, "max": 92 },
+      "G": { "min": 72, "max": 80 },
+      "H": { "min": 64, "max": 74 }
+    },
+    "materials": [
+      { "name": "せいれいせき", "quantity": 3 },
+      { "name": "きよめの水", "quantity": 35 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "スパイクアーマー下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 72, "max": 80 },
+      "B": { "min": 72, "max": 80 },
+      "C": { "min": 100, "max": 106 },
+      "D": { "min": 100, "max": 106 },
+      "E": { "min": 64, "max": 74 },
+      "F": { "min": 64, "max": 74 },
+      "G": { "min": 84, "max": 92 },
+      "H": { "min": 84, "max": 92 }
+    },
+    "materials": [
+      { "name": "ほしのカケラ", "quantity": 12 },
+      { "name": "まじゅうの皮", "quantity": 3 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "師団長のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 80, "max": 92 },
+      "B": { "min": 80, "max": 92 },
+      "C": { "min": 92, "max": 100 },
+      "D": { "min": 92, "max": 100 },
+      "E": { "min": 56, "max": 62 },
+      "F": { "min": 56, "max": 62 },
+      "G": { "min": 72, "max": 80 },
+      "H": { "min": 72, "max": 80 }
+    },
+    "materials": [
+      { "name": "せいれいせき", "quantity": 3 },
+      { "name": "きよめの水", "quantity": 30 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "バトルドレス下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 72, "max": 76 },
+      "B": { "min": 72, "max": 76 },
+      "C": { "min": 90, "max": 98 },
+      "D": { "min": 90, "max": 98 },
+      "E": { "min": 56, "max": 68 },
+      "F": { "min": 56, "max": 68 },
+      "G": { "min": 62, "max": 74 },
+      "H": { "min": 62, "max": 74 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "みかわしそう", "quantity": 18 },
+      { "name": "グリーンオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "ヘヴィーアーマー下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 55, "max": 64 },
+      "B": { "min": 55, "max": 64 },
+      "C": { "min": 65, "max": 75 },
+      "D": { "min": 65, "max": 75 },
+      "E": { "min": 75, "max": 85 },
+      "F": { "min": 75, "max": 85 },
+      "G": { "min": 85, "max": 92 },
+      "H": { "min": 85, "max": 92 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "みがきずな", "quantity": 27 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "古強者のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 56, "max": 62 },
+      "B": { "min": 120, "max": 132 },
+      "C": { "min": 64, "max": 78 },
+      "D": { "min": 90, "max": 98 },
+      "E": { "min": 72, "max": 80 },
+      "F": { "min": 62, "max": 70 },
+      "G": { "min": 48, "max": 56 },
+      "H": { "min": 48, "max": 56 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "カチコチくるみ", "quantity": 18 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "やいばのよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 51, "max": 57 },
+      "B": { "min": 51, "max": 57 },
+      "C": { "min": 81, "max": 92 },
+      "D": { "min": 81, "max": 92 },
+      "E": { "min": 77, "max": 84 },
+      "F": { "min": 77, "max": 84 },
+      "G": { "min": 41, "max": 53 },
+      "H": { "min": 41, "max": 53 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 8 },
+      { "name": "ドラゴンの皮", "quantity": 1 },
+      { "name": "イエローオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "げんぶの道着下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 92, "max": 102 },
+      "B": { "min": 92, "max": 102 },
+      "C": { "min": 36, "max": 44 },
+      "D": { "min": 36, "max": 44 },
+      "E": { "min": 48, "max": 56 },
+      "F": { "min": 48, "max": 56 },
+      "G": { "min": 50, "max": 62 },
+      "H": { "min": 50, "max": 62 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 5 },
+      { "name": "さざなみのしずく", "quantity": 3 },
+      { "name": "さくらの花びら", "quantity": 3 },
+      { "name": "ようせいのひだね", "quantity": 2 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "プラチナメイル下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 35, "max": 48 },
+      "B": { "min": 35, "max": 48 },
+      "C": { "min": 65, "max": 72 },
+      "D": { "min": 65, "max": 72 },
+      "E": { "min": 55, "max": 64 },
+      "F": { "min": 55, "max": 64 },
+      "G": { "min": 40, "max": 48 },
+      "H": { "min": 40, "max": 48 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 5 },
+      { "name": "せいれいせき", "quantity": 1 },
+      { "name": "ウェナールシェル", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 2 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "くろがねのよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 40, "max": 55 },
+      "B": { "min": 40, "max": 55 },
+      "C": { "min": 60, "max": 68 },
+      "D": { "min": 60, "max": 68 },
+      "E": { "min": 60, "max": 68 },
+      "F": { "min": 60, "max": 68 },
+      "G": { "min": 35, "max": 45 },
+      "H": { "min": 35, "max": 45 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 5 },
+      { "name": "つけもの石", "quantity": 6 },
+      { "name": "ヘビーメタル", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 2 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "まほうのよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 60, "max": 65 },
+      "B": { "min": 30, "max": 40 },
+      "C": { "min": 30, "max": 40 },
+      "D": { "min": 60, "max": 65 },
+      "E": { "min": 20, "max": 36 },
+      "F": { "min": 40, "max": 52 },
+      "G": { "min": 40, "max": 52 },
+      "H": { "min": 20, "max": 36 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "けものの皮", "quantity": 1 },
+      { "name": "レッドベリー", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "バンデッドボトム",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 40, "max": 48 },
+      "B": { "min": 64, "max": 70 },
+      "C": { "min": 64, "max": 70 },
+      "D": { "min": 40, "max": 48 },
+      "E": { "min": 36, "max": 46 },
+      "F": { "min": 36, "max": 52 },
+      "G": { "min": 36, "max": 52 },
+      "H": { "min": 36, "max": 46 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "ふさふさの毛皮", "quantity": 1 },
+      { "name": "サバンナの水", "quantity": 1 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "はがねのよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 24, "max": 32 },
+      "B": { "min": 24, "max": 32 },
+      "C": { "min": 48, "max": 58 },
+      "D": { "min": 48, "max": 58 },
+      "E": { "min": 28, "max": 40 },
+      "F": { "min": 28, "max": 40 },
+      "G": { "min": 20, "max": 36 },
+      "H": { "min": 20, "max": 36 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "小さなこうら", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "新兵支給こしだれ",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 30, "max": 40 },
+      "B": { "min": 30, "max": 40 },
+      "C": { "min": 30, "max": 40 },
+      "D": { "min": 30, "max": 40 },
+      "E": { "min": 25, "max": 38 },
+      "F": { "min": 25, "max": 38 },
+      "G": { "min": 25, "max": 38 },
+      "H": { "min": 25, "max": 38 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "緑のコケ", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "ぎんのこしだれ",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 28, "max": 38 },
+      "B": { "min": 28, "max": 38 },
+      "C": { "min": 40, "max": 55 },
+      "D": { "min": 40, "max": 55 },
+      "E": { "min": 22, "max": 32 },
+      "F": { "min": 22, "max": 32 },
+      "G": { "min": 15, "max": 30 },
+      "H": { "min": 15, "max": 30 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "けものの皮", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "てつのよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 24, "max": 44 },
+      "B": { "min": 24, "max": 44 },
+      "C": { "min": 16, "max": 30 },
+      "D": { "min": 16, "max": 30 },
+      "E": { "min": 20, "max": 34 },
+      "F": { "min": 20, "max": 34 },
+      "G": { "min": 30, "max": 40 },
+      "H": { "min": 30, "max": 40 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "麻の糸", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "てつのこしだれ",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 12, "max": 30 },
+      "B": { "min": 12, "max": 30 },
+      "C": { "min": 16, "max": 30 },
+      "D": { "min": 16, "max": 30 },
+      "E": { "min": 30, "max": 38 },
+      "F": { "min": 30, "max": 38 },
+      "G": { "min": 12, "max": 32 },
+      "H": { "min": 12, "max": 32 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "ホワイトウッド", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "くさりかたびら下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 16, "max": 32 },
+      "B": { "min": 32, "max": 38 },
+      "C": { "min": 32, "max": 38 },
+      "D": { "min": 16, "max": 32 },
+      "E": { "min": 12, "max": 30 },
+      "F": { "min": 24, "max": 34 },
+      "G": { "min": 24, "max": 34 },
+      "H": { "min": 12, "max": 30 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "するどいキバ", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "せいどうのよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 12, "max": 28 },
+      "B": { "min": 12, "max": 28 },
+      "C": { "min": 12, "max": 28 },
+      "D": { "min": 12, "max": 28 },
+      "E": { "min": 9, "max": 24 },
+      "F": { "min": 9, "max": 24 },
+      "G": { "min": 9, "max": 24 },
+      "H": { "min": 9, "max": 24 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "麻の糸", "quantity": 1 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "うろこのよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "4x2",
+    "targetValues": {
+      "A": { "min": 18, "max": 38 },
+      "B": { "min": 18, "max": 38 },
+      "C": { "min": 14, "max": 30 },
+      "D": { "min": 14, "max": 30 },
+      "E": { "min": 9, "max": 24 },
+      "F": { "min": 9, "max": 24 },
+      "G": { "min": 9, "max": 24 },
+      "H": { "min": 9, "max": 24 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "小さなうろこ", "quantity": 1 }
+    ],
+    "specialTrait": ""
   }
 ]
