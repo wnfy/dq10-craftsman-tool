@@ -46,6 +46,7 @@
   </style>
 </head>
 <body>
+  <div id="root"></div>
   <script type="text/babel">
     // SVGアイコンコンポーネント
     const Search = ({size = 24, className = ""}) => (
@@ -207,6 +208,7 @@ body {
   `).join('')}
 </div>
 
+  </script>
 </body>
 </html>
     `);
@@ -1709,6 +1711,7 @@ body {
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<CraftsmanApp />);
   </script>
+  </script>
 </body>
 </html>={(e) => {
                                 e.stopPropagation();
@@ -2012,6 +2015,5 @@ body {
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<CraftsmanApp />);
   </script>
-  <div id="root"></div>
 </body>
 </html>
