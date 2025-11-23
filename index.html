@@ -1280,26 +1280,34 @@ if (showWelcome) {
               const isSelected = selectedItem === item.name;
               return (
                 <div
-                  key={index}
-                  onClick={() => {
-                    setSelectedItem(isSelected ? null : item.name);
-                  }}
-                  style={{
-                    transition: 'all 0.3s ease',
-                    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
-                    e.currentTarget.style.transform = 'scale(1.02)';
-                    e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-                    e.currentTarget.style.transform = 'scale(1)';
-                    e.currentTarget.style.outline = 'none';
-                  }}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden cursor-pointer relative border border-white/20 shadow-xl"
-                >
+  key={index}
+  onClick={() => {
+    setSelectedItem(isSelected ? null : item.name);
+  }}
+  style={{
+    transition: 'all 0.3s ease',
+    boxShadow: isSelected ? '0 0 40px rgba(56, 189, 248, 0.6)' : '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+    transform: isSelected ? 'scale(1.02)' : 'scale(1)',
+    outline: isSelected ? '2px solid rgb(56, 189, 248)' : 'none'
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
+    e.currentTarget.style.transform = 'scale(1.02)';
+    e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
+  }}
+  onMouseLeave={(e) => {
+    if (!isSelected) {
+      e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+      e.currentTarget.style.transform = 'scale(1)';
+      e.currentTarget.style.outline = 'none';
+    } else {
+      e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
+      e.currentTarget.style.transform = 'scale(1.02)';
+      e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
+    }
+  }}
+  className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden cursor-pointer relative border border-white/20 shadow-xl"
+>
                   <div className="bg-gradient-to-r from-amber-600/80 via-amber-500/80 to-yellow-500/80 backdrop-blur-sm p-4 text-white relative overflow-hidden border-b border-amber-300/30">
                     <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"></div>
                     <div className="absolute bottom-0 left-0 w-20 h-20 bg-white/10 rounded-full -ml-10 -mb-10"></div>
