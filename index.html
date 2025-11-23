@@ -53,6 +53,17 @@ const { useState, useEffect } = React;
 const CraftsmanApp = () => {
   const [showWelcome, setShowWelcome] = useState(true);
   const [activeCategory, setActiveCategory] = useState('武器鍛冶');
+  
+  // Enterキーでウェルカム画面を閉じる
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key === 'Enter' && showWelcome) {
+        setShowWelcome(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [showWelcome]);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchActive, setSearchActive] = useState('');
   const [selectedItem, setSelectedItem] = useState(null);
@@ -821,17 +832,6 @@ body {
 
   // ウェルカム画面
 if (showWelcome) {
-  // Enterキーでスタート
-  useEffect(() => {
-    const handleKeyPress = (e) => {
-      if (e.key === 'Enter') {
-        setShowWelcome(false);
-      }
-    };
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-100 via-fuchsia-100 to-cyan-100 flex items-center justify-center relative overflow-hidden">
         {/* 背景装飾 */}
