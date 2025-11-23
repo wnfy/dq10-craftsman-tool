@@ -850,26 +850,26 @@ body {
   // ウェルカム画面
 if (showWelcome) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-100 via-fuchsia-100 to-cyan-100 flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-screen bg-white flex items-center justify-center relative overflow-hidden">
         {/* 背景装飾 */}
-        <div className="absolute top-10 left-10 w-32 h-32 bg-pink-300/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-300/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-cyan-300/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-10 left-10 w-32 h-32 bg-amber-300/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-yellow-300/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-amber-400/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
         
         {/* メインコンテンツ */}
         <div className="text-center z-10 px-4">
           {/* アイコン */}
           <div className="flex justify-center mb-8 animate-bounce">
-            <div className="bg-gradient-to-br from-pink-500 to-purple-600 p-6 rounded-3xl shadow-2xl">
+            <div className="bg-gradient-to-br from-amber-500 to-yellow-500 p-6 rounded-3xl shadow-2xl border-2 border-amber-300">
               <Sparkles className="text-white" size={64} />
             </div>
           </div>
           
           {/* タイトル */}
-          <h1 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-4 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600 bg-clip-text text-transparent mb-4 animate-fade-in">
             ようこそ
           </h1>
-          <h2 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent mb-8 animate-fade-in" style={{animationDelay: '0.3s'}}>
+          <h2 className="text-3xl md:text-4xl font-black text-amber-700 mb-8 animate-fade-in" style={{animationDelay: '0.3s'}}>
             職人支援ツールへ
           </h2>
           
@@ -883,16 +883,16 @@ if (showWelcome) {
           <button
             onClick={() => setShowWelcome(false)}
             onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
+              e.currentTarget.style.boxShadow = '0 20px 60px rgba(251, 191, 36, 0.5)';
               e.currentTarget.style.transform = 'scale(1.1)';
-              e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
+              e.currentTarget.style.outline = '2px solid rgb(251, 191, 36)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = '';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(245, 158, 11, 0.3)';
               e.currentTarget.style.transform = 'scale(1)';
               e.currentTarget.style.outline = 'none';
             }}
-            className="px-12 py-4 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 text-white rounded-2xl font-black text-xl shadow-2xl transition-all duration-300 animate-fade-in cursor-pointer"
+            className="px-12 py-4 bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500 text-white rounded-2xl font-black text-xl shadow-2xl transition-all duration-300 animate-fade-in cursor-pointer border-2 border-amber-300"
             style={{animationDelay: '0.9s'}}
           >
             Start
