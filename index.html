@@ -907,9 +907,9 @@ if (showWelcome) {
           <button
             onClick={() => setShowWelcome(false)}
             onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = '0 20px 60px rgba(251, 191, 36, 0.5)';
-              e.currentTarget.style.transform = 'scale(1.1) translateY(-2px)';
-            }}
+  e.currentTarget.style.boxShadow = '0 0 60px rgba(251, 191, 36, 0.8), 0 0 100px rgba(251, 191, 36, 0.4), 0 20px 60px rgba(251, 191, 36, 0.5)';
+  e.currentTarget.style.transform = 'scale(1.1) translateY(-2px)';
+}}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow = '0 10px 30px rgba(245, 158, 11, 0.3)';
               e.currentTarget.style.transform = 'scale(1) translateY(0)';
@@ -999,7 +999,7 @@ if (showWelcome) {
               <div className="bg-white/20 backdrop-blur-sm p-2 rounded-xl shadow-lg border border-white/30">
   <Sparkles className="text-amber-300" size={24} />
 </div>
-<h1 className="text-2xl font-black text-white drop-shadow-lg">
+<h1 className="text-2xl font-black text-white" style={{textShadow: '0 0 20px rgba(251, 191, 36, 0.8), 0 0 40px rgba(251, 191, 36, 0.4)'}}>
   ドラクエ10 職人支援ツール
 </h1>
             </div>
@@ -1036,10 +1036,10 @@ if (showWelcome) {
 <button
   onClick={handleReset}
   onMouseEnter={(e) => {
-    e.currentTarget.style.boxShadow = '0 0 40px rgba(255, 255, 255, 0.4)';
-    e.currentTarget.style.transform = 'scale(1.05)';
-    e.currentTarget.style.outline = '2px solid rgba(255, 255, 255, 0.5)';
-  }}
+  e.currentTarget.style.boxShadow = '0 0 40px rgba(251, 191, 36, 0.8), 0 0 60px rgba(251, 191, 36, 0.4)';
+  e.currentTarget.style.transform = 'scale(1.05)';
+  e.currentTarget.style.outline = '2px solid rgb(251, 191, 36)';
+}}
   onMouseLeave={(e) => {
     e.currentTarget.style.boxShadow = '';
     e.currentTarget.style.transform = 'scale(1)';
@@ -1086,6 +1086,7 @@ if (showWelcome) {
     ? 'bg-amber-500/90 backdrop-blur-sm text-white shadow-lg scale-105 border border-amber-300'
     : 'bg-white/20 backdrop-blur-sm text-white shadow-sm border border-white/30'
 }`}
+style={activeCategory === cat ? {boxShadow: '0 0 30px rgba(251, 191, 36, 0.6), 0 0 50px rgba(251, 191, 36, 0.3)'} : {}}
             >
               {cat}
             </button>
