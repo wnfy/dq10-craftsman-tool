@@ -820,9 +820,20 @@ body {
   };
 
   // ウェルカム画面
-  if (showWelcome) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-violet-100 via-fuchsia-100 to-cyan-100 flex items-center justify-center relative overflow-hidden">
+if (showWelcome) {
+  // Enterキーでスタート
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key === 'Enter') {
+        setShowWelcome(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-violet-100 via-fuchsia-100 to-cyan-100 flex items-center justify-center relative overflow-hidden">
         {/* 背景装飾 */}
         <div className="absolute top-10 left-10 w-32 h-32 bg-pink-300/30 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-300/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -1190,7 +1201,7 @@ body {
             <p className="text-gray-500 mt-1 text-sm">別のキーワードで検索してみてください</p>
           </div>
         ) : (
-          <div className="grid gap-5">
+          <div className="grid gap-8">
             {filteredItems.map((item, index) => {
               const isSelected = selectedItem === item.name;
               return (
