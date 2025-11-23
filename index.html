@@ -1214,7 +1214,7 @@ if (showWelcome) {
         )}
       </div>
 
-      <div className={`max-w-5xl mx-auto px-3 pb-6 transition-all duration-500 ${
+      <div className={`max-w-5xl mx-auto px-3 pb-6 ${pageTransition ? 'transition-all duration-500' : ''} ${
   pageTransition ? 'opacity-0 transform translate-x-full' : 'opacity-100 transform translate-x-0'
 }`}>
         {filteredItems.length === 0 ? (
