@@ -1663,71 +1663,150 @@ body {
 })()}
                     
                     {/* 成果記録セクション */}
-                    {isSelected && (
-                      <div className="mt-3 p-4 bg-gradient-to-r from-green-50 via-emerald-50 to-teal-50 rounded-xl shadow-sm border-2 border-emerald-200">
-                        <h4 className="text-sm font-black text-gray-800 mb-3">📝 成果記録</h4>
-                        <div className="grid grid-cols-3 gap-2">
-                          {[
-                            { key: 'star3', label: '☆☆☆' },
-                            { key: 'star2', label: '☆☆' },
-                            { key: 'star1', label: '☆' },
-                            { key: 'star0', label: '☆なし' },
-                            { key: 'fail', label: '失敗' }
-                          ].map(({ key, label }) => (
-                            <div key={key} className="flex flex-col">
-                              <label className="text-xs font-bold text-gray-700 mb-1">{label}</label>
-                              <div className="flex items-center gap-1">
-                                <input
-                                  type="text"
-                                  inputMode="numeric"
-                                  placeholder="0"
-                                  value={craftResults[item.name]?.[key] || ''}
-                                  onClick={(e) => e.stopPropagation()}
-                                  onChange={(e) => {
-                                    const value = e.target.value.replace(/[^0-9]/g, '');
-                                    setCraftResults(prev => ({
-                                      ...prev,
-                                      [item.name]: {
-                                        ...prev[item.name],
-                                        [key]: value === '' ? 0 : parseInt(value) || 0
-                                      }
-                                    }));
-                                  }}
-                                  className="flex-1 px-2 py-1.5 rounded-lg border-2 border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-400 font-bold text-right text-sm"
-                                />
-                                <span className="text-gray-600 font-bold text-xs">個</span>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                        
-                        {/* 合計チェック */}
-                        {(() => {
-                          const results = craftResults[item.name] || {};
-                          const total = (results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0);
-                          const expected = craftQuantity[item.name] || 1;
-                          
-                          if (total > 0) {
-                            return (
-                              <div className={`mt-2 text-xs font-bold ${total === expected ? 'text-green-600' : 'text-orange-600'}`}>
-                                合計: {total} 個 {total === expected ? '✓' : `(予定: ${expected}個)`}
-                              </div>
-                            );
-                          }
-                          return null;
-                        })()}
+{isSelected && (
+  <div className="mt-3 p-4 bg-gradient-to-r from-green-50 via-emerald-50 to-teal-50 rounded-xl shadow-sm border-2 border-emerald-200">
+    <div className="flex items-center justify-between mb-3">
+      <h4 className="text-sm font-black text-gray-800">📝 成果記録</h4>
+      
+      {/* 道具鍛冶の素材のみ：切り替えボタン表示 */}
+      {item.category === '道具鍛冶' && item.subCategory === '素材' && (
+        <div className="flex gap-1 bg-white rounded-lg p-1 shadow-sm">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setCraftResults(prev => ({
+                ...prev,
+                [`${item.name}_mode`]: 'simple'
+              }));
+            }}
+            className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${
+              (craftResults[`${item.name}_mode`] || 'simple') === 'simple'
+                ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-md' 
+                : 'text-gray-600 hover:bg-gray-100'
+            }`}
+          >
+            個数入力
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setCraftResults(prev => ({
+                ...prev,
+                [`${item.name}_mode`]: 'detail'
+              }));
+            }}
+            className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${
+              (craftResults[`${item.name}_mode`] || 'simple') === 'detail'
+                ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-md' 
+                : 'text-gray-600 hover:bg-gray-100'
+            }`}
+          >
+            詳細入力
+          </button>
+        </div>
+      )}
+    </div>
+    
+    {/* 道具鍛冶の素材 & シンプルモード */}
+    {item.category === '道具鍛冶' && item.subCategory === '素材' && (craftResults[`${item.name}_mode`] || 'simple') === 'simple' ? (
+      <div className="flex flex-col">
+        <label className="text-xs font-bold text-gray-700 mb-1">作成できた個数</label>
+        <div className="flex items-center gap-1">
+          <input
+            type="text"
+            inputMode="numeric"
+            placeholder="0"
+            value={craftResults[item.name]?.totalItems || ''}
+            onClick={(e) => e.stopPropagation()}
+            onChange={(e) => {
+              const value = e.target.value.replace(/[^0-9]/g, '');
+              setCraftResults(prev => ({
+                ...prev,
+                [item.name]: {
+                  ...prev[item.name],
+                  totalItems: value === '' ? 0 : parseInt(value) || 0
+                }
+              }));
+            }}
+            className="flex-1 px-3 py-2 rounded-lg border-2 border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-400 font-bold text-right text-base"
+          />
+          <span className="text-gray-600 font-bold text-sm">個</span>
+        </div>
+      </div>
+    ) : (
+      /* 通常モード：☆☆☆～失敗の5段階入力 */
+      <>
+        <div className="grid grid-cols-3 gap-2">
+          {[
+            { key: 'star3', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆☆☆(10個)' : '☆☆☆' },
+            { key: 'star2', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆☆(3個)' : '☆☆' },
+            { key: 'star1', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆(2個)' : '☆' },
+            { key: 'star0', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆なし(1個)' : '☆なし' },
+            { key: 'fail', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '失敗(0個)' : '失敗' }
+          ].map(({ key, label }) => (
+            <div key={key} className="flex flex-col">
+              <label className="text-xs font-bold text-gray-700 mb-1">{label}</label>
+              <div className="flex items-center gap-1">
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  placeholder="0"
+                  value={craftResults[item.name]?.[key] || ''}
+                  onClick={(e) => e.stopPropagation()}
+                  onChange={(e) => {
+                    const value = e.target.value.replace(/[^0-9]/g, '');
+                    setCraftResults(prev => ({
+                      ...prev,
+                      [item.name]: {
+                        ...prev[item.name],
+                        [key]: value === '' ? 0 : parseInt(value) || 0
+                      }
+                    }));
+                  }}
+                  className="flex-1 px-2 py-1.5 rounded-lg border-2 border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-400 font-bold text-right text-sm"
+                />
+                <span className="text-gray-600 font-bold text-xs">回</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {/* 合計チェック（詳細モードのみ） */}
+        {(() => {
+          const results = craftResults[item.name] || {};
+          const total = (results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0);
+          const expected = craftQuantity[item.name] || 1;
+          
+          if (total > 0) {
+            return (
+              <div className={`mt-2 text-xs font-bold ${total === expected ? 'text-green-600' : 'text-orange-600'}`}>
+                合計: {total} 回 {total === expected ? '✓' : `(予定: ${expected}回)`}
+              </div>
+            );
+          }
+          return null;
+        })()}
+      </>
+    )}
                         
                         {/* 想定利益計算 */}
 {(() => {
   const results = craftResults[item.name] || {};
   const prices = sellPrices[item.name] || {};
-  const total = (results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0);
   
   // 道具鍛冶の素材用チェック
   const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
+  const isSimpleMode = (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
+  
+  // シンプルモード：totalItems があるか
+  // 詳細モード：star3～fail の合計があるか
+  const hasData = isSimpleMode 
+    ? (results.totalItems > 0)
+    : ((results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0) > 0);
+  
   const hasPrice = isMaterial ? prices.unitPrice : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
   
-  if (total > 0 && hasPrice) {
+  if (hasData && hasPrice) {
     const feeRate = (bazaarMode[item.name] ?? true) ? 0.95 : 1.0;
     
     let totalIncome;
@@ -1735,13 +1814,20 @@ body {
     // 道具鍛冶の素材：個数ベース計算
     if (isMaterial) {
       const unitPrice = Math.floor((prices.unitPrice || 0) * feeRate);
-      const totalItems = 
-        (results.star3 || 0) * 10 +  // ☆3 = 10個
-        (results.star2 || 0) * 3 +   // ☆2 = 3個
-        (results.star1 || 0) * 2 +   // ☆1 = 2個
-        (results.star0 || 0) * 1 +   // ☆なし = 1個
-        (results.fail || 0) * 0;     // 失敗 = 0個
-      totalIncome = totalItems * unitPrice;
+      
+      if (isSimpleMode) {
+        // シンプルモード：totalItems × 単価
+        totalIncome = (results.totalItems || 0) * unitPrice;
+      } else {
+        // 詳細モード：各ランクの個数を計算
+        const totalItems = 
+          (results.star3 || 0) * 10 +
+          (results.star2 || 0) * 3 +
+          (results.star1 || 0) * 2 +
+          (results.star0 || 0) * 1 +
+          (results.fail || 0) * 0;
+        totalIncome = totalItems * unitPrice;
+      }
     } 
     // 通常の装備：従来のロジック
     else {
@@ -1751,48 +1837,48 @@ body {
         Math.floor((results.star1 || 0) * (prices.star1 || 0) * feeRate) +
         Math.floor((results.star0 || 0) * (prices.star0 || 0) * feeRate);
     }
-                            
-                            const totalCost = calculateTotal(item);
-                            const profit = totalIncome - totalCost;
-                            const profitRate = totalCost > 0 ? ((profit / totalCost) * 100).toFixed(1) : 0;
-                            
-                            return (
-                              <div className="mt-3 p-4 bg-white rounded-lg border-2 border-emerald-300">
-                                <div className="text-xs font-bold text-gray-700 mb-2">💵 収支計算</div>
-                                <div className="space-y-1 text-sm">
-                                  <div className="flex justify-between">
-                                    <span className="text-gray-700">総売上</span>
-                                    <span className="font-bold text-blue-600">{totalIncome.toLocaleString()} G</span>
-                                  </div>
-                                  <div className="flex justify-between">
-                                    <span className="text-gray-700">総コスト</span>
-                                    <span className="font-bold text-red-600">{totalCost.toLocaleString()} G</span>
-                                  </div>
-                                  <div className="border-t border-gray-300 my-1"></div>
-                                  <div className="flex justify-between items-center">
-                                    <span className="text-lg font-black text-gray-800">純利益:</span>
-                                    <div className="text-right">
-                                      <div className={`font-black text-2xl ${profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                                        {profit >= 0 ? '+' : ''}{profit.toLocaleString()} G
-                                      </div>
-                                      <div className={`text-xs font-bold ${profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                                        {profit >= 0 ? '📈' : '📉'} {profitRate}%
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {results.fail > 0 && (
-                                    <div className="text-xs text-gray-500 mt-2">
-                                      ※ 失敗品{results.fail}個は売却不可のため収益に含みません
-                                    </div>
-                                  )}
-                                </div>
-                              </div>
-                            );
-                          }
-                          return null;
-                        })()}
-                      </div>
-                    )}
+    
+    const totalCost = calculateTotal(item);
+    const profit = totalIncome - totalCost;
+    const profitRate = totalCost > 0 ? ((profit / totalCost) * 100).toFixed(1) : 0;
+    
+    return (
+      <div className="mt-3 p-3 bg-white rounded-lg border-2 border-emerald-300">
+        <div className="text-xs font-bold text-gray-700 mb-2">💵 収支計算</div>
+        <div className="space-y-1 text-sm">
+          <div className="flex justify-between">
+            <span className="text-gray-700">総売上</span>
+            <span className="font-bold text-blue-600">{totalIncome.toLocaleString()} G</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-gray-700">総コスト</span>
+            <span className="font-bold text-red-600">{totalCost.toLocaleString()} G</span>
+          </div>
+          <div className="border-t border-gray-300 my-1"></div>
+          <div className="flex justify-between items-center">
+            <span className="text-lg font-black text-gray-800">純利益:</span>
+            <div className="text-right">
+              <div className={`font-black text-2xl ${profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                {profit >= 0 ? '+' : ''}{profit.toLocaleString()} G
+              </div>
+              <div className={`text-xs font-bold ${profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                {profit >= 0 ? '📈' : '📉'} {profitRate}%
+              </div>
+            </div>
+          </div>
+          {!isSimpleMode && results.fail > 0 && (
+            <div className="text-xs text-gray-500 mt-2">
+              ※ 失敗品{results.fail}回は売却不可のため収益に含みません
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+  return null;
+})()}
+      </div>
+    )}
                   </div>
                 </div>
               );
