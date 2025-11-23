@@ -934,7 +934,15 @@ if (showWelcome) {
 
   // メインアプリ
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-100 via-fuchsia-100 to-cyan-100">
+    return (
+  <div className="min-h-screen relative">
+    {/* 背景画像 */}
+    <div 
+      className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+      style={{backgroundImage: 'url(assets/bg-image.jpg)'}}
+    />
+    {/* 背景を少し暗くするオーバーレイ（お好みで調整） */}
+    <div className="fixed inset-0 -z-10 bg-black/30" />
       <header className="bg-white/90 backdrop-blur-xl shadow-lg sticky top-0 z-10 border-b-2 border-gradient-to-r from-pink-500 to-purple-500">
         <div className="max-w-5xl mx-auto px-3 py-4">
           <div className="flex items-center justify-between">
