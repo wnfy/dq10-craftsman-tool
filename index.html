@@ -1511,7 +1511,7 @@ body {
       </div>
     ) : (
       /* 通常の装備：☆3～☆なしの4段階 */
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 gap-2">
         {[
           { key: 'star3', label: '☆☆☆', color: 'from-yellow-400 to-orange-400' },
           { key: 'star2', label: '☆☆', color: 'from-gray-300 to-gray-400' },
@@ -1736,7 +1736,7 @@ body {
     ) : (
       /* 通常モード：☆☆☆～失敗の5段階入力 */
       <>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 gap-2">
           {[
             { key: 'star3', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆☆☆(10個)' : '☆☆☆' },
             { key: 'star2', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆☆(3個)' : '☆☆' },
