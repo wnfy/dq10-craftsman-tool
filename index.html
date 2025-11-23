@@ -8,6 +8,22 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .page-flip-enter {
+    animation: pageFlipIn 0.6s ease-out;
+  }
+  
+  @keyframes pageFlipIn {
+    0% {
+      transform: perspective(1000px) rotateY(-90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: perspective(1000px) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+</style>
 </head>
 <body>
   <div id="root"></div>
@@ -79,6 +95,7 @@ const CraftsmanApp = () => {
   const [sellPrices, setSellPrices] = useState({}); // {itemName: {star3: 0, star2: 0, star1: 0, star0: 0, fail: 0}}
   const [craftResults, setCraftResults] = useState({}); // {itemName: {star3: 0, star2: 0, star1: 0, star0: 0, fail: 0}}
   const [bazaarMode, setBazaarMode] = useState({});
+  const [pageTransition, setPageTransition] = useState(false); // ページめくるやつ
   
   // ポップアップウィンドウから成果記録を更新する関数（グローバルに公開）
   useEffect(() => {
@@ -986,17 +1003,21 @@ if (showWelcome) {
             <button
               key={cat}
               onClick={() => {
-                setActiveCategory(cat);
-                setSelectedItem(null);
-                setMaterialPrices({});
-                setToolPrices({});
-                if (cat === '武器鍛冶') setSelectedWeaponType('片手剣');
-                if (cat === '防具鍛冶') setSelectedArmorType('小盾');
-                if (cat === '道具鍛冶') setSelectedToolType('素材');
-                if (cat === '裁縫') setSelectedSewingType('アタマ');
-                if (cat === '木工') setSelectedWoodworkType('スティック');
-                if (cat === '料理') setSelectedCookingType('料理全部');
-              }}
+  setPageTransition(true);
+  setTimeout(() => {
+    setActiveCategory(cat);
+    setSelectedItem(null);
+    setMaterialPrices({});
+    setToolPrices({});
+    if (cat === '武器鍛冶') setSelectedWeaponType('片手剣');
+    if (cat === '防具鍛冶') setSelectedArmorType('小盾');
+    if (cat === '道具鍛冶') setSelectedToolType('素材');
+    if (cat === '裁縫') setSelectedSewingType('アタマ');
+    if (cat === '木工') setSelectedWoodworkType('スティック');
+    if (cat === '料理') setSelectedCookingType('料理全部');
+    setPageTransition(false);
+  }, 300);
+}}
               onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
                 e.currentTarget.style.transform = 'scale(1.05)';
@@ -1193,7 +1214,9 @@ if (showWelcome) {
         )}
       </div>
 
-      <div className="max-w-5xl mx-auto px-3 pb-6">
+      <div className={`max-w-5xl mx-auto px-3 pb-6 transition-all duration-500 ${
+  pageTransition ? 'opacity-0 transform translate-x-full' : 'opacity-100 transform translate-x-0'
+}`}>
         {filteredItems.length === 0 ? (
           <div className="text-center py-12">
             <div className="text-4xl mb-3">🔍</div>
