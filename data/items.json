@@ -7252,289 +7252,490 @@
     ]
   },
   {
-    "name": "どうのオノ",
+    "name": "一刀星断",
     "category": "武器鍛冶",
     "subCategory": "オノ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 16, "max": 28 },
-      "B": { "min": 12, "max": 24 },
-      "C": { "min": 16, "max": 28 },
-      "D": { "min": 12, "max": 24 },
-      "E": { "min": 10, "max": 24 },
-      "G": { "min": 10, "max": 24 }
+      "A": { "min": 85, "max": 93 },
+      "B": { "min": 260, "max": 268 },
+      "C": { "min": 310, "max": 318 },
+      "D": { "min": 85, "max": 93 },
+      "E": { "min": 170, "max": 178 },
+      "G": { "min": 230, "max": 238 }
     },
     "materials": [
-      { "name": "どうのこうせき", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "さんぞくのオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 24, "max": 35 },
-      "B": { "min": 12, "max": 26 },
-      "C": { "min": 40, "max": 48 },
-      "D": { "min": 12, "max": 26 },
-      "E": { "min": 16, "max": 32 },
-      "G": { "min": 16, "max": 32 }
-    },
-    "materials": [
-      { "name": "てっこうせき", "quantity": 1 },
-      { "name": "けものの皮", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "せいどうのオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 16, "max": 35 },
-      "B": { "min": 24, "max": 40 },
-      "C": { "min": 16, "max": 35 },
-      "D": { "min": 24, "max": 40 },
-      "E": { "min": 10, "max": 24 },
-      "G": { "min": 10, "max": 24 }
-    },
-    "materials": [
-      { "name": "どうのこうせき", "quantity": 1 },
-      { "name": "てっこうせき", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "ライトアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 40, "max": 45 },
-      "B": { "min": 30, "max": 43 },
-      "C": { "min": 26, "max": 36 },
-      "D": { "min": 26, "max": 36 },
-      "E": { "min": 18, "max": 24 },
-      "G": { "min": 38, "max": 36 }
-    },
-    "materials": [
-      { "name": "てっこうせき", "quantity": 1 },
-      { "name": "しなやかな枝", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "てつのオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 20, "max": 32 },
-      "B": { "min": 20, "max": 32 },
-      "C": { "min": 32, "max": 36 },
-      "D": { "min": 32, "max": 36 },
-      "E": { "min": 18, "max": 32 },
-      "G": { "min": 18, "max": 32 }
-    },
-    "materials": [
-      { "name": "てっこうせき", "quantity": 3 },
-      { "name": "どうのこうせき", "quantity": 2 }
-    ]
-  },
-  {
-    "name": "バトルアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 30, "max": 40 },
-      "B": { "min": 50, "max": 55 },
-      "C": { "min": 26, "max": 40 },
-      "D": { "min": 30, "max": 40 },
-      "E": { "min": 50, "max": 55 },
-      "G": { "min": 26, "max": 40 }
-    },
-    "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "どうのこうせき", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "シルバーアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 30, "max": 40 },
-      "B": { "min": 30, "max": 38 },
-      "C": { "min": 50, "max": 56 },
-      "D": { "min": 25, "max": 35 },
-      "E": { "min": 30, "max": 40 },
-      "G": { "min": 20, "max": 35 }
-    },
-    "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "てっこうせき", "quantity": 2 }
-    ]
-  },
-  {
-    "name": "カルサドラアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 50, "max": 60 },
-      "B": { "min": 32, "max": 40 },
-      "C": { "min": 70, "max": 76 },
-      "D": { "min": 40, "max": 52 },
-      "E": { "min": 32, "max": 46 },
-      "G": { "min": 48, "max": 60 }
-    },
-    "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "ようがんのカケラ", "quantity": 1 },
-      { "name": "グリーンアイ", "quantity": 1 }
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "せいれいせき", "quantity": 6 },
+      { "name": "こんじきの雲", "quantity": 5 },
+      { "name": "ドラゴンのホネ", "quantity": 20 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
     ],
     "specialTrait": "倍半"
   },
   {
-    "name": "はがねのオノ",
+    "name": "レラージェアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "激震のキバ", "quantity": 6 },
+      { "name": "ヘビーメタル", "quantity": 20 },
+      { "name": "黄金の飾りオノ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "残月の玉斧",
     "category": "武器鍛冶",
     "subCategory": "オノ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 30, "max": 40 },
-      "B": { "min": 66, "max": 70 },
-      "C": { "min": 40, "max": 48 },
-      "D": { "min": 40, "max": 48 },
-      "E": { "min": 26, "max": 36 },
-      "G": { "min": 38, "max": 48 }
+      "A": { "min": 324, "max": 332 },
+      "B": { "min": 221, "max": 229 },
+      "C": { "min": 225, "max": 233 },
+      "D": { "min": 320, "max": 328 },
+      "E": { "min": 112, "max": 120 },
+      "G": { "min": 112, "max": 120 }
     },
     "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "どうのこうせき", "quantity": 1 },
-      { "name": "レッドアイ", "quantity": 1 }
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "烈風石", "quantity": 3 },
+      { "name": "つきのめぐみ", "quantity": 30 },
+      { "name": "こんじきの雲", "quantity": 5 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "セーラスアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 300, "max": 308 },
+      "B": { "min": 185, "max": 193 },
+      "C": { "min": 185, "max": 193 },
+      "D": { "min": 300, "max": 308 },
+      "E": { "min": 95, "max": 103 },
+      "G": { "min": 90, "max": 98 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "げんませき", "quantity": 5 },
+      { "name": "メタルのカケラ", "quantity": 5 },
+      { "name": "黄金の飾りオノ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
     ]
   },
   {
-    "name": "キングアックス",
+    "name": "翼神のオノ",
     "category": "武器鍛冶",
     "subCategory": "オノ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 50, "max": 58 },
-      "B": { "min": 50, "max": 58 },
-      "C": { "min": 80, "max": 90 },
-      "D": { "min": 80, "max": 90 },
-      "E": { "min": 60, "max": 70 },
-      "G": { "min": 40, "max": 52 }
+      "A": { "min": 250, "max": 258 },
+      "B": { "min": 170, "max": 179 },
+      "C": { "min": 170, "max": 179 },
+      "D": { "min": 250, "max": 258 },
+      "E": { "min": 80, "max": 88 },
+      "G": { "min": 80, "max": 88 }
     },
     "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "けものの皮", "quantity": 1 },
-      { "name": "どうのこうせき", "quantity": 1 }
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "大地の羽毛", "quantity": 5 },
+      { "name": "かぜきりのはね", "quantity": 5 },
+      { "name": "黄金の飾りオノ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 7 }
     ],
-    "specialTrait": "倍半"
+    "specialTrait": "集中力変化"
   },
   {
-    "name": "たつじんのオノ",
+    "name": "輝天のオノ",
     "category": "武器鍛冶",
     "subCategory": "オノ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 76, "max": 82 },
-      "B": { "min": 76, "max": 82 },
-      "C": { "min": 50, "max": 58 },
-      "D": { "min": 40, "max": 52 },
-      "E": { "min": 40, "max": 54 },
-      "G": { "min": 50, "max": 62 }
+      "A": { "min": 235, "max": 243 },
+      "B": { "min": 130, "max": 140 },
+      "C": { "min": 130, "max": 140 },
+      "D": { "min": 235, "max": 243 },
+      "E": { "min": 80, "max": 87 },
+      "G": { "min": 80, "max": 87 }
     },
     "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "どうのこうせき", "quantity": 1 },
-      { "name": "するどい爪", "quantity": 1 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "ムーンアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 52, "max": 60 },
-      "B": { "min": 50, "max": 60 },
-      "C": { "min": 36, "max": 48 },
-      "D": { "min": 58, "max": 70 },
-      "E": { "min": 36, "max": 48 },
-      "G": { "min": 70, "max": 75 }
-    },
-    "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "どうのこうせき", "quantity": 1 },
-      { "name": "イエローアイ", "quantity": 1 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "ふぶきのオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 60, "max": 68 },
-      "B": { "min": 92, "max": 102 },
-      "C": { "min": 92, "max": 102 },
-      "D": { "min": 60, "max": 68 },
-      "E": { "min": 60, "max": 68 },
-      "G": { "min": 92, "max": 102 }
-    },
-    "materials": [
-      { "name": "プラチナこうせき", "quantity": 8 },
-      { "name": "氷の樹木", "quantity": 3 },
-      { "name": "ブルーアイ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 8 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "シャーマンアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 57, "max": 67 },
-      "B": { "min": 57, "max": 67 },
-      "C": { "min": 97, "max": 110 },
-      "D": { "min": 77, "max": 86 },
-      "E": { "min": 47, "max": 60 },
-      "G": { "min": 80, "max": 85 }
-    },
-    "materials": [
-      { "name": "プラチナこうせき", "quantity": 6 },
-      { "name": "せいれいせき", "quantity": 1 },
-      { "name": "パープルアイ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 6 }
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "激震のキバ", "quantity": 3 },
+      { "name": "黄金の飾りオノ", "quantity": 1 },
+      { "name": "いやしそう", "quantity": 30 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
     ],
     "specialTrait": "回復"
   },
   {
-    "name": "エクリプスアックス",
+    "name": "エキサイトアクス",
     "category": "武器鍛冶",
     "subCategory": "オノ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 90, "max": 98 },
-      "B": { "min": 90, "max": 98 },
-      "C": { "min": 52, "max": 64 },
-      "D": { "min": 32, "max": 45 },
-      "E": { "min": 40, "max": 48 },
-      "G": { "min": 80, "max": 88 }
+      "A": { "min": 180, "max": 188 },
+      "B": { "min": 250, "max": 260 },
+      "C": { "min": 180, "max": 188 },
+      "D": { "min": 250, "max": 260 },
+      "E": { "min": 100, "max": 108 },
+      "G": { "min": 100, "max": 108 }
     },
     "materials": [
-      { "name": "プラチナこうせき", "quantity": 4 },
-      { "name": "ブラックパール", "quantity": 1 },
-      { "name": "よるのとばり", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 4 }
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "幻獣のホネ", "quantity": 1 },
+      { "name": "大きな化石", "quantity": 1 },
+      { "name": "つけもの石", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "破天の麗斧",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {},
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "炎魔の焼け石", "quantity": 2 },
+      { "name": "幻獣のホネ", "quantity": 2 },
+      { "name": "ぎんのこうせき", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "戦乱のオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 155, "max": 165 },
+      "B": { "min": 210, "max": 218 },
+      "C": { "min": 152, "max": 162 },
+      "D": { "min": 210, "max": 218 },
+      "E": { "min": 140, "max": 148 },
+      "G": { "min": 140, "max": 149 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "烈風石", "quantity": 1 },
+      { "name": "黄金の飾りオノ", "quantity": 1 },
+      { "name": "ひかりの石", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ボルテージアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 150, "max": 160 },
+      "B": { "min": 200, "max": 208 },
+      "C": { "min": 190, "max": 198 },
+      "D": { "min": 170, "max": 178 },
+      "E": { "min": 152, "max": 160 },
+      "G": { "min": 125, "max": 136 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 10 },
+      { "name": "炎魔の焼け石", "quantity": 1 },
+      { "name": "幻獣のホネ", "quantity": 5 },
+      { "name": "ぎんのこうせき", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "神域のオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 190, "max": 201 },
+      "B": { "min": 182, "max": 192 },
+      "C": { "min": 150, "max": 160 },
+      "D": { "min": 212, "max": 218 },
+      "E": { "min": 158, "max": 164 },
+      "G": { "min": 120, "max": 130 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "ひかりの石", "quantity": 30 },
+      { "name": "ゴールドストーン", "quantity": 10 },
+      { "name": "ブルーアイ", "quantity": 20 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ガイアのオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 140, "max": 146 },
+      "B": { "min": 170, "max": 181 },
+      "C": { "min": 140, "max": 146 },
+      "D": { "min": 214, "max": 224 },
+      "E": { "min": 108, "max": 118 },
+      "G": { "min": 108, "max": 118 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "大地の羽毛", "quantity": 1 },
+      { "name": "ヘビーメタル", "quantity": 10 },
+      { "name": "まりょくの土", "quantity": 30 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ヘカトンケイル",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 105, "max": 115 },
+      "B": { "min": 135, "max": 141 },
+      "C": { "min": 135, "max": 141 },
+      "D": { "min": 222, "max": 232 },
+      "E": { "min": 180, "max": 191 },
+      "G": { "min": 105, "max": 115 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "幻獣のホネ", "quantity": 1 },
+      { "name": "青い宝石", "quantity": 10 },
+      { "name": "ゴールドストーン", "quantity": 5 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "イビルアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 125, "max": 131 },
+      "B": { "min": 188, "max": 198 },
+      "C": { "min": 125, "max": 131 },
+      "D": { "min": 188, "max": 198 },
+      "E": { "min": 155, "max": 165 },
+      "G": { "min": 99, "max": 110 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "どくどくヘドロ", "quantity": 30 },
+      { "name": "暗黒の樹木", "quantity": 30 },
+      { "name": "レッドアイ", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "グローリーアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 130, "max": 136 },
+      "B": { "min": 160, "max": 171 },
+      "C": { "min": 130, "max": 136 },
+      "D": { "min": 200, "max": 210 },
+      "E": { "min": 108, "max": 118 },
+      "G": { "min": 108, "max": 118 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 3 },
+      { "name": "ひかりの石", "quantity": 10 },
+      { "name": "黄金の飾りオノ", "quantity": 1 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "デュークアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 120, "max": 130 },
+      "B": { "min": 120, "max": 130 },
+      "C": { "min": 120, "max": 130 },
+      "D": { "min": 120, "max": 130 },
+      "E": { "min": 90, "max": 96 },
+      "G": { "min": 150, "max": 156 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "ヘビーメタル", "quantity": 5 },
+      { "name": "大きな化石", "quantity": 20 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ヴァランガアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 100, "max": 110 },
+      "B": { "min": 120, "max": 126 },
+      "C": { "min": 120, "max": 126 },
+      "D": { "min": 177, "max": 187 },
+      "E": { "min": 160, "max": 171 },
+      "G": { "min": 100, "max": 110 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "サバンナの水", "quantity": 30 },
+      { "name": "氷のけっしょう", "quantity": 30 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "アポロンのオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 130, "max": 142 },
+      "B": { "min": 130, "max": 142 },
+      "C": { "min": 110, "max": 116 },
+      "D": { "min": 110, "max": 116 },
+      "E": { "min": 105, "max": 114 },
+      "G": { "min": 150, "max": 158 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 10 },
+      { "name": "ようがんのカケラ", "quantity": 20 },
+      { "name": "ひかりの石", "quantity": 20 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "聖王のオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 100, "max": 110 },
+      "B": { "min": 120, "max": 126 },
+      "C": { "min": 120, "max": 126 },
+      "D": { "min": 100, "max": 110 },
+      "E": { "min": 100, "max": 110 },
+      "G": { "min": 160, "max": 171 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 5 },
+      { "name": "黄金の飾りオノ", "quantity": 1 },
+      { "name": "大きな化石", "quantity": 5 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ふんさいのおおなた",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 90, "max": 96 },
+      "B": { "min": 90, "max": 100 },
+      "C": { "min": 150, "max": 156 },
+      "D": { "min": 120, "max": 128 },
+      "E": { "min": 218, "max": 232 },
+      "G": { "min": 80, "max": 89 }
+    },
+    "materials": [
+      { "name": "大きなこうら", "quantity": 10 },
+      { "name": "ぶどうエキス", "quantity": 4 },
+      { "name": "大きな化石", "quantity": 10 },
+      { "name": "グリーンオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "はしゃのオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 88, "max": 100 },
+      "B": { "min": 88, "max": 100 },
+      "C": { "min": 100, "max": 105 },
+      "D": { "min": 130, "max": 136 },
+      "E": { "min": 150, "max": 160 },
+      "G": { "min": 74, "max": 87 }
+    },
+    "materials": [
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "大きなホネ", "quantity": 5 },
+      { "name": "パープルオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "グレートアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 80, "max": 89 },
+      "B": { "min": 170, "max": 180 },
+      "C": { "min": 130, "max": 138 },
+      "D": { "min": 102, "max": 112 },
+      "E": { "min": 100, "max": 106 },
+      "G": { "min": 90, "max": 100 }
+    },
+    "materials": [
+      { "name": "ほしのカケラ", "quantity": 15 },
+      { "name": "小さなうろこ", "quantity": 30 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "カイザーアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 65, "max": 75 },
+      "B": { "min": 84, "max": 93 },
+      "C": { "min": 97, "max": 110 },
+      "D": { "min": 63, "max": 70 },
+      "E": { "min": 80, "max": 85 },
+      "G": { "min": 67, "max": 77 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "グリーンオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
     ],
     "specialTrait": "回復"
   },
@@ -7560,492 +7761,291 @@
     "specialTrait": "倍半"
   },
   {
-    "name": "カイザーアックス",
+    "name": "エクリプスアックス",
     "category": "武器鍛冶",
     "subCategory": "オノ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 65, "max": 75 },
-      "B": { "min": 84, "max": 93 },
-      "C": { "min": 97, "max": 110 },
-      "D": { "min": 63, "max": 70 },
-      "E": { "min": 80, "max": 85 },
-      "G": { "min": 67, "max": 77 }
-    },
-    "materials": [
-      { "name": "プラチナこうせき", "quantity": 10 },
-      { "name": "げんませき", "quantity": 1 },
-      { "name": "グリーンオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 10 }
-    ],
-    "specialTrait": "回復"
-  },
-  {
-    "name": "グレートアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 80, "max": 89 },
-      "B": { "min": 170, "max": 180 },
-      "C": { "min": 130, "max": 138 },
-      "D": { "min": 102, "max": 112 },
-      "E": { "min": 100, "max": 106 },
-      "G": { "min": 90, "max": 100 }
-    },
-    "materials": [
-      { "name": "ほしのカケラ", "quantity": 15 },
-      { "name": "小さなうろこ", "quantity": 30 },
-      { "name": "ブルーオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 12 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "はしゃのオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 88, "max": 100 },
-      "B": { "min": 88, "max": 100 },
-      "C": { "min": 100, "max": 105 },
-      "D": { "min": 130, "max": 136 },
-      "E": { "min": 150, "max": 160 },
-      "G": { "min": 74, "max": 87 }
-    },
-    "materials": [
-      { "name": "げんませき", "quantity": 1 },
-      { "name": "大きなホネ", "quantity": 5 },
-      { "name": "パープルオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 12 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "ふんさいのおおなた",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 90, "max": 96 },
-      "B": { "min": 90, "max": 100 },
-      "C": { "min": 150, "max": 156 },
-      "D": { "min": 120, "max": 128 },
-      "E": { "min": 218, "max": 232 },
-      "G": { "min": 80, "max": 89 }
-    },
-    "materials": [
-      { "name": "大きなこうら", "quantity": 10 },
-      { "name": "ぶどうエキス", "quantity": 4 },
-      { "name": "大きな化石", "quantity": 10 },
-      { "name": "グリーンオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 10 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "聖王のオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 100, "max": 110 },
-      "B": { "min": 120, "max": 126 },
-      "C": { "min": 120, "max": 126 },
-      "D": { "min": 100, "max": 110 },
-      "E": { "min": 100, "max": 110 },
-      "G": { "min": 160, "max": 171 }
-    },
-    "materials": [
-      { "name": "マデュライト", "quantity": 5 },
-      { "name": "黄金の飾りオノ", "quantity": 1 },
-      { "name": "大きな化石", "quantity": 5 },
-      { "name": "虹色のオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "回復"
-  },
-  {
-    "name": "アポロンのオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 130, "max": 142 },
-      "B": { "min": 130, "max": 142 },
-      "C": { "min": 110, "max": 116 },
-      "D": { "min": 110, "max": 116 },
-      "E": { "min": 105, "max": 114 },
-      "G": { "min": 150, "max": 158 }
-    },
-    "materials": [
-      { "name": "マデュライト", "quantity": 10 },
-      { "name": "ようがんのカケラ", "quantity": 20 },
-      { "name": "ひかりの石", "quantity": 20 },
-      { "name": "虹色のオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 10 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "ヴァランガアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 100, "max": 110 },
-      "B": { "min": 120, "max": 126 },
-      "C": { "min": 120, "max": 126 },
-      "D": { "min": 177, "max": 187 },
-      "E": { "min": 160, "max": 171 },
-      "G": { "min": 100, "max": 110 }
-    },
-    "materials": [
-      { "name": "マデュライト", "quantity": 15 },
-      { "name": "サバンナの水", "quantity": 30 },
-      { "name": "氷のけっしょう", "quantity": 30 },
-      { "name": "虹色のオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 10 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "デュークアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 120, "max": 130 },
-      "B": { "min": 120, "max": 130 },
-      "C": { "min": 120, "max": 130 },
-      "D": { "min": 120, "max": 130 },
-      "E": { "min": 90, "max": 96 },
-      "G": { "min": 150, "max": 156 }
-    },
-    "materials": [
-      { "name": "マデュライト", "quantity": 15 },
-      { "name": "ヘビーメタル", "quantity": 5 },
-      { "name": "大きな化石", "quantity": 20 },
-      { "name": "虹色のオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 10 }
-    ],
-    "specialTrait": "回復"
-  },
-  {
-    "name": "グローリーアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 130, "max": 136 },
-      "B": { "min": 160, "max": 171 },
-      "C": { "min": 130, "max": 136 },
-      "D": { "min": 200, "max": 210 },
-      "E": { "min": 108, "max": 118 },
-      "G": { "min": 108, "max": 118 }
-    },
-    "materials": [
-      { "name": "ナドラダイト鉱石", "quantity": 3 },
-      { "name": "ひかりの石", "quantity": 10 },
-      { "name": "黄金の飾りオノ", "quantity": 1 },
-      { "name": "虹色のオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "光"
-  },
-  {
-    "name": "イビルアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 125, "max": 131 },
-      "B": { "min": 188, "max": 198 },
-      "C": { "min": 125, "max": 131 },
-      "D": { "min": 188, "max": 198 },
-      "E": { "min": 155, "max": 165 },
-      "G": { "min": 99, "max": 110 }
-    },
-    "materials": [
-      { "name": "ナドラダイト鉱石", "quantity": 5 },
-      { "name": "どくどくヘドロ", "quantity": 30 },
-      { "name": "暗黒の樹木", "quantity": 30 },
-      { "name": "レッドアイ", "quantity": 10 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "光"
-  },
-  {
-    "name": "ヘカトンケイル",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 105, "max": 115 },
-      "B": { "min": 135, "max": 141 },
-      "C": { "min": 135, "max": 141 },
-      "D": { "min": 222, "max": 232 },
-      "E": { "min": 180, "max": 191 },
-      "G": { "min": 105, "max": 115 }
-    },
-    "materials": [
-      { "name": "ナドラダイト鉱石", "quantity": 5 },
-      { "name": "幻獣のホネ", "quantity": 1 },
-      { "name": "青い宝石", "quantity": 10 },
-      { "name": "ゴールドストーン", "quantity": 5 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "ガイアのオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 140, "max": 146 },
-      "B": { "min": 170, "max": 181 },
-      "C": { "min": 140, "max": 146 },
-      "D": { "min": 214, "max": 224 },
-      "E": { "min": 108, "max": 118 },
-      "G": { "min": 108, "max": 118 }
-    },
-    "materials": [
-      { "name": "アステライト鉱石", "quantity": 5 },
-      { "name": "大地の羽毛", "quantity": 1 },
-      { "name": "ヘビーメタル", "quantity": 10 },
-      { "name": "まりょくの土", "quantity": 30 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "回復"
-  },
-  {
-    "name": "神域のオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 190, "max": 201 },
-      "B": { "min": 182, "max": 192 },
-      "C": { "min": 150, "max": 160 },
-      "D": { "min": 212, "max": 218 },
-      "E": { "min": 158, "max": 164 },
-      "G": { "min": 120, "max": 130 }
-    },
-    "materials": [
-      { "name": "アステライト鉱石", "quantity": 5 },
-      { "name": "ひかりの石", "quantity": 30 },
-      { "name": "ゴールドストーン", "quantity": 10 },
-      { "name": "ブルーアイ", "quantity": 20 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "光"
-  },
-  {
-    "name": "ボルテージアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 150, "max": 160 },
-      "B": { "min": 200, "max": 208 },
-      "C": { "min": 190, "max": 198 },
-      "D": { "min": 170, "max": 178 },
-      "E": { "min": 152, "max": 160 },
-      "G": { "min": 125, "max": 136 }
-    },
-    "materials": [
-      { "name": "アステライト鉱石", "quantity": 10 },
-      { "name": "炎魔の焼け石", "quantity": 1 },
-      { "name": "幻獣のホネ", "quantity": 5 },
-      { "name": "ぎんのこうせき", "quantity": 10 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "戦乱のオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 155, "max": 165 },
-      "B": { "min": 210, "max": 218 },
-      "C": { "min": 152, "max": 162 },
-      "D": { "min": 210, "max": 218 },
-      "E": { "min": 140, "max": 148 },
-      "G": { "min": 140, "max": 149 }
-    },
-    "materials": [
-      { "name": "デモニウム鉱石", "quantity": 5 },
-      { "name": "烈風石", "quantity": 1 },
-      { "name": "黄金の飾りオノ", "quantity": 1 },
-      { "name": "ひかりの石", "quantity": 10 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "破天の麗斧",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      { "name": "デモニウム鉱石", "quantity": 5 },
-      { "name": "炎魔の焼け石", "quantity": 2 },
-      { "name": "幻獣のホネ", "quantity": 2 },
-      { "name": "ぎんのこうせき", "quantity": 10 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "エキサイトアクス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 180, "max": 188 },
-      "B": { "min": 250, "max": 260 },
-      "C": { "min": 180, "max": 188 },
-      "D": { "min": 250, "max": 260 },
-      "E": { "min": 100, "max": 108 },
-      "G": { "min": 100, "max": 108 }
-    },
-    "materials": [
-      { "name": "デモニウム鉱石", "quantity": 5 },
-      { "name": "幻獣のホネ", "quantity": 1 },
-      { "name": "大きな化石", "quantity": 1 },
-      { "name": "つけもの石", "quantity": 5 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "光"
-  },
-  {
-    "name": "輝天のオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 235, "max": 243 },
-      "B": { "min": 130, "max": 140 },
-      "C": { "min": 130, "max": 140 },
-      "D": { "min": 235, "max": 243 },
-      "E": { "min": 80, "max": 87 },
-      "G": { "min": 80, "max": 87 }
-    },
-    "materials": [
-      { "name": "フォレース鉱石", "quantity": 30 },
-      { "name": "激震のキバ", "quantity": 3 },
-      { "name": "黄金の飾りオノ", "quantity": 1 },
-      { "name": "いやしそう", "quantity": 30 },
-      { "name": "超ようせいのひだね", "quantity": 6 }
-    ],
-    "specialTrait": "回復"
-  },
-  {
-    "name": "翼神のオノ",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 250, "max": 258 },
-      "B": { "min": 170, "max": 179 },
-      "C": { "min": 170, "max": 179 },
-      "D": { "min": 250, "max": 258 },
-      "E": { "min": 80, "max": 88 },
+      "A": { "min": 90, "max": 98 },
+      "B": { "min": 90, "max": 98 },
+      "C": { "min": 52, "max": 64 },
+      "D": { "min": 32, "max": 45 },
+      "E": { "min": 40, "max": 48 },
       "G": { "min": 80, "max": 88 }
     },
     "materials": [
-      { "name": "フォレース鉱石", "quantity": 30 },
-      { "name": "大地の羽毛", "quantity": 5 },
-      { "name": "かぜきりのはね", "quantity": 5 },
-      { "name": "黄金の飾りオノ", "quantity": 1 },
-      { "name": "超ようせいのひだね", "quantity": 7 }
+      { "name": "プラチナこうせき", "quantity": 4 },
+      { "name": "ブラックパール", "quantity": 1 },
+      { "name": "よるのとばり", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 4 }
     ],
-    "specialTrait": "集中力変化"
+    "specialTrait": "回復"
   },
   {
-    "name": "セーラスアックス",
+    "name": "シャーマンアックス",
     "category": "武器鍛冶",
     "subCategory": "オノ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 300, "max": 308 },
-      "B": { "min": 185, "max": 193 },
-      "C": { "min": 185, "max": 193 },
-      "D": { "min": 300, "max": 308 },
-      "E": { "min": 95, "max": 103 },
-      "G": { "min": 90, "max": 98 }
+      "A": { "min": 57, "max": 67 },
+      "B": { "min": 57, "max": 67 },
+      "C": { "min": 97, "max": 110 },
+      "D": { "min": 77, "max": 86 },
+      "E": { "min": 47, "max": 60 },
+      "G": { "min": 80, "max": 85 }
     },
     "materials": [
-      { "name": "フォレース鉱石", "quantity": 30 },
-      { "name": "げんませき", "quantity": 5 },
-      { "name": "メタルのカケラ", "quantity": 5 },
-      { "name": "黄金の飾りオノ", "quantity": 1 },
-      { "name": "超ようせいのひだね", "quantity": 8 }
+      { "name": "プラチナこうせき", "quantity": 6 },
+      { "name": "せいれいせき", "quantity": 1 },
+      { "name": "パープルアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ふぶきのオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 60, "max": 68 },
+      "B": { "min": 92, "max": 102 },
+      "C": { "min": 92, "max": 102 },
+      "D": { "min": 60, "max": 68 },
+      "E": { "min": 60, "max": 68 },
+      "G": { "min": 92, "max": 102 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 8 },
+      { "name": "氷の樹木", "quantity": 3 },
+      { "name": "ブルーアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ムーンアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 52, "max": 60 },
+      "B": { "min": 50, "max": 60 },
+      "C": { "min": 36, "max": 48 },
+      "D": { "min": 58, "max": 70 },
+      "E": { "min": 36, "max": 48 },
+      "G": { "min": 70, "max": 75 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "イエローアイ", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "たつじんのオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 76, "max": 82 },
+      "B": { "min": 76, "max": 82 },
+      "C": { "min": 50, "max": 58 },
+      "D": { "min": 40, "max": 52 },
+      "E": { "min": 40, "max": 54 },
+      "G": { "min": 50, "max": 62 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "するどい爪", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "キングアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 50, "max": 58 },
+      "B": { "min": 50, "max": 58 },
+      "C": { "min": 80, "max": 90 },
+      "D": { "min": 80, "max": 90 },
+      "E": { "min": 60, "max": 70 },
+      "G": { "min": 40, "max": 52 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "けものの皮", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "はがねのオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 30, "max": 40 },
+      "B": { "min": 66, "max": 70 },
+      "C": { "min": 40, "max": 48 },
+      "D": { "min": 40, "max": 48 },
+      "E": { "min": 26, "max": 36 },
+      "G": { "min": 38, "max": 48 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "レッドアイ", "quantity": 1 }
     ]
   },
   {
-    "name": "残月の玉斧",
+    "name": "カルサドラアックス",
     "category": "武器鍛冶",
     "subCategory": "オノ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 324, "max": 332 },
-      "B": { "min": 221, "max": 229 },
-      "C": { "min": 225, "max": 233 },
-      "D": { "min": 320, "max": 328 },
-      "E": { "min": 112, "max": 120 },
-      "G": { "min": 112, "max": 120 }
+      "A": { "min": 50, "max": 60 },
+      "B": { "min": 32, "max": 40 },
+      "C": { "min": 70, "max": 76 },
+      "D": { "min": 40, "max": 52 },
+      "E": { "min": 32, "max": 46 },
+      "G": { "min": 48, "max": 60 }
     },
     "materials": [
-      { "name": "ゼーラズマ鉱石", "quantity": 30 },
-      { "name": "烈風石", "quantity": 3 },
-      { "name": "つきのめぐみ", "quantity": 30 },
-      { "name": "こんじきの雲", "quantity": 5 },
-      { "name": "超ようせいのひだね", "quantity": 8 }
-    ],
-    "specialTrait": "光"
-  },
-  {
-    "name": "レラージェアックス",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      { "name": "ゼーラズマ鉱石", "quantity": 30 },
-      { "name": "激震のキバ", "quantity": 6 },
-      { "name": "ヘビーメタル", "quantity": 20 },
-      { "name": "黄金の飾りオノ", "quantity": 1 },
-      { "name": "超ようせいのひだね", "quantity": 8 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "一刀星断",
-    "category": "武器鍛冶",
-    "subCategory": "オノ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 85, "max": 93 },
-      "B": { "min": 260, "max": 268 },
-      "C": { "min": 310, "max": 318 },
-      "D": { "min": 85, "max": 93 },
-      "E": { "min": 170, "max": 178 },
-      "G": { "min": 230, "max": 238 }
-    },
-    "materials": [
-      { "name": "ゼーラズマ鉱石", "quantity": 30 },
-      { "name": "せいれいせき", "quantity": 6 },
-      { "name": "こんじきの雲", "quantity": 5 },
-      { "name": "ドラゴンのホネ", "quantity": 20 },
-      { "name": "超ようせいのひだね", "quantity": 8 }
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "ようがんのカケラ", "quantity": 1 },
+      { "name": "グリーンアイ", "quantity": 1 }
     ],
     "specialTrait": "倍半"
+  },
+  {
+    "name": "シルバーアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 30, "max": 40 },
+      "B": { "min": 30, "max": 38 },
+      "C": { "min": 50, "max": 56 },
+      "D": { "min": 25, "max": 35 },
+      "E": { "min": 30, "max": 40 },
+      "G": { "min": 20, "max": 35 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "てっこうせき", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "バトルアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 30, "max": 40 },
+      "B": { "min": 50, "max": 55 },
+      "C": { "min": 26, "max": 40 },
+      "D": { "min": 30, "max": 40 },
+      "E": { "min": 50, "max": 55 },
+      "G": { "min": 26, "max": 40 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "てつのオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 20, "max": 32 },
+      "B": { "min": 20, "max": 32 },
+      "C": { "min": 32, "max": 36 },
+      "D": { "min": 32, "max": 36 },
+      "E": { "min": 18, "max": 32 },
+      "G": { "min": 18, "max": 32 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 3 },
+      { "name": "どうのこうせき", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "ライトアックス",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 40, "max": 45 },
+      "B": { "min": 30, "max": 43 },
+      "C": { "min": 26, "max": 36 },
+      "D": { "min": 26, "max": 36 },
+      "E": { "min": 18, "max": 24 },
+      "G": { "min": 38, "max": 36 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "しなやかな枝", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "せいどうのオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 16, "max": 35 },
+      "B": { "min": 24, "max": 40 },
+      "C": { "min": 16, "max": 35 },
+      "D": { "min": 24, "max": 40 },
+      "E": { "min": 10, "max": 24 },
+      "G": { "min": 10, "max": 24 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "てっこうせき", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "さんぞくのオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 24, "max": 35 },
+      "B": { "min": 12, "max": 26 },
+      "C": { "min": 40, "max": 48 },
+      "D": { "min": 12, "max": 26 },
+      "E": { "min": 16, "max": 32 },
+      "G": { "min": 16, "max": 32 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "けものの皮", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "どうのオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 16, "max": 28 },
+      "B": { "min": 12, "max": 24 },
+      "C": { "min": 16, "max": 28 },
+      "D": { "min": 12, "max": 24 },
+      "E": { "min": 10, "max": 24 },
+      "G": { "min": 10, "max": 24 }
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 1 }
+    ]
   },
   {
     "name": "どうのツメ",
