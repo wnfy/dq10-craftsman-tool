@@ -67,6 +67,7 @@ const CraftsmanApp = () => {
   const [craftQuantity, setCraftQuantity] = useState({});
   const [sellPrices, setSellPrices] = useState({}); // {itemName: {star3: 0, star2: 0, star1: 0, star0: 0, fail: 0}}
   const [craftResults, setCraftResults] = useState({}); // {itemName: {star3: 0, star2: 0, star1: 0, star0: 0, fail: 0}}
+  const [bazaarMode, setBazaarMode] = useState({});
   
   // ポップアップウィンドウから成果記録を更新する関数（グローバルに公開）
   useEffect(() => {
@@ -1395,102 +1396,143 @@ body {
                           <div className="flex items-center gap-3">
                             <span className="text-2xl font-black drop-shadow">{calculateTotal(item).toLocaleString()} G</span>
                             <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                // このアイテムの素材価格をリセット
-                                const newMaterialPrices = { ...materialPrices };
-                                item.materials.forEach(material => {
-                                  delete newMaterialPrices[`${item.name}-${material.name}`];
-                                });
-                                setMaterialPrices(newMaterialPrices);
-                                
-                                // このアイテムの道具代をリセット
-                                const newToolPrices = { ...toolPrices };
-                                delete newToolPrices[item.name];
-                                setToolPrices(newToolPrices);
-                                
-                                // このアイテムの作成回数をリセット
-                                const newCraftQuantity = { ...craftQuantity };
-                                delete newCraftQuantity[item.name];
-                                setCraftQuantity(newCraftQuantity);
-                                
-                                // 売却価格をリセット
-                                const newSellPrices = { ...sellPrices };
-                                delete newSellPrices[item.name];
-                                setSellPrices(newSellPrices);
-                                
-                                // 成果記録をリセット
-                                const newCraftResults = { ...craftResults };
-                                delete newCraftResults[item.name];
-                                setCraftResults(newCraftResults);
-                              }}
-                              className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-sm transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105 cursor-pointer"
-                            >
-                              クリア
-                            </button>
+  onClick={(e) => {
+    e.stopPropagation();
+    // このアイテムの素材価格をリセット
+    const newMaterialPrices = { ...materialPrices };
+    item.materials.forEach(material => {
+      delete newMaterialPrices[`${item.name}-${material.name}`];
+    });
+    setMaterialPrices(newMaterialPrices);
+    
+    // このアイテムの道具代をリセット
+    const newToolPrices = { ...toolPrices };
+    delete newToolPrices[item.name];
+    setToolPrices(newToolPrices);
+    
+    // このアイテムの作成回数をリセット
+    const newCraftQuantity = { ...craftQuantity };
+    delete newCraftQuantity[item.name];
+    setCraftQuantity(newCraftQuantity);
+    
+    // 売却価格をリセット
+    const newSellPrices = { ...sellPrices };
+    delete newSellPrices[item.name];
+    setSellPrices(newSellPrices);
+    
+    // 成果記録をリセット
+    const newCraftResults = { ...craftResults };
+    delete newCraftResults[item.name];
+    setCraftResults(newCraftResults);
+    
+    // バザーモードをリセット  ← ここから3行を追加
+    const newBazaarMode = { ...bazaarMode };
+    delete newBazaarMode[item.name];
+    setBazaarMode(newBazaarMode);
+  }}
+  className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-sm transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105 cursor-pointer"
+>
+  クリア
+</button>
                           </div>
                         </div>
                       </div>
                     )}
                     
                     {/* 売却予定額セクション */}
-                    {isSelected && (
-                      <div className="mt-3 p-4 bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 rounded-xl shadow-sm border-2 border-indigo-200">
-                        <h4 className="text-sm font-black text-gray-800 mb-3">💰 売却予定額（バザー手数料5%込み）</h4>
-                        <div className="grid grid-cols-2 gap-2">
-                          {[
-                            { key: 'star3', label: '☆☆☆', color: 'from-yellow-400 to-orange-400' },
-                            { key: 'star2', label: '☆☆', color: 'from-gray-300 to-gray-400' },
-                            { key: 'star1', label: '☆', color: 'from-orange-300 to-amber-400' },
-                            { key: 'star0', label: '☆なし', color: 'from-gray-200 to-gray-300' }
-                          ].map(({ key, label, color }) => (
-                            <div key={key} className="flex flex-col">
-                              <label className="text-xs font-bold text-gray-700 mb-1">{label}</label>
-                              <div className="flex items-center gap-1">
-                                <input
-                                  type="text"
-                                  inputMode="numeric"
-                                  placeholder="0"
-                                  value={formatNumber(sellPrices[item.name]?.[key] || '')}
-                                  onClick={(e) => e.stopPropagation()}
-                                  onChange={(e) => {
-                                    const value = e.target.value.replace(/[^0-9]/g, '');
-                                    setSellPrices(prev => ({
-                                      ...prev,
-                                      [item.name]: {
-                                        ...prev[item.name],
-                                        [key]: value === '' ? 0 : parseInt(value) || 0
-                                      }
-                                    }));
-                                  }}
-                                  className="flex-1 px-3 py-2 rounded-lg border-2 border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 font-bold text-right text-base"
-                                />
-                                <span className="text-gray-600 font-bold text-sm">G</span>
-                              </div>
-                              {sellPrices[item.name]?.[key] > 0 && (
-                                <span className="text-xs text-gray-600 mt-0.5 text-right">
-                                  手取り: {Math.floor(sellPrices[item.name][key] * 0.95).toLocaleString()}G
-                                </span>
-                              )}
-                            </div>
-                          ))}
-                        </div>
+{isSelected && (
+  <div className="mt-3 p-4 bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 rounded-xl shadow-sm border-2 border-indigo-200">
+    {/* ヘッダーと切り替えボタン */}
+    <div className="flex items-center justify-between mb-3">
+      <h4 className="text-sm font-black text-gray-800">💰 売却予定額</h4>
+      <div className="flex gap-1 bg-white rounded-lg p-1 shadow-sm">
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setBazaarMode(prev => ({...prev, [item.name]: true}));
+          }}
+          className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${
+            (bazaarMode[item.name] ?? true)
+              ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md' 
+              : 'text-gray-600 hover:bg-gray-100'
+          }`}
+        >
+          バザー
+        </button>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setBazaarMode(prev => ({...prev, [item.name]: false}));
+          }}
+          className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${
+            (bazaarMode[item.name] ?? true) === false
+              ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-md' 
+              : 'text-gray-600 hover:bg-gray-100'
+          }`}
+        >
+          直取引
+        </button>
+      </div>
+    </div>
+    
+    <div className="grid grid-cols-2 gap-2">
+      {[
+        { key: 'star3', label: '☆☆☆', color: 'from-yellow-400 to-orange-400' },
+        { key: 'star2', label: '☆☆', color: 'from-gray-300 to-gray-400' },
+        { key: 'star1', label: '☆', color: 'from-orange-300 to-amber-400' },
+        { key: 'star0', label: '☆なし', color: 'from-gray-200 to-gray-300' }
+      ].map(({ key, label, color }) => (
+        <div key={key} className="flex flex-col">
+          <label className="text-xs font-bold text-gray-700 mb-1">{label}</label>
+          <div className="flex items-center gap-1">
+            <input
+              type="text"
+              inputMode="numeric"
+              placeholder="0"
+              value={formatNumber(sellPrices[item.name]?.[key] || '')}
+              onClick={(e) => e.stopPropagation()}
+              onChange={(e) => {
+                const value = e.target.value.replace(/[^0-9]/g, '');
+                setSellPrices(prev => ({
+                  ...prev,
+                  [item.name]: {
+                    ...prev[item.name],
+                    [key]: value === '' ? 0 : parseInt(value) || 0
+                  }
+                }));
+              }}
+              className="flex-1 px-3 py-2 rounded-lg border-2 border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 font-bold text-right text-base"
+            />
+            <span className="text-gray-600 font-bold text-sm">G</span>
+          </div>
+          {sellPrices[item.name]?.[key] > 0 && (
+            <span className="text-xs text-gray-600 mt-0.5 text-right">
+              {(bazaarMode[item.name] ?? true) 
+                ? `手取り: ${Math.floor(sellPrices[item.name][key] * 0.95).toLocaleString()}G`
+                : `手取り: ${sellPrices[item.name][key].toLocaleString()}G`
+              }
+            </span>
+          )}
+        </div>
+      ))}
+    </div>
                         
                         {/* 黒字ライン計算 - 全ランク考慮 */}
-                        {(() => {
-                          const prices = sellPrices[item.name] || {};
-                          const hasAnyPrice = prices.star3 || prices.star2 || prices.star1 || prices.star0;
-                          
-                          if (!hasAnyPrice) return null;
-                          
-                          const totalCost = calculateTotal(item);
-                          const quantity = craftQuantity[item.name] || 1;
-                          
-                          // 各ランクの手取り額
-                          const income3 = Math.floor((prices.star3 || 0) * 0.95);
-                          const income2 = Math.floor((prices.star2 || 0) * 0.95);
-                          const income1 = Math.floor((prices.star1 || 0) * 0.95);
-                          const income0 = Math.floor((prices.star0 || 0) * 0.95);
+{(() => {
+  const prices = sellPrices[item.name] || {};
+  const hasAnyPrice = prices.star3 || prices.star2 || prices.star1 || prices.star0;
+  
+  if (!hasAnyPrice) return null;
+  
+  const totalCost = calculateTotal(item);
+  const quantity = craftQuantity[item.name] || 1;
+  
+  // 各ランクの手取り額
+  const feeRate = (bazaarMode[item.name] ?? true) ? 0.95 : 1.0;  // ← この行を追加
+  const income3 = Math.floor((prices.star3 || 0) * feeRate);      // ← 0.95をfeeRateに変更
+  const income2 = Math.floor((prices.star2 || 0) * feeRate);      // ← 0.95をfeeRateに変更
+  const income1 = Math.floor((prices.star1 || 0) * feeRate);      // ← 0.95をfeeRateに変更
+  const income0 = Math.floor((prices.star0 || 0) * feeRate);      // ← 0.95をfeeRateに変更
                           
                           // 最悪ケース（全て☆0）での収益
                           const worstIncome = income0 * quantity;
@@ -1594,18 +1636,19 @@ body {
                         })()}
                         
                         {/* 想定利益計算 */}
-                        {(() => {
-                          const results = craftResults[item.name] || {};
-                          const prices = sellPrices[item.name] || {};
-                          const total = (results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0);
-                          
-                          if (total > 0 && (prices.star3 || prices.star2 || prices.star1 || prices.star0)) {
-                            // 失敗品は売却できないので収益に含めない
-                            const totalIncome = 
-                              Math.floor((results.star3 || 0) * (prices.star3 || 0) * 0.95) +
-                              Math.floor((results.star2 || 0) * (prices.star2 || 0) * 0.95) +
-                              Math.floor((results.star1 || 0) * (prices.star1 || 0) * 0.95) +
-                              Math.floor((results.star0 || 0) * (prices.star0 || 0) * 0.95);
+{(() => {
+  const results = craftResults[item.name] || {};
+  const prices = sellPrices[item.name] || {};
+  const total = (results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0);
+  
+  if (total > 0 && (prices.star3 || prices.star2 || prices.star1 || prices.star0)) {
+    // 失敗品は売却できないので収益に含めない
+    const feeRate = (bazaarMode[item.name] ?? true) ? 0.95 : 1.0;  // ← この行を追加
+    const totalIncome = 
+      Math.floor((results.star3 || 0) * (prices.star3 || 0) * feeRate) +  // ← 0.95をfeeRateに変更
+      Math.floor((results.star2 || 0) * (prices.star2 || 0) * feeRate) +  // ← 0.95をfeeRateに変更
+      Math.floor((results.star1 || 0) * (prices.star1 || 0) * feeRate) +  // ← 0.95をfeeRateに変更
+      Math.floor((results.star0 || 0) * (prices.star0 || 0) * feeRate);   // ← 0.95をfeeRateに変更
                             
                             const totalCost = calculateTotal(item);
                             const profit = totalIncome - totalCost;
