@@ -864,21 +864,21 @@ if (showWelcome) {
         
         {/* メインコンテンツ */}
         <div className="text-center z-10 px-4 max-w-2xl">
-          {/* アイコン */}
-          <div className="flex justify-center mb-8 animate-bounce">
-            <div className="bg-gradient-to-br from-amber-500 to-yellow-500 p-6 rounded-3xl shadow-2xl border-2 border-amber-300 relative">
-              <div className="absolute inset-0 bg-white/20 rounded-3xl animate-pulse"></div>
-              <Sparkles className="text-white relative z-10" size={64} />
-            </div>
-          </div>
-          
           {/* タイトル */}
-          <h1 className="text-6xl md:text-7xl font-black bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600 bg-clip-text text-transparent mb-4 animate-fade-in drop-shadow-sm">
-            ようこそ
-          </h1>
-          <h2 className="text-4xl md:text-5xl font-black text-amber-700 mb-12 animate-fade-in drop-shadow-sm" style={{animationDelay: '0.3s'}}>
-            職人支援ツールへ
-          </h2>
+<h1 className="text-6xl md:text-7xl font-black bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600 bg-clip-text text-transparent mb-4 animate-fade-in drop-shadow-sm">
+  ようこそ
+</h1>
+<h2 className="text-4xl md:text-5xl font-black text-amber-700 mb-8 animate-fade-in drop-shadow-sm" style={{animationDelay: '0.2s'}}>
+  職人支援ツールへ
+</h2>
+
+{/* アイコン */}
+<div className="flex justify-center mb-12 animate-bounce" style={{animationDelay: '0.4s'}}>
+  <div className="bg-gradient-to-br from-amber-500 to-yellow-500 p-6 rounded-3xl shadow-2xl border-2 border-amber-300 relative">
+    <div className="absolute inset-0 bg-white/20 rounded-3xl animate-pulse"></div>
+    <Sparkles className="text-white relative z-10" size={64} />
+  </div>
+</div>
           
           {/* 説明文 - デザイン強化 */}
           <div className="relative mb-12 animate-fade-in" style={{animationDelay: '0.6s'}}>
