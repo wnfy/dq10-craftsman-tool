@@ -138,15 +138,15 @@ const CraftsmanApp = () => {
       targetValuesHTML = '<div style="text-align: center; padding: 1rem; background: rgb(249, 250, 251); border-radius: 0.75rem;"><p style="color: rgb(107, 114, 128); font-weight: bold;">データ収集中...</p></div>';
     } else {
       const paramColors = {
-        A: 'background: linear-gradient(to bottom right, rgb(236, 72, 153), rgb(244, 63, 94), rgb(239, 68, 68));',
-        B: 'background: linear-gradient(to bottom right, rgb(6, 182, 212), rgb(59, 130, 246), rgb(99, 102, 241));',
-        C: 'background: linear-gradient(to bottom right, rgb(34, 197, 94), rgb(16, 185, 129), rgb(20, 184, 166));',
-        D: 'background: linear-gradient(to bottom right, rgb(168, 85, 247), rgb(139, 92, 246), rgb(217, 70, 239));',
-        E: 'background: linear-gradient(to bottom right, rgb(249, 115, 22), rgb(251, 146, 60), rgb(234, 179, 8));',
-        F: 'background: linear-gradient(to bottom right, rgb(132, 204, 22), rgb(74, 222, 128), rgb(52, 211, 153));',
-        G: 'background: linear-gradient(to bottom right, rgb(14, 165, 233), rgb(34, 211, 238), rgb(96, 165, 250));',
-        H: 'background: linear-gradient(to bottom right, rgb(244, 63, 94), rgb(236, 72, 153), rgb(232, 121, 249));'
-      };
+  A: 'from-rose-400/80 via-pink-400/80 to-red-400/80',
+  B: 'from-sky-400/80 via-blue-400/80 to-indigo-400/80',
+  C: 'from-emerald-400/80 via-teal-400/80 to-cyan-400/80',
+  D: 'from-purple-400/80 via-violet-400/80 to-fuchsia-400/80',
+  E: 'from-amber-400/80 via-orange-400/80 to-yellow-400/80',
+  F: 'from-lime-400/80 via-green-400/80 to-emerald-400/80',
+  G: 'from-cyan-400/80 via-sky-400/80 to-blue-400/80',
+  H: 'from-fuchsia-400/80 via-pink-400/80 to-rose-400/80'
+};
       
       targetValuesHTML = '<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">';
       Object.entries(item.targetValues).forEach(([param, values]) => {
@@ -306,16 +306,16 @@ body {
   };
 
   const gridColors = {
-    A: 'from-pink-500 via-rose-500 to-red-500',
-    B: 'from-cyan-500 via-blue-500 to-indigo-500',
-    C: 'from-green-500 via-emerald-500 to-teal-500',
-    D: 'from-purple-500 via-violet-500 to-fuchsia-500',
-    E: 'from-orange-500 via-amber-500 to-yellow-500',
-    F: 'from-lime-500 via-green-400 to-emerald-400',
-    G: 'from-sky-500 via-cyan-400 to-blue-400',
-    H: 'from-rose-500 via-pink-500 to-fuchsia-500',
-    I: 'from-violet-500 via-purple-500 to-indigo-500'
-  };
+  A: 'from-rose-400/80 via-pink-400/80 to-red-400/80',
+  B: 'from-sky-400/80 via-blue-400/80 to-indigo-400/80',
+  C: 'from-emerald-400/80 via-teal-400/80 to-cyan-400/80',
+  D: 'from-purple-400/80 via-violet-400/80 to-fuchsia-400/80',
+  E: 'from-amber-400/80 via-orange-400/80 to-yellow-400/80',
+  F: 'from-lime-400/80 via-green-400/80 to-emerald-400/80',
+  G: 'from-cyan-400/80 via-sky-400/80 to-blue-400/80',
+  H: 'from-fuchsia-400/80 via-pink-400/80 to-rose-400/80',
+  I: 'from-violet-400/80 via-purple-400/80 to-indigo-400/80'
+};
 
   // 3x3グリッド表示
   const renderGrid = (targetValues) => {
@@ -329,11 +329,11 @@ body {
           
           return (
             <div
-              key={pos}
-              className={`p-4 rounded-xl text-white shadow-md flex flex-col items-center justify-center ${
-                isEmpty ? 'bg-gray-200' : `bg-gradient-to-br ${gridColors[pos]}`
-              }`}
-            >
+  key={pos}
+  className={`p-4 rounded-xl text-white shadow-lg flex flex-col items-center justify-center ${
+    isEmpty ? 'bg-gray-200' : `bg-gradient-to-br ${gridColors[pos]} backdrop-blur-sm border border-white/30`
+  }`}
+>
               <div className={`text-xs font-bold tracking-wider ${isEmpty ? 'text-gray-400' : 'opacity-90'}`}>
                 {pos}
               </div>
@@ -360,9 +360,9 @@ body {
           const value = targetValues[pos];
           return (
             <div
-              key={pos}
-              className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-            >
+  key={pos}
+  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+>
               <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
               <div className="text-2xl font-black mt-1 drop-shadow text-center">
                 {value.min} - {value.max}
