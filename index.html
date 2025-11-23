@@ -1380,33 +1380,33 @@ if (showWelcome) {
     </span>
                           <div className="flex items-center gap-2">
                             <input
-                              type="text"
-                              inputMode="numeric"
-                              placeholder="回数"
-                              value={craftQuantity[item.name] || 1}
-                              onClick={(e) => e.stopPropagation()}
-                              onFocus={(e) => {
-                                if ((craftQuantity[item.name] || 1) === 1) {
-                                  e.target.value = '';
-                                }
-                              }}
-                              onBlur={(e) => {
-                                if (e.target.value === '') {
-                                  setCraftQuantity(prev => ({
-                                    ...prev,
-                                    [item.name]: 1
-                                  }));
-                                }
-                              }}
-                              onChange={(e) => {
-                                const value = e.target.value.replace(/[^0-9]/g, '');
-                                setCraftQuantity(prev => ({
-                                  ...prev,
-                                  [item.name]: value === '' ? '' : parseInt(value) || 1
-                                }));
-                              }}
-                              className="w-20 px-3 py-2 rounded-lg border-2 border-green-300 focus:outline-none focus:ring-2 focus:ring-green-400 font-bold text-right text-base"
-                            />
+  type="text"
+  inputMode="numeric"
+  placeholder="回数"
+  value={craftQuantity[item.name] || 1}
+  onClick={(e) => e.stopPropagation()}
+  onFocus={(e) => {
+    if ((craftQuantity[item.name] || 1) === 1) {
+      e.target.value = '';
+    }
+  }}
+  onBlur={(e) => {
+    if (e.target.value === '') {
+      setCraftQuantity(prev => ({
+        ...prev,
+        [item.name]: 1
+      }));
+    }
+  }}
+  onChange={(e) => {
+    const value = e.target.value.replace(/[^0-9]/g, '');
+    setCraftQuantity(prev => ({
+      ...prev,
+      [item.name]: value === '' ? '' : parseInt(value) || 1
+    }));
+  }}
+  className="w-20 px-3 py-2 rounded-lg border-2 border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 font-bold text-right text-base"
+/>
                             <span className="text-gray-600 font-bold text-sm">回</span>
                           </div>
                         </div>
