@@ -1889,13 +1889,15 @@ onMouseLeave={(e) => {
   
   // 道具鍛冶の素材用チェック
   const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
-  const isSimpleMode = (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
+  const isSimpleMode = isMaterial && (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
   
-  // シンプルモード：totalItems があるか
-  // 詳細モード：star3～fail の合計があるか
-  const hasData = isSimpleMode 
-    ? (results.totalItems > 0)
-    : ((results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0) > 0);
+  // データの有無を判定
+  let hasData = false;
+  if (isMaterial && isSimpleMode) {
+    hasData = (results.totalItems > 0);
+  } else {
+    hasData = ((results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0) > 0);
+  }
   
   const hasPrice = isMaterial ? prices.unitPrice : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
   
