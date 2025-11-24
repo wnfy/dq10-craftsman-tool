@@ -8776,607 +8776,177 @@
     ]
   },
   {
-    "name": "バトルリボン",
+    "name": "グリンガムのムチ",
     "category": "武器鍛冶",
     "subCategory": "ムチ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 12, "max": 26 },
-      "B": { "min": 12, "max": 26 },
-      "C": { "min": 12, "max": 26 },
-      "D": { "min": 12, "max": 26 },
-      "E": { "min": 20, "max": 36 },
-      "F": { "min": 20, "max": 36 },
-      "G": { "min": 20, "max": 36 }
+      "A": { "min": 140, "max": 148 },
+      "B": { "min": 110, "max": 118 },
+      "C": { "min": 250, "max": 258 },
+      "D": { "min": 90, "max": 98 },
+      "E": { "min": 110, "max": 118 },
+      "F": { "min": 180, "max": 188 },
+      "G": { "min": 200, "max": 208 }
     },
     "materials": [
-      { "name": "てっこうせき", "quantity": 1 },
-      { "name": "シルク草", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "へびがわのムチ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 12, "max": 30 },
-      "B": { "min": 12, "max": 30 },
-      "C": { "min": 12, "max": 30 },
-      "D": { "min": 24, "max": 32 },
-      "E": { "min": 24, "max": 36 },
-      "F": { "min": 36, "max": 50 },
-      "G": { "min": 40, "max": 50 }
-    },
-    "materials": [
-      { "name": "てっこうせき", "quantity": 1 },
-      { "name": "小さなうろこ", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "てつのムチ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 12, "max": 30 },
-      "B": { "min": 20, "max": 40 },
-      "C": { "min": 12, "max": 30 },
-      "D": { "min": 20, "max": 40 },
-      "E": { "min": 20, "max": 35 },
-      "F": { "min": 32, "max": 45 },
-      "G": { "min": 20, "max": 35 }
-    },
-    "materials": [
-      { "name": "てっこうせき", "quantity": 3 },
-      { "name": "どうのこうせき", "quantity": 2 }
-    ]
-  },
-  {
-    "name": "モーニングスター",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 18, "max": 30 },
-      "B": { "min": 18, "max": 30 },
-      "C": { "min": 18, "max": 30 },
-      "D": { "min": 30, "max": 40 },
-      "E": { "min": 30, "max": 38 },
-      "F": { "min": 56, "max": 68 },
-      "G": { "min": 40, "max": 48 }
-    },
-    "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "どうのこうせき", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "ローズウィップ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 16, "max": 32 },
-      "B": { "min": 18, "max": 30 },
-      "C": { "min": 16, "max": 32 },
-      "D": { "min": 30, "max": 40 },
-      "E": { "min": 20, "max": 36 },
-      "F": { "min": 56, "max": 68 },
-      "G": { "min": 40, "max": 48 }
-    },
-    "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "あやかしそう", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "パイソンウィップ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 35, "max": 45 },
-      "B": { "min": 35, "max": 45 },
-      "C": { "min": 30, "max": 40 },
-      "D": { "min": 40, "max": 60 },
-      "E": { "min": 30, "max": 40 },
-      "F": { "min": 60, "max": 66 },
-      "G": { "min": 40, "max": 48 }
-    },
-    "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "小さなうろこ", "quantity": 1 },
-      { "name": "どくどくヘドロ", "quantity": 1 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "はがねのムチ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 24, "max": 40 },
-      "B": { "min": 24, "max": 40 },
-      "C": { "min": 24, "max": 40 },
-      "D": { "min": 40, "max": 50 },
-      "E": { "min": 40, "max": 50 },
-      "F": { "min": 48, "max": 54 },
-      "G": { "min": 40, "max": 50 }
-    },
-    "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "どうのこうせき", "quantity": 1 },
-      { "name": "けものの皮", "quantity": 1 }
-    ]
-  },
-  {
-    "name": "サイドワインダー",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 60, "max": 68 },
-      "B": { "min": 30, "max": 40 },
-      "C": { "min": 60, "max": 70 },
-      "D": { "min": 30, "max": 40 },
-      "E": { "min": 30, "max": 40 },
-      "F": { "min": 70, "max": 78 },
-      "G": { "min": 80, "max": 90 }
-    },
-    "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "小さなうろこ", "quantity": 1 },
-      { "name": "するどいキバ", "quantity": 1 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "ビーストウィップ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 40, "max": 52 },
-      "B": { "min": 40, "max": 50 },
-      "C": { "min": 40, "max": 50 },
-      "D": { "min": 60, "max": 68 },
-      "E": { "min": 30, "max": 40 },
-      "F": { "min": 70, "max": 78 },
-      "G": { "min": 50, "max": 58 }
-    },
-    "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "けものの皮", "quantity": 1 },
-      { "name": "するどい爪", "quantity": 1 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "みわくのリボン",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 30, "max": 38 },
-      "B": { "min": 30, "max": 38 },
-      "C": { "min": 40, "max": 52 },
-      "D": { "min": 30, "max": 42 },
-      "E": { "min": 50, "max": 60 },
-      "F": { "min": 50, "max": 58 },
-      "G": { "min": 70, "max": 78 }
-    },
-    "materials": [
-      { "name": "ぎんのこうせき", "quantity": 1 },
-      { "name": "あやかしそう", "quantity": 1 },
-      { "name": "なないろのまゆ", "quantity": 1 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "ドラゴンテイル",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 36, "max": 50 },
-      "B": { "min": 56, "max": 68 },
-      "C": { "min": 56, "max": 64 },
-      "D": { "min": 62, "max": 70 },
-      "E": { "min": 50, "max": 64 },
-      "F": { "min": 100, "max": 110 },
-      "G": { "min": 80, "max": 85 }
-    },
-    "materials": [
-      { "name": "プラチナこうせき", "quantity": 6 },
-      { "name": "ドラゴンのツノ", "quantity": 1 },
-      { "name": "グリーンアイ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 8 }
-    ],
-    "specialTrait": "回復"
-  },
-  {
-    "name": "バスターウィップ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 40, "max": 60 },
-      "B": { "min": 48, "max": 60 },
-      "C": { "min": 36, "max": 46 },
-      "D": { "min": 60, "max": 66 },
-      "E": { "min": 54, "max": 64 },
-      "F": { "min": 82, "max": 90 },
-      "G": { "min": 90, "max": 96 }
-    },
-    "materials": [
-      { "name": "プラチナこうせき", "quantity": 6 },
-      { "name": "けものの皮", "quantity": 10 },
-      { "name": "パープルアイ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 6 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "スコーピオンテイル",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 50, "max": 60 },
-      "B": { "min": 30, "max": 45 },
-      "C": { "min": 30, "max": 45 },
-      "D": { "min": 50, "max": 65 },
-      "E": { "min": 50, "max": 60 },
-      "F": { "min": 90, "max": 96 },
-      "G": { "min": 90, "max": 95 }
-    },
-    "materials": [
-      { "name": "プラチナこうせき", "quantity": 4 },
-      { "name": "どくどくヘドロ", "quantity": 20 },
-      { "name": "どくがのこな", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 4 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "カルベロビュート",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 68, "max": 80 },
-      "B": { "min": 68, "max": 78 },
-      "C": { "min": 76, "max": 82 },
-      "D": { "min": 80, "max": 96 },
-      "E": { "min": 90, "max": 94 },
-      "F": { "min": 108, "max": 120 },
-      "G": { "min": 70, "max": 80 }
-    },
-    "materials": [
-      { "name": "プラチナこうせき", "quantity": 12 },
-      { "name": "まりょくの土", "quantity": 30 },
-      { "name": "ブルーオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 10 }
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "はがねの尾羽", "quantity": 5 },
+      { "name": "よごれたほうたい", "quantity": 20 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
     ],
     "specialTrait": "集中力変化"
   },
   {
-    "name": "あくまのムチ",
+    "name": "星喰いの毒蛇",
     "category": "武器鍛冶",
     "subCategory": "ムチ",
     "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 66, "max": 78 },
-      "B": { "min": 66, "max": 78 },
-      "C": { "min": 76, "max": 80 },
-      "D": { "min": 50, "max": 60 },
-      "E": { "min": 76, "max": 88 },
-      "F": { "min": 80, "max": 90 },
-      "G": { "min": 56, "max": 66 }
-    },
+    "targetValues": {},
     "materials": [
-      { "name": "プラチナこうせき", "quantity": 10 },
-      { "name": "よごれたほうたい", "quantity": 5 },
-      { "name": "パープルオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 10 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "女王のムチ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 100, "max": 109 },
-      "B": { "min": 72, "max": 82 },
-      "C": { "min": 72, "max": 82 },
-      "D": { "min": 100, "max": 109 },
-      "E": { "min": 166, "max": 176 },
-      "F": { "min": 90, "max": 96 },
-      "G": { "min": 72, "max": 82 }
-    },
-    "materials": [
-      { "name": "かがみ石", "quantity": 15 },
-      { "name": "あやかしそう", "quantity": 15 },
-      { "name": "グリーンオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 12 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "サーペントウィップ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 76, "max": 90 },
-      "B": { "min": 66, "max": 82 },
-      "C": { "min": 90, "max": 96 },
-      "D": { "min": 76, "max": 81 },
-      "E": { "min": 116, "max": 129 },
-      "F": { "min": 120, "max": 128 },
-      "G": { "min": 86, "max": 94 }
-    },
-    "materials": [
-      { "name": "かがみ石", "quantity": 15 },
-      { "name": "氷の樹木", "quantity": 15 },
-      { "name": "レッドオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 12 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "魔神のムチ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 63, "max": 75 },
-      "B": { "min": 104, "max": 110 },
-      "C": { "min": 84, "max": 94 },
-      "D": { "min": 104, "max": 110 },
-      "E": { "min": 63, "max": 75 },
-      "F": { "min": 84, "max": 94 },
-      "G": { "min": 178, "max": 186 }
-    },
-    "materials": [
-      { "name": "げんませき", "quantity": 1 },
-      { "name": "へびのぬけがら", "quantity": 5 },
-      { "name": "うるわしキノコ", "quantity": 10 },
-      { "name": "パープルオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 10 }
-    ],
-    "specialTrait": "回復"
-  },
-  {
-    "name": "聖王のムチ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 85, "max": 95 },
-      "B": { "min": 85, "max": 95 },
-      "C": { "min": 135, "max": 146 },
-      "D": { "min": 175, "max": 185 },
-      "E": { "min": 60, "max": 66 },
-      "F": { "min": 135, "max": 146 },
-      "G": { "min": 60, "max": 66 }
-    },
-    "materials": [
-      { "name": "マデュライト", "quantity": 5 },
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "幻獣のホネ", "quantity": 10 },
+      { "name": "へびのぬけがら", "quantity": 30 },
       { "name": "黄金の飾りムチ", "quantity": 1 },
-      { "name": "シャークスキン", "quantity": 5 },
-      { "name": "虹色のオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "トライデントテイル",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 100, "max": 106 },
-      "B": { "min": 100, "max": 106 },
-      "C": { "min": 135, "max": 146 },
-      "D": { "min": 135, "max": 146 },
-      "E": { "min": 60, "max": 70 },
-      "F": { "min": 115, "max": 125 },
-      "G": { "min": 90, "max": 100 }
-    },
-    "materials": [
-      { "name": "マデュライト", "quantity": 10 },
-      { "name": "へびのぬけがら", "quantity": 1 },
-      { "name": "シャークスキン", "quantity": 10 },
-      { "name": "虹色のオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 10 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "ヴォイドアンカー",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 105, "max": 115 },
-      "B": { "min": 130, "max": 140 },
-      "C": { "min": 147, "max": 159 },
-      "D": { "min": 130, "max": 140 },
-      "E": { "min": 105, "max": 115 },
-      "F": { "min": 80, "max": 86 },
-      "G": { "min": 80, "max": 86 }
-    },
-    "materials": [
-      { "name": "マデュライト", "quantity": 15 },
-      { "name": "ヘビーメタル", "quantity": 5 },
-      { "name": "シャークスキン", "quantity": 10 },
-      { "name": "虹色のオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 10 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "フリーズウィップ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 90, "max": 100 },
-      "B": { "min": 90, "max": 100 },
-      "C": { "min": 70, "max": 76 },
-      "D": { "min": 150, "max": 160 },
-      "E": { "min": 70, "max": 76 },
-      "F": { "min": 125, "max": 136 },
-      "G": { "min": 125, "max": 136 }
-    },
-    "materials": [
-      { "name": "マデュライト", "quantity": 15 },
-      { "name": "氷のけっしょう", "quantity": 20 },
-      { "name": "どくがのこな", "quantity": 20 },
-      { "name": "虹色のオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 10 }
-    ],
-    "specialTrait": "回復"
-  },
-  {
-    "name": "クロスペンデュラム",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 120, "max": 126 },
-      "B": { "min": 130, "max": 140 },
-      "C": { "min": 120, "max": 126 },
-      "D": { "min": 130, "max": 140 },
-      "E": { "min": 90, "max": 100 },
-      "F": { "min": 156, "max": 168 },
-      "G": { "min": 90, "max": 100 }
-    },
-    "materials": [
-      { "name": "ナドラダイト鉱石", "quantity": 3 },
-      { "name": "げんませき", "quantity": 1 },
-      { "name": "ゴールドストーン", "quantity": 5 },
-      { "name": "虹色のオーブ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 5 }
+      { "name": "超ようせいのひだね", "quantity": 8 }
     ],
     "specialTrait": "光"
   },
   {
-    "name": "スライムウィップ",
+    "name": "モアクラッシュ",
     "category": "武器鍛冶",
     "subCategory": "ムチ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 135, "max": 145 },
-      "B": { "min": 115, "max": 121 },
-      "C": { "min": 135, "max": 145 },
-      "D": { "min": 115, "max": 121 },
-      "E": { "min": 90, "max": 100 },
-      "F": { "min": 160, "max": 172 },
-      "G": { "min": 90, "max": 100 }
+      "A": { "min": 123, "max": 131 },
+      "B": { "min": 115, "max": 122 },
+      "C": { "min": 118, "max": 126 },
+      "D": { "min": 115, "max": 122 },
+      "E": { "min": 246, "max": 254 },
+      "F": { "min": 180, "max": 188 },
+      "G": { "min": 212, "max": 220 }
     },
     "materials": [
-      { "name": "ナドラダイト鉱石", "quantity": 5 },
-      { "name": "スライムゼリー", "quantity": 20 },
-      { "name": "スライムおしゃれ花", "quantity": 20 },
-      { "name": "シャークスキン", "quantity": 10 },
-      { "name": "ようせいのひだね", "quantity": 5 }
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "宵闇のジェル", "quantity": 5 },
+      { "name": "純白の結晶", "quantity": 30 },
+      { "name": "にじいろの布きれ", "quantity": 5 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
     ],
     "specialTrait": "集中力変化"
   },
   {
-    "name": "ボルケーノウィップ",
+    "name": "セーラスウィップ",
     "category": "武器鍛冶",
     "subCategory": "ムチ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 90, "max": 100 },
-      "B": { "min": 90, "max": 100 },
-      "C": { "min": 115, "max": 121 },
-      "D": { "min": 144, "max": 154 },
-      "E": { "min": 115, "max": 121 },
-      "F": { "min": 185, "max": 196 },
-      "G": { "min": 185, "max": 196 }
+      "A": { "min": 95, "max": 103 },
+      "B": { "min": 95, "max": 103 },
+      "C": { "min": 95, "max": 103 },
+      "D": { "min": 145, "max": 155 },
+      "E": { "min": 200, "max": 208 },
+      "F": { "min": 160, "max": 168 },
+      "G": { "min": 230, "max": 238 }
     },
     "materials": [
-      { "name": "ナドラダイト鉱石", "quantity": 5 },
-      { "name": "ようがんのカケラ", "quantity": 30 },
-      { "name": "ホカホカストーン", "quantity": 30 },
-      { "name": "ドラゴンの皮", "quantity": 1 },
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "純白の結晶", "quantity": 5 },
+      { "name": "いかずちのたま", "quantity": 20 },
+      { "name": "黄金の飾りムチ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ローズソーン",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 100, "max": 107 },
+      "B": { "min": 100, "max": 107 },
+      "C": { "min": 100, "max": 107 },
+      "D": { "min": 140, "max": 150 },
+      "E": { "min": 200, "max": 208 },
+      "F": { "min": 140, "max": 150 },
+      "G": { "min": 200, "max": 208 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "たそがれゴケ", "quantity": 3 },
+      { "name": "レッドローズ", "quantity": 10 },
+      { "name": "黄金の飾りムチ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 7 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "輝天のムチ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 90, "max": 97 },
+      "B": { "min": 90, "max": 97 },
+      "C": { "min": 90, "max": 97 },
+      "D": { "min": 170, "max": 179 },
+      "E": { "min": 220, "max": 229 },
+      "F": { "min": 170, "max": 179 },
+      "G": { "min": 220, "max": 229 }
+    },
+    "materials": [
+      { "name": "フォレース鉱石", "quantity": 30 },
+      { "name": "たそがれゴケ", "quantity": 3 },
+      { "name": "せいれいせき", "quantity": 3 },
+      { "name": "黄金の飾りムチ", "quantity": 1 },
+      { "name": "超ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "クラッシュチェーン",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 130, "max": 138 },
+      "B": { "min": 100, "max": 108 },
+      "C": { "min": 100, "max": 108 },
+      "D": { "min": 210, "max": 220 },
+      "E": { "min": 130, "max": 138 },
+      "F": { "min": 210, "max": 220 },
+      "G": { "min": 100, "max": 108 }
+    },
+    "materials": [
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "ナドラダイト鉱石", "quantity": 1 },
+      { "name": "マデュライト", "quantity": 1 },
+      { "name": "ぎんのこうせき", "quantity": 5 },
       { "name": "ようせいのひだね", "quantity": 5 }
     ],
     "specialTrait": "倍半"
   },
   {
-    "name": "アステルウィップ",
+    "name": "妖蛇のムチ",
     "category": "武器鍛冶",
     "subCategory": "ムチ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 100, "max": 110 },
-      "B": { "min": 130, "max": 136 },
-      "C": { "min": 188, "max": 200 },
-      "D": { "min": 130, "max": 136 },
-      "E": { "min": 100, "max": 110 },
-      "F": { "min": 160, "max": 170 },
-      "G": { "min": 160, "max": 170 }
-    },
-    "materials": [
-      { "name": "アステライト鉱石", "quantity": 5 },
-      { "name": "ほしのカケラ", "quantity": 30 },
-      { "name": "ぎんのこうせき", "quantity": 20 },
-      { "name": "黄金の飾りムチ", "quantity": 1 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "光"
-  },
-  {
-    "name": "大獄獣のムチ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 190, "max": 202 },
-      "B": { "min": 120, "max": 130 },
-      "C": { "min": 130, "max": 140 },
-      "D": { "min": 150, "max": 160 },
-      "E": { "min": 116, "max": 122 },
-      "F": { "min": 120, "max": 130 },
-      "G": { "min": 140, "max": 146 }
-    },
-    "materials": [
-      { "name": "アステライト鉱石", "quantity": 5 },
-      { "name": "激震のキバ", "quantity": 1 },
-      { "name": "スライムゼリー", "quantity": 15 },
-      { "name": "まじゅうのツノ", "quantity": 2 },
-      { "name": "ようせいのひだね", "quantity": 5 }
-    ],
-    "specialTrait": "集中力変化"
-  },
-  {
-    "name": "金剛のムチ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 124, "max": 134 },
-      "B": { "min": 120, "max": 128 },
+      "A": { "min": 90, "max": 98 },
+      "B": { "min": 90, "max": 98 },
       "C": { "min": 150, "max": 160 },
-      "D": { "min": 170, "max": 178 },
-      "E": { "min": 120, "max": 130 },
-      "F": { "min": 112, "max": 122 },
-      "G": { "min": 124, "max": 132 }
+      "D": { "min": 180, "max": 190 },
+      "E": { "min": 140, "max": 150 },
+      "F": { "min": 170, "max": 180 },
+      "G": { "min": 100, "max": 108 }
     },
     "materials": [
-      { "name": "アステライト鉱石", "quantity": 10 },
-      { "name": "よるのとばり", "quantity": 5 },
-      { "name": "黄金の飾りムチ", "quantity": 1 },
-      { "name": "へびのぬけがら", "quantity": 15 },
+      { "name": "デモニウム鉱石", "quantity": 5 },
+      { "name": "激震のキバ", "quantity": 1 },
+      { "name": "へびのぬけがら", "quantity": 5 },
+      { "name": "シャークスキン", "quantity": 10 },
       { "name": "ようせいのひだね", "quantity": 5 }
     ],
     "specialTrait": "回復"
@@ -9405,180 +8975,610 @@
     "specialTrait": "集中力変化"
   },
   {
-    "name": "妖蛇のムチ",
+    "name": "金剛のムチ",
     "category": "武器鍛冶",
     "subCategory": "ムチ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 90, "max": 98 },
-      "B": { "min": 90, "max": 98 },
+      "A": { "min": 124, "max": 134 },
+      "B": { "min": 120, "max": 128 },
       "C": { "min": 150, "max": 160 },
-      "D": { "min": 180, "max": 190 },
-      "E": { "min": 140, "max": 150 },
-      "F": { "min": 170, "max": 180 },
-      "G": { "min": 100, "max": 108 }
+      "D": { "min": 170, "max": 178 },
+      "E": { "min": 120, "max": 130 },
+      "F": { "min": 112, "max": 122 },
+      "G": { "min": 124, "max": 132 }
     },
     "materials": [
-      { "name": "デモニウム鉱石", "quantity": 5 },
-      { "name": "激震のキバ", "quantity": 1 },
-      { "name": "へびのぬけがら", "quantity": 5 },
-      { "name": "シャークスキン", "quantity": 10 },
+      { "name": "アステライト鉱石", "quantity": 10 },
+      { "name": "よるのとばり", "quantity": 5 },
+      { "name": "黄金の飾りムチ", "quantity": 1 },
+      { "name": "へびのぬけがら", "quantity": 15 },
       { "name": "ようせいのひだね", "quantity": 5 }
     ],
     "specialTrait": "回復"
   },
   {
-    "name": "クラッシュチェーン",
+    "name": "大獄獣のムチ",
     "category": "武器鍛冶",
     "subCategory": "ムチ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 130, "max": 138 },
-      "B": { "min": 100, "max": 108 },
-      "C": { "min": 100, "max": 108 },
-      "D": { "min": 210, "max": 220 },
-      "E": { "min": 130, "max": 138 },
-      "F": { "min": 210, "max": 220 },
-      "G": { "min": 100, "max": 108 }
+      "A": { "min": 190, "max": 202 },
+      "B": { "min": 120, "max": 130 },
+      "C": { "min": 130, "max": 140 },
+      "D": { "min": 150, "max": 160 },
+      "E": { "min": 116, "max": 122 },
+      "F": { "min": 120, "max": 130 },
+      "G": { "min": 140, "max": 146 }
     },
     "materials": [
-      { "name": "デモニウム鉱石", "quantity": 5 },
-      { "name": "ナドラダイト鉱石", "quantity": 1 },
-      { "name": "マデュライト", "quantity": 1 },
-      { "name": "ぎんのこうせき", "quantity": 5 },
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "激震のキバ", "quantity": 1 },
+      { "name": "スライムゼリー", "quantity": 15 },
+      { "name": "まじゅうのツノ", "quantity": 2 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "アステルウィップ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 100, "max": 110 },
+      "B": { "min": 130, "max": 136 },
+      "C": { "min": 188, "max": 200 },
+      "D": { "min": 130, "max": 136 },
+      "E": { "min": 100, "max": 110 },
+      "F": { "min": 160, "max": 170 },
+      "G": { "min": 160, "max": 170 }
+    },
+    "materials": [
+      { "name": "アステライト鉱石", "quantity": 5 },
+      { "name": "ほしのカケラ", "quantity": 30 },
+      { "name": "ぎんのこうせき", "quantity": 20 },
+      { "name": "黄金の飾りムチ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ボルケーノウィップ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 90, "max": 100 },
+      "B": { "min": 90, "max": 100 },
+      "C": { "min": 115, "max": 121 },
+      "D": { "min": 144, "max": 154 },
+      "E": { "min": 115, "max": 121 },
+      "F": { "min": 185, "max": 196 },
+      "G": { "min": 185, "max": 196 }
+    },
+    "materials": [
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "ようがんのカケラ", "quantity": 30 },
+      { "name": "ホカホカストーン", "quantity": 30 },
+      { "name": "ドラゴンの皮", "quantity": 1 },
       { "name": "ようせいのひだね", "quantity": 5 }
     ],
     "specialTrait": "倍半"
   },
   {
-    "name": "輝天のムチ",
+    "name": "スライムウィップ",
     "category": "武器鍛冶",
     "subCategory": "ムチ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 90, "max": 97 },
-      "B": { "min": 90, "max": 97 },
-      "C": { "min": 90, "max": 97 },
-      "D": { "min": 170, "max": 179 },
-      "E": { "min": 220, "max": 229 },
-      "F": { "min": 170, "max": 179 },
-      "G": { "min": 220, "max": 229 }
+      "A": { "min": 135, "max": 145 },
+      "B": { "min": 115, "max": 121 },
+      "C": { "min": 135, "max": 145 },
+      "D": { "min": 115, "max": 121 },
+      "E": { "min": 90, "max": 100 },
+      "F": { "min": 160, "max": 172 },
+      "G": { "min": 90, "max": 100 }
     },
     "materials": [
-      { "name": "フォレース鉱石", "quantity": 30 },
-      { "name": "たそがれゴケ", "quantity": 3 },
-      { "name": "せいれいせき", "quantity": 3 },
-      { "name": "黄金の飾りムチ", "quantity": 1 },
-      { "name": "超ようせいのひだね", "quantity": 6 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "ローズソーン",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 100, "max": 107 },
-      "B": { "min": 100, "max": 107 },
-      "C": { "min": 100, "max": 107 },
-      "D": { "min": 140, "max": 150 },
-      "E": { "min": 200, "max": 208 },
-      "F": { "min": 140, "max": 150 },
-      "G": { "min": 200, "max": 208 }
-    },
-    "materials": [
-      { "name": "フォレース鉱石", "quantity": 30 },
-      { "name": "たそがれゴケ", "quantity": 3 },
-      { "name": "レッドローズ", "quantity": 10 },
-      { "name": "黄金の飾りムチ", "quantity": 1 },
-      { "name": "超ようせいのひだね", "quantity": 7 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "セーラスウィップ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 95, "max": 103 },
-      "B": { "min": 95, "max": 103 },
-      "C": { "min": 95, "max": 103 },
-      "D": { "min": 145, "max": 155 },
-      "E": { "min": 200, "max": 208 },
-      "F": { "min": 160, "max": 168 },
-      "G": { "min": 230, "max": 238 }
-    },
-    "materials": [
-      { "name": "フォレース鉱石", "quantity": 30 },
-      { "name": "純白の結晶", "quantity": 5 },
-      { "name": "いかずちのたま", "quantity": 20 },
-      { "name": "黄金の飾りムチ", "quantity": 1 },
-      { "name": "超ようせいのひだね", "quantity": 8 }
-    ],
-    "specialTrait": "倍半"
-  },
-  {
-    "name": "モアクラッシュ",
-    "category": "武器鍛冶",
-    "subCategory": "ムチ",
-    "gridType": "3x3",
-    "targetValues": {
-      "A": { "min": 123, "max": 131 },
-      "B": { "min": 115, "max": 122 },
-      "C": { "min": 118, "max": 126 },
-      "D": { "min": 115, "max": 122 },
-      "E": { "min": 246, "max": 254 },
-      "F": { "min": 180, "max": 188 },
-      "G": { "min": 212, "max": 220 }
-    },
-    "materials": [
-      { "name": "ゼーラズマ鉱石", "quantity": 30 },
-      { "name": "宵闇のジェル", "quantity": 5 },
-      { "name": "純白の結晶", "quantity": 30 },
-      { "name": "にじいろの布きれ", "quantity": 5 },
-      { "name": "超ようせいのひだね", "quantity": 8 }
+      { "name": "ナドラダイト鉱石", "quantity": 5 },
+      { "name": "スライムゼリー", "quantity": 20 },
+      { "name": "スライムおしゃれ花", "quantity": 20 },
+      { "name": "シャークスキン", "quantity": 10 },
+      { "name": "ようせいのひだね", "quantity": 5 }
     ],
     "specialTrait": "集中力変化"
   },
   {
-    "name": "星喰いの毒蛇",
+    "name": "クロスペンデュラム",
     "category": "武器鍛冶",
     "subCategory": "ムチ",
     "gridType": "3x3",
-    "targetValues": {},
+    "targetValues": {
+      "A": { "min": 120, "max": 126 },
+      "B": { "min": 130, "max": 140 },
+      "C": { "min": 120, "max": 126 },
+      "D": { "min": 130, "max": 140 },
+      "E": { "min": 90, "max": 100 },
+      "F": { "min": 156, "max": 168 },
+      "G": { "min": 90, "max": 100 }
+    },
     "materials": [
-      { "name": "ゼーラズマ鉱石", "quantity": 30 },
-      { "name": "幻獣のホネ", "quantity": 10 },
-      { "name": "へびのぬけがら", "quantity": 30 },
-      { "name": "黄金の飾りムチ", "quantity": 1 },
-      { "name": "超ようせいのひだね", "quantity": 8 }
+      { "name": "ナドラダイト鉱石", "quantity": 3 },
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "ゴールドストーン", "quantity": 5 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
     ],
     "specialTrait": "光"
   },
   {
-    "name": "グリンガムのムチ",
+    "name": "フリーズウィップ",
     "category": "武器鍛冶",
     "subCategory": "ムチ",
     "gridType": "3x3",
     "targetValues": {
-      "A": { "min": 140, "max": 148 },
-      "B": { "min": 110, "max": 118 },
-      "C": { "min": 250, "max": 258 },
-      "D": { "min": 90, "max": 98 },
-      "E": { "min": 110, "max": 118 },
-      "F": { "min": 180, "max": 188 },
-      "G": { "min": 200, "max": 208 }
+      "A": { "min": 90, "max": 100 },
+      "B": { "min": 90, "max": 100 },
+      "C": { "min": 70, "max": 76 },
+      "D": { "min": 150, "max": 160 },
+      "E": { "min": 70, "max": 76 },
+      "F": { "min": 125, "max": 136 },
+      "G": { "min": 125, "max": 136 }
     },
     "materials": [
-      { "name": "ゼーラズマ鉱石", "quantity": 30 },
-      { "name": "ナドラダイト鉱石", "quantity": 5 },
-      { "name": "はがねの尾羽", "quantity": 5 },
-      { "name": "よごれたほうたい", "quantity": 20 },
-      { "name": "超ようせいのひだね", "quantity": 8 }
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "氷のけっしょう", "quantity": 20 },
+      { "name": "どくがのこな", "quantity": 20 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ヴォイドアンカー",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 105, "max": 115 },
+      "B": { "min": 130, "max": 140 },
+      "C": { "min": 147, "max": 159 },
+      "D": { "min": 130, "max": 140 },
+      "E": { "min": 105, "max": 115 },
+      "F": { "min": 80, "max": 86 },
+      "G": { "min": 80, "max": 86 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 15 },
+      { "name": "ヘビーメタル", "quantity": 5 },
+      { "name": "シャークスキン", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
     ],
     "specialTrait": "集中力変化"
+  },
+  {
+    "name": "トライデントテイル",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 100, "max": 106 },
+      "B": { "min": 100, "max": 106 },
+      "C": { "min": 135, "max": 146 },
+      "D": { "min": 135, "max": 146 },
+      "E": { "min": 60, "max": 70 },
+      "F": { "min": 115, "max": 125 },
+      "G": { "min": 90, "max": 100 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 10 },
+      { "name": "へびのぬけがら", "quantity": 1 },
+      { "name": "シャークスキン", "quantity": 10 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "聖王のムチ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 85, "max": 95 },
+      "B": { "min": 85, "max": 95 },
+      "C": { "min": 135, "max": 146 },
+      "D": { "min": 175, "max": 185 },
+      "E": { "min": 60, "max": 66 },
+      "F": { "min": 135, "max": 146 },
+      "G": { "min": 60, "max": 66 }
+    },
+    "materials": [
+      { "name": "マデュライト", "quantity": 5 },
+      { "name": "黄金の飾りムチ", "quantity": 1 },
+      { "name": "シャークスキン", "quantity": 5 },
+      { "name": "虹色のオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 5 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "魔神のムチ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 63, "max": 75 },
+      "B": { "min": 104, "max": 110 },
+      "C": { "min": 84, "max": 94 },
+      "D": { "min": 104, "max": 110 },
+      "E": { "min": 63, "max": 75 },
+      "F": { "min": 84, "max": 94 },
+      "G": { "min": 178, "max": 186 }
+    },
+    "materials": [
+      { "name": "げんませき", "quantity": 1 },
+      { "name": "へびのぬけがら", "quantity": 5 },
+      { "name": "うるわしキノコ", "quantity": 10 },
+      { "name": "パープルオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "サーペントウィップ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 76, "max": 90 },
+      "B": { "min": 66, "max": 82 },
+      "C": { "min": 90, "max": 96 },
+      "D": { "min": 76, "max": 81 },
+      "E": { "min": 116, "max": 129 },
+      "F": { "min": 120, "max": 128 },
+      "G": { "min": 86, "max": 94 }
+    },
+    "materials": [
+      { "name": "かがみ石", "quantity": 15 },
+      { "name": "氷の樹木", "quantity": 15 },
+      { "name": "レッドオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "女王のムチ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 100, "max": 109 },
+      "B": { "min": 72, "max": 82 },
+      "C": { "min": 72, "max": 82 },
+      "D": { "min": 100, "max": 109 },
+      "E": { "min": 166, "max": 176 },
+      "F": { "min": 90, "max": 96 },
+      "G": { "min": 72, "max": 82 }
+    },
+    "materials": [
+      { "name": "かがみ石", "quantity": 15 },
+      { "name": "あやかしそう", "quantity": 15 },
+      { "name": "グリーンオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 12 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "あくまのムチ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 66, "max": 78 },
+      "B": { "min": 66, "max": 78 },
+      "C": { "min": 76, "max": 80 },
+      "D": { "min": 50, "max": 60 },
+      "E": { "min": 76, "max": 88 },
+      "F": { "min": 80, "max": 90 },
+      "G": { "min": 56, "max": 66 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 10 },
+      { "name": "よごれたほうたい", "quantity": 5 },
+      { "name": "パープルオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "カルベロビュート",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 68, "max": 80 },
+      "B": { "min": 68, "max": 78 },
+      "C": { "min": 76, "max": 82 },
+      "D": { "min": 80, "max": 96 },
+      "E": { "min": 90, "max": 94 },
+      "F": { "min": 108, "max": 120 },
+      "G": { "min": 70, "max": 80 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 12 },
+      { "name": "まりょくの土", "quantity": 30 },
+      { "name": "ブルーオーブ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 10 }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "スコーピオンテイル",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 50, "max": 60 },
+      "B": { "min": 30, "max": 45 },
+      "C": { "min": 30, "max": 45 },
+      "D": { "min": 50, "max": 65 },
+      "E": { "min": 50, "max": 60 },
+      "F": { "min": 90, "max": 96 },
+      "G": { "min": 90, "max": 95 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 4 },
+      { "name": "どくどくヘドロ", "quantity": 20 },
+      { "name": "どくがのこな", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 4 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "バスターウィップ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 40, "max": 60 },
+      "B": { "min": 48, "max": 60 },
+      "C": { "min": 36, "max": 46 },
+      "D": { "min": 60, "max": 66 },
+      "E": { "min": 54, "max": 64 },
+      "F": { "min": 82, "max": 90 },
+      "G": { "min": 90, "max": 96 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 6 },
+      { "name": "けものの皮", "quantity": 10 },
+      { "name": "パープルアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 6 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ドラゴンテイル",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 36, "max": 50 },
+      "B": { "min": 56, "max": 68 },
+      "C": { "min": 56, "max": 64 },
+      "D": { "min": 62, "max": 70 },
+      "E": { "min": 50, "max": 64 },
+      "F": { "min": 100, "max": 110 },
+      "G": { "min": 80, "max": 85 }
+    },
+    "materials": [
+      { "name": "プラチナこうせき", "quantity": 6 },
+      { "name": "ドラゴンのツノ", "quantity": 1 },
+      { "name": "グリーンアイ", "quantity": 1 },
+      { "name": "ようせいのひだね", "quantity": 8 }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "みわくのリボン",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 30, "max": 38 },
+      "B": { "min": 30, "max": 38 },
+      "C": { "min": 40, "max": 52 },
+      "D": { "min": 30, "max": 42 },
+      "E": { "min": 50, "max": 60 },
+      "F": { "min": 50, "max": 58 },
+      "G": { "min": 70, "max": 78 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "あやかしそう", "quantity": 1 },
+      { "name": "なないろのまゆ", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ビーストウィップ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 40, "max": 52 },
+      "B": { "min": 40, "max": 50 },
+      "C": { "min": 40, "max": 50 },
+      "D": { "min": 60, "max": 68 },
+      "E": { "min": 30, "max": 40 },
+      "F": { "min": 70, "max": 78 },
+      "G": { "min": 50, "max": 58 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "けものの皮", "quantity": 1 },
+      { "name": "するどい爪", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "サイドワインダー",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 60, "max": 68 },
+      "B": { "min": 30, "max": 40 },
+      "C": { "min": 60, "max": 70 },
+      "D": { "min": 30, "max": 40 },
+      "E": { "min": 30, "max": 40 },
+      "F": { "min": 70, "max": 78 },
+      "G": { "min": 80, "max": 90 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "小さなうろこ", "quantity": 1 },
+      { "name": "するどいキバ", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "はがねのムチ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 24, "max": 40 },
+      "B": { "min": 24, "max": 40 },
+      "C": { "min": 24, "max": 40 },
+      "D": { "min": 40, "max": 50 },
+      "E": { "min": 40, "max": 50 },
+      "F": { "min": 48, "max": 54 },
+      "G": { "min": 40, "max": 50 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 },
+      { "name": "けものの皮", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "パイソンウィップ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 35, "max": 45 },
+      "B": { "min": 35, "max": 45 },
+      "C": { "min": 30, "max": 40 },
+      "D": { "min": 40, "max": 60 },
+      "E": { "min": 30, "max": 40 },
+      "F": { "min": 60, "max": 66 },
+      "G": { "min": 40, "max": 48 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "小さなうろこ", "quantity": 1 },
+      { "name": "どくどくヘドロ", "quantity": 1 }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ローズウィップ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 16, "max": 32 },
+      "B": { "min": 18, "max": 30 },
+      "C": { "min": 16, "max": 32 },
+      "D": { "min": 30, "max": 40 },
+      "E": { "min": 20, "max": 36 },
+      "F": { "min": 56, "max": 68 },
+      "G": { "min": 40, "max": 48 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "あやかしそう", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "モーニングスター",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 18, "max": 30 },
+      "B": { "min": 18, "max": 30 },
+      "C": { "min": 18, "max": 30 },
+      "D": { "min": 30, "max": 40 },
+      "E": { "min": 30, "max": 38 },
+      "F": { "min": 56, "max": 68 },
+      "G": { "min": 40, "max": 48 }
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 1 },
+      { "name": "どうのこうせき", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "てつのムチ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 12, "max": 30 },
+      "B": { "min": 20, "max": 40 },
+      "C": { "min": 12, "max": 30 },
+      "D": { "min": 20, "max": 40 },
+      "E": { "min": 20, "max": 35 },
+      "F": { "min": 32, "max": 45 },
+      "G": { "min": 20, "max": 35 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 3 },
+      { "name": "どうのこうせき", "quantity": 2 }
+    ]
+  },
+  {
+    "name": "へびがわのムチ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 12, "max": 30 },
+      "B": { "min": 12, "max": 30 },
+      "C": { "min": 12, "max": 30 },
+      "D": { "min": 24, "max": 32 },
+      "E": { "min": 24, "max": 36 },
+      "F": { "min": 36, "max": 50 },
+      "G": { "min": 40, "max": 50 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "小さなうろこ", "quantity": 1 }
+    ]
+  },
+  {
+    "name": "バトルリボン",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "targetValues": {
+      "A": { "min": 12, "max": 26 },
+      "B": { "min": 12, "max": 26 },
+      "C": { "min": 12, "max": 26 },
+      "D": { "min": 12, "max": 26 },
+      "E": { "min": 20, "max": 36 },
+      "F": { "min": 20, "max": 36 },
+      "G": { "min": 20, "max": 36 }
+    },
+    "materials": [
+      { "name": "てっこうせき", "quantity": 1 },
+      { "name": "シルク草", "quantity": 1 }
+    ]
   },
   {
     "name": "せいどうのかなづち",
