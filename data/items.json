@@ -2062,45 +2062,15 @@
     ]
   },
   {
-    "name": "守護竜のつるぎ(中身仮)",
+    "name": "守護竜のつるぎ",
     "category": "武器鍛冶",
     "subCategory": "片手剣",
     "gridType": "ABCD",
     "targetValues": {
-      "A": {
-        "min": 470,
-        "max": 480
-      },
-      "B": {
-        "min": 290,
-        "max": 297
-      },
-      "C": {
-        "min": 350,
-        "max": 357
-      }
+      
     },
     "materials": [
-      {
-        "name": "ゼーラズマ鉱石",
-        "quantity": 30
-      },
-      {
-        "name": "純白の結晶",
-        "quantity": 3
-      },
-      {
-        "name": "こんじきの雲",
-        "quantity": 3
-      },
-      {
-        "name": "せいじゃのはい",
-        "quantity": 10
-      },
-      {
-        "name": "超ようせいのひだね",
-        "quantity": 8
-      }
+      
     ],
     "specialTrait": "倍半"
   },
