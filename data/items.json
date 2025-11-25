@@ -11343,7 +11343,7 @@
   {
     "name": "魔除けの鎌",
     "category": "武器鍛冶",
-    "subCategory": "家具",
+    "subCategory": "鎌",
     "gridType": "scythe",
     "targetValues": {
       "A": { "min": 105, "max": 115 },
@@ -11363,7 +11363,7 @@
   {
     "name": "天体望遠鏡・茶(天体望遠鏡・金)",
     "category": "武器鍛冶",
-    "subCategory": "鎌",
+    "subCategory": "家具",
     "gridType": "3x2",
     "targetValues": {
     },
