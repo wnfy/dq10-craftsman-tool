@@ -1251,22 +1251,22 @@ if (showWelcome) {
         <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
   {categories.map((cat, idx) => {
     const colors = [
-      'from-cyan-500 to-blue-500',
-      'from-purple-500 to-violet-500', 
-      'from-pink-500 to-rose-500',
-      'from-emerald-500 to-teal-500',
-      'from-orange-500 to-amber-500',
-      'from-indigo-500 to-purple-500',
-      'from-green-500 to-emerald-500'
+      'from-orange-500 to-amber-500',      // 武器鍛冶 → オレンジ
+      'from-purple-500 to-violet-500',     // 防具鍛冶 → パープル
+      'from-pink-500 to-rose-500',         // 道具鍛冶 → ピンク
+      'from-cyan-500 to-blue-500',         // 裁縫 → シアン（青）
+      'from-emerald-500 to-teal-500',      // 木工 → グリーン
+      'from-indigo-500 to-purple-500',     // 料理 → インディゴ
+      'from-green-500 to-emerald-500'      // 収益管理 → グリーン
     ];
     const glowColors = [
-      'rgba(56, 189, 248, 0.6)',
-      'rgba(168, 85, 247, 0.6)',
-      'rgba(236, 72, 153, 0.6)',
-      'rgba(16, 185, 129, 0.6)',
-      'rgba(251, 146, 60, 0.6)',
-      'rgba(99, 102, 241, 0.6)',
-      'rgba(34, 197, 94, 0.6)'
+      'rgba(251, 146, 60, 0.6)',           // 武器鍛冶 → オレンジ
+      'rgba(168, 85, 247, 0.6)',           // 防具鍛冶 → パープル
+      'rgba(236, 72, 153, 0.6)',           // 道具鍛冶 → ピンク
+      'rgba(56, 189, 248, 0.6)',           // 裁縫 → シアン（青）
+      'rgba(16, 185, 129, 0.6)',           // 木工 → グリーン
+      'rgba(99, 102, 241, 0.6)',           // 料理 → インディゴ
+      'rgba(34, 197, 94, 0.6)'             // 収益管理 → グリーン
     ];
     const isActive = activeCategory === cat;
     
@@ -1319,12 +1319,12 @@ if (showWelcome) {
         key={type}
         onClick={() => setSelectedWeaponType(type)}
         onMouseEnter={(e) => {
-          e.currentTarget.style.boxShadow = '0 0 30px rgba(56, 189, 248, 0.6), 0 0 50px rgba(56, 189, 248, 0.4)';
+          e.currentTarget.style.boxShadow = '0 0 30px rgba(251, 146, 60, 0.6), 0 0 50px rgba(251, 146, 60, 0.4)';
           e.currentTarget.style.transform = 'scale(1.05)';
         }}
         onMouseLeave={(e) => {
           if (selectedWeaponType === type) {
-            e.currentTarget.style.boxShadow = '0 0 20px rgba(56, 189, 248, 0.5)';
+            e.currentTarget.style.boxShadow = '0 0 20px rgba(251, 146, 60, 0.5)';
             e.currentTarget.style.transform = 'scale(1.05)';
           } else {
             e.currentTarget.style.boxShadow = '';
@@ -1333,10 +1333,10 @@ if (showWelcome) {
         }}
         className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${
           selectedWeaponType === type
-            ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg border border-cyan-300/50 scale-105'
+            ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg border border-orange-300/50 scale-105'
             : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
         }`}
-        style={selectedWeaponType === type ? {boxShadow: '0 0 20px rgba(56, 189, 248, 0.5)'} : {}}
+        style={selectedWeaponType === type ? {boxShadow: '0 0 20px rgba(251, 146, 60, 0.5)'} : {}}
       >
         {type}
       </button>
@@ -1415,12 +1415,12 @@ if (showWelcome) {
         key={type}
         onClick={() => setSelectedSewingType(type)}
         onMouseEnter={(e) => {
-          e.currentTarget.style.boxShadow = '0 0 30px rgba(16, 185, 129, 0.6), 0 0 50px rgba(16, 185, 129, 0.4)';
+          e.currentTarget.style.boxShadow = '0 0 30px rgba(56, 189, 248, 0.6), 0 0 50px rgba(56, 189, 248, 0.4)';
           e.currentTarget.style.transform = 'scale(1.05)';
         }}
         onMouseLeave={(e) => {
           if (selectedSewingType === type) {
-            e.currentTarget.style.boxShadow = '0 0 20px rgba(16, 185, 129, 0.5)';
+            e.currentTarget.style.boxShadow = '0 0 20px rgba(56, 189, 248, 0.5)';
             e.currentTarget.style.transform = 'scale(1.05)';
           } else {
             e.currentTarget.style.boxShadow = '';
@@ -1429,10 +1429,10 @@ if (showWelcome) {
         }}
         className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${
           selectedSewingType === type
-            ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg border border-emerald-300/50 scale-105'
+            ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg border border-cyan-300/50 scale-105'
             : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
         }`}
-        style={selectedSewingType === type ? {boxShadow: '0 0 20px rgba(16, 185, 129, 0.5)'} : {}}
+        style={selectedSewingType === type ? {boxShadow: '0 0 20px rgba(56, 189, 248, 0.5)'} : {}}
       >
         {type}
       </button>
@@ -1440,19 +1440,19 @@ if (showWelcome) {
   </div>
 )}
         
-        {activeCategory === '木工' && (
+{activeCategory === '木工' && (
   <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
     {woodworkTypes.map((type) => (
       <button
         key={type}
         onClick={() => setSelectedWoodworkType(type)}
         onMouseEnter={(e) => {
-          e.currentTarget.style.boxShadow = '0 0 30px rgba(251, 146, 60, 0.6), 0 0 50px rgba(251, 146, 60, 0.4)';
+          e.currentTarget.style.boxShadow = '0 0 30px rgba(16, 185, 129, 0.6), 0 0 50px rgba(16, 185, 129, 0.4)';
           e.currentTarget.style.transform = 'scale(1.05)';
         }}
         onMouseLeave={(e) => {
           if (selectedWoodworkType === type) {
-            e.currentTarget.style.boxShadow = '0 0 20px rgba(251, 146, 60, 0.5)';
+            e.currentTarget.style.boxShadow = '0 0 20px rgba(16, 185, 129, 0.5)';
             e.currentTarget.style.transform = 'scale(1.05)';
           } else {
             e.currentTarget.style.boxShadow = '';
@@ -1461,10 +1461,10 @@ if (showWelcome) {
         }}
         className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${
           selectedWoodworkType === type
-            ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg border border-orange-300/50 scale-105'
+            ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg border border-emerald-300/50 scale-105'
             : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
         }`}
-        style={selectedWoodworkType === type ? {boxShadow: '0 0 20px rgba(251, 146, 60, 0.5)'} : {}}
+        style={selectedWoodworkType === type ? {boxShadow: '0 0 20px rgba(16, 185, 129, 0.5)'} : {}}
       >
         {type}
       </button>
