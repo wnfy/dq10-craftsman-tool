@@ -989,13 +989,14 @@ else if (item.subCategory === '足') {
               </div>
             </div>
           );
-        })}
+})}
       </div>
     </div>
   );
 }
-  }else if (item.gridType === '3x3') {
-      return renderGrid(item.targetValues);
+}  // ← 追加
+else if (item.gridType === '3x3') {
+  return renderGrid(item.targetValues);
     } else if (item.gridType === '3x2') {
       return renderHammer(item.targetValues);
     } else {
