@@ -1167,105 +1167,135 @@ if (showWelcome) {
   <source src="assets/bg-image-v3.mp4" type="video/mp4" />
 </video>
     <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
-<header className="bg-white/10 backdrop-blur-md shadow-lg sticky top-0 z-10 border-b border-white/20">
-        <div className="max-w-5xl mx-auto px-3 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="bg-white/20 backdrop-blur-sm p-2 rounded-xl shadow-lg border border-white/30">
-  <Sparkles className="text-amber-300" size={24} />
-</div>
-<h1 className="text-2xl font-black text-white" style={{textShadow: '0 0 20px rgba(251, 191, 36, 0.8), 0 0 40px rgba(251, 191, 36, 0.4)'}}>
-  ドラクエ10 職人支援ツール
-</h1>
-            </div>
-          </div>
-          
-          <div className="mt-4 flex gap-2 px-1">
-            <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-amber-300" size={18} />
-<input
-  type="text"
-  placeholder="商材名を検索してください.."
-  value={searchQuery}
-  onChange={(e) => setSearchQuery(e.target.value)}
-  onKeyPress={handleKeyPress}
-  className="w-full pl-10 pr-3 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 focus:outline-none focus:ring-2 focus:ring-amber-300/50 focus:border-amber-300 shadow-md text-sm text-white placeholder-white/60"
-/>
-            </div>
-            <button
-  onClick={handleSearch}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.boxShadow = '0 0 40px rgba(251, 191, 36, 0.8), 0 0 60px rgba(251, 191, 36, 0.5), 0 0 80px rgba(251, 191, 36, 0.3)';
-    e.currentTarget.style.transform = 'scale(1.05)';
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.boxShadow = '';
-    e.currentTarget.style.transform = 'scale(1)';
-  }}
-  className="px-6 py-3 bg-amber-500/80 backdrop-blur-sm hover:bg-amber-400 text-white rounded-xl font-bold text-sm shadow-md transition-all whitespace-nowrap border border-amber-300/50"
->
-  検索
-</button>
-<button
-  onClick={handleReset}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.boxShadow = '0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 80px rgba(255, 255, 255, 0.2)';
-    e.currentTarget.style.transform = 'scale(1.05)';
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.boxShadow = '';
-    e.currentTarget.style.transform = 'scale(1)';
-  }}
-  className="px-6 py-3 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-xl font-bold text-sm shadow-md transition-all whitespace-nowrap border border-white/30"
->
-  リセット
-</button>
-          </div>
+<header className="bg-white/10 backdrop-blur-md shadow-lg sticky top-0 z-10 border-b border-white/20" style={{boxShadow: '0 0 30px rgba(56, 189, 248, 0.3), 0 4px 6px rgba(0,0,0,0.1)'}}>
+  <div className="max-w-5xl mx-auto px-3 py-4">
+    <div className="flex items-center justify-between">
+      <div className="flex items-center gap-2">
+        <div 
+          className="bg-white/20 backdrop-blur-sm p-2 rounded-xl border border-white/30"
+          style={{boxShadow: '0 0 20px rgba(56, 189, 248, 0.4)'}}
+        >
+          <Sparkles className="text-cyan-300" size={24} />
         </div>
-        <div className="h-3"></div>
-      </header>
+        <h1 
+          className="text-2xl font-black text-white" 
+          style={{textShadow: '0 0 30px rgba(56, 189, 248, 0.8), 0 0 60px rgba(168, 85, 247, 0.4)'}}
+        >
+          ドラクエ10 職人支援ツール
+        </h1>
+      </div>
+    </div>
+    
+    <div className="mt-4 flex gap-2 px-1">
+      <div className="relative flex-1">
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-300" size={18} />
+        <input
+          type="text"
+          placeholder="商材名を検索してください.."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onKeyPress={handleKeyPress}
+          className="w-full pl-10 pr-3 py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/30 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400 shadow-md text-sm text-white placeholder-white/60"
+          style={{boxShadow: '0 0 20px rgba(56, 189, 248, 0.2)'}}
+        />
+      </div>
+      <button
+        onClick={handleSearch}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.8), 0 0 60px rgba(56, 189, 248, 0.5)';
+          e.currentTarget.style.transform = 'scale(1.05)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.boxShadow = '0 0 20px rgba(56, 189, 248, 0.4)';
+          e.currentTarget.style.transform = 'scale(1)';
+        }}
+        className="px-6 py-3 bg-gradient-to-r from-cyan-500/80 to-blue-500/80 backdrop-blur-sm text-white rounded-xl font-bold text-sm shadow-md transition-all whitespace-nowrap border border-cyan-300/50"
+        style={{boxShadow: '0 0 20px rgba(56, 189, 248, 0.4)'}}
+      >
+        検索
+      </button>
+      <button
+        onClick={handleReset}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.boxShadow = '0 0 40px rgba(168, 85, 247, 0.6)';
+          e.currentTarget.style.transform = 'scale(1.05)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.boxShadow = '';
+          e.currentTarget.style.transform = 'scale(1)';
+        }}
+        className="px-6 py-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white rounded-xl font-bold text-sm shadow-md transition-all whitespace-nowrap border border-white/30"
+      >
+        リセット
+      </button>
+    </div>
+  </div>
+  <div className="h-3"></div>
+</header>
 
       <div className="max-w-5xl mx-auto px-3 py-4">
         <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => {
-  setActiveCategory(cat);
-  setSelectedItem(null);
-  setMaterialPrices({});
-  setToolPrices({});
-  if (cat === '武器鍛冶') setSelectedWeaponType('片手剣');
-  if (cat === '防具鍛冶') setSelectedArmorType('小盾');
-  if (cat === '道具鍛冶') setSelectedToolType('素材');
-  if (cat === '裁縫') setSelectedSewingType('アタマ');
-  if (cat === '木工') setSelectedWoodworkType('スティック');
-  if (cat === '料理') setSelectedCookingType('料理全部');
-}}
-              onMouseEnter={(e) => {
-  e.currentTarget.style.boxShadow = '0 0 40px rgba(251, 191, 36, 0.8), 0 0 60px rgba(251, 191, 36, 0.5), 0 0 80px rgba(251, 191, 36, 0.3)';
-  e.currentTarget.style.transform = 'scale(1.05)';
-}}
-onMouseLeave={(e) => {
-  if (activeCategory === cat) {
-    e.currentTarget.style.boxShadow = '0 0 30px rgba(251, 191, 36, 0.6), 0 0 50px rgba(251, 191, 36, 0.3)';
-    e.currentTarget.style.transform = 'scale(1.05)';
-  } else {
-    e.currentTarget.style.boxShadow = '';
-    e.currentTarget.style.transform = 'scale(1)';
-  }
-}}
-              className={`px-5 py-2 rounded-xl font-bold text-sm whitespace-nowrap transition-all cursor-pointer ${
-  activeCategory === cat
-    ? 'bg-amber-500/90 backdrop-blur-sm text-white shadow-lg scale-105 border border-amber-300'
-    : 'bg-white/20 backdrop-blur-sm text-white shadow-sm border border-white/30'
-}`}
-style={activeCategory === cat ? {boxShadow: '0 0 30px rgba(251, 191, 36, 0.6), 0 0 50px rgba(251, 191, 36, 0.3)'} : {}}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+  {categories.map((cat, idx) => {
+    const colors = [
+      'from-cyan-500 to-blue-500',
+      'from-purple-500 to-violet-500', 
+      'from-pink-500 to-rose-500',
+      'from-emerald-500 to-teal-500',
+      'from-orange-500 to-amber-500',
+      'from-indigo-500 to-purple-500',
+      'from-green-500 to-emerald-500'
+    ];
+    const glowColors = [
+      'rgba(56, 189, 248, 0.6)',
+      'rgba(168, 85, 247, 0.6)',
+      'rgba(236, 72, 153, 0.6)',
+      'rgba(16, 185, 129, 0.6)',
+      'rgba(251, 146, 60, 0.6)',
+      'rgba(99, 102, 241, 0.6)',
+      'rgba(34, 197, 94, 0.6)'
+    ];
+    const isActive = activeCategory === cat;
+    
+    return (
+      <button
+        key={cat}
+        onClick={() => {
+          setActiveCategory(cat);
+          setSelectedItem(null);
+          setMaterialPrices({});
+          setToolPrices({});
+          if (cat === '武器鍛冶') setSelectedWeaponType('片手剣');
+          if (cat === '防具鍛冶') setSelectedArmorType('小盾');
+          if (cat === '道具鍛冶') setSelectedToolType('素材');
+          if (cat === '裁縫') setSelectedSewingType('アタマ');
+          if (cat === '木工') setSelectedWoodworkType('スティック');
+          if (cat === '料理') setSelectedCookingType('料理全部');
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.boxShadow = `0 0 40px ${glowColors[idx % glowColors.length]}, 0 0 60px ${glowColors[idx % glowColors.length]}`;
+          e.currentTarget.style.transform = 'scale(1.05)';
+        }}
+        onMouseLeave={(e) => {
+          if (isActive) {
+            e.currentTarget.style.boxShadow = `0 0 30px ${glowColors[idx % glowColors.length]}`;
+            e.currentTarget.style.transform = 'scale(1.05)';
+          } else {
+            e.currentTarget.style.boxShadow = '';
+            e.currentTarget.style.transform = 'scale(1)';
+          }
+        }}
+        className={`px-5 py-2 rounded-xl font-bold text-sm whitespace-nowrap transition-all cursor-pointer ${
+          isActive
+            ? `bg-gradient-to-r ${colors[idx % colors.length]} text-white shadow-lg scale-105 border border-white/30`
+            : 'bg-white/10 backdrop-blur-sm text-white shadow-sm border border-white/30'
+        }`}
+        style={isActive ? {boxShadow: `0 0 30px ${glowColors[idx % glowColors.length]}`} : {}}
+      >
+        {cat}
+      </button>
+    );
+  })}
+</div>
         
         {/* サブカテゴリ表示 */}
         {activeCategory === '武器鍛冶' && (
