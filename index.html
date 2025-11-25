@@ -261,7 +261,30 @@
           });
         }
 
-        // 🆕 期間でフィルタリングする関数
+        const totalIncome = filteredRecords.reduce((sum, r) => sum + r.totalIncome, 0);
+        const totalCost = filteredRecords.reduce((sum, r) => sum + r.totalCost, 0);
+        const profit = totalIncome - totalCost;
+
+        return { totalIncome, totalCost, profit, count: filteredRecords.length };
+      };
+
+      // 🆕 レコードを削除
+      const deleteRecord = (id) => {
+        if (confirm('この記録を削除しますか？')) {
+          const newRecords = savedRecords.filter(r => r.id !== id);
+          setSavedRecords(newRecords);
+          localStorage.setItem('dqx_profit_records', JSON.stringify(newRecords));
+        }
+      };
+
+      // 🆕 ピン留め切り替え
+      const togglePin = () => {
+        const newPinned = !isPinned;
+        setIsPinned(newPinned);
+        localStorage.setItem('dqx_profit_pinned', JSON.stringify(newPinned));
+      };
+
+      // 🆕 期間でフィルタリングする関数
   const filterRecordsByPeriod = (period) => {
     const now = new Date();
     
@@ -462,29 +485,6 @@
     reader.readAsText(file);
     event.target.value = ''; // input をリセット
   };
-
-        const totalIncome = filteredRecords.reduce((sum, r) => sum + r.totalIncome, 0);
-        const totalCost = filteredRecords.reduce((sum, r) => sum + r.totalCost, 0);
-        const profit = totalIncome - totalCost;
-
-        return { totalIncome, totalCost, profit, count: filteredRecords.length };
-      };
-
-      // 🆕 レコードを削除
-      const deleteRecord = (id) => {
-        if (confirm('この記録を削除しますか？')) {
-          const newRecords = savedRecords.filter(r => r.id !== id);
-          setSavedRecords(newRecords);
-          localStorage.setItem('dqx_profit_records', JSON.stringify(newRecords));
-        }
-      };
-
-      // 🆕 ピン留め切り替え
-      const togglePin = () => {
-        const newPinned = !isPinned;
-        setIsPinned(newPinned);
-        localStorage.setItem('dqx_profit_pinned', JSON.stringify(newPinned));
-      };
 
       const handleReset = () => {
         setSearchQuery('');
