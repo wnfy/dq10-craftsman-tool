@@ -1738,15 +1738,15 @@ if (showWelcome) {
 </div>
 
                   <div className="p-4">
-  <h3 className="text-sm font-black text-white drop-shadow-lg mb-3 flex items-center gap-2">
+  <h3 className="text-sm font-black text-white drop-shadow-lg mb-3 flex items-center gap-2" style={{textShadow: '0 0 20px rgba(56, 189, 248, 0.6)'}}>
     <span className="text-xl">🎯</span>
     <span>目標数値</span>
   </h3>
-                    {renderTargetValues(item)}
-                  </div>
+  {renderTargetValues(item)}
+</div>
 
                   <div className="px-4 pb-4">
-  <h3 className="text-sm font-black text-white drop-shadow-lg mb-3 flex items-center gap-2">
+  <h3 className="text-sm font-black text-white drop-shadow-lg mb-3 flex items-center gap-2" style={{textShadow: '0 0 20px rgba(168, 85, 247, 0.6)'}}>
     <span className="text-xl">📦</span>
     <span>必要素材</span>
   </h3>
@@ -1754,36 +1754,41 @@ if (showWelcome) {
     {item.materials.map((material, idx) => (
       <div
         key={idx}
-        className="p-4 bg-gradient-to-br from-indigo-50/80 via-purple-50/80 to-pink-50/80 backdrop-blur-sm rounded-xl shadow-lg border border-indigo-200/50"
+        className="p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30"
+        style={{boxShadow: '0 0 20px rgba(168, 85, 247, 0.2)'}}
       >
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                              <span className="font-bold text-gray-800 text-sm">{material.name}</span>
-                              <span className="px-2.5 py-0.5 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full font-black shadow-md text-xs">
-                                ×{material.quantity}
-                              </span>
-                            </div>
-                            {isSelected && (
-                              <div className="flex items-center gap-1.5">
-                                <input
-                                  type="text"
-                                  inputMode="numeric"
-                                  placeholder="単価"
-                                  value={formatNumber(materialPrices[`${item.name}-${material.name}`] || '')}
-                                  onClick={(e) => e.stopPropagation()}
-                                  onChange={(e) => {
-                                    const value = e.target.value.replace(/[^0-9]/g, '');
-                                    updatePrice(item.name, material.name, value);
-                                  }}
-                                  className="w-24 px-3 py-2 rounded-lg border-2 border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-400 font-bold text-right text-base"
-                                />
-                                <span className="text-gray-600 font-bold text-sm">G</span>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="font-bold text-white text-sm drop-shadow">{material.name}</span>
+            <span 
+              className="px-2.5 py-0.5 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full font-black shadow-md text-xs"
+              style={{boxShadow: '0 0 15px rgba(236, 72, 153, 0.5)'}}
+            >
+              ×{material.quantity}
+            </span>
+          </div>
+          {isSelected && (
+            <div className="flex items-center gap-1.5">
+              <input
+                type="text"
+                inputMode="numeric"
+                placeholder="単価"
+                value={formatNumber(materialPrices[`${item.name}-${material.name}`] || '')}
+                onClick={(e) => e.stopPropagation()}
+                onChange={(e) => {
+                  const value = e.target.value.replace(/[^0-9]/g, '');
+                  updatePrice(item.name, material.name, value);
+                }}
+                className="w-24 px-3 py-2 rounded-lg border-2 border-purple-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400 font-bold text-right text-base text-white placeholder-white/50"
+                style={{boxShadow: '0 0 15px rgba(168, 85, 247, 0.3)'}}
+              />
+              <span className="text-white/80 font-bold text-sm drop-shadow">G</span>
+            </div>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
                     
                     {isSelected && (
                      <div className="mt-3 p-4 bg-gradient-to-br from-purple-50/80 via-violet-50/80 to-fuchsia-50/80 backdrop-blur-sm rounded-xl shadow-lg border border-purple-200/50">
