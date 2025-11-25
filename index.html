@@ -789,125 +789,128 @@ const renderHammer = (targetValues) => {
   );
 };
   // ブーメラン（コの字型）: A,B / D / E,F（Cが欠損）
-  const renderBoomerang = (targetValues) => {
-    return (
-      <div className="space-y-2.5">
-        <div className="grid grid-cols-2 gap-2.5">
-          {['A', 'B'].map((pos) => {
-            const value = targetValues[pos];
-            if (!value) return null;
-            return (
-              <div
-                key={pos}
-                className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-              >
-                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-                <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                  {value.min} - {value.max}
-                </div>
+const renderBoomerang = (targetValues) => {
+  return (
+    <div className="space-y-2.5">
+      <div className="grid grid-cols-2 gap-2.5">
+        {['A', 'B'].map((pos) => {
+          const value = targetValues[pos];
+          if (!value) return null;
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+              style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+              <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+                {value.min} - {value.max}
               </div>
-            );
-          })}
-        </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className="col-start-2">
-            {targetValues['D'] && (
-              <div className={`bg-gradient-to-br ${paramColors['D']} p-4 rounded-xl text-white shadow-md`}>
-                <div className="text-xs font-bold opacity-90 tracking-wider text-center">D</div>
-                <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                  {targetValues['D'].min} - {targetValues['D'].max}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          {['E', 'F'].map((pos) => {
-            const value = targetValues[pos];
-            if (!value) return null;
-            return (
-              <div
-                key={pos}
-                className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-              >
-                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-                <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                  {value.min} - {value.max}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
-  };
-
-  // 鎌（L字反転型）: A,C,E,G（縦） / B（2行目のみ）
-  const renderScythe = (targetValues) => {
-    return (
-      <div className="space-y-2.5">
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className={`bg-gradient-to-br ${paramColors['A']} p-4 rounded-xl text-white shadow-md`}>
-            <div className="text-xs font-bold opacity-90 tracking-wider text-center">A</div>
-            <div className="text-2xl font-black mt-1 drop-shadow text-center">
-              {targetValues['A'].min} - {targetValues['A'].max}
             </div>
-          </div>
-          {targetValues['B'] && (
-            <div className={`bg-gradient-to-br ${paramColors['B']} p-4 rounded-xl text-white shadow-md`}>
-              <div className="text-xs font-bold opacity-90 tracking-wider text-center">B</div>
-              <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                {targetValues['B'].min} - {targetValues['B'].max}
+          );
+        })}
+      </div>
+      <div className="grid grid-cols-2 gap-2.5">
+        <div className="col-start-2">
+          {targetValues['D'] && (
+            <div className={`bg-gradient-to-br ${paramColors['D']} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`} style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">D</div>
+              <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+                {targetValues['D'].min} - {targetValues['D'].max}
               </div>
             </div>
           )}
         </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className={`bg-gradient-to-br ${paramColors['C']} p-4 rounded-xl text-white shadow-md`}>
-            <div className="text-xs font-bold opacity-90 tracking-wider text-center">C</div>
-            <div className="text-2xl font-black mt-1 drop-shadow text-center">
-              {targetValues['C'].min} - {targetValues['C'].max}
+      </div>
+      <div className="grid grid-cols-2 gap-2.5">
+        {['E', 'F'].map((pos) => {
+          const value = targetValues[pos];
+          if (!value) return null;
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+              style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+              <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+                {value.min} - {value.max}
+              </div>
             </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+  // 鎌（L字反転型）: A,C,E,G（縦） / B（2行目のみ）
+const renderScythe = (targetValues) => {
+  return (
+    <div className="space-y-2.5">
+      <div className="grid grid-cols-2 gap-2.5">
+        <div className={`bg-gradient-to-br ${paramColors['A']} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`} style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
+          <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">A</div>
+          <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+            {targetValues['A'].min} - {targetValues['A'].max}
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className={`bg-gradient-to-br ${paramColors['E']} p-4 rounded-xl text-white shadow-md`}>
-            <div className="text-xs font-bold opacity-90 tracking-wider text-center">E</div>
-            <div className="text-2xl font-black mt-1 drop-shadow text-center">
-              {targetValues['E'].min} - {targetValues['E'].max}
+        {targetValues['B'] && (
+          <div className={`bg-gradient-to-br ${paramColors['B']} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`} style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
+            <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">B</div>
+            <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+              {targetValues['B'].min} - {targetValues['B'].max}
             </div>
           </div>
-        </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className={`bg-gradient-to-br ${paramColors['G']} p-4 rounded-xl text-white shadow-md`}>
-            <div className="text-xs font-bold opacity-90 tracking-wider text-center">G</div>
-            <div className="text-2xl font-black mt-1 drop-shadow text-center">
-              {targetValues['G'].min} - {targetValues['G'].max}
-            </div>
+        )}
+      </div>
+      <div className="grid grid-cols-2 gap-2.5">
+        <div className={`bg-gradient-to-br ${paramColors['C']} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`} style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
+          <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">C</div>
+          <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+            {targetValues['C'].min} - {targetValues['C'].max}
           </div>
         </div>
       </div>
-    );
-  };
+      <div className="grid grid-cols-2 gap-2.5">
+        <div className={`bg-gradient-to-br ${paramColors['E']} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`} style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
+          <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">E</div>
+          <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+            {targetValues['E'].min} - {targetValues['E'].max}
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-2.5">
+        <div className={`bg-gradient-to-br ${paramColors['G']} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`} style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
+          <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">G</div>
+          <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+            {targetValues['G'].min} - {targetValues['G'].max}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
   // ABCD 4パラメータ表示
-  const renderABCD = (targetValues) => {
-    return (
-      <div className="grid grid-cols-2 gap-2.5">
-        {Object.entries(targetValues).map(([param, values]) => (
-          <div
-            key={param}
-            className={`bg-gradient-to-br ${paramColors[param]} p-4 rounded-xl text-white shadow-md`}
-          >
-            <div className="text-xs font-bold opacity-90 tracking-wider text-center">{param}</div>
-            <div className="text-2xl font-black mt-1 drop-shadow text-center">
-              {values.min} - {values.max}
-            </div>
+const renderABCD = (targetValues) => {
+  return (
+    <div className="grid grid-cols-2 gap-2.5">
+      {Object.entries(targetValues).map(([param, values]) => (
+        <div
+          key={param}
+          className={`bg-gradient-to-br ${paramColors[param]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+          style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+        >
+          <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{param}</div>
+          <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+            {values.min} - {values.max}
           </div>
-        ))}
-      </div>
-    );
-  };
+        </div>
+      ))}
+    </div>
+  );
+};
 
   // グリッドタイプに応じた表示の振り分け
   const renderTargetValues = (item) => {
@@ -945,50 +948,52 @@ const renderHammer = (targetValues) => {
   }
   
   // 防具鍛冶 - 足（L字型: B, D, E, F）
-  else if (item.subCategory === '足') {
-    return (
-      <div className="space-y-2.5">
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className="bg-gray-200 p-4 rounded-xl opacity-30"></div>
-          {item.targetValues['B'] && (
-            <div className={`bg-gradient-to-br ${paramColors['B']} p-4 rounded-xl text-white shadow-md`}>
-              <div className="text-xs font-bold opacity-90 tracking-wider text-center">B</div>
-              <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                {item.targetValues['B'].min} - {item.targetValues['B'].max}
-              </div>
+else if (item.subCategory === '足') {
+  return (
+    <div className="space-y-2.5">
+      <div className="grid grid-cols-2 gap-2.5">
+        <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl opacity-30 border border-white/20"></div>
+        {item.targetValues['B'] && (
+          <div className={`bg-gradient-to-br ${paramColors['B']} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`} style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
+            <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">B</div>
+            <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+              {item.targetValues['B'].min} - {item.targetValues['B'].max}
             </div>
-          )}
-        </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className="bg-gray-200 p-4 rounded-xl opacity-30"></div>
-          {item.targetValues['D'] && (
-            <div className={`bg-gradient-to-br ${paramColors['D']} p-4 rounded-xl text-white shadow-md`}>
-              <div className="text-xs font-bold opacity-90 tracking-wider text-center">D</div>
-              <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                {item.targetValues['D'].min} - {item.targetValues['D'].max}
-              </div>
-            </div>
-          )}
-        </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          {['E', 'F'].map((pos) => {
-            const value = item.targetValues[pos];
-            if (!value) return null;
-            return (
-              <div
-                key={pos}
-                className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-              >
-                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-                <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                  {value.min} - {value.max}
-                </div>
-              </div>
-            );
-          })}
-        </div>
+          </div>
+        )}
       </div>
-    );
+      <div className="grid grid-cols-2 gap-2.5">
+        <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl opacity-30 border border-white/20"></div>
+        {item.targetValues['D'] && (
+          <div className={`bg-gradient-to-br ${paramColors['D']} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`} style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
+            <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">D</div>
+            <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+              {item.targetValues['D'].min} - {item.targetValues['D'].max}
+            </div>
+          </div>
+        )}
+      </div>
+      <div className="grid grid-cols-2 gap-2.5">
+        {['E', 'F'].map((pos) => {
+          const value = item.targetValues[pos];
+          if (!value) return null;
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+              style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+              <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+                {value.min} - {value.max}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
   }else if (item.gridType === '3x3') {
       return renderGrid(item.targetValues);
     } else if (item.gridType === '3x2') {
