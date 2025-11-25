@@ -994,11 +994,10 @@ else if (item.subCategory === '足') {
     </div>
   );
 }
-}  // ← 追加
-else if (item.gridType === '3x3') {
+} else if (item.gridType === '3x3') {  // ← } と else の間にスペースだけ、改行なし
   return renderGrid(item.targetValues);
-    } else if (item.gridType === '3x2') {
-      return renderHammer(item.targetValues);
+} else if (item.gridType === '3x2') {
+  return renderHammer(item.targetValues);
     } else {
       return renderABCD(item.targetValues);
     }
