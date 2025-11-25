@@ -2293,7 +2293,7 @@ if (showWelcome) {
             );
           }
           return null;
-        })()}
+})()}
       </>
     )}
   </div> 
@@ -2346,34 +2346,34 @@ if (showWelcome) {
     const profitRate = totalCost > 0 ? ((profit / totalCost) * 100).toFixed(1) : 0;
     
     return (
-      <div className="mt-3 p-3 bg-gradient-to-br from-teal-50/80 via-emerald-50/80 to-green-50/80 backdrop-blur-sm rounded-lg shadow-lg border border-teal-200/50">
-  <div className="text-xs font-bold text-teal-900 mb-2 flex items-center gap-2">
-    <span className="text-lg">💵</span>
-    <span>収支計算</span>
-  </div>
+      <div className="mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)'}}>
+        <div className="text-xs font-bold text-white mb-2 flex items-center gap-2 drop-shadow" style={{textShadow: '0 0 20px rgba(16, 185, 129, 0.6)'}}>
+          <span className="text-lg">💵</span>
+          <span>収支計算</span>
+        </div>
         <div className="space-y-1 text-sm">
           <div className="flex justify-between">
-            <span className="text-gray-700">総売上</span>
-            <span className="font-bold text-blue-600">{totalIncome.toLocaleString()} G</span>
+            <span className="text-white/80 drop-shadow">総売上</span>
+            <span className="font-bold text-blue-400 drop-shadow">{totalIncome.toLocaleString()} G</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-700">総コスト</span>
-            <span className="font-bold text-red-600">{totalCost.toLocaleString()} G</span>
+            <span className="text-white/80 drop-shadow">総コスト</span>
+            <span className="font-bold text-red-400 drop-shadow">{totalCost.toLocaleString()} G</span>
           </div>
-          <div className="border-t border-gray-300 my-1"></div>
+          <div className="border-t border-white/30 my-1"></div>
           <div className="flex justify-between items-center">
-            <span className="text-lg font-black text-gray-800">純利益:</span>
+            <span className="text-lg font-black text-white drop-shadow">純利益:</span>
             <div className="text-right">
-              <div className={`font-black text-2xl ${profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+              <div className={`font-black text-2xl drop-shadow ${profit >= 0 ? 'text-green-400' : 'text-red-400'}`}>
                 {profit >= 0 ? '+' : ''}{profit.toLocaleString()} G
               </div>
-              <div className={`text-xs font-bold ${profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+              <div className={`text-xs font-bold ${profit >= 0 ? 'text-green-400' : 'text-red-400'}`}>
                 {profit >= 0 ? '📈' : '📉'} {profitRate}%
               </div>
             </div>
           </div>
           {!isSimpleMode && results.fail > 0 && (
-            <div className="text-xs text-gray-500 mt-2">
+            <div className="text-xs text-white/50 mt-2">
               ※ 失敗品{results.fail}回は売却不可のため収益に含みません
             </div>
           )}
