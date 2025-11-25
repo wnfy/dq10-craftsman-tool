@@ -462,7 +462,7 @@ body {
   
   const cookingTypes = ['料理全部', '肉料理', '魚料理', 'パスタ&ライス', 'スイーツ'];
   
-  const paramColors = {
+const paramColors = {
   A: 'from-rose-500 via-pink-500 to-red-500',
   B: 'from-sky-500 via-blue-500 to-indigo-500',
   C: 'from-emerald-500 via-teal-500 to-cyan-500',
@@ -473,7 +473,7 @@ body {
   H: 'from-fuchsia-500 via-pink-500 to-rose-500'
 };
 
-  const gridColors = {
+const gridColors = {
   A: 'from-rose-500 via-pink-500 to-red-500',
   B: 'from-sky-500 via-blue-500 to-indigo-500',
   C: 'from-emerald-500 via-teal-500 to-cyan-500',
@@ -485,136 +485,140 @@ body {
   I: 'from-violet-500 via-purple-500 to-indigo-500'
 };
 // 3x3グリッド表示
-  const renderGrid = (targetValues) => {
-    const gridPositions = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
-    
-    return (
-      <div className="grid grid-cols-3 gap-2.5">
-        {gridPositions.map((pos) => {
-          const value = targetValues[pos];
-          const isEmpty = !value;
-          
-          return (
-            <div
-  key={pos}
-  className={`p-4 rounded-xl text-white shadow-lg flex flex-col items-center justify-center ${
-    isEmpty ? 'bg-gray-200' : `bg-gradient-to-br ${gridColors[pos]} backdrop-blur-sm border border-white/30`
-  }`}
->
-              <div className={`text-xs font-bold tracking-wider ${isEmpty ? 'text-gray-400' : 'opacity-90'}`}>
-                {pos}
-              </div>
-              {isEmpty ? (
-                <div className="text-2xl font-black text-gray-400 mt-1 text-center">-</div>
-              ) : (
-                <div className="text-2xl font-black mt-1 drop-shadow leading-tight text-center">
-                  {value.min}-{value.max}
-                </div>
-              )}
+const renderGrid = (targetValues) => {
+  const gridPositions = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+  
+  return (
+    <div className="grid grid-cols-3 gap-2.5">
+      {gridPositions.map((pos) => {
+        const value = targetValues[pos];
+        const isEmpty = !value;
+        
+        return (
+          <div
+            key={pos}
+            className={`p-4 rounded-xl text-white shadow-lg flex flex-col items-center justify-center ${
+              isEmpty ? 'bg-white/10 backdrop-blur-sm border border-white/20' : `bg-gradient-to-br ${gridColors[pos]} backdrop-blur-sm border border-white/30`
+            }`}
+            style={isEmpty ? {} : {boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+          >
+            <div className={`text-xs font-bold tracking-wider ${isEmpty ? 'text-white/40' : 'opacity-90 drop-shadow'}`}>
+              {pos}
             </div>
-          );
-        })}
-      </div>
-    );
-  };
+            {isEmpty ? (
+              <div className="text-2xl font-black text-white/40 mt-1 text-center">-</div>
+            ) : (
+              <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+                {value.min}-{value.max}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
-  // 片手剣（縦3）: A, B, C
-  const renderOnHandSword = (targetValues) => {
-    const positions = ['A', 'B', 'C'];
-    return (
-      <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
-        {positions.map((pos) => {
-          const value = targetValues[pos];
-          return (
-            <div
-  key={pos}
-  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
->
-              <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-              <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                {value.min} - {value.max}
-              </div>
+// 片手剣（縦3）: A, B, C
+const renderOnHandSword = (targetValues) => {
+  const positions = ['A', 'B', 'C'];
+  return (
+    <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
+      {positions.map((pos) => {
+        const value = targetValues[pos];
+        return (
+          <div
+            key={pos}
+            className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+            style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+          >
+            <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+            <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+              {value.min} - {value.max}
             </div>
-          );
-        })}
-      </div>
-    );
-  };
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
-  // 両手剣（縦4×横2）: A,B / C,D / E,F / G,H
-  const renderTwoHandSword = (targetValues) => {
-    const rows = [
-      ['A', 'B'],
-      ['C', 'D'],
-      ['E', 'F'],
-      ['G', 'H']
-    ];
-    return (
-      <div className="grid grid-cols-2 gap-2.5">
-        {rows.flat().map((pos) => {
-          const value = targetValues[pos];
-          if (!value) return null;
-          return (
-            <div
-              key={pos}
-              className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-            >
-              <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-              <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                {value.min} - {value.max}
-              </div>
+// 両手剣（縦4×横2）: A,B / C,D / E,F / G,H
+const renderTwoHandSword = (targetValues) => {
+  const rows = [
+    ['A', 'B'],
+    ['C', 'D'],
+    ['E', 'F'],
+    ['G', 'H']
+  ];
+  return (
+    <div className="grid grid-cols-2 gap-2.5">
+      {rows.flat().map((pos) => {
+        const value = targetValues[pos];
+        if (!value) return null;
+        return (
+          <div
+            key={pos}
+            className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+            style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+          >
+            <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+            <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+              {value.min} - {value.max}
             </div>
-          );
-        })}
-      </div>
-    );
-  };
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
-  // 短剣（縦2）: A, B
-  const renderDagger = (targetValues) => {
-    const positions = ['A', 'B'];
-    return (
-      <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
-        {positions.map((pos) => {
-          const value = targetValues[pos];
-          return (
-            <div
-              key={pos}
-              className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-            >
-              <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-              <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                {value.min} - {value.max}
-              </div>
+// 短剣（縦2）: A, B
+const renderDagger = (targetValues) => {
+  const positions = ['A', 'B'];
+  return (
+    <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
+      {positions.map((pos) => {
+        const value = targetValues[pos];
+        return (
+          <div
+            key={pos}
+            className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+            style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+          >
+            <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+            <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+              {value.min} - {value.max}
             </div>
-          );
-        })}
-      </div>
-    );
-  };
-
-  // ヤリ（縦4）: A, B, C, D
-  const renderSpear = (targetValues) => {
-    const positions = ['A', 'B', 'C', 'D'];
-    return (
-      <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
-        {positions.map((pos) => {
-          const value = targetValues[pos];
-          return (
-            <div
-              key={pos}
-              className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-            >
-              <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-              <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                {value.min} - {value.max}
-              </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+// ヤリ（縦4）: A, B, C, D
+const renderSpear = (targetValues) => {
+  const positions = ['A', 'B', 'C', 'D'];
+  return (
+    <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
+      {positions.map((pos) => {
+        const value = targetValues[pos];
+        return (
+          <div
+            key={pos}
+            className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+            style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+          >
+            <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+            <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+              {value.min} - {value.max}
             </div>
-          );
-        })}
-      </div>
-    );
-  };
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
   // オノ: A,B / C,D / E / G（FとH欠損）
   const renderAxe = (targetValues) => {
