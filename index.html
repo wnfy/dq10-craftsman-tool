@@ -621,167 +621,173 @@ const renderSpear = (targetValues) => {
 };
 
   // オノ: A,B / C,D / E / G（FとH欠損）
-  const renderAxe = (targetValues) => {
-    return (
-      <div className="space-y-2.5">
-        <div className="grid grid-cols-2 gap-2.5">
-          {['A', 'B'].map((pos) => {
-            const value = targetValues[pos];
-            if (!value) return null;
-            return (
-              <div
-                key={pos}
-                className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-              >
-                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-                <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                  {value.min} - {value.max}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          {['C', 'D'].map((pos) => {
-            const value = targetValues[pos];
-            if (!value) return null;
-            return (
-              <div
-                key={pos}
-                className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-              >
-                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-                <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                  {value.min} - {value.max}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className={`bg-gradient-to-br ${paramColors['E']} p-4 rounded-xl text-white shadow-md`}>
-            <div className="text-xs font-bold opacity-90 tracking-wider text-center">E</div>
-            <div className="text-2xl font-black mt-1 drop-shadow text-center">
-              {targetValues['E'].min} - {targetValues['E'].max}
-            </div>
-          </div>
-        </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          <div className={`bg-gradient-to-br ${paramColors['G']} p-4 rounded-xl text-white shadow-md`}>
-            <div className="text-xs font-bold opacity-90 tracking-wider text-center">G</div>
-            <div className="text-2xl font-black mt-1 drop-shadow text-center">
-              {targetValues['G'].min} - {targetValues['G'].max}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
-  // ムチ: A,B / C,D / E,F / G（H欠損）
-  const renderWhip = (targetValues) => {
-    return (
-      <div className="space-y-2.5">
-        <div className="grid grid-cols-2 gap-2.5">
-          {['A', 'B'].map((pos) => {
-            const value = targetValues[pos];
-            if (!value) return null;
-            return (
-              <div
-                key={pos}
-                className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-              >
-                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-                <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                  {value.min} - {value.max}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          {['C', 'D'].map((pos) => {
-            const value = targetValues[pos];
-            if (!value) return null;
-            return (
-              <div
-                key={pos}
-                className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-              >
-                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-                <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                  {value.min} - {value.max}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          {['E', 'F'].map((pos) => {
-            const value = targetValues[pos];
-            if (!value) return null;
-            return (
-              <div
-                key={pos}
-                className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-              >
-                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-                <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                  {value.min} - {value.max}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="grid grid-cols-2 gap-2.5">
-          {['G'].map((pos) => {
-            const value = targetValues[pos];
-            if (!value) return null;
-            return (
-              <div
-                key={pos}
-                className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
-              >
-                <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-                <div className="text-2xl font-black mt-1 drop-shadow text-center">
-                  {value.min} - {value.max}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
-  };
-
-  // ハンマー（3x2）: A,B / C,D / E,F
-  const renderHammer = (targetValues) => {
-    const rows = [
-      ['A', 'B'],
-      ['C', 'D'],
-      ['E', 'F']
-    ];
-    return (
+const renderAxe = (targetValues) => {
+  return (
+    <div className="space-y-2.5">
       <div className="grid grid-cols-2 gap-2.5">
-        {rows.flat().map((pos) => {
+        {['A', 'B'].map((pos) => {
           const value = targetValues[pos];
           if (!value) return null;
           return (
             <div
               key={pos}
-              className={`bg-gradient-to-br ${paramColors[pos]} p-4 rounded-xl text-white shadow-md`}
+              className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+              style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
             >
-              <div className="text-xs font-bold opacity-90 tracking-wider text-center">{pos}</div>
-              <div className="text-2xl font-black mt-1 drop-shadow text-center">
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+              <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
                 {value.min} - {value.max}
               </div>
             </div>
           );
         })}
       </div>
-    );
-  };
+      <div className="grid grid-cols-2 gap-2.5">
+        {['C', 'D'].map((pos) => {
+          const value = targetValues[pos];
+          if (!value) return null;
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+              style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+              <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+                {value.min} - {value.max}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="grid grid-cols-2 gap-2.5">
+        <div className={`bg-gradient-to-br ${paramColors['E']} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`} style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
+          <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">E</div>
+          <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+            {targetValues['E'].min} - {targetValues['E'].max}
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-2.5">
+        <div className={`bg-gradient-to-br ${paramColors['G']} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`} style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}>
+          <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">G</div>
+          <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+            {targetValues['G'].min} - {targetValues['G'].max}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
+  // ムチ: A,B / C,D / E,F / G（H欠損）
+const renderWhip = (targetValues) => {
+  return (
+    <div className="space-y-2.5">
+      <div className="grid grid-cols-2 gap-2.5">
+        {['A', 'B'].map((pos) => {
+          const value = targetValues[pos];
+          if (!value) return null;
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+              style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+              <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+                {value.min} - {value.max}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="grid grid-cols-2 gap-2.5">
+        {['C', 'D'].map((pos) => {
+          const value = targetValues[pos];
+          if (!value) return null;
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+              style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+              <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+                {value.min} - {value.max}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="grid grid-cols-2 gap-2.5">
+        {['E', 'F'].map((pos) => {
+          const value = targetValues[pos];
+          if (!value) return null;
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+              style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+              <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+                {value.min} - {value.max}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="grid grid-cols-2 gap-2.5">
+        {['G'].map((pos) => {
+          const value = targetValues[pos];
+          if (!value) return null;
+          return (
+            <div
+              key={pos}
+              className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+              style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+            >
+              <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+              <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+                {value.min} - {value.max}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+ // ハンマー（3x2）: A,B / C,D / E,F
+const renderHammer = (targetValues) => {
+  const rows = [
+    ['A', 'B'],
+    ['C', 'D'],
+    ['E', 'F']
+  ];
+  return (
+    <div className="grid grid-cols-2 gap-2.5">
+      {rows.flat().map((pos) => {
+        const value = targetValues[pos];
+        if (!value) return null;
+        return (
+          <div
+            key={pos}
+            className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
+            style={{boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)'}}
+          >
+            <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
+            <div className="text-2xl font-black mt-1 text-center" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>
+              {value.min} - {value.max}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
   // ブーメラン（コの字型）: A,B / D / E,F（Cが欠損）
   const renderBoomerang = (targetValues) => {
     return (
