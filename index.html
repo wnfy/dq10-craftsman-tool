@@ -1841,67 +1841,69 @@ if (showWelcome) {
 )}
                     
                     {isSelected && (
-                      <div className="mt-3 p-4 bg-gradient-to-br from-blue-50/80 via-sky-50/80 to-cyan-50/80 backdrop-blur-sm rounded-xl shadow-lg border border-blue-200/50">
-  <div className="flex items-center justify-between mb-3">
-    <span className="font-bold text-blue-900 text-sm flex items-center gap-2">
-      <span className="text-xl">🔢</span>
-      <span>作成回数</span>
-    </span>
-                          <div className="flex items-center gap-2">
-                            <input
-  type="text"
-  inputMode="numeric"
-  placeholder="回数"
-  value={craftQuantity[item.name] || 1}
-  onClick={(e) => e.stopPropagation()}
-  onFocus={(e) => {
-    if ((craftQuantity[item.name] || 1) === 1) {
-      e.target.value = '';
-    }
-  }}
-  onBlur={(e) => {
-    if (e.target.value === '') {
-      setCraftQuantity(prev => ({
-        ...prev,
-        [item.name]: 1
-      }));
-    }
-  }}
-  onChange={(e) => {
-    const value = e.target.value.replace(/[^0-9]/g, '');
-    setCraftQuantity(prev => ({
-      ...prev,
-      [item.name]: value === '' ? '' : parseInt(value) || 1
-    }));
-  }}
-  className="w-20 px-3 py-2 rounded-lg border-2 border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 font-bold text-right text-base"
-/>
-                            <span className="text-gray-600 font-bold text-sm">回</span>
-                          </div>
-                        </div>
-                        <div className="flex gap-2">
-                          {[1, 5, 10, 30].map((num) => (
-                            <button
-                              key={num}
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setCraftQuantity(prev => ({
-                                  ...prev,
-                                  [item.name]: num
-                                }));
-                              }}
-                              className={`flex-1 px-3 py-2 rounded-lg font-bold text-sm transition-all transform hover:scale-105 cursor-pointer ${
-  (craftQuantity[item.name] || 1) === num
-    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-md'
-    : 'bg-white/80 backdrop-blur-sm text-blue-700 border border-blue-300/50 hover:bg-blue-50 hover:shadow-sm'
-}`}
-                            >
-                              ×{num}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+  <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{boxShadow: '0 0 20px rgba(56, 189, 248, 0.3)'}}>
+    <div className="flex items-center justify-between mb-3">
+      <span className="font-bold text-white text-sm flex items-center gap-2 drop-shadow">
+        <span className="text-xl">🔢</span>
+        <span>作成回数</span>
+      </span>
+      <div className="flex items-center gap-2">
+        <input
+          type="text"
+          inputMode="numeric"
+          placeholder="回数"
+          value={craftQuantity[item.name] || 1}
+          onClick={(e) => e.stopPropagation()}
+          onFocus={(e) => {
+            if ((craftQuantity[item.name] || 1) === 1) {
+              e.target.value = '';
+            }
+          }}
+          onBlur={(e) => {
+            if (e.target.value === '') {
+              setCraftQuantity(prev => ({
+                ...prev,
+                [item.name]: 1
+              }));
+            }
+          }}
+          onChange={(e) => {
+            const value = e.target.value.replace(/[^0-9]/g, '');
+            setCraftQuantity(prev => ({
+              ...prev,
+              [item.name]: value === '' ? '' : parseInt(value) || 1
+            }));
+          }}
+          className="w-20 px-3 py-2 rounded-lg border-2 border-cyan-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 font-bold text-right text-base text-white placeholder-white/50"
+          style={{boxShadow: '0 0 15px rgba(56, 189, 248, 0.3)'}}
+        />
+        <span className="text-white/80 font-bold text-sm drop-shadow">回</span>
+      </div>
+    </div>
+    <div className="flex gap-2">
+      {[1, 5, 10, 30].map((num) => (
+        <button
+          key={num}
+          onClick={(e) => {
+            e.stopPropagation();
+            setCraftQuantity(prev => ({
+              ...prev,
+              [item.name]: num
+            }));
+          }}
+          className={`flex-1 px-3 py-2 rounded-lg font-bold text-sm transition-all transform hover:scale-105 cursor-pointer ${
+            (craftQuantity[item.name] || 1) === num
+              ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg border border-cyan-300/50'
+              : 'bg-white/10 backdrop-blur-sm text-white border border-white/30 hover:bg-white/20'
+          }`}
+          style={(craftQuantity[item.name] || 1) === num ? {boxShadow: '0 0 20px rgba(56, 189, 248, 0.5)'} : {}}
+        >
+          ×{num}
+        </button>
+      ))}
+    </div>
+  </div>
+)}
                     
                     {isSelected && (
   <div className="mt-3 p-4 bg-gradient-to-br from-rose-400/90 via-pink-400/90 to-fuchsia-500/90 backdrop-blur-sm rounded-xl border border-rose-300/50" style={{boxShadow: '0 0 30px rgba(244, 114, 182, 0.6), 0 0 50px rgba(244, 114, 182, 0.3), 0 4px 6px rgba(0,0,0,0.1)'}}>
