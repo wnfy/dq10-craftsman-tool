@@ -3682,7 +3682,31 @@
         "max": 171
       }
     },
-    {
+    "materials": [
+      {
+        "name": "ゼーラズマ鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "激震のキバ",
+        "quantity": 3
+      },
+      {
+        "name": "まじゅうのツノ",
+        "quantity": 6
+      },
+      {
+        "name": "げんませき",
+        "quantity": 6
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
     "name": "獅子の大剣",
     "category": "武器鍛冶",
     "subCategory": "両手剣",
