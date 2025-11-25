@@ -23,6 +23,35 @@
       opacity: 1;
     }
   }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+  }
 </style>
 </head>
 <body>
@@ -63,6 +92,20 @@
         <path d="m19 5-7 7"></path>
       </svg>
     );
+    
+    const Pin = ({size = 24, className = ""}) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <line x1="12" x2="12" y1="17" y2="22"></line>
+        <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path>
+      </svg>
+    );
+    
+    const TrendingUp = ({size = 24, className = ""}) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+        <polyline points="16 7 22 7 22 13"></polyline>
+      </svg>
+    );
 
 const { useState, useEffect } = React;
 
@@ -80,6 +123,7 @@ const CraftsmanApp = () => {
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [showWelcome]);
+  
   const [searchQuery, setSearchQuery] = useState('');
   const [searchActive, setSearchActive] = useState('');
   const [selectedItem, setSelectedItem] = useState(null);
@@ -92,10 +136,27 @@ const CraftsmanApp = () => {
   const [selectedWoodworkType, setSelectedWoodworkType] = useState('スティック');
   const [selectedCookingType, setSelectedCookingType] = useState('料理全部');
   const [craftQuantity, setCraftQuantity] = useState({});
-  const [sellPrices, setSellPrices] = useState({}); // {itemName: {star3: 0, star2: 0, star1: 0, star0: 0, fail: 0}}
-  const [craftResults, setCraftResults] = useState({}); // {itemName: {star3: 0, star2: 0, star1: 0, star0: 0, fail: 0}}
+  const [sellPrices, setSellPrices] = useState({});
+  const [craftResults, setCraftResults] = useState({});
   const [bazaarMode, setBazaarMode] = useState({});
-  const [pageTransition, setPageTransition] = useState(false); // ページめくるやつ
+  const [pageTransition, setPageTransition] = useState(false);
+  
+  // 🆕 収益管理用のstate
+  const [savedRecords, setSavedRecords] = useState([]);
+  const [profitView, setProfitView] = useState('today'); // 'today' or 'month'
+  const [isPinned, setIsPinned] = useState(false);
+  
+  // 🆕 LocalStorageから収益データを読み込む
+  useEffect(() => {
+    const saved = localStorage.getItem('dqx_profit_records');
+    if (saved) {
+      setSavedRecords(JSON.parse(saved));
+    }
+    const pinned = localStorage.getItem('dqx_profit_pinned');
+    if (pinned) {
+      setIsPinned(JSON.parse(pinned));
+    }
+  }, []);
   
   // ポップアップウィンドウから成果記録を更新する関数（グローバルに公開）
   useEffect(() => {
@@ -110,6 +171,110 @@ const CraftsmanApp = () => {
       delete window.updateCraftResults;
     };
   }, []);
+// 🆕 成果を保存する関数
+  const saveRecord = (item) => {
+    const record = {
+      id: Date.now(),
+      timestamp: new Date().toISOString(),
+      itemName: item.name,
+      category: item.category,
+      subCategory: item.subCategory,
+      materialPrices: {},
+      toolPrice: toolPrices[item.name] || 0,
+      quantity: craftQuantity[item.name] || 1,
+      sellPrices: sellPrices[item.name] || {},
+      craftResults: craftResults[item.name] || {},
+      bazaarMode: bazaarMode[item.name] ?? true,
+      totalCost: calculateTotal(item),
+      totalIncome: 0,
+      profit: 0
+    };
+    
+    // 素材価格をコピー
+    item.materials.forEach(material => {
+      const key = `${item.name}-${material.name}`;
+      if (materialPrices[key]) {
+        record.materialPrices[material.name] = materialPrices[key];
+      }
+    });
+    
+    // 収入と利益を計算
+    const results = craftResults[item.name] || {};
+    const prices = sellPrices[item.name] || {};
+    const feeRate = (bazaarMode[item.name] ?? true) ? 0.95 : 1.0;
+    const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
+    const isSimpleMode = isMaterial && (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
+    
+    if (isMaterial) {
+      const unitPrice = Math.floor((prices.unitPrice || 0) * feeRate);
+      if (isSimpleMode) {
+        record.totalIncome = (results.totalItems || 0) * unitPrice;
+      } else {
+        const totalItems = 
+          (results.star3 || 0) * 10 +
+          (results.star2 || 0) * 3 +
+          (results.star1 || 0) * 2 +
+          (results.star0 || 0) * 1;
+        record.totalIncome = totalItems * unitPrice;
+      }
+    } else {
+      record.totalIncome = 
+        Math.floor((results.star3 || 0) * (prices.star3 || 0) * feeRate) +
+        Math.floor((results.star2 || 0) * (prices.star2 || 0) * feeRate) +
+        Math.floor((results.star1 || 0) * (prices.star1 || 0) * feeRate) +
+        Math.floor((results.star0 || 0) * (prices.star0 || 0) * feeRate);
+    }
+    
+    record.profit = record.totalIncome - record.totalCost;
+    
+    const newRecords = [record, ...savedRecords];
+    setSavedRecords(newRecords);
+    localStorage.setItem('dqx_profit_records', JSON.stringify(newRecords));
+    
+    alert('成果を保存しました！');
+  };
+  
+  // 🆕 収益サマリーを計算
+  const calculateSummary = (period) => {
+    const now = new Date();
+    let filteredRecords = savedRecords;
+    
+    if (period === 'today') {
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      filteredRecords = savedRecords.filter(r => {
+        const recordDate = new Date(r.timestamp);
+        return recordDate >= today;
+      });
+    } else if (period === 'month') {
+      const thisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+      filteredRecords = savedRecords.filter(r => {
+        const recordDate = new Date(r.timestamp);
+        return recordDate >= thisMonth;
+      });
+    }
+    
+    const totalIncome = filteredRecords.reduce((sum, r) => sum + r.totalIncome, 0);
+    const totalCost = filteredRecords.reduce((sum, r) => sum + r.totalCost, 0);
+    const profit = totalIncome - totalCost;
+    
+    return { totalIncome, totalCost, profit, count: filteredRecords.length };
+  };
+  
+  // 🆕 レコードを削除
+  const deleteRecord = (id) => {
+    if (confirm('この記録を削除しますか？')) {
+      const newRecords = savedRecords.filter(r => r.id !== id);
+      setSavedRecords(newRecords);
+      localStorage.setItem('dqx_profit_records', JSON.stringify(newRecords));
+    }
+  };
+  
+  // 🆕 ピン留め切り替え
+  const togglePin = () => {
+    const newPinned = !isPinned;
+    setIsPinned(newPinned);
+    localStorage.setItem('dqx_profit_pinned', JSON.stringify(newPinned));
+  };
   
   // 別ウィンドウでレシピを開く関数
   const openRecipeWindow = (item) => {
@@ -282,7 +447,8 @@ body {
     return categoryMatch && searchMatch && subCategoryMatch;
   });
 
-  const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理'];
+  // 🆕 収益管理を追加
+  const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理', '収益管理'];
   
   const weaponTypes = ['片手剣', '両手剣', '短剣', 'ヤリ', 'オノ', 'ツメ', 'ムチ', 'ハンマー', 'ブーメラン', '鎌', '家具', '庭具'];
   
@@ -318,8 +484,7 @@ body {
   H: 'from-fuchsia-500 via-pink-500 to-rose-500',
   I: 'from-violet-500 via-purple-500 to-indigo-500'
 };
-
-  // 3x3グリッド表示
+// 3x3グリッド表示
   const renderGrid = (targetValues) => {
     const gridPositions = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
     
@@ -766,7 +931,7 @@ body {
     }
       // 防具鍛冶 - ウデ（縦3マス: A, B, C）
   else if (item.subCategory === 'ウデ') {
-    return renderOnHandSword(item.targetValues); // 片手剣と同じレイアウト
+    return renderOnHandSword(item.targetValues);
   }
   
   // 防具鍛冶 - 足（L字型: B, D, E, F）
@@ -853,18 +1018,14 @@ body {
 if (showWelcome) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 flex items-center justify-center relative overflow-hidden">
-        {/* 背景装飾 - より繊細に */}
         <div className="absolute top-10 left-10 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-yellow-400/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-1/4 w-48 h-48 bg-orange-400/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
         
-        {/* 装飾的な線 */}
         <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-amber-300/20 to-transparent"></div>
         <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-amber-300/20 to-transparent"></div>
         
-        {/* メインコンテンツ */}
         <div className="text-center z-10 px-4 max-w-2xl">
-          {/* タイトル */}
 <h1 className="text-6xl md:text-7xl font-black bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600 bg-clip-text text-transparent mb-4 animate-fade-in drop-shadow-sm">
   ようこそ
 </h1>
@@ -872,7 +1033,6 @@ if (showWelcome) {
   職人支援ツールへ
 </h2>
 
-{/* アイコン */}
 <div className="flex justify-center mb-12 animate-bounce" style={{animationDelay: '0.4s'}}>
   <div className="bg-gradient-to-br from-amber-500 to-yellow-500 p-6 rounded-3xl shadow-2xl border-2 border-amber-300 relative">
     <div className="absolute inset-0 bg-white/20 rounded-3xl animate-pulse"></div>
@@ -880,7 +1040,6 @@ if (showWelcome) {
   </div>
 </div>
           
-          {/* 説明文 - デザイン強化 */}
           <div className="relative mb-12 animate-fade-in" style={{animationDelay: '0.6s'}}>
             <div className="absolute inset-0 bg-gradient-to-r from-amber-100/50 via-yellow-100/50 to-orange-100/50 rounded-2xl blur-xl"></div>
             <div className="relative bg-white/60 backdrop-blur-md rounded-2xl p-8 border border-amber-200/50 shadow-xl">
@@ -903,7 +1062,6 @@ if (showWelcome) {
             </div>
           </div>
           
-          {/* スタートボタン */}
           <button
             onClick={() => setShowWelcome(false)}
             onMouseEnter={(e) => {
@@ -925,42 +1083,10 @@ if (showWelcome) {
             </div>
           </button>
           
-          {/* 補足テキスト */}
           <p className="mt-8 text-sm text-gray-600 animate-fade-in" style={{animationDelay: '1.2s'}}>
             Enterキーでもスタートできます
           </p>
         </div>
-
-        <style jsx>{`
-          @keyframes fade-in {
-            from {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          
-          @keyframes spin-slow {
-            from {
-              transform: rotate(0deg);
-            }
-            to {
-              transform: rotate(360deg);
-            }
-          }
-          
-          .animate-fade-in {
-            animation: fade-in 0.8s ease-out forwards;
-            opacity: 0;
-          }
-          
-          .animate-spin-slow {
-            animation: spin-slow 3s linear infinite;
-          }
-        `}</style>
       </div>
     );
   }
@@ -980,7 +1106,6 @@ if (showWelcome) {
   // メインアプリ
   return (
   <div className="min-h-screen relative">
-    {/* 背景動画 */}
     <video 
       autoPlay 
       loop 
@@ -990,9 +1115,8 @@ if (showWelcome) {
     >
       <source src="assets/bg-image-v3.mp4" type="video/mp4" />
     </video>
-    {/* 背景を少し暗くするオーバーレイ（お好みで調整） */}
     <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
-      <header className="bg-white/10 backdrop-blur-md shadow-lg sticky top-0 z-10 border-b border-white/20">
+<header className="bg-white/10 backdrop-blur-md shadow-lg sticky top-0 z-10 border-b border-white/20">
         <div className="max-w-5xl mx-auto px-3 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -1092,7 +1216,7 @@ style={activeCategory === cat ? {boxShadow: '0 0 30px rgba(251, 191, 36, 0.6), 0
           ))}
         </div>
         
-        {/* 武器鍛冶のサブカテゴリ */}
+        {/* サブカテゴリ表示 */}
         {activeCategory === '武器鍛冶' && (
           <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
             {weaponTypes.map((type) => (
@@ -1119,7 +1243,6 @@ onMouseLeave={(e) => {
           </div>
         )}
         
-        {/* 防具鍛冶のサブカテゴリ */}
         {activeCategory === '防具鍛冶' && (
           <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
             {armorTypes.map((type) => (
@@ -1146,7 +1269,6 @@ onMouseLeave={(e) => {
           </div>
         )}
         
-        {/* 道具鍛冶のサブカテゴリ */}
         {activeCategory === '道具鍛冶' && (
           <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
             {toolTypes.map((type) => (
@@ -1173,7 +1295,6 @@ onMouseLeave={(e) => {
           </div>
         )}
         
-        {/* 裁縫のサブカテゴリ */}
         {activeCategory === '裁縫' && (
           <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
             {sewingTypes.map((type) => (
@@ -1200,7 +1321,6 @@ onMouseLeave={(e) => {
           </div>
         )}
         
-        {/* 木工のサブカテゴリ */}
         {activeCategory === '木工' && (
           <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
             {woodworkTypes.map((type) => (
@@ -1227,7 +1347,6 @@ onMouseLeave={(e) => {
           </div>
         )}
         
-        {/* 料理のサブカテゴリ */}
         {activeCategory === '料理' && (
           <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
             {cookingTypes.map((type) => (
@@ -1255,16 +1374,187 @@ onMouseLeave={(e) => {
         )}
       </div>
 
+      {/* 🆕 ピン留めサマリー */}
+      {isPinned && activeCategory !== '収益管理' && (
+        <div className="max-w-5xl mx-auto px-3 pb-3">
+          <div className="bg-gradient-to-r from-green-500/90 to-emerald-500/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-green-300/50 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <TrendingUp className="text-white" size={24} />
+              <div>
+                <div className="text-white text-xs font-bold opacity-90">
+                  {profitView === 'today' ? '今日の収益' : '今月の収益'}
+                </div>
+                <div className="text-white text-xl font-black">
+                  {calculateSummary(profitView).profit >= 0 ? '+' : ''}
+                  {calculateSummary(profitView).profit.toLocaleString()} G
+                </div>
+              </div>
+            </div>
+            <button
+              onClick={togglePin}
+              className="px-3 py-1.5 bg-white/20 hover:bg-white/30 rounded-lg transition-all text-white text-sm font-bold"
+            >
+              📌 解除
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-5xl mx-auto px-3 pb-6 pt-6">
-  {filteredItems.length === 0 ? (
+        {/* 🆕 収益管理カテゴリ */}
+        {activeCategory === '収益管理' ? (
+          <div className="space-y-4">
+            {/* 収益サマリー */}
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <TrendingUp className="text-amber-300" size={32} />
+                  <h2 className="text-2xl font-black text-white">収益サマリー</h2>
+                </div>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setProfitView('today')}
+                    className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${
+                      profitView === 'today'
+                        ? 'bg-amber-500/90 text-white shadow-lg'
+                        : 'bg-white/20 text-white/80'
+                    }`}
+                  >
+                    今日
+                  </button>
+                  <button
+                    onClick={() => setProfitView('month')}
+                    className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${
+                      profitView === 'month'
+                        ? 'bg-amber-500/90 text-white shadow-lg'
+                        : 'bg-white/20 text-white/80'
+                    }`}
+                  >
+                    今月
+                  </button>
+                  <button
+                    onClick={togglePin}
+                    className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${
+                      isPinned
+                        ? 'bg-green-500/90 text-white shadow-lg'
+                        : 'bg-white/20 text-white/80'
+                    }`}
+                  >
+                    <Pin size={16} className="inline mr-1" />
+                    {isPinned ? 'ON' : 'OFF'}
+                  </button>
+                </div>
+              </div>
+              
+              {(() => {
+                const summary = calculateSummary(profitView);
+                return (
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="bg-blue-500/20 backdrop-blur-sm rounded-xl p-4 border border-blue-300/30">
+                      <div className="text-white/80 text-sm font-bold mb-1">総売上</div>
+                      <div className="text-white text-2xl font-black">
+                        {summary.totalIncome.toLocaleString()} G
+                      </div>
+                    </div>
+                    <div className="bg-red-500/20 backdrop-blur-sm rounded-xl p-4 border border-red-300/30">
+                      <div className="text-white/80 text-sm font-bold mb-1">総コスト</div>
+                      <div className="text-white text-2xl font-black">
+                        {summary.totalCost.toLocaleString()} G
+                      </div>
+                    </div>
+                    <div className={`${summary.profit >= 0 ? 'bg-green-500/20 border-green-300/30' : 'bg-red-500/20 border-red-300/30'} backdrop-blur-sm rounded-xl p-4 border`}>
+                      <div className="text-white/80 text-sm font-bold mb-1">純利益</div>
+                      <div className={`text-3xl font-black ${summary.profit >= 0 ? 'text-green-300' : 'text-red-300'}`}>
+                        {summary.profit >= 0 ? '+' : ''}{summary.profit.toLocaleString()} G
+                      </div>
+                    </div>
+                  </div>
+                );
+              })()}
+              
+              <div className="mt-4 text-white/60 text-sm text-center">
+                記録数: {calculateSummary(profitView).count} 件
+              </div>
+            </div>
+            
+            {/* 保存された記録一覧 */}
+            <div className="space-y-3">
+              {savedRecords.map((record) => (
+                <div
+                  key={record.id}
+                  className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-lg"
+                >
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-xs font-bold bg-amber-500/80 text-white px-2 py-0.5 rounded-full">
+                          {record.category}
+                        </span>
+                        <span className="text-white font-bold">{record.itemName}</span>
+                        <span className="text-white/60 text-xs">
+                          ×{record.quantity}回
+                        </span>
+                      </div>
+                      
+                      <div className="text-white/80 text-sm mb-2">
+                        {new Date(record.timestamp).toLocaleString('ja-JP', {
+                          month: '2-digit',
+                          day: '2-digit',
+                          hour: '2-digit',
+                          minute: '2-digit'
+                        })}
+                      </div>
+                      
+                      <div className="grid grid-cols-3 gap-2 text-sm">
+                        <div>
+                          <span className="text-white/60">売上: </span>
+                          <span className="text-blue-300 font-bold">
+                            {record.totalIncome.toLocaleString()}G
+                          </span>
+                        </div>
+                        <div>
+                          <span className="text-white/60">コスト: </span>
+                          <span className="text-red-300 font-bold">
+                            {record.totalCost.toLocaleString()}G
+                          </span>
+                        </div>
+                        <div>
+                          <span className="text-white/60">利益: </span>
+                          <span className={`font-black ${record.profit >= 0 ? 'text-green-300' : 'text-red-300'}`}>
+                            {record.profit >= 0 ? '+' : ''}{record.profit.toLocaleString()}G
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <button
+                      onClick={() => deleteRecord(record.id)}
+                      className="ml-4 px-3 py-1.5 bg-red-500/80 hover:bg-red-600/80 text-white rounded-lg text-xs font-bold transition-all"
+                    >
+                      削除
+                    </button>
+                  </div>
+                </div>
+              ))}
+              
+              {savedRecords.length === 0 && (
+                <div className="text-center py-12">
+                  <div className="text-4xl mb-3">📊</div>
+                  <p className="text-lg font-bold text-white/60">まだ記録がありません</p>
+                  <p className="text-white/40 mt-1 text-sm">成果を保存すると、ここに表示されます</p>
+                </div>
+              )}
+            </div>
+          </div>
+        ) : filteredItems.length === 0 ? (
           <div className="text-center py-12">
             <div className="text-4xl mb-3">🔍</div>
-            <p className="text-lg font-bold text-gray-600">該当するアイテムが見つかりません</p>
-            <p className="text-gray-500 mt-1 text-sm">別のキーワードで検索してみてください</p>
+            <p className="text-lg font-bold text-white/60">該当するアイテムが見つかりません</p>
+            <p className="text-white/40 mt-1 text-sm">別のキーワードで検索してみてください</p>
           </div>
         ) : (
           <div className="grid gap-12">
-            {filteredItems.map((item, index) => {
+{filteredItems.map((item, index) => {
               const isSelected = selectedItem === item.name;
               return (
                 <div
@@ -1482,34 +1772,28 @@ onMouseLeave={(e) => {
                             <button
   onClick={(e) => {
     e.stopPropagation();
-    // このアイテムの素材価格をリセット
     const newMaterialPrices = { ...materialPrices };
     item.materials.forEach(material => {
       delete newMaterialPrices[`${item.name}-${material.name}`];
     });
     setMaterialPrices(newMaterialPrices);
     
-    // このアイテムの道具代をリセット
     const newToolPrices = { ...toolPrices };
     delete newToolPrices[item.name];
     setToolPrices(newToolPrices);
     
-    // このアイテムの作成回数をリセット
     const newCraftQuantity = { ...craftQuantity };
     delete newCraftQuantity[item.name];
     setCraftQuantity(newCraftQuantity);
     
-    // 売却価格をリセット
     const newSellPrices = { ...sellPrices };
     delete newSellPrices[item.name];
     setSellPrices(newSellPrices);
     
-    // 成果記録をリセット
     const newCraftResults = { ...craftResults };
     delete newCraftResults[item.name];
     setCraftResults(newCraftResults);
     
-    // バザーモードをリセット  ← ここから3行を追加
     const newBazaarMode = { ...bazaarMode };
     delete newBazaarMode[item.name];
     setBazaarMode(newBazaarMode);
@@ -1523,10 +1807,8 @@ onMouseLeave={(e) => {
                       </div>
                     )}
                     
-                    {/* 売却予定額セクション */}
-{isSelected && (
+                    {isSelected && (
   <div className="mt-3 p-4 bg-gradient-to-br from-amber-50/80 via-yellow-50/80 to-orange-50/80 backdrop-blur-sm rounded-xl shadow-lg border border-amber-200/50">
-    {/* ヘッダーと切り替えボタン */}
     <div className="flex items-center justify-between mb-3">
   <h4 className="text-sm font-black text-amber-900 flex items-center gap-2">
     <span className="text-xl">💰</span>
@@ -1562,7 +1844,6 @@ onMouseLeave={(e) => {
       </div>
     </div>
     
-    {/* 道具鍛冶の素材：単価入力のみ */}
     {item.category === '道具鍛冶' && item.subCategory === '素材' ? (
       <div className="flex flex-col">
         <label className="text-xs font-bold text-gray-700 mb-1">素材の単価</label>
@@ -1597,7 +1878,6 @@ onMouseLeave={(e) => {
         )}
       </div>
     ) : (
-      /* 通常の装備：☆3～☆なしの4段階 */
       <div className="grid grid-cols-1 gap-2">
         {[
           { key: 'star3', label: '☆☆☆', color: 'from-yellow-400 to-orange-400' },
@@ -1643,11 +1923,8 @@ onMouseLeave={(e) => {
       </div>
 )}
                         
-                        {/* 黒字ライン計算 - 全ランク考慮 */}
 {(() => {
   const prices = sellPrices[item.name] || {};
-  
-  // 道具鍛冶の素材用チェック
   const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
   const hasAnyPrice = isMaterial 
     ? prices.unitPrice 
@@ -1659,19 +1936,12 @@ onMouseLeave={(e) => {
   const quantity = craftQuantity[item.name] || 1;
   const feeRate = (bazaarMode[item.name] ?? true) ? 0.95 : 1.0;
   
-  // 道具鍛冶の素材：個数ベース計算
   if (isMaterial) {
     const unitPrice = Math.floor((prices.unitPrice || 0) * feeRate);
-    
-    // ☆3以外は☆2（3個）と仮定
-    // (☆3成功数 × 10個) + (☆3失敗数 × 3個) × 単価 >= totalCost
-    // ☆3成功数 × (10個 - 3個) × 単価 >= totalCost - (quantity × 3個 × 単価)
-    const worstIncome = quantity * 3 * unitPrice; // 全て☆2の場合
+    const worstIncome = quantity * 3 * unitPrice;
     const needStar3 = Math.ceil((totalCost - worstIncome) / Math.max((10 - 3) * unitPrice, 1));
     const actualNeedStar3 = Math.max(0, Math.min(needStar3, quantity));
     const needPercentage = ((actualNeedStar3 / quantity) * 100).toFixed(1);
-    
-    // 赤字確定チェック（全て☆3でも赤字）
     const bestIncome = quantity * 10 * unitPrice;
     const isDefiniteLoss = bestIncome < totalCost;
     
@@ -1708,17 +1978,14 @@ onMouseLeave={(e) => {
     );
   }
   
-  // 通常の装備：従来のロジック
   const income3 = Math.floor((prices.star3 || 0) * feeRate);
   const income2 = Math.floor((prices.star2 || 0) * feeRate);
   const income1 = Math.floor((prices.star1 || 0) * feeRate);
   const income0 = Math.floor((prices.star0 || 0) * feeRate);
-  
   const worstIncome = income0 * quantity;
   const needStar3 = Math.ceil((totalCost - worstIncome) / Math.max(income3 - income0, 1));
   const actualNeedStar3 = Math.max(0, Math.min(needStar3, quantity));
   const needPercentage = ((actualNeedStar3 / quantity) * 100).toFixed(1);
-  
   const bestIncome = income3 * quantity;
   const isDefiniteLoss = bestIncome < totalCost;
   
@@ -1752,7 +2019,6 @@ onMouseLeave={(e) => {
   );
 })()}
                     
-                    {/* 成果記録セクション */}
 {isSelected && (
  <div className="mt-3 p-4 bg-gradient-to-br from-emerald-50/80 via-teal-50/80 to-cyan-50/80 backdrop-blur-sm rounded-xl shadow-lg border border-emerald-200/50">
     <div className="flex items-center justify-between mb-3">
@@ -1761,7 +2027,6 @@ onMouseLeave={(e) => {
     <span>成果記録</span>
   </h4>
       
-      {/* 道具鍛冶の素材のみ：切り替えボタン表示 */}
       {item.category === '道具鍛冶' && item.subCategory === '素材' && (
         <div className="flex gap-1 bg-emerald-100/50 rounded-lg p-1 shadow-sm backdrop-blur-sm">
   <button
@@ -1800,7 +2065,6 @@ onMouseLeave={(e) => {
       )}
     </div>
     
-    {/* 道具鍛冶の素材 & シンプルモード */}
     {item.category === '道具鍛冶' && item.subCategory === '素材' && (craftResults[`${item.name}_mode`] || 'simple') === 'simple' ? (
       <div className="flex flex-col">
         <label className="text-xs font-bold text-gray-700 mb-1">作成できた個数</label>
@@ -1827,7 +2091,6 @@ onMouseLeave={(e) => {
         </div>
       </div>
     ) : (
-      /* 通常モード：☆☆☆～失敗の5段階入力 */
       <>
         <div className="grid grid-cols-1 gap-2">
           {[
@@ -1864,7 +2127,6 @@ onMouseLeave={(e) => {
           ))}
         </div>
         
-        {/* 合計チェック（詳細モードのみ） */}
         {(() => {
           const results = craftResults[item.name] || {};
           const total = (results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0);
@@ -1882,16 +2144,12 @@ onMouseLeave={(e) => {
       </>
     )}
                         
-                        {/* 想定利益計算 */}
 {(() => {
   const results = craftResults[item.name] || {};
   const prices = sellPrices[item.name] || {};
-  
-  // 道具鍛冶の素材用チェック
   const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
   const isSimpleMode = isMaterial && (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
   
-  // データの有無を判定
   let hasData = false;
   if (isMaterial && isSimpleMode) {
     hasData = (results.totalItems > 0);
@@ -1906,15 +2164,12 @@ onMouseLeave={(e) => {
     
     let totalIncome;
     
-    // 道具鍛冶の素材：個数ベース計算
     if (isMaterial) {
       const unitPrice = Math.floor((prices.unitPrice || 0) * feeRate);
       
       if (isSimpleMode) {
-        // シンプルモード：totalItems × 単価
         totalIncome = (results.totalItems || 0) * unitPrice;
       } else {
-        // 詳細モード：各ランクの個数を計算
         const totalItems = 
           (results.star3 || 0) * 10 +
           (results.star2 || 0) * 3 +
@@ -1923,9 +2178,7 @@ onMouseLeave={(e) => {
           (results.fail || 0) * 0;
         totalIncome = totalItems * unitPrice;
       }
-    } 
-    // 通常の装備：従来のロジック
-    else {
+    } else {
       totalIncome = 
         Math.floor((results.star3 || 0) * (prices.star3 || 0) * feeRate) +
         Math.floor((results.star2 || 0) * (prices.star2 || 0) * feeRate) +
@@ -1975,6 +2228,38 @@ onMouseLeave={(e) => {
   }
   return null;
 })()}
+
+{/* 🆕 成果保存ボタン */}
+{(() => {
+  const results = craftResults[item.name] || {};
+  const prices = sellPrices[item.name] || {};
+  const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
+  const isSimpleMode = isMaterial && (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
+  
+  let hasData = false;
+  if (isMaterial && isSimpleMode) {
+    hasData = (results.totalItems > 0);
+  } else {
+    hasData = ((results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0) > 0);
+  }
+  
+  const hasPrice = isMaterial ? prices.unitPrice : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
+  
+  if (hasData && hasPrice) {
+    return (
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          saveRecord(item);
+        }}
+        className="mt-3 w-full px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+      >
+        💾 成果を保存する
+      </button>
+    );
+  }
+  return null;
+})()}
       </div>
     )}
                   </div>
@@ -1988,16 +2273,16 @@ onMouseLeave={(e) => {
       <footer className="bg-white/80 backdrop-blur-md mt-8 py-4">
         <div className="max-w-5xl mx-auto px-3 text-center text-gray-600 text-xs">
           <p className="font-bold">ドラクエ10 職人支援ツール</p>
-          <p className="mt-0.5 text-xs">プロトタイプ版</p>
+          <p className="mt-0.5 text-xs">プロトタイプ版 with 収益管理</p>
         </div>
       </footer>
     </div>
   );
 };
 
-    // ReactDOM でレンダリング
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<CraftsmanApp />);
   </script>
 </body>
 </html>
+
