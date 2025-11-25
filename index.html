@@ -285,254 +285,254 @@
       };
 
       // 🆕 期間でフィルタリングする関数
-  const filterRecordsByPeriod = (period) => {
-    const now = new Date();
-    
-    if (period === 'today') {
-      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-      return savedRecords.filter(r => {
-        const recordDate = new Date(r.timestamp);
-        return recordDate >= today;
-      });
-    } else if (period === 'month') {
-      const thisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-      return savedRecords.filter(r => {
-        const recordDate = new Date(r.timestamp);
-        return recordDate >= thisMonth;
-      });
-    }
-    return savedRecords; // 'all'
-  };
-  
-  // 🆕 一括削除関数
-  const bulkDelete = (period) => {
-    const periodNames = {
-      today: '今日',
-      month: '今月',
-      all: 'すべて'
-    };
-    
-    const targetRecords = filterRecordsByPeriod(period);
-    
-    if (targetRecords.length === 0) {
-      alert(`${periodNames[period]}のデータはありません`);
-      return;
-    }
-    
-    if (confirm(`${periodNames[period]}のデータ（${targetRecords.length}件）を削除しますか？\n\nこの操作は取り消せません。`)) {
-      if (period === 'all') {
-        setSavedRecords([]);
-        localStorage.setItem('dqx_profit_records', JSON.stringify([]));
-        alert('すべてのデータを削除しました');
-      } else {
-        const targetIds = new Set(targetRecords.map(r => r.id));
-        const newRecords = savedRecords.filter(r => !targetIds.has(r.id));
-        setSavedRecords(newRecords);
-        localStorage.setItem('dqx_profit_records', JSON.stringify(newRecords));
-        alert(`${periodNames[period]}のデータ（${targetRecords.length}件）を削除しました`);
-      }
-    }
-  };
-  
-  // 🆕 CSVエクスポート関数
-  const exportToCSV = (period) => {
-    const periodNames = {
-      today: '今日',
-      month: '今月',
-      all: 'すべて'
-    };
-    
-    const targetRecords = filterRecordsByPeriod(period);
-    
-    if (targetRecords.length === 0) {
-      alert(`${periodNames[period]}のデータはありません`);
-      return;
-    }
-    
-    // CSVヘッダー
-    const headers = [
-      '日時',
-      'カテゴリ',
-      'サブカテゴリ',
-      '商材名',
-      '作成回数',
-      '総売上',
-      '総コスト',
-      '純利益',
-      'バザー/モーモン',
-      '☆☆☆',
-      '☆☆',
-      '☆',
-      '☆なし',
-      '失敗'
-    ];
-    
-    // 数値をカンマ区切りにする関数
-    const formatNumber = (num) => {
-      return num.toLocaleString('ja-JP');
-    };
-    
-    // CSVデータ
-    const rows = targetRecords.map(record => {
-      // 日付を yyyy/MM/dd HH:mm 形式に（Excelで####にならない）
-      const date = new Date(record.timestamp);
-      const dateStr = `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
-      
-      const bazaarMode = record.bazaarMode ? 'バザー' : 'モーモン';
-      const results = record.craftResults || {};
-      
-      return [
-        dateStr,
-        record.category,
-        record.subCategory,
-        record.itemName,
-        formatNumber(record.quantity),
-        formatNumber(record.totalIncome),
-        formatNumber(record.totalCost),
-        formatNumber(record.profit),
-        bazaarMode,
-        formatNumber(results.star3 || 0),
-        formatNumber(results.star2 || 0),
-        formatNumber(results.star1 || 0),
-        formatNumber(results.star0 || 0),
-        formatNumber(results.fail || 0)
-      ];
-    });
-    
-    // 収益サマリーを計算
-    const totalIncome = targetRecords.reduce((sum, r) => sum + r.totalIncome, 0);
-    const totalCost = targetRecords.reduce((sum, r) => sum + r.totalCost, 0);
-    const totalProfit = totalIncome - totalCost;
-    
-    // サマリー行（空行 + サマリー）
-    const summaryRows = [
-      [''], // 空行
-      ['=== 収益サマリー ==='],
-      ['期間', periodNames[period]],
-      ['記録数', `${formatNumber(targetRecords.length)}件`],
-      ['総売上', `${formatNumber(totalIncome)}G`],
-      ['総コスト', `${formatNumber(totalCost)}G`],
-      ['純利益', `${formatNumber(totalProfit)}G`]
-    ];
-    
-    // CSV生成
-    const csvContent = [
-      headers.join(','),
-      ...rows.map(row => row.map(cell => `"${cell}"`).join(',')),
-      ...summaryRows.map(row => row.map(cell => `"${cell}"`).join(','))
-    ].join('\n');
-    
-    // BOM付きでダウンロード（Excelで文字化け防止）
-    const bom = '\uFEFF';
-    const blob = new Blob([bom + csvContent], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    const filename = `dqx_profit_${period}_${new Date().toISOString().split('T')[0]}.csv`;
-    
-    link.href = url;
-    link.download = filename;
-    link.click();
-    URL.revokeObjectURL(url);
-    
-    alert(`${periodNames[period]}のデータ（${targetRecords.length}件）をエクスポートしました`);
-  };
-  
-  // 🆕 CSVインポート関数
-  const importFromCSV = (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
-    
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const text = e.target.result;
-        const lines = text.split('\n').filter(line => line.trim());
-        
-        if (lines.length < 2) {
-          alert('CSVファイルが空です');
+      const filterRecordsByPeriod = (period) => {
+        const now = new Date();
+
+        if (period === 'today') {
+          const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+          return savedRecords.filter(r => {
+            const recordDate = new Date(r.timestamp);
+            return recordDate >= today;
+          });
+        } else if (period === 'month') {
+          const thisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+          return savedRecords.filter(r => {
+            const recordDate = new Date(r.timestamp);
+            return recordDate >= thisMonth;
+          });
+        }
+        return savedRecords; // 'all'
+      };
+
+      // 🆕 一括削除関数
+      const bulkDelete = (period) => {
+        const periodNames = {
+          today: '今日',
+          month: '今月',
+          all: 'すべて'
+        };
+
+        const targetRecords = filterRecordsByPeriod(period);
+
+        if (targetRecords.length === 0) {
+          alert(`${periodNames[period]}のデータはありません`);
           return;
         }
-        
-        // ヘッダーをスキップして、データ行をパース
-        const dataLines = lines.slice(1);
-        const importedRecords = [];
-        
-        for (const line of dataLines) {
-          // サマリー行をスキップ
-          if (line.includes('収益サマリー') || line.includes('期間') || line.includes('記録数') || line.includes('総売上') || line.includes('総コスト') || line.includes('純利益')) {
-            continue;
+
+        if (confirm(`${periodNames[period]}のデータ（${targetRecords.length}件）を削除しますか？\n\nこの操作は取り消せません。`)) {
+          if (period === 'all') {
+            setSavedRecords([]);
+            localStorage.setItem('dqx_profit_records', JSON.stringify([]));
+            alert('すべてのデータを削除しました');
+          } else {
+            const targetIds = new Set(targetRecords.map(r => r.id));
+            const newRecords = savedRecords.filter(r => !targetIds.has(r.id));
+            setSavedRecords(newRecords);
+            localStorage.setItem('dqx_profit_records', JSON.stringify(newRecords));
+            alert(`${periodNames[period]}のデータ（${targetRecords.length}件）を削除しました`);
           }
-          
-          // 空行をスキップ
-          if (line.trim() === '' || line === '""') {
-            continue;
-          }
-          
-          // CSVパース（ダブルクォート対応）
-          const matches = line.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
-          if (!matches || matches.length < 14) continue;
-          
-          const cells = matches.map(cell => cell.replace(/^"|"$/g, '').replace(/,/g, '')); // カンマを除去
-          
-          // 日付パース（yyyy/MM/dd HH:mm形式に対応）
-          let timestamp;
+        }
+      };
+
+      // 🆕 CSVエクスポート関数
+      const exportToCSV = (period) => {
+        const periodNames = {
+          today: '今日',
+          month: '今月',
+          all: 'すべて'
+        };
+
+        const targetRecords = filterRecordsByPeriod(period);
+
+        if (targetRecords.length === 0) {
+          alert(`${periodNames[period]}のデータはありません`);
+          return;
+        }
+
+        // CSVヘッダー
+        const headers = [
+          '日時',
+          'カテゴリ',
+          'サブカテゴリ',
+          '商材名',
+          '作成回数',
+          '総売上',
+          '総コスト',
+          '純利益',
+          'バザー/モーモン',
+          '☆☆☆',
+          '☆☆',
+          '☆',
+          '☆なし',
+          '失敗'
+        ];
+
+        // 数値をカンマ区切りにする関数
+        const formatNumber = (num) => {
+          return num.toLocaleString('ja-JP');
+        };
+
+        // CSVデータ
+        const rows = targetRecords.map(record => {
+          // 日付を yyyy/MM/dd HH:mm 形式に（Excelで####にならない）
+          const date = new Date(record.timestamp);
+          const dateStr = `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+
+          const bazaarMode = record.bazaarMode ? 'バザー' : 'モーモン';
+          const results = record.craftResults || {};
+
+          return [
+            dateStr,
+            record.category,
+            record.subCategory,
+            record.itemName,
+            formatNumber(record.quantity),
+            formatNumber(record.totalIncome),
+            formatNumber(record.totalCost),
+            formatNumber(record.profit),
+            bazaarMode,
+            formatNumber(results.star3 || 0),
+            formatNumber(results.star2 || 0),
+            formatNumber(results.star1 || 0),
+            formatNumber(results.star0 || 0),
+            formatNumber(results.fail || 0)
+          ];
+        });
+
+        // 収益サマリーを計算
+        const totalIncome = targetRecords.reduce((sum, r) => sum + r.totalIncome, 0);
+        const totalCost = targetRecords.reduce((sum, r) => sum + r.totalCost, 0);
+        const totalProfit = totalIncome - totalCost;
+
+        // サマリー行（空行 + サマリー）
+        const summaryRows = [
+          [''], // 空行
+          ['=== 収益サマリー ==='],
+          ['期間', periodNames[period]],
+          ['記録数', `${formatNumber(targetRecords.length)}件`],
+          ['総売上', `${formatNumber(totalIncome)}G`],
+          ['総コスト', `${formatNumber(totalCost)}G`],
+          ['純利益', `${formatNumber(totalProfit)}G`]
+        ];
+
+        // CSV生成
+        const csvContent = [
+          headers.join(','),
+          ...rows.map(row => row.map(cell => `"${cell}"`).join(',')),
+          ...summaryRows.map(row => row.map(cell => `"${cell}"`).join(','))
+        ].join('\n');
+
+        // BOM付きでダウンロード（Excelで文字化け防止）
+        const bom = '\uFEFF';
+        const blob = new Blob([bom + csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        const filename = `dqx_profit_${period}_${new Date().toISOString().split('T')[0]}.csv`;
+
+        link.href = url;
+        link.download = filename;
+        link.click();
+        URL.revokeObjectURL(url);
+
+        alert(`${periodNames[period]}のデータ（${targetRecords.length}件）をエクスポートしました`);
+      };
+
+      // 🆕 CSVインポート関数
+      const importFromCSV = (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
           try {
-            const dateStr = cells[0];
-            // yyyy/MM/dd HH:mm → Date
-            const [datePart, timePart] = dateStr.split(' ');
-            const [year, month, day] = datePart.split('/');
-            const [hour, minute] = (timePart || '00:00').split(':');
-            timestamp = new Date(year, month - 1, day, hour, minute).toISOString();
-          } catch {
-            timestamp = new Date().toISOString(); // パース失敗時は現在時刻
+            const text = e.target.result;
+            const lines = text.split('\n').filter(line => line.trim());
+
+            if (lines.length < 2) {
+              alert('CSVファイルが空です');
+              return;
+            }
+
+            // ヘッダーをスキップして、データ行をパース
+            const dataLines = lines.slice(1);
+            const importedRecords = [];
+
+            for (const line of dataLines) {
+              // サマリー行をスキップ
+              if (line.includes('収益サマリー') || line.includes('期間') || line.includes('記録数') || line.includes('総売上') || line.includes('総コスト') || line.includes('純利益')) {
+                continue;
+              }
+
+              // 空行をスキップ
+              if (line.trim() === '' || line === '""') {
+                continue;
+              }
+
+              // CSVパース（ダブルクォート対応）
+              const matches = line.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
+              if (!matches || matches.length < 14) continue;
+
+              const cells = matches.map(cell => cell.replace(/^"|"$/g, '').replace(/,/g, '')); // カンマを除去
+
+              // 日付パース（yyyy/MM/dd HH:mm形式に対応）
+              let timestamp;
+              try {
+                const dateStr = cells[0];
+                // yyyy/MM/dd HH:mm → Date
+                const [datePart, timePart] = dateStr.split(' ');
+                const [year, month, day] = datePart.split('/');
+                const [hour, minute] = (timePart || '00:00').split(':');
+                timestamp = new Date(year, month - 1, day, hour, minute).toISOString();
+              } catch {
+                timestamp = new Date().toISOString(); // パース失敗時は現在時刻
+              }
+
+              const record = {
+                id: Date.now() + Math.random(), // 新しいIDを生成
+                timestamp: timestamp,
+                category: cells[1],
+                subCategory: cells[2],
+                itemName: cells[3],
+                quantity: parseInt(cells[4]) || 1,
+                totalIncome: parseInt(cells[5]) || 0,
+                totalCost: parseInt(cells[6]) || 0,
+                profit: parseInt(cells[7]) || 0,
+                bazaarMode: cells[8] === 'バザー',
+                craftResults: {
+                  star3: parseInt(cells[9]) || 0,
+                  star2: parseInt(cells[10]) || 0,
+                  star1: parseInt(cells[11]) || 0,
+                  star0: parseInt(cells[12]) || 0,
+                  fail: parseInt(cells[13]) || 0
+                },
+                materialPrices: {},
+                toolPrice: 0,
+                sellPrices: {}
+              };
+
+              importedRecords.push(record);
+            }
+
+            if (importedRecords.length === 0) {
+              alert('有効なデータが見つかりませんでした');
+              return;
+            }
+
+            if (confirm(`${importedRecords.length}件のデータをインポートしますか？\n\n既存のデータに追加されます。`)) {
+              const newRecords = [...importedRecords, ...savedRecords];
+              setSavedRecords(newRecords);
+              localStorage.setItem('dqx_profit_records', JSON.stringify(newRecords));
+              alert(`${importedRecords.length}件のデータをインポートしました`);
+            }
+          } catch (error) {
+            console.error('Import error:', error);
+            alert('CSVファイルの読み込みに失敗しました。ファイル形式を確認してください。');
           }
-          
-          const record = {
-            id: Date.now() + Math.random(), // 新しいIDを生成
-            timestamp: timestamp,
-            category: cells[1],
-            subCategory: cells[2],
-            itemName: cells[3],
-            quantity: parseInt(cells[4]) || 1,
-            totalIncome: parseInt(cells[5]) || 0,
-            totalCost: parseInt(cells[6]) || 0,
-            profit: parseInt(cells[7]) || 0,
-            bazaarMode: cells[8] === 'バザー',
-            craftResults: {
-              star3: parseInt(cells[9]) || 0,
-              star2: parseInt(cells[10]) || 0,
-              star1: parseInt(cells[11]) || 0,
-              star0: parseInt(cells[12]) || 0,
-              fail: parseInt(cells[13]) || 0
-            },
-            materialPrices: {},
-            toolPrice: 0,
-            sellPrices: {}
-          };
-          
-          importedRecords.push(record);
-        }
-        
-        if (importedRecords.length === 0) {
-          alert('有効なデータが見つかりませんでした');
-          return;
-        }
-        
-        if (confirm(`${importedRecords.length}件のデータをインポートしますか？\n\n既存のデータに追加されます。`)) {
-          const newRecords = [...importedRecords, ...savedRecords];
-          setSavedRecords(newRecords);
-          localStorage.setItem('dqx_profit_records', JSON.stringify(newRecords));
-          alert(`${importedRecords.length}件のデータをインポートしました`);
-        }
-      } catch (error) {
-        console.error('Import error:', error);
-        alert('CSVファイルの読み込みに失敗しました。ファイル形式を確認してください。');
-      }
-    };
-    
-    reader.readAsText(file);
-    event.target.value = ''; // input をリセット
-  };
+        };
+
+        reader.readAsText(file);
+        event.target.value = ''; // input をリセット
+      };
 
       const handleReset = () => {
         setSearchQuery('');
@@ -1553,8 +1553,8 @@ body {
                       }
                     }}
                     className={`px-5 py-2 rounded-xl font-bold text-sm whitespace-nowrap transition-all cursor-pointer ${isActive
-                        ? `bg-gradient-to-r ${colors[idx % colors.length]} text-white shadow-lg scale-105 border border-white/30`
-                        : 'bg-white/10 backdrop-blur-sm text-white shadow-sm border border-white/30'
+                      ? `bg-gradient-to-r ${colors[idx % colors.length]} text-white shadow-lg scale-105 border border-white/30`
+                      : 'bg-white/10 backdrop-blur-sm text-white shadow-sm border border-white/30'
                       }`}
                     style={isActive ? { boxShadow: `0 0 30px ${glowColors[idx % glowColors.length]}` } : {}}
                   >
@@ -1585,8 +1585,8 @@ body {
                       }
                     }}
                     className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${selectedWeaponType === type
-                        ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg border border-orange-300/50 scale-105'
-                        : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
+                      ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg border border-orange-300/50 scale-105'
+                      : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
                       }`}
                     style={selectedWeaponType === type ? { boxShadow: '0 0 20px rgba(251, 146, 60, 0.5)' } : {}}
                   >
@@ -1616,8 +1616,8 @@ body {
                       }
                     }}
                     className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${selectedArmorType === type
-                        ? 'bg-gradient-to-r from-purple-500 to-violet-500 text-white shadow-lg border border-purple-300/50 scale-105'
-                        : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
+                      ? 'bg-gradient-to-r from-purple-500 to-violet-500 text-white shadow-lg border border-purple-300/50 scale-105'
+                      : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
                       }`}
                     style={selectedArmorType === type ? { boxShadow: '0 0 20px rgba(168, 85, 247, 0.5)' } : {}}
                   >
@@ -1647,8 +1647,8 @@ body {
                       }
                     }}
                     className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${selectedToolType === type
-                        ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg border border-pink-300/50 scale-105'
-                        : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
+                      ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg border border-pink-300/50 scale-105'
+                      : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
                       }`}
                     style={selectedToolType === type ? { boxShadow: '0 0 20px rgba(236, 72, 153, 0.5)' } : {}}
                   >
@@ -1678,8 +1678,8 @@ body {
                       }
                     }}
                     className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${selectedSewingType === type
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg border border-cyan-300/50 scale-105'
-                        : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg border border-cyan-300/50 scale-105'
+                      : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
                       }`}
                     style={selectedSewingType === type ? { boxShadow: '0 0 20px rgba(56, 189, 248, 0.5)' } : {}}
                   >
@@ -1709,8 +1709,8 @@ body {
                       }
                     }}
                     className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${selectedWoodworkType === type
-                        ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg border border-emerald-300/50 scale-105'
-                        : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
+                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg border border-emerald-300/50 scale-105'
+                      : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
                       }`}
                     style={selectedWoodworkType === type ? { boxShadow: '0 0 20px rgba(16, 185, 129, 0.5)' } : {}}
                   >
@@ -1740,8 +1740,8 @@ body {
                       }
                     }}
                     className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${selectedCookingType === type
-                        ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg border border-indigo-300/50 scale-105'
-                        : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
+                      ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg border border-indigo-300/50 scale-105'
+                      : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
                       }`}
                     style={selectedCookingType === type ? { boxShadow: '0 0 20px rgba(99, 102, 241, 0.5)' } : {}}
                   >
@@ -1784,16 +1784,16 @@ body {
                 {/* 収益サマリー */}
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
                   <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-4 gap-3">
-  <div className="flex items-center gap-3">
-    <TrendingUp className="text-amber-300" size={32} />
-    <h2 className="text-xl md:text-2xl font-black text-white">収益サマリー</h2>
-  </div>
-  <div className="flex flex-wrap gap-2">
+                    <div className="flex items-center gap-3">
+                      <TrendingUp className="text-amber-300" size={32} />
+                      <h2 className="text-xl md:text-2xl font-black text-white">収益サマリー</h2>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
                       <button
                         onClick={() => setProfitView('today')}
                         className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${profitView === 'today'
-                            ? 'bg-amber-500/90 text-white shadow-lg'
-                            : 'bg-white/20 text-white/80'
+                          ? 'bg-amber-500/90 text-white shadow-lg'
+                          : 'bg-white/20 text-white/80'
                           }`}
                       >
                         今日
@@ -1801,8 +1801,8 @@ body {
                       <button
                         onClick={() => setProfitView('month')}
                         className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${profitView === 'month'
-                            ? 'bg-amber-500/90 text-white shadow-lg'
-                            : 'bg-white/20 text-white/80'
+                          ? 'bg-amber-500/90 text-white shadow-lg'
+                          : 'bg-white/20 text-white/80'
                           }`}
                       >
                         今月
@@ -1810,8 +1810,8 @@ body {
                       <button
                         onClick={togglePin}
                         className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${isPinned
-                            ? 'bg-green-500/90 text-white shadow-lg'
-                            : 'bg-white/20 text-white/80'
+                          ? 'bg-green-500/90 text-white shadow-lg'
+                          : 'bg-white/20 text-white/80'
                           }`}
                       >
                         <Pin size={16} className="inline mr-1" />
@@ -1847,87 +1847,87 @@ body {
                   })()}
 
                   <div className="mt-4 text-white/60 text-sm text-center">
-                記録数: {calculateSummary(profitView).count} 件
-              </div>
-            </div>
-            
-            {/* 🆕 データ管理ボタン */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
-              <h3 className="text-xl font-black text-white mb-4 flex items-center gap-2">
-                <span className="text-2xl">⚙️</span>
-                <span>データ管理</span>
-              </h3>
-              
-              {/* エクスポートボタン */}
-              <div className="mb-6">
-                <h4 className="text-sm font-bold text-white/80 mb-3">💾 エクスポート（バックアップ）</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                  <button
-                    onClick={() => exportToCSV('today')}
-                    className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                  >
-                    📅 今日のデータ
-                  </button>
-                  <button
-                    onClick={() => exportToCSV('month')}
-                    className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                  >
-                    📆 今月のデータ
-                  </button>
-                  <button
-                    onClick={() => exportToCSV('all')}
-                    className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                  >
-                    📊 すべてのデータ
-                  </button>
-                </div>
-              </div>
-              
-              {/* インポートボタン */}
-              <div className="mb-6">
-                <h4 className="text-sm font-bold text-white/80 mb-3">📥 インポート（復元）</h4>
-                <label className="block">
-                  <input
-                    type="file"
-                    accept=".csv"
-                    onChange={importFromCSV}
-                    className="hidden"
-                    id="csv-import"
-                  />
-                  <div className="px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105 cursor-pointer text-center">
-                    📂 CSVファイルを選択
+                    記録数: {calculateSummary(profitView).count} 件
                   </div>
-                </label>
-              </div>
-              
-              {/* 一括削除ボタン */}
-              <div>
-                <h4 className="text-sm font-bold text-white/80 mb-3">🗑️ 一括削除</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                  <button
-                    onClick={() => bulkDelete('today')}
-                    className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                  >
-                    🔥 今日のデータ
-                  </button>
-                  <button
-                    onClick={() => bulkDelete('month')}
-                    className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                  >
-                    🔥 今月のデータ
-                  </button>
-                  <button
-                    onClick={() => bulkDelete('all')}
-                    className="px-4 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                  >
-                    ⚠️ すべて削除
-                  </button>
                 </div>
-                <p className="text-xs text-white/50 mt-2 text-center">
-                  ※ 削除前にエクスポートでバックアップを取ることをお勧めします
-                </p>
-              </div>
-            </div>
+
+                {/* 🆕 データ管理ボタン */}
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
+                  <h3 className="text-xl font-black text-white mb-4 flex items-center gap-2">
+                    <span className="text-2xl">⚙️</span>
+                    <span>データ管理</span>
+                  </h3>
+
+                  {/* エクスポートボタン */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-bold text-white/80 mb-3">💾 エクスポート（バックアップ）</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                      <button
+                        onClick={() => exportToCSV('today')}
+                        className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                      >
+                        📅 今日のデータ
+                      </button>
+                      <button
+                        onClick={() => exportToCSV('month')}
+                        className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                      >
+                        📆 今月のデータ
+                      </button>
+                      <button
+                        onClick={() => exportToCSV('all')}
+                        className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                      >
+                        📊 すべてのデータ
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* インポートボタン */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-bold text-white/80 mb-3">📥 インポート（復元）</h4>
+                    <label className="block">
+                      <input
+                        type="file"
+                        accept=".csv"
+                        onChange={importFromCSV}
+                        className="hidden"
+                        id="csv-import"
+                      />
+                      <div className="px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105 cursor-pointer text-center">
+                        📂 CSVファイルを選択
+                      </div>
+                    </label>
+                  </div>
+
+                  {/* 一括削除ボタン */}
+                  <div>
+                    <h4 className="text-sm font-bold text-white/80 mb-3">🗑️ 一括削除</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                      <button
+                        onClick={() => bulkDelete('today')}
+                        className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                      >
+                        🔥 今日のデータ
+                      </button>
+                      <button
+                        onClick={() => bulkDelete('month')}
+                        className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                      >
+                        🔥 今月のデータ
+                      </button>
+                      <button
+                        onClick={() => bulkDelete('all')}
+                        className="px-4 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                      >
+                        ⚠️ すべて削除
+                      </button>
+                    </div>
+                    <p className="text-xs text-white/50 mt-2 text-center">
+                      ※ 削除前にエクスポートでバックアップを取ることをお勧めします
+                    </p>
+                  </div>
+                </div>
 
                 {/* 保存された記録一覧 */}
                 <div className="space-y-3">
@@ -1936,8 +1936,8 @@ body {
                       key={record.id}
                       className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-lg"
                     >
-<div className="flex flex-col sm:flex-row items-start justify-between gap-3">
-  <div className="flex-1 w-full">
+                      <div className="flex flex-col sm:flex-row items-start justify-between gap-3">
+                        <div className="flex-1 w-full">
                           <div className="flex items-center gap-2 mb-2">
                             <span className="text-xs font-bold bg-amber-500/80 text-white px-2 py-0.5 rounded-full">
                               {record.category}
@@ -1979,10 +1979,10 @@ body {
                           </div>
                         </div>
 
-  <button
-    onClick={() => deleteRecord(record.id)}
-    className="w-full sm:w-auto sm:ml-4 px-3 py-1.5 bg-red-500/80 hover:bg-red-600/80 text-white rounded-lg text-xs font-bold transition-all"
-  >
+                        <button
+                          onClick={() => deleteRecord(record.id)}
+                          className="w-full sm:w-auto sm:ml-4 px-3 py-1.5 bg-red-500/80 hover:bg-red-600/80 text-white rounded-lg text-xs font-bold transition-all"
+                        >
                           削除
                         </button>
                       </div>
@@ -2051,16 +2051,16 @@ body {
                                   {item.specialTrait}
                                 </span>
                               )}
-<button
-  onClick={(e) => {
-    e.stopPropagation();
-    openRecipeWindow(item);
-  }}
-  className="hidden md:block ml-2 px-3 py-1 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-xs transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105"
-  style={{boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)'}}
->
-  📋 レシピ
-</button>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  openRecipeWindow(item);
+                                }}
+                                className="hidden md:block ml-2 px-3 py-1 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-xs transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105"
+                                style={{ boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)' }}
+                              >
+                                📋 レシピ
+                              </button>
                             </div>
                           </div>
                           {item.category === '料理' ? (
@@ -2210,8 +2210,8 @@ body {
                                     }));
                                   }}
                                   className={`flex-1 px-3 py-2 rounded-lg font-bold text-sm transition-all transform hover:scale-105 cursor-pointer ${(craftQuantity[item.name] || 1) === num
-                                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg border border-cyan-300/50'
-                                      : 'bg-white/10 backdrop-blur-sm text-white border border-white/30 hover:bg-white/20'
+                                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg border border-cyan-300/50'
+                                    : 'bg-white/10 backdrop-blur-sm text-white border border-white/30 hover:bg-white/20'
                                     }`}
                                   style={(craftQuantity[item.name] || 1) === num ? { boxShadow: '0 0 20px rgba(56, 189, 248, 0.5)' } : {}}
                                 >
@@ -2281,8 +2281,8 @@ body {
                                     setBazaarMode(prev => ({ ...prev, [item.name]: true }));
                                   }}
                                   className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(bazaarMode[item.name] ?? true)
-                                      ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-md'
-                                      : 'text-white/80 hover:bg-white/20'
+                                    ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-md'
+                                    : 'text-white/80 hover:bg-white/20'
                                     }`}
                                   style={(bazaarMode[item.name] ?? true) ? { boxShadow: '0 0 15px rgba(251, 191, 36, 0.5)' } : {}}
                                 >
@@ -2294,8 +2294,8 @@ body {
                                     setBazaarMode(prev => ({ ...prev, [item.name]: false }));
                                   }}
                                   className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(bazaarMode[item.name] ?? true) === false
-                                      ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-md'
-                                      : 'text-white/80 hover:bg-white/20'
+                                    ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-md'
+                                    : 'text-white/80 hover:bg-white/20'
                                     }`}
                                   style={(bazaarMode[item.name] ?? true) === false ? { boxShadow: '0 0 15px rgba(251, 191, 36, 0.5)' } : {}}
                                 >
@@ -2503,8 +2503,8 @@ body {
                                       }));
                                     }}
                                     className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(craftResults[`${item.name}_mode`] || 'simple') === 'simple'
-                                        ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
-                                        : 'text-white/80 hover:bg-white/20'
+                                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
+                                      : 'text-white/80 hover:bg-white/20'
                                       }`}
                                     style={(craftResults[`${item.name}_mode`] || 'simple') === 'simple' ? { boxShadow: '0 0 15px rgba(16, 185, 129, 0.5)' } : {}}
                                   >
@@ -2519,8 +2519,8 @@ body {
                                       }));
                                     }}
                                     className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(craftResults[`${item.name}_mode`] || 'simple') === 'detail'
-                                        ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
-                                        : 'text-white/80 hover:bg-white/20'
+                                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
+                                      : 'text-white/80 hover:bg-white/20'
                                       }`}
                                     style={(craftResults[`${item.name}_mode`] || 'simple') === 'detail' ? { boxShadow: '0 0 15px rgba(16, 185, 129, 0.5)' } : {}}
                                   >
