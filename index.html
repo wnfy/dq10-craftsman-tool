@@ -367,34 +367,59 @@
       '失敗'
     ];
     
+    // 数値をカンマ区切りにする関数
+    const formatNumber = (num) => {
+      return num.toLocaleString('ja-JP');
+    };
+    
     // CSVデータ
     const rows = targetRecords.map(record => {
-      const date = new Date(record.timestamp).toLocaleString('ja-JP');
+      // 日付を yyyy/MM/dd HH:mm 形式に（Excelで####にならない）
+      const date = new Date(record.timestamp);
+      const dateStr = `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')} ${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
+      
       const bazaarMode = record.bazaarMode ? 'バザー' : 'モーモン';
       const results = record.craftResults || {};
       
       return [
-        date,
+        dateStr,
         record.category,
         record.subCategory,
         record.itemName,
-        record.quantity,
-        record.totalIncome,
-        record.totalCost,
-        record.profit,
+        formatNumber(record.quantity),
+        formatNumber(record.totalIncome),
+        formatNumber(record.totalCost),
+        formatNumber(record.profit),
         bazaarMode,
-        results.star3 || 0,
-        results.star2 || 0,
-        results.star1 || 0,
-        results.star0 || 0,
-        results.fail || 0
+        formatNumber(results.star3 || 0),
+        formatNumber(results.star2 || 0),
+        formatNumber(results.star1 || 0),
+        formatNumber(results.star0 || 0),
+        formatNumber(results.fail || 0)
       ];
     });
+    
+    // 収益サマリーを計算
+    const totalIncome = targetRecords.reduce((sum, r) => sum + r.totalIncome, 0);
+    const totalCost = targetRecords.reduce((sum, r) => sum + r.totalCost, 0);
+    const totalProfit = totalIncome - totalCost;
+    
+    // サマリー行（空行 + サマリー）
+    const summaryRows = [
+      [''], // 空行
+      ['=== 収益サマリー ==='],
+      ['期間', periodNames[period]],
+      ['記録数', `${formatNumber(targetRecords.length)}件`],
+      ['総売上', `${formatNumber(totalIncome)}G`],
+      ['総コスト', `${formatNumber(totalCost)}G`],
+      ['純利益', `${formatNumber(totalProfit)}G`]
+    ];
     
     // CSV生成
     const csvContent = [
       headers.join(','),
-      ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
+      ...rows.map(row => row.map(cell => `"${cell}"`).join(',')),
+      ...summaryRows.map(row => row.map(cell => `"${cell}"`).join(','))
     ].join('\n');
     
     // BOM付きでダウンロード（Excelで文字化け防止）
@@ -433,15 +458,38 @@
         const importedRecords = [];
         
         for (const line of dataLines) {
+          // サマリー行をスキップ
+          if (line.includes('収益サマリー') || line.includes('期間') || line.includes('記録数') || line.includes('総売上') || line.includes('総コスト') || line.includes('純利益')) {
+            continue;
+          }
+          
+          // 空行をスキップ
+          if (line.trim() === '' || line === '""') {
+            continue;
+          }
+          
           // CSVパース（ダブルクォート対応）
           const matches = line.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
           if (!matches || matches.length < 14) continue;
           
-          const cells = matches.map(cell => cell.replace(/^"|"$/g, ''));
+          const cells = matches.map(cell => cell.replace(/^"|"$/g, '').replace(/,/g, '')); // カンマを除去
+          
+          // 日付パース（yyyy/MM/dd HH:mm形式に対応）
+          let timestamp;
+          try {
+            const dateStr = cells[0];
+            // yyyy/MM/dd HH:mm → Date
+            const [datePart, timePart] = dateStr.split(' ');
+            const [year, month, day] = datePart.split('/');
+            const [hour, minute] = (timePart || '00:00').split(':');
+            timestamp = new Date(year, month - 1, day, hour, minute).toISOString();
+          } catch {
+            timestamp = new Date().toISOString(); // パース失敗時は現在時刻
+          }
           
           const record = {
             id: Date.now() + Math.random(), // 新しいIDを生成
-            timestamp: new Date(cells[0]).toISOString(),
+            timestamp: timestamp,
             category: cells[1],
             subCategory: cells[2],
             itemName: cells[3],
