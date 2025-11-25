@@ -2160,13 +2160,13 @@
                         })()}
 
                         {isSelected && (
-                          <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)' }}>
+                          <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)'}}>
                             <div className="flex items-center justify-between mb-3">
-                              <h4 className="text-sm font-black text-white flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 20px rgba(16, 185, 129, 0.6)' }}>
+                              <h4 className="text-sm font-black text-white flex items-center gap-2 drop-shadow" style={{textShadow: '0 0 20px rgba(16, 185, 129, 0.6)'}}>
                                 <span className="text-xl">📝</span>
                                 <span>成果記録</span>
                               </h4>
-
+                              
                               {item.category === '道具鍛冶' && item.subCategory === '素材' && (
                                 <div className="flex gap-1 bg-white/10 backdrop-blur-sm rounded-lg p-1 shadow-sm border border-white/20">
                                   <button
@@ -2177,11 +2177,12 @@
                                         [`${item.name}_mode`]: 'simple'
                                       }));
                                     }}
-                                    className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(craftResults[`${item.name}_mode`] || 'simple') === 'simple'
-                                        ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
+                                    className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${
+                                      (craftResults[`${item.name}_mode`] || 'simple') === 'simple'
+                                        ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md' 
                                         : 'text-white/80 hover:bg-white/20'
-                                      }`}
-                                    style={(craftResults[`${item.name}_mode`] || 'simple') === 'simple' ? { boxShadow: '0 0 15px rgba(16, 185, 129, 0.5)' } : {}}
+                                    }`}
+                                    style={(craftResults[`${item.name}_mode`] || 'simple') === 'simple' ? {boxShadow: '0 0 15px rgba(16, 185, 129, 0.5)'} : {}}
                                   >
                                     個数入力
                                   </button>
@@ -2193,18 +2194,19 @@
                                         [`${item.name}_mode`]: 'detail'
                                       }));
                                     }}
-                                    className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(craftResults[`${item.name}_mode`] || 'simple') === 'detail'
-                                        ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
+                                    className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${
+                                      (craftResults[`${item.name}_mode`] || 'simple') === 'detail'
+                                        ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md' 
                                         : 'text-white/80 hover:bg-white/20'
-                                      }`}
-                                    style={(craftResults[`${item.name}_mode`] || 'simple') === 'detail' ? { boxShadow: '0 0 15px rgba(16, 185, 129, 0.5)' } : {}}
+                                    }`}
+                                    style={(craftResults[`${item.name}_mode`] || 'simple') === 'detail' ? {boxShadow: '0 0 15px rgba(16, 185, 129, 0.5)'} : {}}
                                   >
                                     詳細入力
                                   </button>
                                 </div>
                               )}
                             </div>
-
+                            
                             {item.category === '道具鍛冶' && item.subCategory === '素材' && (craftResults[`${item.name}_mode`] || 'simple') === 'simple' ? (
                               <div className="flex flex-col">
                                 <label className="text-xs font-bold text-white/80 mb-1 drop-shadow">作成できた個数</label>
@@ -2226,7 +2228,7 @@
                                       }));
                                     }}
                                     className="flex-1 px-3 py-2 rounded-lg border-2 border-emerald-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 font-bold text-right text-base text-white placeholder-white/50"
-                                    style={{ boxShadow: '0 0 15px rgba(16, 185, 129, 0.3)' }}
+                                    style={{boxShadow: '0 0 15px rgba(16, 185, 129, 0.3)'}}
                                   />
                                   <span className="text-white/80 font-bold text-sm drop-shadow">個</span>
                                 </div>
@@ -2261,19 +2263,19 @@
                                             }));
                                           }}
                                           className="flex-1 px-2 py-1.5 rounded-lg border-2 border-emerald-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 font-bold text-right text-sm text-white placeholder-white/50"
-                                          style={{ boxShadow: '0 0 15px rgba(16, 185, 129, 0.3)' }}
+                                          style={{boxShadow: '0 0 15px rgba(16, 185, 129, 0.3)'}}
                                         />
                                         <span className="text-white/80 font-bold text-xs drop-shadow">回</span>
                                       </div>
                                     </div>
                                   ))}
                                 </div>
-
+                                
                                 {(() => {
                                   const results = craftResults[item.name] || {};
                                   const total = (results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0);
                                   const expected = craftQuantity[item.name] || 1;
-
+                                  
                                   if (total > 0) {
                                     return (
                                       <div className={`mt-2 text-xs font-bold drop-shadow ${total === expected ? 'text-green-400' : 'text-orange-400'}`}>
@@ -2287,34 +2289,34 @@
                             )}
                           </div>
                         )}
-
+                        
                         {(() => {
                           const results = craftResults[item.name] || {};
                           const prices = sellPrices[item.name] || {};
                           const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
                           const isSimpleMode = isMaterial && (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
-
+                          
                           let hasData = false;
                           if (isMaterial && isSimpleMode) {
                             hasData = (results.totalItems > 0);
                           } else {
                             hasData = ((results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0) > 0);
                           }
-
+                          
                           const hasPrice = isMaterial ? prices.unitPrice : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
-
+                          
                           if (hasData && hasPrice) {
                             const feeRate = (bazaarMode[item.name] ?? true) ? 0.95 : 1.0;
-
+                            
                             let totalIncome;
-
+                            
                             if (isMaterial) {
                               const unitPrice = Math.floor((prices.unitPrice || 0) * feeRate);
-
+                              
                               if (isSimpleMode) {
                                 totalIncome = (results.totalItems || 0) * unitPrice;
                               } else {
-                                const totalItems =
+                                const totalItems = 
                                   (results.star3 || 0) * 10 +
                                   (results.star2 || 0) * 3 +
                                   (results.star1 || 0) * 2 +
@@ -2323,20 +2325,20 @@
                                 totalIncome = totalItems * unitPrice;
                               }
                             } else {
-                              totalIncome =
+                              totalIncome = 
                                 Math.floor((results.star3 || 0) * (prices.star3 || 0) * feeRate) +
                                 Math.floor((results.star2 || 0) * (prices.star2 || 0) * feeRate) +
                                 Math.floor((results.star1 || 0) * (prices.star1 || 0) * feeRate) +
                                 Math.floor((results.star0 || 0) * (prices.star0 || 0) * feeRate);
                             }
-
+                            
                             const totalCost = calculateTotal(item);
                             const profit = totalIncome - totalCost;
                             const profitRate = totalCost > 0 ? ((profit / totalCost) * 100).toFixed(1) : 0;
-
+                            
                             return (
-                              <div className="mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{ boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)' }}>
-                                <div className="text-xs font-bold text-white mb-2 flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 20px rgba(16, 185, 129, 0.6)' }}>
+                              <div className="mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)'}}>
+                                <div className="text-xs font-bold text-white mb-2 flex items-center gap-2 drop-shadow" style={{textShadow: '0 0 20px rgba(16, 185, 129, 0.6)'}}>
                                   <span className="text-lg">💵</span>
                                   <span>収支計算</span>
                                 </div>
@@ -2371,66 +2373,60 @@
                             );
                           }
                           return null;
-})()}
+                        })()}
+
+                        {/* 🆕 成果保存ボタン */}
+                        {(() => {
+                          const results = craftResults[item.name] || {};
+                          const prices = sellPrices[item.name] || {};
+                          const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
+                          const isSimpleMode = isMaterial && (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
+                          
+                          let hasData = false;
+                          if (isMaterial && isSimpleMode) {
+                            hasData = (results.totalItems > 0);
+                          } else {
+                            hasData = ((results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0) > 0);
+                          }
+                          
+                          const hasPrice = isMaterial ? prices.unitPrice : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
+                          
+                          if (hasData && hasPrice) {
+                            return (
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  saveRecord(item);
+                                }}
+                                className="mt-3 w-full px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                              >
+                                💾 成果を保存する
+                              </button>
+                            );
+                          }
+                          return null;
+                        })()}
+                      </div>
                     </div>
-                  )}
-
-                  {/* 🆕 成果保存ボタン */}
-                      {(() => {
-                        const results = craftResults[item.name] || {};
-                        const prices = sellPrices[item.name] || {};
-                        const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
-                        const isSimpleMode = isMaterial && (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
-
-                        let hasData = false;
-                        if (isMaterial && isSimpleMode) {
-                          hasData = (results.totalItems > 0);
-                        } else {
-                          hasData = ((results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0) > 0);
-                        }
-
-                        const hasPrice = isMaterial ? prices.unitPrice : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
-
-                        if (hasData && hasPrice) {
-                          return (
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                saveRecord(item);
-                              }}
-                              className="mt-3 w-full px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-                            >
-                              💾 成果を保存する
-                            </button>
-                          );
-                        }
-                        return null;
-                      })()}
-                    </div>
-                  )
-                }
-                                      </div>
-                                    </div>
-          );
-                                })}
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
-      )
-    }
-                          </div >
 
-      <footer className="bg-white/80 backdrop-blur-md mt-8 py-4">
-        <div className="max-w-5xl mx-auto px-3 text-center text-gray-600 text-xs">
-          <p className="font-bold">ドラクエ10 職人支援ツール</p>
-          <p className="mt-0.5 text-xs">プロトタイプ版 with 収益管理</p>
-        </div>
-      </footer>
-                        </div >
-                      );
-                    };
+        <footer className="bg-white/80 backdrop-blur-md mt-8 py-4">
+          <div className="max-w-5xl mx-auto px-3 text-center text-gray-600 text-xs">
+            <p className="font-bold">ドラクエ10 職人支援ツール</p>
+            <p className="mt-0.5 text-xs">プロトタイプ版 with 収益管理</p>
+          </div>
+        </footer>
+      </div>
+    );
+  };
 
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<CraftsmanApp />);
-  </script>
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(<CraftsmanApp />);
+</script>
 </body>
-
 </html>
