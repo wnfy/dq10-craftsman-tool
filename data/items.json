@@ -11374,6 +11374,45 @@
     "specialTrait": ""
   },
   {
+    "name": "アンティーク扇風機(昔ながらの扇風機)",
+    "category": "武器鍛冶",
+    "subCategory": "家具",
+    "gridType": "3x2",
+    "targetValues": {
+    },
+    "materials": [
+      { "name": "どうのこうせき", "quantity": 16 },
+      { "name": "星々のナミダ", "quantity": 12 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "天体図・銀(天体図・金)",
+    "category": "武器鍛冶",
+    "subCategory": "庭具",
+    "gridType": "3x2",
+    "targetValues": {
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 4 },
+      { "name": "晴れ呼びの笹", "quantity": 12 }
+    ],
+    "specialTrait": ""
+  },
+  {
+    "name": "天の川モビール・白(天の川モビール・青)",
+    "category": "武器鍛冶",
+    "subCategory": "庭具",
+    "gridType": "3x2",
+    "targetValues": {
+    },
+    "materials": [
+      { "name": "ぎんのこうせき", "quantity": 4 },
+      { "name": "星々のナミダ", "quantity": 12 }
+    ],
+    "specialTrait": ""
+  },
+  {
     "name": "プロミネンスの盾",
     "category": "防具鍛冶",
     "subCategory": "小盾",
