@@ -1427,30 +1427,36 @@ if (showWelcome) {
 )}
         
         {activeCategory === '木工' && (
-          <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
-            {woodworkTypes.map((type) => (
-              <button
-                key={type}
-                onClick={() => setSelectedWoodworkType(type)}
-                onMouseEnter={(e) => {
-  e.currentTarget.style.boxShadow = '0 0 40px rgba(251, 191, 36, 0.8), 0 0 60px rgba(251, 191, 36, 0.5)';
-  e.currentTarget.style.transform = 'scale(1.05)';
-}}
-onMouseLeave={(e) => {
-  e.currentTarget.style.boxShadow = '';
-  e.currentTarget.style.transform = 'scale(1)';
-}}
-                className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${
-                  selectedWoodworkType === type
-                    ? 'bg-amber-500/90 backdrop-blur-sm text-white shadow-lg border border-amber-300 scale-105'
-    : 'bg-white/20 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/30'
-                }`}
-              >
-                {type}
-              </button>
-            ))}
-          </div>
-        )}
+  <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
+    {woodworkTypes.map((type) => (
+      <button
+        key={type}
+        onClick={() => setSelectedWoodworkType(type)}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.boxShadow = '0 0 30px rgba(251, 146, 60, 0.6), 0 0 50px rgba(251, 146, 60, 0.4)';
+          e.currentTarget.style.transform = 'scale(1.05)';
+        }}
+        onMouseLeave={(e) => {
+          if (selectedWoodworkType === type) {
+            e.currentTarget.style.boxShadow = '0 0 20px rgba(251, 146, 60, 0.5)';
+            e.currentTarget.style.transform = 'scale(1.05)';
+          } else {
+            e.currentTarget.style.boxShadow = '';
+            e.currentTarget.style.transform = 'scale(1)';
+          }
+        }}
+        className={`px-4 py-1.5 rounded-lg font-bold text-xs whitespace-nowrap transition-all cursor-pointer ${
+          selectedWoodworkType === type
+            ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg border border-orange-300/50 scale-105'
+            : 'bg-white/10 backdrop-blur-sm text-white/80 border border-white/30 hover:bg-white/20'
+        }`}
+        style={selectedWoodworkType === type ? {boxShadow: '0 0 20px rgba(251, 146, 60, 0.5)'} : {}}
+      >
+        {type}
+      </button>
+    ))}
+  </div>
+)}
         
         {activeCategory === '料理' && (
           <div className="mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
