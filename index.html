@@ -261,6 +261,208 @@
           });
         }
 
+        // 🆕 期間でフィルタリングする関数
+  const filterRecordsByPeriod = (period) => {
+    const now = new Date();
+    
+    if (period === 'today') {
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      return savedRecords.filter(r => {
+        const recordDate = new Date(r.timestamp);
+        return recordDate >= today;
+      });
+    } else if (period === 'month') {
+      const thisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+      return savedRecords.filter(r => {
+        const recordDate = new Date(r.timestamp);
+        return recordDate >= thisMonth;
+      });
+    }
+    return savedRecords; // 'all'
+  };
+  
+  // 🆕 一括削除関数
+  const bulkDelete = (period) => {
+    const periodNames = {
+      today: '今日',
+      month: '今月',
+      all: 'すべて'
+    };
+    
+    const targetRecords = filterRecordsByPeriod(period);
+    
+    if (targetRecords.length === 0) {
+      alert(`${periodNames[period]}のデータはありません`);
+      return;
+    }
+    
+    if (confirm(`${periodNames[period]}のデータ（${targetRecords.length}件）を削除しますか？\n\nこの操作は取り消せません。`)) {
+      if (period === 'all') {
+        setSavedRecords([]);
+        localStorage.setItem('dqx_profit_records', JSON.stringify([]));
+        alert('すべてのデータを削除しました');
+      } else {
+        const targetIds = new Set(targetRecords.map(r => r.id));
+        const newRecords = savedRecords.filter(r => !targetIds.has(r.id));
+        setSavedRecords(newRecords);
+        localStorage.setItem('dqx_profit_records', JSON.stringify(newRecords));
+        alert(`${periodNames[period]}のデータ（${targetRecords.length}件）を削除しました`);
+      }
+    }
+  };
+  
+  // 🆕 CSVエクスポート関数
+  const exportToCSV = (period) => {
+    const periodNames = {
+      today: '今日',
+      month: '今月',
+      all: 'すべて'
+    };
+    
+    const targetRecords = filterRecordsByPeriod(period);
+    
+    if (targetRecords.length === 0) {
+      alert(`${periodNames[period]}のデータはありません`);
+      return;
+    }
+    
+    // CSVヘッダー
+    const headers = [
+      '日時',
+      'カテゴリ',
+      'サブカテゴリ',
+      '商材名',
+      '作成回数',
+      '総売上',
+      '総コスト',
+      '純利益',
+      'バザー/モーモン',
+      '☆☆☆',
+      '☆☆',
+      '☆',
+      '☆なし',
+      '失敗'
+    ];
+    
+    // CSVデータ
+    const rows = targetRecords.map(record => {
+      const date = new Date(record.timestamp).toLocaleString('ja-JP');
+      const bazaarMode = record.bazaarMode ? 'バザー' : 'モーモン';
+      const results = record.craftResults || {};
+      
+      return [
+        date,
+        record.category,
+        record.subCategory,
+        record.itemName,
+        record.quantity,
+        record.totalIncome,
+        record.totalCost,
+        record.profit,
+        bazaarMode,
+        results.star3 || 0,
+        results.star2 || 0,
+        results.star1 || 0,
+        results.star0 || 0,
+        results.fail || 0
+      ];
+    });
+    
+    // CSV生成
+    const csvContent = [
+      headers.join(','),
+      ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
+    ].join('\n');
+    
+    // BOM付きでダウンロード（Excelで文字化け防止）
+    const bom = '\uFEFF';
+    const blob = new Blob([bom + csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    const filename = `dqx_profit_${period}_${new Date().toISOString().split('T')[0]}.csv`;
+    
+    link.href = url;
+    link.download = filename;
+    link.click();
+    URL.revokeObjectURL(url);
+    
+    alert(`${periodNames[period]}のデータ（${targetRecords.length}件）をエクスポートしました`);
+  };
+  
+  // 🆕 CSVインポート関数
+  const importFromCSV = (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const text = e.target.result;
+        const lines = text.split('\n').filter(line => line.trim());
+        
+        if (lines.length < 2) {
+          alert('CSVファイルが空です');
+          return;
+        }
+        
+        // ヘッダーをスキップして、データ行をパース
+        const dataLines = lines.slice(1);
+        const importedRecords = [];
+        
+        for (const line of dataLines) {
+          // CSVパース（ダブルクォート対応）
+          const matches = line.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
+          if (!matches || matches.length < 14) continue;
+          
+          const cells = matches.map(cell => cell.replace(/^"|"$/g, ''));
+          
+          const record = {
+            id: Date.now() + Math.random(), // 新しいIDを生成
+            timestamp: new Date(cells[0]).toISOString(),
+            category: cells[1],
+            subCategory: cells[2],
+            itemName: cells[3],
+            quantity: parseInt(cells[4]) || 1,
+            totalIncome: parseInt(cells[5]) || 0,
+            totalCost: parseInt(cells[6]) || 0,
+            profit: parseInt(cells[7]) || 0,
+            bazaarMode: cells[8] === 'バザー',
+            craftResults: {
+              star3: parseInt(cells[9]) || 0,
+              star2: parseInt(cells[10]) || 0,
+              star1: parseInt(cells[11]) || 0,
+              star0: parseInt(cells[12]) || 0,
+              fail: parseInt(cells[13]) || 0
+            },
+            materialPrices: {},
+            toolPrice: 0,
+            sellPrices: {}
+          };
+          
+          importedRecords.push(record);
+        }
+        
+        if (importedRecords.length === 0) {
+          alert('有効なデータが見つかりませんでした');
+          return;
+        }
+        
+        if (confirm(`${importedRecords.length}件のデータをインポートしますか？\n\n既存のデータに追加されます。`)) {
+          const newRecords = [...importedRecords, ...savedRecords];
+          setSavedRecords(newRecords);
+          localStorage.setItem('dqx_profit_records', JSON.stringify(newRecords));
+          alert(`${importedRecords.length}件のデータをインポートしました`);
+        }
+      } catch (error) {
+        console.error('Import error:', error);
+        alert('CSVファイルの読み込みに失敗しました。ファイル形式を確認してください。');
+      }
+    };
+    
+    reader.readAsText(file);
+    event.target.value = ''; // input をリセット
+  };
+
         const totalIncome = filteredRecords.reduce((sum, r) => sum + r.totalIncome, 0);
         const totalCost = filteredRecords.reduce((sum, r) => sum + r.totalCost, 0);
         const profit = totalIncome - totalCost;
@@ -1597,9 +1799,87 @@ body {
                   })()}
 
                   <div className="mt-4 text-white/60 text-sm text-center">
-                    記録数: {calculateSummary(profitView).count} 件
-                  </div>
+                記録数: {calculateSummary(profitView).count} 件
+              </div>
+            </div>
+            
+            {/* 🆕 データ管理ボタン */}
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
+              <h3 className="text-xl font-black text-white mb-4 flex items-center gap-2">
+                <span className="text-2xl">⚙️</span>
+                <span>データ管理</span>
+              </h3>
+              
+              {/* エクスポートボタン */}
+              <div className="mb-6">
+                <h4 className="text-sm font-bold text-white/80 mb-3">💾 エクスポート（バックアップ）</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  <button
+                    onClick={() => exportToCSV('today')}
+                    className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    📅 今日のデータ
+                  </button>
+                  <button
+                    onClick={() => exportToCSV('month')}
+                    className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    📆 今月のデータ
+                  </button>
+                  <button
+                    onClick={() => exportToCSV('all')}
+                    className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    📊 すべてのデータ
+                  </button>
                 </div>
+              </div>
+              
+              {/* インポートボタン */}
+              <div className="mb-6">
+                <h4 className="text-sm font-bold text-white/80 mb-3">📥 インポート（復元）</h4>
+                <label className="block">
+                  <input
+                    type="file"
+                    accept=".csv"
+                    onChange={importFromCSV}
+                    className="hidden"
+                    id="csv-import"
+                  />
+                  <div className="px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105 cursor-pointer text-center">
+                    📂 CSVファイルを選択
+                  </div>
+                </label>
+              </div>
+              
+              {/* 一括削除ボタン */}
+              <div>
+                <h4 className="text-sm font-bold text-white/80 mb-3">🗑️ 一括削除</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  <button
+                    onClick={() => bulkDelete('today')}
+                    className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    🔥 今日のデータ
+                  </button>
+                  <button
+                    onClick={() => bulkDelete('month')}
+                    className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    🔥 今月のデータ
+                  </button>
+                  <button
+                    onClick={() => bulkDelete('all')}
+                    className="px-4 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    ⚠️ すべて削除
+                  </button>
+                </div>
+                <p className="text-xs text-white/50 mt-2 text-center">
+                  ※ 削除前にエクスポートでバックアップを取ることをお勧めします
+                </p>
+              </div>
+            </div>
 
                 {/* 保存された記録一覧 */}
                 <div className="space-y-3">
