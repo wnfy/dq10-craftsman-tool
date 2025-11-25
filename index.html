@@ -149,27 +149,27 @@
       // 🆕 収益管理用のstate
       const [savedRecords, setSavedRecords] = useState([]);
       const [profitView, setProfitView] = useState('today'); // 'today' or 'month'
-const [isPinned, setIsPinned] = useState(false);
-  
-  // 🆕 お気に入り機能用のstate
-  const [favoriteItems, setFavoriteItems] = useState([]);
+      const [isPinned, setIsPinned] = useState(false);
 
-// 🆕 LocalStorageから収益データを読み込む
-  useEffect(() => {
-    const saved = localStorage.getItem('dqx_profit_records');
-    if (saved) {
-      setSavedRecords(JSON.parse(saved));
-    }
-    const pinned = localStorage.getItem('dqx_profit_pinned');
-    if (pinned) {
-      setIsPinned(JSON.parse(pinned));
-    }
-    // 🆕 お気に入りを読み込み
-    const favorites = localStorage.getItem('dqx_favorite_items');
-    if (favorites) {
-      setFavoriteItems(JSON.parse(favorites));
-    }
-  }, []);
+      // 🆕 お気に入り機能用のstate
+      const [favoriteItems, setFavoriteItems] = useState([]);
+
+      // 🆕 LocalStorageから収益データを読み込む
+      useEffect(() => {
+        const saved = localStorage.getItem('dqx_profit_records');
+        if (saved) {
+          setSavedRecords(JSON.parse(saved));
+        }
+        const pinned = localStorage.getItem('dqx_profit_pinned');
+        if (pinned) {
+          setIsPinned(JSON.parse(pinned));
+        }
+        // 🆕 お気に入りを読み込み
+        const favorites = localStorage.getItem('dqx_favorite_items');
+        if (favorites) {
+          setFavoriteItems(JSON.parse(favorites));
+        }
+      }, []);
 
       // JSONファイルからデータを読み込む
       const [allItems, setAllItems] = useState([]);
@@ -543,36 +543,36 @@ const [isPinned, setIsPinned] = useState(false);
       };
 
       // 🆕 お気に入りトグル関数
-  const toggleFavorite = (item) => {
-    const itemKey = `${item.category}-${item.subCategory}-${item.name}`;
-    const existingIndex = favoriteItems.findIndex(
-      fav => `${fav.category}-${fav.subCategory}-${fav.name}` === itemKey
-    );
-    
-    let newFavorites;
-    if (existingIndex !== -1) {
-      // 既にお気に入りに存在 → 削除
-      newFavorites = favoriteItems.filter((_, index) => index !== existingIndex);
-    } else {
-      // お気に入りに追加（最新を先頭に）
-      const favoriteItem = {
-        ...item,
-        favoritedAt: Date.now()
+      const toggleFavorite = (item) => {
+        const itemKey = `${item.category}-${item.subCategory}-${item.name}`;
+        const existingIndex = favoriteItems.findIndex(
+          fav => `${fav.category}-${fav.subCategory}-${fav.name}` === itemKey
+        );
+
+        let newFavorites;
+        if (existingIndex !== -1) {
+          // 既にお気に入りに存在 → 削除
+          newFavorites = favoriteItems.filter((_, index) => index !== existingIndex);
+        } else {
+          // お気に入りに追加（最新を先頭に）
+          const favoriteItem = {
+            ...item,
+            favoritedAt: Date.now()
+          };
+          newFavorites = [favoriteItem, ...favoriteItems];
+        }
+
+        setFavoriteItems(newFavorites);
+        localStorage.setItem('dqx_favorite_items', JSON.stringify(newFavorites));
       };
-      newFavorites = [favoriteItem, ...favoriteItems];
-    }
-    
-    setFavoriteItems(newFavorites);
-    localStorage.setItem('dqx_favorite_items', JSON.stringify(newFavorites));
-  };
-  
-  // 🆕 お気に入りかどうかチェック
-  const isFavorite = (item) => {
-    const itemKey = `${item.category}-${item.subCategory}-${item.name}`;
-    return favoriteItems.some(
-      fav => `${fav.category}-${fav.subCategory}-${fav.name}` === itemKey
-    );
-  };
+
+      // 🆕 お気に入りかどうかチェック
+      const isFavorite = (item) => {
+        const itemKey = `${item.category}-${item.subCategory}-${item.name}`;
+        return favoriteItems.some(
+          fav => `${fav.category}-${fav.subCategory}-${fav.name}` === itemKey
+        );
+      };
 
       const handleReset = () => {
         setSearchQuery('');
@@ -595,61 +595,61 @@ const [isPinned, setIsPinned] = useState(false);
         }
       };
 
-const filteredItems = (() => {
-    // お気に入りカテゴリの場合
-    if (activeCategory === 'お気に入り') {
-      const searchMatch = searchActive === '';
-      if (!searchMatch) {
-        return favoriteItems.filter(item => 
-          item.name.toLowerCase().includes(searchActive.toLowerCase())
-        );
-      }
-      return favoriteItems;
-    }
-    
-    // 通常のフィルタリング
-    let items = allItems.filter(item => {
-      const categoryMatch = item.category === activeCategory;
-      const searchMatch = searchActive === '' || item.name.toLowerCase().includes(searchActive.toLowerCase());
-      
-      let subCategoryMatch = true;
-      
-      if (activeCategory === '武器鍛冶') {
-        subCategoryMatch = item.subCategory === selectedWeaponType;
-      }
-      
-      if (activeCategory === '防具鍛冶') {
-        subCategoryMatch = item.subCategory === selectedArmorType;
-      }
-      
-      if (activeCategory === '道具鍛冶') {
-        subCategoryMatch = item.subCategory === selectedToolType;
-      }
-      
-      if (activeCategory === '裁縫') {
-        subCategoryMatch = item.subCategory === selectedSewingType;
-      }
-      
-      if (activeCategory === '木工') {
-        subCategoryMatch = item.subCategory === selectedWoodworkType;
-      }
-      
-      if (activeCategory === '料理' && selectedCookingType !== '料理全部') {
-        subCategoryMatch = item.subCategory === selectedCookingType;
-      }
-      
-      return categoryMatch && searchMatch && subCategoryMatch;
-    });
-    
-    // 🆕 お気に入りアイテムを先頭に配置
-    const favoriteItemsInCategory = items.filter(item => isFavorite(item));
-    const nonFavoriteItems = items.filter(item => !isFavorite(item));
-    
-    return [...favoriteItemsInCategory, ...nonFavoriteItems];
-  })();
+      const filteredItems = (() => {
+        // お気に入りカテゴリの場合
+        if (activeCategory === 'お気に入り') {
+          const searchMatch = searchActive === '';
+          if (!searchMatch) {
+            return favoriteItems.filter(item =>
+              item.name.toLowerCase().includes(searchActive.toLowerCase())
+            );
+          }
+          return favoriteItems;
+        }
+
+        // 通常のフィルタリング
+        let items = allItems.filter(item => {
+          const categoryMatch = item.category === activeCategory;
+          const searchMatch = searchActive === '' || item.name.toLowerCase().includes(searchActive.toLowerCase());
+
+          let subCategoryMatch = true;
+
+          if (activeCategory === '武器鍛冶') {
+            subCategoryMatch = item.subCategory === selectedWeaponType;
+          }
+
+          if (activeCategory === '防具鍛冶') {
+            subCategoryMatch = item.subCategory === selectedArmorType;
+          }
+
+          if (activeCategory === '道具鍛冶') {
+            subCategoryMatch = item.subCategory === selectedToolType;
+          }
+
+          if (activeCategory === '裁縫') {
+            subCategoryMatch = item.subCategory === selectedSewingType;
+          }
+
+          if (activeCategory === '木工') {
+            subCategoryMatch = item.subCategory === selectedWoodworkType;
+          }
+
+          if (activeCategory === '料理' && selectedCookingType !== '料理全部') {
+            subCategoryMatch = item.subCategory === selectedCookingType;
+          }
+
+          return categoryMatch && searchMatch && subCategoryMatch;
+        });
+
+        // 🆕 お気に入りアイテムを先頭に配置
+        const favoriteItemsInCategory = items.filter(item => isFavorite(item));
+        const nonFavoriteItems = items.filter(item => !isFavorite(item));
+
+        return [...favoriteItemsInCategory, ...nonFavoriteItems];
+      })();
 
       // 🆕 収益管理を追加
-const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理', 'お気に入り', '収益管理'];
+      const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理', 'お気に入り', '収益管理'];
 
       const weaponTypes = ['片手剣', '両手剣', '短剣', 'ヤリ', 'オノ', 'ツメ', 'ムチ', 'ハンマー', 'ブーメラン', '鎌', '家具', '庭具'];
 
@@ -694,21 +694,21 @@ const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '�
         return (
           <div className="min-h-screen relative flex items-center justify-center overflow-hidden">
             {/* 背景動画 */}
-<video 
-  key="welcome-video"
-  autoPlay 
-  loop 
-  muted 
-  playsInline
-  className="fixed inset-0 -z-10 w-full h-full object-cover"
-  ref={(video) => {
-    if (video) {
-      video.playbackRate = 0.75; // 0.75倍速
-    }
-  }}
->
-  <source src="assets/bg-image-v10.mp4" type="video/mp4" />
-</video>
+            <video
+              key="welcome-video"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="fixed inset-0 -z-10 w-full h-full object-cover"
+              ref={(video) => {
+                if (video) {
+                  video.playbackRate = 0.75; // 0.75倍速
+                }
+              }}
+            >
+              <source src="assets/bg-image-v10.mp4" type="video/mp4" />
+            </video>
             {/* 背景オーバーレイ（動画を少し暗く） */}
             <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
 
@@ -1488,21 +1488,21 @@ body {
       // メインアプリ
       return (
         <div className="min-h-screen relative">
-<video 
-  key="main-video"
-  autoPlay 
-  loop 
-  muted 
-  playsInline
-  className="fixed inset-0 -z-10 w-full h-full object-cover"
-  ref={(video) => {
-    if (video) {
-      video.playbackRate = 0.75; // 0.75倍速
-    }
-  }}
->
-  <source src="assets/bg-image-v4.mp4" type="video/mp4" />
-</video>
+          <video
+            key="main-video"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="fixed inset-0 -z-10 w-full h-full object-cover"
+            ref={(video) => {
+              if (video) {
+                video.playbackRate = 0.75; // 0.75倍速
+              }
+            }}
+          >
+            <source src="assets/bg-image-v4.mp4" type="video/mp4" />
+          </video>
           <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
           <header className="bg-white/10 backdrop-blur-md shadow-lg sticky top-0 z-10 border-b border-white/20" style={{ boxShadow: '0 0 30px rgba(56, 189, 248, 0.3), 0 4px 6px rgba(0,0,0,0.1)' }}>
@@ -1575,25 +1575,25 @@ body {
             <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
               {categories.map((cat, idx) => {
                 const colors = [
-  'from-orange-500 to-amber-500',      // 武器鍛冶
-  'from-purple-500 to-violet-500',     // 防具鍛冶
-  'from-pink-500 to-rose-500',         // 道具鍛冶
-  'from-cyan-500 to-blue-500',         // 裁縫
-  'from-emerald-500 to-teal-500',      // 木工
-  'from-indigo-500 to-purple-500',     // 料理
-  'from-yellow-500 to-amber-500',      // お気に入り
-  'from-green-500 to-emerald-500'      // 収益管理
-];
-const glowColors = [
-  'rgba(251, 146, 60, 0.6)',           // 武器鍛冶
-  'rgba(168, 85, 247, 0.6)',           // 防具鍛冶
-  'rgba(236, 72, 153, 0.6)',           // 道具鍛冶
-  'rgba(56, 189, 248, 0.6)',           // 裁縫
-  'rgba(16, 185, 129, 0.6)',           // 木工
-  'rgba(99, 102, 241, 0.6)',           // 料理
-  'rgba(234, 179, 8, 0.6)',            // お気に入り
-  'rgba(34, 197, 94, 0.6)'             // 収益管理
-];
+                  'from-orange-500 to-amber-500',      // 武器鍛冶
+                  'from-purple-500 to-violet-500',     // 防具鍛冶
+                  'from-pink-500 to-rose-500',         // 道具鍛冶
+                  'from-cyan-500 to-blue-500',         // 裁縫
+                  'from-emerald-500 to-teal-500',      // 木工
+                  'from-indigo-500 to-purple-500',     // 料理
+                  'from-yellow-500 to-amber-500',      // お気に入り
+                  'from-green-500 to-emerald-500'      // 収益管理
+                ];
+                const glowColors = [
+                  'rgba(251, 146, 60, 0.6)',           // 武器鍛冶
+                  'rgba(168, 85, 247, 0.6)',           // 防具鍛冶
+                  'rgba(236, 72, 153, 0.6)',           // 道具鍛冶
+                  'rgba(56, 189, 248, 0.6)',           // 裁縫
+                  'rgba(16, 185, 129, 0.6)',           // 木工
+                  'rgba(99, 102, 241, 0.6)',           // 料理
+                  'rgba(234, 179, 8, 0.6)',            // お気に入り
+                  'rgba(34, 197, 94, 0.6)'             // 収益管理
+                ];
                 const isActive = activeCategory === cat;
 
                 return (
@@ -2124,29 +2124,28 @@ const glowColors = [
                                 </span>
                               )}
                               <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              openRecipeWindow(item);
-                            }}
-                            className="hidden md:block ml-2 px-3 py-1 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-xs transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105"
-                            style={{boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)'}}
-                          >
-                            📋 レシピ
-                          </button>
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              toggleFavorite(item);
-                            }}
-                            className={`ml-2 px-3 py-1 rounded-lg font-bold text-xs transition-all backdrop-blur-sm border transform hover:scale-105 ${
-                              isFavorite(item)
-                                ? 'bg-yellow-500/90 text-white border-yellow-400/50 shadow-lg'
-                                : 'bg-white/20 hover:bg-white/30 text-white border-white/30'
-                            }`}
-                            style={isFavorite(item) ? {boxShadow: '0 0 15px rgba(234, 179, 8, 0.6)'} : {boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)'}}
-                          >
-                            {isFavorite(item) ? '⭐ お気に入り' : '☆ お気に入り'}
-                          </button>
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  openRecipeWindow(item);
+                                }}
+                                className="hidden md:block ml-2 px-3 py-1 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-xs transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105"
+                                style={{ boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)' }}
+                              >
+                                📋 レシピ
+                              </button>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  toggleFavorite(item);
+                                }}
+                                className={`ml-2 px-3 py-1 rounded-lg font-bold text-xs transition-all backdrop-blur-sm border transform hover:scale-105 ${isFavorite(item)
+                                    ? 'bg-yellow-500/90 text-white border-yellow-400/50 shadow-lg'
+                                    : 'bg-white/20 hover:bg-white/30 text-white border-white/30'
+                                  }`}
+                                style={isFavorite(item) ? { boxShadow: '0 0 15px rgba(234, 179, 8, 0.6)' } : { boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)' }}
+                              >
+                                {isFavorite(item) ? '⭐ お気に入り' : '☆ お気に入り'}
+                              </button>
                             </div>
                           </div>
                           {item.category === '料理' ? (
