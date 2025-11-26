@@ -726,18 +726,20 @@ const [fontSize, setFontSize] = useState('normal'); // 'normal' or 'large'
       return {
         categories: Array(8).fill('from-gray-600 to-gray-700'),
         glowColors: Array(8).fill('rgba(156, 163, 175, 0.6)'),
-        subCategories: 'from-gray-600 to-gray-700', // 🆕 追加
+        subCategories: 'from-gray-600 to-gray-700',
         paramColors: {
           A: 'from-gray-500 to-gray-600',
           B: 'from-gray-500 to-gray-600',
           C: 'from-gray-500 to-gray-600',
           D: 'from-gray-500 to-gray-600',
           E: 'from-gray-500 to-gray-600',
-          F: 'from-gray-500 to-gray-600'
+          F: 'from-gray-500 to-gray-600',
+          G: 'from-gray-500 to-gray-600',
+          H: 'from-gray-500 to-gray-600'
         }
       };
     }
-    // カラフルモード（既存）
+    // カラフルモード（元の色）
     return {
       categories: [
         'from-orange-500 to-amber-500',
@@ -759,14 +761,16 @@ const [fontSize, setFontSize] = useState('normal'); // 'normal' or 'large'
         'rgba(234, 179, 8, 0.6)',
         'rgba(34, 197, 94, 0.6)'
       ],
-      subCategories: 'from-cyan-500/80 to-blue-500/80', // 🆕 追加
+      subCategories: 'from-cyan-500/80 to-blue-500/80',
       paramColors: {
-        A: 'from-orange-400/90 to-red-500/90',
-        B: 'from-yellow-400/90 to-orange-500/90',
-        C: 'from-green-400/90 to-emerald-500/90',
-        D: 'from-cyan-400/90 to-blue-500/90',
-        E: 'from-purple-400/90 to-pink-500/90',
-        F: 'from-pink-400/90 to-rose-500/90'
+        A: 'from-red-400 to-red-600',           // 赤
+        B: 'from-blue-400 to-blue-600',         // 青
+        C: 'from-green-400 to-green-600',       // 緑
+        D: 'from-purple-400 to-purple-600',     // 紫
+        E: 'from-orange-400 to-orange-600',     // オレンジ
+        F: 'from-lime-400 to-lime-600',         // イエローグリーン
+        G: 'from-cyan-400 to-cyan-600',         // 水色
+        H: 'from-rose-400 to-rose-600'          // ローズ
       }
     };
   };
