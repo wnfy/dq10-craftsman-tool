@@ -182,14 +182,14 @@
       // 🆕 お気に入り機能用のstate
       const [favoriteItems, setFavoriteItems] = useState([]);
 
-        // 🆕 UI設定用のstate
-  const [showBackgroundVideo, setShowBackgroundVideo] = useState(true);
-  const [theme, setTheme] = useState('colorful'); // 'colorful' or 'simple'
-  
-const [fontSize, setFontSize] = useState('normal'); // 'normal' or 'large'
-  
-  // 🆕 設定パネルの表示state
-  const [showSettings, setShowSettings] = useState(false);
+      // 🆕 UI設定用のstate
+      const [showBackgroundVideo, setShowBackgroundVideo] = useState(true);
+      const [theme, setTheme] = useState('colorful'); // 'colorful' or 'simple'
+
+      const [fontSize, setFontSize] = useState('normal'); // 'normal' or 'large'
+
+      // 🆕 設定パネルの表示state
+      const [showSettings, setShowSettings] = useState(false);
 
       // 🆕 LocalStorageから収益データを読み込む
       useEffect(() => {
@@ -201,26 +201,26 @@ const [fontSize, setFontSize] = useState('normal'); // 'normal' or 'large'
         if (pinned) {
           setIsPinned(JSON.parse(pinned));
         }
-// 🆕 お気に入りを読み込み
-    const favorites = localStorage.getItem('dqx_favorite_items');
-    if (favorites) {
-      setFavoriteItems(JSON.parse(favorites));
-    }
-    
-    // 🆕 UI設定を読み込み
-    const bgVideo = localStorage.getItem('dqx_bg_video');
-    if (bgVideo !== null) {
-      setShowBackgroundVideo(JSON.parse(bgVideo));
-    }
-    const savedTheme = localStorage.getItem('dqx_theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-    const savedFontSize = localStorage.getItem('dqx_font_size');
-    if (savedFontSize) {
-      setFontSize(savedFontSize);
-    }
-  }, []);
+        // 🆕 お気に入りを読み込み
+        const favorites = localStorage.getItem('dqx_favorite_items');
+        if (favorites) {
+          setFavoriteItems(JSON.parse(favorites));
+        }
+
+        // 🆕 UI設定を読み込み
+        const bgVideo = localStorage.getItem('dqx_bg_video');
+        if (bgVideo !== null) {
+          setShowBackgroundVideo(JSON.parse(bgVideo));
+        }
+        const savedTheme = localStorage.getItem('dqx_theme');
+        if (savedTheme) {
+          setTheme(savedTheme);
+        }
+        const savedFontSize = localStorage.getItem('dqx_font_size');
+        if (savedFontSize) {
+          setFontSize(savedFontSize);
+        }
+      }, []);
 
       // JSONファイルからデータを読み込む
       const [allItems, setAllItems] = useState([]);
@@ -634,25 +634,25 @@ const [fontSize, setFontSize] = useState('normal'); // 'normal' or 'large'
       };
 
       // 🆕 背景動画の切り替え
-  const toggleBackgroundVideo = () => {
-    const newValue = !showBackgroundVideo;
-    setShowBackgroundVideo(newValue);
-    localStorage.setItem('dqx_bg_video', JSON.stringify(newValue));
-  };
-  
-  // 🆕 テーマの切り替え
-  const toggleTheme = () => {
-    const newTheme = theme === 'colorful' ? 'simple' : 'colorful';
-    setTheme(newTheme);
-    localStorage.setItem('dqx_theme', newTheme);
-  };
-  
-  // 🆕 文字サイズの切り替え
-  const toggleFontSize = () => {
-    const newSize = fontSize === 'normal' ? 'large' : 'normal';
-    setFontSize(newSize);
-    localStorage.setItem('dqx_font_size', newSize);
-  };
+      const toggleBackgroundVideo = () => {
+        const newValue = !showBackgroundVideo;
+        setShowBackgroundVideo(newValue);
+        localStorage.setItem('dqx_bg_video', JSON.stringify(newValue));
+      };
+
+      // 🆕 テーマの切り替え
+      const toggleTheme = () => {
+        const newTheme = theme === 'colorful' ? 'simple' : 'colorful';
+        setTheme(newTheme);
+        localStorage.setItem('dqx_theme', newTheme);
+      };
+
+      // 🆕 文字サイズの切り替え
+      const toggleFontSize = () => {
+        const newSize = fontSize === 'normal' ? 'large' : 'normal';
+        setFontSize(newSize);
+        localStorage.setItem('dqx_font_size', newSize);
+      };
 
       const handleSearch = () => {
         setSearchActive(searchQuery);
@@ -720,63 +720,63 @@ const [fontSize, setFontSize] = useState('normal'); // 'normal' or 'large'
         return [...favoriteItemsInCategory, ...nonFavoriteItems];
       })();
 
-// 🆕 テーマ別のカラー設定
-  const getThemeColors = () => {
-    if (theme === 'simple') {
-      return {
-        categories: Array(8).fill('from-gray-600 to-gray-700'),
-        glowColors: Array(8).fill('rgba(156, 163, 175, 0.6)'),
-        subCategories: 'from-gray-600 to-gray-700',
-        paramColors: {
-          A: 'from-gray-500 to-gray-600',
-          B: 'from-gray-500 to-gray-600',
-          C: 'from-gray-500 to-gray-600',
-          D: 'from-gray-500 to-gray-600',
-          E: 'from-gray-500 to-gray-600',
-          F: 'from-gray-500 to-gray-600',
-          G: 'from-gray-500 to-gray-600',
-          H: 'from-gray-500 to-gray-600'
+      // 🆕 テーマ別のカラー設定
+      const getThemeColors = () => {
+        if (theme === 'simple') {
+          return {
+            categories: Array(8).fill('from-white/20 to-white/10'),  // 🔄 透過に変更
+            glowColors: Array(8).fill('rgba(255, 255, 255, 0.3)'),   // 🔄 白い光に変更
+            subCategories: 'from-white/20 to-white/10',              // 🔄 透過に変更
+            paramColors: {
+              A: 'from-indigo-500/80 to-purple-600/80',   // 夜空風ネオン（統一）
+              B: 'from-indigo-500/80 to-purple-600/80',
+              C: 'from-indigo-500/80 to-purple-600/80',
+              D: 'from-indigo-500/80 to-purple-600/80',
+              E: 'from-indigo-500/80 to-purple-600/80',
+              F: 'from-indigo-500/80 to-purple-600/80',
+              G: 'from-indigo-500/80 to-purple-600/80',
+              H: 'from-indigo-500/80 to-purple-600/80'
+            }
+          };
         }
+        // カラフルモード
+        return {
+          categories: [
+            'from-orange-500 to-amber-500',
+            'from-purple-500 to-violet-500',
+            'from-pink-500 to-rose-500',
+            'from-cyan-500 to-blue-500',
+            'from-emerald-500 to-teal-500',
+            'from-indigo-500 to-purple-500',
+            'from-yellow-500 to-amber-500',
+            'from-green-500 to-emerald-500'
+          ],
+          glowColors: [
+            'rgba(251, 146, 60, 0.6)',
+            'rgba(168, 85, 247, 0.6)',
+            'rgba(236, 72, 153, 0.6)',
+            'rgba(56, 189, 248, 0.6)',
+            'rgba(16, 185, 129, 0.6)',
+            'rgba(99, 102, 241, 0.6)',
+            'rgba(234, 179, 8, 0.6)',
+            'rgba(34, 197, 94, 0.6)'
+          ],
+          subCategories: 'from-cyan-500/80 to-blue-500/80',
+          paramColors: {
+            A: 'from-red-400 to-red-600',           // 赤
+            B: 'from-blue-400 to-blue-600',         // 青
+            C: 'from-green-400 to-green-600',       // 緑
+            D: 'from-purple-400 to-purple-600',     // 紫
+            E: 'from-orange-400 to-orange-600',     // オレンジ
+            F: 'from-lime-400 to-lime-600',         // イエローグリーン
+            G: 'from-cyan-400 to-cyan-600',         // 水色
+            H: 'from-rose-400 to-rose-600'          // ローズ
+          }
+        };
       };
-    }
-    // カラフルモード（元の色）
-    return {
-      categories: [
-        'from-orange-500 to-amber-500',
-        'from-purple-500 to-violet-500',
-        'from-pink-500 to-rose-500',
-        'from-cyan-500 to-blue-500',
-        'from-emerald-500 to-teal-500',
-        'from-indigo-500 to-purple-500',
-        'from-yellow-500 to-amber-500',
-        'from-green-500 to-emerald-500'
-      ],
-      glowColors: [
-        'rgba(251, 146, 60, 0.6)',
-        'rgba(168, 85, 247, 0.6)',
-        'rgba(236, 72, 153, 0.6)',
-        'rgba(56, 189, 248, 0.6)',
-        'rgba(16, 185, 129, 0.6)',
-        'rgba(99, 102, 241, 0.6)',
-        'rgba(234, 179, 8, 0.6)',
-        'rgba(34, 197, 94, 0.6)'
-      ],
-      subCategories: 'from-cyan-500/80 to-blue-500/80',
-      paramColors: {
-        A: 'from-red-400 to-red-600',           // 赤
-        B: 'from-blue-400 to-blue-600',         // 青
-        C: 'from-green-400 to-green-600',       // 緑
-        D: 'from-purple-400 to-purple-600',     // 紫
-        E: 'from-orange-400 to-orange-600',     // オレンジ
-        F: 'from-lime-400 to-lime-600',         // イエローグリーン
-        G: 'from-cyan-400 to-cyan-600',         // 水色
-        H: 'from-rose-400 to-rose-600'          // ローズ
-      }
-    };
-  };
 
-  const themeColors = getThemeColors();
-      
+      const themeColors = getThemeColors();
+
       const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理', 'お気に入り', '収益管理'];
 
       const weaponTypes = ['片手剣', '両手剣', '短剣', 'ヤリ', 'オノ', 'ツメ', 'ムチ', 'ハンマー', 'ブーメラン', '鎌', '家具', '庭具'];
@@ -823,24 +823,24 @@ const [fontSize, setFontSize] = useState('normal'); // 'normal' or 'large'
           <div className="min-h-screen relative flex items-center justify-center overflow-hidden">
             {/* 背景動画 */}
             {showBackgroundVideo ? (
-  <video
-    key="welcome-video"
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="fixed inset-0 -z-10 w-full h-full object-cover"
-    ref={(video) => {
-      if (video) {
-        video.playbackRate = 0.5;
-      }
-    }}
-  >
-    <source src="assets/bg-image-v10.mp4" type="video/mp4" />
-  </video>
-) : (
-  <div className="fixed inset-0 -z-10 bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700" />
-)}
+              <video
+                key="welcome-video"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="fixed inset-0 -z-10 w-full h-full object-cover"
+                ref={(video) => {
+                  if (video) {
+                    video.playbackRate = 0.5;
+                  }
+                }}
+              >
+                <source src="assets/bg-image-v10.mp4" type="video/mp4" />
+              </video>
+            ) : (
+              <div className="fixed inset-0 -z-10 bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700" />
+            )}
             {/* 背景オーバーレイ（動画を少し暗く） */}
             <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
 
@@ -973,8 +973,8 @@ const [fontSize, setFontSize] = useState('normal'); // 'normal' or 'large'
           </div>
         );
       }
-      
-const paramColors = themeColors.paramColors;
+
+      const paramColors = themeColors.paramColors;
 
       const gridColors = {
         A: 'from-rose-500 via-pink-500 to-red-500',
@@ -1630,27 +1630,27 @@ body {
 
       // メインアプリ
       return (
-<div className={`min-h-screen relative ${fontSize === 'large' ? 'text-lg' : ''}`}>
+        <div className={`min-h-screen relative ${fontSize === 'large' ? 'text-lg' : ''}`}>
           {showBackgroundVideo && (
-  <video
-    key="main-video"
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="fixed inset-0 -z-10 w-full h-full object-cover"
-    ref={(video) => {
-      if (video) {
-        video.playbackRate = 0.5;
-      }
-    }}
-  >
-    <source src="assets/bg-image-v3.mp4" type="video/mp4" />
-  </video>
-)}
-{!showBackgroundVideo && (
-  <div className="fixed inset-0 -z-10 bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700" />
-)}
+            <video
+              key="main-video"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="fixed inset-0 -z-10 w-full h-full object-cover"
+              ref={(video) => {
+                if (video) {
+                  video.playbackRate = 0.5;
+                }
+              }}
+            >
+              <source src="assets/bg-image-v3.mp4" type="video/mp4" />
+            </video>
+          )}
+          {!showBackgroundVideo && (
+            <div className="fixed inset-0 -z-10 bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700" />
+          )}
           <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
           <header className="bg-white/10 backdrop-blur-md shadow-lg sticky top-0 z-10 border-b border-white/20" style={{ boxShadow: '0 0 30px rgba(56, 189, 248, 0.3), 0 4px 6px rgba(0,0,0,0.1)' }}>
@@ -1735,12 +1735,12 @@ body {
                 >
                   リセット
                 </button>
-                
-                
+
+
               </div>
             </div>
             <div className="h-3"></div>
-</header>
+          </header>
 
           {showSettings && (
             <div className="max-w-5xl mx-auto px-3 py-6">
@@ -1749,7 +1749,7 @@ body {
                   <span className="text-2xl">⚙️</span>
                   <span>表示設定</span>
                 </h2>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
                     <div>
@@ -1758,16 +1758,15 @@ body {
                     </div>
                     <button
                       onClick={toggleBackgroundVideo}
-                      className={`px-6 py-2 rounded-lg font-bold transition-all ${
-                        showBackgroundVideo
+                      className={`px-6 py-2 rounded-lg font-bold transition-all ${showBackgroundVideo
                           ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
                           : 'bg-white/20 text-white/60'
-                      }`}
+                        }`}
                     >
                       {showBackgroundVideo ? 'ON' : 'OFF'}
                     </button>
                   </div>
-                  
+
                   <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
                     <div>
                       <div className="font-bold text-white">カラーテーマ</div>
@@ -1780,7 +1779,7 @@ body {
                       {theme === 'colorful' ? '🎨 カラフル' : '⚪ シンプル'}
                     </button>
                   </div>
-                  
+
                   <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
                     <div>
                       <div className="font-bold text-white">文字サイズ</div>
@@ -1797,16 +1796,16 @@ body {
               </div>
             </div>
           )}
-          
 
 
-  
+
+
 
           <div className="max-w-5xl mx-auto px-3 py-4">
             <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
               {categories.map((cat, idx) => {
-const colors = themeColors.categories;
-const glowColors = themeColors.glowColors;
+                const colors = themeColors.categories;
+                const glowColors = themeColors.glowColors;
                 const isActive = activeCategory === cat;
 
                 return (
@@ -1847,17 +1846,16 @@ const glowColors = themeColors.glowColors;
                   </button>
                 );
               })}
-<button
-  onClick={() => setShowSettings(!showSettings)}
-  className={`px-6 py-3 rounded-2xl font-bold shadow-lg transition-all transform hover:scale-105 border ${
-    showSettings
-      ? 'bg-gradient-to-r from-gray-500 to-gray-600 text-white border-gray-400/50'
-      : 'bg-white/10 backdrop-blur-sm text-white/80 hover:bg-white/20 border-white/30'
-  }`}
-  style={showSettings ? { boxShadow: '0 0 20px rgba(156, 163, 175, 0.6)' } : {}}
->
-  ⚙️ 設定
-</button>
+              <button
+                onClick={() => setShowSettings(!showSettings)}
+                className={`px-6 py-3 rounded-2xl font-bold shadow-lg transition-all transform hover:scale-105 border ${showSettings
+                    ? 'bg-gradient-to-r from-gray-500 to-gray-600 text-white border-gray-400/50'
+                    : 'bg-white/10 backdrop-blur-sm text-white/80 hover:bg-white/20 border-white/30'
+                  }`}
+                style={showSettings ? { boxShadow: '0 0 20px rgba(156, 163, 175, 0.6)' } : {}}
+              >
+                ⚙️ 設定
+              </button>
             </div>
 
             {/* サブカテゴリ表示 */}
@@ -1880,11 +1878,11 @@ const glowColors = themeColors.glowColors;
                         e.currentTarget.style.transform = 'scale(1)';
                       }
                     }}
-                    className={`px-4 py-2 rounded-xl font-bold text-sm transition-all transform hover:scale-105 ${
-  selectedWeaponType === type
-    ? `bg-gradient-to-r ${themeColors.subCategories} text-white shadow-lg`
-    : 'bg-white/10 backdrop-blur-sm text-white/80 hover:bg-white/20'
-}`}
+                    className={`px-4 py-2 rounded-xl font-bold text-sm transition-all transform hover:scale-105 ${selectedWeaponType === type
+                        ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg'
+                        : 'bg-white/10 backdrop-blur-sm text-white/80 hover:bg-white/20'
+                      }`}
+                    style={selectedWeaponType === type ? { boxShadow: '0 0 20px rgba(251, 146, 60, 0.6)' } : {}}
                     style={selectedWeaponType === type ? { boxShadow: '0 0 20px rgba(251, 146, 60, 0.5)' } : {}}
                   >
                     {type}
