@@ -1845,8 +1845,12 @@ const glowColors = themeColors.glowColors;
               })}
 <button
   onClick={() => setShowSettings(!showSettings)}
-  className={`px-6 py-3 bg-gradient-to-r ${themeColors.categories[7]} backdrop-blur-sm text-white rounded-2xl font-bold shadow-lg transition-all transform hover:scale-105 border border-white/30`}
-  style={{ boxShadow: `0 0 20px ${themeColors.glowColors[7]}` }}
+  className={`px-6 py-3 rounded-2xl font-bold shadow-lg transition-all transform hover:scale-105 border ${
+    showSettings
+      ? 'bg-gradient-to-r from-gray-500 to-gray-600 text-white border-gray-400/50'
+      : 'bg-white/10 backdrop-blur-sm text-white/80 hover:bg-white/20 border-white/30'
+  }`}
+  style={showSettings ? { boxShadow: '0 0 20px rgba(156, 163, 175, 0.6)' } : {}}
 >
   ⚙️ 設定
 </button>
