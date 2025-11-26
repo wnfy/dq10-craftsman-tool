@@ -1021,6 +1021,7 @@ const paramColors = themeColors.paramColors;
       // 片手剣（縦3）: A, B, C
       const renderOnHandSword = (targetValues) => {
         const positions = ['A', 'B', 'C'];
+        const paramColors = themeColors.paramColors;
         return (
           <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
             {positions.map((pos) => {
@@ -1050,6 +1051,7 @@ const paramColors = themeColors.paramColors;
           ['E', 'F'],
           ['G', 'H']
         ];
+        const paramColors = themeColors.paramColors;
         return (
           <div className="grid grid-cols-2 gap-2.5">
             {rows.flat().map((pos) => {
@@ -1075,6 +1077,7 @@ const paramColors = themeColors.paramColors;
       // 短剣（縦2）: A, B
       const renderDagger = (targetValues) => {
         const positions = ['A', 'B'];
+        const paramColors = themeColors.paramColors;
         return (
           <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
             {positions.map((pos) => {
@@ -1099,6 +1102,7 @@ const paramColors = themeColors.paramColors;
       // ヤリ（縦4）: A, B, C, D
       const renderSpear = (targetValues) => {
         const positions = ['A', 'B', 'C', 'D'];
+        const paramColors = themeColors.paramColors;
         return (
           <div className="grid grid-cols-1 gap-2.5 max-w-xs mx-auto">
             {positions.map((pos) => {
@@ -1122,6 +1126,8 @@ const paramColors = themeColors.paramColors;
 
       // オノ: A,B / C,D / E / G（FとH欠損）
       const renderAxe = (targetValues) => {
+        const paramColors = themeColors.paramColors;
+        const paramColors = themeColors.paramColors;
         return (
           <div className="space-y-2.5">
             <div className="grid grid-cols-2 gap-2.5">
@@ -1188,6 +1194,7 @@ const paramColors = themeColors.paramColors;
 
       // ムチ: A,B / C,D / E,F / G（H欠損）
       const renderWhip = (targetValues) => {
+        const paramColors = themeColors.paramColors;
         return (
           <div className="space-y-2.5">
             <div className="grid grid-cols-2 gap-2.5">
@@ -1266,6 +1273,7 @@ const paramColors = themeColors.paramColors;
           ['C', 'D'],
           ['E', 'F']
         ];
+        const paramColors = themeColors.paramColors;
         return (
           <div className="grid grid-cols-2 gap-2.5">
             {rows.flat().map((pos) => {
@@ -1290,6 +1298,7 @@ const paramColors = themeColors.paramColors;
 
       // ブーメラン（コの字型）: A,B / D / E,F（Cが欠損）
       const renderBoomerang = (targetValues) => {
+        const paramColors = themeColors.paramColors;
         return (
           <div className="space-y-2.5">
             <div className="grid grid-cols-2 gap-2.5">
@@ -1345,6 +1354,7 @@ const paramColors = themeColors.paramColors;
 
       // 鎌（L字反転型）: A,C,E,G（縦） / B（2行目のみ）
       const renderScythe = (targetValues) => {
+        const paramColors = themeColors.paramColors;
         return (
           <div className="space-y-2.5">
             <div className="grid grid-cols-2 gap-2.5">
@@ -1406,6 +1416,7 @@ const paramColors = themeColors.paramColors;
 
       // ABCD 4パラメータ表示
       const renderABCD = (targetValues) => {
+        const paramColors = themeColors.paramColors;
         return (
           <div className="grid grid-cols-2 gap-2.5">
             {Object.entries(targetValues).map(([param, values]) => (
@@ -1833,10 +1844,10 @@ const glowColors = themeColors.glowColors;
                   </button>
                 );
               })}
-              <button
+<button
   onClick={() => setShowSettings(!showSettings)}
-  className="px-6 py-3 bg-gradient-to-r from-slate-600 to-slate-700 backdrop-blur-sm text-white rounded-2xl font-bold shadow-lg transition-all transform hover:scale-105 border border-white/30"
-  style={{ boxShadow: '0 0 20px rgba(100, 116, 139, 0.6)' }}
+  className={`px-6 py-3 bg-gradient-to-r ${themeColors.categories[7]} backdrop-blur-sm text-white rounded-2xl font-bold shadow-lg transition-all transform hover:scale-105 border border-white/30`}
+  style={{ boxShadow: `0 0 20px ${themeColors.glowColors[7]}` }}
 >
   ⚙️ 設定
 </button>
