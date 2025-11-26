@@ -12144,24 +12144,17 @@
     "specialTrait": ""
   },
   {
-    "name": "神樹の大盾(中身仮)",
+    "name": "神樹の大盾",
     "category": "防具鍛冶",
     "subCategory": "大盾",
     "gridType": "2x2",
     "targetValues": {
-      "A": { "min": 295, "max": 303 },
-      "B": { "min": 240, "max": 248 },
-      "C": { "min": 200, "max": 208 },
-      "D": { "min": 315, "max": 323 }
+      
     },
     "materials": [
-      { "name": "ゼーラズマ鉱石", "quantity": 30 },
-      { "name": "トガリアのしずく", "quantity": 3 },
-      { "name": "せいれいせき", "quantity": 4 },
-      { "name": "黄金の飾り盾", "quantity": 1 },
-      { "name": "超ようせいのひだね", "quantity": 8 }
+      
     ],
-    "specialTrait": "倍半"
+    "specialTrait": ""
   },
   {
     "name": "古代鏡の大盾",
