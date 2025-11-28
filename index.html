@@ -1798,10 +1798,11 @@ body {
                         e.currentTarget.style.transform = 'scale(1)';
                       }
                     }}
-                    className={`px-4 py-2 rounded-xl font-bold text-sm transition-all transform hover:scale-105 ${selectedWeaponType === type
-                      ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg'
-                      : 'bg-white/10 backdrop-blur-sm text-white/80 hover:bg-white/20'
-                      }`}
+                    className={`px-4 py-2 rounded-xl font-bold text-sm whitespace-nowrap transition-all transform hover:scale-105 ${
+                      selectedWeaponType === type
+                        ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg'
+                        : 'bg-white/10 backdrop-blur-sm text-white/80 hover:bg-white/20'
+                    }`}
                     style={selectedWeaponType === type ? { boxShadow: '0 0 20px rgba(251, 146, 60, 0.6)' } : {}}
                   >
                     {type}
