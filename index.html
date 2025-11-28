@@ -774,7 +774,7 @@
 
       const themeColors = getThemeColors();
 
-const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理', 'お気に入り', '収益管理', '設定'];
+      const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理', 'お気に入り', '収益管理', '設定'];
 
       const weaponTypes = ['片手剣', '両手剣', '短剣', 'ヤリ', 'オノ', 'ツメ', 'ムチ', 'ハンマー', 'ブーメラン', '鎌', '家具', '庭具'];
 
@@ -1730,7 +1730,7 @@ body {
 
 
           <div className="max-w-5xl mx-auto px-3 py-4">
-<div className="flex gap-2 flex-wrap px-1 py-1">
+            <div className="flex gap-2 flex-wrap px-1 py-1">
               {categories.map((cat, idx) => {
                 const colors = themeColors.categories;
                 const glowColors = themeColors.glowColors;
@@ -1769,9 +1769,9 @@ body {
                       : 'bg-white/10 backdrop-blur-sm text-white shadow-sm border border-white/30'
                       }`}
                     style={isActive ? { boxShadow: `0 0 30px ${glowColors[idx % glowColors.length]}` } : {}}
->
-  {cat}
-</button>
+                  >
+                    {cat}
+                  </button>
                 );
               })}
             </div>
@@ -1797,8 +1797,8 @@ body {
                       }
                     }}
                     className={`px-4 py-2 rounded-xl font-bold text-sm transition-all transform hover:scale-105 ${selectedWeaponType === type
-                        ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg'
-                        : 'bg-white/10 backdrop-blur-sm text-white/80 hover:bg-white/20'
+                      ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg'
+                      : 'bg-white/10 backdrop-blur-sm text-white/80 hover:bg-white/20'
                       }`}
                     style={selectedWeaponType === type ? { boxShadow: '0 0 20px rgba(251, 146, 60, 0.6)' } : {}}
                     style={selectedWeaponType === type ? { boxShadow: '0 0 20px rgba(251, 146, 60, 0.5)' } : {}}
@@ -1817,7 +1817,7 @@ body {
                     <span className="text-2xl">⚙️</span>
                     <span>表示設定</span>
                   </h2>
-                  
+
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
                       <div>
@@ -1826,16 +1826,15 @@ body {
                       </div>
                       <button
                         onClick={toggleBackgroundVideo}
-                        className={`px-6 py-2 rounded-lg font-bold transition-all ${
-                          showBackgroundVideo
+                        className={`px-6 py-2 rounded-lg font-bold transition-all ${showBackgroundVideo
                             ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
                             : 'bg-white/20 text-white/60'
-                        }`}
+                          }`}
                       >
                         {showBackgroundVideo ? 'ON' : 'OFF'}
                       </button>
                     </div>
-                    
+
                     <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
                       <div>
                         <div className="font-bold text-white">カラーテーマ</div>
@@ -1848,7 +1847,7 @@ body {
                         {theme === 'colorful' ? 'カラフル' : 'シンプル'}
                       </button>
                     </div>
-                    
+
                     <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
                       <div>
                         <div className="font-bold text-white">文字サイズ</div>
