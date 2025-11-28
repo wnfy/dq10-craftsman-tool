@@ -1827,8 +1827,8 @@ body {
                       <button
                         onClick={toggleBackgroundVideo}
                         className={`px-6 py-2 rounded-lg font-bold transition-all ${showBackgroundVideo
-                            ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
-                            : 'bg-white/20 text-white/60'
+                          ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
+                          : 'bg-white/20 text-white/60'
                           }`}
                       >
                         {showBackgroundVideo ? 'ON' : 'OFF'}
@@ -2267,7 +2267,7 @@ body {
                   )}
                 </div>
               </div>
-            ) : filteredItems.length === 0 ? (
+            ) : filteredItems.length === 0 && activeCategory !== '設定' ? (
               <div className="text-center py-12">
                 <div className="text-4xl mb-3">🔍</div>
                 <p className="text-lg font-bold text-white/60">該当するアイテムが見つかりません</p>
@@ -2275,7 +2275,7 @@ body {
               </div>
             ) : (
               <div className="grid gap-12">
-  {activeCategory !== '設定' && filteredItems.map((item, index) => {
+                {activeCategory !== '設定' && filteredItems.map((item, index) => {
                   const isSelected = selectedItem === item.name;
                   return (
                     <div
