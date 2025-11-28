@@ -721,18 +721,18 @@
       const getThemeColors = () => {
         if (theme === 'simple') {
           return {
-            categories: Array(9).fill('from-white/20 to-white/10'),  // 🔄 透過に変更
-            glowColors: Array(9).fill('rgba(255, 255, 255, 0.3)'),   // 🔄 白い光に変更
-            subCategories: 'from-white/20 to-white/10',              // 🔄 透過に変更
+            categories: Array(9).fill('from-white/20 to-white/10'),  // 透過
+            glowColors: Array(9).fill('rgba(255, 255, 255, 0.3)'),   // 白い光
+            subCategories: 'from-white/20 to-white/10',              // 透過
             paramColors: {
-              A: 'from-indigo-500/80 to-purple-600/80',   // 夜空風ネオン（統一）
-              B: 'from-indigo-500/80 to-purple-600/80',
-              C: 'from-indigo-500/80 to-purple-600/80',
-              D: 'from-indigo-500/80 to-purple-600/80',
-              E: 'from-indigo-500/80 to-purple-600/80',
-              F: 'from-indigo-500/80 to-purple-600/80',
-              G: 'from-indigo-500/80 to-purple-600/80',
-              H: 'from-indigo-500/80 to-purple-600/80'
+              A: 'from-white/20 to-white/10',   // 透過シンプル
+              B: 'from-white/20 to-white/10',
+              C: 'from-white/20 to-white/10',
+              D: 'from-white/20 to-white/10',
+              E: 'from-white/20 to-white/10',
+              F: 'from-white/20 to-white/10',
+              G: 'from-white/20 to-white/10',
+              H: 'from-white/20 to-white/10'
             }
           };
         }
@@ -746,7 +746,8 @@
             'from-emerald-500 to-teal-500',
             'from-indigo-500 to-purple-500',
             'from-yellow-500 to-amber-500',
-            'from-green-500 to-emerald-500'
+            'from-green-500 to-emerald-500',
+            'from-slate-600 to-slate-700'  // 設定ボタン用
           ],
           glowColors: [
             'rgba(251, 146, 60, 0.6)',
@@ -756,18 +757,19 @@
             'rgba(16, 185, 129, 0.6)',
             'rgba(99, 102, 241, 0.6)',
             'rgba(234, 179, 8, 0.6)',
-            'rgba(34, 197, 94, 0.6)'
+            'rgba(34, 197, 94, 0.6)',
+            'rgba(100, 116, 139, 0.6)'  // 設定ボタン用
           ],
           subCategories: 'from-cyan-500/80 to-blue-500/80',
           paramColors: {
-            A: 'from-red-400 to-red-600',           // 赤
-            B: 'from-blue-400 to-blue-600',         // 青
-            C: 'from-green-400 to-green-600',       // 緑
-            D: 'from-purple-400 to-purple-600',     // 紫
-            E: 'from-orange-400 to-orange-600',     // オレンジ
-            F: 'from-lime-400 to-lime-600',         // イエローグリーン
-            G: 'from-cyan-400 to-cyan-600',         // 水色
-            H: 'from-rose-400 to-rose-600'          // ローズ
+            A: 'from-indigo-500/80 to-purple-600/80',   // 夜空風ネオン（統一）
+            B: 'from-indigo-500/80 to-purple-600/80',
+            C: 'from-indigo-500/80 to-purple-600/80',
+            D: 'from-indigo-500/80 to-purple-600/80',
+            E: 'from-indigo-500/80 to-purple-600/80',
+            F: 'from-indigo-500/80 to-purple-600/80',
+            G: 'from-indigo-500/80 to-purple-600/80',
+            H: 'from-indigo-500/80 to-purple-600/80'
           }
         };
       };
