@@ -1725,67 +1725,12 @@ body {
             <div className="h-3"></div>
           </header>
 
-{activeCategory === '設定' && (
-  <div className="max-w-5xl mx-auto px-3 py-6">
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
-                <h2 className="text-xl font-black text-white mb-4 flex items-center gap-2">
-                  <span className="text-2xl">⚙️</span>
-                  <span>表示設定</span>
-                </h2>
-
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
-                    <div>
-                      <div className="font-bold text-white">背景動画</div>
-                      <div className="text-xs text-white/60">動画を非表示にして動作を軽くする</div>
-                    </div>
-                    <button
-                      onClick={toggleBackgroundVideo}
-                      className={`px-6 py-2 rounded-lg font-bold transition-all ${showBackgroundVideo
-                          ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
-                          : 'bg-white/20 text-white/60'
-                        }`}
-                    >
-                      {showBackgroundVideo ? 'ON' : 'OFF'}
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
-                    <div>
-                      <div className="font-bold text-white">カラーテーマ</div>
-                      <div className="text-xs text-white/60">シンプルな配色に切り替え</div>
-                    </div>
-                    <button
-                      onClick={toggleTheme}
-                      className="px-6 py-2 rounded-lg font-bold transition-all bg-gradient-to-r from-purple-500 to-pink-500 text-white"
-                    >
-                      {theme === 'colorful' ? '🎨 カラフル' : '⚪ シンプル'}
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
-                    <div>
-                      <div className="font-bold text-white">文字サイズ</div>
-                      <div className="text-xs text-white/60">文字を大きく表示する</div>
-                    </div>
-                    <button
-                      onClick={toggleFontSize}
-                      className="px-6 py-2 rounded-lg font-bold transition-all bg-gradient-to-r from-green-500 to-emerald-500 text-white"
-                    >
-                      {fontSize === 'normal' ? 'A 標準' : 'A+ 大きめ'}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
 
 
 
 
           <div className="max-w-5xl mx-auto px-3 py-4">
-            <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
+<div className="flex gap-2 flex-wrap px-1 py-1">
               {categories.map((cat, idx) => {
                 const colors = themeColors.categories;
                 const glowColors = themeColors.glowColors;
@@ -1825,15 +1770,7 @@ body {
                       }`}
                     style={isActive ? { boxShadow: `0 0 30px ${glowColors[idx % glowColors.length]}` } : {}}
 >
-  {cat === '武器鍛冶' && '⚔️ 武器鍛冶'}
-  {cat === '防具鍛冶' && '🛡️ 防具鍛冶'}
-  {cat === '道具鍛冶' && '🔧 道具鍛冶'}
-  {cat === '裁縫' && '🧵 裁縫'}
-  {cat === '木工' && '🪵 木工'}
-  {cat === '料理' && '🍳 料理'}
-  {cat === 'お気に入り' && '⭐ お気に入り'}
-  {cat === '収益管理' && '💰 収益管理'}
-  {cat === '設定' && '⚙️ 設定'}
+  {cat}
 </button>
                 );
               })}
@@ -1869,6 +1806,63 @@ body {
                     {type}
                   </button>
                 ))}
+              </div>
+            )}
+
+            {/* 🆕 設定パネルをここに移動 */}
+            {activeCategory === '設定' && (
+              <div className="mt-3">
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
+                  <h2 className="text-xl font-black text-white mb-4 flex items-center gap-2">
+                    <span className="text-2xl">⚙️</span>
+                    <span>表示設定</span>
+                  </h2>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
+                      <div>
+                        <div className="font-bold text-white">背景動画</div>
+                        <div className="text-xs text-white/60">動画を非表示にして動作を軽くする</div>
+                      </div>
+                      <button
+                        onClick={toggleBackgroundVideo}
+                        className={`px-6 py-2 rounded-lg font-bold transition-all ${
+                          showBackgroundVideo
+                            ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
+                            : 'bg-white/20 text-white/60'
+                        }`}
+                      >
+                        {showBackgroundVideo ? 'ON' : 'OFF'}
+                      </button>
+                    </div>
+                    
+                    <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
+                      <div>
+                        <div className="font-bold text-white">カラーテーマ</div>
+                        <div className="text-xs text-white/60">シンプルな配色に切り替え</div>
+                      </div>
+                      <button
+                        onClick={toggleTheme}
+                        className="px-6 py-2 rounded-lg font-bold transition-all bg-gradient-to-r from-purple-500 to-pink-500 text-white"
+                      >
+                        {theme === 'colorful' ? 'カラフル' : 'シンプル'}
+                      </button>
+                    </div>
+                    
+                    <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
+                      <div>
+                        <div className="font-bold text-white">文字サイズ</div>
+                        <div className="text-xs text-white/60">文字を大きく表示する</div>
+                      </div>
+                      <button
+                        onClick={toggleFontSize}
+                        className="px-6 py-2 rounded-lg font-bold transition-all bg-gradient-to-r from-green-500 to-emerald-500 text-white"
+                      >
+                        {fontSize === 'normal' ? '標準' : '大きめ'}
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             )}
 
