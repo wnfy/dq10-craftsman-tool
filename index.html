@@ -188,9 +188,6 @@
 
       const [fontSize, setFontSize] = useState('normal'); // 'normal' or 'large'
 
-      // 🆕 設定パネルの表示state
-      const [showSettings, setShowSettings] = useState(false);
-
       // 🆕 LocalStorageから収益データを読み込む
       useEffect(() => {
         const saved = localStorage.getItem('dqx_profit_records');
@@ -724,8 +721,8 @@
       const getThemeColors = () => {
         if (theme === 'simple') {
           return {
-            categories: Array(8).fill('from-white/20 to-white/10'),  // 🔄 透過に変更
-            glowColors: Array(8).fill('rgba(255, 255, 255, 0.3)'),   // 🔄 白い光に変更
+            categories: Array(9).fill('from-white/20 to-white/10'),  // 🔄 透過に変更
+            glowColors: Array(9).fill('rgba(255, 255, 255, 0.3)'),   // 🔄 白い光に変更
             subCategories: 'from-white/20 to-white/10',              // 🔄 透過に変更
             paramColors: {
               A: 'from-indigo-500/80 to-purple-600/80',   // 夜空風ネオン（統一）
@@ -777,7 +774,7 @@
 
       const themeColors = getThemeColors();
 
-      const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理', 'お気に入り', '収益管理'];
+const categories = ['武器鍛冶', '防具鍛冶', '道具鍛冶', '裁縫', '木工', '料理', 'お気に入り', '収益管理', '設定'];
 
       const weaponTypes = ['片手剣', '両手剣', '短剣', 'ヤリ', 'オノ', 'ツメ', 'ムチ', 'ハンマー', 'ブーメラン', '鎌', '家具', '庭具'];
 
@@ -1728,8 +1725,8 @@ body {
             <div className="h-3"></div>
           </header>
 
-          {showSettings && (
-            <div className="max-w-5xl mx-auto px-3 py-6">
+{activeCategory === '設定' && (
+  <div className="max-w-5xl mx-auto px-3 py-6">
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
                 <h2 className="text-xl font-black text-white mb-4 flex items-center gap-2">
                   <span className="text-2xl">⚙️</span>
@@ -1827,21 +1824,19 @@ body {
                       : 'bg-white/10 backdrop-blur-sm text-white shadow-sm border border-white/30'
                       }`}
                     style={isActive ? { boxShadow: `0 0 30px ${glowColors[idx % glowColors.length]}` } : {}}
-                  >
-                    {cat}
-                  </button>
+>
+  {cat === '武器鍛冶' && '⚔️ 武器鍛冶'}
+  {cat === '防具鍛冶' && '🛡️ 防具鍛冶'}
+  {cat === '道具鍛冶' && '🔧 道具鍛冶'}
+  {cat === '裁縫' && '🧵 裁縫'}
+  {cat === '木工' && '🪵 木工'}
+  {cat === '料理' && '🍳 料理'}
+  {cat === 'お気に入り' && '⭐ お気に入り'}
+  {cat === '収益管理' && '💰 収益管理'}
+  {cat === '設定' && '⚙️ 設定'}
+</button>
                 );
               })}
-              <button
-                onClick={() => setShowSettings(!showSettings)}
-                className={`px-6 py-3 rounded-2xl font-bold shadow-lg transition-all transform hover:scale-105 border ${showSettings
-                    ? 'bg-gradient-to-r from-gray-500 to-gray-600 text-white border-gray-400/50'
-                    : 'bg-white/10 backdrop-blur-sm text-white/80 hover:bg-white/20 border-white/30'
-                  }`}
-                style={showSettings ? { boxShadow: '0 0 20px rgba(156, 163, 175, 0.6)' } : {}}
-              >
-                ⚙️ 設定
-              </button>
             </div>
 
             {/* サブカテゴリ表示 */}
