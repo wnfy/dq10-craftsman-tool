@@ -2022,7 +2022,7 @@ body {
           </div>
 
           {/* 🆕 ピン留めサマリー */}
-          {isPinned && activeCategory !== '収益管理' && (
+          {isPinned && activeCategory !== '収益管理' && activeCategory !== '設定' && (
             <div className="max-w-5xl mx-auto px-3 pb-3">
               <div className="bg-gradient-to-r from-green-500/90 to-emerald-500/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-green-300/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                 <div className="flex items-center gap-4">
@@ -2275,7 +2275,7 @@ body {
               </div>
             ) : (
               <div className="grid gap-12">
-                {filteredItems.map((item, index) => {
+  {activeCategory !== '設定' && filteredItems.map((item, index) => {
                   const isSelected = selectedItem === item.name;
                   return (
                     <div
