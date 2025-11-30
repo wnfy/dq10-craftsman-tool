@@ -1031,13 +1031,14 @@
             {positions.map((pos) => {
               const value = targetValues[pos];
               return (
-                <div
-                  key={pos}
-                  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border-2 border-white/60`}
-                  style={{ 
-                    boxShadow: '0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 0.6), 0 0 80px rgba(255, 255, 255, 0.3)'
-                  }}
-                >
+<div
+  key={pos}
+  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg`}
+  style={{ 
+    boxShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3)',
+    outline: '2px solid rgba(255, 255, 255, 0.6)'
+  }}
+>
                   <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
                   <div className="text-2xl font-black mt-1 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
                     {value.min} - {value.max}
