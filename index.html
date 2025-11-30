@@ -999,11 +999,12 @@
 
               return (
                 <div
-                  key={pos}
-                  className={`p-4 rounded-xl text-white shadow-lg flex flex-col items-center justify-center ${isEmpty ? 'bg-white/10 backdrop-blur-sm border border-white/20' : `bg-gradient-to-br ${gridColors[pos]} backdrop-blur-sm border border-white/30`
-                    }`}
-                  style={isEmpty ? {} : { boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)' }}
-                >
+  key={pos}
+  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border-2 border-white/50`}
+  style={{ 
+    boxShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3)'
+  }}
+>
                   <div className={`text-xs font-bold tracking-wider ${isEmpty ? 'text-white/40' : 'opacity-90 drop-shadow'}`}>
                     {pos}
                   </div>
