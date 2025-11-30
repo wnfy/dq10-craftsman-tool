@@ -732,7 +732,8 @@
               E: 'from-white/20 to-white/10',
               F: 'from-white/20 to-white/10',
               G: 'from-white/20 to-white/10',
-              H: 'from-white/20 to-white/10'
+              H: 'from-white/20 to-white/10',
+              I: 'from-white/20 to-white/10'
             }
           };
         }
@@ -769,7 +770,8 @@
             E: 'from-white/50 to-white/40',
             F: 'from-white/50 to-white/40',
             G: 'from-white/50 to-white/40',
-            H: 'from-white/50 to-white/40'
+            H: 'from-white/50 to-white/40',
+            I: 'from-white/50 to-white/40
           }
         };
       };
@@ -998,7 +1000,7 @@
               const isEmpty = !value;
 
               return (
-                <div
+<div
   key={pos}
   className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border-2 border-white/50`}
   style={{ 
@@ -1064,11 +1066,13 @@
               const value = targetValues[pos];
               if (!value) return null;
               return (
-                <div
-                  key={pos}
-                  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
-                  style={{ boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)' }}
-                >
+<div
+  key={pos}
+  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border-2 border-white/50`}
+  style={{ 
+    boxShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3)'
+  }}
+>
                   <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
                   <div className="text-2xl font-black mt-1 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
                     {value.min} - {value.max}
@@ -1089,11 +1093,13 @@
             {positions.map((pos) => {
               const value = targetValues[pos];
               return (
-                <div
-                  key={pos}
-                  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
-                  style={{ boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)' }}
-                >
+<div
+  key={pos}
+  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border-2 border-white/50`}
+  style={{ 
+    boxShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3)'
+  }}
+>
                   <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
                   <div className="text-2xl font-black mt-1 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
                     {value.min} - {value.max}
@@ -1114,11 +1120,13 @@
             {positions.map((pos) => {
               const value = targetValues[pos];
               return (
-                <div
-                  key={pos}
-                  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
-                  style={{ boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)' }}
-                >
+<div
+  key={pos}
+  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border-2 border-white/50`}
+  style={{ 
+    boxShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3)'
+  }}
+>
                   <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
                   <div className="text-2xl font-black mt-1 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
                     {value.min} - {value.max}
@@ -1140,11 +1148,13 @@
                 const value = targetValues[pos];
                 if (!value) return null;
                 return (
-                  <div
-                    key={pos}
-                    className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
-                    style={{ boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)' }}
-                  >
+<div
+  key={pos}
+  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border-2 border-white/50`}
+  style={{ 
+    boxShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3)'
+  }}
+>
                     <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
                     <div className="text-2xl font-black mt-1 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
                       {value.min} - {value.max}
@@ -1207,11 +1217,13 @@
                 const value = targetValues[pos];
                 if (!value) return null;
                 return (
-                  <div
-                    key={pos}
-                    className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
-                    style={{ boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)' }}
-                  >
+<div
+  key={pos}
+  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border-2 border-white/50`}
+  style={{ 
+    boxShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3)'
+  }}
+>
                     <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
                     <div className="text-2xl font-black mt-1 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
                       {value.min} - {value.max}
@@ -1285,11 +1297,13 @@
               const value = targetValues[pos];
               if (!value) return null;
               return (
-                <div
-                  key={pos}
-                  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
-                  style={{ boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)' }}
-                >
+<div
+  key={pos}
+  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border-2 border-white/50`}
+  style={{ 
+    boxShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3)'
+  }}
+>
                   <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
                   <div className="text-2xl font-black mt-1 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
                     {value.min} - {value.max}
@@ -1311,11 +1325,13 @@
                 const value = targetValues[pos];
                 if (!value) return null;
                 return (
-                  <div
-                    key={pos}
-                    className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border border-white/30`}
-                    style={{ boxShadow: '0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1)' }}
-                  >
+<div
+  key={pos}
+  className={`bg-gradient-to-br ${paramColors[pos]} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border-2 border-white/50`}
+  style={{ 
+    boxShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3)'
+  }}
+>
                     <div className="text-xs font-bold opacity-90 tracking-wider text-center drop-shadow">{pos}</div>
                     <div className="text-2xl font-black mt-1 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
                       {value.min} - {value.max}
