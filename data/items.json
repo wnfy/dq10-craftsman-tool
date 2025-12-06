@@ -95,6 +95,123 @@
     ]
   },
   {
+    "name": "黄金の飾り両手剣",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾り短剣",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾りヤリ",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾りオノ",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾りハンマー",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾りツメ",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾りブーメラン",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾りムチ",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾りスティック",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
     "name": "きようさにくまん",
     "category": "料理",
     "gridType": "3x3",
