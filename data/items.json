@@ -42,6 +42,46 @@
     ]
   },
   {
+    "name": "超あまつゆのいと",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "倍半",
+    "targetValues": {
+      "A": { "min": 180, "max": 190 },
+      "B": { "min": 245, "max": 251 },
+      "C": { "min": 150, "max": 156 },
+      "D": { "min": 180, "max": 190 },
+      "E": { "min": 180, "max": 190 },
+      "F": { "min": 245, "max": 251 }
+    },
+    "materials": [
+      { "name": "汗と涙の結晶", "quantity": 99 },
+      { "name": "虹色のオーブ", "quantity": 30 },
+      { "name": "あまつゆのいと", "quantity": 50 }
+    ]
+  },
+  {
+    "name": "超かがやきの樹液",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "集中力変化",
+    "targetValues": {
+      "A": { "min": 155, "max": 161 },
+      "B": { "min": 220, "max": 230 },
+      "C": { "min": 155, "max": 161 },
+      "D": { "min": 220, "max": 230 },
+      "E": { "min": 140, "max": 150 },
+      "F": { "min": 140, "max": 150 }
+    },
+    "materials": [
+      { "name": "汗と涙の結晶", "quantity": 99 },
+      { "name": "虹色のオーブ", "quantity": 30 },
+      { "name": "あまつゆのいと", "quantity": 50 }
+    ]
+  },
+  {
     "name": "きようさにくまん",
     "category": "料理",
     "gridType": "3x3",
