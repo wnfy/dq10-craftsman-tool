@@ -2105,6 +2105,16 @@ body {
                         今月
                       </button>
                       <button
+                        onClick={() => setProfitView('all')}
+                        className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${
+                          profitView === 'all'
+                            ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
+                            : 'bg-white/10 text-white/60 hover:bg-white/20'
+                        }`}
+                      >
+                        すべて
+                      </button>
+                      <button
                         onClick={togglePin}
                         className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${isPinned
                           ? 'bg-green-500/90 text-white shadow-lg'
