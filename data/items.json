@@ -212,6 +212,136 @@
     ]
   },
   {
+    "name": "黄金の飾り両手杖",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾り棍",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾り扇",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾り弓",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾り盾",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾りかぶと",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾りよろい上",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾りよろい下",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄黄金の飾りこて",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
+    "name": "黄金の飾りくつ",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
     "name": "きようさにくまん",
     "category": "料理",
     "gridType": "3x3",
