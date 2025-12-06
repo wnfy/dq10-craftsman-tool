@@ -82,6 +82,19 @@
     ]
   },
   {
+    "name": "黄金の飾り片手剣",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+
+    },
+    "materials": [
+
+    ]
+  },
+  {
     "name": "きようさにくまん",
     "category": "料理",
     "gridType": "3x3",
