@@ -82,6 +82,26 @@
     ]
   },
   {
+    "name": "黄金の飾り片手剣",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "",
+    "targetValues": {
+      "A": { "min": , "max":  },
+      "B": { "min": , "max":  },
+      "C": { "min": , "max":  },
+      "D": { "min": , "max":  },
+      "E": { "min": , "max":  },
+      "F": { "min": , "max":  }
+    },
+    "materials": [
+      { "name": "", "quantity":  },
+      { "name": "", "quantity":  },
+      { "name": "", "quantity":  }
+    ]
+  },
+  {
     "name": "きようさにくまん",
     "category": "料理",
     "gridType": "3x3",
