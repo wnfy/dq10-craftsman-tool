@@ -1,5 +1,27 @@
 [
   {
+    "name": "虹色のオーブ",
+    "category": "道具鍛冶",
+    "subCategory": "素材",
+    "gridType": "3x2",
+    "specialTrait": "回復",
+    "targetValues": {
+      "A": { "min": 85, "max": 95 },
+      "B": { "min": 140, "max": 148 },
+      "C": { "min": 115, "max": 121 },
+      "D": { "min": 140, "max": 148 },
+      "E": { "min": 115, "max": 121 },
+      "F": { "min": 85, "max": 95 }
+    },
+    "materials": [
+      { "name": "レッドオーブ", "quantity": 3 },
+      { "name": "ブルーオーブ", "quantity": 3 },
+      { "name": "イエローオーブ", "quantity": 3 },
+      { "name": "グリーンオーブ", "quantity": 3 },
+      { "name": "パープルオーブ", "quantity": 3 }
+    ]
+  },
+  {
     "name": "超ようせいのひだね",
     "category": "道具鍛冶",
     "subCategory": "素材",
