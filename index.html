@@ -179,6 +179,9 @@
       const [profitView, setProfitView] = useState('today'); // 'today' or 'month'
       const [isPinned, setIsPinned] = useState(false);
 
+      // 🆕 収益管理の詳細表示制御
+      const [showProfitDetails, setShowProfitDetails] = useState(true);
+
       // 🆕 お気に入り機能用のstate
       const [favoriteItems, setFavoriteItems] = useState([]);
 
@@ -216,6 +219,12 @@
         const savedFontSize = localStorage.getItem('dqx_font_size');
         if (savedFontSize) {
           setFontSize(savedFontSize);
+        }
+
+        // 🆕 収益詳細表示設定を読み込み
+        const savedProfitDetails = localStorage.getItem('dqx_show_profit_details');
+        if (savedProfitDetails !== null) {
+          setShowProfitDetails(JSON.parse(savedProfitDetails));
         }
       }, []);
 
@@ -649,6 +658,13 @@
         const newSize = fontSize === 'normal' ? 'large' : 'normal';
         setFontSize(newSize);
         localStorage.setItem('dqx_font_size', newSize);
+      };
+
+      // 🆕 収益詳細の表示切り替え
+      const toggleProfitDetails = () => {
+        const newValue = !showProfitDetails;
+        setShowProfitDetails(newValue);
+        localStorage.setItem('dqx_show_profit_details', JSON.stringify(newValue));
       };
 
       const handleSearch = () => {
@@ -2149,716 +2165,771 @@ body {
                             {summary.profit >= 0 ? '+' : ''}{summary.profit.toLocaleString()} G
                           </div>
                         </div>
-                      </div>
+</div>
                     );
                   })()}
+                  
+                  {/* 🆕 詳細表示トグルボタン */}
+                  <div className="mt-4 text-center">
+                    <button
+                      onClick={toggleProfitDetails}
+                      className="px-6 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg font-bold text-sm text-white transition-all border border-white/30"
+                    >
+                      {showProfitDetails ? '👁️ 詳細を非表示' : '👁️ 詳細を表示'}
+                    </button>
+                  </div>
+                </div>
+              </div>
 
                   <div className="mt-4 text-white/60 text-sm text-center">
                     記録数: {calculateSummary(profitView).count} 件
                   </div>
                 </div>
 
-                {/* 🆕 データ管理ボタン */}
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
-                  <h3 className="text-xl font-black text-white mb-4 flex items-center gap-2">
-                    <span className="text-2xl">⚙️</span>
-                    <span>データ管理</span>
-                  </h3>
+          {/* 🆕 データ管理ボタン */}
+          {showProfitDetails && (
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
+              <h3 className="text-xl font-black text-white mb-4 flex items-center gap-2">
+                <span className="text-2xl">⚙️</span>
+                <span>データ管理</span>
+              </h3>
 
-                  {/* エクスポートボタン */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-bold text-white/80 mb-3">💾 エクスポート（バックアップ）</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                      <button
-                        onClick={() => exportToCSV('today')}
-                        className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        📅 今日のデータ
-                      </button>
-                      <button
-                        onClick={() => exportToCSV('month')}
-                        className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        📆 今月のデータ
-                      </button>
-                      <button
-                        onClick={() => exportToCSV('all')}
-                        className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        📊 すべてのデータ
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* インポートボタン */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-bold text-white/80 mb-3">📥 インポート（復元）</h4>
-                    <label className="block">
-                      <input
-                        type="file"
-                        accept=".csv"
-                        onChange={importFromCSV}
-                        className="hidden"
-                        id="csv-import"
-                      />
-                      <div className="px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105 cursor-pointer text-center">
-                        📂 CSVファイルを選択
-                      </div>
-                    </label>
-                  </div>
-
-                  {/* 一括削除ボタン */}
-                  <div>
-                    <h4 className="text-sm font-bold text-white/80 mb-3">🗑️ 一括削除</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                      <button
-                        onClick={() => bulkDelete('today')}
-                        className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        🔥 今日のデータ
-                      </button>
-                      <button
-                        onClick={() => bulkDelete('month')}
-                        className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        🔥 今月のデータ
-                      </button>
-                      <button
-                        onClick={() => bulkDelete('all')}
-                        className="px-4 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        ⚠️ すべて削除
-                      </button>
-                    </div>
-                    <p className="text-xs text-white/50 mt-2 text-center">
-                      ※ 削除前にエクスポートでバックアップを取ることをお勧めします
-                    </p>
-                  </div>
+              {/* エクスポートボタン */}
+              <div className="mb-6">
+                <h4 className="text-sm font-bold text-white/80 mb-3">💾 エクスポート（バックアップ）</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  <button
+                    onClick={() => exportToCSV('today')}
+                    className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    📅 今日のデータ
+                  </button>
+                  <button
+                    onClick={() => exportToCSV('month')}
+                    className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    📆 今月のデータ
+                  </button>
+                  <button
+                    onClick={() => exportToCSV('all')}
+                    className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    📊 すべてのデータ
+                  </button>
                 </div>
+              </div>
 
-                {/* 保存された記録一覧 */}
-                <div className="space-y-3">
-                  {savedRecords.map((record) => (
-                    <div
-                      key={record.id}
-                      className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-lg"
-                    >
-                      <div className="flex flex-col sm:flex-row items-start justify-between gap-3">
-                        <div className="flex-1 w-full">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="text-xs font-bold bg-amber-500/80 text-white px-2 py-0.5 rounded-full">
-                              {record.category}
-                            </span>
-                            <span className="text-white font-bold">{record.itemName}</span>
-                            <span className="text-white/60 text-xs">
-                              ×{record.quantity}回
-                            </span>
-                          </div>
+              {/* インポートボタン */}
+              <div className="mb-6">
+                <h4 className="text-sm font-bold text-white/80 mb-3">📥 インポート（復元）</h4>
+                <label className="block">
+                  <input
+                    type="file"
+                    accept=".csv"
+                    onChange={importFromCSV}
+                    className="hidden"
+                    id="csv-import"
+                  />
+                  <div className="px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105 cursor-pointer text-center">
+                    📂 CSVファイルを選択
+                  </div>
+                </label>
+              </div>
+              )}
 
-                          <div className="text-white/80 text-sm mb-2">
-                            {new Date(record.timestamp).toLocaleString('ja-JP', {
-                              month: '2-digit',
-                              day: '2-digit',
-                              hour: '2-digit',
-                              minute: '2-digit'
-                            })}
-                          </div>
+              {/* 一括削除ボタン */}
+              <div>
+                <h4 className="text-sm font-bold text-white/80 mb-3">🗑️ 一括削除</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  <button
+                    onClick={() => bulkDelete('today')}
+                    className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    🔥 今日のデータ
+                  </button>
+                  <button
+                    onClick={() => bulkDelete('month')}
+                    className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    🔥 今月のデータ
+                  </button>
+                  <button
+                    onClick={() => bulkDelete('all')}
+                    className="px-4 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
+                  >
+                    ⚠️ すべて削除
+                  </button>
+                </div>
+                <p className="text-xs text-white/50 mt-2 text-center">
+                  ※ 削除前にエクスポートでバックアップを取ることをお勧めします
+                </p>
+              </div>
+            </div>
 
-                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-sm">
-                            <div>
-                              <span className="text-white/60">売上: </span>
-                              <span className="text-blue-300 font-bold">
-                                {record.totalIncome.toLocaleString()}G
-                              </span>
-                            </div>
-                            <div>
-                              <span className="text-white/60">コスト: </span>
-                              <span className="text-red-300 font-bold">
-                                {record.totalCost.toLocaleString()}G
-                              </span>
-                            </div>
-                            <div>
-                              <span className="text-white/60">利益: </span>
-                              <span className={`font-black ${record.profit >= 0 ? 'text-green-300' : 'text-red-300'}`}>
-                                {record.profit >= 0 ? '+' : ''}{record.profit.toLocaleString()}G
-                              </span>
-                            </div>
-                          </div>
+{/* 保存された記録一覧 */}
+          {showProfitDetails && (
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
+              <h3 className="text-xl font-black text-white mb-4">📋 保存記録</h3>
+
+              <div className="space-y-3">
+                {savedRecords.map((record) => (
+                  <div
+                    key={record.id}
+                    className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-lg"
+                  >
+                    <div className="flex flex-col sm:flex-row items-start justify-between gap-3">
+                      <div className="flex-1 w-full">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-xs font-bold bg-amber-500/80 text-white px-2 py-0.5 rounded-full">
+                            {record.category}
+                          </span>
+                          <span className="text-white font-bold">{record.itemName}</span>
+                          <span className="text-white/60 text-xs">
+                            ×{record.quantity}回
+                          </span>
                         </div>
 
+                        <div className="text-white/80 text-sm mb-2">
+                          {new Date(record.timestamp).toLocaleString('ja-JP', {
+                            month: '2-digit',
+                            day: '2-digit',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                          })}
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-sm">
+                          <div>
+                            <span className="text-white/60">売上: </span>
+                            <span className="text-blue-300 font-bold">
+                              {record.totalIncome.toLocaleString()}G
+                            </span>
+                          </div>
+                          <div>
+                            <span className="text-white/60">コスト: </span>
+                            <span className="text-red-300 font-bold">
+                              {record.totalCost.toLocaleString()}G
+                            </span>
+                          </div>
+                          <div>
+                            <span className="text-white/60">利益: </span>
+                            <span className={`font-black ${record.profit >= 0 ? 'text-green-300' : 'text-red-300'}`}>
+                              {record.profit >= 0 ? '+' : ''}{record.profit.toLocaleString()}G
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button
+                        onClick={() => deleteRecord(record.id)}
+                        className="w-full sm:w-auto sm:ml-4 px-3 py-1.5 bg-red-500/80 hover:bg-red-600/80 text-white rounded-lg text-xs font-bold transition-all"
+                      >
+                        削除
+                      </button>
+                    </div>
+                  </div>
+                ))}
+
+                {savedRecords.length === 0 && (
+                  <div className="text-center py-12">
+                    <div className="text-4xl mb-3">📊</div>
+                    <p className="text-lg font-bold text-white/60">まだ記録がありません</p>
+                    <p className="text-white/40 mt-1 text-sm">成果を保存すると、ここに表示されます</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      ) : filteredItems.length === 0 && activeCategory !== '設定' ? (
+        <div className="text-center py-12">
+          <div className="text-4xl mb-3">🔍</div>
+          <p className="text-lg font-bold text-white/60">該当するアイテムが見つかりません</p>
+          <p className="text-white/40 mt-1 text-sm">別のキーワードで検索してみてください</p>
+        </div>
+      ) : (
+        <div className="grid gap-12">
+          {activeCategory !== '設定' && filteredItems.map((item, index) => {
+            const isSelected = selectedItem === item.name;
+            return (
+              <div
+                key={index}
+                onClick={() => {
+                  setSelectedItem(isSelected ? null : item.name);
+                }}
+                style={{
+                  transition: 'all 0.3s ease',
+                  boxShadow: isSelected ? '0 0 40px rgba(56, 189, 248, 0.6)' : '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                  transform: isSelected ? 'scale(1.02)' : 'scale(1)',
+                  outline: isSelected ? '2px solid rgb(56, 189, 248)' : 'none'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
+                  e.currentTarget.style.transform = 'scale(1.02)';
+                  e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
+                }}
+                onMouseLeave={(e) => {
+                  if (!isSelected) {
+                    e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                    e.currentTarget.style.transform = 'scale(1)';
+                    e.currentTarget.style.outline = 'none';
+                  } else {
+                    e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
+                    e.currentTarget.style.transform = 'scale(1.02)';
+                    e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
+                  }
+                }}
+                className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden cursor-pointer relative border border-white/20 shadow-xl"
+              >
+                <div className="bg-gradient-to-r from-cyan-500/80 via-purple-500/80 to-pink-500/80 backdrop-blur-sm p-4 text-white relative overflow-hidden border-b border-white/30" style={{ boxShadow: '0 0 30px rgba(56, 189, 248, 0.4), 0 0 50px rgba(168, 85, 247, 0.3)' }}>
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"></div>
+                  <div className="absolute bottom-0 left-0 w-20 h-20 bg-white/10 rounded-full -ml-10 -mb-10"></div>
+                  <div className="relative flex items-center justify-between">
+                    <div>
+                      <span className="text-xs font-bold bg-white/30 px-3 py-0.5 rounded-full backdrop-blur-sm">{item.category}</span>
+                      <div className="flex items-center gap-2 mt-2">
+                        <h2 className="text-2xl font-black drop-shadow-lg" style={{ textShadow: '0 0 20px rgba(255, 255, 255, 0.5)' }}>{item.name}</h2>
+                        {item.specialTrait && (
+                          <span className="px-3 py-1 bg-yellow-400 text-yellow-900 rounded-full text-xs font-bold shadow-md">
+                            {item.specialTrait}
+                          </span>
+                        )}
                         <button
-                          onClick={() => deleteRecord(record.id)}
-                          className="w-full sm:w-auto sm:ml-4 px-3 py-1.5 bg-red-500/80 hover:bg-red-600/80 text-white rounded-lg text-xs font-bold transition-all"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openRecipeWindow(item);
+                          }}
+                          className="hidden md:block ml-2 px-3 py-1 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-xs transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105"
+                          style={{ boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)' }}
                         >
-                          削除
+                          📋 レシピ
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleFavorite(item);
+                          }}
+                          className={`ml-2 px-3 py-1 rounded-lg font-bold text-xs transition-all backdrop-blur-sm border transform hover:scale-105 ${isFavorite(item)
+                            ? 'bg-yellow-500/90 text-white border-yellow-400/50 shadow-lg'
+                            : 'bg-white/20 hover:bg-white/30 text-white border-white/30'
+                            }`}
+                          style={isFavorite(item) ? { boxShadow: '0 0 15px rgba(234, 179, 8, 0.6)' } : { boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)' }}
+                        >
+                          {isFavorite(item) ? '⭐ お気に入り' : '☆ お気に入り'}
                         </button>
                       </div>
                     </div>
-                  ))}
-
-                  {savedRecords.length === 0 && (
-                    <div className="text-center py-12">
-                      <div className="text-4xl mb-3">📊</div>
-                      <p className="text-lg font-bold text-white/60">まだ記録がありません</p>
-                      <p className="text-white/40 mt-1 text-sm">成果を保存すると、ここに表示されます</p>
-                    </div>
-                  )}
+                    {item.category === '料理' ? (
+                      <UtensilsCrossed size={32} className="opacity-90 drop-shadow-lg" />
+                    ) : (
+                      <Package size={32} className="opacity-90 drop-shadow-lg" />
+                    )}
+                  </div>
                 </div>
-              </div>
-            ) : filteredItems.length === 0 && activeCategory !== '設定' ? (
-              <div className="text-center py-12">
-                <div className="text-4xl mb-3">🔍</div>
-                <p className="text-lg font-bold text-white/60">該当するアイテムが見つかりません</p>
-                <p className="text-white/40 mt-1 text-sm">別のキーワードで検索してみてください</p>
-              </div>
-            ) : (
-              <div className="grid gap-12">
-                {activeCategory !== '設定' && filteredItems.map((item, index) => {
-                  const isSelected = selectedItem === item.name;
-                  return (
-                    <div
-                      key={index}
-                      onClick={() => {
-                        setSelectedItem(isSelected ? null : item.name);
-                      }}
-                      style={{
-                        transition: 'all 0.3s ease',
-                        boxShadow: isSelected ? '0 0 40px rgba(56, 189, 248, 0.6)' : '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-                        transform: isSelected ? 'scale(1.02)' : 'scale(1)',
-                        outline: isSelected ? '2px solid rgb(56, 189, 248)' : 'none'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
-                        e.currentTarget.style.transform = 'scale(1.02)';
-                        e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
-                      }}
-                      onMouseLeave={(e) => {
-                        if (!isSelected) {
-                          e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-                          e.currentTarget.style.transform = 'scale(1)';
-                          e.currentTarget.style.outline = 'none';
-                        } else {
-                          e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6)';
-                          e.currentTarget.style.transform = 'scale(1.02)';
-                          e.currentTarget.style.outline = '2px solid rgb(56, 189, 248)';
-                        }
-                      }}
-                      className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden cursor-pointer relative border border-white/20 shadow-xl"
-                    >
-                      <div className="bg-gradient-to-r from-cyan-500/80 via-purple-500/80 to-pink-500/80 backdrop-blur-sm p-4 text-white relative overflow-hidden border-b border-white/30" style={{ boxShadow: '0 0 30px rgba(56, 189, 248, 0.4), 0 0 50px rgba(168, 85, 247, 0.3)' }}>
-                        <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -mr-12 -mt-12"></div>
-                        <div className="absolute bottom-0 left-0 w-20 h-20 bg-white/10 rounded-full -ml-10 -mb-10"></div>
-                        <div className="relative flex items-center justify-between">
-                          <div>
-                            <span className="text-xs font-bold bg-white/30 px-3 py-0.5 rounded-full backdrop-blur-sm">{item.category}</span>
-                            <div className="flex items-center gap-2 mt-2">
-                              <h2 className="text-2xl font-black drop-shadow-lg" style={{ textShadow: '0 0 20px rgba(255, 255, 255, 0.5)' }}>{item.name}</h2>
-                              {item.specialTrait && (
-                                <span className="px-3 py-1 bg-yellow-400 text-yellow-900 rounded-full text-xs font-bold shadow-md">
-                                  {item.specialTrait}
-                                </span>
-                              )}
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  openRecipeWindow(item);
-                                }}
-                                className="hidden md:block ml-2 px-3 py-1 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-xs transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105"
-                                style={{ boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)' }}
-                              >
-                                📋 レシピ
-                              </button>
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  toggleFavorite(item);
-                                }}
-                                className={`ml-2 px-3 py-1 rounded-lg font-bold text-xs transition-all backdrop-blur-sm border transform hover:scale-105 ${isFavorite(item)
-                                  ? 'bg-yellow-500/90 text-white border-yellow-400/50 shadow-lg'
-                                  : 'bg-white/20 hover:bg-white/30 text-white border-white/30'
-                                  }`}
-                                style={isFavorite(item) ? { boxShadow: '0 0 15px rgba(234, 179, 8, 0.6)' } : { boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)' }}
-                              >
-                                {isFavorite(item) ? '⭐ お気に入り' : '☆ お気に入り'}
-                              </button>
-                            </div>
+
+                <div className="p-4">
+                  <h3 className="text-sm font-black text-white drop-shadow-lg mb-3 flex items-center gap-2" style={{ textShadow: '0 0 20px rgba(56, 189, 248, 0.6)' }}>
+                    <span className="text-xl">🎯</span>
+                    <span>目標数値</span>
+                  </h3>
+                  {renderTargetValues(item)}
+                </div>
+
+                <div className="px-4 pb-4">
+                  <h3 className="text-sm font-black text-white drop-shadow-lg mb-3 flex items-center gap-2" style={{ textShadow: '0 0 20px rgba(168, 85, 247, 0.6)' }}>
+                    <span className="text-xl">📦</span>
+                    <span>必要素材</span>
+                  </h3>
+                  <div className="space-y-2">
+                    {item.materials.map((material, idx) => (
+                      <div
+                        key={idx}
+                        className="p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30"
+                        style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.2)' }}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <span className="font-bold text-white text-sm drop-shadow">{material.name}</span>
+                            <span
+                              className="px-2.5 py-0.5 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full font-black shadow-md text-xs"
+                              style={{ boxShadow: '0 0 15px rgba(236, 72, 153, 0.5)' }}
+                            >
+                              ×{material.quantity}
+                            </span>
                           </div>
-                          {item.category === '料理' ? (
-                            <UtensilsCrossed size={32} className="opacity-90 drop-shadow-lg" />
-                          ) : (
-                            <Package size={32} className="opacity-90 drop-shadow-lg" />
+                          {isSelected && (
+                            <div className="flex items-center gap-1.5">
+                              <input
+                                type="text"
+                                inputMode="numeric"
+                                placeholder="単価"
+                                value={formatNumber(materialPrices[`${item.name}-${material.name}`] || '')}
+                                onClick={(e) => e.stopPropagation()}
+                                onChange={(e) => {
+                                  const value = e.target.value.replace(/[^0-9]/g, '');
+                                  updatePrice(item.name, material.name, value);
+                                }}
+                                className="w-24 px-3 py-2 rounded-lg border-2 border-purple-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400 font-bold text-right text-base text-white placeholder-white/50"
+                                style={{ boxShadow: '0 0 15px rgba(168, 85, 247, 0.3)' }}
+                              />
+                              <span className="text-white/80 font-bold text-sm drop-shadow">G</span>
+                            </div>
                           )}
                         </div>
                       </div>
+                    ))}
+                  </div>
 
-                      <div className="p-4">
-                        <h3 className="text-sm font-black text-white drop-shadow-lg mb-3 flex items-center gap-2" style={{ textShadow: '0 0 20px rgba(56, 189, 248, 0.6)' }}>
-                          <span className="text-xl">🎯</span>
-                          <span>目標数値</span>
-                        </h3>
-                        {renderTargetValues(item)}
+                  {isSelected && (
+                    <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.3)' }}>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <span className="font-bold text-white text-sm drop-shadow">🔧 職人道具代</span>
+                          <span className="text-xs text-white/60">(自動で÷30)</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <input
+                            type="text"
+                            inputMode="numeric"
+                            placeholder="道具代"
+                            value={formatNumber(toolPrices[item.name] || '')}
+                            onClick={(e) => e.stopPropagation()}
+                            onChange={(e) => {
+                              const value = e.target.value.replace(/[^0-9]/g, '');
+                              setToolPrices(prev => ({
+                                ...prev,
+                                [item.name]: value === '' ? 0 : parseInt(value) || 0
+                              }));
+                            }}
+                            className="w-28 px-3 py-2 rounded-lg border-2 border-purple-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400 font-bold text-right text-base text-white placeholder-white/50"
+                            style={{ boxShadow: '0 0 15px rgba(168, 85, 247, 0.3)' }}
+                          />
+                          <span className="text-white/80 font-bold text-sm drop-shadow">G</span>
+                        </div>
+                      </div>
+                      {toolPrices[item.name] > 0 && (
+                        <div className="mt-2 text-right text-xs text-white/60">
+                          <span className="font-bold">1回あたり: {Math.floor(toolPrices[item.name] / 30).toLocaleString()} G</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                  {isSelected && (
+                    <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(56, 189, 248, 0.3)' }}>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="font-bold text-white text-sm flex items-center gap-2 drop-shadow">
+                          <span className="text-xl">🔢</span>
+                          <span>作成回数</span>
+                        </span>
+                        <div className="flex items-center gap-2">
+                          <input
+                            type="text"
+                            inputMode="numeric"
+                            placeholder="回数"
+                            value={craftQuantity[item.name] || 1}
+                            onClick={(e) => e.stopPropagation()}
+                            onFocus={(e) => {
+                              if ((craftQuantity[item.name] || 1) === 1) {
+                                e.target.value = '';
+                              }
+                            }}
+                            onBlur={(e) => {
+                              if (e.target.value === '') {
+                                setCraftQuantity(prev => ({
+                                  ...prev,
+                                  [item.name]: 1
+                                }));
+                              }
+                            }}
+                            onChange={(e) => {
+                              const value = e.target.value.replace(/[^0-9]/g, '');
+                              setCraftQuantity(prev => ({
+                                ...prev,
+                                [item.name]: value === '' ? '' : parseInt(value) || 1
+                              }));
+                            }}
+                            className="w-20 px-3 py-2 rounded-lg border-2 border-cyan-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 font-bold text-right text-base text-white placeholder-white/50"
+                            style={{ boxShadow: '0 0 15px rgba(56, 189, 248, 0.3)' }}
+                          />
+                          <span className="text-white/80 font-bold text-sm drop-shadow">回</span>
+                        </div>
+                      </div>
+                      <div className="flex gap-2">
+                        {[1, 5, 10, 30].map((num) => (
+                          <button
+                            key={num}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setCraftQuantity(prev => ({
+                                ...prev,
+                                [item.name]: num
+                              }));
+                            }}
+                            className={`flex-1 px-3 py-2 rounded-lg font-bold text-sm transition-all transform hover:scale-105 cursor-pointer ${(craftQuantity[item.name] || 1) === num
+                              ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg border border-cyan-300/50'
+                              : 'bg-white/10 backdrop-blur-sm text-white border border-white/30 hover:bg-white/20'
+                              }`}
+                            style={(craftQuantity[item.name] || 1) === num ? { boxShadow: '0 0 20px rgba(56, 189, 248, 0.5)' } : {}}
+                          >
+                            ×{num}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {isSelected && (
+                    <div className="mt-3 p-4 bg-gradient-to-br from-pink-500/80 via-rose-500/80 to-fuchsia-500/80 backdrop-blur-sm rounded-xl border border-pink-300/50" style={{ boxShadow: '0 0 30px rgba(236, 72, 153, 0.6), 0 0 50px rgba(236, 72, 153, 0.3)' }}>
+                      <div className="flex items-center justify-between text-white">
+                        <span className="text-lg font-black drop-shadow" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>Total Cost:</span>
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl font-black drop-shadow" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>{calculateTotal(item).toLocaleString()} G</span>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              const newMaterialPrices = { ...materialPrices };
+                              item.materials.forEach(material => {
+                                delete newMaterialPrices[`${item.name}-${material.name}`];
+                              });
+                              setMaterialPrices(newMaterialPrices);
+
+                              const newToolPrices = { ...toolPrices };
+                              delete newToolPrices[item.name];
+                              setToolPrices(newToolPrices);
+
+                              const newCraftQuantity = { ...craftQuantity };
+                              delete newCraftQuantity[item.name];
+                              setCraftQuantity(newCraftQuantity);
+
+                              const newSellPrices = { ...sellPrices };
+                              delete newSellPrices[item.name];
+                              setSellPrices(newSellPrices);
+
+                              const newCraftResults = { ...craftResults };
+                              delete newCraftResults[item.name];
+                              setCraftResults(newCraftResults);
+
+                              const newBazaarMode = { ...bazaarMode };
+                              delete newBazaarMode[item.name];
+                              setBazaarMode(newBazaarMode);
+                            }}
+                            className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-sm transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105 cursor-pointer"
+                            style={{ boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)' }}
+                          >
+                            クリア
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {isSelected && (
+                    <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 191, 36, 0.3)' }}>
+                      <div className="flex items-center justify-between mb-3">
+                        <h4 className="text-sm font-black text-white flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 20px rgba(251, 191, 36, 0.6)' }}>
+                          <span className="text-xl">💰</span>
+                          <span>売却予定額</span>
+                        </h4>
+                        <div className="flex gap-1 bg-white/10 backdrop-blur-sm rounded-lg p-1 shadow-sm border border-white/20">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setBazaarMode(prev => ({ ...prev, [item.name]: true }));
+                            }}
+                            className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(bazaarMode[item.name] ?? true)
+                              ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-md'
+                              : 'text-white/80 hover:bg-white/20'
+                              }`}
+                            style={(bazaarMode[item.name] ?? true) ? { boxShadow: '0 0 15px rgba(251, 191, 36, 0.5)' } : {}}
+                          >
+                            バザー
+                          </button>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setBazaarMode(prev => ({ ...prev, [item.name]: false }));
+                            }}
+                            className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(bazaarMode[item.name] ?? true) === false
+                              ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-md'
+                              : 'text-white/80 hover:bg-white/20'
+                              }`}
+                            style={(bazaarMode[item.name] ?? true) === false ? { boxShadow: '0 0 15px rgba(251, 191, 36, 0.5)' } : {}}
+                          >
+                            モーモン
+                          </button>
+                        </div>
                       </div>
 
-                      <div className="px-4 pb-4">
-                        <h3 className="text-sm font-black text-white drop-shadow-lg mb-3 flex items-center gap-2" style={{ textShadow: '0 0 20px rgba(168, 85, 247, 0.6)' }}>
-                          <span className="text-xl">📦</span>
-                          <span>必要素材</span>
-                        </h3>
-                        <div className="space-y-2">
-                          {item.materials.map((material, idx) => (
-                            <div
-                              key={idx}
-                              className="p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30"
-                              style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.2)' }}
-                            >
-                              <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-2">
-                                  <span className="font-bold text-white text-sm drop-shadow">{material.name}</span>
-                                  <span
-                                    className="px-2.5 py-0.5 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full font-black shadow-md text-xs"
-                                    style={{ boxShadow: '0 0 15px rgba(236, 72, 153, 0.5)' }}
-                                  >
-                                    ×{material.quantity}
-                                  </span>
-                                </div>
-                                {isSelected && (
-                                  <div className="flex items-center gap-1.5">
-                                    <input
-                                      type="text"
-                                      inputMode="numeric"
-                                      placeholder="単価"
-                                      value={formatNumber(materialPrices[`${item.name}-${material.name}`] || '')}
-                                      onClick={(e) => e.stopPropagation()}
-                                      onChange={(e) => {
-                                        const value = e.target.value.replace(/[^0-9]/g, '');
-                                        updatePrice(item.name, material.name, value);
-                                      }}
-                                      className="w-24 px-3 py-2 rounded-lg border-2 border-purple-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400 font-bold text-right text-base text-white placeholder-white/50"
-                                      style={{ boxShadow: '0 0 15px rgba(168, 85, 247, 0.3)' }}
-                                    />
-                                    <span className="text-white/80 font-bold text-sm drop-shadow">G</span>
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                          ))}
+                      {item.category === '道具鍛冶' && item.subCategory === '素材' ? (
+                        <div className="flex flex-col">
+                          <label className="text-xs font-bold text-white/80 mb-1 drop-shadow">素材の単価</label>
+                          <div className="flex items-center gap-1">
+                            <input
+                              type="text"
+                              inputMode="numeric"
+                              placeholder="0"
+                              value={formatNumber(sellPrices[item.name]?.unitPrice || '')}
+                              onClick={(e) => e.stopPropagation()}
+                              onChange={(e) => {
+                                const value = e.target.value.replace(/[^0-9]/g, '');
+                                setSellPrices(prev => ({
+                                  ...prev,
+                                  [item.name]: {
+                                    ...prev[item.name],
+                                    unitPrice: value === '' ? 0 : parseInt(value) || 0
+                                  }
+                                }));
+                              }}
+                              className="flex-1 px-3 py-2 rounded-lg border-2 border-yellow-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 font-bold text-right text-base text-white placeholder-white/50"
+                              style={{ boxShadow: '0 0 15px rgba(251, 191, 36, 0.3)' }}
+                            />
+                            <span className="text-white/80 font-bold text-sm drop-shadow">G</span>
+                          </div>
+                          {sellPrices[item.name]?.unitPrice > 0 && (
+                            <span className="text-xs text-white/60 mt-0.5 text-right">
+                              {(bazaarMode[item.name] ?? true)
+                                ? `手取り: ${Math.floor(sellPrices[item.name].unitPrice * 0.95).toLocaleString()}G`
+                                : `手取り: ${sellPrices[item.name].unitPrice.toLocaleString()}G`
+                              }
+                            </span>
+                          )}
                         </div>
-
-                        {isSelected && (
-                          <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.3)' }}>
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center gap-2">
-                                <span className="font-bold text-white text-sm drop-shadow">🔧 職人道具代</span>
-                                <span className="text-xs text-white/60">(自動で÷30)</span>
-                              </div>
-                              <div className="flex items-center gap-2">
+                      ) : (
+                        <div className="grid grid-cols-1 gap-2">
+                          {[
+                            { key: 'star3', label: '☆☆☆', color: 'yellow' },
+                            { key: 'star2', label: '☆☆', color: 'gray' },
+                            { key: 'star1', label: '☆', color: 'orange' },
+                            { key: 'star0', label: '☆なし', color: 'gray' }
+                          ].map(({ key, label }) => (
+                            <div key={key} className="flex flex-col">
+                              <label className="text-xs font-bold text-white/80 mb-1 drop-shadow">{label}</label>
+                              <div className="flex items-center gap-1">
                                 <input
                                   type="text"
                                   inputMode="numeric"
-                                  placeholder="道具代"
-                                  value={formatNumber(toolPrices[item.name] || '')}
+                                  placeholder="0"
+                                  value={formatNumber(sellPrices[item.name]?.[key] || '')}
                                   onClick={(e) => e.stopPropagation()}
                                   onChange={(e) => {
                                     const value = e.target.value.replace(/[^0-9]/g, '');
-                                    setToolPrices(prev => ({
+                                    setSellPrices(prev => ({
                                       ...prev,
-                                      [item.name]: value === '' ? 0 : parseInt(value) || 0
+                                      [item.name]: {
+                                        ...prev[item.name],
+                                        [key]: value === '' ? 0 : parseInt(value) || 0
+                                      }
                                     }));
                                   }}
-                                  className="w-28 px-3 py-2 rounded-lg border-2 border-purple-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400 font-bold text-right text-base text-white placeholder-white/50"
-                                  style={{ boxShadow: '0 0 15px rgba(168, 85, 247, 0.3)' }}
+                                  className="flex-1 px-3 py-2 rounded-lg border-2 border-yellow-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 font-bold text-right text-base text-white placeholder-white/50"
+                                  style={{ boxShadow: '0 0 15px rgba(251, 191, 36, 0.3)' }}
                                 />
                                 <span className="text-white/80 font-bold text-sm drop-shadow">G</span>
                               </div>
+                              {sellPrices[item.name]?.[key] > 0 && (
+                                <span className="text-xs text-white/60 mt-0.5 text-right">
+                                  {(bazaarMode[item.name] ?? true)
+                                    ? `手取り: ${Math.floor(sellPrices[item.name][key] * 0.95).toLocaleString()}G`
+                                    : `手取り: ${sellPrices[item.name][key].toLocaleString()}G`
+                                  }
+                                </span>
+                              )}
                             </div>
-                            {toolPrices[item.name] > 0 && (
-                              <div className="mt-2 text-right text-xs text-white/60">
-                                <span className="font-bold">1回あたり: {Math.floor(toolPrices[item.name] / 30).toLocaleString()} G</span>
-                              </div>
-                            )}
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {(() => {
+                    const prices = sellPrices[item.name] || {};
+                    const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
+                    const hasAnyPrice = isMaterial
+                      ? prices.unitPrice
+                      : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
+
+                    if (!hasAnyPrice) return null;
+
+                    const totalCost = calculateTotal(item);
+                    const quantity = craftQuantity[item.name] || 1;
+                    const feeRate = (bazaarMode[item.name] ?? true) ? 0.95 : 1.0;
+
+                    if (isMaterial) {
+                      const unitPrice = Math.floor((prices.unitPrice || 0) * feeRate);
+                      const worstIncome = quantity * 3 * unitPrice;
+                      const needStar3 = Math.ceil((totalCost - worstIncome) / Math.max((10 - 3) * unitPrice, 1));
+                      const actualNeedStar3 = Math.max(0, Math.min(needStar3, quantity));
+                      const needPercentage = ((actualNeedStar3 / quantity) * 100).toFixed(1);
+                      const bestIncome = quantity * 10 * unitPrice;
+                      const isDefiniteLoss = bestIncome < totalCost;
+
+                      return (
+                        <div className="mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 146, 60, 0.3)' }}>
+                          <div className="text-xs font-bold text-white mb-2 flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 15px rgba(251, 146, 60, 0.6)' }}>
+                            <span className="text-lg">📊</span>
+                            <span>黒字ライン（☆☆☆ 必要数）</span>
                           </div>
-                        )}
-                        {isSelected && (
-                          <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(56, 189, 248, 0.3)' }}>
-                            <div className="flex items-center justify-between mb-3">
-                              <span className="font-bold text-white text-sm flex items-center gap-2 drop-shadow">
-                                <span className="text-xl">🔢</span>
-                                <span>作成回数</span>
+                          {isDefiniteLoss ? (
+                            <div className="text-sm text-red-400 font-bold drop-shadow">
+                              ⚠️ この価格では全て☆☆☆でも赤字確定です
+                            </div>
+                          ) : (
+                            <div className="text-sm">
+                              <div className="flex items-center justify-between">
+                                <span className="text-white/80 drop-shadow">最低</span>
+                                <span className={`font-black drop-shadow ${actualNeedStar3 > quantity ? 'text-red-400' : 'text-green-400'}`}>
+                                  {actualNeedStar3} 回 / {quantity} 回
+                                </span>
+                              </div>
+                              <div className="flex items-center justify-between mt-1">
+                                <span className="text-white/80 drop-shadow">成功率</span>
+                                <span className={`font-black drop-shadow ${parseFloat(needPercentage) > 100 ? 'text-red-400' : 'text-green-400'}`}>
+                                  {needPercentage}% 以上
+                                </span>
+                              </div>
+                              <div className="mt-2 text-xs text-white/50">
+                                ※ ☆☆☆以外は全て☆☆（3個）と仮定
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    }
+
+                    const income3 = Math.floor((prices.star3 || 0) * feeRate);
+                    const income2 = Math.floor((prices.star2 || 0) * feeRate);
+                    const income1 = Math.floor((prices.star1 || 0) * feeRate);
+                    const income0 = Math.floor((prices.star0 || 0) * feeRate);
+                    const worstIncome = income0 * quantity;
+                    const needStar3 = Math.ceil((totalCost - worstIncome) / Math.max(income3 - income0, 1));
+                    const actualNeedStar3 = Math.max(0, Math.min(needStar3, quantity));
+                    const needPercentage = ((actualNeedStar3 / quantity) * 100).toFixed(1);
+                    const bestIncome = income3 * quantity;
+                    const isDefiniteLoss = bestIncome < totalCost;
+
+                    return (
+                      <div className="mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 146, 60, 0.3)' }}>
+                        <div className="text-xs font-bold text-white mb-2 flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 15px rgba(251, 146, 60, 0.6)' }}>
+                          <span className="text-lg">📊</span>
+                          <span>黒字ライン（☆☆☆ 必要数）</span>
+                        </div>
+                        {isDefiniteLoss ? (
+                          <div className="text-sm text-red-400 font-bold drop-shadow">
+                            ⚠️ この価格では全て☆☆☆でも赤字確定です
+                          </div>
+                        ) : (
+                          <div className="text-sm">
+                            <div className="flex items-center justify-between">
+                              <span className="text-white/80 drop-shadow">最低</span>
+                              <span className={`font-black drop-shadow ${actualNeedStar3 > quantity ? 'text-red-400' : 'text-green-400'}`}>
+                                {actualNeedStar3} 個 / {quantity} 回
                               </span>
-                              <div className="flex items-center gap-2">
-                                <input
-                                  type="text"
-                                  inputMode="numeric"
-                                  placeholder="回数"
-                                  value={craftQuantity[item.name] || 1}
-                                  onClick={(e) => e.stopPropagation()}
-                                  onFocus={(e) => {
-                                    if ((craftQuantity[item.name] || 1) === 1) {
-                                      e.target.value = '';
-                                    }
-                                  }}
-                                  onBlur={(e) => {
-                                    if (e.target.value === '') {
-                                      setCraftQuantity(prev => ({
-                                        ...prev,
-                                        [item.name]: 1
-                                      }));
-                                    }
-                                  }}
-                                  onChange={(e) => {
-                                    const value = e.target.value.replace(/[^0-9]/g, '');
-                                    setCraftQuantity(prev => ({
-                                      ...prev,
-                                      [item.name]: value === '' ? '' : parseInt(value) || 1
-                                    }));
-                                  }}
-                                  className="w-20 px-3 py-2 rounded-lg border-2 border-cyan-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 font-bold text-right text-base text-white placeholder-white/50"
-                                  style={{ boxShadow: '0 0 15px rgba(56, 189, 248, 0.3)' }}
-                                />
-                                <span className="text-white/80 font-bold text-sm drop-shadow">回</span>
-                              </div>
                             </div>
-                            <div className="flex gap-2">
-                              {[1, 5, 10, 30].map((num) => (
-                                <button
-                                  key={num}
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    setCraftQuantity(prev => ({
-                                      ...prev,
-                                      [item.name]: num
-                                    }));
-                                  }}
-                                  className={`flex-1 px-3 py-2 rounded-lg font-bold text-sm transition-all transform hover:scale-105 cursor-pointer ${(craftQuantity[item.name] || 1) === num
-                                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg border border-cyan-300/50'
-                                    : 'bg-white/10 backdrop-blur-sm text-white border border-white/30 hover:bg-white/20'
-                                    }`}
-                                  style={(craftQuantity[item.name] || 1) === num ? { boxShadow: '0 0 20px rgba(56, 189, 248, 0.5)' } : {}}
-                                >
-                                  ×{num}
-                                </button>
-                              ))}
+                            <div className="flex items-center justify-between mt-1">
+                              <span className="text-white/80 drop-shadow">成功率</span>
+                              <span className={`font-black drop-shadow ${parseFloat(needPercentage) > 100 ? 'text-red-400' : 'text-green-400'}`}>
+                                {needPercentage}% 以上
+                              </span>
+                            </div>
+                            <div className="mt-2 text-xs text-white/50">
+                              ※ ☆☆☆以外は全て☆なしと仮定
                             </div>
                           </div>
                         )}
+                      </div>
+                    );
+                  })()}
 
-                        {isSelected && (
-                          <div className="mt-3 p-4 bg-gradient-to-br from-pink-500/80 via-rose-500/80 to-fuchsia-500/80 backdrop-blur-sm rounded-xl border border-pink-300/50" style={{ boxShadow: '0 0 30px rgba(236, 72, 153, 0.6), 0 0 50px rgba(236, 72, 153, 0.3)' }}>
-                            <div className="flex items-center justify-between text-white">
-                              <span className="text-lg font-black drop-shadow" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>Total Cost:</span>
-                              <div className="flex items-center gap-3">
-                                <span className="text-2xl font-black drop-shadow" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>{calculateTotal(item).toLocaleString()} G</span>
-                                <button
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    const newMaterialPrices = { ...materialPrices };
-                                    item.materials.forEach(material => {
-                                      delete newMaterialPrices[`${item.name}-${material.name}`];
-                                    });
-                                    setMaterialPrices(newMaterialPrices);
+                  {isSelected && (
+                    <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)' }}>
+                      <div className="flex items-center justify-between mb-3">
+                        <h4 className="text-sm font-black text-white flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 20px rgba(16, 185, 129, 0.6)' }}>
+                          <span className="text-xl">📝</span>
+                          <span>成果記録</span>
+                        </h4>
 
-                                    const newToolPrices = { ...toolPrices };
-                                    delete newToolPrices[item.name];
-                                    setToolPrices(newToolPrices);
-
-                                    const newCraftQuantity = { ...craftQuantity };
-                                    delete newCraftQuantity[item.name];
-                                    setCraftQuantity(newCraftQuantity);
-
-                                    const newSellPrices = { ...sellPrices };
-                                    delete newSellPrices[item.name];
-                                    setSellPrices(newSellPrices);
-
-                                    const newCraftResults = { ...craftResults };
-                                    delete newCraftResults[item.name];
-                                    setCraftResults(newCraftResults);
-
-                                    const newBazaarMode = { ...bazaarMode };
-                                    delete newBazaarMode[item.name];
-                                    setBazaarMode(newBazaarMode);
-                                  }}
-                                  className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-sm transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105 cursor-pointer"
-                                  style={{ boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)' }}
-                                >
-                                  クリア
-                                </button>
-                              </div>
-                            </div>
+                        {item.category === '道具鍛冶' && item.subCategory === '素材' && (
+                          <div className="flex gap-1 bg-white/10 backdrop-blur-sm rounded-lg p-1 shadow-sm border border-white/20">
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCraftResults(prev => ({
+                                  ...prev,
+                                  [`${item.name}_mode`]: 'simple'
+                                }));
+                              }}
+                              className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(craftResults[`${item.name}_mode`] || 'simple') === 'simple'
+                                ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
+                                : 'text-white/80 hover:bg-white/20'
+                                }`}
+                              style={(craftResults[`${item.name}_mode`] || 'simple') === 'simple' ? { boxShadow: '0 0 15px rgba(16, 185, 129, 0.5)' } : {}}
+                            >
+                              個数入力
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCraftResults(prev => ({
+                                  ...prev,
+                                  [`${item.name}_mode`]: 'detail'
+                                }));
+                              }}
+                              className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(craftResults[`${item.name}_mode`] || 'simple') === 'detail'
+                                ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
+                                : 'text-white/80 hover:bg-white/20'
+                                }`}
+                              style={(craftResults[`${item.name}_mode`] || 'simple') === 'detail' ? { boxShadow: '0 0 15px rgba(16, 185, 129, 0.5)' } : {}}
+                            >
+                              詳細入力
+                            </button>
                           </div>
                         )}
+                      </div>
 
-                        {isSelected && (
-                          <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 191, 36, 0.3)' }}>
-                            <div className="flex items-center justify-between mb-3">
-                              <h4 className="text-sm font-black text-white flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 20px rgba(251, 191, 36, 0.6)' }}>
-                                <span className="text-xl">💰</span>
-                                <span>売却予定額</span>
-                              </h4>
-                              <div className="flex gap-1 bg-white/10 backdrop-blur-sm rounded-lg p-1 shadow-sm border border-white/20">
-                                <button
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    setBazaarMode(prev => ({ ...prev, [item.name]: true }));
-                                  }}
-                                  className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(bazaarMode[item.name] ?? true)
-                                    ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-md'
-                                    : 'text-white/80 hover:bg-white/20'
-                                    }`}
-                                  style={(bazaarMode[item.name] ?? true) ? { boxShadow: '0 0 15px rgba(251, 191, 36, 0.5)' } : {}}
-                                >
-                                  バザー
-                                </button>
-                                <button
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    setBazaarMode(prev => ({ ...prev, [item.name]: false }));
-                                  }}
-                                  className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(bazaarMode[item.name] ?? true) === false
-                                    ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-md'
-                                    : 'text-white/80 hover:bg-white/20'
-                                    }`}
-                                  style={(bazaarMode[item.name] ?? true) === false ? { boxShadow: '0 0 15px rgba(251, 191, 36, 0.5)' } : {}}
-                                >
-                                  モーモン
-                                </button>
-                              </div>
-                            </div>
-
-                            {item.category === '道具鍛冶' && item.subCategory === '素材' ? (
-                              <div className="flex flex-col">
-                                <label className="text-xs font-bold text-white/80 mb-1 drop-shadow">素材の単価</label>
+                      {item.category === '道具鍛冶' && item.subCategory === '素材' && (craftResults[`${item.name}_mode`] || 'simple') === 'simple' ? (
+                        <div className="flex flex-col">
+                          <label className="text-xs font-bold text-white/80 mb-1 drop-shadow">作成できた個数</label>
+                          <div className="flex items-center gap-1">
+                            <input
+                              type="text"
+                              inputMode="numeric"
+                              placeholder="0"
+                              value={craftResults[item.name]?.totalItems || ''}
+                              onClick={(e) => e.stopPropagation()}
+                              onChange={(e) => {
+                                const value = e.target.value.replace(/[^0-9]/g, '');
+                                setCraftResults(prev => ({
+                                  ...prev,
+                                  [item.name]: {
+                                    ...prev[item.name],
+                                    totalItems: value === '' ? 0 : parseInt(value) || 0
+                                  }
+                                }));
+                              }}
+                              className="flex-1 px-3 py-2 rounded-lg border-2 border-emerald-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 font-bold text-right text-base text-white placeholder-white/50"
+                              style={{ boxShadow: '0 0 15px rgba(16, 185, 129, 0.3)' }}
+                            />
+                            <span className="text-white/80 font-bold text-sm drop-shadow">個</span>
+                          </div>
+                        </div>
+                      ) : (
+                        <>
+                          <div className="grid grid-cols-1 gap-2">
+                            {[
+                              { key: 'star3', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆☆☆(10個)' : '☆☆☆' },
+                              { key: 'star2', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆☆(3個)' : '☆☆' },
+                              { key: 'star1', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆(2個)' : '☆' },
+                              { key: 'star0', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆なし(1個)' : '☆なし' },
+                              { key: 'fail', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '失敗(0個)' : '失敗' }
+                            ].map(({ key, label }) => (
+                              <div key={key} className="flex flex-col">
+                                <label className="text-xs font-bold text-white/80 mb-1 drop-shadow">{label}</label>
                                 <div className="flex items-center gap-1">
                                   <input
                                     type="text"
                                     inputMode="numeric"
                                     placeholder="0"
-                                    value={formatNumber(sellPrices[item.name]?.unitPrice || '')}
-                                    onClick={(e) => e.stopPropagation()}
-                                    onChange={(e) => {
-                                      const value = e.target.value.replace(/[^0-9]/g, '');
-                                      setSellPrices(prev => ({
-                                        ...prev,
-                                        [item.name]: {
-                                          ...prev[item.name],
-                                          unitPrice: value === '' ? 0 : parseInt(value) || 0
-                                        }
-                                      }));
-                                    }}
-                                    className="flex-1 px-3 py-2 rounded-lg border-2 border-yellow-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 font-bold text-right text-base text-white placeholder-white/50"
-                                    style={{ boxShadow: '0 0 15px rgba(251, 191, 36, 0.3)' }}
-                                  />
-                                  <span className="text-white/80 font-bold text-sm drop-shadow">G</span>
-                                </div>
-                                {sellPrices[item.name]?.unitPrice > 0 && (
-                                  <span className="text-xs text-white/60 mt-0.5 text-right">
-                                    {(bazaarMode[item.name] ?? true)
-                                      ? `手取り: ${Math.floor(sellPrices[item.name].unitPrice * 0.95).toLocaleString()}G`
-                                      : `手取り: ${sellPrices[item.name].unitPrice.toLocaleString()}G`
-                                    }
-                                  </span>
-                                )}
-                              </div>
-                            ) : (
-                              <div className="grid grid-cols-1 gap-2">
-                                {[
-                                  { key: 'star3', label: '☆☆☆', color: 'yellow' },
-                                  { key: 'star2', label: '☆☆', color: 'gray' },
-                                  { key: 'star1', label: '☆', color: 'orange' },
-                                  { key: 'star0', label: '☆なし', color: 'gray' }
-                                ].map(({ key, label }) => (
-                                  <div key={key} className="flex flex-col">
-                                    <label className="text-xs font-bold text-white/80 mb-1 drop-shadow">{label}</label>
-                                    <div className="flex items-center gap-1">
-                                      <input
-                                        type="text"
-                                        inputMode="numeric"
-                                        placeholder="0"
-                                        value={formatNumber(sellPrices[item.name]?.[key] || '')}
-                                        onClick={(e) => e.stopPropagation()}
-                                        onChange={(e) => {
-                                          const value = e.target.value.replace(/[^0-9]/g, '');
-                                          setSellPrices(prev => ({
-                                            ...prev,
-                                            [item.name]: {
-                                              ...prev[item.name],
-                                              [key]: value === '' ? 0 : parseInt(value) || 0
-                                            }
-                                          }));
-                                        }}
-                                        className="flex-1 px-3 py-2 rounded-lg border-2 border-yellow-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 font-bold text-right text-base text-white placeholder-white/50"
-                                        style={{ boxShadow: '0 0 15px rgba(251, 191, 36, 0.3)' }}
-                                      />
-                                      <span className="text-white/80 font-bold text-sm drop-shadow">G</span>
-                                    </div>
-                                    {sellPrices[item.name]?.[key] > 0 && (
-                                      <span className="text-xs text-white/60 mt-0.5 text-right">
-                                        {(bazaarMode[item.name] ?? true)
-                                          ? `手取り: ${Math.floor(sellPrices[item.name][key] * 0.95).toLocaleString()}G`
-                                          : `手取り: ${sellPrices[item.name][key].toLocaleString()}G`
-                                        }
-                                      </span>
-                                    )}
-                                  </div>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        )}
-
-                        {(() => {
-                          const prices = sellPrices[item.name] || {};
-                          const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
-                          const hasAnyPrice = isMaterial
-                            ? prices.unitPrice
-                            : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
-
-                          if (!hasAnyPrice) return null;
-
-                          const totalCost = calculateTotal(item);
-                          const quantity = craftQuantity[item.name] || 1;
-                          const feeRate = (bazaarMode[item.name] ?? true) ? 0.95 : 1.0;
-
-                          if (isMaterial) {
-                            const unitPrice = Math.floor((prices.unitPrice || 0) * feeRate);
-                            const worstIncome = quantity * 3 * unitPrice;
-                            const needStar3 = Math.ceil((totalCost - worstIncome) / Math.max((10 - 3) * unitPrice, 1));
-                            const actualNeedStar3 = Math.max(0, Math.min(needStar3, quantity));
-                            const needPercentage = ((actualNeedStar3 / quantity) * 100).toFixed(1);
-                            const bestIncome = quantity * 10 * unitPrice;
-                            const isDefiniteLoss = bestIncome < totalCost;
-
-                            return (
-                              <div className="mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 146, 60, 0.3)' }}>
-                                <div className="text-xs font-bold text-white mb-2 flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 15px rgba(251, 146, 60, 0.6)' }}>
-                                  <span className="text-lg">📊</span>
-                                  <span>黒字ライン（☆☆☆ 必要数）</span>
-                                </div>
-                                {isDefiniteLoss ? (
-                                  <div className="text-sm text-red-400 font-bold drop-shadow">
-                                    ⚠️ この価格では全て☆☆☆でも赤字確定です
-                                  </div>
-                                ) : (
-                                  <div className="text-sm">
-                                    <div className="flex items-center justify-between">
-                                      <span className="text-white/80 drop-shadow">最低</span>
-                                      <span className={`font-black drop-shadow ${actualNeedStar3 > quantity ? 'text-red-400' : 'text-green-400'}`}>
-                                        {actualNeedStar3} 回 / {quantity} 回
-                                      </span>
-                                    </div>
-                                    <div className="flex items-center justify-between mt-1">
-                                      <span className="text-white/80 drop-shadow">成功率</span>
-                                      <span className={`font-black drop-shadow ${parseFloat(needPercentage) > 100 ? 'text-red-400' : 'text-green-400'}`}>
-                                        {needPercentage}% 以上
-                                      </span>
-                                    </div>
-                                    <div className="mt-2 text-xs text-white/50">
-                                      ※ ☆☆☆以外は全て☆☆（3個）と仮定
-                                    </div>
-                                  </div>
-                                )}
-                              </div>
-                            );
-                          }
-
-                          const income3 = Math.floor((prices.star3 || 0) * feeRate);
-                          const income2 = Math.floor((prices.star2 || 0) * feeRate);
-                          const income1 = Math.floor((prices.star1 || 0) * feeRate);
-                          const income0 = Math.floor((prices.star0 || 0) * feeRate);
-                          const worstIncome = income0 * quantity;
-                          const needStar3 = Math.ceil((totalCost - worstIncome) / Math.max(income3 - income0, 1));
-                          const actualNeedStar3 = Math.max(0, Math.min(needStar3, quantity));
-                          const needPercentage = ((actualNeedStar3 / quantity) * 100).toFixed(1);
-                          const bestIncome = income3 * quantity;
-                          const isDefiniteLoss = bestIncome < totalCost;
-
-                          return (
-                            <div className="mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 146, 60, 0.3)' }}>
-                              <div className="text-xs font-bold text-white mb-2 flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 15px rgba(251, 146, 60, 0.6)' }}>
-                                <span className="text-lg">📊</span>
-                                <span>黒字ライン（☆☆☆ 必要数）</span>
-                              </div>
-                              {isDefiniteLoss ? (
-                                <div className="text-sm text-red-400 font-bold drop-shadow">
-                                  ⚠️ この価格では全て☆☆☆でも赤字確定です
-                                </div>
-                              ) : (
-                                <div className="text-sm">
-                                  <div className="flex items-center justify-between">
-                                    <span className="text-white/80 drop-shadow">最低</span>
-                                    <span className={`font-black drop-shadow ${actualNeedStar3 > quantity ? 'text-red-400' : 'text-green-400'}`}>
-                                      {actualNeedStar3} 個 / {quantity} 回
-                                    </span>
-                                  </div>
-                                  <div className="flex items-center justify-between mt-1">
-                                    <span className="text-white/80 drop-shadow">成功率</span>
-                                    <span className={`font-black drop-shadow ${parseFloat(needPercentage) > 100 ? 'text-red-400' : 'text-green-400'}`}>
-                                      {needPercentage}% 以上
-                                    </span>
-                                  </div>
-                                  <div className="mt-2 text-xs text-white/50">
-                                    ※ ☆☆☆以外は全て☆なしと仮定
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                          );
-                        })()}
-
-                        {isSelected && (
-                          <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)' }}>
-                            <div className="flex items-center justify-between mb-3">
-                              <h4 className="text-sm font-black text-white flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 20px rgba(16, 185, 129, 0.6)' }}>
-                                <span className="text-xl">📝</span>
-                                <span>成果記録</span>
-                              </h4>
-
-                              {item.category === '道具鍛冶' && item.subCategory === '素材' && (
-                                <div className="flex gap-1 bg-white/10 backdrop-blur-sm rounded-lg p-1 shadow-sm border border-white/20">
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      setCraftResults(prev => ({
-                                        ...prev,
-                                        [`${item.name}_mode`]: 'simple'
-                                      }));
-                                    }}
-                                    className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(craftResults[`${item.name}_mode`] || 'simple') === 'simple'
-                                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
-                                      : 'text-white/80 hover:bg-white/20'
-                                      }`}
-                                    style={(craftResults[`${item.name}_mode`] || 'simple') === 'simple' ? { boxShadow: '0 0 15px rgba(16, 185, 129, 0.5)' } : {}}
-                                  >
-                                    個数入力
-                                  </button>
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      setCraftResults(prev => ({
-                                        ...prev,
-                                        [`${item.name}_mode`]: 'detail'
-                                      }));
-                                    }}
-                                    className={`px-3 py-1 rounded-md text-xs font-bold transition-all ${(craftResults[`${item.name}_mode`] || 'simple') === 'detail'
-                                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
-                                      : 'text-white/80 hover:bg-white/20'
-                                      }`}
-                                    style={(craftResults[`${item.name}_mode`] || 'simple') === 'detail' ? { boxShadow: '0 0 15px rgba(16, 185, 129, 0.5)' } : {}}
-                                  >
-                                    詳細入力
-                                  </button>
-                                </div>
-                              )}
-                            </div>
-
-                            {item.category === '道具鍛冶' && item.subCategory === '素材' && (craftResults[`${item.name}_mode`] || 'simple') === 'simple' ? (
-                              <div className="flex flex-col">
-                                <label className="text-xs font-bold text-white/80 mb-1 drop-shadow">作成できた個数</label>
-                                <div className="flex items-center gap-1">
-                                  <input
-                                    type="text"
-                                    inputMode="numeric"
-                                    placeholder="0"
-                                    value={craftResults[item.name]?.totalItems || ''}
+                                    value={craftResults[item.name]?.[key] || ''}
                                     onClick={(e) => e.stopPropagation()}
                                     onChange={(e) => {
                                       const value = e.target.value.replace(/[^0-9]/g, '');
@@ -2866,204 +2937,170 @@ body {
                                         ...prev,
                                         [item.name]: {
                                           ...prev[item.name],
-                                          totalItems: value === '' ? 0 : parseInt(value) || 0
+                                          [key]: value === '' ? 0 : parseInt(value) || 0
                                         }
                                       }));
                                     }}
-                                    className="flex-1 px-3 py-2 rounded-lg border-2 border-emerald-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 font-bold text-right text-base text-white placeholder-white/50"
+                                    className="flex-1 px-2 py-1.5 rounded-lg border-2 border-emerald-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 font-bold text-right text-sm text-white placeholder-white/50"
                                     style={{ boxShadow: '0 0 15px rgba(16, 185, 129, 0.3)' }}
                                   />
-                                  <span className="text-white/80 font-bold text-sm drop-shadow">個</span>
+                                  <span className="text-white/80 font-bold text-xs drop-shadow">回</span>
                                 </div>
                               </div>
-                            ) : (
-                              <>
-                                <div className="grid grid-cols-1 gap-2">
-                                  {[
-                                    { key: 'star3', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆☆☆(10個)' : '☆☆☆' },
-                                    { key: 'star2', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆☆(3個)' : '☆☆' },
-                                    { key: 'star1', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆(2個)' : '☆' },
-                                    { key: 'star0', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '☆なし(1個)' : '☆なし' },
-                                    { key: 'fail', label: item.category === '道具鍛冶' && item.subCategory === '素材' ? '失敗(0個)' : '失敗' }
-                                  ].map(({ key, label }) => (
-                                    <div key={key} className="flex flex-col">
-                                      <label className="text-xs font-bold text-white/80 mb-1 drop-shadow">{label}</label>
-                                      <div className="flex items-center gap-1">
-                                        <input
-                                          type="text"
-                                          inputMode="numeric"
-                                          placeholder="0"
-                                          value={craftResults[item.name]?.[key] || ''}
-                                          onClick={(e) => e.stopPropagation()}
-                                          onChange={(e) => {
-                                            const value = e.target.value.replace(/[^0-9]/g, '');
-                                            setCraftResults(prev => ({
-                                              ...prev,
-                                              [item.name]: {
-                                                ...prev[item.name],
-                                                [key]: value === '' ? 0 : parseInt(value) || 0
-                                              }
-                                            }));
-                                          }}
-                                          className="flex-1 px-2 py-1.5 rounded-lg border-2 border-emerald-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 font-bold text-right text-sm text-white placeholder-white/50"
-                                          style={{ boxShadow: '0 0 15px rgba(16, 185, 129, 0.3)' }}
-                                        />
-                                        <span className="text-white/80 font-bold text-xs drop-shadow">回</span>
-                                      </div>
-                                    </div>
-                                  ))}
+                            ))}
+                          </div>
+
+                          {(() => {
+                            const results = craftResults[item.name] || {};
+                            const total = (results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0);
+                            const expected = craftQuantity[item.name] || 1;
+
+                            if (total > 0) {
+                              return (
+                                <div className={`mt-2 text-xs font-bold drop-shadow ${total === expected ? 'text-green-400' : 'text-orange-400'}`}>
+                                  合計: {total} 回 {total === expected ? '✓' : `(予定: ${expected}回)`}
                                 </div>
+                              );
+                            }
+                            return null;
+                          })()}
+                        </>
+                      )}
+                    </div>
+                  )}
 
-                                {(() => {
-                                  const results = craftResults[item.name] || {};
-                                  const total = (results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0);
-                                  const expected = craftQuantity[item.name] || 1;
+                  {(() => {
+                    const results = craftResults[item.name] || {};
+                    const prices = sellPrices[item.name] || {};
+                    const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
+                    const isSimpleMode = isMaterial && (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
 
-                                  if (total > 0) {
-                                    return (
-                                      <div className={`mt-2 text-xs font-bold drop-shadow ${total === expected ? 'text-green-400' : 'text-orange-400'}`}>
-                                        合計: {total} 回 {total === expected ? '✓' : `(予定: ${expected}回)`}
-                                      </div>
-                                    );
-                                  }
-                                  return null;
-                                })()}
-                              </>
+                    let hasData = false;
+                    if (isMaterial && isSimpleMode) {
+                      hasData = (results.totalItems > 0);
+                    } else {
+                      hasData = ((results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0) > 0);
+                    }
+
+                    const hasPrice = isMaterial ? prices.unitPrice : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
+
+                    if (hasData && hasPrice) {
+                      const feeRate = (bazaarMode[item.name] ?? true) ? 0.95 : 1.0;
+
+                      let totalIncome;
+
+                      if (isMaterial) {
+                        const unitPrice = Math.floor((prices.unitPrice || 0) * feeRate);
+
+                        if (isSimpleMode) {
+                          totalIncome = (results.totalItems || 0) * unitPrice;
+                        } else {
+                          const totalItems =
+                            (results.star3 || 0) * 10 +
+                            (results.star2 || 0) * 3 +
+                            (results.star1 || 0) * 2 +
+                            (results.star0 || 0) * 1 +
+                            (results.fail || 0) * 0;
+                          totalIncome = totalItems * unitPrice;
+                        }
+                      } else {
+                        totalIncome =
+                          Math.floor((results.star3 || 0) * (prices.star3 || 0) * feeRate) +
+                          Math.floor((results.star2 || 0) * (prices.star2 || 0) * feeRate) +
+                          Math.floor((results.star1 || 0) * (prices.star1 || 0) * feeRate) +
+                          Math.floor((results.star0 || 0) * (prices.star0 || 0) * feeRate);
+                      }
+
+                      const totalCost = calculateTotal(item);
+                      const profit = totalIncome - totalCost;
+                      const profitRate = totalCost > 0 ? ((profit / totalCost) * 100).toFixed(1) : 0;
+
+                      return (
+                        <div className="mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{ boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)' }}>
+                          <div className="text-xs font-bold text-white mb-2 flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 20px rgba(16, 185, 129, 0.6)' }}>
+                            <span className="text-lg">💵</span>
+                            <span>収支計算</span>
+                          </div>
+                          <div className="space-y-1 text-sm">
+                            <div className="flex justify-between">
+                              <span className="text-white/80 drop-shadow">総売上</span>
+                              <span className="font-bold text-blue-400 drop-shadow">{totalIncome.toLocaleString()} G</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-white/80 drop-shadow">総コスト</span>
+                              <span className="font-bold text-red-400 drop-shadow">{totalCost.toLocaleString()} G</span>
+                            </div>
+                            <div className="border-t border-white/30 my-1"></div>
+                            <div className="flex justify-between items-center">
+                              <span className="text-lg font-black text-white drop-shadow">純利益:</span>
+                              <div className="text-right">
+                                <div className={`font-black text-2xl drop-shadow ${profit >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                                  {profit >= 0 ? '+' : ''}{profit.toLocaleString()} G
+                                </div>
+                                <div className={`text-xs font-bold ${profit >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                                  {profit >= 0 ? '📈' : '📉'} {profitRate}%
+                                </div>
+                              </div>
+                            </div>
+                            {!isSimpleMode && results.fail > 0 && (
+                              <div className="text-xs text-white/50 mt-2">
+                                ※ 失敗品{results.fail}回は売却不可のため収益に含みません
+                              </div>
                             )}
                           </div>
-                        )}
+                        </div>
+                      );
+                    }
+                    return null;
+                  })()}
 
-                        {(() => {
-                          const results = craftResults[item.name] || {};
-                          const prices = sellPrices[item.name] || {};
-                          const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
-                          const isSimpleMode = isMaterial && (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
+                  {/* 🆕 成果保存ボタン */}
+                  {(() => {
+                    const results = craftResults[item.name] || {};
+                    const prices = sellPrices[item.name] || {};
+                    const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
+                    const isSimpleMode = isMaterial && (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
 
-                          let hasData = false;
-                          if (isMaterial && isSimpleMode) {
-                            hasData = (results.totalItems > 0);
-                          } else {
-                            hasData = ((results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0) > 0);
-                          }
+                    let hasData = false;
+                    if (isMaterial && isSimpleMode) {
+                      hasData = (results.totalItems > 0);
+                    } else {
+                      hasData = ((results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0) > 0);
+                    }
 
-                          const hasPrice = isMaterial ? prices.unitPrice : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
+                    const hasPrice = isMaterial ? prices.unitPrice : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
 
-                          if (hasData && hasPrice) {
-                            const feeRate = (bazaarMode[item.name] ?? true) ? 0.95 : 1.0;
-
-                            let totalIncome;
-
-                            if (isMaterial) {
-                              const unitPrice = Math.floor((prices.unitPrice || 0) * feeRate);
-
-                              if (isSimpleMode) {
-                                totalIncome = (results.totalItems || 0) * unitPrice;
-                              } else {
-                                const totalItems =
-                                  (results.star3 || 0) * 10 +
-                                  (results.star2 || 0) * 3 +
-                                  (results.star1 || 0) * 2 +
-                                  (results.star0 || 0) * 1 +
-                                  (results.fail || 0) * 0;
-                                totalIncome = totalItems * unitPrice;
-                              }
-                            } else {
-                              totalIncome =
-                                Math.floor((results.star3 || 0) * (prices.star3 || 0) * feeRate) +
-                                Math.floor((results.star2 || 0) * (prices.star2 || 0) * feeRate) +
-                                Math.floor((results.star1 || 0) * (prices.star1 || 0) * feeRate) +
-                                Math.floor((results.star0 || 0) * (prices.star0 || 0) * feeRate);
-                            }
-
-                            const totalCost = calculateTotal(item);
-                            const profit = totalIncome - totalCost;
-                            const profitRate = totalCost > 0 ? ((profit / totalCost) * 100).toFixed(1) : 0;
-
-                            return (
-                              <div className="mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{ boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)' }}>
-                                <div className="text-xs font-bold text-white mb-2 flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 20px rgba(16, 185, 129, 0.6)' }}>
-                                  <span className="text-lg">💵</span>
-                                  <span>収支計算</span>
-                                </div>
-                                <div className="space-y-1 text-sm">
-                                  <div className="flex justify-between">
-                                    <span className="text-white/80 drop-shadow">総売上</span>
-                                    <span className="font-bold text-blue-400 drop-shadow">{totalIncome.toLocaleString()} G</span>
-                                  </div>
-                                  <div className="flex justify-between">
-                                    <span className="text-white/80 drop-shadow">総コスト</span>
-                                    <span className="font-bold text-red-400 drop-shadow">{totalCost.toLocaleString()} G</span>
-                                  </div>
-                                  <div className="border-t border-white/30 my-1"></div>
-                                  <div className="flex justify-between items-center">
-                                    <span className="text-lg font-black text-white drop-shadow">純利益:</span>
-                                    <div className="text-right">
-                                      <div className={`font-black text-2xl drop-shadow ${profit >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                                        {profit >= 0 ? '+' : ''}{profit.toLocaleString()} G
-                                      </div>
-                                      <div className={`text-xs font-bold ${profit >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                                        {profit >= 0 ? '📈' : '📉'} {profitRate}%
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {!isSimpleMode && results.fail > 0 && (
-                                    <div className="text-xs text-white/50 mt-2">
-                                      ※ 失敗品{results.fail}回は売却不可のため収益に含みません
-                                    </div>
-                                  )}
-                                </div>
-                              </div>
-                            );
-                          }
-                          return null;
-                        })()}
-
-                        {/* 🆕 成果保存ボタン */}
-                        {(() => {
-                          const results = craftResults[item.name] || {};
-                          const prices = sellPrices[item.name] || {};
-                          const isMaterial = item.category === '道具鍛冶' && item.subCategory === '素材';
-                          const isSimpleMode = isMaterial && (craftResults[`${item.name}_mode`] || 'simple') === 'simple';
-
-                          let hasData = false;
-                          if (isMaterial && isSimpleMode) {
-                            hasData = (results.totalItems > 0);
-                          } else {
-                            hasData = ((results.star3 || 0) + (results.star2 || 0) + (results.star1 || 0) + (results.star0 || 0) + (results.fail || 0) > 0);
-                          }
-
-                          const hasPrice = isMaterial ? prices.unitPrice : (prices.star3 || prices.star2 || prices.star1 || prices.star0);
-
-                          if (hasData && hasPrice) {
-                            return (
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  saveRecord(item);
-                                }}
-                                className="mt-3 w-full px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-                              >
-                                💾 成果を保存する
-                              </button>
-                            );
-                          }
-                          return null;
-                        })()}
-                      </div>
-                    </div>
-                  );
-                })}
+                    if (hasData && hasPrice) {
+                      return (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            saveRecord(item);
+                          }}
+                          className="mt-3 w-full px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                        >
+                          💾 成果を保存する
+                        </button>
+                      );
+                    }
+                    return null;
+                  })()}
+                </div>
               </div>
-            )}
-          </div>
-
-          <footer className="bg-white/80 backdrop-blur-md mt-8 py-4">
-            <div className="max-w-5xl mx-auto px-3 text-center text-gray-600 text-xs">
-              <p className="font-bold">ドラクエ10 職人支援ツール</p>
-              <p className="mt-0.5 text-xs">プロトタイプ版 with 収益管理</p>
-            </div>
-          </footer>
+            );
+          })}
         </div>
+      )
+    }
+          </div >
+
+      <footer className="bg-white/80 backdrop-blur-md mt-8 py-4">
+        <div className="max-w-5xl mx-auto px-3 text-center text-gray-600 text-xs">
+          <p className="font-bold">ドラクエ10 職人支援ツール</p>
+          <p className="mt-0.5 text-xs">プロトタイプ版 with 収益管理</p>
+        </div>
+      </footer>
+        </div >
       );
     };
 
