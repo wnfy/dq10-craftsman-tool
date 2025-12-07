@@ -2169,8 +2169,13 @@ body {
                     );
                   })()}
                   
+
+
+                  <div className="mt-4 text-white/60 text-sm text-center">
+                    記録数: {calculateSummary(profitView).count} 件
+                  </div>
                   {/* 🆕 詳細表示トグルボタン */}
-                  <div className="mt-4 text-center">
+                  <div className="mt-2 text-center">
                     <button
                       onClick={toggleProfitDetails}
                       className="px-6 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg font-bold text-sm text-white transition-all border border-white/30"
@@ -2180,11 +2185,6 @@ body {
                   </div>
                 </div>
               </div>
-
-                  <div className="mt-4 text-white/60 text-sm text-center">
-                    記録数: {calculateSummary(profitView).count} 件
-                  </div>
-                </div>
 
           {/* 🆕 データ管理ボタン */}
           {showProfitDetails && (
