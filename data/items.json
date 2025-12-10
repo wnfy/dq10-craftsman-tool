@@ -2389,12 +2389,42 @@
     "subCategory": "片手剣",
     "gridType": "ABCD",
     "targetValues": {
-      
+      "A": {
+        "min": 400,
+        "max": 408
+      },
+      "B": {
+        "min": 310,
+        "max": 318
+      },
+      "C": {
+        "min": 505,
+        "max": 513
+      }
     },
     "materials": [
-      
+      {
+        "name": "ゼーラズマ鉱石",
+        "quantity": 30
+      },
+      {
+        "name": "おぼろ水晶",
+        "quantity": 6
+      },
+      {
+        "name": "水竜のうろこ",
+        "quantity": 6
+      },
+      {
+        "name": "ドラゴンのホネ",
+        "quantity": 8
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 9
+      }
     ],
-    "specialTrait": ""
+    "specialTrait": "集中力変化"
   },
   {
     "name": "レオンソード",
@@ -6246,12 +6276,17 @@
     "subCategory": "短剣",
     "gridType": "ABCD",
     "targetValues": {
-      
+      "A": { "min": 800, "max": 808 },
+      "B": { "min": 605, "max": 613 }
     },
     "materials": [
-      
+      { "name": "ゼーラズマ鉱石", "quantity": 30 },
+      { "name": "宵闇のジェル", "quantity": 4 },
+      { "name": "呪力のモト", "quantity": 6 },
+      { "name": "まじゅうのツノ", "quantity": 4 },
+      { "name": "超ようせいのひだね", "quantity": 9 }
     ],
-    "specialTrait": ""
+    "specialTrait": "倍半"
   },
   {
     "name": "晴蒼の短剣",
