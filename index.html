@@ -145,7 +145,7 @@
 
     const CraftsmanApp = () => {
       const [showWelcome, setShowWelcome] = useState(!new URLSearchParams(window.location.search).has('app'));
-      const [activeCategory, setActiveCategory] = useState('武器鍛冶');
+      const [activeCategory, setActiveCategory] = useState(new URLSearchParams(window.location.search).get('category') || '武器鍛冶');
 
       // Enterキーでウェルカム画面を閉じる
       useEffect(() => {
@@ -183,8 +183,7 @@
       // 🆕 お気に入り機能用のstate
       const [favoriteItems, setFavoriteItems] = useState([]);
 
-      // 🆕 UI設定用のstate
-      const [showBackgroundVideo, setShowBackgroundVideo] = useState(true);
+      // UI設定用のstate
       const [theme, setTheme] = useState('colorful'); // 'colorful' or 'simple'
 
       const [fontSize, setFontSize] = useState('normal'); // 'normal' or 'large'
@@ -205,11 +204,7 @@
           setFavoriteItems(JSON.parse(favorites));
         }
 
-        // 🆕 UI設定を読み込み
-        const bgVideo = localStorage.getItem('dqx_bg_video');
-        if (bgVideo !== null) {
-          setShowBackgroundVideo(JSON.parse(bgVideo));
-        }
+        // UI設定を読み込み
         const savedTheme = localStorage.getItem('dqx_theme');
         if (savedTheme) {
           setTheme(savedTheme);
@@ -631,13 +626,6 @@
         setToolPrices({});
       };
 
-      // 🆕 背景動画の切り替え
-      const toggleBackgroundVideo = () => {
-        const newValue = !showBackgroundVideo;
-        setShowBackgroundVideo(newValue);
-        localStorage.setItem('dqx_bg_video', JSON.stringify(newValue));
-      };
-
       // 🆕 テーマの切り替え
       const toggleTheme = () => {
         const newTheme = theme === 'colorful' ? 'simple' : 'colorful';
@@ -790,7 +778,7 @@
         '料理': '火加減と位置を操り、最高のできへ近づける。',
         'お気に入り': 'よく使う商材だけを集めた、あなたの作業棚。',
         '収益管理': '仕入れ、売上、利益を振り返る職人の会計帳簿。',
-        '設定': '工房の背景、配色、文字サイズを整える。'
+        '設定': '工房の配色と文字サイズを整える。'
       };
 
       const weaponTypes = ['片手剣', '両手剣', '短剣', 'ヤリ', 'オノ', 'ツメ', 'ムチ', 'ハンマー', 'ブーメラン', '鎌', '家具', '庭具'];
@@ -835,27 +823,6 @@
       if (showWelcome) {
         return (
           <div className="welcome-screen min-h-screen relative flex items-center justify-center overflow-hidden">
-            {/* 背景動画 */}
-            {showBackgroundVideo ? (
-              <video
-                key="welcome-video"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="fixed inset-0 -z-10 w-full h-full object-cover"
-                ref={(video) => {
-                  if (video) {
-                    video.playbackRate = 0.5;
-                  }
-                }}
-              >
-                <source src="assets/bg-image-v10.mp4" type="video/mp4" />
-              </video>
-            ) : (
-              <div className="fixed inset-0 -z-10 bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700" />
-            )}
-            {/* 背景オーバーレイ（動画を少し暗く） */}
             <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
 
             {/* ネオン装飾 */}
@@ -1670,26 +1637,6 @@ body {
       // メインアプリ
       return (
         <div className={`app-shell ${theme === 'simple' ? 'atelier-mono' : 'atelier-color'} min-h-screen relative ${fontSize === 'large' ? 'text-lg' : ''}`}>
-          {showBackgroundVideo && (
-            <video
-              key="main-video"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="fixed inset-0 -z-10 w-full h-full object-cover"
-              ref={(video) => {
-                if (video) {
-                  video.playbackRate = 0.5;
-                }
-              }}
-            >
-              <source src="assets/bg-image-v3.mp4" type="video/mp4" />
-            </video>
-          )}
-          {!showBackgroundVideo && (
-            <div className="fixed inset-0 -z-10 bg-gradient-to-br from-slate-700 via-slate-600 to-slate-700" />
-          )}
           <div className="app-atmosphere fixed inset-0 -z-10 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
 
           <header className="topbar bg-white/10 backdrop-blur-md shadow-lg sticky top-0 z-10 border-b border-white/20" style={{ boxShadow: '0 0 30px rgba(56, 189, 248, 0.3), 0 4px 6px rgba(0,0,0,0.1)' }}>
@@ -1857,50 +1804,34 @@ body {
             {/* 🆕 設定パネルをここに移動 */}
             {activeCategory === '設定' && (
               <div className="mt-3">
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
+                <div className="settings-panel bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
                   <h2 className="text-xl font-black text-white mb-4 flex items-center gap-2">
                     <span className="text-2xl">⚙️</span>
                     <span>表示設定</span>
                   </h2>
 
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
-                      <div>
-                        <div className="font-bold text-white">背景動画</div>
-                        <div className="text-xs text-white/60">動画を非表示にして動作を軽くする</div>
-                      </div>
-                      <button
-                        onClick={toggleBackgroundVideo}
-                        className={`px-6 py-2 rounded-lg font-bold transition-all ${showBackgroundVideo
-                          ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
-                          : 'bg-white/20 text-white/60'
-                          }`}
-                      >
-                        {showBackgroundVideo ? 'ON' : 'OFF'}
-                      </button>
-                    </div>
-
-                    <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
+                    <div className="settings-row flex items-center justify-between p-4 bg-white/10 rounded-xl">
                       <div>
                         <div className="font-bold text-white">工房テーマ</div>
                         <div className="text-xs text-white/60">真鍮色とモノクロを切り替える</div>
                       </div>
                       <button
                         onClick={toggleTheme}
-                        className="px-6 py-2 rounded-lg font-bold transition-all bg-gradient-to-r from-purple-500 to-pink-500 text-white"
+                        className="settings-action px-6 py-2 rounded-lg font-bold transition-all text-white"
                       >
                         {theme === 'colorful' ? '真鍮' : 'モノクロ'}
                       </button>
                     </div>
 
-                    <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
+                    <div className="settings-row flex items-center justify-between p-4 bg-white/10 rounded-xl">
                       <div>
                         <div className="font-bold text-white">文字サイズ</div>
                         <div className="text-xs text-white/60">文字を大きく表示する</div>
                       </div>
                       <button
                         onClick={toggleFontSize}
-                        className="px-6 py-2 rounded-lg font-bold transition-all bg-gradient-to-r from-green-500 to-emerald-500 text-white"
+                        className="settings-action px-6 py-2 rounded-lg font-bold transition-all text-white"
                       >
                         {fontSize === 'normal' ? '標準' : '大きめ'}
                       </button>

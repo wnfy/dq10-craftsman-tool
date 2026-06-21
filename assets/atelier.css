@@ -44,10 +44,12 @@ button:focus-visible, input:focus-visible, label:focus-visible {
 }
 
 /* --- Entrance / title card --- */
-.welcome-screen { background: #090c0b; isolation: isolate; }
-.welcome-screen video {
-  opacity: .24;
-  filter: sepia(.35) saturate(.65) contrast(1.16) brightness(.72);
+.welcome-screen {
+  background:
+    radial-gradient(ellipse at 72% 34%, rgba(216,173,103,.075), transparent 28rem),
+    radial-gradient(ellipse at 58% 82%, rgba(105,185,167,.055), transparent 34rem),
+    linear-gradient(145deg, #070a09, #0c110f 48%, #060807);
+  isolation: isolate;
 }
 .welcome-screen::before {
   content: "";
@@ -55,8 +57,9 @@ button:focus-visible, input:focus-visible, label:focus-visible {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(5,8,7,.94), rgba(5,8,7,.35) 52%, rgba(5,8,7,.78)),
-    linear-gradient(0deg, #080b09 0%, transparent 42%, rgba(8,11,9,.35));
+    repeating-linear-gradient(90deg, transparent 0, transparent 89px, rgba(216,173,103,.018) 90px),
+    repeating-linear-gradient(0deg, transparent 0, transparent 89px, rgba(216,173,103,.014) 90px),
+    linear-gradient(90deg, rgba(5,8,7,.82), transparent 58%, rgba(5,8,7,.38));
 }
 .welcome-screen::after {
   content: "CRAFTSMAN'S LEDGER  /  EST. 2025";
@@ -147,6 +150,17 @@ button:focus-visible, input:focus-visible, label:focus-visible {
 
 /* --- Main application shell --- */
 .app-shell { min-height: 100vh; overflow-x: hidden; }
+.app-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(216,173,103,.10), transparent 31rem),
+    radial-gradient(circle at 8% 42%, rgba(105,185,167,.08), transparent 38rem),
+    linear-gradient(135deg, #090c0b, #101714 52%, #080a09);
+}
 .app-shell.atelier-mono {
   --brass: #bdb9ad;
   --brass-bright: #ebe7dc;
@@ -154,14 +168,11 @@ button:focus-visible, input:focus-visible, label:focus-visible {
   --line: rgba(235,231,220,.20);
 }
 .app-shell.atelier-mono > video { filter: grayscale(1) contrast(1.15) brightness(.55); }
-.app-shell > video {
-  opacity: .13;
-  filter: sepia(.55) saturate(.5) contrast(1.2) brightness(.62);
-}
 .app-atmosphere {
   background:
-    linear-gradient(180deg, rgba(8,11,9,.78), rgba(8,11,9,.93)),
-    radial-gradient(circle at 60% 10%, rgba(216,173,103,.10), transparent 38rem) !important;
+    repeating-linear-gradient(115deg, transparent 0, transparent 140px, rgba(238,230,214,.012) 141px),
+    linear-gradient(180deg, rgba(8,11,9,.12), rgba(8,11,9,.52)),
+    radial-gradient(circle at 62% 10%, rgba(216,173,103,.07), transparent 38rem) !important;
 }
 .topbar {
   background: rgba(8,12,10,.86) !important;
@@ -355,6 +366,29 @@ button:focus-visible, input:focus-visible, label:focus-visible {
   background-color: rgba(16,22,19,.86) !important;
   border-color: var(--line-soft) !important;
   box-shadow: none !important;
+}
+.settings-panel { padding: 1.2rem !important; border-radius: .35rem !important; }
+.settings-panel h2 { font-family: "Yu Mincho", "Hiragino Mincho ProN", Georgia, serif; font-weight: 600 !important; }
+.settings-row {
+  min-height: 5.2rem;
+  padding: 1rem 1.15rem !important;
+  border-radius: .2rem !important;
+  border: 1px solid var(--line-soft) !important;
+  background: rgba(238,230,214,.025) !important;
+}
+.settings-action {
+  min-width: 7.5rem;
+  border-radius: .15rem !important;
+  border: 1px solid var(--brass) !important;
+  background: transparent !important;
+  color: var(--brass-bright) !important;
+  box-shadow: none !important;
+  letter-spacing: .08em;
+}
+.settings-action:hover {
+  background: var(--brass) !important;
+  color: #17130d !important;
+  transform: none !important;
 }
 .pinned-summary { max-width: 86rem !important; }
 .pinned-summary > div { background: linear-gradient(90deg, #274d43, #1a332c) !important; border-color: rgba(105,185,167,.25) !important; box-shadow: 0 12px 38px rgba(0,0,0,.25) !important; }
