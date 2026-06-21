@@ -144,7 +144,10 @@
     const { useState, useEffect } = React;
 
     const CraftsmanApp = () => {
-      const [showWelcome, setShowWelcome] = useState(!new URLSearchParams(window.location.search).has('app'));
+      const [showWelcome, setShowWelcome] = useState(() => {
+        const params = new URLSearchParams(window.location.search);
+        return !params.has('app') && !params.has('recipePreview');
+      });
       const [activeCategory, setActiveCategory] = useState(new URLSearchParams(window.location.search).get('category') || '武器鍛冶');
 
       // Enterキーでウェルカム画面を閉じる
@@ -231,6 +234,17 @@
             setLoading(false);
           });
       }, []);
+
+      // レシピウィンドウ単体の表示確認・共有用
+      useEffect(() => {
+        const previewName = new URLSearchParams(window.location.search).get('recipePreview');
+        if (!loading && previewName) {
+          const previewItem = allItems.find(item => item.name === previewName);
+          if (previewItem) {
+            openRecipeWindow(previewItem, window);
+          }
+        }
+      }, [loading]);
       // 🆕 成果を保存する関数
       const saveRecord = (item) => {
         const record = {
@@ -1529,13 +1543,13 @@
         }
       };
       // 別ウィンドウでレシピを開く関数
-      const openRecipeWindow = (item) => {
+      const openRecipeWindow = (item, targetWindow = null) => {
         const width = 450;
         const height = 700;
         const left = window.screen.width - width - 50;
         const top = 100;
 
-        const recipeWindow = window.open(
+        const recipeWindow = targetWindow || window.open(
           '',
           `recipe_${item.name}`,
           `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
@@ -1546,33 +1560,18 @@
           return;
         }
 
-        const totalCost = calculateTotal(item);
-        const quantity = craftQuantity[item.name] || 1;
-
-        // 目標数値のHTML生成（シンプル版）
+        // ポップアップ用の目標数値HTML
         let targetValuesHTML = '';
         if (Object.keys(item.targetValues).length === 0) {
-          targetValuesHTML = '<div style="text-align: center; padding: 1rem; background: rgb(249, 250, 251); border-radius: 0.75rem; border: 2px solid rgb(229, 231, 235);"><p style="color: rgb(107, 114, 128); font-weight: bold;">データ収集中...</p></div>';
+          targetValuesHTML = '<div class="empty-state">目標値を調査中です</div>';
         } else {
-          const paramColors = {
-            A: 'background: linear-gradient(to bottom right, rgb(244, 63, 94), rgb(236, 72, 153)); border: 2px solid rgb(225, 29, 72);',
-            B: 'background: linear-gradient(to bottom right, rgb(14, 165, 233), rgb(59, 130, 246)); border: 2px solid rgb(2, 132, 199);',
-            C: 'background: linear-gradient(to bottom right, rgb(16, 185, 129), rgb(20, 184, 166)); border: 2px solid rgb(5, 150, 105);',
-            D: 'background: linear-gradient(to bottom right, rgb(139, 92, 246), rgb(168, 85, 247)); border: 2px solid rgb(124, 58, 237);',
-            E: 'background: linear-gradient(to bottom right, rgb(245, 158, 11), rgb(251, 146, 60)); border: 2px solid rgb(217, 119, 6);',
-            F: 'background: linear-gradient(to bottom right, rgb(132, 204, 22), rgb(74, 222, 128)); border: 2px solid rgb(101, 163, 13);',
-            G: 'background: linear-gradient(to bottom right, rgb(6, 182, 212), rgb(34, 211, 238)); border: 2px solid rgb(8, 145, 178);',
-            H: 'background: linear-gradient(to bottom right, rgb(236, 72, 153), rgb(244, 63, 94)); border: 2px solid rgb(219, 39, 119);'
-          };
-
-          targetValuesHTML = '<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">';
+          targetValuesHTML = '<div class="target-grid">';
           Object.entries(item.targetValues).forEach(([param, values]) => {
             targetValuesHTML += `
-          <div style="${paramColors[param]} padding: 1rem; border-radius: 1rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            <div style="font-size: 0.875rem; font-weight: bold; opacity: 0.9; text-align: center; text-shadow: 0 1px 2px rgba(0,0,0,0.1);">${param}</div>
-            <div style="font-size: 1.75rem; font-weight: 900; margin-top: 0.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.2); text-align: center;">${values.min} - ${values.max}</div>
-          </div>
-        `;
+              <div class="target-card">
+                <span class="target-label">${param}</span>
+                <strong>${values.min}<i>—</i>${values.max}</strong>
+              </div>`;
           });
           targetValuesHTML += '</div>';
         }
@@ -1585,53 +1584,158 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${item.name} - レシピ</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { 
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: white;
-  min-height: 100vh;
-}
+  :root {
+    --ink: #090c0b;
+    --panel: #111815;
+    --paper: #eee6d6;
+    --muted: #aaa391;
+    --brass: #d8ad67;
+    --brass-bright: #f2d08e;
+    --verdigris: #69b9a7;
+    --line: rgba(216, 173, 103, .24);
+    --line-soft: rgba(238, 230, 214, .10);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { color-scheme: dark; background: var(--ink); }
+  body {
+    min-height: 100vh;
+    color: var(--paper);
+    background:
+      radial-gradient(circle at 92% 4%, rgba(216,173,103,.11), transparent 20rem),
+      radial-gradient(circle at 4% 45%, rgba(105,185,167,.07), transparent 24rem),
+      linear-gradient(145deg, #090c0b, #101613 58%, #080a09);
+    font-family: "Yu Gothic UI", "Hiragino Sans", Meiryo, sans-serif;
+    letter-spacing: .01em;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .12;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+    mix-blend-mode: soft-light;
+  }
+  body.mono { --brass: #bdb9ad; --brass-bright: #ebe7dc; --verdigris: #9da5a1; }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #090c0b; }
+  ::-webkit-scrollbar-thumb { background: #5e5138; border-radius: 99px; }
+  .ledger { min-height: 100vh; position: relative; }
+  .hero {
+    padding: 28px 26px 24px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(115deg, rgba(216,173,103,.09), transparent 62%);
+  }
+  .eyebrow { color: var(--brass); font-size: 9px; font-weight: 800; letter-spacing: .28em; }
+  .meta { display: flex; align-items: center; gap: 8px; margin-top: 18px; }
+  .category {
+    padding: 5px 10px;
+    border: 1px solid var(--line);
+    color: var(--brass-bright);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .08em;
+  }
+  .trait {
+    padding: 5px 10px;
+    background: var(--brass);
+    color: #17130d;
+    font-size: 10px;
+    font-weight: 800;
+  }
+  .hero h1 {
+    margin-top: 12px;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", Georgia, serif;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: -.02em;
+  }
+  .folio { margin-top: 7px; color: var(--muted); font-size: 10px; letter-spacing: .12em; }
+  .section { padding: 24px 22px; border-bottom: 1px solid var(--line-soft); }
+  .section-head { display: flex; align-items: center; gap: 11px; margin-bottom: 16px; }
+  .section-index { color: var(--brass); font-family: Georgia, serif; font-size: 11px; font-style: italic; }
+  .section h2 { font-family: "Yu Mincho", "Hiragino Mincho ProN", Georgia, serif; font-size: 17px; font-weight: 600; letter-spacing: .06em; }
+  .section-note { margin-left: auto; color: var(--muted); font-size: 9px; letter-spacing: .1em; }
+  .target-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .target-card {
+    min-height: 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    background: linear-gradient(145deg, rgba(238,230,214,.085), rgba(238,230,214,.025));
+  }
+  .target-label { color: var(--brass); font-size: 10px; font-weight: 800; letter-spacing: .2em; }
+  .target-card strong { margin-top: 8px; font-family: Georgia, "Yu Mincho", serif; font-size: 22px; font-weight: 500; white-space: nowrap; }
+  .target-card i { padding: 0 5px; color: var(--muted); font-size: 13px; font-style: normal; }
+  .empty-state { padding: 25px; border: 1px dashed var(--line); color: var(--muted); text-align: center; font-size: 12px; }
+  .materials { display: grid; gap: 8px; }
+  .material {
+    min-height: 54px;
+    padding: 10px 12px 10px 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--line-soft);
+    background: rgba(238,230,214,.025);
+  }
+  .material-no { width: 26px; color: rgba(216,173,103,.45); font-family: Georgia, serif; font-size: 11px; font-style: italic; }
+  .material-name { flex: 1; font-size: 13px; font-weight: 700; }
+  .quantity { min-width: 54px; padding: 6px 9px; border: 1px solid var(--line); color: var(--brass-bright); text-align: center; font-family: Georgia, serif; font-size: 13px; font-weight: 700; }
+  footer { padding: 18px 22px 25px; color: rgba(238,230,214,.34); font-size: 8px; letter-spacing: .22em; text-align: center; }
+  @media (max-width: 370px) {
+    .hero { padding-inline: 20px; }
+    .section { padding-inline: 16px; }
+    .target-card strong { font-size: 19px; }
+  }
 </style>
 </head>
-<body>
-
-<div style="background: linear-gradient(to right, rgb(6, 182, 212), rgb(139, 92, 246), rgb(236, 72, 153)); padding: 1.5rem; color: white; border-bottom: 3px solid rgb(5, 150, 105); box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-  <div style="font-size: 0.75rem; font-weight: bold; background: rgba(255,255,255,0.3); padding: 0.375rem 0.875rem; border-radius: 9999px; display: inline-block; border: 2px solid rgba(255,255,255,0.4); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">${item.category}</div>
-  <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 0.75rem;">
-    <h2 style="font-size: 1.75rem; font-weight: 900; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">${item.name}</h2>
-    ${item.specialTrait ? `<span style="padding: 0.375rem 0.75rem; background: rgb(250, 204, 21); color: rgb(113, 63, 18); border-radius: 9999px; font-size: 0.875rem; font-weight: bold; border: 2px solid rgb(234, 179, 8); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">${item.specialTrait}</span>` : ''}
-  </div>
-</div>
-
-<div style="padding: 1.5rem;">
-  <h3 style="font-size: 1.125rem; font-weight: 900; color: rgb(17, 24, 39); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-    <span style="font-size: 1.5rem;">🎯</span>
-    <span>目標数値</span>
-  </h3>
-  ${targetValuesHTML}
-</div>
-
-<div style="padding: 0 1.5rem 1.5rem 1.5rem;">
-  <h3 style="font-size: 1.125rem; font-weight: 900; color: rgb(17, 24, 39); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-    <span style="font-size: 1.5rem;">📦</span>
-    <span>必要素材</span>
-  </h3>
-  ${item.materials.map(m => `
-    <div style="padding: 1rem; background: linear-gradient(to bottom right, rgb(238, 242, 255), rgb(243, 232, 255)); border-radius: 1rem; margin-bottom: 0.75rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid rgb(199, 210, 254);">
-      <div style="display: flex; align-items: center; gap: 0.75rem;">
-        <span style="font-weight: bold; color: rgb(17, 24, 39); font-size: 1rem;">${m.name}</span>
-        <span style="padding: 0.375rem 1rem; background: linear-gradient(to right, rgb(236, 72, 153), rgb(168, 85, 247)); color: white; border-radius: 9999px; font-weight: 900; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">×${m.quantity}</span>
+<body class="${theme === 'simple' ? 'mono' : ''}">
+  <main class="ledger">
+    <header class="hero">
+      <div class="eyebrow">ASTOLTIA / RECIPE LEDGER</div>
+      <div class="meta">
+        <span class="category">${item.category}</span>
+        ${item.specialTrait ? `<span class="trait">${item.specialTrait}</span>` : ''}
       </div>
-    </div>
-  `).join('')}
-</div>
+      <h1>${item.name}</h1>
+      <div class="folio">CRAFT SPECIFICATION / ${item.subCategory}</div>
+    </header>
 
+    <section class="section">
+      <div class="section-head">
+        <span class="section-index">01</span>
+        <h2>目標数値</h2>
+        <span class="section-note">TARGET VALUES</span>
+      </div>
+      ${targetValuesHTML}
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <span class="section-index">02</span>
+        <h2>必要素材</h2>
+        <span class="section-note">${item.materials.length} MATERIALS</span>
+      </div>
+      <div class="materials">
+        ${item.materials.map((m, index) => `
+          <div class="material">
+            <span class="material-no">${String(index + 1).padStart(2, '0')}</span>
+            <span class="material-name">${m.name}</span>
+            <span class="quantity">× ${m.quantity}</span>
+          </div>`).join('')}
+      </div>
+    </section>
+
+    <footer>ASTOLTIA CRAFTSMAN'S LEDGER</footer>
+  </main>
 </body>
 </html>
     `);
 
         recipeWindow.document.close();
-        recipeWindow.focus();
+        if (!targetWindow) recipeWindow.focus();
       };
 
       // メインアプリ
