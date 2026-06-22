@@ -1539,10 +1539,45 @@
       };
       // 別ウィンドウでレシピを開く関数
       const openRecipeWindow = (item, targetWindow = null) => {
-        const targetCount = Object.keys(item.targetValues).length;
-        const width = 356;
+        const valuePositions = Object.keys(item.targetValues);
+        const layoutsBySubCategory = {
+          '片手剣': { columns: 1, slots: ['A', 'B', 'C'] },
+          '両手剣': { columns: 2, slots: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'] },
+          '短剣': { columns: 1, slots: ['A', 'B'] },
+          'ヤリ': { columns: 1, slots: ['A', 'B', 'C', 'D'] },
+          'オノ': { columns: 2, slots: ['A', 'B', 'C', 'D', 'E', null, 'G', null] },
+          'ムチ': { columns: 2, slots: ['A', 'B', 'C', 'D', 'E', 'F', 'G', null] },
+          'ハンマー': { columns: 2, slots: ['A', 'B', 'C', 'D', 'E', 'F'] },
+          'ブーメラン': { columns: 2, slots: ['A', 'B', null, 'D', 'E', 'F'] },
+          '鎌': { columns: 2, slots: ['A', 'B', 'C', null, 'E', null, 'G', null] },
+          'ウデ': { columns: 1, slots: ['A', 'B', 'C'] },
+          '足': { columns: 2, slots: [null, 'B', null, 'D', 'E', 'F'] }
+        };
+
+        let popupLayout = layoutsBySubCategory[item.subCategory];
+        let showMissingValues = false;
+
+        if (!popupLayout) {
+          if (item.gridType === '3x3') {
+            popupLayout = { columns: 3, slots: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'] };
+            showMissingValues = true;
+          } else if (item.gridType === '3x2') {
+            popupLayout = { columns: 2, slots: valuePositions };
+          } else {
+            popupLayout = { columns: 2, slots: valuePositions };
+          }
+        }
+
+        const hasTargetValues = valuePositions.length > 0;
+        const popupColumns = hasTargetValues ? popupLayout.columns : 1;
+        const popupSlots = hasTargetValues ? popupLayout.slots : [];
+        const popupRows = Math.max(1, Math.ceil(popupSlots.length / popupColumns));
+        const tileWidth = popupColumns === 1 ? 320 : popupColumns === 2 ? 230 : 176;
+        const contentWidth = (tileWidth * popupColumns) + (9 * (popupColumns - 1));
+        const desiredWidth = contentWidth + 36;
+        const width = Math.min(desiredWidth, (window.screen.availWidth || desiredWidth + 20) - 20);
         const height = Math.min(
-          Math.max(160, 27 + Math.max(targetCount, 1) * 97),
+          hasTargetValues ? 27 + (popupRows * 97) : 160,
           (window.screen.availHeight || 900) - 80
         );
         const left = window.screen.width - width - 50;
@@ -1561,13 +1596,26 @@
 
         // ポップアップ用の目標数値HTML
         let targetValuesHTML = '';
-        if (Object.keys(item.targetValues).length === 0) {
+        if (!hasTargetValues) {
           targetValuesHTML = '<div class="empty-state">目標値を調査中です</div>';
         } else {
-          targetValuesHTML = '<div class="target-grid">';
-          Object.entries(item.targetValues).forEach(([param, values]) => {
+          targetValuesHTML = `<div class="target-grid" style="--columns:${popupColumns};--content-width:${contentWidth}px">`;
+          popupSlots.forEach((param) => {
+            if (!param) {
+              targetValuesHTML += '<div class="target-placeholder" aria-hidden="true"></div>';
+              return;
+            }
+
+            const values = item.targetValues[param];
+            if (!values) {
+              targetValuesHTML += showMissingValues
+                ? `<div class="target-card is-missing" data-param="${param}"><span class="target-label">${param}</span><strong>—</strong></div>`
+                : '<div class="target-placeholder" aria-hidden="true"></div>';
+              return;
+            }
+
             targetValuesHTML += `
-              <div class="target-card">
+              <div class="target-card" data-param="${param}">
                 <span class="target-label">${param}</span>
                 <strong>${values.min}<i>—</i>${values.max}</strong>
               </div>`;
@@ -1672,7 +1720,7 @@
   .section:nth-of-type(2) .section-index { background:var(--mint); }
   .section h2 { font-family:"Yu Mincho","Hiragino Mincho ProN",Georgia,serif;font-size:17px;font-weight:900;letter-spacing:.04em; }
   .section-note { margin-left:auto;color:var(--blue);font-size:8px;font-weight:900;letter-spacing:.1em; }
-  .target-grid { width: min(100%, 230px); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 9px; }
+  .target-grid { width: min(100%, var(--content-width)); margin: 0 auto; display: grid; grid-template-columns: repeat(var(--columns), minmax(0, 1fr)); gap: 9px; }
   .target-card {
     min-height: 88px;
     display: flex;
@@ -1684,7 +1732,11 @@
     background: white;
     box-shadow:3px 3px 0 rgba(40,86,232,.23);
   }
-  .target-card:nth-child(3n+1){border-top:7px solid var(--coral)}.target-card:nth-child(3n+2){border-top:7px solid var(--blue)}.target-card:nth-child(3n){border-top:7px solid var(--mint)}
+  .target-card[data-param="A"],.target-card[data-param="D"],.target-card[data-param="G"]{border-top:7px solid var(--coral)}
+  .target-card[data-param="B"],.target-card[data-param="E"],.target-card[data-param="H"]{border-top:7px solid var(--blue)}
+  .target-card[data-param="C"],.target-card[data-param="F"],.target-card[data-param="I"]{border-top:7px solid var(--mint)}
+  .target-card.is-missing { opacity:.42; box-shadow:none; }
+  .target-placeholder { min-height:88px; border:1.5px dashed rgba(21,33,61,.14); border-radius:12px; background:rgba(255,253,246,.24); }
   .target-label { color:var(--coral);font-size:9px;font-weight:900;letter-spacing:.2em; }
   .target-card strong { margin-top:8px;font-family:Georgia,"Yu Mincho",serif;font-size:22px;font-weight:800;white-space:nowrap; }
   .target-card i { padding: 0 5px; color: var(--muted); font-size: 13px; font-style: normal; }
@@ -1717,7 +1769,7 @@
   .ledger { width: 100%; min-height: 0; padding: 0; }
   .ledger::after { display: none; }
   .section { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
-  .target-grid { width: min(100%, 320px); }
+  .target-grid { width: min(100%, var(--content-width)); }
 </style>
 </head>
 <body class="${theme === 'simple' ? 'mono' : ''}">
