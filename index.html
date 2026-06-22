@@ -1544,8 +1544,12 @@
       };
       // 別ウィンドウでレシピを開く関数
       const openRecipeWindow = (item, targetWindow = null) => {
-        const width = 450;
-        const height = 700;
+        const targetCount = Object.keys(item.targetValues).length;
+        const width = 320;
+        const height = Math.min(
+          Math.max(210, 106 + Math.max(targetCount, 1) * 97),
+          (window.screen.availHeight || 900) - 80
+        );
         const left = window.screen.width - width - 50;
         const top = 100;
 
@@ -1711,46 +1715,21 @@
     .section { padding-inline: 16px; }
     .target-card strong { font-size: 19px; }
   }
+
+  /* Compact recipe reference: target tiles only */
+  html, body { min-height: 100%; }
+  body { padding: 18px; display: grid; place-items: center; }
+  .ledger { width: 100%; min-height: 0; padding: 0; }
+  .ledger::after { display: none; }
+  .section { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+  .target-grid { width: min(100%, 230px); }
 </style>
 </head>
 <body class="${theme === 'simple' ? 'mono' : ''}">
   <main class="ledger">
-    <header class="hero">
-      <div class="eyebrow">ASTOLTIA / RECIPE LEDGER</div>
-      <div class="meta">
-        <span class="category">${item.category}</span>
-        ${item.specialTrait ? `<span class="trait">${item.specialTrait}</span>` : ''}
-      </div>
-      <h1>${item.name}</h1>
-      <div class="folio">CRAFT SPECIFICATION / ${item.subCategory}</div>
-    </header>
-
     <section class="section">
-      <div class="section-head">
-        <span class="section-index">01</span>
-        <h2>目標数値</h2>
-        <span class="section-note">TARGET VALUES</span>
-      </div>
       ${targetValuesHTML}
     </section>
-
-    <section class="section">
-      <div class="section-head">
-        <span class="section-index">02</span>
-        <h2>必要素材</h2>
-        <span class="section-note">${item.materials.length} MATERIALS</span>
-      </div>
-      <div class="materials">
-        ${item.materials.map((m, index) => `
-          <div class="material">
-            <span class="material-no">${String(index + 1).padStart(2, '0')}</span>
-            <span class="material-name">${m.name}</span>
-            <span class="quantity">× ${m.quantity}</span>
-          </div>`).join('')}
-      </div>
-    </section>
-
-    <footer>ASTOLTIA CRAFTSMAN'S LEDGER</footer>
   </main>
 </body>
 </html>
