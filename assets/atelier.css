@@ -257,7 +257,7 @@ button:focus-visible, input:focus-visible, label:focus-visible { outline: 3px so
 .settings-panel h2 { color:var(--ink) !important; font-family:"Yu Mincho",Georgia,serif; font-weight:900 !important; }
 .settings-row { min-height:5.4rem; padding:1rem 1.15rem !important; border:1.5px dashed var(--line-strong) !important; border-radius:.9rem !important; background:var(--paper-warm) !important; }
 .settings-action { min-width:7.5rem; border:2px solid var(--ink) !important; border-radius:99px !important; color:white !important; background:var(--cobalt) !important; box-shadow:3px 3px 0 var(--ink) !important; letter-spacing:.06em; }
-.navigation-shell .settings-action { color:white !important; }
+.navigation-shell .settings-action,.content-shell .settings-action { color:white !important; }
 .settings-action:hover { color:var(--ink) !important; background:var(--sun) !important; transform:translate(2px,2px) !important; box-shadow:1px 1px 0 var(--ink) !important; }
 .pinned-summary { max-width:90rem !important; }
 .pinned-summary > div { border:2px solid var(--ink) !important; color:var(--ink) !important; background:var(--mint) !important; box-shadow:5px 5px 0 var(--ink) !important; }

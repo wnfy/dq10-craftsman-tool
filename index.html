@@ -1673,7 +1673,7 @@
   .section:nth-of-type(2) .section-index { background:var(--mint); }
   .section h2 { font-family:"Yu Mincho","Hiragino Mincho ProN",Georgia,serif;font-size:17px;font-weight:900;letter-spacing:.04em; }
   .section-note { margin-left:auto;color:var(--blue);font-size:8px;font-weight:900;letter-spacing:.1em; }
-  .target-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .target-grid { width: min(100%, 230px); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 9px; }
   .target-card {
     min-height: 88px;
     display: flex;
@@ -1927,46 +1927,6 @@
               </div>
             )}
 
-            {/* 🆕 設定パネルをここに移動 */}
-            {activeCategory === '設定' && (
-              <div className="mt-3">
-                <div className="settings-panel bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
-                  <h2 className="text-xl font-black text-white mb-4 flex items-center gap-2">
-                    <span className="text-2xl">⚙️</span>
-                    <span>表示設定</span>
-                  </h2>
-
-                  <div className="space-y-4">
-                    <div className="settings-row flex items-center justify-between p-4 bg-white/10 rounded-xl">
-                      <div>
-                        <div className="font-bold text-white">工房テーマ</div>
-                        <div className="text-xs text-white/60">真鍮色とモノクロを切り替える</div>
-                      </div>
-                      <button
-                        onClick={toggleTheme}
-                        className="settings-action px-6 py-2 rounded-lg font-bold transition-all text-white"
-                      >
-                        {theme === 'colorful' ? '真鍮' : 'モノクロ'}
-                      </button>
-                    </div>
-
-                    <div className="settings-row flex items-center justify-between p-4 bg-white/10 rounded-xl">
-                      <div>
-                        <div className="font-bold text-white">文字サイズ</div>
-                        <div className="text-xs text-white/60">文字を大きく表示する</div>
-                      </div>
-                      <button
-                        onClick={toggleFontSize}
-                        className="settings-action px-6 py-2 rounded-lg font-bold transition-all text-white"
-                      >
-                        {fontSize === 'normal' ? '標準' : '大きめ'}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
             {activeCategory === '防具鍛冶' && (
               <div className="subnav mt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-hide px-1 py-1">
                 {armorTypes.map((type) => (
@@ -2159,6 +2119,42 @@
                 <span className="item-count"> {activeCategory === '収益管理' || activeCategory === '設定' ? '' : `${filteredItems.length}件`}</span>
               </p>
             </section>
+            {activeCategory === '設定' && (
+              <div className="settings-panel bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl mb-6">
+                <h2 className="text-xl font-black text-white mb-4 flex items-center gap-2">
+                  <span className="text-2xl">⚙️</span>
+                  <span>表示設定</span>
+                </h2>
+
+                <div className="space-y-4">
+                  <div className="settings-row flex items-center justify-between p-4 bg-white/10 rounded-xl">
+                    <div>
+                      <div className="font-bold text-white">工房テーマ</div>
+                      <div className="text-xs text-white/60">真鍮色とモノクロを切り替える</div>
+                    </div>
+                    <button
+                      onClick={toggleTheme}
+                      className="settings-action px-6 py-2 rounded-lg font-bold transition-all text-white"
+                    >
+                      {theme === 'colorful' ? '真鍮' : 'モノクロ'}
+                    </button>
+                  </div>
+
+                  <div className="settings-row flex items-center justify-between p-4 bg-white/10 rounded-xl">
+                    <div>
+                      <div className="font-bold text-white">文字サイズ</div>
+                      <div className="text-xs text-white/60">文字を大きく表示する</div>
+                    </div>
+                    <button
+                      onClick={toggleFontSize}
+                      className="settings-action px-6 py-2 rounded-lg font-bold transition-all text-white"
+                    >
+                      {fontSize === 'normal' ? '標準' : '大きめ'}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
             {/* 🆕 収益管理カテゴリ */}
             {activeCategory === '収益管理' ? (
               <div className="space-y-4">
