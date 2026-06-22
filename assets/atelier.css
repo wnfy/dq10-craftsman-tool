@@ -127,7 +127,7 @@ button:focus-visible, input:focus-visible, label:focus-visible { outline: 3px so
 .welcome-content h1 { color: var(--ink) !important; font-family: Arial Black, Inter, sans-serif; font-size: clamp(4.2rem, 12vw, 8.4rem) !important; font-weight: 950 !important; line-height: .78; }
 .welcome-content h1::first-letter { color: var(--cobalt); }
 .welcome-content h2 { margin-top: .9rem !important; color: var(--coral) !important; font-family: "Yu Mincho", Georgia, serif; font-size: clamp(1.55rem, 4vw, 3.2rem) !important; font-weight: 800 !important; line-height: 1.15; }
-.welcome-emblem { position: absolute; right: clamp(1.2rem, 6vw, 5rem); top: 42%; margin: 0 !important; animation: float 4s ease-in-out infinite !important; }
+.welcome-emblem { position: absolute; right: clamp(1.2rem, 6vw, 5rem); top: 55%; margin: 0 !important; animation: float 4s ease-in-out infinite !important; }
 .welcome-emblem > div { padding: 1rem !important; border: 2px solid var(--ink) !important; border-radius: 50% !important; background: var(--sun) !important; box-shadow: 6px 6px 0 var(--ink) !important; animation: none !important; transform: rotate(8deg); }
 .welcome-emblem > div > div { display: none; }
 .welcome-emblem img { width: clamp(3.5rem, 8vw, 5.5rem) !important; height: auto !important; filter: saturate(.85) contrast(1.1) !important; }
