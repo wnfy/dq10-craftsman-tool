@@ -86,12 +86,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "集中力変化",
     "targetValues": {
-
+      "A": { "min": 100, "max": 106 },
+      "B": { "min": 100, "max": 106 },
+      "C": { "min": 100, "max": 108 },
+      "D": { "min": 100, "max": 108 },
+      "E": { "min": 150, "max": 160 },
+      "F": { "min": 150, "max": 160 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -99,12 +104,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "倍半",
     "targetValues": {
-
+      "A": { "min": 130, "max": 138 },
+      "B": { "min": 130, "max": 138 },
+      "C": { "min": 130, "max": 140 },
+      "D": { "min": 130, "max": 140 },
+      "E": { "min": 90, "max": 96 },
+      "F": { "min": 90, "max": 96 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -112,12 +122,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "光",
     "targetValues": {
-
+      "A": { "min": 100, "max": 110 },
+      "B": { "min": 190, "max": 196 },
+      "C": { "min": 100, "max": 110 },
+      "D": { "min": 190, "max": 196 },
+      "E": { "min": 80, "max": 88 },
+      "F": { "min": 80, "max": 88 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -125,12 +140,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "回復",
     "targetValues": {
-
+      "A": { "min": 150, "max": 160 },
+      "B": { "min": 150, "max": 160 },
+      "C": { "min": 90, "max": 98 },
+      "D": { "min": 90, "max": 98 },
+      "E": { "min": 90, "max": 96 },
+      "F": { "min": 90, "max": 96 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -138,12 +158,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "光",
     "targetValues": {
-
+      "A": { "min": 110, "max": 118 },
+      "B": { "min": 170, "max": 180 },
+      "C": { "min": 110, "max": 118 },
+      "D": { "min": 170, "max": 180 },
+      "E": { "min": 110, "max": 116 },
+      "F": { "min": 70, "max": 76 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -151,12 +176,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "倍半",
     "targetValues": {
-
+      "A": { "min": 130, "max": 140 },
+      "B": { "min": 140, "max": 146 },
+      "C": { "min": 140, "max": 146 },
+      "D": { "min": 130, "max": 140 },
+      "E": { "min": 80, "max": 88 },
+      "F": { "min": 80, "max": 88 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -164,12 +194,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "回復",
     "targetValues": {
-
+      "A": { "min": 110, "max": 120 },
+      "B": { "min": 110, "max": 120 },
+      "C": { "min": 110, "max": 118 },
+      "D": { "min": 110, "max": 118 },
+      "E": { "min": 110, "max": 116 },
+      "F": { "min": 110, "max": 116 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -177,12 +212,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "集中力変化",
     "targetValues": {
-
+      "A": { "min": 130, "max": 140 },
+      "B": { "min": 110, "max": 118 },
+      "C": { "min": 70, "max": 76 },
+      "D": { "min": 150, "max": 156 },
+      "E": { "min": 130, "max": 140 },
+      "F": { "min": 110, "max": 118 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -190,12 +230,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "光",
     "targetValues": {
-
+      "A": { "min": 140, "max": 146 },
+      "B": { "min": 110, "max": 120 },
+      "C": { "min": 120, "max": 128 },
+      "D": { "min": 120, "max": 128 },
+      "E": { "min": 110, "max": 120 },
+      "F": { "min": 140, "max": 146 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -203,12 +248,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "回復",
     "targetValues": {
-
+      "A": { "min": 100, "max": 110 },
+      "B": { "min": 100, "max": 110 },
+      "C": { "min": 120, "max": 128 },
+      "D": { "min": 110, "max": 116 },
+      "E": { "min": 110, "max": 116 },
+      "F": { "min": 120, "max": 128 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -216,12 +266,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "集中力変化",
     "targetValues": {
-
+      "A": { "min": 140, "max": 148 },
+      "B": { "min": 110, "max": 116 },
+      "C": { "min": 110, "max": 116 },
+      "D": { "min": 140, "max": 148 },
+      "E": { "min": 100, "max": 110 },
+      "F": { "min": 100, "max": 110 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -229,12 +284,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "倍半",
     "targetValues": {
-
+      "A": { "min": 130, "max": 138 },
+      "B": { "min": 130, "max": 138 },
+      "C": { "min": 90, "max": 96 },
+      "D": { "min": 90, "max": 96 },
+      "E": { "min": 130, "max": 140 },
+      "F": { "min": 130, "max": 140 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -242,12 +302,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "回復",
     "targetValues": {
-
+      "A": { "min": 140, "max": 150 },
+      "B": { "min": 140, "max": 150 },
+      "C": { "min": 110, "max": 118 },
+      "D": { "min": 110, "max": 118 },
+      "E": { "min": 80, "max": 86 },
+      "F": { "min": 80, "max": 86 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -255,12 +320,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "集中力変化",
     "targetValues": {
-
+      "A": { "min": 130, "max": 138 },
+      "B": { "min": 110, "max": 116 },
+      "C": { "min": 160, "max": 170 },
+      "D": { "min": 60, "max": 70 },
+      "E": { "min": 130, "max": 138 },
+      "F": { "min": 110, "max": 116 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -268,12 +338,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "集中力変化",
     "targetValues": {
-
+      "A": { "min": 90, "max": 98 },
+      "B": { "min": 130, "max": 136 },
+      "C": { "min": 130, "max": 140 },
+      "D": { "min": 130, "max": 140 },
+      "E": { "min": 130, "max": 136 },
+      "F": { "min": 90, "max": 98 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -281,12 +356,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "回復",
     "targetValues": {
-
+      "A": { "min": 90, "max": 98 },
+      "B": { "min": 90, "max": 98 },
+      "C": { "min": 120, "max": 126 },
+      "D": { "min": 120, "max": 126 },
+      "E": { "min": 120, "max": 130 },
+      "F": { "min": 120, "max": 130 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -294,12 +374,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "集中力変化",
     "targetValues": {
-
+      "A": { "min": 130, "max": 140 },
+      "B": { "min": 100, "max": 108 },
+      "C": { "min": 100, "max": 108 },
+      "D": { "min": 130, "max": 140 },
+      "E": { "min": 120, "max": 130 },
+      "F": { "min": 120, "max": 130 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -307,25 +392,35 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "倍半",
     "targetValues": {
-
+      "A": { "min": 110, "max": 116 },
+      "B": { "min": 110, "max": 116 },
+      "C": { "min": 110, "max": 118 },
+      "D": { "min": 110, "max": 118 },
+      "E": { "min": 130, "max": 140 },
+      "F": { "min": 130, "max": 140 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
-    "name": "黄黄金の飾りこて",
+    "name": "黄金の飾りこて",
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "光",
     "targetValues": {
-
+      "A": { "min": 140, "max": 148 },
+      "B": { "min": 100, "max": 110 },
+      "C": { "min": 130, "max": 136 },
+      "D": { "min": 130, "max": 136 },
+      "E": { "min": 100, "max": 110 },
+      "F": { "min": 140, "max": 148 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
@@ -333,12 +428,17 @@
     "category": "道具鍛冶",
     "subCategory": "素材",
     "gridType": "3x2",
-    "specialTrait": "",
+    "specialTrait": "集中力変化",
     "targetValues": {
-
+      "A": { "min": 80, "max": 86 },
+      "B": { "min": 120, "max": 128 },
+      "C": { "min": 80, "max": 86 },
+      "D": { "min": 120, "max": 128 },
+      "E": { "min": 150, "max": 160 },
+      "F": { "min": 150, "max": 160 }
     },
     "materials": [
-
+      { "name": "きんかい", "quantity": 20 }
     ]
   },
   {
