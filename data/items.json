@@ -46040,6 +46040,1978 @@
     ]
   },
   {
+    "name": "妖夢の杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 465,
+        "max": 465
+      },
+      "B": {
+        "min": 195,
+        "max": 195
+      },
+      "C": {
+        "min": 340,
+        "max": 340
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "暗夜の魔石",
+        "quantity": 4
+      },
+      {
+        "name": "地竜のツメ",
+        "quantity": 8
+      },
+      {
+        "name": "よるのとばり",
+        "quantity": 30
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 9
+      }
+    ],
+    "specialTrait": "変化木"
+  },
+  {
+    "name": "プリエールの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 415,
+        "max": 415
+      },
+      "B": {
+        "min": 170,
+        "max": 170
+      },
+      "C": {
+        "min": 355,
+        "max": 355
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "竜の涙",
+        "quantity": 5
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 3
+      },
+      {
+        "name": "まほうの樹木",
+        "quantity": 20
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "再生木"
+  },
+  {
+    "name": "ソールワンド",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 480,
+        "max": 480
+      },
+      "B": {
+        "min": 250,
+        "max": 250
+      },
+      "C": {
+        "min": 360,
+        "max": 360
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 6
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 6
+      },
+      {
+        "name": "黄金の飾り両手杖",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "虹木"
+  },
+  {
+    "name": "アリエススタッフ",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 450,
+        "max": 450
+      },
+      "B": {
+        "min": 240,
+        "max": 240
+      },
+      "C": {
+        "min": 380,
+        "max": 380
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 3
+      },
+      {
+        "name": "まじゅうの皮",
+        "quantity": 5
+      },
+      {
+        "name": "やわらかウール",
+        "quantity": 2
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "変化木"
+  },
+  {
+    "name": "セーラスワンド",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 420,
+        "max": 420
+      },
+      "B": {
+        "min": 220,
+        "max": 220
+      },
+      "C": {
+        "min": 370,
+        "max": 370
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 3
+      },
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "黄金の飾り両手杖",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "燃え木"
+  },
+  {
+    "name": "ブルームワンド",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 370,
+        "max": 370
+      },
+      "B": {
+        "min": 300,
+        "max": 300
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "たそがれゴケ",
+        "quantity": 3
+      },
+      {
+        "name": "スライムおしゃれ花",
+        "quantity": 20
+      },
+      {
+        "name": "黄金の飾り両手杖",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "虹木"
+  },
+  {
+    "name": "輝天の杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 400,
+        "max": 400
+      },
+      "B": {
+        "min": 250,
+        "max": 250
+      },
+      "C": {
+        "min": 300,
+        "max": 300
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "ささやく枯れ葉",
+        "quantity": 3
+      },
+      {
+        "name": "魔紅樹の板",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾り両手杖",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 6
+      }
+    ],
+    "specialTrait": "変化木"
+  },
+  {
+    "name": "征魔の黒杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 400,
+        "max": 400
+      },
+      "B": {
+        "min": 200,
+        "max": 200
+      },
+      "C": {
+        "min": 350,
+        "max": 350
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "暗夜の魔石",
+        "quantity": 2
+      },
+      {
+        "name": "ささやく枯れ葉",
+        "quantity": 5
+      },
+      {
+        "name": "こうもりのはね",
+        "quantity": 20
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "燃え木"
+  },
+  {
+    "name": "セレニティワンド",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 330,
+        "max": 330
+      },
+      "B": {
+        "min": 200,
+        "max": 200
+      },
+      "C": {
+        "min": 330,
+        "max": 330
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 2
+      },
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 5
+      },
+      {
+        "name": "暗黒の樹木",
+        "quantity": 30
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ミネルバの聖杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 400,
+        "max": 400
+      },
+      "B": {
+        "min": 278,
+        "max": 278
+      },
+      "C": {
+        "min": 278,
+        "max": 278
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 1
+      },
+      {
+        "name": "宵闇のジェル",
+        "quantity": 10
+      },
+      {
+        "name": "ホワイトウッド",
+        "quantity": 20
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "黄昏の魔杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 322,
+        "max": 322
+      },
+      "B": {
+        "min": 276,
+        "max": 276
+      },
+      "C": {
+        "min": 348,
+        "max": 348
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "宵闇のジェル",
+        "quantity": 1
+      },
+      {
+        "name": "黄金の飾り両手杖",
+        "quantity": 1
+      },
+      {
+        "name": "まほうの樹木",
+        "quantity": 15
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "神域の杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 280,
+        "max": 280
+      },
+      "B": {
+        "min": 334,
+        "max": 334
+      },
+      "C": {
+        "min": 310,
+        "max": 310
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "天使のソーマ",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾り両手杖",
+        "quantity": 1
+      },
+      {
+        "name": "まほうの樹木",
+        "quantity": 10
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "天恵石の杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 250,
+        "max": 250
+      },
+      "B": {
+        "min": 280,
+        "max": 280
+      },
+      "C": {
+        "min": 331,
+        "max": 331
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 1
+      },
+      {
+        "name": "緑の宝石",
+        "quantity": 20
+      },
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 20
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "エンシェントワンド",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 300,
+        "max": 300
+      },
+      "B": {
+        "min": 240,
+        "max": 240
+      },
+      "C": {
+        "min": 300,
+        "max": 300
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 5
+      },
+      {
+        "name": "烈風石",
+        "quantity": 1
+      },
+      {
+        "name": "水の樹木",
+        "quantity": 20
+      },
+      {
+        "name": "おうごんのかけら",
+        "quantity": 10
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "邪術皇の杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 236,
+        "max": 236
+      },
+      "B": {
+        "min": 300,
+        "max": 300
+      },
+      "C": {
+        "min": 300,
+        "max": 300
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 5
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 1
+      },
+      {
+        "name": "暗黒の樹木",
+        "quantity": 10
+      },
+      {
+        "name": "よるのとばり",
+        "quantity": 10
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "万物流転の杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 205,
+        "max": 205
+      },
+      "B": {
+        "min": 235,
+        "max": 235
+      },
+      "C": {
+        "min": 265,
+        "max": 265
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 3
+      },
+      {
+        "name": "まりょくの土",
+        "quantity": 30
+      },
+      {
+        "name": "いかずちのたま",
+        "quantity": 5
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "イーリスの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 270,
+        "max": 270
+      },
+      "B": {
+        "min": 230,
+        "max": 230
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 15
+      },
+      {
+        "name": "なないろのまゆ",
+        "quantity": 10
+      },
+      {
+        "name": "にじいろの布きれ",
+        "quantity": 5
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "不死者の魔杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 260,
+        "max": 260
+      },
+      "B": {
+        "min": 290,
+        "max": 290
+      },
+      "C": {
+        "min": 220,
+        "max": 220
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 15
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 1
+      },
+      {
+        "name": "大きな化石",
+        "quantity": 20
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "ひかりの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 255,
+        "max": 255
+      },
+      "B": {
+        "min": 185,
+        "max": 185
+      },
+      "C": {
+        "min": 255,
+        "max": 255
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 10
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 1
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "聖王の杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 198,
+        "max": 198
+      },
+      "B": {
+        "min": 228,
+        "max": 228
+      },
+      "C": {
+        "min": 250,
+        "max": 250
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾り両手杖",
+        "quantity": 1
+      },
+      {
+        "name": "げんませき",
+        "quantity": 1
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ドラゴンの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 300,
+        "max": 300
+      },
+      "B": {
+        "min": 259,
+        "max": 259
+      },
+      "C": {
+        "min": 189,
+        "max": 189
+      }
+    },
+    "materials": [
+      {
+        "name": "炎の樹木",
+        "quantity": 20
+      },
+      {
+        "name": "ドラゴンのホネ",
+        "quantity": 1
+      },
+      {
+        "name": "ドラゴンの皮",
+        "quantity": 1
+      },
+      {
+        "name": "レッドオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "賢者の杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 166,
+        "max": 166
+      },
+      "B": {
+        "min": 213,
+        "max": 213
+      },
+      "C": {
+        "min": 190,
+        "max": 190
+      }
+    },
+    "materials": [
+      {
+        "name": "暗黒の樹木",
+        "quantity": 15
+      },
+      {
+        "name": "きよめの水",
+        "quantity": 30
+      },
+      {
+        "name": "イエローオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "女神の杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 177,
+        "max": 177
+      },
+      "B": {
+        "min": 177,
+        "max": 177
+      },
+      "C": {
+        "min": 286,
+        "max": 286
+      }
+    },
+    "materials": [
+      {
+        "name": "氷の樹木",
+        "quantity": 15
+      },
+      {
+        "name": "天使のソーマ",
+        "quantity": 2
+      },
+      {
+        "name": "グリーンオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "アークワンド",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 163,
+        "max": 163
+      },
+      "B": {
+        "min": 187,
+        "max": 187
+      },
+      "C": {
+        "min": 199,
+        "max": 199
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 10
+      },
+      {
+        "name": "きよめの水",
+        "quantity": 30
+      },
+      {
+        "name": "パープルオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "福音の杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 156,
+        "max": 156
+      },
+      "B": {
+        "min": 175,
+        "max": 175
+      },
+      "C": {
+        "min": 199,
+        "max": 199
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 12
+      },
+      {
+        "name": "スライムおしゃれ花",
+        "quantity": 1
+      },
+      {
+        "name": "グリーンオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "まがんの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 162,
+        "max": 162
+      },
+      "B": {
+        "min": 150,
+        "max": 150
+      },
+      "C": {
+        "min": 133,
+        "max": 133
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 4
+      },
+      {
+        "name": "暗黒の樹木",
+        "quantity": 10
+      },
+      {
+        "name": "黄色の宝石",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "こおりの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 129,
+        "max": 129
+      },
+      "B": {
+        "min": 140,
+        "max": 140
+      },
+      "C": {
+        "min": 161,
+        "max": 161
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 6
+      },
+      {
+        "name": "氷の樹木",
+        "quantity": 3
+      },
+      {
+        "name": "パープルアイ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "セイレーンの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 140,
+        "max": 140
+      },
+      "B": {
+        "min": 155,
+        "max": 155
+      },
+      "C": {
+        "min": 166,
+        "max": 166
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 4
+      },
+      {
+        "name": "ドラゴンのツノ",
+        "quantity": 1
+      },
+      {
+        "name": "グリーンアイ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "name": "ルーンスタッフ",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 118,
+        "max": 118
+      },
+      "B": {
+        "min": 86,
+        "max": 86
+      },
+      "C": {
+        "min": 97,
+        "max": 97
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "小さなホネ",
+        "quantity": 1
+      },
+      {
+        "name": "ホワイトパール",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "マグマの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 108,
+        "max": 108
+      },
+      "B": {
+        "min": 145,
+        "max": 145
+      },
+      "C": {
+        "min": 121,
+        "max": 121
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 1
+      },
+      {
+        "name": "炎の樹木",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "せいれいの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 107,
+        "max": 107
+      },
+      "B": {
+        "min": 118,
+        "max": 118
+      },
+      "C": {
+        "min": 140,
+        "max": 140
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "きよめの水",
+        "quantity": 1
+      },
+      {
+        "name": "グリーンアイ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "いかずちの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 84,
+        "max": 84
+      },
+      "B": {
+        "min": 96,
+        "max": 96
+      },
+      "C": {
+        "min": 108,
+        "max": 108
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      },
+      {
+        "name": "まりょくの土",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ピオラの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 80
+      },
+      "B": {
+        "min": 91,
+        "max": 91
+      },
+      "C": {
+        "min": 107,
+        "max": 107
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      },
+      {
+        "name": "レッドアイ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "うみなりの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 60,
+        "max": 60
+      },
+      "B": {
+        "min": 71,
+        "max": 71
+      },
+      "C": {
+        "min": 88,
+        "max": 88
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "さざなみのしずく",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ようせいの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 71,
+        "max": 71
+      },
+      "B": {
+        "min": 77,
+        "max": 77
+      },
+      "C": {
+        "min": 93,
+        "max": 93
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "きよめの水",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "あまぐもの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 44,
+        "max": 44
+      },
+      "B": {
+        "min": 60,
+        "max": 60
+      },
+      "C": {
+        "min": 71,
+        "max": 71
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "水の樹木",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "まふうじの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 49,
+        "max": 49
+      },
+      "B": {
+        "min": 66,
+        "max": 66
+      },
+      "C": {
+        "min": 82,
+        "max": 82
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "小さなホネ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "まどうしの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 30,
+        "max": 30
+      },
+      "B": {
+        "min": 45,
+        "max": 45
+      },
+      "C": {
+        "min": 45,
+        "max": 45
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      },
+      {
+        "name": "ホカホカストーン",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "さばきの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 45,
+        "max": 45
+      },
+      "B": {
+        "min": 60,
+        "max": 60
+      },
+      "C": {
+        "min": 45,
+        "max": 45
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      },
+      {
+        "name": "まりょくの土",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "かしの杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 30,
+        "max": 30
+      },
+      "B": {
+        "min": 30,
+        "max": 30
+      },
+      "C": {
+        "min": 30,
+        "max": 30
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      }
+    ]
+  },
+  {
     "name": "きせきの釣りざお",
     "category": "木工",
     "subCategory": "釣りざお",
