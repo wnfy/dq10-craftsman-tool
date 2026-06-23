@@ -163,7 +163,7 @@
       const [toolPrices, setToolPrices] = useState({});
       const [selectedArmorType, setSelectedArmorType] = useState('小盾');
       const [selectedWeaponType, setSelectedWeaponType] = useState('片手剣');
-      const [selectedToolType, setSelectedToolType] = useState('素材');
+      const [selectedToolType, setSelectedToolType] = useState('道具');
       const [selectedSewingType, setSelectedSewingType] = useState('アタマ');
       const [selectedWoodworkType, setSelectedWoodworkType] = useState('スティック');
       const [selectedCookingType, setSelectedCookingType] = useState('料理全部');
@@ -1013,6 +1013,51 @@
         );
       };
 
+      const renderCustomLayout = (item) => {
+        const layout = item.layout || [];
+        const columns = Math.max(1, ...layout.map((row) => row.length));
+        const maxWidth = columns === 1 ? 'max-w-xs' : columns === 2 ? 'max-w-2xl' : 'max-w-3xl';
+
+        return (
+          <div
+            className={`grid gap-2.5 mx-auto ${maxWidth}`}
+            style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }}
+          >
+            {layout.flatMap((row, rowIndex) => {
+              const paddedRow = [...row, ...Array(columns - row.length).fill(null)];
+              return paddedRow.map((pos, colIndex) => {
+                if (!pos) {
+                  return (
+                    <div
+                      key={`empty-${rowIndex}-${colIndex}`}
+                      className="rounded-xl border-2 border-dashed border-slate-300/50 bg-white/25"
+                    />
+                  );
+                }
+
+                const value = item.targetValues[pos];
+                return (
+                  <div
+                    key={`${pos}-${rowIndex}-${colIndex}`}
+                    className={`bg-gradient-to-br ${paramColors[pos] || paramColors.A} backdrop-blur-sm p-4 rounded-xl text-white shadow-lg border-2 border-white/50`}
+                    style={{
+                      boxShadow: '0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3)'
+                    }}
+                  >
+                    <div className="text-xs font-bold tracking-wider opacity-90 drop-shadow">
+                      {pos}
+                    </div>
+                    <div className="text-2xl font-black mt-1 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
+                      {value.min}-{value.max}
+                    </div>
+                  </div>
+                );
+              });
+            })}
+          </div>
+        );
+      };
+
       // 片手剣（縦3）: A, B, C
       const renderOnHandSword = (targetValues) => {
         const positions = ['A', 'B', 'C'];
@@ -1464,6 +1509,10 @@
         }
 
         // サブカテゴリに応じて表示を切り替え
+        if (item.layout && item.layout.length > 0) {
+          return renderCustomLayout(item);
+        }
+
         if (item.subCategory === '片手剣') {
           return renderOnHandSword(item.targetValues);
         } else if (item.subCategory === '両手剣') {
@@ -1554,7 +1603,15 @@
           '足': { columns: 2, slots: [null, 'B', null, 'D', 'E', 'F'] }
         };
 
-        let popupLayout = layoutsBySubCategory[item.subCategory];
+        let popupLayout = item.layout && item.layout.length > 0
+          ? {
+              columns: Math.max(1, ...item.layout.map((row) => row.length)),
+              slots: item.layout.flatMap((row) => {
+                const columns = Math.max(1, ...item.layout.map((layoutRow) => layoutRow.length));
+                return [...row, ...Array(columns - row.length).fill(null)];
+              })
+            }
+          : layoutsBySubCategory[item.subCategory];
         let showMissingValues = false;
 
         if (!popupLayout) {
@@ -1888,7 +1945,7 @@
                       setToolPrices({});
                       if (cat === '武器鍛冶') setSelectedWeaponType('片手剣');
                       if (cat === '防具鍛冶') setSelectedArmorType('小盾');
-                      if (cat === '道具鍛冶') setSelectedToolType('素材');
+                      if (cat === '道具鍛冶') setSelectedToolType('道具');
                       if (cat === '裁縫') setSelectedSewingType('アタマ');
                       if (cat === '木工') setSelectedWoodworkType('スティック');
                       if (cat === '料理') setSelectedCookingType('料理全部');
