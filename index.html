@@ -458,6 +458,12 @@
         return { totalIncome, totalCost, profit, count: filteredRecords.length };
       };
 
+      const profitPeriodLabels = {
+        today: '今日',
+        month: '今月',
+        all: 'すべて'
+      };
+
       // 🆕 レコードを削除
       const deleteRecord = (id) => {
         if (confirm('この記録を削除しますか？')) {
@@ -496,20 +502,14 @@
 
       // 🆕 一括削除関数
       const bulkDelete = (period) => {
-        const periodNames = {
-          today: '今日',
-          month: '今月',
-          all: 'すべて'
-        };
-
         const targetRecords = filterRecordsByPeriod(period);
 
         if (targetRecords.length === 0) {
-          alert(`${periodNames[period]}のデータはありません`);
+          alert(`${profitPeriodLabels[period]}のデータはありません`);
           return;
         }
 
-        if (confirm(`${periodNames[period]}のデータ（${targetRecords.length}件）を削除しますか？\n\nこの操作は取り消せません。`)) {
+        if (confirm(`${profitPeriodLabels[period]}のデータ（${targetRecords.length}件）を削除しますか？\n\nこの操作は取り消せません。`)) {
           if (period === 'all') {
             setSavedRecords([]);
             localStorage.setItem('dqx_profit_records', JSON.stringify([]));
@@ -2277,7 +2277,7 @@
                   <TrendingUp className="text-white" size={24} />
                   <div>
                     <div className="text-white text-xs font-bold opacity-90">
-                      {profitView === 'today' ? '今日の収益' : '今月の収益'}
+                      {profitPeriodLabels[profitView]}の収益
                     </div>
                     <div className="text-white text-xl font-black">
                       {calculateSummary(profitView).profit >= 0 ? '+' : ''}
