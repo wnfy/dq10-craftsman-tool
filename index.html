@@ -26,6 +26,125 @@
       animation: pageFlipIn 0.6s ease-out;
     }
 
+    .welcome-book-shell {
+      perspective: 1800px;
+      transform-style: preserve-3d;
+    }
+
+    .welcome-book-cover {
+      transform-origin: left center;
+      transform-style: preserve-3d;
+      animation: welcomeBookSettle 900ms cubic-bezier(.18, .9, .24, 1) both;
+    }
+
+    .welcome-book-cover::before,
+    .welcome-book-cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    .welcome-book-cover::before {
+      background:
+        linear-gradient(90deg, rgba(8, 19, 43, .22), transparent 12%, transparent 86%, rgba(255, 91, 80, .18)),
+        radial-gradient(circle at 82% 12%, rgba(255, 91, 80, .22), transparent 15%),
+        linear-gradient(115deg, transparent 0 44%, rgba(255, 216, 77, .10) 45% 47%, transparent 48%);
+      mix-blend-mode: multiply;
+    }
+
+    .welcome-book-cover::after {
+      inset: 14px;
+      border: 2px solid rgba(9, 22, 49, .16);
+      box-shadow: inset 18px 0 22px rgba(9, 22, 49, .10);
+    }
+
+    .welcome-book-shadow {
+      filter: drop-shadow(18px 22px 0 #091631) drop-shadow(30px 34px 0 #ff5b50) drop-shadow(0 32px 48px rgba(9, 22, 49, .22));
+    }
+
+    .welcome-page-sheet {
+      position: absolute;
+      inset: 18px 18px 18px 28px;
+      border-radius: 18px;
+      background:
+        linear-gradient(90deg, rgba(9, 22, 49, .10), transparent 13%),
+        repeating-linear-gradient(0deg, rgba(29, 45, 80, .035) 0 1px, transparent 1px 32px),
+        repeating-linear-gradient(90deg, rgba(29, 45, 80, .025) 0 1px, transparent 1px 32px),
+        #fff9e8;
+      transform: translateZ(-8px) rotate(-1deg);
+      box-shadow: 0 0 0 2px #091631;
+    }
+
+    .welcome-book-shell.is-opening .welcome-book-cover {
+      animation: welcomePageTurn 1100ms cubic-bezier(.74, .02, .16, 1) forwards;
+    }
+
+    .welcome-book-shell.is-opening .welcome-page-sheet {
+      animation: welcomeSheetReveal 1100ms cubic-bezier(.74, .02, .16, 1) forwards;
+    }
+
+    .welcome-book-shell.is-opening .welcome-enter,
+    .welcome-book-shell.is-opening .welcome-hint {
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 220ms ease, transform 220ms ease;
+    }
+
+    @keyframes welcomeBookSettle {
+      from {
+        opacity: 0;
+        transform: translateY(26px) rotateX(8deg) rotateZ(-2deg) scale(.96);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0) rotateZ(-1deg) scale(1);
+      }
+    }
+
+    @keyframes welcomePageTurn {
+      0% {
+        transform: translateY(0) rotateX(0) rotateY(0) rotateZ(-1deg) scale(1);
+        opacity: 1;
+        filter: brightness(1);
+      }
+
+      48% {
+        transform: translateX(-22px) rotateY(-78deg) rotateZ(-2deg) scale(.99);
+        filter: brightness(.94);
+      }
+
+      82% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateX(-54vw) rotateY(-126deg) rotateZ(-6deg) scale(.92);
+        opacity: 0;
+        filter: brightness(.86);
+      }
+    }
+
+    @keyframes welcomeSheetReveal {
+      0% {
+        transform: translateZ(-8px) rotate(-1deg) scale(.985);
+        opacity: .45;
+      }
+
+      55% {
+        transform: translateZ(8px) rotate(.2deg) scale(1.01);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateZ(20px) rotate(0deg) scale(1.06);
+        opacity: 0;
+      }
+    }
+
     @keyframes pageFlipIn {
       0% {
         transform: perspective(1000px) rotateY(-90deg);
@@ -143,18 +262,28 @@
         const params = new URLSearchParams(window.location.search);
         return !params.has('app') && !params.has('recipePreview');
       });
+      const [welcomeOpening, setWelcomeOpening] = useState(false);
       const [activeCategory, setActiveCategory] = useState(new URLSearchParams(window.location.search).get('category') || '武器鍛冶');
+
+      const openCraftLedger = () => {
+        if (welcomeOpening) return;
+        setWelcomeOpening(true);
+        window.setTimeout(() => {
+          setShowWelcome(false);
+          setWelcomeOpening(false);
+        }, 1120);
+      };
 
       // Enterキーでウェルカム画面を閉じる
       useEffect(() => {
         const handleKeyPress = (e) => {
           if (e.key === 'Enter' && showWelcome) {
-            setShowWelcome(false);
+            openCraftLedger();
           }
         };
         window.addEventListener('keydown', handleKeyPress);
         return () => window.removeEventListener('keydown', handleKeyPress);
-      }, [showWelcome]);
+      }, [showWelcome, welcomeOpening]);
 
       const [searchQuery, setSearchQuery] = useState('');
       const [searchActive, setSearchActive] = useState('');
@@ -831,122 +960,86 @@
       // ウェルカム画面
       if (showWelcome) {
         return (
-          <div className="welcome-screen min-h-screen relative flex items-center justify-center overflow-hidden">
-            <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
+          <div className="welcome-screen min-h-screen relative flex items-center justify-center overflow-hidden bg-[#e6dec7] text-slate-950">
+            <div className="absolute inset-0 opacity-70" style={{
+              backgroundImage: 'linear-gradient(rgba(9,22,49,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(9,22,49,.08) 1px, transparent 1px)',
+              backgroundSize: '42px 42px'
+            }} />
+            <div className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-[#ffd84d]/45 blur-3xl"></div>
+            <div className="absolute -bottom-20 right-8 w-96 h-96 rounded-full bg-[#55d7b8]/30 blur-3xl"></div>
+            <div className="absolute top-10 right-10 text-xs font-black tracking-[0.45em] text-slate-900/35 rotate-3">PRIVATE CRAFT COMPANION</div>
 
-            {/* ネオン装飾 */}
-            <div className="absolute top-10 left-10 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-pink-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-
-            {/* メインコンテンツ */}
-            <div className="welcome-content text-center z-10 px-4 max-w-2xl">
-              {/* タイトル */}
-              <h1
-                className="text-6xl md:text-7xl font-black text-white mb-4 animate-fade-in"
-                style={{
-                  textShadow: '0 0 40px rgba(56, 189, 248, 0.8), 0 0 80px rgba(56, 189, 248, 0.4), 0 4px 8px rgba(0,0,0,0.3)'
-                }}
-              >
-                ATELIER
-              </h1>
-              <h2
-                className="text-4xl md:text-5xl font-black text-white mb-8 animate-fade-in"
-                style={{
-                  animationDelay: '0.2s',
-                  textShadow: '0 0 30px rgba(168, 85, 247, 0.8), 0 0 60px rgba(168, 85, 247, 0.4), 0 4px 8px rgba(0,0,0,0.3)'
-                }}
-              >
-                アストルティア職人手帖
-              </h2>
-
-              {/* アイコン */}
-              <div className="welcome-emblem mb-8" style={{
-                animation: 'float 3s ease-in-out infinite'
-              }}>
-                <div
-                  className="bg-white/10 backdrop-blur-md p-6 rounded-3xl border-2 border-white/30 relative animate-pulse inline-block"
-                  style={{
-                    boxShadow: '0 0 40px rgba(56, 189, 248, 0.6), 0 0 80px rgba(168, 85, 247, 0.4), 0 8px 16px rgba(0,0,0,0.2)'
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-purple-400/20 rounded-3xl"></div>
-                  <img
-                    src="assets/main-icon.svg"
-                    alt="DQX職人ツール"
-                    className="w-32 h-32 relative z-10"
-                    style={{
-                      filter: 'brightness(1.2) saturate(1.3) hue-rotate(10deg) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5))',
-                      display: 'block'
-                    }}
-                  />
-                </div>
-              </div>
-              {/* 説明文 */}
-              <div className="welcome-description relative mb-12 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-purple-400/20 to-pink-400/20 rounded-2xl blur-xl"></div>
-                <div
-                  className="relative bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/30"
-                  style={{
-                    boxShadow: '0 0 30px rgba(56, 189, 248, 0.3), 0 8px 16px rgba(0,0,0,0.1)'
-                  }}
-                >
-                  <div className="flex items-center justify-center gap-3 mb-4">
-                    <div className="w-12 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-                    <Sparkles className="text-cyan-300" size={20} />
-                    <div className="w-12 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
+            <div className={`welcome-book-shell relative z-10 w-[min(88vw,660px)] ${welcomeOpening ? 'is-opening' : ''}`}>
+              <div className="welcome-page-sheet"></div>
+              <div className="welcome-book-shadow">
+                <div className="welcome-book-cover relative min-h-[min(80vh,640px)] rounded-[2px] border-[3px] border-[#091631] bg-[#fffaf0] px-7 py-9 md:px-12 md:py-12 overflow-hidden">
+                  <div className="absolute top-0 left-0 right-0 h-2 flex">
+                    <div className="flex-1 bg-[#2f5bea]"></div>
+                    <div className="flex-1 bg-[#ff5b50]"></div>
+                    <div className="flex-1 bg-[#ffd84d]"></div>
+                    <div className="flex-1 bg-[#55d7b8]"></div>
                   </div>
-                  <p className="text-xl md:text-2xl font-bold text-white leading-relaxed drop-shadow-lg">
-                    レシピ、原価、成果をひとつの台帳に
-                  </p>
-                  <p
-                    className="text-2xl md:text-3xl font-black text-white mt-2"
-                    style={{
-                      textShadow: '0 0 20px rgba(56, 189, 248, 0.6), 0 0 40px rgba(168, 85, 247, 0.4)'
-                    }}
-                  >
-                    Craft with precision.
-                  </p>
-                  <div className="flex items-center justify-center gap-3 mt-4">
-                    <div className="w-12 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
-                    <Package className="text-purple-300" size={20} />
-                    <div className="w-12 h-px bg-gradient-to-r from-transparent via-pink-400 to-transparent"></div>
+                  <div className="absolute right-9 top-11 text-[#ff5b50] text-5xl rotate-12">✦</div>
+                  <div className="absolute -left-10 bottom-16 w-28 h-28 rounded-full bg-slate-900/20"></div>
+                  <div className="absolute -right-10 bottom-24 w-32 h-32 rounded-full border-[18px] border-[#ff5b50]/25"></div>
+
+                  <div className="relative h-full flex flex-col">
+                    <div className="inline-flex w-fit items-center gap-3 rounded-full border-2 border-[#091631] bg-[#ffd84d] px-4 py-3 shadow-[5px_6px_0_#091631]">
+                      <img src="assets/main-icon.svg" alt="DQX職人ツール" className="w-9 h-9" />
+                      <div className="text-left">
+                        <p className="text-[10px] font-black tracking-[0.32em] text-[#2f5bea]">ASTOLTIA / CRAFT LEDGER</p>
+                        <p className="text-sm font-black text-[#091631]">ドラゴンクエスト10 職人手帖</p>
+                      </div>
+                    </div>
+
+                    <div className="mt-10 md:mt-12">
+                      <div className="inline-block -rotate-2 bg-[#2f5bea] px-5 py-2 text-xs md:text-sm font-black tracking-[0.32em] text-white shadow-[4px_5px_0_#091631]">
+                        VOL. 10 / PRIVATE CRAFT COMPANION
+                      </div>
+                      <h1 className="mt-6 text-[clamp(3.7rem,10vw,7.6rem)] font-black leading-[0.78] tracking-[-0.08em] text-[#091631]">
+                        ATELIER
+                      </h1>
+                      <h2 className="mt-4 text-[clamp(1.8rem,5.8vw,2.85rem)] font-black leading-none tracking-[-0.05em] text-[#ff5b50] whitespace-nowrap" style={{
+                        fontFamily: '"Yu Mincho", "Hiragino Mincho ProN", serif'
+                      }}>
+                        アストルティア職人手帖
+                      </h2>
+                    </div>
+
+                    <div className="mt-8 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                      <div className="text-left">
+                        <p className="text-sm md:text-base font-black text-slate-600">レシピ、原価、成果をひとつの台帳に</p>
+                        <p className="mt-4 text-2xl md:text-3xl italic font-black text-[#091631]" style={{ fontFamily: 'Georgia, serif' }}>
+                          Craft with precision.
+                        </p>
+                      </div>
+
+                      <div className="relative self-center md:self-auto">
+                        <div className="absolute inset-0 translate-x-2 translate-y-3 rounded-full bg-[#091631]"></div>
+                        <div className="relative grid place-items-center w-24 h-24 md:w-28 md:h-28 rounded-full bg-[#ffd84d] border-[3px] border-[#091631]">
+                          <img src="assets/main-icon.svg" alt="" className="w-14 h-14 md:w-16 md:h-16" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-auto pt-8">
+                      <button
+                        onClick={openCraftLedger}
+                        disabled={welcomeOpening}
+                        className="welcome-enter group relative inline-flex items-center gap-4 rounded-full bg-[#2f5bea] px-9 py-5 md:px-12 md:py-6 text-white border-[3px] border-[#091631] shadow-[8px_10px_0_#091631] transition-all duration-200 hover:-translate-y-1 hover:shadow-[10px_14px_0_#091631] disabled:cursor-wait"
+                      >
+                        <Sparkles size={28} />
+                        <span className="text-lg md:text-xl font-black tracking-wide">{welcomeOpening ? 'ページをめくっています' : '工房をひらく'}</span>
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#55d7b8] animate-pulse"></span>
+                      </button>
+
+                      <p className="welcome-hint mt-7 text-xs md:text-sm font-bold text-slate-500">
+                        Enterキーでも始められます
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              {/* スタートボタン */}
-              <button
-                onClick={() => setShowWelcome(false)}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 60px rgba(56, 189, 248, 0.8), 0 0 100px rgba(168, 85, 247, 0.6), 0 20px 60px rgba(236, 72, 153, 0.4)';
-                  e.currentTarget.style.transform = 'scale(1.1) translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 40px rgba(56, 189, 248, 0.6), 0 0 60px rgba(168, 85, 247, 0.4)';
-                  e.currentTarget.style.transform = 'scale(1) translateY(0)';
-                }}
-                className="welcome-enter group relative px-16 py-5 bg-white/10 backdrop-blur-md text-white rounded-2xl font-black text-2xl transition-all duration-300 animate-fade-in cursor-pointer border-2 border-white/30 overflow-hidden"
-                style={{
-                  animationDelay: '0.9s',
-                  boxShadow: '0 0 40px rgba(56, 189, 248, 0.6), 0 0 60px rgba(168, 85, 247, 0.4)'
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-purple-400/20 to-pink-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative flex items-center gap-3">
-                  <Sparkles className="animate-spin-slow" size={28} />
-                  <span style={{ textShadow: 'none' }}>工房をひらく</span>
-                  <div className="w-2 h-2 bg-cyan-300 rounded-full animate-ping"></div>
-                </div>
-              </button>
-
-              {/* 補足テキスト */}
-              <p
-                className="welcome-hint mt-8 text-sm text-white/80 animate-fade-in drop-shadow-lg"
-                style={{ animationDelay: '1.2s' }}
-              >
-                Enterキーでも始められます
-              </p>
             </div>
           </div>
         );
