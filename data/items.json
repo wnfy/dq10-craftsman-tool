@@ -48012,6 +48012,2578 @@
     ]
   },
   {
+    "name": "セイントロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 210,
+        "max": 210
+      },
+      "B": {
+        "min": 260,
+        "max": 260
+      },
+      "C": {
+        "min": 80,
+        "max": 80
+      },
+      "D": {
+        "min": 95,
+        "max": 95
+      },
+      "E": {
+        "min": 170,
+        "max": 170
+      },
+      "F": {
+        "min": 190,
+        "max": 190
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "トガリアのしずく",
+        "quantity": 4
+      },
+      {
+        "name": "烈風石",
+        "quantity": 3
+      },
+      {
+        "name": "ヘビーメタル",
+        "quantity": 20
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 9
+      }
+    ],
+    "specialTrait": "虹木"
+  },
+  {
+    "name": "ライブラロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 220,
+        "max": 220
+      },
+      "B": {
+        "min": 250,
+        "max": 250
+      },
+      "C": {
+        "min": 90,
+        "max": 90
+      },
+      "D": {
+        "min": 75,
+        "max": 75
+      },
+      "E": {
+        "min": 190,
+        "max": 190
+      },
+      "F": {
+        "min": 180,
+        "max": 180
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 3
+      },
+      {
+        "name": "まじゅうのツノ",
+        "quantity": 8
+      },
+      {
+        "name": "まほうの樹木",
+        "quantity": 20
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "変化木"
+  },
+  {
+    "name": "クリナップロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 190,
+        "max": 190
+      },
+      "B": {
+        "min": 170,
+        "max": 170
+      },
+      "C": {
+        "min": 85,
+        "max": 85
+      },
+      "D": {
+        "min": 105,
+        "max": 105
+      },
+      "E": {
+        "min": 200,
+        "max": 200
+      },
+      "F": {
+        "min": 210,
+        "max": 210
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "竜の涙",
+        "quantity": 4
+      },
+      {
+        "name": "純白の結晶",
+        "quantity": 4
+      },
+      {
+        "name": "黄金の飾り棍",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "再生木"
+  },
+  {
+    "name": "ヘナトライロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 230,
+        "max": 230
+      },
+      "B": {
+        "min": 230,
+        "max": 230
+      },
+      "C": {
+        "min": 105,
+        "max": 105
+      },
+      "D": {
+        "min": 105,
+        "max": 105
+      },
+      "E": {
+        "min": 205,
+        "max": 205
+      },
+      "F": {
+        "min": 205,
+        "max": 205
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "古代樹の化石",
+        "quantity": 3
+      },
+      {
+        "name": "青い宝石",
+        "quantity": 8
+      },
+      {
+        "name": "メタルのカケラ",
+        "quantity": 5
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "燃え木"
+  },
+  {
+    "name": "セーラスロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 255,
+        "max": 255
+      },
+      "B": {
+        "min": 255,
+        "max": 255
+      },
+      "C": {
+        "min": 100,
+        "max": 100
+      },
+      "D": {
+        "min": 100,
+        "max": 100
+      },
+      "E": {
+        "min": 195,
+        "max": 195
+      },
+      "F": {
+        "min": 195,
+        "max": 195
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "烈風石",
+        "quantity": 5
+      },
+      {
+        "name": "ちょうのはね",
+        "quantity": 30
+      },
+      {
+        "name": "パープルオーブ",
+        "quantity": 3
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "再生木"
+  },
+  {
+    "name": "サターンロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 180,
+        "max": 180
+      },
+      "B": {
+        "min": 180,
+        "max": 180
+      },
+      "C": {
+        "min": 80,
+        "max": 80
+      },
+      "D": {
+        "min": 80,
+        "max": 80
+      },
+      "E": {
+        "min": 180,
+        "max": 180
+      },
+      "F": {
+        "min": 180,
+        "max": 180
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "おぼろ水晶",
+        "quantity": 3
+      },
+      {
+        "name": "まほうの樹木",
+        "quantity": 30
+      },
+      {
+        "name": "黄金の飾り棍",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "変化木"
+  },
+  {
+    "name": "輝天のこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 170,
+        "max": 170
+      },
+      "B": {
+        "min": 100,
+        "max": 100
+      },
+      "C": {
+        "min": 170,
+        "max": 170
+      },
+      "D": {
+        "min": 170,
+        "max": 170
+      },
+      "E": {
+        "min": 100,
+        "max": 100
+      },
+      "F": {
+        "min": 170,
+        "max": 170
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "カオスベリー",
+        "quantity": 3
+      },
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 10
+      },
+      {
+        "name": "ホワイトウッド",
+        "quantity": 30
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 6
+      }
+    ],
+    "specialTrait": "燃え木"
+  },
+  {
+    "name": "ローズロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 200,
+        "max": 200
+      },
+      "B": {
+        "min": 200,
+        "max": 200
+      },
+      "C": {
+        "min": 80,
+        "max": 80
+      },
+      "D": {
+        "min": 80,
+        "max": 80
+      },
+      "E": {
+        "min": 140,
+        "max": 140
+      },
+      "F": {
+        "min": 140,
+        "max": 140
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 2
+      },
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "スライムおしゃれ花",
+        "quantity": 5
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "変化木"
+  },
+  {
+    "name": "氷獄鬼のこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 140,
+        "max": 140
+      },
+      "B": {
+        "min": 170,
+        "max": 170
+      },
+      "C": {
+        "min": 100,
+        "max": 100
+      },
+      "D": {
+        "min": 100,
+        "max": 100
+      },
+      "E": {
+        "min": 170,
+        "max": 170
+      },
+      "F": {
+        "min": 140,
+        "max": 140
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "人魚の涙",
+        "quantity": 1
+      },
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾り棍",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "雷光のこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 116,
+        "max": 116
+      },
+      "B": {
+        "min": 160,
+        "max": 160
+      },
+      "C": {
+        "min": 160,
+        "max": 160
+      },
+      "D": {
+        "min": 121,
+        "max": 121
+      },
+      "E": {
+        "min": 116,
+        "max": 116
+      },
+      "F": {
+        "min": 160,
+        "max": 160
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "とこしえの虹",
+        "quantity": 2
+      },
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "いかずちのたま",
+        "quantity": 10
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "クリティカルロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 136,
+        "max": 136
+      },
+      "B": {
+        "min": 136,
+        "max": 136
+      },
+      "C": {
+        "min": 152,
+        "max": 152
+      },
+      "D": {
+        "min": 152,
+        "max": 152
+      },
+      "E": {
+        "min": 120,
+        "max": 120
+      },
+      "F": {
+        "min": 127,
+        "max": 127
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "ときのすいしょう",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾り棍",
+        "quantity": 1
+      },
+      {
+        "name": "暗黒の樹木",
+        "quantity": 30
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "金剛のこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 145,
+        "max": 145
+      },
+      "B": {
+        "min": 107,
+        "max": 107
+      },
+      "C": {
+        "min": 190,
+        "max": 190
+      },
+      "D": {
+        "min": 145,
+        "max": 145
+      },
+      "E": {
+        "min": 120,
+        "max": 120
+      },
+      "F": {
+        "min": 175,
+        "max": 175
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "せいじゃのはい",
+        "quantity": 7
+      },
+      {
+        "name": "黄金の飾り棍",
+        "quantity": 1
+      },
+      {
+        "name": "きれいな枝",
+        "quantity": 25
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "氷河のこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 100,
+        "max": 100
+      },
+      "B": {
+        "min": 100,
+        "max": 100
+      },
+      "C": {
+        "min": 180,
+        "max": 180
+      },
+      "D": {
+        "min": 180,
+        "max": 180
+      },
+      "E": {
+        "min": 130,
+        "max": 130
+      },
+      "F": {
+        "min": 130,
+        "max": 130
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 1
+      },
+      {
+        "name": "氷のけっしょう",
+        "quantity": 30
+      },
+      {
+        "name": "氷の樹木",
+        "quantity": 20
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ヘリオスロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 120,
+        "max": 120
+      },
+      "B": {
+        "min": 120,
+        "max": 120
+      },
+      "C": {
+        "min": 160,
+        "max": 160
+      },
+      "D": {
+        "min": 160,
+        "max": 160
+      },
+      "E": {
+        "min": 160,
+        "max": 160
+      },
+      "F": {
+        "min": 160,
+        "max": 160
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 5
+      },
+      {
+        "name": "炎の樹木",
+        "quantity": 20
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 20
+      },
+      {
+        "name": "黄金の飾り棍",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "極楽のこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 114,
+        "max": 114
+      },
+      "B": {
+        "min": 114,
+        "max": 114
+      },
+      "C": {
+        "min": 152,
+        "max": 152
+      },
+      "D": {
+        "min": 152,
+        "max": 152
+      },
+      "E": {
+        "min": 114,
+        "max": 114
+      },
+      "F": {
+        "min": 114,
+        "max": 114
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 5
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 1
+      },
+      {
+        "name": "まほうの樹木",
+        "quantity": 10
+      },
+      {
+        "name": "ホワイトパール",
+        "quantity": 10
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ポップンロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 98,
+        "max": 98
+      },
+      "B": {
+        "min": 98,
+        "max": 98
+      },
+      "C": {
+        "min": 160,
+        "max": 160
+      },
+      "D": {
+        "min": 160,
+        "max": 160
+      },
+      "E": {
+        "min": 120,
+        "max": 120
+      },
+      "F": {
+        "min": 120,
+        "max": 120
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 3
+      },
+      {
+        "name": "花のみつ",
+        "quantity": 30
+      },
+      {
+        "name": "にじいろの布きれ",
+        "quantity": 5
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "デーモンロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 145,
+        "max": 145
+      },
+      "B": {
+        "min": 130,
+        "max": 130
+      },
+      "C": {
+        "min": 110,
+        "max": 110
+      },
+      "D": {
+        "min": 110,
+        "max": 110
+      },
+      "E": {
+        "min": 130,
+        "max": 130
+      },
+      "F": {
+        "min": 145,
+        "max": 145
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 15
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 1
+      },
+      {
+        "name": "まじゅうのホネ",
+        "quantity": 5
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "アポカリプス",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 90
+      },
+      "B": {
+        "min": 90,
+        "max": 90
+      },
+      "C": {
+        "min": 130,
+        "max": 130
+      },
+      "D": {
+        "min": 156,
+        "max": 156
+      },
+      "E": {
+        "min": 110,
+        "max": 110
+      },
+      "F": {
+        "min": 110,
+        "max": 110
+      }
+    },
+    "materials": [
+      {
+        "name": "幻獣のホネ",
+        "quantity": 3
+      },
+      {
+        "name": "こうもりのはね",
+        "quantity": 10
+      },
+      {
+        "name": "天使のソーマ",
+        "quantity": 5
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "聖王の棍",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 90
+      },
+      "B": {
+        "min": 90,
+        "max": 90
+      },
+      "C": {
+        "min": 150,
+        "max": 150
+      },
+      "D": {
+        "min": 150,
+        "max": 150
+      },
+      "E": {
+        "min": 105,
+        "max": 105
+      },
+      "F": {
+        "min": 105,
+        "max": 105
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾り棍",
+        "quantity": 1
+      },
+      {
+        "name": "せいじゃのはい",
+        "quantity": 1
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "陰陽道のこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 104,
+        "max": 104
+      },
+      "B": {
+        "min": 104,
+        "max": 104
+      },
+      "C": {
+        "min": 130,
+        "max": 130
+      },
+      "D": {
+        "min": 130,
+        "max": 130
+      },
+      "E": {
+        "min": 104,
+        "max": 104
+      },
+      "F": {
+        "min": 104,
+        "max": 104
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 10
+      },
+      {
+        "name": "よごれたほうたい",
+        "quantity": 5
+      },
+      {
+        "name": "緑のコケ",
+        "quantity": 20
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "シェンロンロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 91,
+        "max": 91
+      },
+      "B": {
+        "min": 91,
+        "max": 91
+      },
+      "C": {
+        "min": 111,
+        "max": 111
+      },
+      "D": {
+        "min": 111,
+        "max": 111
+      },
+      "E": {
+        "min": 138,
+        "max": 138
+      },
+      "F": {
+        "min": 138,
+        "max": 138
+      }
+    },
+    "materials": [
+      {
+        "name": "氷の樹木",
+        "quantity": 30
+      },
+      {
+        "name": "小さなうろこ",
+        "quantity": 30
+      },
+      {
+        "name": "ドラゴンのホネ",
+        "quantity": 1
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "なげきのこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 76,
+        "max": 76
+      },
+      "B": {
+        "min": 76,
+        "max": 76
+      },
+      "C": {
+        "min": 95,
+        "max": 95
+      },
+      "D": {
+        "min": 95,
+        "max": 95
+      },
+      "E": {
+        "min": 114,
+        "max": 114
+      },
+      "F": {
+        "min": 114,
+        "max": 114
+      }
+    },
+    "materials": [
+      {
+        "name": "暗黒の樹木",
+        "quantity": 15
+      },
+      {
+        "name": "よごれたほうたい",
+        "quantity": 10
+      },
+      {
+        "name": "パープルオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "しゅらのこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 83,
+        "max": 83
+      },
+      "B": {
+        "min": 83,
+        "max": 83
+      },
+      "C": {
+        "min": 170,
+        "max": 170
+      },
+      "D": {
+        "min": 120,
+        "max": 120
+      },
+      "E": {
+        "min": 92,
+        "max": 92
+      },
+      "F": {
+        "min": 92,
+        "max": 92
+      }
+    },
+    "materials": [
+      {
+        "name": "氷の樹木",
+        "quantity": 15
+      },
+      {
+        "name": "ぶどうエキス",
+        "quantity": 3
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "白蛇のこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 73,
+        "max": 73
+      },
+      "B": {
+        "min": 73,
+        "max": 73
+      },
+      "C": {
+        "min": 104,
+        "max": 104
+      },
+      "D": {
+        "min": 104,
+        "max": 104
+      },
+      "E": {
+        "min": 88,
+        "max": 88
+      },
+      "F": {
+        "min": 88,
+        "max": 88
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 12
+      },
+      {
+        "name": "へびのぬけがら",
+        "quantity": 1
+      },
+      {
+        "name": "グリーンオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "にちりんのこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 75,
+        "max": 75
+      },
+      "B": {
+        "min": 75,
+        "max": 75
+      },
+      "C": {
+        "min": 108,
+        "max": 108
+      },
+      "D": {
+        "min": 108,
+        "max": 108
+      },
+      "E": {
+        "min": 90,
+        "max": 90
+      },
+      "F": {
+        "min": 90,
+        "max": 90
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 10
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 15
+      },
+      {
+        "name": "イエローオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "ろうがぼう",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 53,
+        "max": 53
+      },
+      "B": {
+        "min": 53,
+        "max": 53
+      },
+      "C": {
+        "min": 80,
+        "max": 80
+      },
+      "D": {
+        "min": 80,
+        "max": 80
+      },
+      "E": {
+        "min": 64,
+        "max": 64
+      },
+      "F": {
+        "min": 64,
+        "max": 64
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 4
+      },
+      {
+        "name": "するどいキバ",
+        "quantity": 20
+      },
+      {
+        "name": "大きなホネ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "やしゃのこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 72,
+        "max": 72
+      },
+      "B": {
+        "min": 72,
+        "max": 72
+      },
+      "C": {
+        "min": 96,
+        "max": 96
+      },
+      "D": {
+        "min": 96,
+        "max": 96
+      },
+      "E": {
+        "min": 72,
+        "max": 72
+      },
+      "F": {
+        "min": 72,
+        "max": 72
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 6
+      },
+      {
+        "name": "ぶどうエキス",
+        "quantity": 2
+      },
+      {
+        "name": "レッドアイ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "ドラゴンロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 72,
+        "max": 72
+      },
+      "B": {
+        "min": 72,
+        "max": 72
+      },
+      "C": {
+        "min": 84,
+        "max": 84
+      },
+      "D": {
+        "min": 84,
+        "max": 84
+      },
+      "E": {
+        "min": 102,
+        "max": 102
+      },
+      "F": {
+        "min": 102,
+        "max": 102
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 4
+      },
+      {
+        "name": "ドラゴンのツノ",
+        "quantity": 1
+      },
+      {
+        "name": "イエローアイ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "name": "レイニーロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 48,
+        "max": 48
+      },
+      "B": {
+        "min": 48,
+        "max": 48
+      },
+      "C": {
+        "min": 53,
+        "max": 53
+      },
+      "D": {
+        "min": 53,
+        "max": 53
+      },
+      "E": {
+        "min": 64,
+        "max": 64
+      },
+      "F": {
+        "min": 64,
+        "max": 64
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "水の樹木",
+        "quantity": 1
+      },
+      {
+        "name": "まんねん雪",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "らせつのこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 60,
+        "max": 60
+      },
+      "B": {
+        "min": 60,
+        "max": 60
+      },
+      "C": {
+        "min": 84,
+        "max": 84
+      },
+      "D": {
+        "min": 84,
+        "max": 84
+      },
+      "E": {
+        "min": 60,
+        "max": 60
+      },
+      "F": {
+        "min": 60,
+        "max": 60
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "げんこつダケ",
+        "quantity": 1
+      },
+      {
+        "name": "ブルーアイ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "クラッシュロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 43,
+        "max": 43
+      },
+      "B": {
+        "min": 43,
+        "max": 43
+      },
+      "C": {
+        "min": 58,
+        "max": 58
+      },
+      "D": {
+        "min": 58,
+        "max": 58
+      },
+      "E": {
+        "min": 48,
+        "max": 48
+      },
+      "F": {
+        "min": 48,
+        "max": 48
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 2
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      },
+      {
+        "name": "小さなホネ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "まどろみのこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 37,
+        "max": 37
+      },
+      "B": {
+        "min": 37,
+        "max": 37
+      },
+      "C": {
+        "min": 58,
+        "max": 58
+      },
+      "D": {
+        "min": 58,
+        "max": 58
+      },
+      "E": {
+        "min": 43,
+        "max": 43
+      },
+      "F": {
+        "min": 43,
+        "max": 43
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      },
+      {
+        "name": "小さな化石",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "スパイクロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 32,
+        "max": 32
+      },
+      "B": {
+        "min": 32,
+        "max": 32
+      },
+      "C": {
+        "min": 53,
+        "max": 53
+      },
+      "D": {
+        "min": 53,
+        "max": 53
+      },
+      "E": {
+        "min": 43,
+        "max": 43
+      },
+      "F": {
+        "min": 43,
+        "max": 43
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "サバンナウッド",
+        "quantity": 1
+      },
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "セレモニーロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 33,
+        "max": 33
+      },
+      "B": {
+        "min": 33,
+        "max": 33
+      },
+      "C": {
+        "min": 49,
+        "max": 49
+      },
+      "D": {
+        "min": 49,
+        "max": 49
+      },
+      "E": {
+        "min": 38,
+        "max": 38
+      },
+      "F": {
+        "min": 38,
+        "max": 38
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "グリーンアイ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "えんぶのこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 33,
+        "max": 33
+      },
+      "B": {
+        "min": 33,
+        "max": 33
+      },
+      "C": {
+        "min": 44,
+        "max": 44
+      },
+      "D": {
+        "min": 44,
+        "max": 44
+      },
+      "E": {
+        "min": 33,
+        "max": 33
+      },
+      "F": {
+        "min": 33,
+        "max": 33
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "げんこつダケ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "六角ぼう",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 29,
+        "max": 29
+      },
+      "B": {
+        "min": 29,
+        "max": 29
+      },
+      "C": {
+        "min": 40,
+        "max": 40
+      },
+      "D": {
+        "min": 40,
+        "max": 40
+      },
+      "E": {
+        "min": 29,
+        "max": 29
+      },
+      "F": {
+        "min": 29,
+        "max": 29
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "サバンナウッド",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "ぎょうじゃのこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 29,
+        "max": 29
+      },
+      "B": {
+        "min": 29,
+        "max": 29
+      },
+      "C": {
+        "min": 29,
+        "max": 29
+      },
+      "D": {
+        "min": 29,
+        "max": 29
+      },
+      "E": {
+        "min": 29,
+        "max": 29
+      },
+      "F": {
+        "min": 29,
+        "max": 29
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "さとりそう",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "てんびんぼう",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 22,
+        "max": 22
+      },
+      "B": {
+        "min": 22,
+        "max": 22
+      },
+      "C": {
+        "min": 26,
+        "max": 26
+      },
+      "D": {
+        "min": 26,
+        "max": 26
+      },
+      "E": {
+        "min": 22,
+        "max": 22
+      },
+      "F": {
+        "min": 22,
+        "max": 22
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "かしのこん",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 22,
+        "max": 22
+      },
+      "B": {
+        "min": 22,
+        "max": 22
+      },
+      "C": {
+        "min": 33,
+        "max": 33
+      },
+      "D": {
+        "min": 33,
+        "max": 33
+      },
+      "E": {
+        "min": 22,
+        "max": 22
+      },
+      "F": {
+        "min": 22,
+        "max": 22
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      },
+      {
+        "name": "みかわしそう",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ものほしざお",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 22,
+        "max": 22
+      },
+      "B": {
+        "min": 22,
+        "max": 22
+      },
+      "C": {
+        "min": 22,
+        "max": 22
+      },
+      "D": {
+        "min": 22,
+        "max": 22
+      },
+      "E": {
+        "min": 22,
+        "max": 22
+      },
+      "F": {
+        "min": 22,
+        "max": 22
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      }
+    ]
+  },
+  {
     "name": "きせきの釣りざお",
     "category": "木工",
     "subCategory": "釣りざお",
