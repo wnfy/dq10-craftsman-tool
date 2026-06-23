@@ -50584,6 +50584,4510 @@
     ]
   },
   {
+    "name": "名軍師の羽扇",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 170,
+        "max": 170
+      },
+      "B": {
+        "min": 280,
+        "max": 280
+      },
+      "C": {
+        "min": 210,
+        "max": 210
+      },
+      "D": {
+        "min": 200,
+        "max": 200
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "かぜきりのはね",
+        "quantity": 5
+      },
+      {
+        "name": "風竜の羽毛",
+        "quantity": 8
+      },
+      {
+        "name": "黄金の飾り扇",
+        "quantity": 2
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 9
+      }
+    ],
+    "specialTrait": "燃え木"
+  },
+  {
+    "name": "花星のおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 300,
+        "max": 300
+      },
+      "B": {
+        "min": 140,
+        "max": 140
+      },
+      "C": {
+        "min": 160,
+        "max": 160
+      },
+      "D": {
+        "min": 360,
+        "max": 360
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "風竜の羽毛",
+        "quantity": 8
+      },
+      {
+        "name": "やわらかウール",
+        "quantity": 20
+      },
+      {
+        "name": "黄金の飾り扇",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "再生木"
+  },
+  {
+    "name": "おとめの扇",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 220,
+        "max": 220
+      },
+      "B": {
+        "min": 310,
+        "max": 310
+      },
+      "C": {
+        "min": 340,
+        "max": 340
+      },
+      "D": {
+        "min": 230,
+        "max": 230
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "人魚の涙",
+        "quantity": 3
+      },
+      {
+        "name": "風竜の羽毛",
+        "quantity": 10
+      },
+      {
+        "name": "天使のソーマ",
+        "quantity": 20
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "変化木"
+  },
+  {
+    "name": "星詠みの秘扇",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 320,
+        "max": 320
+      },
+      "B": {
+        "min": 260,
+        "max": 260
+      },
+      "C": {
+        "min": 210,
+        "max": 210
+      },
+      "D": {
+        "min": 330,
+        "max": 330
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "大地の羽毛",
+        "quantity": 3
+      },
+      {
+        "name": "ほしのカケラ",
+        "quantity": 20
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 5
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "虹木"
+  },
+  {
+    "name": "セーラスファン",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 310,
+        "max": 310
+      },
+      "B": {
+        "min": 240,
+        "max": 240
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      },
+      "D": {
+        "min": 310,
+        "max": 310
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "たそがれゴケ",
+        "quantity": 5
+      },
+      {
+        "name": "パープルアイ",
+        "quantity": 30
+      },
+      {
+        "name": "黄金の飾り扇",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "虹木"
+  },
+  {
+    "name": "クローリス",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 250,
+        "max": 250
+      },
+      "B": {
+        "min": 250,
+        "max": 250
+      },
+      "C": {
+        "min": 180,
+        "max": 180
+      },
+      "D": {
+        "min": 180,
+        "max": 180
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "とこしえの虹",
+        "quantity": 3
+      },
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "黄金の飾り扇",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "変化木"
+  },
+  {
+    "name": "輝天のおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 240,
+        "max": 240
+      },
+      "B": {
+        "min": 190,
+        "max": 190
+      },
+      "C": {
+        "min": 190,
+        "max": 190
+      },
+      "D": {
+        "min": 240,
+        "max": 240
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "おぼろ水晶",
+        "quantity": 3
+      },
+      {
+        "name": "まほうの樹木",
+        "quantity": 30
+      },
+      {
+        "name": "黄金の飾り扇",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 6
+      }
+    ],
+    "specialTrait": "燃え木"
+  },
+  {
+    "name": "アロケルのおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 230,
+        "max": 230
+      },
+      "B": {
+        "min": 190,
+        "max": 190
+      },
+      "C": {
+        "min": 230,
+        "max": 230
+      },
+      "D": {
+        "min": 190,
+        "max": 190
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "カオスベリー",
+        "quantity": 2
+      },
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 5
+      },
+      {
+        "name": "大きな化石",
+        "quantity": 20
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
+    "name": "黒仙翼のおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 250,
+        "max": 250
+      },
+      "B": {
+        "min": 160,
+        "max": 160
+      },
+      "C": {
+        "min": 160,
+        "max": 160
+      },
+      "D": {
+        "min": 250,
+        "max": 250
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 2
+      },
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "まほうの樹木",
+        "quantity": 10
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ラクシュミー",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 280,
+        "max": 280
+      },
+      "B": {
+        "min": 280,
+        "max": 280
+      },
+      "C": {
+        "min": 150,
+        "max": 150
+      },
+      "D": {
+        "min": 150,
+        "max": 150
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "天竜草",
+        "quantity": 10
+      },
+      {
+        "name": "さくらの花びら",
+        "quantity": 10
+      },
+      {
+        "name": "黄金の飾り扇",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ガルーダテンペスト",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 240,
+        "max": 240
+      },
+      "B": {
+        "min": 210,
+        "max": 210
+      },
+      "C": {
+        "min": 240,
+        "max": 240
+      },
+      "D": {
+        "min": 213,
+        "max": 213
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "烈風石",
+        "quantity": 1
+      },
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 15
+      },
+      {
+        "name": "こうもりのはね",
+        "quantity": 30
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ブリガンティア",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 189,
+        "max": 189
+      },
+      "B": {
+        "min": 189,
+        "max": 189
+      },
+      "C": {
+        "min": 231,
+        "max": 231
+      },
+      "D": {
+        "min": 231,
+        "max": 231
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "ちょうのはね",
+        "quantity": 40
+      },
+      {
+        "name": "かがみ石",
+        "quantity": 20
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 30
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "プロセルピナ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 195,
+        "max": 195
+      },
+      "B": {
+        "min": 253,
+        "max": 253
+      },
+      "C": {
+        "min": 160,
+        "max": 160
+      },
+      "D": {
+        "min": 195,
+        "max": 195
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "さくらの花びら",
+        "quantity": 30
+      },
+      {
+        "name": "パープルアイ",
+        "quantity": 20
+      },
+      {
+        "name": "暗黒の樹木",
+        "quantity": 30
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "妖貴妃のおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 172,
+        "max": 172
+      },
+      "B": {
+        "min": 220,
+        "max": 220
+      },
+      "C": {
+        "min": 220,
+        "max": 220
+      },
+      "D": {
+        "min": 172,
+        "max": 172
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 5
+      },
+      {
+        "name": "幻獣の皮",
+        "quantity": 1
+      },
+      {
+        "name": "うるわしキノコ",
+        "quantity": 30
+      },
+      {
+        "name": "いかずちのたま",
+        "quantity": 10
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "孔雀姫のおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 181,
+        "max": 181
+      },
+      "B": {
+        "min": 218,
+        "max": 218
+      },
+      "C": {
+        "min": 181,
+        "max": 181
+      },
+      "D": {
+        "min": 218,
+        "max": 218
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 5
+      },
+      {
+        "name": "あやかしそう",
+        "quantity": 30
+      },
+      {
+        "name": "なないろのまゆ",
+        "quantity": 30
+      },
+      {
+        "name": "うるわしキノコ",
+        "quantity": 30
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ラヴィアンローズ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 160,
+        "max": 160
+      },
+      "B": {
+        "min": 218,
+        "max": 218
+      },
+      "C": {
+        "min": 218,
+        "max": 218
+      },
+      "D": {
+        "min": 160,
+        "max": 160
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 3
+      },
+      {
+        "name": "さくらの花びら",
+        "quantity": 20
+      },
+      {
+        "name": "スライムおしゃれ花",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "青嵐のおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 170,
+        "max": 170
+      },
+      "B": {
+        "min": 193,
+        "max": 193
+      },
+      "C": {
+        "min": 153,
+        "max": 153
+      },
+      "D": {
+        "min": 170,
+        "max": 170
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 15
+      },
+      {
+        "name": "しおかぜ草",
+        "quantity": 20
+      },
+      {
+        "name": "いかずちのたま",
+        "quantity": 5
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "ハルジオン",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 175,
+        "max": 175
+      },
+      "B": {
+        "min": 175,
+        "max": 175
+      },
+      "C": {
+        "min": 175,
+        "max": 175
+      },
+      "D": {
+        "min": 175,
+        "max": 175
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 15
+      },
+      {
+        "name": "花のみつ",
+        "quantity": 30
+      },
+      {
+        "name": "スライムおしゃれ花",
+        "quantity": 5
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "聖王のおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 153,
+        "max": 153
+      },
+      "B": {
+        "min": 153,
+        "max": 153
+      },
+      "C": {
+        "min": 185,
+        "max": 185
+      },
+      "D": {
+        "min": 185,
+        "max": 185
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾り扇",
+        "quantity": 1
+      },
+      {
+        "name": "さざなみのしずく",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "カレイドスコープ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 170,
+        "max": 170
+      },
+      "B": {
+        "min": 192,
+        "max": 192
+      },
+      "C": {
+        "min": 157,
+        "max": 157
+      },
+      "D": {
+        "min": 157,
+        "max": 157
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 10
+      },
+      {
+        "name": "にじいろの布きれ",
+        "quantity": 5
+      },
+      {
+        "name": "なないろのまゆ",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "風林火山",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 143,
+        "max": 143
+      },
+      "B": {
+        "min": 143,
+        "max": 143
+      },
+      "C": {
+        "min": 190,
+        "max": 190
+      },
+      "D": {
+        "min": 190,
+        "max": 190
+      }
+    },
+    "materials": [
+      {
+        "name": "暗黒の樹木",
+        "quantity": 30
+      },
+      {
+        "name": "まじゅうのホネ",
+        "quantity": 5
+      },
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 10
+      },
+      {
+        "name": "イエローオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "天下泰平",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 142,
+        "max": 142
+      },
+      "B": {
+        "min": 142,
+        "max": 142
+      },
+      "C": {
+        "min": 142,
+        "max": 142
+      },
+      "D": {
+        "min": 142,
+        "max": 142
+      }
+    },
+    "materials": [
+      {
+        "name": "ホワイトウッド",
+        "quantity": 15
+      },
+      {
+        "name": "うるわしキノコ",
+        "quantity": 30
+      },
+      {
+        "name": "イエローオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "ひっさつのおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 150
+      },
+      "B": {
+        "min": 150,
+        "max": 150
+      },
+      "C": {
+        "min": 220,
+        "max": 220
+      },
+      "D": {
+        "min": 184,
+        "max": 184
+      }
+    },
+    "materials": [
+      {
+        "name": "暗黒の樹木",
+        "quantity": 15
+      },
+      {
+        "name": "かぜきりのはね",
+        "quantity": 4
+      },
+      {
+        "name": "パープルオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "ばしょうせん",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 114,
+        "max": 114
+      },
+      "B": {
+        "min": 114,
+        "max": 114
+      },
+      "C": {
+        "min": 152,
+        "max": 152
+      },
+      "D": {
+        "min": 152,
+        "max": 152
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 12
+      },
+      {
+        "name": "かぜきりのはね",
+        "quantity": 1
+      },
+      {
+        "name": "パープルオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "たいようのおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 126,
+        "max": 126
+      },
+      "B": {
+        "min": 126,
+        "max": 126
+      },
+      "C": {
+        "min": 148,
+        "max": 148
+      },
+      "D": {
+        "min": 148,
+        "max": 148
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 10
+      },
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 30
+      },
+      {
+        "name": "レッドオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "月のおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 97,
+        "max": 97
+      },
+      "B": {
+        "min": 97,
+        "max": 97
+      },
+      "C": {
+        "min": 118,
+        "max": 118
+      },
+      "D": {
+        "min": 118,
+        "max": 118
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 6
+      },
+      {
+        "name": "つきのめぐみ",
+        "quantity": 1
+      },
+      {
+        "name": "イエローアイ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "レインボーファン",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 107,
+        "max": 107
+      },
+      "B": {
+        "min": 107,
+        "max": 107
+      },
+      "C": {
+        "min": 123,
+        "max": 123
+      },
+      "D": {
+        "min": 123,
+        "max": 123
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 4
+      },
+      {
+        "name": "なないろのまゆ",
+        "quantity": 1
+      },
+      {
+        "name": "パープルアイ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "name": "ましょうのおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 102,
+        "max": 102
+      },
+      "B": {
+        "min": 121,
+        "max": 121
+      },
+      "C": {
+        "min": 121,
+        "max": 121
+      },
+      "D": {
+        "min": 102,
+        "max": 102
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 4
+      },
+      {
+        "name": "暗黒の樹木",
+        "quantity": 3
+      },
+      {
+        "name": "きよめの水",
+        "quantity": 3
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "星のおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 75,
+        "max": 75
+      },
+      "B": {
+        "min": 75,
+        "max": 75
+      },
+      "C": {
+        "min": 91,
+        "max": 91
+      },
+      "D": {
+        "min": 91,
+        "max": 91
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "ほしのカケラ",
+        "quantity": 1
+      },
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "マジックファン",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 90
+      },
+      "B": {
+        "min": 90,
+        "max": 90
+      },
+      "C": {
+        "min": 114,
+        "max": 114
+      },
+      "D": {
+        "min": 114,
+        "max": 114
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "まりょくの土",
+        "quantity": 1
+      },
+      {
+        "name": "グリーンアイ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "へびのおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 78,
+        "max": 78
+      },
+      "B": {
+        "min": 78,
+        "max": 78
+      },
+      "C": {
+        "min": 90,
+        "max": 90
+      },
+      "D": {
+        "min": 90,
+        "max": 90
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "小さなうろこ",
+        "quantity": 1
+      },
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ネコのおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 60,
+        "max": 60
+      },
+      "B": {
+        "min": 60,
+        "max": 60
+      },
+      "C": {
+        "min": 71,
+        "max": 71
+      },
+      "D": {
+        "min": 71,
+        "max": 71
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "ネコずな",
+        "quantity": 1
+      },
+      {
+        "name": "氷のけっしょう",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "くじゃくのおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 53,
+        "max": 53
+      },
+      "B": {
+        "min": 53,
+        "max": 53
+      },
+      "C": {
+        "min": 86,
+        "max": 86
+      },
+      "D": {
+        "min": 86,
+        "max": 86
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "シルク草",
+        "quantity": 1
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ナナホシのおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 55,
+        "max": 55
+      },
+      "B": {
+        "min": 55,
+        "max": 55
+      },
+      "C": {
+        "min": 66,
+        "max": 66
+      },
+      "D": {
+        "min": 66,
+        "max": 66
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "ちょうのはね",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "トリのおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 49,
+        "max": 49
+      },
+      "B": {
+        "min": 49,
+        "max": 49
+      },
+      "C": {
+        "min": 60,
+        "max": 60
+      },
+      "D": {
+        "min": 60,
+        "max": 60
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "てつのおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 38,
+        "max": 38
+      },
+      "B": {
+        "min": 38,
+        "max": 38
+      },
+      "C": {
+        "min": 49,
+        "max": 49
+      },
+      "D": {
+        "min": 49,
+        "max": 49
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "カメのおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 44,
+        "max": 44
+      },
+      "B": {
+        "min": 44,
+        "max": 44
+      },
+      "C": {
+        "min": 55,
+        "max": 55
+      },
+      "D": {
+        "min": 55,
+        "max": 55
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "小さなこうら",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "はねおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 25,
+        "max": 25
+      },
+      "B": {
+        "min": 25,
+        "max": 25
+      },
+      "C": {
+        "min": 40,
+        "max": 40
+      },
+      "D": {
+        "min": 40,
+        "max": 40
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      },
+      {
+        "name": "ちょうのはね",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "バトルファン",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 44,
+        "max": 44
+      },
+      "B": {
+        "min": 44,
+        "max": 44
+      },
+      "C": {
+        "min": 33,
+        "max": 33
+      },
+      "D": {
+        "min": 33,
+        "max": 33
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      },
+      {
+        "name": "てっこうせき",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "白木のおうぎ",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 30,
+        "max": 30
+      },
+      "B": {
+        "min": 30,
+        "max": 30
+      },
+      "C": {
+        "min": 30,
+        "max": 30
+      },
+      "D": {
+        "min": 30,
+        "max": 30
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ニンフの妖弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 140,
+        "max": 140
+      },
+      "B": {
+        "min": 210,
+        "max": 210
+      },
+      "C": {
+        "min": 190,
+        "max": 190
+      },
+      "E": {
+        "min": 140,
+        "max": 140
+      },
+      "F": {
+        "min": 210,
+        "max": 210
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "スーパーホネホネ",
+        "quantity": 5
+      },
+      {
+        "name": "水竜のうろこ",
+        "quantity": 6
+      },
+      {
+        "name": "大きなうろこ",
+        "quantity": 30
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 9
+      }
+    ],
+    "specialTrait": "再生木"
+  },
+  {
+    "name": "フルムの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 150
+      },
+      "B": {
+        "min": 255,
+        "max": 255
+      },
+      "C": {
+        "min": 220,
+        "max": 220
+      },
+      "E": {
+        "min": 150,
+        "max": 150
+      },
+      "F": {
+        "min": 255,
+        "max": 255
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "トガリアのしずく",
+        "quantity": 3
+      },
+      {
+        "name": "はがねの尾羽",
+        "quantity": 4
+      },
+      {
+        "name": "黄金の飾り弓",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "変化木"
+  },
+  {
+    "name": "光陰如箭",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 250,
+        "max": 250
+      },
+      "B": {
+        "min": 195,
+        "max": 195
+      },
+      "C": {
+        "min": 155,
+        "max": 155
+      },
+      "E": {
+        "min": 265,
+        "max": 265
+      },
+      "F": {
+        "min": 185,
+        "max": 185
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "神秘の鋼線",
+        "quantity": 6
+      },
+      {
+        "name": "地竜のツメ",
+        "quantity": 12
+      },
+      {
+        "name": "ほしのカケラ",
+        "quantity": 30
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "虹木"
+  },
+  {
+    "name": "パピルサグの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 180,
+        "max": 180
+      },
+      "B": {
+        "min": 225,
+        "max": 225
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      },
+      "E": {
+        "min": 180,
+        "max": 180
+      },
+      "F": {
+        "min": 225,
+        "max": 225
+      }
+    },
+    "materials": [
+      {
+        "name": "ガーデスの枝",
+        "quantity": 30
+      },
+      {
+        "name": "神秘の鋼線",
+        "quantity": 3
+      },
+      {
+        "name": "きれいな枝",
+        "quantity": 20
+      },
+      {
+        "name": "青い宝石",
+        "quantity": 8
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "再生木"
+  },
+  {
+    "name": "セーラスショット",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 150
+      },
+      "B": {
+        "min": 190,
+        "max": 190
+      },
+      "C": {
+        "min": 190,
+        "max": 190
+      },
+      "E": {
+        "min": 150,
+        "max": 150
+      },
+      "F": {
+        "min": 190,
+        "max": 190
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "風竜の羽毛",
+        "quantity": 5
+      },
+      {
+        "name": "パープルアイ",
+        "quantity": 30
+      },
+      {
+        "name": "黄金の飾り弓",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "燃え木"
+  },
+  {
+    "name": "ムーンシューター",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 140,
+        "max": 140
+      },
+      "B": {
+        "min": 190,
+        "max": 190
+      },
+      "C": {
+        "min": 190,
+        "max": 190
+      },
+      "E": {
+        "min": 140,
+        "max": 140
+      },
+      "F": {
+        "min": 190,
+        "max": 190
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "暗夜の魔石",
+        "quantity": 3
+      },
+      {
+        "name": "つきのめぐみ",
+        "quantity": 10
+      },
+      {
+        "name": "黄金の飾り弓",
+        "quantity": 1
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "再生木"
+  },
+  {
+    "name": "輝天の弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 150
+      },
+      "B": {
+        "min": 170,
+        "max": 170
+      },
+      "C": {
+        "min": 250,
+        "max": 250
+      },
+      "E": {
+        "min": 150,
+        "max": 150
+      },
+      "F": {
+        "min": 170,
+        "max": 170
+      }
+    },
+    "materials": [
+      {
+        "name": "天の香木",
+        "quantity": 30
+      },
+      {
+        "name": "暗夜の魔石",
+        "quantity": 5
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 30
+      },
+      {
+        "name": "魔紅樹の板",
+        "quantity": 5
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 6
+      }
+    ],
+    "specialTrait": "虹木"
+  },
+  {
+    "name": "シェキナーの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 100,
+        "max": 100
+      },
+      "B": {
+        "min": 180,
+        "max": 180
+      },
+      "C": {
+        "min": 300,
+        "max": 300
+      },
+      "E": {
+        "min": 100,
+        "max": 100
+      },
+      "F": {
+        "min": 180,
+        "max": 180
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "神秘の鋼線",
+        "quantity": 2
+      },
+      {
+        "name": "ウェナールシェル",
+        "quantity": 5
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 30
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "再生木"
+  },
+  {
+    "name": "緋赤鳥の弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 165,
+        "max": 165
+      },
+      "B": {
+        "min": 250,
+        "max": 250
+      },
+      "C": {
+        "min": 120,
+        "max": 120
+      },
+      "E": {
+        "min": 160,
+        "max": 160
+      },
+      "F": {
+        "min": 200,
+        "max": 200
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "大地の羽毛",
+        "quantity": 2
+      },
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 10
+      },
+      {
+        "name": "まほうの樹木",
+        "quantity": 30
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "威光弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 190,
+        "max": 190
+      },
+      "B": {
+        "min": 156,
+        "max": 156
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      },
+      "E": {
+        "min": 190,
+        "max": 190
+      },
+      "F": {
+        "min": 156,
+        "max": 156
+      }
+    },
+    "materials": [
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "神秘の鋼線",
+        "quantity": 2
+      },
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "よるのとばり",
+        "quantity": 20
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "イルミンズールの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 152,
+        "max": 152
+      },
+      "B": {
+        "min": 152,
+        "max": 152
+      },
+      "C": {
+        "min": 193,
+        "max": 193
+      },
+      "E": {
+        "min": 182,
+        "max": 182
+      },
+      "F": {
+        "min": 203,
+        "max": 203
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "神秘の鋼線",
+        "quantity": 1
+      },
+      {
+        "name": "黄金の飾り弓",
+        "quantity": 1
+      },
+      {
+        "name": "魔紅樹の板",
+        "quantity": 10
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "蒼穹の王",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 140,
+        "max": 140
+      },
+      "B": {
+        "min": 165,
+        "max": 165
+      },
+      "C": {
+        "min": 210,
+        "max": 210
+      },
+      "E": {
+        "min": 175,
+        "max": 175
+      },
+      "F": {
+        "min": 150,
+        "max": 150
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "激震のキバ",
+        "quantity": 1
+      },
+      {
+        "name": "ドラゴンのツノ",
+        "quantity": 2
+      },
+      {
+        "name": "水の樹木",
+        "quantity": 10
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ヒュドラの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 140,
+        "max": 140
+      },
+      "B": {
+        "min": 186,
+        "max": 186
+      },
+      "C": {
+        "min": 250,
+        "max": 250
+      },
+      "E": {
+        "min": 186,
+        "max": 186
+      },
+      "F": {
+        "min": 140,
+        "max": 140
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 5
+      },
+      {
+        "name": "げんませき",
+        "quantity": 1
+      },
+      {
+        "name": "小さなうろこ",
+        "quantity": 20
+      },
+      {
+        "name": "赤い宝石",
+        "quantity": 20
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "魔弓サジタリウス",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 165,
+        "max": 165
+      },
+      "B": {
+        "min": 135,
+        "max": 135
+      },
+      "C": {
+        "min": 240,
+        "max": 240
+      },
+      "E": {
+        "min": 165,
+        "max": 165
+      },
+      "F": {
+        "min": 135,
+        "max": 135
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 5
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 1
+      },
+      {
+        "name": "げんませき",
+        "quantity": 1
+      },
+      {
+        "name": "暗黒の樹木",
+        "quantity": 10
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "スライムショット",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 155,
+        "max": 155
+      },
+      "B": {
+        "min": 120,
+        "max": 120
+      },
+      "C": {
+        "min": 210,
+        "max": 210
+      },
+      "E": {
+        "min": 155,
+        "max": 155
+      },
+      "F": {
+        "min": 120,
+        "max": 120
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 5
+      },
+      {
+        "name": "スライムおしゃれ花",
+        "quantity": 20
+      },
+      {
+        "name": "スライムゼリー",
+        "quantity": 20
+      },
+      {
+        "name": "氷の樹木",
+        "quantity": 20
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "あやかしの魔弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 155,
+        "max": 155
+      },
+      "B": {
+        "min": 120,
+        "max": 120
+      },
+      "C": {
+        "min": 206,
+        "max": 206
+      },
+      "E": {
+        "min": 155,
+        "max": 155
+      },
+      "F": {
+        "min": 120,
+        "max": 120
+      }
+    },
+    "materials": [
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 3
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 1
+      },
+      {
+        "name": "あやかしそう",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "オルフェウスの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 150
+      },
+      "B": {
+        "min": 125,
+        "max": 125
+      },
+      "C": {
+        "min": 150,
+        "max": 150
+      },
+      "E": {
+        "min": 150,
+        "max": 150
+      },
+      "F": {
+        "min": 125,
+        "max": 125
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 15
+      },
+      {
+        "name": "さえずりのみつ",
+        "quantity": 30
+      },
+      {
+        "name": "ゆめみの花",
+        "quantity": 5
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "アンフィスバエナ",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 110,
+        "max": 110
+      },
+      "B": {
+        "min": 145,
+        "max": 145
+      },
+      "C": {
+        "min": 190,
+        "max": 190
+      },
+      "E": {
+        "min": 145,
+        "max": 145
+      },
+      "F": {
+        "min": 110,
+        "max": 110
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 15
+      },
+      {
+        "name": "ドラゴンのホネ",
+        "quantity": 5
+      },
+      {
+        "name": "どくどくヘドロ",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "聖王の弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 150
+      },
+      "B": {
+        "min": 95,
+        "max": 95
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      },
+      "E": {
+        "min": 150,
+        "max": 150
+      },
+      "F": {
+        "min": 95,
+        "max": 95
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾り弓",
+        "quantity": 1
+      },
+      {
+        "name": "なないろのまゆ",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "オーディーンボウ",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 130,
+        "max": 130
+      },
+      "B": {
+        "min": 130,
+        "max": 130
+      },
+      "C": {
+        "min": 239,
+        "max": 239
+      },
+      "E": {
+        "min": 130,
+        "max": 130
+      },
+      "F": {
+        "min": 130,
+        "max": 130
+      }
+    },
+    "materials": [
+      {
+        "name": "まほうの樹木",
+        "quantity": 10
+      },
+      {
+        "name": "ドラゴンのツノ",
+        "quantity": 1
+      },
+      {
+        "name": "大きな化石",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "天使の弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 135,
+        "max": 135
+      },
+      "B": {
+        "min": 110,
+        "max": 110
+      },
+      "C": {
+        "min": 176,
+        "max": 176
+      },
+      "E": {
+        "min": 135,
+        "max": 135
+      },
+      "F": {
+        "min": 110,
+        "max": 110
+      }
+    },
+    "materials": [
+      {
+        "name": "氷の樹木",
+        "quantity": 20
+      },
+      {
+        "name": "天使のソーマ",
+        "quantity": 4
+      },
+      {
+        "name": "かぜきりのはね",
+        "quantity": 1
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "バジリスクの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 114,
+        "max": 114
+      },
+      "B": {
+        "min": 85,
+        "max": 85
+      },
+      "C": {
+        "min": 152,
+        "max": 152
+      },
+      "E": {
+        "min": 123,
+        "max": 123
+      },
+      "F": {
+        "min": 95,
+        "max": 95
+      }
+    },
+    "materials": [
+      {
+        "name": "暗黒の樹木",
+        "quantity": 15
+      },
+      {
+        "name": "へびのぬけがら",
+        "quantity": 3
+      },
+      {
+        "name": "グリーンオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "じごくの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 132,
+        "max": 132
+      },
+      "B": {
+        "min": 99,
+        "max": 99
+      },
+      "C": {
+        "min": 220,
+        "max": 220
+      },
+      "E": {
+        "min": 143,
+        "max": 143
+      },
+      "F": {
+        "min": 110,
+        "max": 110
+      }
+    },
+    "materials": [
+      {
+        "name": "氷の樹木",
+        "quantity": 15
+      },
+      {
+        "name": "よごれたほうたい",
+        "quantity": 10
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "ケイロンの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 98,
+        "max": 98
+      },
+      "B": {
+        "min": 78,
+        "max": 78
+      },
+      "C": {
+        "min": 137,
+        "max": 137
+      },
+      "E": {
+        "min": 98,
+        "max": 98
+      },
+      "F": {
+        "min": 78,
+        "max": 78
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 10
+      },
+      {
+        "name": "けものの皮",
+        "quantity": 30
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "アルテミスの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 114,
+        "max": 114
+      },
+      "B": {
+        "min": 95,
+        "max": 95
+      },
+      "C": {
+        "min": 142,
+        "max": 142
+      },
+      "E": {
+        "min": 99,
+        "max": 99
+      },
+      "F": {
+        "min": 80,
+        "max": 80
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 12
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 15
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "むげんの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 96,
+        "max": 96
+      },
+      "B": {
+        "min": 71,
+        "max": 71
+      },
+      "C": {
+        "min": 110,
+        "max": 110
+      },
+      "E": {
+        "min": 96,
+        "max": 96
+      },
+      "F": {
+        "min": 71,
+        "max": 71
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 4
+      },
+      {
+        "name": "ヤシの実",
+        "quantity": 4
+      },
+      {
+        "name": "緑のコケ",
+        "quantity": 4
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "ナイトスナイパー",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 88,
+        "max": 88
+      },
+      "B": {
+        "min": 68,
+        "max": 68
+      },
+      "C": {
+        "min": 93,
+        "max": 93
+      },
+      "E": {
+        "min": 112,
+        "max": 112
+      },
+      "F": {
+        "min": 68,
+        "max": 68
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 6
+      },
+      {
+        "name": "よるのとばり",
+        "quantity": 2
+      },
+      {
+        "name": "パープルアイ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "すざくの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 110,
+        "max": 110
+      },
+      "B": {
+        "min": 79,
+        "max": 79
+      },
+      "C": {
+        "min": 140,
+        "max": 140
+      },
+      "E": {
+        "min": 110,
+        "max": 110
+      },
+      "F": {
+        "min": 79,
+        "max": 79
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 4
+      },
+      {
+        "name": "せいじゃのはい",
+        "quantity": 1
+      },
+      {
+        "name": "グリーンアイ",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "name": "白鳥の弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 68,
+        "max": 68
+      },
+      "B": {
+        "min": 58,
+        "max": 58
+      },
+      "C": {
+        "min": 78,
+        "max": 78
+      },
+      "E": {
+        "min": 58,
+        "max": 58
+      },
+      "F": {
+        "min": 68,
+        "max": 68
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "きよめの水",
+        "quantity": 1
+      },
+      {
+        "name": "小さなホネ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "月光の弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 64,
+        "max": 64
+      },
+      "B": {
+        "min": 78,
+        "max": 78
+      },
+      "C": {
+        "min": 78,
+        "max": 78
+      },
+      "E": {
+        "min": 64,
+        "max": 64
+      },
+      "F": {
+        "min": 78,
+        "max": 78
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 1
+      },
+      {
+        "name": "イエローアイ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ゆうわくの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 68,
+        "max": 68
+      },
+      "B": {
+        "min": 49,
+        "max": 49
+      },
+      "C": {
+        "min": 64,
+        "max": 64
+      },
+      "E": {
+        "min": 68,
+        "max": 68
+      },
+      "F": {
+        "min": 49,
+        "max": 49
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "あやかしそう",
+        "quantity": 1
+      },
+      {
+        "name": "ピンクパール",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "かぜきりの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 66,
+        "max": 66
+      },
+      "B": {
+        "min": 49,
+        "max": 49
+      },
+      "C": {
+        "min": 82,
+        "max": 82
+      },
+      "E": {
+        "min": 66,
+        "max": 66
+      },
+      "F": {
+        "min": 49,
+        "max": 49
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "しおかぜ草",
+        "quantity": 1
+      },
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "エロスの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 53,
+        "max": 53
+      },
+      "B": {
+        "min": 44,
+        "max": 44
+      },
+      "C": {
+        "min": 58,
+        "max": 58
+      },
+      "E": {
+        "min": 53,
+        "max": 53
+      },
+      "F": {
+        "min": 44,
+        "max": 44
+      }
+    },
+    "materials": [
+      {
+        "name": "しなやかな枝",
+        "quantity": 1
+      },
+      {
+        "name": "ホワイトウッド",
+        "quantity": 1
+      },
+      {
+        "name": "うるわしキノコ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "こあくまの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 45,
+        "max": 45
+      },
+      "B": {
+        "min": 60,
+        "max": 60
+      },
+      "C": {
+        "min": 33,
+        "max": 33
+      },
+      "E": {
+        "min": 60,
+        "max": 60
+      },
+      "F": {
+        "min": 45,
+        "max": 45
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "あやかしそう",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "かりうどの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 55,
+        "max": 55
+      },
+      "B": {
+        "min": 33,
+        "max": 33
+      },
+      "C": {
+        "min": 45,
+        "max": 45
+      },
+      "E": {
+        "min": 55,
+        "max": 55
+      },
+      "F": {
+        "min": 33,
+        "max": 33
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 2
+      },
+      {
+        "name": "けものの皮",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ロングボウ",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 33,
+        "max": 33
+      },
+      "B": {
+        "min": 33,
+        "max": 33
+      },
+      "C": {
+        "min": 45,
+        "max": 45
+      },
+      "E": {
+        "min": 33,
+        "max": 33
+      },
+      "F": {
+        "min": 33,
+        "max": 33
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "小さなホネ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "したんの弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 45,
+        "max": 45
+      },
+      "B": {
+        "min": 33,
+        "max": 33
+      },
+      "C": {
+        "min": 45,
+        "max": 45
+      },
+      "E": {
+        "min": 45,
+        "max": 45
+      },
+      "F": {
+        "min": 33,
+        "max": 33
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      },
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "若木の弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 33,
+        "max": 33
+      },
+      "B": {
+        "min": 22,
+        "max": 22
+      },
+      "C": {
+        "min": 22,
+        "max": 22
+      },
+      "E": {
+        "min": 33,
+        "max": 33
+      },
+      "F": {
+        "min": 22,
+        "max": 22
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      },
+      {
+        "name": "じょうぶな枝",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "古木の弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 33,
+        "max": 33
+      },
+      "B": {
+        "min": 33,
+        "max": 33
+      },
+      "C": {
+        "min": 22,
+        "max": 22
+      },
+      "E": {
+        "min": 33,
+        "max": 33
+      },
+      "F": {
+        "min": 33,
+        "max": 33
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      },
+      {
+        "name": "サバンナウッド",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "青竹の弓",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 22,
+        "max": 22
+      },
+      "B": {
+        "min": 22,
+        "max": 22
+      },
+      "C": {
+        "min": 33,
+        "max": 33
+      },
+      "E": {
+        "min": 22,
+        "max": 22
+      },
+      "F": {
+        "min": 22,
+        "max": 22
+      }
+    },
+    "materials": [
+      {
+        "name": "やわらかい枝",
+        "quantity": 1
+      }
+    ]
+  },
+  {
     "name": "きせきの釣りざお",
     "category": "木工",
     "subCategory": "釣りざお",
