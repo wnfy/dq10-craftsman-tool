@@ -3329,6 +3329,3094 @@
     ]
   },
   {
+    "name": "虹のプラネタリウム",
+    "category": "道具鍛冶",
+    "subCategory": "庭具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 70,
+        "max": 80
+      },
+      "B": {
+        "min": 125,
+        "max": 131
+      },
+      "C": {
+        "min": 162,
+        "max": 170
+      },
+      "D": {
+        "min": 162,
+        "max": 170
+      },
+      "E": {
+        "min": 125,
+        "max": 131
+      },
+      "F": {
+        "min": 70,
+        "max": 80
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 30
+      },
+      {
+        "name": "ときのすいしょう",
+        "quantity": 7
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 3
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "庭置シャンデリア・赤",
+    "category": "道具鍛冶",
+    "subCategory": "庭具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 75,
+        "max": 85
+      },
+      "B": {
+        "min": 157,
+        "max": 165
+      },
+      "C": {
+        "min": 157,
+        "max": 165
+      },
+      "D": {
+        "min": 125,
+        "max": 131
+      },
+      "E": {
+        "min": 125,
+        "max": 131
+      },
+      "F": {
+        "min": 75,
+        "max": 85
+      }
+    },
+    "materials": [
+      {
+        "name": "小さな貝がら",
+        "quantity": 20
+      },
+      {
+        "name": "ガマのあぶら",
+        "quantity": 5
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "庭置シャンデリア・青",
+    "category": "道具鍛冶",
+    "subCategory": "庭具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 125,
+        "max": 131
+      },
+      "B": {
+        "min": 125,
+        "max": 131
+      },
+      "C": {
+        "min": 157,
+        "max": 165
+      },
+      "D": {
+        "min": 157,
+        "max": 165
+      },
+      "E": {
+        "min": 75,
+        "max": 85
+      },
+      "F": {
+        "min": 75,
+        "max": 85
+      }
+    },
+    "materials": [
+      {
+        "name": "小さな貝がら",
+        "quantity": 20
+      },
+      {
+        "name": "ガマのあぶら",
+        "quantity": 5
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "お花の浮いた噴水・銀",
+    "category": "道具鍛冶",
+    "subCategory": "庭具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 130,
+        "max": 136
+      },
+      "B": {
+        "min": 130,
+        "max": 136
+      },
+      "C": {
+        "min": 100,
+        "max": 108
+      },
+      "D": {
+        "min": 100,
+        "max": 108
+      },
+      "E": {
+        "min": 70,
+        "max": 80
+      },
+      "F": {
+        "min": 70,
+        "max": 80
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 20
+      },
+      {
+        "name": "みがきずな",
+        "quantity": 20
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "お花の外灯・ピンク",
+    "category": "道具鍛冶",
+    "subCategory": "庭具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 115,
+        "max": 121
+      },
+      "B": {
+        "min": 115,
+        "max": 121
+      },
+      "C": {
+        "min": 95,
+        "max": 103
+      },
+      "D": {
+        "min": 95,
+        "max": 103
+      },
+      "E": {
+        "min": 70,
+        "max": 80
+      },
+      "F": {
+        "min": 70,
+        "max": 80
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 10
+      },
+      {
+        "name": "さくらの花びら",
+        "quantity": 15
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "スライム提灯",
+    "category": "道具鍛冶",
+    "subCategory": "庭具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 41,
+        "max": 50
+      },
+      "B": {
+        "min": 41,
+        "max": 50
+      },
+      "C": {
+        "min": 34,
+        "max": 40
+      },
+      "D": {
+        "min": 15,
+        "max": 24
+      },
+      "E": {
+        "min": 34,
+        "max": 40
+      },
+      "F": {
+        "min": 15,
+        "max": 24
+      }
+    },
+    "materials": [
+      {
+        "name": "ホカホカストーン",
+        "quantity": 4
+      },
+      {
+        "name": "星々のナミダ",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "スイカのタライ・銀",
+    "category": "道具鍛冶",
+    "subCategory": "庭具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 32,
+        "max": 38
+      },
+      "B": {
+        "min": 32,
+        "max": 38
+      },
+      "C": {
+        "min": 26,
+        "max": 36
+      },
+      "D": {
+        "min": 26,
+        "max": 36
+      },
+      "E": {
+        "min": 32,
+        "max": 40
+      },
+      "F": {
+        "min": 32,
+        "max": 40
+      }
+    },
+    "materials": [
+      {
+        "name": "せいれいせき",
+        "quantity": 1
+      },
+      {
+        "name": "晴れ呼びの笹",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "ふわふわ雲のライト",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 104,
+        "max": 110
+      },
+      "B": {
+        "min": 104,
+        "max": 110
+      },
+      "C": {
+        "min": 72,
+        "max": 80
+      },
+      "D": {
+        "min": 72,
+        "max": 80
+      },
+      "E": {
+        "min": 55,
+        "max": 65
+      },
+      "F": {
+        "min": 55,
+        "max": 65
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 20
+      },
+      {
+        "name": "きよめの水",
+        "quantity": 10
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "チェックのランプ・赤",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 100
+      },
+      "B": {
+        "min": 90,
+        "max": 100
+      },
+      "C": {
+        "min": 115,
+        "max": 123
+      },
+      "D": {
+        "min": 135,
+        "max": 141
+      },
+      "E": {
+        "min": 135,
+        "max": 141
+      },
+      "F": {
+        "min": 115,
+        "max": 123
+      }
+    },
+    "materials": [
+      {
+        "name": "ホカホカストーン",
+        "quantity": 20
+      },
+      {
+        "name": "かぜきりのはね",
+        "quantity": 2
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "色飾りタイルのランプ",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 98
+      },
+      "B": {
+        "min": 160,
+        "max": 166
+      },
+      "C": {
+        "min": 124,
+        "max": 134
+      },
+      "D": {
+        "min": 160,
+        "max": 166
+      },
+      "E": {
+        "min": 124,
+        "max": 134
+      },
+      "F": {
+        "min": 90,
+        "max": 98
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 12
+      },
+      {
+        "name": "イエローアイ",
+        "quantity": 5
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "スライムモビール",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 95,
+        "max": 103
+      },
+      "B": {
+        "min": 95,
+        "max": 103
+      },
+      "C": {
+        "min": 135,
+        "max": 141
+      },
+      "D": {
+        "min": 135,
+        "max": 141
+      },
+      "E": {
+        "min": 110,
+        "max": 120
+      },
+      "F": {
+        "min": 110,
+        "max": 120
+      }
+    },
+    "materials": [
+      {
+        "name": "小さな貝がら",
+        "quantity": 80
+      },
+      {
+        "name": "スライムゼリー",
+        "quantity": 40
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 16
+      }
+    ]
+  },
+  {
+    "name": "キラキラモビール・銀",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 100,
+        "max": 110
+      },
+      "B": {
+        "min": 130,
+        "max": 138
+      },
+      "C": {
+        "min": 130,
+        "max": 138
+      },
+      "D": {
+        "min": 100,
+        "max": 110
+      },
+      "E": {
+        "min": 70,
+        "max": 76
+      },
+      "F": {
+        "min": 70,
+        "max": 76
+      }
+    },
+    "materials": [
+      {
+        "name": "ほしのカケラ",
+        "quantity": 30
+      },
+      {
+        "name": "氷のけっしょう",
+        "quantity": 30
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "スライム柄コタツ",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 115,
+        "max": 121
+      },
+      "B": {
+        "min": 115,
+        "max": 121
+      },
+      "C": {
+        "min": 85,
+        "max": 93
+      },
+      "D": {
+        "min": 85,
+        "max": 93
+      },
+      "E": {
+        "min": 115,
+        "max": 121
+      },
+      "F": {
+        "min": 115,
+        "max": 121
+      }
+    },
+    "materials": [
+      {
+        "name": "ホカホカストーン",
+        "quantity": 30
+      },
+      {
+        "name": "よごれたほうたい",
+        "quantity": 30
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "セクシーライト",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 90
+      },
+      "B": {
+        "min": 80,
+        "max": 90
+      },
+      "C": {
+        "min": 100,
+        "max": 108
+      },
+      "D": {
+        "min": 100,
+        "max": 108
+      },
+      "E": {
+        "min": 150,
+        "max": 156
+      },
+      "F": {
+        "min": 150,
+        "max": 156
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 12
+      },
+      {
+        "name": "あやかしそう",
+        "quantity": 10
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "白パールコンパクト",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 96
+      },
+      "B": {
+        "min": 75,
+        "max": 85
+      },
+      "C": {
+        "min": 115,
+        "max": 120
+      },
+      "D": {
+        "min": 115,
+        "max": 120
+      },
+      "E": {
+        "min": 75,
+        "max": 85
+      },
+      "F": {
+        "min": 90,
+        "max": 96
+      }
+    },
+    "materials": [
+      {
+        "name": "小さな貝がら",
+        "quantity": 60
+      },
+      {
+        "name": "ホワイトパール",
+        "quantity": 3
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "月球儀",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 86
+      },
+      "B": {
+        "min": 80,
+        "max": 86
+      },
+      "C": {
+        "min": 134,
+        "max": 142
+      },
+      "D": {
+        "min": 134,
+        "max": 142
+      },
+      "E": {
+        "min": 80,
+        "max": 86
+      },
+      "F": {
+        "min": 80,
+        "max": 86
+      }
+    },
+    "materials": [
+      {
+        "name": "ほしのカケラ",
+        "quantity": 30
+      },
+      {
+        "name": "みがきずな",
+        "quantity": 30
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "カラフル風船・赤黄",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 88
+      },
+      "B": {
+        "min": 70,
+        "max": 76
+      },
+      "C": {
+        "min": 120,
+        "max": 130
+      },
+      "D": {
+        "min": 100,
+        "max": 105
+      },
+      "E": {
+        "min": 70,
+        "max": 76
+      },
+      "F": {
+        "min": 120,
+        "max": 130
+      }
+    },
+    "materials": [
+      {
+        "name": "氷のけっしょう",
+        "quantity": 16
+      },
+      {
+        "name": "なないろのまゆ",
+        "quantity": 8
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "ハスの花ランプ・緑",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 110,
+        "max": 118
+      },
+      "B": {
+        "min": 75,
+        "max": 80
+      },
+      "C": {
+        "min": 100,
+        "max": 105
+      },
+      "D": {
+        "min": 90,
+        "max": 98
+      },
+      "E": {
+        "min": 110,
+        "max": 118
+      },
+      "F": {
+        "min": 75,
+        "max": 80
+      }
+    },
+    "materials": [
+      {
+        "name": "氷のけっしょう",
+        "quantity": 10
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 10
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "赤い金魚と金魚鉢",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 60,
+        "max": 70
+      },
+      "B": {
+        "min": 60,
+        "max": 70
+      },
+      "C": {
+        "min": 70,
+        "max": 76
+      },
+      "D": {
+        "min": 70,
+        "max": 76
+      },
+      "E": {
+        "min": 90,
+        "max": 98
+      },
+      "F": {
+        "min": 90,
+        "max": 98
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 10
+      },
+      {
+        "name": "小さなうろこ",
+        "quantity": 10
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "ぶたさんの貯金箱",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 55,
+        "max": 61
+      },
+      "B": {
+        "min": 60,
+        "max": 66
+      },
+      "C": {
+        "min": 50,
+        "max": 60
+      },
+      "D": {
+        "min": 50,
+        "max": 60
+      },
+      "E": {
+        "min": 70,
+        "max": 78
+      },
+      "F": {
+        "min": 78,
+        "max": 86
+      }
+    },
+    "materials": [
+      {
+        "name": "ピンクパール",
+        "quantity": 5
+      },
+      {
+        "name": "まりょくの土",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "星くずの灯ろう・黄",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 41,
+        "max": 50
+      },
+      "B": {
+        "min": 41,
+        "max": 50
+      },
+      "C": {
+        "min": 15,
+        "max": 24
+      },
+      "D": {
+        "min": 34,
+        "max": 40
+      },
+      "E": {
+        "min": 15,
+        "max": 24
+      },
+      "F": {
+        "min": 34,
+        "max": 40
+      }
+    },
+    "materials": [
+      {
+        "name": "ほしのカケラ",
+        "quantity": 4
+      },
+      {
+        "name": "星々のナミダ",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "蚊取りブタの置物・白",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 25,
+        "max": 31
+      },
+      "B": {
+        "min": 25,
+        "max": 31
+      },
+      "C": {
+        "min": 30,
+        "max": 38
+      },
+      "D": {
+        "min": 30,
+        "max": 38
+      },
+      "E": {
+        "min": 35,
+        "max": 45
+      },
+      "F": {
+        "min": 35,
+        "max": 45
+      }
+    },
+    "materials": [
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 4
+      },
+      {
+        "name": "晴れ呼びの笹",
+        "quantity": 12
+      }
+    ]
+  },
+  {
+    "name": "ウィザードの植木鉢・黒",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 60,
+        "max": 70
+      },
+      "B": {
+        "min": 50,
+        "max": 58
+      },
+      "C": {
+        "min": 70,
+        "max": 76
+      },
+      "D": {
+        "min": 70,
+        "max": 76
+      },
+      "E": {
+        "min": 50,
+        "max": 58
+      },
+      "F": {
+        "min": 60,
+        "max": 70
+      }
+    },
+    "materials": [
+      {
+        "name": "ホカホカストーン",
+        "quantity": 8
+      },
+      {
+        "name": "こうもりのはね",
+        "quantity": 8
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ウィザードのランプ黒",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 75,
+        "max": 81
+      },
+      "B": {
+        "min": 75,
+        "max": 81
+      },
+      "C": {
+        "min": 60,
+        "max": 68
+      },
+      "D": {
+        "min": 60,
+        "max": 68
+      },
+      "E": {
+        "min": 45,
+        "max": 55
+      },
+      "F": {
+        "min": 45,
+        "max": 55
+      }
+    },
+    "materials": [
+      {
+        "name": "ホカホカストーン",
+        "quantity": 10
+      },
+      {
+        "name": "こうもりのはね",
+        "quantity": 10
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "床置きシャンデリア赤",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 98
+      },
+      "B": {
+        "min": 90,
+        "max": 98
+      },
+      "C": {
+        "min": 115,
+        "max": 125
+      },
+      "D": {
+        "min": 115,
+        "max": 125
+      },
+      "E": {
+        "min": 152,
+        "max": 158
+      },
+      "F": {
+        "min": 152,
+        "max": 158
+      }
+    },
+    "materials": [
+      {
+        "name": "小さな貝がら",
+        "quantity": 20
+      },
+      {
+        "name": "ガマのあぶら",
+        "quantity": 5
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "床置きシャンデリア青",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 98
+      },
+      "B": {
+        "min": 90,
+        "max": 98
+      },
+      "C": {
+        "min": 152,
+        "max": 158
+      },
+      "D": {
+        "min": 152,
+        "max": 158
+      },
+      "E": {
+        "min": 115,
+        "max": 125
+      },
+      "F": {
+        "min": 115,
+        "max": 125
+      }
+    },
+    "materials": [
+      {
+        "name": "小さな貝がら",
+        "quantity": 20
+      },
+      {
+        "name": "ガマのあぶら",
+        "quantity": 5
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "水晶の時計",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 84,
+        "max": 94
+      },
+      "B": {
+        "min": 84,
+        "max": 94
+      },
+      "C": {
+        "min": 120,
+        "max": 126
+      },
+      "D": {
+        "min": 120,
+        "max": 126
+      },
+      "E": {
+        "min": 170,
+        "max": 178
+      },
+      "F": {
+        "min": 170,
+        "max": 178
+      }
+    },
+    "materials": [
+      {
+        "name": "氷のけっしょう",
+        "quantity": 12
+      },
+      {
+        "name": "スライムゼリー",
+        "quantity": 12
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "水晶の置物",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 84,
+        "max": 94
+      },
+      "B": {
+        "min": 107,
+        "max": 114
+      },
+      "C": {
+        "min": 107,
+        "max": 114
+      },
+      "D": {
+        "min": 130,
+        "max": 136
+      },
+      "E": {
+        "min": 160,
+        "max": 168
+      },
+      "F": {
+        "min": 160,
+        "max": 168
+      }
+    },
+    "materials": [
+      {
+        "name": "氷のけっしょう",
+        "quantity": 12
+      },
+      {
+        "name": "スライムゼリー",
+        "quantity": 12
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ジュレット駅の模型",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 105,
+        "max": 113
+      },
+      "B": {
+        "min": 105,
+        "max": 113
+      },
+      "C": {
+        "min": 90,
+        "max": 96
+      },
+      "D": {
+        "min": 90,
+        "max": 96
+      },
+      "E": {
+        "min": 120,
+        "max": 130
+      },
+      "F": {
+        "min": 120,
+        "max": 130
+      }
+    },
+    "materials": [
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 25
+      },
+      {
+        "name": "ウェナールシェル",
+        "quantity": 2
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "グレン駅の模型",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 85,
+        "max": 93
+      },
+      "B": {
+        "min": 100,
+        "max": 106
+      },
+      "C": {
+        "min": 100,
+        "max": 106
+      },
+      "D": {
+        "min": 130,
+        "max": 140
+      },
+      "E": {
+        "min": 130,
+        "max": 140
+      },
+      "F": {
+        "min": 85,
+        "max": 93
+      }
+    },
+    "materials": [
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 25
+      },
+      {
+        "name": "オグリドホーン",
+        "quantity": 2
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "ガタラ駅の模型",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 85,
+        "max": 93
+      },
+      "B": {
+        "min": 85,
+        "max": 93
+      },
+      "C": {
+        "min": 100,
+        "max": 106
+      },
+      "D": {
+        "min": 100,
+        "max": 106
+      },
+      "E": {
+        "min": 130,
+        "max": 140
+      },
+      "F": {
+        "min": 130,
+        "max": 140
+      }
+    },
+    "materials": [
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 25
+      },
+      {
+        "name": "ドワチャカオイル",
+        "quantity": 2
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "オルフェア駅の模型",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 85,
+        "max": 93
+      },
+      "B": {
+        "min": 100,
+        "max": 106
+      },
+      "C": {
+        "min": 130,
+        "max": 140
+      },
+      "D": {
+        "min": 130,
+        "max": 140
+      },
+      "E": {
+        "min": 100,
+        "max": 106
+      },
+      "F": {
+        "min": 85,
+        "max": 93
+      }
+    },
+    "materials": [
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 25
+      },
+      {
+        "name": "プクランサフラン",
+        "quantity": 2
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "アズラン駅の模型",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 105,
+        "max": 113
+      },
+      "B": {
+        "min": 90,
+        "max": 96
+      },
+      "C": {
+        "min": 90,
+        "max": 96
+      },
+      "D": {
+        "min": 120,
+        "max": 130
+      },
+      "E": {
+        "min": 120,
+        "max": 130
+      },
+      "F": {
+        "min": 105,
+        "max": 113
+      }
+    },
+    "materials": [
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 25
+      },
+      {
+        "name": "エルトナスイセン",
+        "quantity": 2
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "おもちゃの丸い家",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 96
+      },
+      "B": {
+        "min": 90,
+        "max": 96
+      },
+      "C": {
+        "min": 100,
+        "max": 108
+      },
+      "D": {
+        "min": 100,
+        "max": 108
+      },
+      "E": {
+        "min": 90,
+        "max": 96
+      },
+      "F": {
+        "min": 90,
+        "max": 96
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 20
+      },
+      {
+        "name": "みがきずな",
+        "quantity": 20
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "おもちゃの空・晴れ",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 88
+      },
+      "B": {
+        "min": 105,
+        "max": 113
+      },
+      "C": {
+        "min": 95,
+        "max": 99
+      },
+      "D": {
+        "min": 98,
+        "max": 99
+      },
+      "E": {
+        "min": 105,
+        "max": 113
+      },
+      "F": {
+        "min": 80,
+        "max": 88
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 20
+      },
+      {
+        "name": "ホカホカストーン",
+        "quantity": 20
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "おもちゃの四角い家",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 100,
+        "max": 107
+      },
+      "B": {
+        "min": 100,
+        "max": 107
+      },
+      "C": {
+        "min": 80,
+        "max": 86
+      },
+      "D": {
+        "min": 80,
+        "max": 86
+      },
+      "E": {
+        "min": 100,
+        "max": 107
+      },
+      "F": {
+        "min": 100,
+        "max": 107
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 20
+      },
+      {
+        "name": "大きな貝がら",
+        "quantity": 20
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "おもちゃの草花",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 85,
+        "max": 91
+      },
+      "B": {
+        "min": 85,
+        "max": 91
+      },
+      "C": {
+        "min": 105,
+        "max": 113
+      },
+      "D": {
+        "min": 105,
+        "max": 113
+      },
+      "E": {
+        "min": 90,
+        "max": 96
+      },
+      "F": {
+        "min": 90,
+        "max": 96
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 20
+      },
+      {
+        "name": "あやかしそう",
+        "quantity": 20
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "おもちゃの岩山",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 96
+      },
+      "B": {
+        "min": 90,
+        "max": 96
+      },
+      "C": {
+        "min": 100,
+        "max": 108
+      },
+      "D": {
+        "min": 120,
+        "max": 128
+      },
+      "E": {
+        "min": 80,
+        "max": 86
+      },
+      "F": {
+        "min": 80,
+        "max": 86
+      }
+    },
+    "materials": [
+      {
+        "name": "ひかりの石",
+        "quantity": 20
+      },
+      {
+        "name": "ふしぎなドロドロ",
+        "quantity": 20
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "ゆらゆら羊さん・桃",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 110,
+        "max": 116
+      },
+      "B": {
+        "min": 110,
+        "max": 116
+      },
+      "C": {
+        "min": 90,
+        "max": 98
+      },
+      "D": {
+        "min": 90,
+        "max": 98
+      },
+      "E": {
+        "min": 80,
+        "max": 86
+      },
+      "F": {
+        "min": 80,
+        "max": 86
+      }
+    },
+    "materials": [
+      {
+        "name": "うるわしキノコ",
+        "quantity": 20
+      },
+      {
+        "name": "やわらかウール",
+        "quantity": 1
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "ゆらゆら牛さん・白",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 120,
+        "max": 126
+      },
+      "B": {
+        "min": 120,
+        "max": 126
+      },
+      "C": {
+        "min": 90,
+        "max": 98
+      },
+      "D": {
+        "min": 90,
+        "max": 98
+      },
+      "E": {
+        "min": 70,
+        "max": 76
+      },
+      "F": {
+        "min": 70,
+        "max": 76
+      }
+    },
+    "materials": [
+      {
+        "name": "花のみつ",
+        "quantity": 16
+      },
+      {
+        "name": "まじゅうのツノ",
+        "quantity": 2
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "おもちゃのトンネル",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 85
+      },
+      "B": {
+        "min": 80,
+        "max": 85
+      },
+      "C": {
+        "min": 100,
+        "max": 108
+      },
+      "D": {
+        "min": 100,
+        "max": 108
+      },
+      "E": {
+        "min": 100,
+        "max": 110
+      },
+      "F": {
+        "min": 100,
+        "max": 110
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 8
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "おもちゃのテント",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 65,
+        "max": 75
+      },
+      "B": {
+        "min": 65,
+        "max": 75
+      },
+      "C": {
+        "min": 95,
+        "max": 100
+      },
+      "D": {
+        "min": 95,
+        "max": 100
+      },
+      "E": {
+        "min": 120,
+        "max": 128
+      },
+      "F": {
+        "min": 120,
+        "max": 128
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 16
+      },
+      {
+        "name": "けものの皮",
+        "quantity": 16
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "おもちゃの草原",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 95,
+        "max": 102
+      },
+      "B": {
+        "min": 95,
+        "max": 102
+      },
+      "C": {
+        "min": 105,
+        "max": 114
+      },
+      "D": {
+        "min": 105,
+        "max": 114
+      },
+      "E": {
+        "min": 80,
+        "max": 85
+      },
+      "F": {
+        "min": 80,
+        "max": 85
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "みかわしそう",
+        "quantity": 10
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "おもちゃのサーカス",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 85
+      },
+      "B": {
+        "min": 110,
+        "max": 120
+      },
+      "C": {
+        "min": 100,
+        "max": 110
+      },
+      "D": {
+        "min": 80,
+        "max": 85
+      },
+      "E": {
+        "min": 80,
+        "max": 85
+      },
+      "F": {
+        "min": 110,
+        "max": 120
+      }
+    },
+    "materials": [
+      {
+        "name": "ぎんのこうせき",
+        "quantity": 16
+      },
+      {
+        "name": "ふさふさの毛皮",
+        "quantity": 16
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "おもちゃの木",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 100,
+        "max": 108
+      },
+      "B": {
+        "min": 100,
+        "max": 108
+      },
+      "C": {
+        "min": 80,
+        "max": 86
+      },
+      "D": {
+        "min": 80,
+        "max": 86
+      },
+      "E": {
+        "min": 100,
+        "max": 108
+      },
+      "F": {
+        "min": 100,
+        "max": 108
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "サバンナウッド",
+        "quantity": 10
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "おもちゃの岩",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 88
+      },
+      "B": {
+        "min": 100,
+        "max": 105
+      },
+      "C": {
+        "min": 100,
+        "max": 110
+      },
+      "D": {
+        "min": 100,
+        "max": 110
+      },
+      "E": {
+        "min": 100,
+        "max": 105
+      },
+      "F": {
+        "min": 80,
+        "max": 88
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "ほしのカケラ",
+        "quantity": 8
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "おもちゃの池",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 80,
+        "max": 88
+      },
+      "B": {
+        "min": 80,
+        "max": 88
+      },
+      "C": {
+        "min": 90,
+        "max": 94
+      },
+      "D": {
+        "min": 90,
+        "max": 94
+      },
+      "E": {
+        "min": 110,
+        "max": 120
+      },
+      "F": {
+        "min": 110,
+        "max": 120
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "さざなみのしずく",
+        "quantity": 8
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "うごく箱舟号",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 70,
+        "max": 80
+      },
+      "B": {
+        "min": 85,
+        "max": 92
+      },
+      "C": {
+        "min": 85,
+        "max": 92
+      },
+      "D": {
+        "min": 100,
+        "max": 110
+      },
+      "E": {
+        "min": 100,
+        "max": 110
+      },
+      "F": {
+        "min": 120,
+        "max": 135
+      }
+    },
+    "materials": [
+      {
+        "name": "プラチナこうせき",
+        "quantity": 20
+      },
+      {
+        "name": "いかずちのたま",
+        "quantity": 2
+      },
+      {
+        "name": "ようせいのひだね",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ごうかよろい飾り・緑",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 50,
+        "max": 62
+      },
+      "B": {
+        "min": 50,
+        "max": 62
+      },
+      "C": {
+        "min": 50,
+        "max": 62
+      },
+      "D": {
+        "min": 50,
+        "max": 62
+      },
+      "E": {
+        "min": 40,
+        "max": 48
+      },
+      "F": {
+        "min": 40,
+        "max": 48
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "どうのこうせき",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ごうかなツボ・緑",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 35,
+        "max": 45
+      },
+      "B": {
+        "min": 35,
+        "max": 45
+      },
+      "C": {
+        "min": 50,
+        "max": 58
+      },
+      "D": {
+        "min": 50,
+        "max": 58
+      },
+      "E": {
+        "min": 35,
+        "max": 48
+      },
+      "F": {
+        "min": 35,
+        "max": 48
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "ほしのカケラ",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ごうかな花びん・緑",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 36,
+        "max": 46
+      },
+      "B": {
+        "min": 36,
+        "max": 46
+      },
+      "C": {
+        "min": 40,
+        "max": 48
+      },
+      "D": {
+        "min": 40,
+        "max": 48
+      },
+      "E": {
+        "min": 50,
+        "max": 64
+      },
+      "F": {
+        "min": 50,
+        "max": 64
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "エルトナスイセン",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "ごうかオーガ胸像・緑",
+    "category": "道具鍛冶",
+    "subCategory": "家具",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 50,
+        "max": 56
+      },
+      "B": {
+        "min": 50,
+        "max": 56
+      },
+      "C": {
+        "min": 40,
+        "max": 52
+      },
+      "D": {
+        "min": 40,
+        "max": 52
+      },
+      "E": {
+        "min": 30,
+        "max": 45
+      },
+      "F": {
+        "min": 30,
+        "max": 45
+      }
+    },
+    "materials": [
+      {
+        "name": "てっこうせき",
+        "quantity": 10
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 5
+      }
+    ]
+  },
+  {
     "name": "きようさにくまん",
     "category": "料理",
     "gridType": "3x3",
@@ -40321,5 +43409,569 @@
       }
     ],
     "specialTrait": ""
+  },
+  {
+    "name": "きせきの釣りざお",
+    "category": "木工",
+    "subCategory": "釣りざお",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 105,
+        "max": 105
+      },
+      "B": {
+        "min": 100,
+        "max": 100
+      },
+      "C": {
+        "min": 115,
+        "max": 115
+      },
+      "D": {
+        "min": 115,
+        "max": 115
+      },
+      "E": {
+        "min": 105,
+        "max": 105
+      }
+    },
+    "materials": [
+      {
+        "name": "古代樹の化石",
+        "quantity": 1
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "シャークスキン",
+        "quantity": 4
+      },
+      {
+        "name": "汗と涙の結晶",
+        "quantity": 4
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "闇の釣りざお改",
+    "category": "木工",
+    "subCategory": "釣りざお",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 105,
+        "max": 105
+      },
+      "B": {
+        "min": 105,
+        "max": 105
+      },
+      "C": {
+        "min": 105,
+        "max": 105
+      },
+      "D": {
+        "min": 105,
+        "max": 105
+      },
+      "E": {
+        "min": 99,
+        "max": 99
+      }
+    },
+    "materials": [
+      {
+        "name": "暗黒の樹木",
+        "quantity": 24
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "シャークスキン",
+        "quantity": 4
+      },
+      {
+        "name": "汗と涙の結晶",
+        "quantity": 4
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "氷の釣りざお改",
+    "category": "木工",
+    "subCategory": "釣りざお",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 90
+      },
+      "B": {
+        "min": 110,
+        "max": 110
+      },
+      "C": {
+        "min": 90,
+        "max": 90
+      },
+      "D": {
+        "min": 150,
+        "max": 150
+      },
+      "E": {
+        "min": 90,
+        "max": 90
+      }
+    },
+    "materials": [
+      {
+        "name": "氷の樹木",
+        "quantity": 24
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "シャークスキン",
+        "quantity": 4
+      },
+      {
+        "name": "汗と涙の結晶",
+        "quantity": 4
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "炎の釣りざお改",
+    "category": "木工",
+    "subCategory": "釣りざお",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 157,
+        "max": 157
+      },
+      "B": {
+        "min": 90,
+        "max": 90
+      },
+      "C": {
+        "min": 90,
+        "max": 90
+      },
+      "D": {
+        "min": 157,
+        "max": 157
+      },
+      "E": {
+        "min": 90,
+        "max": 90
+      }
+    },
+    "materials": [
+      {
+        "name": "炎の樹木",
+        "quantity": 24
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "シャークスキン",
+        "quantity": 4
+      },
+      {
+        "name": "汗と涙の結晶",
+        "quantity": 4
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "闇の釣りざお",
+    "category": "木工",
+    "subCategory": "釣りざお",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 90
+      },
+      "B": {
+        "min": 110,
+        "max": 110
+      },
+      "C": {
+        "min": 110,
+        "max": 110
+      },
+      "D": {
+        "min": 90,
+        "max": 90
+      },
+      "E": {
+        "min": 90,
+        "max": 90
+      }
+    },
+    "materials": [
+      {
+        "name": "暗黒の樹木",
+        "quantity": 8
+      },
+      {
+        "name": "よごれたほうたい",
+        "quantity": 8
+      },
+      {
+        "name": "シャークスキン",
+        "quantity": 1
+      },
+      {
+        "name": "汗と涙の結晶",
+        "quantity": 2
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "氷の釣りざお",
+    "category": "木工",
+    "subCategory": "釣りざお",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 60,
+        "max": 60
+      },
+      "B": {
+        "min": 100,
+        "max": 100
+      },
+      "C": {
+        "min": 120,
+        "max": 120
+      },
+      "D": {
+        "min": 120,
+        "max": 120
+      },
+      "E": {
+        "min": 100,
+        "max": 100
+      }
+    },
+    "materials": [
+      {
+        "name": "氷の樹木",
+        "quantity": 8
+      },
+      {
+        "name": "氷のけっしょう",
+        "quantity": 8
+      },
+      {
+        "name": "シャークスキン",
+        "quantity": 1
+      },
+      {
+        "name": "汗と涙の結晶",
+        "quantity": 2
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "炎の釣りざお",
+    "category": "木工",
+    "subCategory": "釣りざお",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 125,
+        "max": 125
+      },
+      "B": {
+        "min": 100,
+        "max": 100
+      },
+      "C": {
+        "min": 125,
+        "max": 125
+      },
+      "D": {
+        "min": 100,
+        "max": 100
+      },
+      "E": {
+        "min": 100,
+        "max": 100
+      }
+    },
+    "materials": [
+      {
+        "name": "炎の樹木",
+        "quantity": 8
+      },
+      {
+        "name": "ようがんのカケラ",
+        "quantity": 8
+      },
+      {
+        "name": "シャークスキン",
+        "quantity": 1
+      },
+      {
+        "name": "汗と涙の結晶",
+        "quantity": 2
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "きれいな釣りざお",
+    "category": "木工",
+    "subCategory": "釣りざお",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 90
+      },
+      "B": {
+        "min": 101,
+        "max": 101
+      },
+      "C": {
+        "min": 90,
+        "max": 90
+      },
+      "D": {
+        "min": 60,
+        "max": 60
+      },
+      "E": {
+        "min": 90,
+        "max": 90
+      }
+    },
+    "materials": [
+      {
+        "name": "きれいな枝",
+        "quantity": 6
+      },
+      {
+        "name": "ちょうのはね",
+        "quantity": 6
+      },
+      {
+        "name": "汗と涙の結晶",
+        "quantity": 1
+      },
+      {
+        "name": "かがやきの樹液",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "じょうぶな釣りざお",
+    "category": "木工",
+    "subCategory": "釣りざお",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 75,
+        "max": 75
+      },
+      "B": {
+        "min": 60,
+        "max": 60
+      },
+      "C": {
+        "min": 75,
+        "max": 75
+      },
+      "D": {
+        "min": 60,
+        "max": 60
+      },
+      "E": {
+        "min": 75,
+        "max": 75
+      }
+    },
+    "materials": [
+      {
+        "name": "じょうぶな枝",
+        "quantity": 4
+      },
+      {
+        "name": "へびのぬけがら",
+        "quantity": 4
+      },
+      {
+        "name": "ようせいの粉",
+        "quantity": 5
+      }
+    ]
   }
 ]

@@ -1003,7 +1003,7 @@
                     <div className="text-2xl font-black text-white/40 mt-1 text-center">-</div>
                   ) : (
                     <div className="text-2xl font-black mt-1 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-                      {value.min}-{value.max}
+                      {formatTargetValue(value)}
                     </div>
                   )}
                 </div>
@@ -1011,6 +1011,11 @@
             })}
           </div>
         );
+      };
+
+      const formatTargetValue = (value) => {
+        if (!value) return '-';
+        return value.min === value.max ? `${value.min}` : `${value.min}-${value.max}`;
       };
 
       const renderCustomLayout = (item) => {
@@ -1048,7 +1053,7 @@
                       {pos}
                     </div>
                     <div className="text-2xl font-black mt-1 text-center" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-                      {value.min}-{value.max}
+                      {formatTargetValue(value)}
                     </div>
                   </div>
                 );
@@ -1664,6 +1669,11 @@
             }
 
             const values = item.targetValues[param];
+            const displayValue = values && values.min === values.max
+              ? `${values.min}`
+              : values
+                ? `${values.min}<i>—</i>${values.max}`
+                : '';
             if (!values) {
               targetValuesHTML += showMissingValues
                 ? `<div class="target-card is-missing" data-param="${param}"><span class="target-label">${param}</span><strong>—</strong></div>`
@@ -1674,7 +1684,7 @@
             targetValuesHTML += `
               <div class="target-card" data-param="${param}">
                 <span class="target-label">${param}</span>
-                <strong>${values.min}<i>—</i>${values.max}</strong>
+                <strong>${displayValue}</strong>
               </div>`;
           });
           targetValuesHTML += '</div>';
@@ -2321,81 +2331,105 @@
                   </div>
                 </div>
 
-                {/* 🆕 データ管理ボタン */}
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl">
-                  <h3 className="text-xl font-black text-white mb-4 flex items-center gap-2">
-                    <span className="text-2xl">⚙️</span>
-                    <span>データ管理</span>
-                  </h3>
-
-                  {/* エクスポートボタン */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-bold text-white/80 mb-3">💾 エクスポート（バックアップ）</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                      <button
-                        onClick={() => exportToCSV('today')}
-                        className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        📅 今日のデータ
-                      </button>
-                      <button
-                        onClick={() => exportToCSV('month')}
-                        className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        📆 今月のデータ
-                      </button>
-                      <button
-                        onClick={() => exportToCSV('all')}
-                        className="px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        📊 すべてのデータ
-                      </button>
+                <div className="relative overflow-hidden rounded-[1.65rem] border-2 border-[var(--ink)] bg-[rgba(255,253,246,0.86)] p-6 shadow-[8px_8px_0_var(--blue)]">
+                  <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full border-[18px] border-[rgba(255,102,85,0.22)]" />
+                  <div className="relative flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+                    <div>
+                      <p className="text-[11px] font-black uppercase tracking-[0.28em] text-[var(--coral)]">
+                        Ledger Backup
+                      </p>
+                      <h3 className="mt-1 flex items-center gap-3 font-serif text-3xl font-black text-[var(--ink)]">
+                        <span className="grid h-9 w-9 place-items-center rounded-full border-2 border-[var(--ink)] bg-[var(--sun)] shadow-[3px_3px_0_var(--ink)]">⚙</span>
+                        データ管理
+                      </h3>
                     </div>
-                  </div>
-
-                  {/* インポートボタン */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-bold text-white/80 mb-3">📥 インポート（復元）</h4>
-                    <label className="block">
-                      <input
-                        type="file"
-                        accept=".csv"
-                        onChange={importFromCSV}
-                        className="hidden"
-                        id="csv-import"
-                      />
-                      <div className="px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105 cursor-pointer text-center">
-                        📂 CSVファイルを選択
-                      </div>
-                    </label>
-                  </div>
-
-                  {/* 一括削除ボタン */}
-                  <div>
-                    <h4 className="text-sm font-bold text-white/80 mb-3">🗑️ 一括削除</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                      <button
-                        onClick={() => bulkDelete('today')}
-                        className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        🔥 今日のデータ
-                      </button>
-                      <button
-                        onClick={() => bulkDelete('month')}
-                        className="px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        🔥 今月のデータ
-                      </button>
-                      <button
-                        onClick={() => bulkDelete('all')}
-                        className="px-4 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-lg font-bold text-sm transition-all transform hover:scale-105"
-                      >
-                        ⚠️ すべて削除
-                      </button>
-                    </div>
-                    <p className="text-xs text-white/50 mt-2 text-center">
-                      ※ 削除前にエクスポートでバックアップを取ることをお勧めします
+                    <p className="max-w-md text-sm font-bold leading-relaxed text-[var(--muted)]">
+                      記録の退避・復元・削除をまとめて行えます。削除前はバックアップ推奨です。
                     </p>
+                  </div>
+
+                  <div className="relative mt-6 grid grid-cols-1 gap-4 xl:grid-cols-3">
+                    <section className="rounded-2xl border-2 border-[var(--ink)] bg-white/80 p-4 shadow-[4px_4px_0_rgba(21,33,61,0.18)]">
+                      <div className="mb-4 flex items-center gap-3">
+                        <span className="grid h-8 w-8 place-items-center rounded-full bg-[var(--blue)] text-white shadow-[2px_2px_0_var(--ink)]">01</span>
+                        <div>
+                          <h4 className="font-black text-[var(--ink)]">エクスポート</h4>
+                          <p className="text-xs font-bold text-[var(--muted)]">CSVバックアップを書き出す</p>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-1 gap-2">
+                        <button
+                          onClick={() => exportToCSV('today')}
+                          className="rounded-xl border-2 border-[var(--ink)] bg-white px-4 py-3 text-sm font-black text-[var(--ink)] shadow-[3px_3px_0_var(--blue)] transition-all hover:-translate-y-0.5"
+                        >
+                          📅 今日のデータ
+                        </button>
+                        <button
+                          onClick={() => exportToCSV('month')}
+                          className="rounded-xl border-2 border-[var(--ink)] bg-white px-4 py-3 text-sm font-black text-[var(--ink)] shadow-[3px_3px_0_var(--blue)] transition-all hover:-translate-y-0.5"
+                        >
+                          🗓 今月のデータ
+                        </button>
+                        <button
+                          onClick={() => exportToCSV('all')}
+                          className="rounded-xl border-2 border-[var(--ink)] bg-white px-4 py-3 text-sm font-black text-[var(--ink)] shadow-[3px_3px_0_var(--blue)] transition-all hover:-translate-y-0.5"
+                        >
+                          📊 すべてのデータ
+                        </button>
+                      </div>
+                    </section>
+
+                    <section className="rounded-2xl border-2 border-[var(--ink)] bg-[rgba(81,213,177,0.18)] p-4 shadow-[4px_4px_0_rgba(21,33,61,0.18)]">
+                      <div className="mb-4 flex items-center gap-3">
+                        <span className="grid h-8 w-8 place-items-center rounded-full bg-[var(--mint)] text-[var(--ink)] shadow-[2px_2px_0_var(--ink)]">02</span>
+                        <div>
+                          <h4 className="font-black text-[var(--ink)]">インポート</h4>
+                          <p className="text-xs font-bold text-[var(--muted)]">CSVから記録を復元する</p>
+                        </div>
+                      </div>
+                      <label className="block">
+                        <input
+                          type="file"
+                          accept=".csv"
+                          onChange={importFromCSV}
+                          className="hidden"
+                          id="csv-import"
+                        />
+                        <div className="flex min-h-[148px] cursor-pointer items-center justify-center rounded-xl border-2 border-dashed border-[var(--ink)] bg-white/80 px-4 py-6 text-center text-sm font-black text-[var(--ink)] shadow-[3px_3px_0_var(--mint)] transition-all hover:-translate-y-0.5">
+                          📁 CSVファイルを選択
+                        </div>
+                      </label>
+                    </section>
+
+                    <section className="rounded-2xl border-2 border-[var(--ink)] bg-[rgba(255,102,85,0.13)] p-4 shadow-[4px_4px_0_rgba(21,33,61,0.18)]">
+                      <div className="mb-4 flex items-center gap-3">
+                        <span className="grid h-8 w-8 place-items-center rounded-full bg-[var(--coral)] text-white shadow-[2px_2px_0_var(--ink)]">!</span>
+                        <div>
+                          <h4 className="font-black text-[var(--ink)]">一括削除</h4>
+                          <p className="text-xs font-bold text-[var(--muted)]">操作前にバックアップを推奨</p>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-1 gap-2">
+                        <button
+                          onClick={() => bulkDelete('today')}
+                          className="rounded-xl border-2 border-[var(--ink)] bg-white px-4 py-3 text-sm font-black text-[var(--ink)] shadow-[3px_3px_0_var(--coral)] transition-all hover:-translate-y-0.5"
+                        >
+                          🔥 今日のデータ
+                        </button>
+                        <button
+                          onClick={() => bulkDelete('month')}
+                          className="rounded-xl border-2 border-[var(--ink)] bg-white px-4 py-3 text-sm font-black text-[var(--ink)] shadow-[3px_3px_0_var(--coral)] transition-all hover:-translate-y-0.5"
+                        >
+                          🔥 今月のデータ
+                        </button>
+                        <button
+                          onClick={() => bulkDelete('all')}
+                          className="rounded-xl border-2 border-[var(--ink)] bg-[var(--coral)] px-4 py-3 text-sm font-black text-white shadow-[3px_3px_0_var(--ink)] transition-all hover:-translate-y-0.5"
+                        >
+                          ⚠ すべて削除
+                        </button>
+                      </div>
+                    </section>
                   </div>
                 </div>
 
