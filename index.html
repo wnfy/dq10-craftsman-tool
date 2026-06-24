@@ -345,7 +345,7 @@
       // JSONファイルからデータを読み込む
       const [allItems, setAllItems] = useState([]);
       const [loading, setLoading] = useState(true);
-      const DATA_VERSION = '20260624-sewing-body-upper-lower';
+      const DATA_VERSION = '20260624-sewing-arm-foot-furniture';
 
       useEffect(() => {
         fetch(`data/items.json?v=${DATA_VERSION}`, { cache: 'no-store' })
