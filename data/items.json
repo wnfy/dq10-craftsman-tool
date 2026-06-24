@@ -44348,6 +44348,1050 @@
     "specialTrait": ""
   },
   {
+    "name": "叡聖のサークレット",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 450,
+        "max": 450
+      },
+      "B": {
+        "min": 140,
+        "max": 140
+      },
+      "C": {
+        "min": 300,
+        "max": 300
+      },
+      "D": {
+        "min": 400,
+        "max": 400
+      }
+    },
+    "materials": [
+      {
+        "name": "光彩の布",
+        "quantity": 24
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 4
+      },
+      {
+        "name": "幻獣のホネ",
+        "quantity": 4
+      },
+      {
+        "name": "いかずちのたま",
+        "quantity": 20
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "月影の額当て",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 500,
+        "max": 500
+      },
+      "B": {
+        "min": 380,
+        "max": 380
+      },
+      "C": {
+        "min": 130,
+        "max": 130
+      },
+      "D": {
+        "min": 440,
+        "max": 440
+      }
+    },
+    "materials": [
+      {
+        "name": "光彩の布",
+        "quantity": 24
+      },
+      {
+        "name": "スーパーホネホネ",
+        "quantity": 3
+      },
+      {
+        "name": "まじゅうの皮",
+        "quantity": 6
+      },
+      {
+        "name": "よるのとばり",
+        "quantity": 10
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "ノクトルクラウン",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 340,
+        "max": 340
+      },
+      "B": {
+        "min": 480,
+        "max": 480
+      },
+      "C": {
+        "min": 150,
+        "max": 150
+      },
+      "D": {
+        "min": 230,
+        "max": 230
+      }
+    },
+    "materials": [
+      {
+        "name": "光彩の布",
+        "quantity": 24
+      },
+      {
+        "name": "スーパーホネホネ",
+        "quantity": 4
+      },
+      {
+        "name": "天使のソーマ",
+        "quantity": 12
+      },
+      {
+        "name": "ホワイトパール",
+        "quantity": 30
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "アンテイクトーク",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 460,
+        "max": 460
+      },
+      "B": {
+        "min": 410,
+        "max": 410
+      },
+      "C": {
+        "min": 180,
+        "max": 180
+      },
+      "D": {
+        "min": 310,
+        "max": 310
+      }
+    },
+    "materials": [
+      {
+        "name": "光彩の布",
+        "quantity": 24
+      },
+      {
+        "name": "カオスベリー",
+        "quantity": 4
+      },
+      {
+        "name": "うつろい草",
+        "quantity": 4
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 3
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "烈風のキャップ",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 420,
+        "max": 420
+      },
+      "B": {
+        "min": 290,
+        "max": 290
+      },
+      "C": {
+        "min": 140,
+        "max": 140
+      },
+      "D": {
+        "min": 320,
+        "max": 320
+      }
+    },
+    "materials": [
+      {
+        "name": "光彩の布",
+        "quantity": 24
+      },
+      {
+        "name": "呪力のモト",
+        "quantity": 3
+      },
+      {
+        "name": "大地の羽毛",
+        "quantity": 5
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 3
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "妖精郷の花髪",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 290,
+        "max": 290
+      },
+      "B": {
+        "min": 150,
+        "max": 150
+      },
+      "C": {
+        "min": 450,
+        "max": 450
+      },
+      "D": {
+        "min": 490,
+        "max": 490
+      }
+    },
+    "materials": [
+      {
+        "name": "光彩の布",
+        "quantity": 24
+      },
+      {
+        "name": "烈風石",
+        "quantity": 2
+      },
+      {
+        "name": "風竜の羽毛",
+        "quantity": 5
+      },
+      {
+        "name": "はがねの尾羽",
+        "quantity": 4
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "陰陽博士のぼうし",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 300,
+        "max": 300
+      },
+      "B": {
+        "min": 200,
+        "max": 200
+      },
+      "C": {
+        "min": 260,
+        "max": 260
+      },
+      "D": {
+        "min": 340,
+        "max": 340
+      }
+    },
+    "materials": [
+      {
+        "name": "光彩の布",
+        "quantity": 24
+      },
+      {
+        "name": "呪力のモト",
+        "quantity": 5
+      },
+      {
+        "name": "風竜の羽毛",
+        "quantity": 5
+      },
+      {
+        "name": "やわらかウール",
+        "quantity": 10
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "隠密のはちまき",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 220,
+        "max": 220
+      },
+      "B": {
+        "min": 190,
+        "max": 190
+      },
+      "C": {
+        "min": 510,
+        "max": 510
+      },
+      "D": {
+        "min": 430,
+        "max": 430
+      }
+    },
+    "materials": [
+      {
+        "name": "光彩の布",
+        "quantity": 24
+      },
+      {
+        "name": "巨竜樹の枝",
+        "quantity": 5
+      },
+      {
+        "name": "ささやく枯れ葉",
+        "quantity": 5
+      },
+      {
+        "name": "よごれたほうたい",
+        "quantity": 20
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "瑞雲の髪飾り",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 420,
+        "max": 420
+      },
+      "B": {
+        "min": 480,
+        "max": 480
+      },
+      "C": {
+        "min": 270,
+        "max": 270
+      },
+      "D": {
+        "min": 140,
+        "max": 140
+      }
+    },
+    "materials": [
+      {
+        "name": "光彩の布",
+        "quantity": 24
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 5
+      },
+      {
+        "name": "マゴニア草",
+        "quantity": 12
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 5
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "オスクトルクラウン",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 330,
+        "max": 330
+      },
+      "B": {
+        "min": 210,
+        "max": 210
+      },
+      "C": {
+        "min": 330,
+        "max": 330
+      },
+      "D": {
+        "min": 210,
+        "max": 210
+      }
+    },
+    "materials": [
+      {
+        "name": "星光の糸",
+        "quantity": 24
+      },
+      {
+        "name": "地竜のツメ",
+        "quantity": 5
+      },
+      {
+        "name": "神秘の鋼線",
+        "quantity": 5
+      },
+      {
+        "name": "天竜草",
+        "quantity": 5
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "乱破の額当て",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 500,
+        "max": 500
+      },
+      "B": {
+        "min": 200,
+        "max": 200
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      },
+      "D": {
+        "min": 370,
+        "max": 370
+      }
+    },
+    "materials": [
+      {
+        "name": "星光の糸",
+        "quantity": 24
+      },
+      {
+        "name": "悲願の血涙",
+        "quantity": 3
+      },
+      {
+        "name": "暗夜の魔石",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾りかぶと",
+        "quantity": 1
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "プロディトヘッド",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 200,
+        "max": 200
+      },
+      "B": {
+        "min": 285,
+        "max": 285
+      },
+      "C": {
+        "min": 400,
+        "max": 400
+      },
+      "D": {
+        "min": 285,
+        "max": 285
+      }
+    },
+    "materials": [
+      {
+        "name": "星光の糸",
+        "quantity": 24
+      },
+      {
+        "name": "カオスベリー",
+        "quantity": 5
+      },
+      {
+        "name": "神秘の鋼線",
+        "quantity": 5
+      },
+      {
+        "name": "スライムおしゃれ花",
+        "quantity": 10
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "ふしぎなぼうし",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 430,
+        "max": 430
+      },
+      "B": {
+        "min": 200,
+        "max": 200
+      },
+      "C": {
+        "min": 300,
+        "max": 300
+      },
+      "D": {
+        "min": 200,
+        "max": 200
+      }
+    },
+    "materials": [
+      {
+        "name": "星光の糸",
+        "quantity": 24
+      },
+      {
+        "name": "おぼろ水晶",
+        "quantity": 5
+      },
+      {
+        "name": "げんませき",
+        "quantity": 5
+      },
+      {
+        "name": "イエローアイ",
+        "quantity": 30
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "しっこくのターバン",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 340,
+        "max": 340
+      },
+      "B": {
+        "min": 170,
+        "max": 170
+      },
+      "C": {
+        "min": 170,
+        "max": 170
+      },
+      "D": {
+        "min": 340,
+        "max": 340
+      }
+    },
+    "materials": [
+      {
+        "name": "星光の糸",
+        "quantity": 24
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 5
+      },
+      {
+        "name": "ブラックパール",
+        "quantity": 30
+      },
+      {
+        "name": "黄金の飾りかぶと",
+        "quantity": 1
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "スパングルフェザー",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 200,
+        "max": 200
+      },
+      "B": {
+        "min": 350,
+        "max": 350
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      },
+      "D": {
+        "min": 500,
+        "max": 500
+      }
+    },
+    "materials": [
+      {
+        "name": "星光の糸",
+        "quantity": 24
+      },
+      {
+        "name": "人魚の涙",
+        "quantity": 3
+      },
+      {
+        "name": "かぜきりのはね",
+        "quantity": 10
+      },
+      {
+        "name": "黄金の飾りかぶと",
+        "quantity": 1
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "ロードリーコサージ",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 190,
+        "max": 190
+      },
+      "B": {
+        "min": 300,
+        "max": 300
+      },
+      "C": {
+        "min": 250,
+        "max": 250
+      },
+      "D": {
+        "min": 190,
+        "max": 190
+      }
+    },
+    "materials": [
+      {
+        "name": "星光の糸",
+        "quantity": 24
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 3
+      },
+      {
+        "name": "ときのすいしょう",
+        "quantity": 10
+      },
+      {
+        "name": "バニラリリィ",
+        "quantity": 5
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "空賊のバンダナ",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 250,
+        "max": 250
+      },
+      "B": {
+        "min": 220,
+        "max": 220
+      },
+      "C": {
+        "min": 400,
+        "max": 400
+      },
+      "D": {
+        "min": 220,
+        "max": 220
+      }
+    },
+    "materials": [
+      {
+        "name": "星光の糸",
+        "quantity": 24
+      },
+      {
+        "name": "おぼろ水晶",
+        "quantity": 3
+      },
+      {
+        "name": "天竜草",
+        "quantity": 5
+      },
+      {
+        "name": "かがやきそう",
+        "quantity": 30
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "聖翼の髪飾り",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 180,
+        "max": 180
+      },
+      "B": {
+        "min": 180,
+        "max": 180
+      },
+      "C": {
+        "min": 300,
+        "max": 300
+      },
+      "D": {
+        "min": 350,
+        "max": 350
+      }
+    },
+    "materials": [
+      {
+        "name": "星光の糸",
+        "quantity": 24
+      },
+      {
+        "name": "純白の結晶",
+        "quantity": 3
+      },
+      {
+        "name": "かぜきりのはね",
+        "quantity": 3
+      },
+      {
+        "name": "よごれたほうたい",
+        "quantity": 10
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
     "name": "妖炎魔女の髪飾り",
     "category": "裁縫",
     "subCategory": "アタマ",
@@ -44404,7 +45448,7 @@
     ]
   },
   {
-    "name": "ポールスターハット",
+    "name": "ワンダラーズベレー",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -44422,20 +45466,484 @@
     ],
     "targetValues": {
       "A": {
-        "min": 206,
-        "max": 206
+        "min": 260,
+        "max": 260
       },
       "B": {
-        "min": 197,
-        "max": 197
+        "min": 260,
+        "max": 260
+      },
+      "C": {
+        "min": 190,
+        "max": 190
+      },
+      "D": {
+        "min": 190,
+        "max": 190
+      }
+    },
+    "materials": [
+      {
+        "name": "マゴニア草",
+        "quantity": 10
+      },
+      {
+        "name": "天竜草",
+        "quantity": 1
+      },
+      {
+        "name": "へびのぬけがら",
+        "quantity": 1
+      },
+      {
+        "name": "あやかしそう",
+        "quantity": 5
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "グレイスフルハット",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 230,
+        "max": 230
+      },
+      "B": {
+        "min": 300,
+        "max": 300
+      },
+      "C": {
+        "min": 230,
+        "max": 230
+      },
+      "D": {
+        "min": 230,
+        "max": 230
+      }
+    },
+    "materials": [
+      {
+        "name": "マゴニア草",
+        "quantity": 10
+      },
+      {
+        "name": "ささやく枯れ葉",
+        "quantity": 1
+      },
+      {
+        "name": "ちょうのはね",
+        "quantity": 1
+      },
+      {
+        "name": "あやかしそう",
+        "quantity": 5
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ひかりサークレット",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 130,
+        "max": 130
+      },
+      "B": {
+        "min": 270,
+        "max": 270
+      },
+      "C": {
+        "min": 300,
+        "max": 300
+      },
+      "D": {
+        "min": 270,
+        "max": 270
+      }
+    },
+    "materials": [
+      {
+        "name": "マゴニア草",
+        "quantity": 10
+      },
+      {
+        "name": "たそがれゴケ",
+        "quantity": 2
+      },
+      {
+        "name": "幻獣ノホネ",
+        "quantity": 5
+      },
+      {
+        "name": "かがやきそう",
+        "quantity": 30
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "開祖のぼうし",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 260,
+        "max": 260
+      },
+      "B": {
+        "min": 260,
+        "max": 260
       },
       "C": {
         "min": 260,
         "max": 260
       },
       "D": {
-        "min": 197,
-        "max": 197
+        "min": 260,
+        "max": 260
+      }
+    },
+    "materials": [
+      {
+        "name": "マゴニア草",
+        "quantity": 10
+      },
+      {
+        "name": "カオスベリー",
+        "quantity": 1
+      },
+      {
+        "name": "ドラゴンのツノ",
+        "quantity": 5
+      },
+      {
+        "name": "小さな化石",
+        "quantity": 30
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "かぜのぼうし",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 300,
+        "max": 300
+      },
+      "B": {
+        "min": 220,
+        "max": 220
+      },
+      "C": {
+        "min": 150,
+        "max": 150
+      },
+      "D": {
+        "min": 220,
+        "max": 220
+      }
+    },
+    "materials": [
+      {
+        "name": "マゴニア草",
+        "quantity": 10
+      },
+      {
+        "name": "人魚の涙",
+        "quantity": 1
+      },
+      {
+        "name": "きんかい",
+        "quantity": 5
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 20
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "アビスハット",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 320,
+        "max": 320
+      },
+      "B": {
+        "min": 220,
+        "max": 220
+      },
+      "C": {
+        "min": 220,
+        "max": 220
+      },
+      "D": {
+        "min": 220,
+        "max": 220
+      }
+    },
+    "materials": [
+      {
+        "name": "マゴニア草",
+        "quantity": 10
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 1
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 10
+      },
+      {
+        "name": "ほしのカケラ",
+        "quantity": 20
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "神技のフード",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 255,
+        "max": 255
+      },
+      "B": {
+        "min": 255,
+        "max": 255
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      },
+      "D": {
+        "min": 255,
+        "max": 255
+      }
+    },
+    "materials": [
+      {
+        "name": "マゴニア草",
+        "quantity": 10
+      },
+      {
+        "name": "水竜のうろこ",
+        "quantity": 2
+      },
+      {
+        "name": "天竜草",
+        "quantity": 5
+      },
+      {
+        "name": "けものの皮",
+        "quantity": 20
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ヴィーラのバンダナ",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 200,
+        "max": 200
+      },
+      "B": {
+        "min": 200,
+        "max": 200
+      },
+      "C": {
+        "min": 220,
+        "max": 220
+      },
+      "D": {
+        "min": 270,
+        "max": 270
+      }
+    },
+    "materials": [
+      {
+        "name": "マゴニア草",
+        "quantity": 10
+      },
+      {
+        "name": "とこしえの虹",
+        "quantity": 2
+      },
+      {
+        "name": "にじいろの布きれ",
+        "quantity": 10
+      },
+      {
+        "name": "水の樹木",
+        "quantity": 10
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "ソポスの額冠",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 175,
+        "max": 175
+      },
+      "B": {
+        "min": 220,
+        "max": 220
+      },
+      "C": {
+        "min": 220,
+        "max": 220
+      },
+      "D": {
+        "min": 340,
+        "max": 340
       }
     },
     "materials": [
@@ -44444,16 +45952,132 @@
         "quantity": 5
       },
       {
-        "name": "かがやきそう",
+        "name": "人魚の涙",
+        "quantity": 1
+      },
+      {
+        "name": "黄金の飾りかぶと",
+        "quantity": 1
+      },
+      {
+        "name": "炎の樹木",
         "quantity": 20
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "大怪傑のはちまき",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 190,
+        "max": 190
+      },
+      "B": {
+        "min": 255,
+        "max": 255
+      },
+      "C": {
+        "min": 255,
+        "max": 255
+      },
+      "D": {
+        "min": 255,
+        "max": 255
+      }
+    },
+    "materials": [
+      {
+        "name": "うつろい草",
+        "quantity": 5
+      },
+      {
+        "name": "大地の羽毛",
+        "quantity": 1
+      },
+      {
+        "name": "まじゅうの皮",
+        "quantity": 5
       },
       {
         "name": "よるのとばり",
         "quantity": 20
       },
       {
-        "name": "ブルーアイ",
-        "quantity": 20
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "タンブラーバンダナ",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 200,
+        "max": 200
+      },
+      "B": {
+        "min": 223,
+        "max": 223
+      },
+      "C": {
+        "min": 223,
+        "max": 223
+      },
+      "D": {
+        "min": 223,
+        "max": 223
+      }
+    },
+    "materials": [
+      {
+        "name": "うつろい草",
+        "quantity": 5
+      },
+      {
+        "name": "神秘の鋼線",
+        "quantity": 1
+      },
+      {
+        "name": "よるのとばり",
+        "quantity": 30
+      },
+      {
+        "name": "レッドアイ",
+        "quantity": 30
       },
       {
         "name": "あまつゆのいと",
@@ -44578,7 +46202,7 @@
     ]
   },
   {
-    "name": "エトワールハット",
+    "name": "ポールスターハット",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -44596,20 +46220,20 @@
     ],
     "targetValues": {
       "A": {
-        "min": 210,
-        "max": 210
+        "min": 206,
+        "max": 206
       },
       "B": {
-        "min": 225,
-        "max": 225
+        "min": 197,
+        "max": 197
       },
       "C": {
-        "min": 264,
-        "max": 264
+        "min": 260,
+        "max": 260
       },
       "D": {
-        "min": 225,
-        "max": 225
+        "min": 197,
+        "max": 197
       }
     },
     "materials": [
@@ -44618,16 +46242,16 @@
         "quantity": 5
       },
       {
-        "name": "ほしのカケラ",
-        "quantity": 30
+        "name": "かがやきそう",
+        "quantity": 20
       },
       {
-        "name": "うるわしキノコ",
-        "quantity": 30
+        "name": "よるのとばり",
+        "quantity": 20
       },
       {
-        "name": "シルク草",
-        "quantity": 30
+        "name": "ブルーアイ",
+        "quantity": 20
       },
       {
         "name": "あまつゆのいと",
@@ -44685,6 +46309,64 @@
       },
       {
         "name": "麻の糸",
+        "quantity": 30
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "エトワールハット",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 210,
+        "max": 210
+      },
+      "B": {
+        "min": 225,
+        "max": 225
+      },
+      "C": {
+        "min": 264,
+        "max": 264
+      },
+      "D": {
+        "min": 225,
+        "max": 225
+      }
+    },
+    "materials": [
+      {
+        "name": "うつろい草",
+        "quantity": 5
+      },
+      {
+        "name": "ほしのカケラ",
+        "quantity": 30
+      },
+      {
+        "name": "うるわしキノコ",
+        "quantity": 30
+      },
+      {
+        "name": "シルク草",
         "quantity": 30
       },
       {
@@ -44868,6 +46550,58 @@
     ]
   },
   {
+    "name": "トーテムクラウン",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 200,
+        "max": 200
+      },
+      "B": {
+        "min": 200,
+        "max": 200
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      },
+      "D": {
+        "min": 200,
+        "max": 200
+      }
+    },
+    "materials": [
+      {
+        "name": "天竜草",
+        "quantity": 5
+      },
+      {
+        "name": "ドラゴンのツノ",
+        "quantity": 1
+      },
+      {
+        "name": "かぜきりのはね",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
     "name": "巨商のターバン",
     "category": "裁縫",
     "subCategory": "アタマ",
@@ -44920,7 +46654,7 @@
     ]
   },
   {
-    "name": "トーテムクラウン",
+    "name": "風虎のはちがね",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -44936,33 +46670,37 @@
     ],
     "targetValues": {
       "A": {
-        "min": 200,
-        "max": 200
+        "min": 180,
+        "max": 180
       },
       "B": {
-        "min": 200,
-        "max": 200
+        "min": 180,
+        "max": 180
       },
       "C": {
-        "min": 200,
-        "max": 200
+        "min": 240,
+        "max": 240
       },
       "D": {
-        "min": 200,
-        "max": 200
+        "min": 180,
+        "max": 180
       }
     },
     "materials": [
       {
         "name": "天竜草",
-        "quantity": 5
+        "quantity": 3
       },
       {
-        "name": "ドラゴンのツノ",
+        "name": "ときのすいしょう",
         "quantity": 1
       },
       {
-        "name": "かぜきりのはね",
+        "name": "かがみ石",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
         "quantity": 1
       },
       {
@@ -45084,230 +46822,6 @@
     ]
   },
   {
-    "name": "風虎のはちがね",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 180,
-        "max": 180
-      },
-      "B": {
-        "min": 180,
-        "max": 180
-      },
-      "C": {
-        "min": 240,
-        "max": 240
-      },
-      "D": {
-        "min": 180,
-        "max": 180
-      }
-    },
-    "materials": [
-      {
-        "name": "天竜草",
-        "quantity": 3
-      },
-      {
-        "name": "ときのすいしょう",
-        "quantity": 1
-      },
-      {
-        "name": "かがみ石",
-        "quantity": 10
-      },
-      {
-        "name": "虹色のオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 5
-      }
-    ]
-  },
-  {
-    "name": "舞い手のヘアバンド",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 216,
-        "max": 216
-      },
-      "B": {
-        "min": 180,
-        "max": 180
-      },
-      "C": {
-        "min": 260,
-        "max": 260
-      },
-      "D": {
-        "min": 180,
-        "max": 180
-      }
-    },
-    "materials": [
-      {
-        "name": "妖精の綿花",
-        "quantity": 15
-      },
-      {
-        "name": "さえずりのみつ",
-        "quantity": 30
-      },
-      {
-        "name": "シルク草",
-        "quantity": 30
-      },
-      {
-        "name": "虹色のオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 10
-      }
-    ]
-  },
-  {
-    "name": "獄獣のぼうし",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 174,
-        "max": 174
-      },
-      "B": {
-        "min": 174,
-        "max": 174
-      },
-      "C": {
-        "min": 238,
-        "max": 238
-      },
-      "D": {
-        "min": 174,
-        "max": 174
-      }
-    },
-    "materials": [
-      {
-        "name": "妖精の綿花",
-        "quantity": 15
-      },
-      {
-        "name": "まじゅうのツノ",
-        "quantity": 1
-      },
-      {
-        "name": "コットン草",
-        "quantity": 10
-      },
-      {
-        "name": "虹色のオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 10
-      }
-    ]
-  },
-  {
-    "name": "古代王族のターバン",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 160,
-        "max": 160
-      },
-      "B": {
-        "min": 190,
-        "max": 190
-      },
-      "C": {
-        "min": 252,
-        "max": 252
-      },
-      "D": {
-        "min": 190,
-        "max": 190
-      }
-    },
-    "materials": [
-      {
-        "name": "妖精の綿花",
-        "quantity": 15
-      },
-      {
-        "name": "かぜきりのはね",
-        "quantity": 1
-      },
-      {
-        "name": "青い宝石",
-        "quantity": 10
-      },
-      {
-        "name": "虹色のオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 10
-      }
-    ]
-  },
-  {
     "name": "聖賢者のミトラ",
     "category": "裁縫",
     "subCategory": "アタマ",
@@ -45420,7 +46934,7 @@
     ]
   },
   {
-    "name": "退魔のぼうし",
+    "name": "古代王族のターバン",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -45440,12 +46954,124 @@
         "max": 160
       },
       "B": {
+        "min": 190,
+        "max": 190
+      },
+      "C": {
+        "min": 252,
+        "max": 252
+      },
+      "D": {
+        "min": 190,
+        "max": 190
+      }
+    },
+    "materials": [
+      {
+        "name": "妖精の綿花",
+        "quantity": 15
+      },
+      {
+        "name": "かぜきりのはね",
+        "quantity": 1
+      },
+      {
+        "name": "青い宝石",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "獄獣のぼうし",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 174,
+        "max": 174
+      },
+      "B": {
+        "min": 174,
+        "max": 174
+      },
+      "C": {
+        "min": 238,
+        "max": 238
+      },
+      "D": {
+        "min": 174,
+        "max": 174
+      }
+    },
+    "materials": [
+      {
+        "name": "妖精の綿花",
+        "quantity": 15
+      },
+      {
+        "name": "まじゅうのツノ",
+        "quantity": 1
+      },
+      {
+        "name": "コットン草",
+        "quantity": 10
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "舞い手のヘアバンド",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 216,
+        "max": 216
+      },
+      "B": {
         "min": 180,
         "max": 180
       },
       "C": {
-        "min": 250,
-        "max": 250
+        "min": 260,
+        "max": 260
       },
       "D": {
         "min": 180,
@@ -45455,15 +47081,15 @@
     "materials": [
       {
         "name": "妖精の綿花",
-        "quantity": 10
+        "quantity": 15
       },
       {
-        "name": "スライムおしゃれ花",
-        "quantity": 5
+        "name": "さえずりのみつ",
+        "quantity": 30
       },
       {
-        "name": "ほしのカケラ",
-        "quantity": 10
+        "name": "シルク草",
+        "quantity": 30
       },
       {
         "name": "虹色のオーブ",
@@ -45532,7 +47158,7 @@
     ]
   },
   {
-    "name": "タイフーンゴーグル",
+    "name": "退魔のぼうし",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -45548,34 +47174,34 @@
     ],
     "targetValues": {
       "A": {
-        "min": 130,
-        "max": 130
+        "min": 160,
+        "max": 160
       },
       "B": {
-        "min": 220,
-        "max": 220
+        "min": 180,
+        "max": 180
       },
       "C": {
-        "min": 200,
-        "max": 200
+        "min": 250,
+        "max": 250
       },
       "D": {
-        "min": 220,
-        "max": 220
+        "min": 180,
+        "max": 180
       }
     },
     "materials": [
       {
         "name": "妖精の綿花",
+        "quantity": 10
+      },
+      {
+        "name": "スライムおしゃれ花",
         "quantity": 5
       },
       {
-        "name": "黄金の飾りかぶと",
-        "quantity": 1
-      },
-      {
-        "name": "ときのすいしょう",
-        "quantity": 3
+        "name": "ほしのカケラ",
+        "quantity": 10
       },
       {
         "name": "虹色のオーブ",
@@ -45583,7 +47209,7 @@
       },
       {
         "name": "あまつゆのいと",
-        "quantity": 5
+        "quantity": 10
       }
     ]
   },
@@ -45632,6 +47258,62 @@
       {
         "name": "赤い宝石",
         "quantity": 5
+      },
+      {
+        "name": "虹色のオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "name": "タイフーンゴーグル",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 130,
+        "max": 130
+      },
+      "B": {
+        "min": 220,
+        "max": 220
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      },
+      "D": {
+        "min": 220,
+        "max": 220
+      }
+    },
+    "materials": [
+      {
+        "name": "妖精の綿花",
+        "quantity": 5
+      },
+      {
+        "name": "黄金の飾りかぶと",
+        "quantity": 1
+      },
+      {
+        "name": "ときのすいしょう",
+        "quantity": 3
       },
       {
         "name": "虹色のオーブ",
@@ -45700,62 +47382,6 @@
     ]
   },
   {
-    "name": "大賢者のミトラ",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 200,
-        "max": 200
-      },
-      "B": {
-        "min": 160,
-        "max": 160
-      },
-      "C": {
-        "min": 160,
-        "max": 160
-      },
-      "D": {
-        "min": 160,
-        "max": 160
-      }
-    },
-    "materials": [
-      {
-        "name": "さとりそう",
-        "quantity": 30
-      },
-      {
-        "name": "ふさふさの毛皮",
-        "quantity": 40
-      },
-      {
-        "name": "まりょくの土",
-        "quantity": 40
-      },
-      {
-        "name": "ブルーオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 10
-      }
-    ]
-  },
-  {
     "name": "だいまどうのぼうし",
     "category": "裁縫",
     "subCategory": "アタマ",
@@ -45800,62 +47426,6 @@
       {
         "name": "あやかしそう",
         "quantity": 20
-      },
-      {
-        "name": "ブルーオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 10
-      }
-    ]
-  },
-  {
-    "name": "アイドルヘアバンド",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 190,
-        "max": 190
-      },
-      "B": {
-        "min": 170,
-        "max": 170
-      },
-      "C": {
-        "min": 218,
-        "max": 218
-      },
-      "D": {
-        "min": 170,
-        "max": 170
-      }
-    },
-    "materials": [
-      {
-        "name": "ふさふさの毛皮",
-        "quantity": 30
-      },
-      {
-        "name": "メタルのカケラ",
-        "quantity": 1
-      },
-      {
-        "name": "きんかい",
-        "quantity": 30
       },
       {
         "name": "ブルーオーブ",
@@ -45924,6 +47494,174 @@
     ]
   },
   {
+    "name": "歌詠みのヘアバンド",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 160,
+        "max": 160
+      },
+      "B": {
+        "min": 150,
+        "max": 150
+      },
+      "C": {
+        "min": 200,
+        "max": 200
+      },
+      "D": {
+        "min": 170,
+        "max": 170
+      }
+    },
+    "materials": [
+      {
+        "name": "にじいろの布きれ",
+        "quantity": 10
+      },
+      {
+        "name": "かぜきりのはね",
+        "quantity": 1
+      },
+      {
+        "name": "けものの皮",
+        "quantity": 30
+      },
+      {
+        "name": "パープルオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "大賢者のミトラ",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 200,
+        "max": 200
+      },
+      "B": {
+        "min": 160,
+        "max": 160
+      },
+      "C": {
+        "min": 160,
+        "max": 160
+      },
+      "D": {
+        "min": 160,
+        "max": 160
+      }
+    },
+    "materials": [
+      {
+        "name": "さとりそう",
+        "quantity": 30
+      },
+      {
+        "name": "ふさふさの毛皮",
+        "quantity": 40
+      },
+      {
+        "name": "まりょくの土",
+        "quantity": 40
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "アイドルヘアバンド",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 190,
+        "max": 190
+      },
+      "B": {
+        "min": 170,
+        "max": 170
+      },
+      "C": {
+        "min": 218,
+        "max": 218
+      },
+      "D": {
+        "min": 170,
+        "max": 170
+      }
+    },
+    "materials": [
+      {
+        "name": "ふさふさの毛皮",
+        "quantity": 30
+      },
+      {
+        "name": "メタルのカケラ",
+        "quantity": 1
+      },
+      {
+        "name": "きんかい",
+        "quantity": 30
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 10
+      }
+    ]
+  },
+  {
     "name": "求道者のはちまき",
     "category": "裁縫",
     "subCategory": "アタマ",
@@ -45980,7 +47718,7 @@
     ]
   },
   {
-    "name": "歌詠みのヘアバンド",
+    "name": "拳聖のターバン",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -45996,37 +47734,293 @@
     ],
     "targetValues": {
       "A": {
-        "min": 160,
-        "max": 160
+        "min": 150,
+        "max": 150
+      },
+      "B": {
+        "min": 130,
+        "max": 130
+      },
+      "C": {
+        "min": 190,
+        "max": 190
+      },
+      "D": {
+        "min": 130,
+        "max": 130
+      }
+    },
+    "materials": [
+      {
+        "name": "みかわしそう",
+        "quantity": 12
+      },
+      {
+        "name": "よごれたほうたい",
+        "quantity": 10
+      },
+      {
+        "name": "イエローオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "モダンバニーヘッド",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 120,
+        "max": 120
+      },
+      "B": {
+        "min": 180,
+        "max": 180
+      },
+      "C": {
+        "min": 180,
+        "max": 180
+      },
+      "D": {
+        "min": 180,
+        "max": 180
+      }
+    },
+    "materials": [
+      {
+        "name": "あやかしそう",
+        "quantity": 12
+      },
+      {
+        "name": "やわらかウール",
+        "quantity": 4
+      },
+      {
+        "name": "グリーンオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "月のサークレット",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 150
       },
       "B": {
         "min": 150,
         "max": 150
       },
       "C": {
-        "min": 200,
-        "max": 200
+        "min": 150,
+        "max": 150
       },
       "D": {
-        "min": 170,
-        "max": 170
+        "min": 150,
+        "max": 150
       }
     },
     "materials": [
       {
         "name": "にじいろの布きれ",
-        "quantity": 10
+        "quantity": 6
       },
       {
-        "name": "かぜきりのはね",
-        "quantity": 1
-      },
-      {
-        "name": "けものの皮",
-        "quantity": 30
+        "name": "まんげつそう",
+        "quantity": 40
       },
       {
         "name": "パープルオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "原始獣のシャプカ",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 180,
+        "max": 180
+      },
+      "B": {
+        "min": 120,
+        "max": 120
+      },
+      "C": {
+        "min": 180,
+        "max": 180
+      },
+      "D": {
+        "min": 120,
+        "max": 120
+      }
+    },
+    "materials": [
+      {
+        "name": "ふさふさの毛皮",
+        "quantity": 12
+      },
+      {
+        "name": "ドラゴンの皮",
+        "quantity": 1
+      },
+      {
+        "name": "グリーンオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "古武道のずきん",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 140,
+        "max": 140
+      },
+      "B": {
+        "min": 200,
+        "max": 200
+      },
+      "C": {
+        "min": 100,
+        "max": 100
+      },
+      "D": {
+        "min": 200,
+        "max": 200
+      }
+    },
+    "materials": [
+      {
+        "name": "よごれたほうたい",
+        "quantity": 12
+      },
+      {
+        "name": "けものの皮",
+        "quantity": 40
+      },
+      {
+        "name": "レッドオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "name": "王宮魔術師帽",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 176,
+        "max": 176
+      },
+      "B": {
+        "min": 176,
+        "max": 176
+      },
+      "C": {
+        "min": 176,
+        "max": 176
+      },
+      "D": {
+        "min": 176,
+        "max": 176
+      }
+    },
+    "materials": [
+      {
+        "name": "あやかしそう",
+        "quantity": 12
+      },
+      {
+        "name": "よるのとばり",
+        "quantity": 3
+      },
+      {
+        "name": "イエローオーブ",
         "quantity": 1
       },
       {
@@ -46192,7 +48186,7 @@
     ]
   },
   {
-    "name": "王宮魔術師帽",
+    "name": "しんりのぼうし",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -46208,342 +48202,30 @@
     ],
     "targetValues": {
       "A": {
-        "min": 176,
-        "max": 176
+        "min": 110,
+        "max": 110
       },
       "B": {
-        "min": 176,
-        "max": 176
-      },
-      "C": {
-        "min": 176,
-        "max": 176
-      },
-      "D": {
-        "min": 176,
-        "max": 176
-      }
-    },
-    "materials": [
-      {
-        "name": "あやかしそう",
-        "quantity": 12
-      },
-      {
-        "name": "よるのとばり",
-        "quantity": 3
-      },
-      {
-        "name": "イエローオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 10
-      }
-    ]
-  },
-  {
-    "name": "古武道のずきん",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 140,
-        "max": 140
-      },
-      "B": {
-        "min": 200,
-        "max": 200
-      },
-      "C": {
         "min": 100,
         "max": 100
       },
-      "D": {
-        "min": 200,
-        "max": 200
-      }
-    },
-    "materials": [
-      {
-        "name": "よごれたほうたい",
-        "quantity": 12
-      },
-      {
-        "name": "けものの皮",
-        "quantity": 40
-      },
-      {
-        "name": "レッドオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 10
-      }
-    ]
-  },
-  {
-    "name": "拳聖のターバン",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 150,
-        "max": 150
-      },
-      "B": {
-        "min": 130,
-        "max": 130
-      },
-      "C": {
-        "min": 190,
-        "max": 190
-      },
-      "D": {
-        "min": 130,
-        "max": 130
-      }
-    },
-    "materials": [
-      {
-        "name": "みかわしそう",
-        "quantity": 12
-      },
-      {
-        "name": "よごれたほうたい",
-        "quantity": 10
-      },
-      {
-        "name": "イエローオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 10
-      }
-    ]
-  },
-  {
-    "name": "原始獣のシャプカ",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 180,
-        "max": 180
-      },
-      "B": {
-        "min": 120,
-        "max": 120
-      },
-      "C": {
-        "min": 180,
-        "max": 180
-      },
-      "D": {
-        "min": 120,
-        "max": 120
-      }
-    },
-    "materials": [
-      {
-        "name": "ふさふさの毛皮",
-        "quantity": 12
-      },
-      {
-        "name": "ドラゴンの皮",
-        "quantity": 1
-      },
-      {
-        "name": "グリーンオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 10
-      }
-    ]
-  },
-  {
-    "name": "モダンバニーヘッド",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 120,
-        "max": 120
-      },
-      "B": {
-        "min": 180,
-        "max": 180
-      },
-      "C": {
-        "min": 180,
-        "max": 180
-      },
-      "D": {
-        "min": 180,
-        "max": 180
-      }
-    },
-    "materials": [
-      {
-        "name": "あやかしそう",
-        "quantity": 12
-      },
-      {
-        "name": "やわらかウール",
-        "quantity": 4
-      },
-      {
-        "name": "グリーンオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 10
-      }
-    ]
-  },
-  {
-    "name": "月のサークレット",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 150,
-        "max": 150
-      },
-      "B": {
-        "min": 150,
-        "max": 150
-      },
       "C": {
         "min": 150,
         "max": 150
       },
       "D": {
-        "min": 150,
-        "max": 150
-      }
-    },
-    "materials": [
-      {
-        "name": "にじいろの布きれ",
-        "quantity": 6
-      },
-      {
-        "name": "まんげつそう",
-        "quantity": 40
-      },
-      {
-        "name": "パープルオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 10
-      }
-    ]
-  },
-  {
-    "name": "インテリハット",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 125,
-        "max": 125
-      },
-      "B": {
-        "min": 160,
-        "max": 160
-      },
-      "C": {
-        "min": 160,
-        "max": 160
-      },
-      "D": {
-        "min": 160,
-        "max": 160
+        "min": 140,
+        "max": 140
       }
     },
     "materials": [
       {
         "name": "かがやきそう",
-        "quantity": 10
+        "quantity": 8
       },
       {
-        "name": "なないろのまゆ",
-        "quantity": 24
+        "name": "まじゅうの皮",
+        "quantity": 2
       },
       {
         "name": "ブルーオーブ",
@@ -46551,163 +48233,7 @@
       },
       {
         "name": "あまつゆのいと",
-        "quantity": 8
-      }
-    ]
-  },
-  {
-    "name": "トレジャーキャップ",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 175,
-        "max": 175
-      },
-      "B": {
-        "min": 100,
-        "max": 100
-      },
-      "C": {
-        "min": 175,
-        "max": 175
-      },
-      "D": {
-        "min": 100,
-        "max": 100
-      }
-    },
-    "materials": [
-      {
-        "name": "かがやきそう",
-        "quantity": 10
-      },
-      {
-        "name": "こうもりのはね",
-        "quantity": 24
-      },
-      {
-        "name": "レッドオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 8
-      }
-    ]
-  },
-  {
-    "name": "聖者のぼうし",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 130,
-        "max": 130
-      },
-      "B": {
-        "min": 120,
-        "max": 120
-      },
-      "C": {
-        "min": 160,
-        "max": 160
-      },
-      "D": {
-        "min": 140,
-        "max": 140
-      }
-    },
-    "materials": [
-      {
-        "name": "かがやきそう",
-        "quantity": 10
-      },
-      {
-        "name": "ひかりの石",
-        "quantity": 24
-      },
-      {
-        "name": "グリーンオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 8
-      }
-    ]
-  },
-  {
-    "name": "占星術師のターバン",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 125,
-        "max": 125
-      },
-      "B": {
-        "min": 125,
-        "max": 125
-      },
-      "C": {
-        "min": 175,
-        "max": 175
-      },
-      "D": {
-        "min": 125,
-        "max": 125
-      }
-    },
-    "materials": [
-      {
-        "name": "かがやきそう",
-        "quantity": 10
-      },
-      {
-        "name": "ほしのカケラ",
-        "quantity": 24
-      },
-      {
-        "name": "パープルオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 8
+        "quantity": 6
       }
     ]
   },
@@ -46816,59 +48342,7 @@
     ]
   },
   {
-    "name": "しんりのぼうし",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 110,
-        "max": 110
-      },
-      "B": {
-        "min": 100,
-        "max": 100
-      },
-      "C": {
-        "min": 150,
-        "max": 150
-      },
-      "D": {
-        "min": 140,
-        "max": 140
-      }
-    },
-    "materials": [
-      {
-        "name": "かがやきそう",
-        "quantity": 8
-      },
-      {
-        "name": "まじゅうの皮",
-        "quantity": 2
-      },
-      {
-        "name": "ブルーオーブ",
-        "quantity": 1
-      },
-      {
-        "name": "あまつゆのいと",
-        "quantity": 6
-      }
-    ]
-  },
-  {
-    "name": "ホーリーカロット",
+    "name": "占星術師のターバン",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -46888,16 +48362,224 @@
         "max": 125
       },
       "B": {
-        "min": 75,
-        "max": 75
+        "min": 125,
+        "max": 125
       },
       "C": {
         "min": 175,
         "max": 175
       },
       "D": {
-        "min": 75,
-        "max": 75
+        "min": 125,
+        "max": 125
+      }
+    },
+    "materials": [
+      {
+        "name": "かがやきそう",
+        "quantity": 10
+      },
+      {
+        "name": "ほしのカケラ",
+        "quantity": 24
+      },
+      {
+        "name": "パープルオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "name": "聖者のぼうし",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 130,
+        "max": 130
+      },
+      "B": {
+        "min": 120,
+        "max": 120
+      },
+      "C": {
+        "min": 160,
+        "max": 160
+      },
+      "D": {
+        "min": 140,
+        "max": 140
+      }
+    },
+    "materials": [
+      {
+        "name": "かがやきそう",
+        "quantity": 10
+      },
+      {
+        "name": "ひかりの石",
+        "quantity": 24
+      },
+      {
+        "name": "グリーンオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "name": "トレジャーキャップ",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 175,
+        "max": 175
+      },
+      "B": {
+        "min": 100,
+        "max": 100
+      },
+      "C": {
+        "min": 175,
+        "max": 175
+      },
+      "D": {
+        "min": 100,
+        "max": 100
+      }
+    },
+    "materials": [
+      {
+        "name": "かがやきそう",
+        "quantity": 10
+      },
+      {
+        "name": "こうもりのはね",
+        "quantity": 24
+      },
+      {
+        "name": "レッドオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "name": "インテリハット",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 125,
+        "max": 125
+      },
+      "B": {
+        "min": 160,
+        "max": 160
+      },
+      "C": {
+        "min": 160,
+        "max": 160
+      },
+      "D": {
+        "min": 160,
+        "max": 160
+      }
+    },
+    "materials": [
+      {
+        "name": "かがやきそう",
+        "quantity": 10
+      },
+      {
+        "name": "なないろのまゆ",
+        "quantity": 24
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 1
+      },
+      {
+        "name": "あまつゆのいと",
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "name": "きじゅつしのぼうし",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 90
+      },
+      "B": {
+        "min": 105,
+        "max": 105
+      },
+      "C": {
+        "min": 135,
+        "max": 135
+      },
+      "D": {
+        "min": 120,
+        "max": 120
       }
     },
     "materials": [
@@ -46906,11 +48588,11 @@
         "quantity": 6
       },
       {
-        "name": "◯レッドベリー",
-        "quantity": 3
+        "name": "◯サバンナの水",
+        "quantity": 2
       },
       {
-        "name": "◯やわらかウール",
+        "name": "◯サンドフルーツ",
         "quantity": 1
       },
       {
@@ -46972,7 +48654,7 @@
     ]
   },
   {
-    "name": "きじゅつしのぼうし",
+    "name": "フェンサーハット",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -46988,20 +48670,20 @@
     ],
     "targetValues": {
       "A": {
-        "min": 90,
-        "max": 90
+        "min": 120,
+        "max": 120
       },
       "B": {
         "min": 105,
         "max": 105
       },
       "C": {
-        "min": 135,
-        "max": 135
-      },
-      "D": {
         "min": 120,
         "max": 120
+      },
+      "D": {
+        "min": 105,
+        "max": 105
       }
     },
     "materials": [
@@ -47010,11 +48692,63 @@
         "quantity": 6
       },
       {
-        "name": "◯サバンナの水",
-        "quantity": 2
+        "name": "◯しおかぜ草",
+        "quantity": 3
       },
       {
-        "name": "◯サンドフルーツ",
+        "name": "◯緑のコケ",
+        "quantity": 3
+      },
+      {
+        "name": "◯あまつゆのいと",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "ホーリーカロット",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 125,
+        "max": 125
+      },
+      "B": {
+        "min": 75,
+        "max": 75
+      },
+      "C": {
+        "min": 175,
+        "max": 175
+      },
+      "D": {
+        "min": 75,
+        "max": 75
+      }
+    },
+    "materials": [
+      {
+        "name": "◯かがやきそう",
+        "quantity": 6
+      },
+      {
+        "name": "◯レッドベリー",
+        "quantity": 3
+      },
+      {
+        "name": "◯やわらかウール",
         "quantity": 1
       },
       {
@@ -47072,106 +48806,6 @@
       {
         "name": "◯あまつゆのいと",
         "quantity": 3
-      }
-    ]
-  },
-  {
-    "name": "フェンサーハット",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 120,
-        "max": 120
-      },
-      "B": {
-        "min": 105,
-        "max": 105
-      },
-      "C": {
-        "min": 120,
-        "max": 120
-      },
-      "D": {
-        "min": 105,
-        "max": 105
-      }
-    },
-    "materials": [
-      {
-        "name": "◯かがやきそう",
-        "quantity": 6
-      },
-      {
-        "name": "◯しおかぜ草",
-        "quantity": 3
-      },
-      {
-        "name": "◯緑のコケ",
-        "quantity": 3
-      },
-      {
-        "name": "◯あまつゆのいと",
-        "quantity": 3
-      }
-    ]
-  },
-  {
-    "name": "森人のぼうし",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 60,
-        "max": 60
-      },
-      "B": {
-        "min": 75,
-        "max": 75
-      },
-      "C": {
-        "min": 105,
-        "max": 105
-      },
-      "D": {
-        "min": 90,
-        "max": 90
-      }
-    },
-    "materials": [
-      {
-        "name": "シルク草",
-        "quantity": 1
-      },
-      {
-        "name": "ふさふさの毛皮",
-        "quantity": 1
-      },
-      {
-        "name": "小さなホネ",
-        "quantity": 1
       }
     ]
   },
@@ -47320,6 +48954,246 @@
     ]
   },
   {
+    "name": "森人のぼうし",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 60,
+        "max": 60
+      },
+      "B": {
+        "min": 75,
+        "max": 75
+      },
+      "C": {
+        "min": 105,
+        "max": 105
+      },
+      "D": {
+        "min": 90,
+        "max": 90
+      }
+    },
+    "materials": [
+      {
+        "name": "シルク草",
+        "quantity": 1
+      },
+      {
+        "name": "ふさふさの毛皮",
+        "quantity": 1
+      },
+      {
+        "name": "小さなホネ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "カンフーキャップ",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 45,
+        "max": 45
+      },
+      "B": {
+        "min": 60,
+        "max": 60
+      },
+      "C": {
+        "min": 90,
+        "max": 90
+      },
+      "D": {
+        "min": 60,
+        "max": 60
+      }
+    },
+    "materials": [
+      {
+        "name": "◯シルク草",
+        "quantity": 1
+      },
+      {
+        "name": "◯けものの皮",
+        "quantity": 1
+      },
+      {
+        "name": "◯レッドベリー",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "まもりのぼうし",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 75,
+        "max": 75
+      },
+      "B": {
+        "min": 45,
+        "max": 45
+      },
+      "C": {
+        "min": 75,
+        "max": 75
+      },
+      "D": {
+        "min": 60,
+        "max": 60
+      }
+    },
+    "materials": [
+      {
+        "name": "◯シルク草",
+        "quantity": 1
+      },
+      {
+        "name": "◯カチコチくるみ",
+        "quantity": 1
+      },
+      {
+        "name": "◯花のみつ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "マタドールバンド",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 60,
+        "max": 60
+      },
+      "B": {
+        "min": 45,
+        "max": 45
+      },
+      "C": {
+        "min": 90,
+        "max": 90
+      },
+      "D": {
+        "min": 60,
+        "max": 60
+      }
+    },
+    "materials": [
+      {
+        "name": "◯シルク草",
+        "quantity": 1
+      },
+      {
+        "name": "◯サバンナの水",
+        "quantity": 1
+      },
+      {
+        "name": "◯小さなホネ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "まじないしターバン",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 60,
+        "max": 60
+      },
+      "B": {
+        "min": 60,
+        "max": 60
+      },
+      "C": {
+        "min": 90,
+        "max": 90
+      },
+      "D": {
+        "min": 45,
+        "max": 45
+      }
+    },
+    "materials": [
+      {
+        "name": "◯シルク草",
+        "quantity": 1
+      },
+      {
+        "name": "◯コットン草",
+        "quantity": 1
+      },
+      {
+        "name": "◯さとりそう",
+        "quantity": 1
+      }
+    ]
+  },
+  {
     "name": "ウェスタンハット",
     "category": "裁縫",
     "subCategory": "アタマ",
@@ -47416,151 +49290,7 @@
     ]
   },
   {
-    "name": "まもりのぼうし",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 75,
-        "max": 75
-      },
-      "B": {
-        "min": 45,
-        "max": 45
-      },
-      "C": {
-        "min": 75,
-        "max": 75
-      },
-      "D": {
-        "min": 60,
-        "max": 60
-      }
-    },
-    "materials": [
-      {
-        "name": "◯シルク草",
-        "quantity": 1
-      },
-      {
-        "name": "◯カチコチくるみ",
-        "quantity": 1
-      },
-      {
-        "name": "◯花のみつ",
-        "quantity": 1
-      }
-    ]
-  },
-  {
-    "name": "まじないしターバン",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 60,
-        "max": 60
-      },
-      "B": {
-        "min": 60,
-        "max": 60
-      },
-      "C": {
-        "min": 90,
-        "max": 90
-      },
-      "D": {
-        "min": 45,
-        "max": 45
-      }
-    },
-    "materials": [
-      {
-        "name": "◯シルク草",
-        "quantity": 1
-      },
-      {
-        "name": "◯コットン草",
-        "quantity": 1
-      },
-      {
-        "name": "◯さとりそう",
-        "quantity": 1
-      }
-    ]
-  },
-  {
-    "name": "マタドールバンド",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 60,
-        "max": 60
-      },
-      "B": {
-        "min": 45,
-        "max": 45
-      },
-      "C": {
-        "min": 90,
-        "max": 90
-      },
-      "D": {
-        "min": 60,
-        "max": 60
-      }
-    },
-    "materials": [
-      {
-        "name": "◯シルク草",
-        "quantity": 1
-      },
-      {
-        "name": "◯サバンナの水",
-        "quantity": 1
-      },
-      {
-        "name": "◯小さなホネ",
-        "quantity": 1
-      }
-    ]
-  },
-  {
-    "name": "カンフーキャップ",
+    "name": "はやてのバンダナ",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -47580,64 +49310,16 @@
         "max": 45
       },
       "B": {
-        "min": 60,
-        "max": 60
-      },
-      "C": {
-        "min": 90,
-        "max": 90
-      },
-      "D": {
-        "min": 60,
-        "max": 60
-      }
-    },
-    "materials": [
-      {
-        "name": "◯シルク草",
-        "quantity": 1
-      },
-      {
-        "name": "◯けものの皮",
-        "quantity": 1
-      },
-      {
-        "name": "◯レッドベリー",
-        "quantity": 1
-      }
-    ]
-  },
-  {
-    "name": "学者のぼうし",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 45,
-        "max": 45
-      },
-      "B": {
-        "min": 45,
-        "max": 45
-      },
-      "C": {
-        "min": 75,
-        "max": 75
-      },
-      "D": {
         "min": 30,
         "max": 30
+      },
+      "C": {
+        "min": 75,
+        "max": 75
+      },
+      "D": {
+        "min": 45,
+        "max": 45
       }
     },
     "materials": [
@@ -47646,7 +49328,7 @@
         "quantity": 1
       },
       {
-        "name": "◯さとりそう",
+        "name": "◯しおかぜ草",
         "quantity": 1
       }
     ]
@@ -47740,7 +49422,7 @@
     ]
   },
   {
-    "name": "はやてのバンダナ",
+    "name": "学者のぼうし",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -47760,12 +49442,56 @@
         "max": 45
       },
       "B": {
-        "min": 30,
-        "max": 30
+        "min": 45,
+        "max": 45
       },
       "C": {
         "min": 75,
         "max": 75
+      },
+      "D": {
+        "min": 30,
+        "max": 30
+      }
+    },
+    "materials": [
+      {
+        "name": "◯コットン草",
+        "quantity": 1
+      },
+      {
+        "name": "◯さとりそう",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "しゅうれん用バンド",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 23,
+        "max": 23
+      },
+      "B": {
+        "min": 30,
+        "max": 30
+      },
+      "C": {
+        "min": 45,
+        "max": 45
       },
       "D": {
         "min": 45,
@@ -47778,95 +49504,7 @@
         "quantity": 1
       },
       {
-        "name": "◯しおかぜ草",
-        "quantity": 1
-      }
-    ]
-  },
-  {
-    "name": "ダンサーヘアバンド",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 23,
-        "max": 23
-      },
-      "B": {
-        "min": 45,
-        "max": 45
-      },
-      "C": {
-        "min": 45,
-        "max": 45
-      },
-      "D": {
-        "min": 30,
-        "max": 30
-      }
-    },
-    "materials": [
-      {
-        "name": "コットン草",
-        "quantity": 1
-      },
-      {
-        "name": "なないろのまゆ",
-        "quantity": 1
-      }
-    ]
-  },
-  {
-    "name": "初級魔法戦士ベレー",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 30,
-        "max": 30
-      },
-      "B": {
-        "min": 23,
-        "max": 23
-      },
-      "C": {
-        "min": 45,
-        "max": 45
-      },
-      "D": {
-        "min": 45,
-        "max": 45
-      }
-    },
-    "materials": [
-      {
-        "name": "コットン草",
-        "quantity": 1
-      },
-      {
-        "name": "けものの皮",
+        "name": "◯麻の糸",
         "quantity": 1
       }
     ]
@@ -47960,7 +49598,7 @@
     ]
   },
   {
-    "name": "しゅうれん用バンド",
+    "name": "初級魔法戦士ベレー",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -47976,12 +49614,12 @@
     ],
     "targetValues": {
       "A": {
-        "min": 23,
-        "max": 23
-      },
-      "B": {
         "min": 30,
         "max": 30
+      },
+      "B": {
+        "min": 23,
+        "max": 23
       },
       "C": {
         "min": 45,
@@ -47994,17 +49632,17 @@
     },
     "materials": [
       {
-        "name": "◯コットン草",
+        "name": "コットン草",
         "quantity": 1
       },
       {
-        "name": "◯麻の糸",
+        "name": "けものの皮",
         "quantity": 1
       }
     ]
   },
   {
-    "name": "射手のぼうし",
+    "name": "ダンサーヘアバンド",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -48024,12 +49662,56 @@
         "max": 23
       },
       "B": {
+        "min": 45,
+        "max": 45
+      },
+      "C": {
+        "min": 45,
+        "max": 45
+      },
+      "D": {
+        "min": 30,
+        "max": 30
+      }
+    },
+    "materials": [
+      {
+        "name": "コットン草",
+        "quantity": 1
+      },
+      {
+        "name": "なないろのまゆ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "ぬすっとずきん",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
         "min": 23,
         "max": 23
       },
-      "C": {
+      "B": {
         "min": 30,
         "max": 30
+      },
+      "C": {
+        "min": 23,
+        "max": 23
       },
       "D": {
         "min": 23,
@@ -48038,11 +49720,11 @@
     },
     "materials": [
       {
-        "name": "◯コットン草",
+        "name": "◯麻の糸",
         "quantity": 1
       },
       {
-        "name": "◯緑のコケ",
+        "name": "◯シルク草",
         "quantity": 1
       }
     ]
@@ -48136,50 +49818,6 @@
     ]
   },
   {
-    "name": "ぬすっとずきん",
-    "category": "裁縫",
-    "subCategory": "アタマ",
-    "gridType": "custom",
-    "layout": [
-      [
-        "A",
-        "B"
-      ],
-      [
-        "C",
-        "D"
-      ]
-    ],
-    "targetValues": {
-      "A": {
-        "min": 23,
-        "max": 23
-      },
-      "B": {
-        "min": 30,
-        "max": 30
-      },
-      "C": {
-        "min": 23,
-        "max": 23
-      },
-      "D": {
-        "min": 23,
-        "max": 23
-      }
-    },
-    "materials": [
-      {
-        "name": "◯麻の糸",
-        "quantity": 1
-      },
-      {
-        "name": "◯シルク草",
-        "quantity": 1
-      }
-    ]
-  },
-  {
     "name": "若手芸人のバンダナ",
     "category": "裁縫",
     "subCategory": "アタマ",
@@ -48224,7 +49862,51 @@
     ]
   },
   {
-    "name": "前座芸人のバンダナ",
+    "name": "射手のぼうし",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 23,
+        "max": 23
+      },
+      "B": {
+        "min": 23,
+        "max": 23
+      },
+      "C": {
+        "min": 30,
+        "max": 30
+      },
+      "D": {
+        "min": 23,
+        "max": 23
+      }
+    },
+    "materials": [
+      {
+        "name": "◯コットン草",
+        "quantity": 1
+      },
+      {
+        "name": "◯緑のコケ",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "皮のぼうし",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -48258,7 +49940,11 @@
     },
     "materials": [
       {
-        "name": "◯麻の糸",
+        "name": "けものの皮",
+        "quantity": 1
+      },
+      {
+        "name": "麻の糸",
         "quantity": 1
       }
     ]
@@ -48304,7 +49990,7 @@
     ]
   },
   {
-    "name": "皮のぼうし",
+    "name": "前座芸人のバンダナ",
     "category": "裁縫",
     "subCategory": "アタマ",
     "gridType": "custom",
@@ -48338,11 +50024,7 @@
     },
     "materials": [
       {
-        "name": "けものの皮",
-        "quantity": 1
-      },
-      {
-        "name": "麻の糸",
+        "name": "◯麻の糸",
         "quantity": 1
       }
     ]
