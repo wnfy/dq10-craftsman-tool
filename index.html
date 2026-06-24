@@ -345,7 +345,7 @@
       // JSONファイルからデータを読み込む
       const [allItems, setAllItems] = useState([]);
       const [loading, setLoading] = useState(true);
-      const DATA_VERSION = '20260624-sewing-arm-foot-furniture';
+      const DATA_VERSION = '20260624-cooking-cleanup-ledger-ui';
 
       useEffect(() => {
         fetch(`data/items.json?v=${DATA_VERSION}`, { cache: 'no-store' })
@@ -2834,7 +2834,7 @@
                         )}
 
                         {isSelected && (
-                          <div className="mt-3 p-4 bg-gradient-to-br from-pink-500/80 via-rose-500/80 to-fuchsia-500/80 backdrop-blur-sm rounded-xl border border-pink-300/50" style={{ boxShadow: '0 0 30px rgba(236, 72, 153, 0.6), 0 0 50px rgba(236, 72, 153, 0.3)' }}>
+                          <div className="ledger-total-card mt-3 p-4 bg-gradient-to-br from-pink-500/80 via-rose-500/80 to-fuchsia-500/80 backdrop-blur-sm rounded-xl border border-pink-300/50" style={{ boxShadow: '0 0 30px rgba(236, 72, 153, 0.6), 0 0 50px rgba(236, 72, 153, 0.3)' }}>
                             <div className="flex items-center justify-between text-white">
                               <span className="text-lg font-black drop-shadow" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>Total Cost:</span>
                               <div className="flex items-center gap-3">
@@ -2879,7 +2879,7 @@
                         )}
 
                         {isSelected && (
-                          <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 191, 36, 0.3)' }}>
+                          <div className="ledger-form-card ledger-sale-card mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 191, 36, 0.3)' }}>
                             <div className="flex items-center justify-between mb-3">
                               <h4 className="text-sm font-black text-white flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 20px rgba(251, 191, 36, 0.6)' }}>
                                 <span className="text-xl">💰</span>
@@ -3019,7 +3019,7 @@
                             const isDefiniteLoss = bestIncome < totalCost;
 
                             return (
-                              <div className="mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 146, 60, 0.3)' }}>
+                              <div className="ledger-form-card ledger-profit-hint mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 146, 60, 0.3)' }}>
                                 <div className="text-xs font-bold text-white mb-2 flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 15px rgba(251, 146, 60, 0.6)' }}>
                                   <span className="text-lg">📊</span>
                                   <span>黒字ライン（☆☆☆ 必要数）</span>
@@ -3063,7 +3063,7 @@
                           const isDefiniteLoss = bestIncome < totalCost;
 
                           return (
-                            <div className="mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 146, 60, 0.3)' }}>
+                            <div className="ledger-form-card ledger-profit-hint mt-3 p-3 bg-white/10 backdrop-blur-md rounded-lg border border-white/30" style={{ boxShadow: '0 0 20px rgba(251, 146, 60, 0.3)' }}>
                               <div className="text-xs font-bold text-white mb-2 flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 15px rgba(251, 146, 60, 0.6)' }}>
                                 <span className="text-lg">📊</span>
                                 <span>黒字ライン（☆☆☆ 必要数）</span>
@@ -3096,7 +3096,7 @@
                         })()}
 
                         {isSelected && (
-                          <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)' }}>
+                          <div className="ledger-form-card ledger-result-card mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)' }}>
                             <div className="flex items-center justify-between mb-3">
                               <h4 className="text-sm font-black text-white flex items-center gap-2 drop-shadow" style={{ textShadow: '0 0 20px rgba(16, 185, 129, 0.6)' }}>
                                 <span className="text-xl">📝</span>

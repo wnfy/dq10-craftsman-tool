@@ -6443,7 +6443,8 @@
         "name": "デリシャスオイル",
         "quantity": 3
       }
-    ]
+    ],
+    "subCategory": "肉料理"
   },
   {
     "name": "パワフルステーキ",
@@ -6480,7 +6481,8 @@
         "name": "デリシャスオイル",
         "quantity": 5
       }
-    ]
+    ],
+    "subCategory": "肉料理"
   },
   {
     "name": "かいしんバーガー",
@@ -6517,7 +6519,8 @@
         "name": "デリシャスオイル",
         "quantity": 6
       }
-    ]
+    ],
+    "subCategory": "肉料理"
   },
   {
     "name": "みかわしオムレツ",
@@ -6558,7 +6561,8 @@
         "name": "デリシャスオイル",
         "quantity": 6
       }
-    ]
+    ],
+    "subCategory": "肉料理"
   },
   {
     "name": "アクロバーガー",
@@ -6607,35 +6611,8 @@
         "name": "デリシャスオイル",
         "quantity": 12
       }
-    ]
-  },
-  {
-    "name": "アクロバーガー・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "しもふりミート",
-        "quantity": 1
-      },
-      {
-        "name": "しゃっきりレタス",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "ピリからペッパー",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 6
-      }
-    ]
+    ],
+    "subCategory": "肉料理"
   },
   {
     "name": "あいじょうオムレツ",
@@ -6684,35 +6661,8 @@
         "name": "デリシャスオイル",
         "quantity": 12
       }
-    ]
-  },
-  {
-    "name": "あいじょうオムレツ・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "しもふりミート",
-        "quantity": 1
-      },
-      {
-        "name": "しんせんたまご",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "こくうまソース",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 6
-      }
-    ]
+    ],
+    "subCategory": "肉料理"
   },
   {
     "name": "バトルステーキ",
@@ -6765,35 +6715,8 @@
         "name": "デリシャスオイル",
         "quantity": 16
       }
-    ]
-  },
-  {
-    "name": "バトルステーキ・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "しもふりミート",
-        "quantity": 2
-      },
-      {
-        "name": "ジャンボ玉ネギ",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "ピリからペッパー",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 8
-      }
-    ]
+    ],
+    "subCategory": "肉料理"
   },
   {
     "name": "タンクハンバーグ",
@@ -6821,35 +6744,8 @@
         "name": "デリシャスオイル",
         "quantity": 16
       }
-    ]
-  },
-  {
-    "name": "タンクハンバーグ・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "しもふりミート",
-        "quantity": 2
-      },
-      {
-        "name": "ジャンボ玉ネギ",
-        "quantity": 1
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "ピリからペッパー",
-        "quantity": 3
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 8
-      }
-    ]
+    ],
+    "subCategory": "肉料理"
   },
   {
     "name": "ほくほく肉じゃが",
@@ -6877,35 +6773,8 @@
         "name": "デリシャスオイル",
         "quantity": 18
       }
-    ]
-  },
-  {
-    "name": "ほくほく肉じゃが・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "しもふりミート",
-        "quantity": 3
-      },
-      {
-        "name": "まんまるポテト",
-        "quantity": 4
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 3
-      },
-      {
-        "name": "こくうまソース",
-        "quantity": 3
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 9
-      }
-    ]
+    ],
+    "subCategory": "肉料理"
   },
   {
     "name": "いやしのスープ",
@@ -6934,7 +6803,8 @@
         "name": "デリシャスオイル",
         "quantity": 3
       }
-    ]
+    ],
+    "subCategory": "魚料理"
   },
   {
     "name": "ガーディアンサラダ",
@@ -6967,7 +6837,8 @@
         "name": "デリシャスオイル",
         "quantity": 4
       }
-    ]
+    ],
+    "subCategory": "魚料理"
   },
   {
     "name": "マジカルサンド",
@@ -7004,7 +6875,8 @@
         "name": "デリシャスオイル",
         "quantity": 5
       }
-    ]
+    ],
+    "subCategory": "魚料理"
   },
   {
     "name": "いやしのムニエル",
@@ -7053,35 +6925,8 @@
         "name": "デリシャスオイル",
         "quantity": 12
       }
-    ]
-  },
-  {
-    "name": "いやしのムニエル・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おおとろの切り身",
-        "quantity": 1
-      },
-      {
-        "name": "ふわふわ小麦",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "ごくじょうソルト",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 6
-      }
-    ]
+    ],
+    "subCategory": "魚料理"
   },
   {
     "name": "マジックスープ",
@@ -7134,35 +6979,8 @@
         "name": "デリシャスオイル",
         "quantity": 16
       }
-    ]
-  },
-  {
-    "name": "マジックスープ・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おおとろの切り身",
-        "quantity": 2
-      },
-      {
-        "name": "しゃっきりレタス",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "ピリからペッパー",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 8
-      }
-    ]
+    ],
+    "subCategory": "魚料理"
   },
   {
     "name": "ミラクルサンド",
@@ -7215,35 +7033,8 @@
         "name": "デリシャスオイル",
         "quantity": 16
       }
-    ]
-  },
-  {
-    "name": "ミラクルサンド・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おおとろの切り身",
-        "quantity": 2
-      },
-      {
-        "name": "ジャンボ玉ネギ",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "こくうまソース",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 8
-      }
-    ]
+    ],
+    "subCategory": "魚料理"
   },
   {
     "name": "キレキレキッシュ",
@@ -7271,35 +7062,8 @@
         "name": "デリシャスオイル",
         "quantity": 16
       }
-    ]
-  },
-  {
-    "name": "キレキレキッシュ・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おおとろの切り身",
-        "quantity": 1
-      },
-      {
-        "name": "みかわしそう",
-        "quantity": 4
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "ごくじょうソルト",
-        "quantity": 1
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 8
-      }
-    ]
+    ],
+    "subCategory": "魚料理"
   },
   {
     "name": "バトルパッツァ",
@@ -7327,35 +7091,8 @@
         "name": "デリシャスオイル",
         "quantity": 16
       }
-    ]
-  },
-  {
-    "name": "バトルパッツァ・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おおとろの切り身",
-        "quantity": 5
-      },
-      {
-        "name": "ジャンボ玉ネギ",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 1
-      },
-      {
-        "name": "ピリからペッパー",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 8
-      }
-    ]
+    ],
+    "subCategory": "魚料理"
   },
   {
     "name": "スマッシュポテト",
@@ -7408,35 +7145,8 @@
         "name": "デリシャスオイル",
         "quantity": 16
       }
-    ]
-  },
-  {
-    "name": "スマッシュポテト・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おおとろの切り身",
-        "quantity": 2
-      },
-      {
-        "name": "まんまるポテト",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "ごくじょうソルト",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 8
-      }
-    ]
+    ],
+    "subCategory": "魚料理"
   },
   {
     "name": "グレイトグラタン",
@@ -7489,35 +7199,8 @@
         "name": "デリシャスオイル",
         "quantity": 16
       }
-    ]
-  },
-  {
-    "name": "グレイトグラタン・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おおとろの切り身",
-        "quantity": 2
-      },
-      {
-        "name": "しんせんたまご",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "ごくじょうソルト",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 8
-      }
-    ]
+    ],
+    "subCategory": "魚料理"
   },
   {
     "name": "スタミナライス",
@@ -7546,7 +7229,8 @@
         "name": "デリシャスオイル",
         "quantity": 2
       }
-    ]
+    ],
+    "subCategory": "パスタ&ライス"
   },
   {
     "name": "マナパスタ",
@@ -7575,7 +7259,8 @@
         "name": "デリシャスオイル",
         "quantity": 2
       }
-    ]
+    ],
+    "subCategory": "パスタ&ライス"
   },
   {
     "name": "メガもり丼",
@@ -7616,7 +7301,8 @@
         "name": "デリシャスオイル",
         "quantity": 6
       }
-    ]
+    ],
+    "subCategory": "パスタ&ライス"
   },
   {
     "name": "バランスパスタ",
@@ -7665,35 +7351,8 @@
         "name": "デリシャスオイル",
         "quantity": 12
       }
-    ]
-  },
-  {
-    "name": "バランスパスタ・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おおとろの切り身",
-        "quantity": 1
-      },
-      {
-        "name": "ふわふわ小麦",
-        "quantity": 2
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "こくうまソース",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 6
-      }
-    ]
+    ],
+    "subCategory": "パスタ&ライス"
   },
   {
     "name": "スパイスカレー",
@@ -7746,35 +7405,8 @@
         "name": "デリシャスオイル",
         "quantity": 16
       }
-    ]
-  },
-  {
-    "name": "スパイスカレー・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "しもふりミート",
-        "quantity": 2
-      },
-      {
-        "name": "ライスフラワー",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "ピリからペッパー",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 8
-      }
-    ]
+    ],
+    "subCategory": "パスタ&ライス"
   },
   {
     "name": "匠のチャーハン",
@@ -7802,35 +7434,8 @@
         "name": "デリシャスオイル",
         "quantity": 16
       }
-    ]
-  },
-  {
-    "name": "匠のチャーハン・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "しもふりミート",
-        "quantity": 1
-      },
-      {
-        "name": "ライスフラワー",
-        "quantity": 2
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "こくうまソース",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 8
-      }
-    ]
+    ],
+    "subCategory": "パスタ&ライス"
   },
   {
     "name": "ズッシリゾット",
@@ -7883,35 +7488,8 @@
         "name": "デリシャスオイル",
         "quantity": 16
       }
-    ]
-  },
-  {
-    "name": "ズッシリゾット・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おおとろの切り身",
-        "quantity": 2
-      },
-      {
-        "name": "ライスフラワー",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "こくうまソース",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 8
-      }
-    ]
+    ],
+    "subCategory": "パスタ&ライス"
   },
   {
     "name": "ヒールカルボナーラ",
@@ -7939,35 +7517,8 @@
         "name": "デリシャスオイル",
         "quantity": 18
       }
-    ]
-  },
-  {
-    "name": "ヒールカルボナーラ・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "しもふりミート",
-        "quantity": 3
-      },
-      {
-        "name": "しんせんたまご",
-        "quantity": 4
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 3
-      },
-      {
-        "name": "ピリからペッパー",
-        "quantity": 3
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 9
-      }
-    ]
+    ],
+    "subCategory": "パスタ&ライス"
   },
   {
     "name": "クイックケーキ",
@@ -7992,7 +7543,8 @@
         "name": "デリシャスオイル",
         "quantity": 1
       }
-    ]
+    ],
+    "subCategory": "スイーツ"
   },
   {
     "name": "ゴージャスクッキー",
@@ -8021,7 +7573,8 @@
         "name": "デリシャスオイル",
         "quantity": 1
       }
-    ]
+    ],
+    "subCategory": "スイーツ"
   },
   {
     "name": "ファイアタルト",
@@ -8062,31 +7615,8 @@
         "name": "デリシャスオイル",
         "quantity": 8
       }
-    ]
-  },
-  {
-    "name": "ファイアタルト・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "しんせんたまご",
-        "quantity": 5
-      },
-      {
-        "name": "レッドベリー",
-        "quantity": 5
-      },
-      {
-        "name": "ごくじょうソルト",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 4
-      }
-    ]
+    ],
+    "subCategory": "スイーツ"
   },
   {
     "name": "アイスタルト",
@@ -8127,31 +7657,8 @@
         "name": "デリシャスオイル",
         "quantity": 8
       }
-    ]
-  },
-  {
-    "name": "アイスタルト・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "しんせんたまご",
-        "quantity": 5
-      },
-      {
-        "name": "氷のけっしょう",
-        "quantity": 5
-      },
-      {
-        "name": "ごくじょうソルト",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 4
-      }
-    ]
+    ],
+    "subCategory": "スイーツ"
   },
   {
     "name": "ライトタルト",
@@ -8192,31 +7699,8 @@
         "name": "デリシャスオイル",
         "quantity": 8
       }
-    ]
-  },
-  {
-    "name": "ライトタルト・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おいしいミルク",
-        "quantity": 5
-      },
-      {
-        "name": "きよめの水",
-        "quantity": 5
-      },
-      {
-        "name": "ごくじょうソルト",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 4
-      }
-    ]
+    ],
+    "subCategory": "スイーツ"
   },
   {
     "name": "ダークタルト",
@@ -8257,31 +7741,8 @@
         "name": "デリシャスオイル",
         "quantity": 8
       }
-    ]
-  },
-  {
-    "name": "ダークタルト・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おいしいミルク",
-        "quantity": 5
-      },
-      {
-        "name": "カチコチくるみ",
-        "quantity": 5
-      },
-      {
-        "name": "ごくじょうソルト",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 4
-      }
-    ]
+    ],
+    "subCategory": "スイーツ"
   },
   {
     "name": "ストームタルト",
@@ -8322,31 +7783,8 @@
         "name": "デリシャスオイル",
         "quantity": 8
       }
-    ]
-  },
-  {
-    "name": "ストームタルト・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おいしいミルク",
-        "quantity": 5
-      },
-      {
-        "name": "みかわしそう",
-        "quantity": 5
-      },
-      {
-        "name": "ごくじょうソルト",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 4
-      }
-    ]
+    ],
+    "subCategory": "スイーツ"
   },
   {
     "name": "スタースイーツ",
@@ -8395,35 +7833,8 @@
         "name": "デリシャスオイル",
         "quantity": 12
       }
-    ]
-  },
-  {
-    "name": "スタースイーツ・小",
-    "category": "料理",
-    "gridType": "3x3",
-    "targetValues": {},
-    "materials": [
-      {
-        "name": "おおとろの切り身",
-        "quantity": 1
-      },
-      {
-        "name": "おいしいミルク",
-        "quantity": 3
-      },
-      {
-        "name": "びっくりトマト",
-        "quantity": 2
-      },
-      {
-        "name": "ごくじょうソルト",
-        "quantity": 2
-      },
-      {
-        "name": "デリシャスオイル",
-        "quantity": 6
-      }
-    ]
+    ],
+    "subCategory": "スイーツ"
   },
   {
     "name": "お詫びの笹だんご",
@@ -8456,7 +7867,8 @@
         "name": "デリシャスオイル",
         "quantity": 1
       }
-    ]
+    ],
+    "subCategory": "スイーツ"
   },
   {
     "name": "守護竜のつるぎ",
