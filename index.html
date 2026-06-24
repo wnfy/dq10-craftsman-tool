@@ -20,7 +20,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="theme-color" content="#FFD84D" />
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <link rel="stylesheet" href="assets/atelier.css?v=20260625-compact-featured-cards" />
+  <link rel="stylesheet" href="assets/atelier.css?v=20260625-compact-featured-cards-v2" />
   <style>
     .page-flip-enter {
       animation: pageFlipIn 0.6s ease-out;
@@ -345,7 +345,7 @@
       // JSONファイルからデータを読み込む
       const [allItems, setAllItems] = useState([]);
       const [loading, setLoading] = useState(true);
-      const DATA_VERSION = '20260625-compact-featured-cards';
+      const DATA_VERSION = '20260625-compact-featured-cards-v2';
 
       useEffect(() => {
         fetch(`data/items.json?v=${DATA_VERSION}`, { cache: 'no-store' })
