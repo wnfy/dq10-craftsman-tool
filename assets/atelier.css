@@ -234,8 +234,8 @@ button:focus-visible, input:focus-visible, label:focus-visible { outline: 3px so
   content:"FEATURED RECIPE";
   position:absolute;
   z-index:5;
-  right:1.05rem;
-  top:-.8rem;
+  right:1.1rem;
+  top:.82rem;
   padding:.32rem .68rem;
   border:2px solid var(--ink);
   border-radius:99px;
