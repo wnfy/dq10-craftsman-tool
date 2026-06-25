@@ -7871,6 +7871,35 @@
     "subCategory": "スイーツ"
   },
   {
+    "name": "幽紋刀",
+    "category": "武器鍛冶",
+    "subCategory": "片手剣",
+    "gridType": "ABCD",
+    "targetValues": {},
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "ナドラダイト鉱石",
+        "quantity": 5
+      },
+      {
+        "name": "宵闇のジェル",
+        "quantity": 5
+      },
+      {
+        "name": "ヘビーメタル",
+        "quantity": 30
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 10
+      }
+    ]
+  },
+  {
     "name": "守護竜のつるぎ",
     "category": "武器鍛冶",
     "subCategory": "片手剣",
