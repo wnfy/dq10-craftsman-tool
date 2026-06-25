@@ -7875,7 +7875,32 @@
     "category": "武器鍛冶",
     "subCategory": "片手剣",
     "gridType": "ABCD",
-    "targetValues": {},
+    "specialTrait": "回復",
+    "targetValues": {
+      "A": {
+        "min": 500,
+        "max": 508
+      },
+      "B": {
+        "min": 300,
+        "max": 308
+      },
+      "C": {
+        "min": 405,
+        "max": 413
+      }
+    },
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
     "materials": [
       {
         "name": "流星石",
@@ -9478,6 +9503,87 @@
       {
         "name": "どうのこうせき",
         "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "メタリオンブレード",
+    "category": "武器鍛冶",
+    "subCategory": "両手剣",
+    "gridType": "3x3",
+    "specialTrait": "集中力変化",
+    "targetValues": {
+      "A": {
+        "min": 160,
+        "max": 167
+      },
+      "B": {
+        "min": 145,
+        "max": 152
+      },
+      "C": {
+        "min": 140,
+        "max": 147
+      },
+      "D": {
+        "min": 120,
+        "max": 127
+      },
+      "E": {
+        "min": 180,
+        "max": 188
+      },
+      "F": {
+        "min": 205,
+        "max": 213
+      },
+      "G": {
+        "min": 95,
+        "max": 102
+      },
+      "H": {
+        "min": 100,
+        "max": 107
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "G",
+        "H"
+      ]
+    ],
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "純白の結晶",
+        "quantity": 10
+      },
+      {
+        "name": "マデュライト",
+        "quantity": 20
+      },
+      {
+        "name": "黄金の飾り両手剣",
+        "quantity": 2
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 10
       }
     ]
   },
@@ -11837,6 +11943,53 @@
     ]
   },
   {
+    "name": "スパイラルダガー",
+    "category": "武器鍛冶",
+    "subCategory": "短剣",
+    "gridType": "ABCD",
+    "specialTrait": "集中力変化",
+    "targetValues": {
+      "A": {
+        "min": 725,
+        "max": 733
+      },
+      "B": {
+        "min": 460,
+        "max": 468
+      }
+    },
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ]
+    ],
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "悲願の血涙",
+        "quantity": 5
+      },
+      {
+        "name": "竜の涙",
+        "quantity": 5
+      },
+      {
+        "name": "烈風石",
+        "quantity": 5
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 10
+      }
+    ]
+  },
+  {
     "name": "影星の短刀",
     "category": "武器鍛冶",
     "subCategory": "短剣",
@@ -13208,6 +13361,67 @@
       {
         "name": "どうのこうせき",
         "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "メタリオンスピア",
+    "category": "武器鍛冶",
+    "subCategory": "ヤリ",
+    "gridType": "ABCD",
+    "specialTrait": "倍半",
+    "targetValues": {
+      "A": {
+        "min": 195,
+        "max": 204
+      },
+      "B": {
+        "min": 430,
+        "max": 439
+      },
+      "C": {
+        "min": 166,
+        "max": 175
+      },
+      "D": {
+        "min": 370,
+        "max": 379
+      }
+    },
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ],
+      [
+        "D"
+      ]
+    ],
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "フォレース鉱石",
+        "quantity": 10
+      },
+      {
+        "name": "マデュライト",
+        "quantity": 20
+      },
+      {
+        "name": "大きな化石",
+        "quantity": 30
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 10
       }
     ]
   },
@@ -14894,6 +15108,79 @@
       {
         "name": "てっこうせき",
         "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "閃帝のオノ",
+    "category": "武器鍛冶",
+    "subCategory": "オノ",
+    "gridType": "3x3",
+    "specialTrait": "回復",
+    "targetValues": {
+      "A": {
+        "min": 240,
+        "max": 249
+      },
+      "B": {
+        "min": 100,
+        "max": 108
+      },
+      "C": {
+        "min": 150,
+        "max": 158
+      },
+      "D": {
+        "min": 280,
+        "max": 289
+      },
+      "E": {
+        "min": 85,
+        "max": 92
+      },
+      "F": {
+        "min": 160,
+        "max": 168
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        null
+      ],
+      [
+        "F",
+        null
+      ]
+    ],
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "プルルンジェム",
+        "quantity": 4
+      },
+      {
+        "name": "暗夜の魔石",
+        "quantity": 3
+      },
+      {
+        "name": "烈風石",
+        "quantity": 3
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 10
       }
     ]
   },
@@ -16908,6 +17195,63 @@
     ]
   },
   {
+    "name": "鋼神のツメ",
+    "category": "武器鍛冶",
+    "subCategory": "ツメ",
+    "gridType": "2x2",
+    "specialTrait": "倍半",
+    "targetValues": {
+      "A": {
+        "min": 165,
+        "max": 172
+      },
+      "B": {
+        "min": 420,
+        "max": 428
+      },
+      "C": {
+        "min": 360,
+        "max": 368
+      },
+      "D": {
+        "min": 220,
+        "max": 228
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "水竜のうろこ",
+        "quantity": 5
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 8
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 4
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 10
+      }
+    ]
+  },
+  {
     "name": "呪星のツメ",
     "category": "武器鍛冶",
     "subCategory": "ツメ",
@@ -18620,6 +18964,83 @@
       {
         "name": "どうのこうせき",
         "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "メタリオンウィップ",
+    "category": "武器鍛冶",
+    "subCategory": "ムチ",
+    "gridType": "3x3",
+    "specialTrait": "倍半",
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 158
+      },
+      "B": {
+        "min": 90,
+        "max": 98
+      },
+      "C": {
+        "min": 255,
+        "max": 263
+      },
+      "D": {
+        "min": 120,
+        "max": 128
+      },
+      "E": {
+        "min": 130,
+        "max": 138
+      },
+      "F": {
+        "min": 180,
+        "max": 188
+      },
+      "G": {
+        "min": 165,
+        "max": 172
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "G",
+        null
+      ]
+    ],
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "プルルンジェム",
+        "quantity": 6
+      },
+      {
+        "name": "まじゅうのツノ",
+        "quantity": 8
+      },
+      {
+        "name": "黄金の飾りムチ",
+        "quantity": 3
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 10
       }
     ]
   },
@@ -20732,6 +21153,75 @@
     ]
   },
   {
+    "name": "コンプレシオン",
+    "category": "武器鍛冶",
+    "subCategory": "ハンマー",
+    "gridType": "3x2",
+    "specialTrait": "集中力変化",
+    "targetValues": {
+      "A": {
+        "min": 260,
+        "max": 268
+      },
+      "B": {
+        "min": 140,
+        "max": 148
+      },
+      "C": {
+        "min": 150,
+        "max": 158
+      },
+      "D": {
+        "min": 305,
+        "max": 314
+      },
+      "E": {
+        "min": 80,
+        "max": 88
+      },
+      "F": {
+        "min": 110,
+        "max": 118
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "プルルンジェム",
+        "quantity": 4
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 4
+      },
+      {
+        "name": "ヘビーメタル",
+        "quantity": 10
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 10
+      }
+    ]
+  },
+  {
     "name": "ポラリスハンマー",
     "category": "武器鍛冶",
     "subCategory": "ハンマー",
@@ -22637,6 +23127,71 @@
     ]
   },
   {
+    "name": "レザーエッジ",
+    "category": "武器鍛冶",
+    "subCategory": "ブーメラン",
+    "gridType": "3x2",
+    "specialTrait": "光",
+    "targetValues": {
+      "A": {
+        "min": 390,
+        "max": 399
+      },
+      "B": {
+        "min": 200,
+        "max": 208
+      },
+      "C": {
+        "min": 350,
+        "max": 358
+      },
+      "D": {
+        "min": 360,
+        "max": 368
+      },
+      "E": {
+        "min": 170,
+        "max": 177
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        null,
+        "C"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "純白の結晶",
+        "quantity": 6
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 8
+      },
+      {
+        "name": "水竜のうろこ",
+        "quantity": 5
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 10
+      }
+    ]
+  },
+  {
     "name": "クリスターライト",
     "category": "武器鍛冶",
     "subCategory": "ブーメラン",
@@ -24457,6 +25012,75 @@
     ]
   },
   {
+    "name": "メタリオンサイズ",
+    "category": "武器鍛冶",
+    "subCategory": "鎌",
+    "gridType": "3x3",
+    "specialTrait": "集中力変化",
+    "targetValues": {
+      "A": {
+        "min": 130,
+        "max": 138
+      },
+      "B": {
+        "min": 230,
+        "max": 238
+      },
+      "C": {
+        "min": 370,
+        "max": 379
+      },
+      "D": {
+        "min": 170,
+        "max": 178
+      },
+      "E": {
+        "min": 300,
+        "max": 308
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        null
+      ],
+      [
+        "D",
+        null
+      ],
+      [
+        "E",
+        null
+      ]
+    ],
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "まじゅうのツノ",
+        "quantity": 16
+      },
+      {
+        "name": "げんませき",
+        "quantity": 12
+      },
+      {
+        "name": "マデュライト",
+        "quantity": 30
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 10
+      }
+    ]
+  },
+  {
     "name": "レイヴンサイズ",
     "category": "武器鍛冶",
     "subCategory": "鎌",
@@ -25251,6 +25875,63 @@
       }
     ],
     "specialTrait": ""
+  },
+  {
+    "name": "メタリオンガード",
+    "category": "防具鍛冶",
+    "subCategory": "小盾",
+    "gridType": "2x2",
+    "specialTrait": "集中力変化",
+    "targetValues": {
+      "A": {
+        "min": 330,
+        "max": 338
+      },
+      "B": {
+        "min": 280,
+        "max": 288
+      },
+      "C": {
+        "min": 170,
+        "max": 177
+      },
+      "D": {
+        "min": 390,
+        "max": 398
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "まじゅうのツノ",
+        "quantity": 13
+      },
+      {
+        "name": "マデュライト",
+        "quantity": 20
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 12
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 10
+      }
+    ]
   },
   {
     "name": "輝紋章の盾",
@@ -26628,6 +27309,63 @@
       }
     ],
     "specialTrait": ""
+  },
+  {
+    "name": "メタリオンシールド",
+    "category": "防具鍛冶",
+    "subCategory": "大盾",
+    "gridType": "2x2",
+    "specialTrait": "光",
+    "targetValues": {
+      "A": {
+        "min": 282,
+        "max": 290
+      },
+      "B": {
+        "min": 512,
+        "max": 520
+      },
+      "C": {
+        "min": 432,
+        "max": 440
+      },
+      "D": {
+        "min": 230,
+        "max": 238
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "純白の結晶",
+        "quantity": 8
+      },
+      {
+        "name": "マデュライト",
+        "quantity": 20
+      },
+      {
+        "name": "げんませき",
+        "quantity": 8
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ]
   },
   {
     "name": "神樹の大盾",
@@ -76733,6 +77471,57 @@
     ]
   },
   {
+    "name": "メタリオンタクト",
+    "category": "木工",
+    "subCategory": "スティック",
+    "gridType": "custom",
+    "specialTrait": "燃え木",
+    "targetValues": {
+      "A": {
+        "min": 720,
+        "max": 720
+      },
+      "B": {
+        "min": 280,
+        "max": 280
+      }
+    },
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        null,
+        "B",
+        null
+      ]
+    ],
+    "materials": [
+      {
+        "name": "カラマドウッド",
+        "quantity": 30
+      },
+      {
+        "name": "まじゅうのツノ",
+        "quantity": 12
+      },
+      {
+        "name": "げんませき",
+        "quantity": 14
+      },
+      {
+        "name": "黄金の飾りスティック",
+        "quantity": 2
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
     "name": "ピュアリィタクト",
     "category": "木工",
     "subCategory": "スティック",
@@ -78421,6 +79210,66 @@
       {
         "name": "やわらかい枝",
         "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "幽紋の杖",
+    "category": "木工",
+    "subCategory": "両手杖",
+    "gridType": "custom",
+    "specialTrait": "虹木",
+    "targetValues": {
+      "A": {
+        "min": 460,
+        "max": 460
+      },
+      "B": {
+        "min": 230,
+        "max": 230
+      },
+      "C": {
+        "min": 370,
+        "max": 370
+      }
+    },
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        null,
+        "B",
+        null
+      ],
+      [
+        null,
+        "C",
+        null
+      ]
+    ],
+    "materials": [
+      {
+        "name": "カラマドウッド",
+        "quantity": 30
+      },
+      {
+        "name": "プルルンジェム",
+        "quantity": 5
+      },
+      {
+        "name": "ささやく枯れ葉",
+        "quantity": 8
+      },
+      {
+        "name": "まじゅうの皮",
+        "quantity": 10
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 10
       }
     ]
   },
@@ -80393,6 +81242,78 @@
       {
         "name": "やわらかい枝",
         "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "メタリオンロッド",
+    "category": "木工",
+    "subCategory": "棍",
+    "gridType": "custom",
+    "specialTrait": "再生木",
+    "targetValues": {
+      "A": {
+        "min": 250,
+        "max": 250
+      },
+      "B": {
+        "min": 150,
+        "max": 150
+      },
+      "C": {
+        "min": 75,
+        "max": 75
+      },
+      "D": {
+        "min": 120,
+        "max": 120
+      },
+      "E": {
+        "min": 170,
+        "max": 170
+      },
+      "F": {
+        "min": 220,
+        "max": 220
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B",
+        null
+      ],
+      [
+        "C",
+        "D",
+        null
+      ],
+      [
+        "E",
+        "F",
+        null
+      ]
+    ],
+    "materials": [
+      {
+        "name": "カラマドウッド",
+        "quantity": 30
+      },
+      {
+        "name": "激震のキバ",
+        "quantity": 5
+      },
+      {
+        "name": "古代樹の化石",
+        "quantity": 6
+      },
+      {
+        "name": "大きな化石",
+        "quantity": 20
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 10
       }
     ]
   },
@@ -82969,6 +83890,65 @@
     ]
   },
   {
+    "name": "メタリオンファン",
+    "category": "木工",
+    "subCategory": "扇",
+    "gridType": "custom",
+    "specialTrait": "虹木",
+    "targetValues": {
+      "A": {
+        "min": 320,
+        "max": 320
+      },
+      "B": {
+        "min": 210,
+        "max": 210
+      },
+      "C": {
+        "min": 180,
+        "max": 180
+      },
+      "D": {
+        "min": 350,
+        "max": 350
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B",
+        null
+      ],
+      [
+        "C",
+        "D",
+        null
+      ]
+    ],
+    "materials": [
+      {
+        "name": "カラマドウッド",
+        "quantity": 30
+      },
+      {
+        "name": "古代樹の化石",
+        "quantity": 10
+      },
+      {
+        "name": "風竜の羽毛",
+        "quantity": 8
+      },
+      {
+        "name": "ささやく枯れ葉",
+        "quantity": 5
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 10
+      }
+    ]
+  },
+  {
     "name": "名軍師の羽扇",
     "category": "木工",
     "subCategory": "扇",
@@ -85057,6 +86037,74 @@
       {
         "name": "やわらかい枝",
         "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "グリームシューター",
+    "category": "木工",
+    "subCategory": "弓",
+    "gridType": "custom",
+    "specialTrait": "燃え木",
+    "targetValues": {
+      "A": {
+        "min": 125,
+        "max": 125
+      },
+      "B": {
+        "min": 195,
+        "max": 195
+      },
+      "C": {
+        "min": 195,
+        "max": 195
+      },
+      "E": {
+        "min": 125,
+        "max": 125
+      },
+      "F": {
+        "min": 195,
+        "max": 195
+      }
+    },
+    "layout": [
+      [
+        "A",
+        "B",
+        null
+      ],
+      [
+        "C",
+        null,
+        null
+      ],
+      [
+        "E",
+        "F",
+        null
+      ]
+    ],
+    "materials": [
+      {
+        "name": "カラマドウッド",
+        "quantity": 30
+      },
+      {
+        "name": "ときのすいしょう",
+        "quantity": 10
+      },
+      {
+        "name": "古代樹の化石",
+        "quantity": 8
+      },
+      {
+        "name": "烈風石",
+        "quantity": 6
+      },
+      {
+        "name": "超かがやきの樹液",
+        "quantity": 10
       }
     ]
   },

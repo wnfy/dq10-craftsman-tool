@@ -345,7 +345,7 @@
       // JSONファイルからデータを読み込む
       const [allItems, setAllItems] = useState([]);
       const [loading, setLoading] = useState(true);
-      const DATA_VERSION = '20260625-yumon-to';
+      const DATA_VERSION = '20260625-ver8-latest-equipment';
 
       useEffect(() => {
         fetch(`data/items.json?v=${DATA_VERSION}`, { cache: 'no-store' })
