@@ -304,7 +304,9 @@
 
       // 🆕 収益管理用のstate
       const [savedRecords, setSavedRecords] = useState([]);
-      const [profitView, setProfitView] = useState('today'); // 'today' or 'month'
+      const [profitView, setProfitView] = useState('today');
+      const [customStartDate, setCustomStartDate] = useState('');
+      const [customEndDate, setCustomEndDate] = useState('');
       const [isPinned, setIsPinned] = useState(false);
 
       // 🆕 お気に入り機能用のstate
@@ -343,6 +345,29 @@
       }, []);
 
       // JSONファイルからデータを読み込む
+      const toDateInputValue = (date) => {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+      };
+
+      const recordDates = savedRecords
+        .map(record => new Date(record.timestamp))
+        .filter(date => !Number.isNaN(date.getTime()));
+      const recordDateMin = recordDates.length
+        ? toDateInputValue(new Date(Math.min(...recordDates.map(date => date.getTime()))))
+        : '';
+      const recordDateMax = recordDates.length
+        ? toDateInputValue(new Date(Math.max(...recordDates.map(date => date.getTime()))))
+        : '';
+
+      useEffect(() => {
+        if (!recordDateMin || !recordDateMax) return;
+        setCustomStartDate(current => current || recordDateMin);
+        setCustomEndDate(current => current || recordDateMax);
+      }, [recordDateMin, recordDateMax]);
+
       const [allItems, setAllItems] = useState([]);
       const [loading, setLoading] = useState(true);
       const DATA_VERSION = '20260815-fushigi-bolero';
@@ -435,22 +460,7 @@
 
       // 🆕 収益サマリーを計算
       const calculateSummary = (period) => {
-        const now = new Date();
-        let filteredRecords = savedRecords;
-
-        if (period === 'today') {
-          const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-          filteredRecords = savedRecords.filter(r => {
-            const recordDate = new Date(r.timestamp);
-            return recordDate >= today;
-          });
-        } else if (period === 'month') {
-          const thisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-          filteredRecords = savedRecords.filter(r => {
-            const recordDate = new Date(r.timestamp);
-            return recordDate >= thisMonth;
-          });
-        }
+        const filteredRecords = filterRecordsByPeriod(period);
 
         const totalIncome = filteredRecords.reduce((sum, r) => sum + r.totalIncome, 0);
         const totalCost = filteredRecords.reduce((sum, r) => sum + r.totalCost, 0);
@@ -462,7 +472,8 @@
       const profitPeriodLabels = {
         today: '今日',
         month: '今月',
-        all: 'すべて'
+        all: 'すべて',
+        custom: '期間指定'
       };
 
       // 🆕 レコードを削除
@@ -496,6 +507,14 @@
           return savedRecords.filter(r => {
             const recordDate = new Date(r.timestamp);
             return recordDate >= thisMonth;
+          });
+        } else if (period === 'custom') {
+          if (!customStartDate || !customEndDate) return [];
+          const startDate = new Date(`${customStartDate}T00:00:00`);
+          const endDate = new Date(`${customEndDate}T23:59:59.999`);
+          return savedRecords.filter(r => {
+            const recordDate = new Date(r.timestamp);
+            return !Number.isNaN(recordDate.getTime()) && recordDate >= startDate && recordDate <= endDate;
           });
         }
         return savedRecords; // 'all'
@@ -2382,6 +2401,17 @@
                         すべて
                       </button>
                       <button
+                        onClick={() => setProfitView('custom')}
+                        disabled={!recordDateMin}
+                        className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${
+                          profitView === 'custom'
+                            ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg'
+                            : 'bg-white/10 text-white/60 hover:bg-white/20'
+                        } disabled:cursor-not-allowed disabled:opacity-40`}
+                      >
+                        期間指定
+                      </button>
+                      <button
                         onClick={togglePin}
                         className={`px-4 py-2 rounded-lg font-bold text-sm transition-all ${isPinned
                           ? 'bg-green-500/90 text-white shadow-lg'
@@ -2393,6 +2423,53 @@
                       </button>
                     </div>
                   </div>
+
+                  {profitView === 'custom' && (
+                    <div className="mb-5 rounded-2xl border-2 border-[var(--ink)] bg-[rgba(255,253,246,0.94)] p-4 text-[var(--ink)] shadow-[4px_4px_0_var(--blue)]">
+                      <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+                        <div>
+                          <div className="text-[11px] font-black uppercase tracking-[0.22em] text-[var(--blue)]">Custom period</div>
+                          <div className="mt-1 font-serif text-xl font-black">集計する期間を選択</div>
+                          <div className="mt-1 text-xs font-bold text-[var(--muted)]">
+                            保存データの範囲：{recordDateMin || '—'} ～ {recordDateMax || '—'}
+                          </div>
+                        </div>
+                        <div className="grid w-full grid-cols-1 items-end gap-2 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:w-auto">
+                          <label className="block min-w-0">
+                            <span className="mb-1 block text-xs font-black">開始日</span>
+                            <input
+                              type="date"
+                              min={recordDateMin}
+                              max={customEndDate || recordDateMax}
+                              value={customStartDate}
+                              onChange={(event) => {
+                                const value = event.target.value;
+                                setCustomStartDate(value);
+                                if (customEndDate && value > customEndDate) setCustomEndDate(value);
+                              }}
+                              className="w-full min-w-0 rounded-xl border-2 border-[var(--ink)] bg-white px-3 py-2 font-bold outline-none transition-shadow focus:shadow-[3px_3px_0_var(--sun)]"
+                            />
+                          </label>
+                          <span className="hidden pb-2 font-black text-[var(--coral)] sm:block">→</span>
+                          <label className="block min-w-0">
+                            <span className="mb-1 block text-xs font-black">終了日</span>
+                            <input
+                              type="date"
+                              min={customStartDate || recordDateMin}
+                              max={recordDateMax}
+                              value={customEndDate}
+                              onChange={(event) => {
+                                const value = event.target.value;
+                                setCustomEndDate(value);
+                                if (customStartDate && value < customStartDate) setCustomStartDate(value);
+                              }}
+                              className="w-full min-w-0 rounded-xl border-2 border-[var(--ink)] bg-white px-3 py-2 font-bold outline-none transition-shadow focus:shadow-[3px_3px_0_var(--sun)]"
+                            />
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  )}
 
                   {(() => {
                     const summary = calculateSummary(profitView);
@@ -2529,7 +2606,7 @@
 
                 {/* 保存された記録一覧 */}
                 <div className="space-y-3">
-                  {savedRecords.map((record) => (
+                  {filterRecordsByPeriod(profitView).map((record) => (
                     <div
                       key={record.id}
                       className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-lg"
@@ -2587,11 +2664,11 @@
                     </div>
                   ))}
 
-                  {savedRecords.length === 0 && (
+                  {filterRecordsByPeriod(profitView).length === 0 && (
                     <div className="text-center py-12">
                       <div className="text-4xl mb-3">📊</div>
-                      <p className="text-lg font-bold text-white/60">まだ記録がありません</p>
-                      <p className="text-white/40 mt-1 text-sm">成果を保存すると、ここに表示されます</p>
+                      <p className="text-lg font-bold text-white/60">この期間の記録はありません</p>
+                      <p className="text-white/40 mt-1 text-sm">別の期間を選択するか、成果を保存してください</p>
                     </div>
                   )}
                 </div>
