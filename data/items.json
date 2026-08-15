@@ -51205,6 +51205,89 @@
     ]
   },
   {
+    "name": "ふしぎなボレロ上",
+    "category": "裁縫",
+    "subCategory": "からだ上",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E",
+        "F"
+      ],
+      [
+        "G",
+        "H",
+        "I"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 140,
+        "max": 140
+      },
+      "B": {
+        "min": 100,
+        "max": 100
+      },
+      "C": {
+        "min": 140,
+        "max": 140
+      },
+      "D": {
+        "min": 100,
+        "max": 100
+      },
+      "E": {
+        "min": 200,
+        "max": 200
+      },
+      "F": {
+        "min": 100,
+        "max": 100
+      },
+      "G": {
+        "min": 80,
+        "max": 80
+      },
+      "H": {
+        "min": 100,
+        "max": 100
+      },
+      "I": {
+        "min": 80,
+        "max": 80
+      }
+    },
+    "materials": [
+      {
+        "name": "星光の糸",
+        "quantity": 30
+      },
+      {
+        "name": "水竜のうろこ",
+        "quantity": 5
+      },
+      {
+        "name": "悲願の血涙",
+        "quantity": 5
+      },
+      {
+        "name": "まほうの小ビン",
+        "quantity": 99
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 7
+      }
+    ]
+  },
+  {
     "name": "ロードリーローブ上",
     "category": "裁縫",
     "subCategory": "からだ上",
@@ -58976,6 +59059,74 @@
       },
       {
         "name": "かがやきそう",
+        "quantity": 30
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "name": "ふしぎなボレロ下",
+    "category": "裁縫",
+    "subCategory": "からだ下",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 150
+      },
+      "B": {
+        "min": 180,
+        "max": 180
+      },
+      "C": {
+        "min": 180,
+        "max": 180
+      },
+      "D": {
+        "min": 150,
+        "max": 150
+      },
+      "E": {
+        "min": 200,
+        "max": 200
+      },
+      "F": {
+        "min": 200,
+        "max": 200
+      }
+    },
+    "materials": [
+      {
+        "name": "星光の糸",
+        "quantity": 22
+      },
+      {
+        "name": "ささやく枯れ葉",
+        "quantity": 5
+      },
+      {
+        "name": "純白の結晶",
+        "quantity": 5
+      },
+      {
+        "name": "まほうのせいすい",
         "quantity": 30
       },
       {
