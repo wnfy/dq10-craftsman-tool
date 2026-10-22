@@ -20,7 +20,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="theme-color" content="#FFD84D" />
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <link rel="stylesheet" href="assets/atelier.css?v=20260626-feature-badge-fit" />
+  <link rel="stylesheet" href="assets/atelier.css?v=20261023-price-book" />
+  <script src="assets/price-book.js?v=20261023"></script>
   <style>
     .page-flip-enter {
       animation: pageFlipIn 0.6s ease-out;
@@ -288,8 +289,22 @@
       const [searchQuery, setSearchQuery] = useState('');
       const [searchActive, setSearchActive] = useState('');
       const [selectedItem, setSelectedItem] = useState(null);
-      const [materialPrices, setMaterialPrices] = useState({});
-      const [toolPrices, setToolPrices] = useState({});
+      const [initialPriceBook] = useState(() => {
+        try { return { book: DqxPriceBook.read(localStorage), error: false }; }
+        catch { return { book: DqxPriceBook.empty(), error: true }; }
+      });
+      const [savedPriceBook, setSavedPriceBook] = useState(initialPriceBook.book);
+      const [materialPrices, setMaterialPrices] = useState(initialPriceBook.book.materials);
+      const [toolPrices, setToolPrices] = useState(initialPriceBook.book.tools);
+      const [priceNotice, setPriceNotice] = useState(initialPriceBook.error
+        ? '保存価格を読み込めませんでした。ブラウザの保存設定をご確認ください。' : '');
+      const [pendingPriceReset, setPendingPriceReset] = useState(null);
+      useEffect(() => {
+        if (!pendingPriceReset) return;
+        const cancelReset = e => { if (e.key === 'Escape') setPendingPriceReset(null); };
+        window.addEventListener('keydown', cancelReset);
+        return () => window.removeEventListener('keydown', cancelReset);
+      }, [pendingPriceReset]);
       const [selectedArmorType, setSelectedArmorType] = useState('小盾');
       const [selectedWeaponType, setSelectedWeaponType] = useState('片手剣');
       const [selectedToolType, setSelectedToolType] = useState('道具');
@@ -370,7 +385,7 @@
 
       const [allItems, setAllItems] = useState([]);
       const [loading, setLoading] = useState(true);
-      const DATA_VERSION = '20260815-fushigi-bolero';
+      const DATA_VERSION = '20261023-v81-armor';
 
       useEffect(() => {
         fetch(`data/items.json?v=${DATA_VERSION}`, { cache: 'no-store' })
@@ -416,9 +431,8 @@
 
         // 素材価格をコピー
         item.materials.forEach(material => {
-          const key = `${item.name}-${material.name}`;
-          if (materialPrices[key]) {
-            record.materialPrices[material.name] = materialPrices[key];
+          if (Object.hasOwn(materialPrices, material.name)) {
+            record.materialPrices[material.name] = materialPrices[material.name];
           }
         });
 
@@ -780,8 +794,6 @@
         setSearchQuery('');
         setSearchActive('');
         setSelectedItem(null);
-        setMaterialPrices({});
-        setToolPrices({});
       };
 
       // 🆕 テーマの切り替え
@@ -801,8 +813,6 @@
       const handleSearch = () => {
         setSearchActive(searchQuery);
         setSelectedItem(null);
-        setMaterialPrices({});
-        setToolPrices({});
       };
 
       const handleKeyPress = (e) => {
@@ -951,13 +961,46 @@
 
       const cookingTypes = ['料理全部', '肉料理', '魚料理', 'パスタ&ライス', 'スイーツ'];
 
-      const updatePrice = (itemName, materialName, price) => {
+      const updatePrice = (materialName, price) => {
         const numericValue = price.replace(/,/g, '');
+        if (!Number.isSafeInteger(Number(numericValue))) return;
         setMaterialPrices(prev => ({
           ...prev,
-          [`${itemName}-${materialName}`]: numericValue === '' ? 0 : parseInt(numericValue) || 0
+          [materialName]: numericValue === '' ? 0 : parseInt(numericValue) || 0
         }));
+        setPriceNotice('入力中の価格です。「価格を保存」で次回も復元できます。');
       };
+
+      // 保存操作だけ永続化。別レシピの未保存入力を巻き込まない。
+      const persistPriceBook = (book, message) => {
+        try {
+          DqxPriceBook.write(localStorage, book);
+          setSavedPriceBook(book);
+          setPriceNotice(message);
+          return true;
+        } catch {
+          setPriceNotice('価格を保存できませんでした。入力内容は残っています。ブラウザの保存設定・空き容量をご確認ください。');
+          return false;
+        }
+      };
+      const saveRecipePrices = (item) => persistPriceBook(
+        DqxPriceBook.saveRecipe(savedPriceBook, item, materialPrices, toolPrices),
+        '素材価格と職人道具代をこのブラウザに保存しました。'
+      );
+      const resetPrices = (options, confirmation) => {
+        if (confirmation) {
+          setPendingPriceReset({ options, message: confirmation });
+          return;
+        }
+        const next = DqxPriceBook.reset(savedPriceBook, options);
+        if (!persistPriceBook(next, '指定した価格の入力・保存内容をリセットしました。収益記録は変更していません。')) return;
+        setMaterialPrices(current => DqxPriceBook.reset({ materials: current, tools: {} }, options).materials);
+        setToolPrices(current => DqxPriceBook.reset({ materials: {}, tools: current }, options).tools);
+        setPendingPriceReset(null);
+      };
+      const hasUnsavedPrices = (item) => item.materials.some(({ name }) =>
+        materialPrices[name] !== savedPriceBook.materials[name]) ||
+        toolPrices[item.name] !== savedPriceBook.tools[item.name];
 
       const formatNumber = (value) => {
         if (!value) return '';
@@ -966,7 +1009,7 @@
 
       const calculateTotal = (item) => {
         const materialTotal = item.materials.reduce((total, material) => {
-          const price = materialPrices[`${item.name}-${material.name}`] || 0;
+          const price = materialPrices[material.name] || 0;
           return total + (price * material.quantity);
         }, 0);
 
@@ -2064,8 +2107,6 @@
                     onClick={() => {
                       setActiveCategory(cat);
                       setSelectedItem(null);
-                      setMaterialPrices({});
-                      setToolPrices({});
                       if (cat === '武器鍛冶') setSelectedWeaponType('片手剣');
                       if (cat === '防具鍛冶') setSelectedArmorType('小盾');
                       if (cat === '道具鍛冶') setSelectedToolType('道具');
@@ -2357,6 +2398,38 @@
                     >
                       {fontSize === 'normal' ? '標準' : '大きめ'}
                     </button>
+                  </div>
+                  <div className="settings-row price-settings-row">
+                    <div>
+                      <div className="font-bold">保存した素材価格</div>
+                      <p className="text-xs">{Object.keys(savedPriceBook.materials).length}種類を保存中。同じ素材の価格は全レシピで共通です。</p>
+                      <p className="text-xs">この端末・ブラウザ内に保存します。職人道具代・収益記録は全素材リセットの対象外です。</p>
+                    </div>
+                    <button className="price-action price-action-danger" onClick={() => resetPrices(
+                      { allMaterials: true },
+                      '全レシピの素材価格（入力中・保存済み）をリセットします。職人道具代・収益記録は消えません。よろしいですか？'
+                    )}>全素材価格をリセット</button>
+                  </div>
+                </div>
+              </div>
+            )}
+            {priceNotice && <div className="price-notice" role="status" aria-live="polite">{priceNotice}</div>}
+            {pendingPriceReset && (
+              <div className="price-reset-overlay" onClick={() => setPendingPriceReset(null)}>
+                <div className="price-reset-dialog" role="alertdialog" aria-modal="true" aria-labelledby="price-reset-title" aria-describedby="price-reset-description" onClick={e => e.stopPropagation()}
+                  onKeyDown={e => {
+                    if (e.key === 'Tab') {
+                      const buttons = e.currentTarget.querySelectorAll('button');
+                      if (e.shiftKey && document.activeElement === buttons[0]) { e.preventDefault(); buttons[1].focus(); }
+                      else if (!e.shiftKey && document.activeElement === buttons[1]) { e.preventDefault(); buttons[0].focus(); }
+                    }
+                  }}>
+                  <span className="price-book-eyebrow">PRICE BOOK / RESET</span>
+                  <h3 id="price-reset-title">素材価格をリセットしますか？</h3>
+                  <p id="price-reset-description">{pendingPriceReset.message}</p>
+                  <div className="price-book-actions">
+                    <button autoFocus className="price-action" onClick={() => setPendingPriceReset(null)}>キャンセル</button>
+                    <button className="price-action price-action-danger" onClick={() => resetPrices(pendingPriceReset.options)}>リセットする</button>
                   </div>
                 </div>
               </div>
@@ -2778,11 +2851,27 @@
                           <span className="text-xl">📦</span>
                           <span>必要素材</span>
                         </h3>
+                        {isSelected && (
+                          <div className="price-book-toolbar" onClick={e => e.stopPropagation()}>
+                            <div>
+                              <span className="price-book-eyebrow">MATERIAL PRICE BOOK</span>
+                              <p>素材名ごとに共通の単価 / 道具代はレシピごと</p>
+                              <span className="price-save-state">{hasUnsavedPrices(item) ? '未保存の変更あり' : '保存内容と一致'}</span>
+                            </div>
+                            <div className="price-book-actions">
+                              <button className="price-action price-action-primary" onClick={() => saveRecipePrices(item)}>価格を保存</button>
+                              <button className="price-action" onClick={() => resetPrices(
+                                { materials: item.materials.map(material => material.name) },
+                                'このレシピで使う素材の単価（入力中・保存済み）をリセットします。同じ素材を使うほかのレシピにも反映されます。よろしいですか？'
+                              )}>このレシピの素材価格をリセット</button>
+                            </div>
+                          </div>
+                        )}
                         <div className="space-y-2">
                           {item.materials.map((material, idx) => (
                             <div
                               key={idx}
-                              className="p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30"
+                              className="material-price-row p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30"
                               style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.2)' }}
                             >
                               <div className="flex items-center justify-between">
@@ -2796,21 +2885,26 @@
                                   </span>
                                 </div>
                                 {isSelected && (
-                                  <div className="flex items-center gap-1.5">
+                                  <div className="material-price-input flex items-center gap-1.5">
                                     <input
                                       type="text"
                                       inputMode="numeric"
+                                      aria-label={`${material.name}の単価`}
                                       placeholder="単価"
-                                      value={formatNumber(materialPrices[`${item.name}-${material.name}`] || '')}
+                                      value={Object.hasOwn(materialPrices, material.name) ? materialPrices[material.name].toLocaleString() : ''}
                                       onClick={(e) => e.stopPropagation()}
                                       onChange={(e) => {
                                         const value = e.target.value.replace(/[^0-9]/g, '');
-                                        updatePrice(item.name, material.name, value);
+                                        updatePrice(material.name, value);
                                       }}
                                       className="w-24 px-3 py-2 rounded-lg border-2 border-purple-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400 font-bold text-right text-base text-white placeholder-white/50"
                                       style={{ boxShadow: '0 0 15px rgba(168, 85, 247, 0.3)' }}
                                     />
                                     <span className="text-white/80 font-bold text-sm drop-shadow">G</span>
+                                    <button className="price-reset-small" aria-label={`${material.name}の価格をリセット`} onClick={e => {
+                                      e.stopPropagation();
+                                      resetPrices({ materials: [material.name] });
+                                    }}>リセット</button>
                                   </div>
                                 )}
                               </div>
@@ -2819,7 +2913,7 @@
                         </div>
 
                         {isSelected && (
-                          <div className="mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.3)' }}>
+                          <div className="tool-price-row mt-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/30" style={{ boxShadow: '0 0 20px rgba(168, 85, 247, 0.3)' }}>
                             <div className="flex items-center justify-between">
                               <div className="flex items-center gap-2">
                                 <span className="font-bold text-white text-sm drop-shadow">🔧 職人道具代</span>
@@ -2829,20 +2923,27 @@
                                 <input
                                   type="text"
                                   inputMode="numeric"
+                                  aria-label="職人道具代"
                                   placeholder="道具代"
-                                  value={formatNumber(toolPrices[item.name] || '')}
+                                  value={Object.hasOwn(toolPrices, item.name) ? toolPrices[item.name].toLocaleString() : ''}
                                   onClick={(e) => e.stopPropagation()}
                                   onChange={(e) => {
                                     const value = e.target.value.replace(/[^0-9]/g, '');
+                                    if (!Number.isSafeInteger(Number(value))) return;
                                     setToolPrices(prev => ({
                                       ...prev,
                                       [item.name]: value === '' ? 0 : parseInt(value) || 0
                                     }));
+                                    setPriceNotice('入力中の道具代です。「価格を保存」で次回も復元できます。');
                                   }}
                                   className="w-28 px-3 py-2 rounded-lg border-2 border-purple-400/50 bg-white/10 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400 font-bold text-right text-base text-white placeholder-white/50"
                                   style={{ boxShadow: '0 0 15px rgba(168, 85, 247, 0.3)' }}
                                 />
                                 <span className="text-white/80 font-bold text-sm drop-shadow">G</span>
+                                <button className="price-reset-small" onClick={e => {
+                                  e.stopPropagation();
+                                  resetPrices({ tool: item.name });
+                                }}>道具代リセット</button>
                               </div>
                             </div>
                             {toolPrices[item.name] > 0 && (
@@ -2925,16 +3026,6 @@
                                 <button
                                   onClick={(e) => {
                                     e.stopPropagation();
-                                    const newMaterialPrices = { ...materialPrices };
-                                    item.materials.forEach(material => {
-                                      delete newMaterialPrices[`${item.name}-${material.name}`];
-                                    });
-                                    setMaterialPrices(newMaterialPrices);
-
-                                    const newToolPrices = { ...toolPrices };
-                                    delete newToolPrices[item.name];
-                                    setToolPrices(newToolPrices);
-
                                     const newCraftQuantity = { ...craftQuantity };
                                     delete newCraftQuantity[item.name];
                                     setCraftQuantity(newCraftQuantity);
@@ -2954,7 +3045,7 @@
                                   className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg font-bold text-sm transition-all backdrop-blur-sm border border-white/30 transform hover:scale-105 cursor-pointer"
                                   style={{ boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)' }}
                                 >
-                                  クリア
+                                  計算条件クリア
                                 </button>
                               </div>
                             </div>

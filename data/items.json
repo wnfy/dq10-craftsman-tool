@@ -28637,6 +28637,120 @@
     "specialTrait": ""
   },
   {
+    "name": "機甲兵のレシーバー",
+    "category": "防具鍛冶",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 365,
+        "max": 374
+      },
+      "B": {
+        "min": 200,
+        "max": 208
+      },
+      "C": {
+        "min": 285,
+        "max": 293
+      },
+      "D": {
+        "min": 340,
+        "max": 349
+      }
+    },
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 24
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 15
+      },
+      {
+        "name": "げんませき",
+        "quantity": 12
+      },
+      {
+        "name": "まじゅうのツメ",
+        "quantity": 14
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ラッシュバンド",
+    "category": "防具鍛冶",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 320,
+        "max": 329
+      },
+      "B": {
+        "min": 370,
+        "max": 379
+      },
+      "C": {
+        "min": 230,
+        "max": 238
+      },
+      "D": {
+        "min": 250,
+        "max": 258
+      }
+    },
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 24
+      },
+      {
+        "name": "マゴニア草",
+        "quantity": 10
+      },
+      {
+        "name": "アカリグリの実",
+        "quantity": 6
+      },
+      {
+        "name": "プルルンジェム",
+        "quantity": 8
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
     "name": "トライドニット",
     "category": "防具鍛冶",
     "subCategory": "アタマ",
@@ -31616,6 +31730,144 @@
       }
     ],
     "specialTrait": ""
+  },
+  {
+    "name": "機甲兵のよろい上",
+    "category": "防具鍛冶",
+    "subCategory": "からだ上",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 235,
+        "max": 244
+      },
+      "B": {
+        "min": 105,
+        "max": 113
+      },
+      "C": {
+        "min": 125,
+        "max": 134
+      },
+      "D": {
+        "min": 150,
+        "max": 159
+      },
+      "E": {
+        "min": 170,
+        "max": 179
+      },
+      "F": {
+        "min": 220,
+        "max": 229
+      }
+    },
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "メタルのカケラ",
+        "quantity": 8
+      },
+      {
+        "name": "げんませき",
+        "quantity": 10
+      },
+      {
+        "name": "スーパーホネホネ",
+        "quantity": 12
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 9
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ラッシュジャケット",
+    "category": "防具鍛冶",
+    "subCategory": "からだ上",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 158
+      },
+      "B": {
+        "min": 260,
+        "max": 269
+      },
+      "C": {
+        "min": 300,
+        "max": 309
+      },
+      "D": {
+        "min": 140,
+        "max": 148
+      },
+      "E": {
+        "min": 250,
+        "max": 258
+      },
+      "F": {
+        "min": 195,
+        "max": 204
+      }
+    },
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 30
+      },
+      {
+        "name": "アステライト鉱石",
+        "quantity": 15
+      },
+      {
+        "name": "レッドオーブ",
+        "quantity": 10
+      },
+      {
+        "name": "プルルンジェム",
+        "quantity": 10
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 9
+      }
+    ],
+    "specialTrait": "光"
   },
   {
     "name": "トライドアーマー",
@@ -35190,6 +35442,168 @@
     "specialTrait": ""
   },
   {
+    "name": "機甲兵のよろい下",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "G",
+        "H"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 90,
+        "max": 98
+      },
+      "B": {
+        "min": 150,
+        "max": 159
+      },
+      "C": {
+        "min": 210,
+        "max": 219
+      },
+      "D": {
+        "min": 95,
+        "max": 103
+      },
+      "E": {
+        "min": 130,
+        "max": 139
+      },
+      "F": {
+        "min": 105,
+        "max": 113
+      },
+      "G": {
+        "min": 85,
+        "max": 93
+      },
+      "H": {
+        "min": 125,
+        "max": 134
+      }
+    },
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 22
+      },
+      {
+        "name": "メタルのカケラ",
+        "quantity": 5
+      },
+      {
+        "name": "アステライト鉱石",
+        "quantity": 20
+      },
+      {
+        "name": "まじゅうのツノ",
+        "quantity": 10
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 6
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ラッシュボトム",
+    "category": "防具鍛冶",
+    "subCategory": "からだ下",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ],
+      [
+        "G",
+        "H"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 160,
+        "max": 169
+      },
+      "B": {
+        "min": 110,
+        "max": 118
+      },
+      "C": {
+        "min": 120,
+        "max": 128
+      },
+      "D": {
+        "min": 180,
+        "max": 189
+      },
+      "E": {
+        "min": 225,
+        "max": 234
+      },
+      "F": {
+        "min": 90,
+        "max": 98
+      },
+      "G": {
+        "min": 100,
+        "max": 108
+      },
+      "H": {
+        "min": 140,
+        "max": 149
+      }
+    },
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 22
+      },
+      {
+        "name": "マゴニア草",
+        "quantity": 10
+      },
+      {
+        "name": "たそがれゴケ",
+        "quantity": 10
+      },
+      {
+        "name": "レッドオーブ",
+        "quantity": 20
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "集中力変化"
+  },
+  {
     "name": "トライドズボン",
     "category": "防具鍛冶",
     "subCategory": "からだ下",
@@ -38743,6 +39157,114 @@
     "specialTrait": ""
   },
   {
+    "name": "機甲兵のこて",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 350,
+        "max": 359
+      },
+      "B": {
+        "min": 290,
+        "max": 299
+      },
+      "C": {
+        "min": 430,
+        "max": 439
+      }
+    },
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 16
+      },
+      {
+        "name": "こんじきの雲",
+        "quantity": 18
+      },
+      {
+        "name": "アカリグリの実",
+        "quantity": 6
+      },
+      {
+        "name": "大きなうろこ",
+        "quantity": 20
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
+    "name": "ラッシュグローブ",
+    "category": "防具鍛冶",
+    "subCategory": "ウデ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 360,
+        "max": 369
+      },
+      "B": {
+        "min": 255,
+        "max": 264
+      },
+      "C": {
+        "min": 460,
+        "max": 469
+      }
+    },
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 16
+      },
+      {
+        "name": "アステライト鉱石",
+        "quantity": 16
+      },
+      {
+        "name": "ドラゴンの皮",
+        "quantity": 8
+      },
+      {
+        "name": "スーパーホネホネ",
+        "quantity": 20
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "倍半"
+  },
+  {
     "name": "トライドグローブ",
     "category": "防具鍛冶",
     "subCategory": "ウデ",
@@ -41497,6 +42019,128 @@
       }
     ],
     "specialTrait": ""
+  },
+  {
+    "name": "機甲兵のグリーブ",
+    "category": "防具鍛冶",
+    "subCategory": "足",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A"
+      ],
+      [
+        null,
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 290,
+        "max": 300
+      },
+      "B": {
+        "min": 170,
+        "max": 178
+      },
+      "C": {
+        "min": 290,
+        "max": 300
+      },
+      "D": {
+        "min": 205,
+        "max": 213
+      }
+    },
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 16
+      },
+      {
+        "name": "メタルのカケラ",
+        "quantity": 16
+      },
+      {
+        "name": "ドワチャカオイル",
+        "quantity": 16
+      },
+      {
+        "name": "ドラゴンのホネ",
+        "quantity": 20
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 5
+      }
+    ],
+    "specialTrait": "回復"
+  },
+  {
+    "name": "ラッシュシューズ",
+    "category": "防具鍛冶",
+    "subCategory": "足",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A"
+      ],
+      [
+        null,
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 380,
+        "max": 389
+      },
+      "B": {
+        "min": 200,
+        "max": 209
+      },
+      "C": {
+        "min": 260,
+        "max": 269
+      },
+      "D": {
+        "min": 500,
+        "max": 509
+      }
+    },
+    "materials": [
+      {
+        "name": "流星石",
+        "quantity": 16
+      },
+      {
+        "name": "ドワチャカオイル",
+        "quantity": 16
+      },
+      {
+        "name": "ドラゴンの皮",
+        "quantity": 12
+      },
+      {
+        "name": "プルルンジェム",
+        "quantity": 12
+      },
+      {
+        "name": "超ようせいのひだね",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "光"
   },
   {
     "name": "トライドブーツ",
@@ -44525,6 +45169,183 @@
       }
     ],
     "specialTrait": ""
+  },
+  {
+    "name": "覚者の髪飾り",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 430,
+        "max": 430
+      },
+      "B": {
+        "min": 530,
+        "max": 530
+      },
+      "C": {
+        "min": 120,
+        "max": 120
+      },
+      "D": {
+        "min": 410,
+        "max": 410
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 24
+      },
+      {
+        "name": "呪力のモト",
+        "quantity": 15
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 10
+      },
+      {
+        "name": "たそがれゴケ",
+        "quantity": 15
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ミッションベレー",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 435,
+        "max": 435
+      },
+      "B": {
+        "min": 280,
+        "max": 280
+      },
+      "C": {
+        "min": 160,
+        "max": 160
+      },
+      "D": {
+        "min": 350,
+        "max": 350
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 24
+      },
+      {
+        "name": "風竜の羽毛",
+        "quantity": 15
+      },
+      {
+        "name": "ホワイトパール",
+        "quantity": 30
+      },
+      {
+        "name": "天竜草",
+        "quantity": 12
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "再生"
+  },
+  {
+    "name": "ミラージュハット",
+    "category": "裁縫",
+    "subCategory": "アタマ",
+    "gridType": "custom",
+    "layout": [
+      [
+        null,
+        "A",
+        null
+      ],
+      [
+        "B",
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 320,
+        "max": 320
+      },
+      "B": {
+        "min": 420,
+        "max": 420
+      },
+      "C": {
+        "min": 140,
+        "max": 140
+      },
+      "D": {
+        "min": 295,
+        "max": 295
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 24
+      },
+      {
+        "name": "やわらかウール",
+        "quantity": 15
+      },
+      {
+        "name": "うつろい草",
+        "quantity": 15
+      },
+      {
+        "name": "へびのぬけがら",
+        "quantity": 30
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "虹"
   },
   {
     "name": "叡聖のサークレット",
@@ -50207,6 +51028,258 @@
         "quantity": 1
       }
     ]
+  },
+  {
+    "name": "覚者の装束上",
+    "category": "裁縫",
+    "subCategory": "からだ上",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E",
+        "F"
+      ],
+      [
+        "G",
+        "H",
+        "I"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 150,
+        "max": 150
+      },
+      "B": {
+        "min": 110,
+        "max": 110
+      },
+      "C": {
+        "min": 170,
+        "max": 170
+      },
+      "D": {
+        "min": 100,
+        "max": 100
+      },
+      "E": {
+        "min": 80,
+        "max": 80
+      },
+      "F": {
+        "min": 110,
+        "max": 110
+      },
+      "G": {
+        "min": 120,
+        "max": 120
+      },
+      "H": {
+        "min": 170,
+        "max": 170
+      },
+      "I": {
+        "min": 90,
+        "max": 90
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 30
+      },
+      {
+        "name": "呪力のモト",
+        "quantity": 16
+      },
+      {
+        "name": "アカリグリの実",
+        "quantity": 5
+      },
+      {
+        "name": "たそがれゴケ",
+        "quantity": 10
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 9
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ミッションシャツ",
+    "category": "裁縫",
+    "subCategory": "からだ上",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E",
+        "F"
+      ],
+      [
+        "G",
+        "H",
+        "I"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 100,
+        "max": 100
+      },
+      "B": {
+        "min": 200,
+        "max": 200
+      },
+      "C": {
+        "min": 90,
+        "max": 90
+      },
+      "D": {
+        "min": 90,
+        "max": 90
+      },
+      "E": {
+        "min": 160,
+        "max": 160
+      },
+      "F": {
+        "min": 140,
+        "max": 140
+      },
+      "G": {
+        "min": 120,
+        "max": 120
+      },
+      "H": {
+        "min": 110,
+        "max": 110
+      },
+      "I": {
+        "min": 80,
+        "max": 80
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 30
+      },
+      {
+        "name": "ドラゴンのホネ",
+        "quantity": 30
+      },
+      {
+        "name": "神秘の鋼線",
+        "quantity": 12
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 20
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 9
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ミラージュスーツ上",
+    "category": "裁縫",
+    "subCategory": "からだ上",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E",
+        "F"
+      ],
+      [
+        "G",
+        "H",
+        "I"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 200,
+        "max": 200
+      },
+      "B": {
+        "min": 110,
+        "max": 110
+      },
+      "C": {
+        "min": 130,
+        "max": 130
+      },
+      "D": {
+        "min": 125,
+        "max": 125
+      },
+      "E": {
+        "min": 100,
+        "max": 100
+      },
+      "F": {
+        "min": 90,
+        "max": 90
+      },
+      "G": {
+        "min": 80,
+        "max": 80
+      },
+      "H": {
+        "min": 150,
+        "max": 150
+      },
+      "I": {
+        "min": 110,
+        "max": 110
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 30
+      },
+      {
+        "name": "やわらかウール",
+        "quantity": 20
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 8
+      },
+      {
+        "name": "大きなうろこ",
+        "quantity": 30
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 9
+      }
+    ],
+    "specialTrait": "再生"
   },
   {
     "name": "叡聖の博士服",
@@ -58287,6 +59360,213 @@
     ]
   },
   {
+    "name": "覚者の装束下",
+    "category": "裁縫",
+    "subCategory": "からだ下",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 85,
+        "max": 85
+      },
+      "B": {
+        "min": 260,
+        "max": 260
+      },
+      "C": {
+        "min": 315,
+        "max": 315
+      },
+      "D": {
+        "min": 100,
+        "max": 100
+      },
+      "E": {
+        "min": 130,
+        "max": 130
+      },
+      "F": {
+        "min": 220,
+        "max": 220
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 22
+      },
+      {
+        "name": "パープルオーブ",
+        "quantity": 20
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 12
+      },
+      {
+        "name": "黄金の飾りよろい下",
+        "quantity": 1
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "再生"
+  },
+  {
+    "name": "ミッションズボン",
+    "category": "裁縫",
+    "subCategory": "からだ下",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 280,
+        "max": 280
+      },
+      "B": {
+        "min": 150,
+        "max": 150
+      },
+      "C": {
+        "min": 95,
+        "max": 95
+      },
+      "D": {
+        "min": 325,
+        "max": 325
+      },
+      "E": {
+        "min": 120,
+        "max": 120
+      },
+      "F": {
+        "min": 280,
+        "max": 280
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 22
+      },
+      {
+        "name": "ドラゴンのホネ",
+        "quantity": 20
+      },
+      {
+        "name": "ささやく枯れ葉",
+        "quantity": 10
+      },
+      {
+        "name": "まじゅうの皮",
+        "quantity": 20
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ミラージュスーツ下",
+    "category": "裁縫",
+    "subCategory": "からだ下",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 120,
+        "max": 120
+      },
+      "B": {
+        "min": 320,
+        "max": 320
+      },
+      "C": {
+        "min": 100,
+        "max": 100
+      },
+      "D": {
+        "min": 90,
+        "max": 90
+      },
+      "E": {
+        "min": 220,
+        "max": 220
+      },
+      "F": {
+        "min": 250,
+        "max": 250
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 22
+      },
+      {
+        "name": "トガリアのしずく",
+        "quantity": 15
+      },
+      {
+        "name": "妖精の綿花",
+        "quantity": 30
+      },
+      {
+        "name": "プルルンジェム",
+        "quantity": 15
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 8
+      }
+    ],
+    "specialTrait": "虹"
+  },
+  {
     "name": "月影の装束下",
     "category": "裁縫",
     "subCategory": "からだ下",
@@ -64268,6 +65548,207 @@
     ]
   },
   {
+    "name": "覚者のグローブ",
+    "category": "裁縫",
+    "subCategory": "ウデ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 140,
+        "max": 140
+      },
+      "B": {
+        "min": 200,
+        "max": 200
+      },
+      "C": {
+        "min": 300,
+        "max": 300
+      },
+      "D": {
+        "min": 170,
+        "max": 170
+      },
+      "E": {
+        "min": 340,
+        "max": 340
+      },
+      "F": {
+        "min": 110,
+        "max": 110
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 16
+      },
+      {
+        "name": "せいじゃのはい",
+        "quantity": 20
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 10
+      },
+      {
+        "name": "アカリグリの実",
+        "quantity": 4
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ミッショングラブ",
+    "category": "裁縫",
+    "subCategory": "ウデ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 310,
+        "max": 310
+      },
+      "B": {
+        "min": 160,
+        "max": 160
+      },
+      "C": {
+        "min": 110,
+        "max": 110
+      },
+      "D": {
+        "min": 90,
+        "max": 90
+      },
+      "E": {
+        "min": 340,
+        "max": 340
+      },
+      "F": {
+        "min": 180,
+        "max": 180
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 16
+      },
+      {
+        "name": "はがねの尾羽",
+        "quantity": 30
+      },
+      {
+        "name": "神秘の鋼線",
+        "quantity": 12
+      },
+      {
+        "name": "天竜草",
+        "quantity": 10
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "再生"
+  },
+  {
+    "name": "ミラージュグラブ",
+    "category": "裁縫",
+    "subCategory": "ウデ",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B",
+        "C"
+      ],
+      [
+        "D",
+        "E",
+        "F"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 360,
+        "max": 360
+      },
+      "B": {
+        "min": 95,
+        "max": 95
+      },
+      "C": {
+        "min": 170,
+        "max": 170
+      },
+      "D": {
+        "min": 100,
+        "max": 100
+      },
+      "E": {
+        "min": 140,
+        "max": 140
+      },
+      "F": {
+        "min": 250,
+        "max": 250
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 16
+      },
+      {
+        "name": "トガリアのしずく",
+        "quantity": 20
+      },
+      {
+        "name": "やわらかウール",
+        "quantity": 20
+      },
+      {
+        "name": "ブルーオーブ",
+        "quantity": 20
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "虹"
+  },
+  {
     "name": "叡聖のグローブ",
     "category": "裁縫",
     "subCategory": "ウデ",
@@ -69988,6 +71469,177 @@
         "quantity": 1
       }
     ]
+  },
+  {
+    "name": "覚者のブーツ",
+    "category": "裁縫",
+    "subCategory": "足",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 180,
+        "max": 180
+      },
+      "B": {
+        "min": 340,
+        "max": 340
+      },
+      "C": {
+        "min": 530,
+        "max": 530
+      },
+      "D": {
+        "min": 110,
+        "max": 110
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 16
+      },
+      {
+        "name": "パープルオーブ",
+        "quantity": 24
+      },
+      {
+        "name": "ナイトメアリーフ",
+        "quantity": 10
+      },
+      {
+        "name": "黄金の飾りくつ",
+        "quantity": 1
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "再生"
+  },
+  {
+    "name": "ミッションブーツ",
+    "category": "裁縫",
+    "subCategory": "足",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 100,
+        "max": 100
+      },
+      "B": {
+        "min": 490,
+        "max": 490
+      },
+      "C": {
+        "min": 520,
+        "max": 520
+      },
+      "D": {
+        "min": 190,
+        "max": 190
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 16
+      },
+      {
+        "name": "はがねの尾羽",
+        "quantity": 24
+      },
+      {
+        "name": "ささやく枯れ葉",
+        "quantity": 8
+      },
+      {
+        "name": "まじゅうの皮",
+        "quantity": 20
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "光"
+  },
+  {
+    "name": "ミラージュブーツ",
+    "category": "裁縫",
+    "subCategory": "足",
+    "gridType": "custom",
+    "layout": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "targetValues": {
+      "A": {
+        "min": 110,
+        "max": 110
+      },
+      "B": {
+        "min": 440,
+        "max": 440
+      },
+      "C": {
+        "min": 490,
+        "max": 490
+      },
+      "D": {
+        "min": 180,
+        "max": 180
+      }
+    },
+    "materials": [
+      {
+        "name": "風の霊糸",
+        "quantity": 16
+      },
+      {
+        "name": "トガリアのしずく",
+        "quantity": 12
+      },
+      {
+        "name": "うつろい草",
+        "quantity": 12
+      },
+      {
+        "name": "せいれいせき",
+        "quantity": 8
+      },
+      {
+        "name": "超あまつゆのいと",
+        "quantity": 7
+      }
+    ],
+    "specialTrait": "虹"
   },
   {
     "name": "叡聖のブーツ",

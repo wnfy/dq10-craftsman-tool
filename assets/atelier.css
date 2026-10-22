@@ -1,3 +1,29 @@
+/* Explicit price-book controls; keep the ledger's paper / ink design. */
+.price-book-toolbar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1rem; padding:1rem; background:var(--paper-warm); border:1.5px dashed var(--line-strong); border-radius:.8rem; }
+.price-book-eyebrow { color:var(--cobalt); font-size:.65rem; font-weight:900; letter-spacing:.16em; }
+.price-book-toolbar p,.price-settings-row p { margin:.35rem 0; font-size:.75rem; color:var(--ink-soft); }
+.price-save-state { font-size:.7rem; font-weight:700; }
+.price-book-actions { display:flex; gap:.6rem; flex-wrap:wrap; }
+.content-shell .price-action,.content-shell .price-reset-small { color:var(--ink) !important; background:var(--paper) !important; border:1.5px solid var(--ink) !important; border-radius:99px; font-size:.75rem; font-weight:700; padding:.6rem .9rem; box-shadow:2px 2px 0 var(--ink) !important; cursor:pointer; }
+.content-shell .price-action-primary { color:white !important; background:var(--cobalt) !important; }
+.content-shell .price-action-danger { color:var(--ink) !important; background:var(--coral) !important; }
+.content-shell .price-reset-small { padding:.4rem .65rem; font-size:.65rem; box-shadow:none !important; }
+.content-shell .price-action:hover,.content-shell .price-reset-small:hover { background:var(--sun) !important; color:var(--ink) !important; }
+.price-settings-row { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+.price-notice { position:sticky; top:.75rem; z-index:40; margin:0 0 1rem; padding:.85rem 1rem; color:var(--ink); background:var(--sun); border:2px solid var(--ink); border-radius:.75rem; box-shadow:3px 3px 0 var(--ink); font-size:.8rem; }
+.price-reset-overlay { position:fixed; inset:0; z-index:200; display:flex; align-items:center; justify-content:center; padding:1.25rem; background:rgba(21,33,61,.5); backdrop-filter:blur(4px); }
+.price-reset-dialog { width:min(100%,32rem); padding:1.6rem; color:var(--ink); background:var(--paper); border:2px solid var(--ink); border-radius:1.1rem; box-shadow:7px 7px 0 var(--ink); }
+.price-reset-dialog h3 { margin:.65rem 0; font-size:1.25rem; font-weight:900; }
+.price-reset-dialog p { margin:1rem 0 1.5rem; line-height:1.8; font-size:.9rem; }
+.price-reset-dialog .price-book-actions { justify-content:flex-end; }
+@media (max-width:640px) {
+  .material-price-row > .flex { flex-wrap:wrap; gap:.75rem; }
+  .material-price-input { width:100%; justify-content:flex-end; }
+  .tool-price-row > .flex { flex-wrap:wrap; gap:.75rem; }
+  .tool-price-row > .flex > .flex:last-child { width:100%; justify-content:flex-end; }
+  .price-book-actions { width:100%; }
+  .price-book-actions .price-action { flex:1 1 100%; }
+}
 :root {
   --ink: #15213d;
   --ink-soft: #536078;
